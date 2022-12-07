@@ -1,4 +1,8 @@
 {
   "promptDelete": false,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "AWS Cloud/Pictures",
+  "spellcheck": true,
+  "tabSize": 5
 }

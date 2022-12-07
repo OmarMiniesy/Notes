@@ -1,0 +1,29 @@
+
+### General Notes
+
+1. Servers provided for rent in the cloud
+2. Pay as you go 
+3. Can have extra storage by using [[Elastic Block Storage (EBS)]]
+
+___
+### How to Connect - Linux/Mac
+
+1. Download the private key file  *.pem*
+2. Open terminal in same location as *.pem* file
+
+> Connect Via SSH
+
+``` bash
+ssh -i <path of private key file .pem> <user@public DNS>
+```
+
+>USER:  You will log-in using the default name. The default username for Ubuntu instances is `ubuntu`, and for Linux, it is `ec2-user`
+>
+>Other usernames available here -> [usernames](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html)
+
+___
+
+### Important 
+
+> Make sure to stop or terminate when not in use to prevent payment.
+
