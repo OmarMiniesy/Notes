@@ -12,4 +12,12 @@
 
 ____
 
+### Default VPC
 
+* VPC in a default region, and has a public subnet for each Availability Zone
+* It has the subnets, along with the route tables.
+* The route tables have 2 rules
+	* Internet facing communication
+	* Internet gateway
+
+___

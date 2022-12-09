@@ -10,3 +10,22 @@
 
 ___
 
+### Application Load Balancer (ALB)
+
+> Host different API endpoints of an application on different servers
+> Redirects the incoming HTTP traffic to the suitable server
+
+___
+
+### Network Load Balancer (NLB)
+
+> Balance the load on each [[Elastic Cloud Compute (EC2)]] instance by distributing the traffic amongst them.
+> If 2 instances are on 2 different Availability Zones
+
+___
+
+### Classic Load Balancer (CLB)
+
+> Balances load across different [[Elastic Cloud Compute (EC2)]] instances
+
+___

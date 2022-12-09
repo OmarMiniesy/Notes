@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> Compute power in the clowd to execute code
+> Compute power in the cloud to execute code
 
 ___
 

@@ -5,7 +5,7 @@
 
 > Works with [[Simple Storage Service (S3)]], [[Elastic Cloud Compute (EC2)]], [[Lambda]], [[Elastic Load Balancing]], and AWS Shield
 
-> Continously adds new _edge locations_
+> Continuously adds new _edge locations_
 
 > Max size of single file is 20 GB
 

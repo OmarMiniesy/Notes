@@ -3,6 +3,6 @@
   "showLineNumber": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "AWS Cloud/Pictures",
-  "spellcheck": true,
+  "spellcheck": false,
   "tabSize": 5
 }

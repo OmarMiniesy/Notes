@@ -11,12 +11,8 @@
             "id": "bdad68d36120a419",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "AWS Cloud/Elastic Load Balancing.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "load balancing",
+                "query": "sns",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Cloud/Elastic Load Balancing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Cloud/Elastic Load Balancing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "AWS Cloud/Elastic Load Balancing.md"
-              }
+              "state": {}
             }
           },
           {
@@ -147,15 +139,15 @@
   },
   "active": "bdad68d36120a419",
   "lastOpenFiles": [
-    "Markdown/Syntax.md",
+    "AWS Cloud/Simple Queue Service (SQS).md",
+    "AWS Cloud/Simple Notification Service (SNS).md",
     "AWS Cloud/Elastic Load Balancing.md",
-    "AWS Cloud/CloudFront.md",
     "AWS Cloud/EC2 Auto Scaling.md",
-    "AWS Cloud/Elastic Beanstalk.md",
     "AWS Cloud/Elastic Cloud Compute (EC2).md",
+    "AWS Cloud/Virtual Private Cloud (VPC).md",
     "AWS Cloud/Route 53.md",
-    "AWS Cloud/Dynamo DB.md",
-    "AWS Cloud/Elastic Block Storage (EBS).md",
-    "AWS Cloud/Lambda.md"
+    "AWS Cloud/Elastic Beanstalk.md",
+    "AWS Cloud/Lambda.md",
+    "AWS Cloud/Redshift.md"
   ]
 }

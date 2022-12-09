@@ -7,7 +7,7 @@
 * automatically scales, adding new instances only when needed
 * predictive scaling removes the need for manual adjustment 
 
-> send a notification via SNS to tell user that an instance is being launched or terminated
+> send a notification via [[Simple Notification Service (SNS)]] to tell user that an instance is being launched or terminated
 
 ___
 
