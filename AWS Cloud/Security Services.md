@@ -57,7 +57,7 @@ ___
 
 1. Programmatic access -> access id and secret key
 2. attach policies to the user
-3. Download the access key file `.csv` that will be used to access the AWS CLI.
+3. Download the access key file `.csv` that will be used to access the AWS [[Command Line Interface (CLI)]].
 
 #### Deletion
 1. Detach policies from user

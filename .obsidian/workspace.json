@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6f995636b257809e",
+        "id": "1afbdbcd4f3a9170",
         "type": "tabs",
         "children": [
           {
-            "id": "bdad68d36120a419",
+            "id": "76dbf25c83e89006",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -44,8 +44,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "sns",
-                "matchingCase": false,
+                "query": "",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -137,17 +137,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bdad68d36120a419",
+  "active": "76dbf25c83e89006",
   "lastOpenFiles": [
-    "AWS Cloud/Simple Queue Service (SQS).md",
-    "AWS Cloud/Simple Notification Service (SNS).md",
-    "AWS Cloud/Elastic Load Balancing.md",
-    "AWS Cloud/EC2 Auto Scaling.md",
-    "AWS Cloud/Elastic Cloud Compute (EC2).md",
-    "AWS Cloud/Virtual Private Cloud (VPC).md",
-    "AWS Cloud/Route 53.md",
-    "AWS Cloud/Elastic Beanstalk.md",
+    "AWS Cloud/Command Line Interface (CLI).md",
+    "Installations/AWS CLI.md",
+    "Markdown/Markdown Syntax.md",
+    "Docker/Docker.md",
+    "AWS Cloud/Elastic Load Balancer.md",
+    "AWS Cloud/CloudTrail.md",
+    "AWS Cloud/Security Services.md",
     "AWS Cloud/Lambda.md",
-    "AWS Cloud/Redshift.md"
+    "AWS Cloud/Route 53.md",
+    "AWS Cloud/Simple Queue Service (SQS).md"
   ]
 }

@@ -3,7 +3,7 @@
 
 > Content Delivery Network that speeds up delivery through _edge locations_
 
-> Works with [[Simple Storage Service (S3)]], [[Elastic Cloud Compute (EC2)]], [[Lambda]], [[Elastic Load Balancing]], and AWS Shield
+> Works with [[Simple Storage Service (S3)]], [[Elastic Cloud Compute (EC2)]], [[Lambda]], [[Elastic Load Balancer]], and AWS Shield
 
 > Continuously adds new _edge locations_
 
@@ -19,7 +19,7 @@ ___
 
 ### Properties
 
-> Origins: Choose the origin file, probably an [[Simple Storage Service (S3)]] bucket
+> Origins: Choose the origin file, probably a [[Simple Storage Service (S3)]] bucket
 > Restrictions: block IPs from certain countries (GeoIP)
 > Invalidations: Expire content from cache
 

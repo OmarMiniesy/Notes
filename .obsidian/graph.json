@@ -1,5 +1,5 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": false,
   "showAttachments": false,
@@ -20,6 +20,20 @@
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "path:Docker",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:Installations",
+      "color": {
+        "a": 1,
+        "rgb": 13652704
+      }
     }
   ],
   "collapse-display": true,
@@ -28,10 +42,10 @@
   "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 1.2414543899483066,
+  "centerStrength": 0.508268229166667,
+  "repelStrength": 12.6653645833333,
+  "linkStrength": 0,
+  "linkDistance": 249,
+  "scale": 0.7078985184444346,
   "close": true
 }
