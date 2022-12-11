@@ -23,6 +23,20 @@ ssh -i <path of private key file .pem> <user@public DNS>
 
 ___
 
+### Commands via [[Command Line Interface (CLI)]]
+
+>The [[Elastic Cloud Compute (EC2)]] instances in the account
+```bash
+aws ec2 desribe-instances
+```
+
+>Start an [[Elastic Cloud Compute (EC2)]] instance (or stop `stop-instances` )
+```bash
+aws ec2 start-instances --instance-ids <instance id>
+```
+
+___
+
 ### Important 
 
 > Make sure to stop or terminate when not in use to prevent payment.

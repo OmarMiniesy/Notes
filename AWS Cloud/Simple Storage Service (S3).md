@@ -7,11 +7,13 @@
 
 > S3 Glacier used to hold data archives
 
+
 ___
 
 ### Bucket Creation
 
-> Must be unique worldwide, no spaces, no uppercase
+> Must name be unique worldwide, no spaces, no uppercase. Convention `my-accountid-bucket`
+> Public buckets are used for hosting websites so that they can be publicly readable
 
 ___
 
@@ -24,5 +26,34 @@ ___
 
 ___
 
+### Commands Via [[Command Line Interface (CLI)]]
 
 
+> Create public bucket 
+``` bash
+
+aws s3api  create-bucket --bucket <bucket-name> --acl public-read-write --region <region> --profile <profile-name>
+```
+
+> Add file to bucket
+``` bash
+
+aws s3api put-object --bucket <bucket-name> --key <file-name> --body <file-path> --profile <profile-name>
+```
+
+> Delete content in bucket then delete bucket
+
+``` bash
+aws s3api delete-object --bucket <bucket-name> --key <file-name>
+```
+
+``` bash
+aws s3api delete-bucket --bucket <bucket-name> --profile <profile-name>
+```
+
+> List items in a [[Simple Storage Service (S3)]] bucket
+```bash
+aws s3 ls s3://<bucket-name>
+```
+
+___

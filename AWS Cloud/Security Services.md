@@ -59,10 +59,39 @@ ___
 2. attach policies to the user
 3. Download the access key file `.csv` that will be used to access the AWS [[Command Line Interface (CLI)]].
 
+> View the users via [[Command Line Interface (CLI)]]
+```bash
+aws iam list-users
+```
+
 #### Deletion
 1. Detach policies from user
 2. delete user
 3. delete policies
 
-___
+> Deleting user using [[Command Line Interface (CLI)]]
 
+1. Policies can be detached by identifying its `ARN`
+``` bash
+aws iam detach-user-policy --user-name <user-name> --policy-arn <arn>
+```
+* listing the policies of a user
+``` bash
+aws iam list-attached-user-policies --user-name <user-name>
+```
+
+2. Delete the access key by listing the access key id
+``` bash
+aws iam delete-access-key  --user-name <user-name> --access-key-id <akid>
+```
+* list the access key of the user
+```bash
+aws iam list-access-keys --user-name <user-name>
+```
+
+3. Delete the user
+``` bash
+aws iam delete-user --user-name <user-name>
+```
+
+___

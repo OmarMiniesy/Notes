@@ -15,3 +15,12 @@ Notifications can be sent using:
 
 ___
 
+### Commands via [[Command Line Interface (CLI)]]
+
+
+> Publish a message to a [[Simple Notification Service (SNS)]] topic
+1. `sns` is the service
+2. `publish` is the command
+```bash
+aws sns publish --topic-arn <arn> --message "<message>"
+```

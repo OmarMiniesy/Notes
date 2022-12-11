@@ -11,8 +11,12 @@
             "id": "76dbf25c83e89006",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "AWS Cloud/Simple Storage Service (S3).md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "AWS Cloud/Simple Storage Service (S3).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "AWS Cloud/Simple Storage Service (S3).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "AWS Cloud/Simple Storage Service (S3).md"
+              }
             }
           },
           {
@@ -139,15 +147,15 @@
   },
   "active": "76dbf25c83e89006",
   "lastOpenFiles": [
-    "AWS Cloud/Command Line Interface (CLI).md",
-    "Installations/AWS CLI.md",
-    "Markdown/Markdown Syntax.md",
-    "Docker/Docker.md",
-    "AWS Cloud/Elastic Load Balancer.md",
-    "AWS Cloud/CloudTrail.md",
+    "AWS Cloud/CloudFront.md",
+    "AWS Cloud/Dynamo DB.md",
+    "AWS Cloud/Simple Storage Service (S3).md",
+    "AWS Cloud/Pictures/ebsstorage.png",
+    "AWS Cloud/Pictures/cloudfrontdist.png",
     "AWS Cloud/Security Services.md",
-    "AWS Cloud/Lambda.md",
+    "AWS Cloud/Command Line Interface (CLI).md",
     "AWS Cloud/Route 53.md",
-    "AWS Cloud/Simple Queue Service (SQS).md"
+    "AWS Cloud/Simple Queue Service (SQS).md",
+    "AWS Cloud/Simple Notification Service (SNS).md"
   ]
 }
