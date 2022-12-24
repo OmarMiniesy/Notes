@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1afbdbcd4f3a9170",
+        "id": "64309814ea3fb570",
         "type": "tabs",
         "children": [
           {
-            "id": "76dbf25c83e89006",
+            "id": "255fdfc176df843c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Languages/TypeScript/TypeScript.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5
+    "width": 278.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Languages/TypeScript/TypeScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Languages/TypeScript/TypeScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Languages/TypeScript/TypeScript.md"
+              }
             }
           },
           {
@@ -137,17 +146,28 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "76dbf25c83e89006",
+  "left-ribbon": {
+    "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "255fdfc176df843c",
   "lastOpenFiles": [
-    "AWS Cloud/Simple Storage Service (S3).md",
-    "AWS Cloud/CloudFront.md",
-    "AWS Cloud/Dynamo DB.md",
-    "AWS Cloud/Pictures/ebsstorage.png",
-    "AWS Cloud/Pictures/cloudfrontdist.png",
-    "AWS Cloud/Security Services.md",
-    "AWS Cloud/Command Line Interface (CLI).md",
-    "AWS Cloud/Route 53.md",
-    "AWS Cloud/Simple Queue Service (SQS).md",
-    "AWS Cloud/Simple Notification Service (SNS).md"
+    "Languages/TypeScript/TypeScript.md",
+    "HTTP.md",
+    "Languages/TypeScript/TypeScript Syntax.md",
+    "Languages/JavaScript/Modules.md",
+    "Languages/JavaScript/Global Object.md",
+    "Ionic CLI.md",
+    "Languages/Markdown/Markdown Syntax.md",
+    "Languages/Markdown/Markdown.md",
+    "Application Programming Interface (API).md",
+    "Docker/Docker.md"
   ]
 }

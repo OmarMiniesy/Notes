@@ -19,4 +19,3 @@ ___
 
 > Text file that contains commands to create images
 
-

@@ -4,5 +4,12 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "AWS Cloud/Pictures",
   "spellcheck": false,
-  "tabSize": 5
+  "tabSize": 5,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

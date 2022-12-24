@@ -15,13 +15,6 @@
       }
     },
     {
-      "query": "path:Markdown",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
       "query": "path:Docker",
       "color": {
         "a": 1,
@@ -29,14 +22,21 @@
       }
     },
     {
-      "query": "path:Installations",
+      "query": "path:\"Digital Design 2\"",
       "color": {
         "a": 1,
-        "rgb": 13652704
+        "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:Languages",
+      "color": {
+        "a": 1,
+        "rgb": 14111456
       }
     }
   ],
-  "collapse-display": true,
+  "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
   "nodeSizeMultiplier": 1,
@@ -44,8 +44,8 @@
   "collapse-forces": false,
   "centerStrength": 0.508268229166667,
   "repelStrength": 12.6653645833333,
-  "linkStrength": 0,
-  "linkDistance": 249,
-  "scale": 0.31329553201017096,
-  "close": true
+  "linkStrength": 0.433333333333333,
+  "linkDistance": 255,
+  "scale": 0.36783833776248237,
+  "close": false
 }
