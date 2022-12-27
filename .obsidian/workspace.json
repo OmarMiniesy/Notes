@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "64309814ea3fb570",
+        "id": "15a90b509432832f",
         "type": "tabs",
         "children": [
           {
-            "id": "255fdfc176df843c",
+            "id": "5ef4b2709bb0866b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Languages/TypeScript/TypeScript.md",
+                "file": "Languages/NodeJs/Express Framework.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 278.5,
-    "collapsed": true
+    "width": 297.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Languages/TypeScript/TypeScript.md",
+                "file": "Languages/NodeJs/Express Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Languages/TypeScript/TypeScript.md",
+                "file": "Languages/NodeJs/Express Framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Languages/TypeScript/TypeScript.md"
+                "file": "Languages/NodeJs/Express Framework.md"
               }
             }
           },
@@ -157,17 +156,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "255fdfc176df843c",
+  "active": "5ef4b2709bb0866b",
   "lastOpenFiles": [
-    "Languages/TypeScript/TypeScript.md",
-    "HTTP.md",
-    "Languages/TypeScript/TypeScript Syntax.md",
-    "Languages/JavaScript/Modules.md",
-    "Languages/JavaScript/Global Object.md",
-    "Ionic CLI.md",
-    "Languages/Markdown/Markdown Syntax.md",
-    "Languages/Markdown/Markdown.md",
-    "Application Programming Interface (API).md",
-    "Docker/Docker.md"
+    "Languages/NodeJs/Express Framework.md",
+    "Languages/NodeJs/Modules.md",
+    "Languages/NodeJs/Events Module.md",
+    "Languages/NodeJs/HTTP Module.md",
+    "Languages/NodeJs/Nodemon Module.md",
+    "Languages/NodeJs/Development Dependencies.md",
+    "Languages/NodeJs/Application Programming Interface (API).md",
+    "Languages/NodeJs/Node Package Manager (NPM).md",
+    "GitHub/gitignore.md",
+    "GitHub/Pushing Changes.md"
   ]
 }

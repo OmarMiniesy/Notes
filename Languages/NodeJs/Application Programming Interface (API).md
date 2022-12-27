@@ -25,4 +25,3 @@ ___
 > Lists should have limits to avoid errors `.../?limit=10`
 > Respones should include status codes and the data format
 > Error payloads should include messages
-

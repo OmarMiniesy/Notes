@@ -23,7 +23,7 @@ ___
  
 ---
 
-### Installing TypeScript 
+### Installing TypeScript using [[Node Package Manager (NPM)]]
 
 ```bash
 sudo npm i -g typescript
@@ -44,11 +44,20 @@ ___
 ### Executing TypeScript File
 
 ```bash
-tsc <path_to_file).ts
+tsc <path_to_file>.ts
 ```
 
 > This will compile the `.ts` file into a `.js` file. 
 
+or, if the `"rootdir"` option is uncommented in the configuration file, it automatically targets it without specifying the path to the source files.
+```bash
+tsc
+```
+
+> Then execute the compiled JavaScript code 
+```bash
+node <path_to_file>.js
+```
 ___
 
 ### TypeScript Configuration File
@@ -65,3 +74,5 @@ tsc --init
 * `"outdir": "./<path>"`:  Change the path of the JavaScript output files
 * `"removeComments": true` : Adding comments or removing comments from JavaScript result files
 * `"noEmitOnError": true` : Disable emitting files if any type checking errors are reported
+
+___

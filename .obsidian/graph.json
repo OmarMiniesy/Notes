@@ -18,34 +18,34 @@
       "query": "path:Docker",
       "color": {
         "a": 1,
-        "rgb": 5431378
-      }
-    },
-    {
-      "query": "path:\"Digital Design 2\"",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
+        "rgb": 14725458
       }
     },
     {
       "query": "path:Languages",
       "color": {
         "a": 1,
-        "rgb": 14111456
+        "rgb": 14701254
+      }
+    },
+    {
+      "query": "path:GitHub",
+      "color": {
+        "a": 1,
+        "rgb": 5431380
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
+  "textFadeMultiplier": -0.7,
+  "nodeSizeMultiplier": 0.692083333333333,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
   "centerStrength": 0.508268229166667,
-  "repelStrength": 12.6653645833333,
-  "linkStrength": 0.433333333333333,
-  "linkDistance": 255,
-  "scale": 0.36783833776248237,
-  "close": false
+  "repelStrength": 13.75,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.39211300609790156,
+  "close": true
 }

@@ -1,6 +1,6 @@
 
 
-### Installion 
+### Installion using [[Node Package Manager (NPM)]]
 
 ```bash
 npm install -g @ionic/cli
