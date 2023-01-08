@@ -1,8 +1,8 @@
 
 ### General Notes
 
-> One of the built in NodeJs [[Modules]]
-
+> One of the built in [[NodeJs]] [[Modules]]
+> Used in many other modules, such as the [[Express Framework]] framework, and the [[HTTP Module]]
 > Contains an event emitter and an event reciever
 ```JavaScript
 const EventEmitter = require("events");

@@ -15,3 +15,9 @@
 
 > simply add their names inside the gitignore file.
 
+
+---
+
+### Examples
+
+* The `.config` file that contains passwords and credentials

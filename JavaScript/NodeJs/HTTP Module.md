@@ -1,8 +1,9 @@
 
 ### General Notes
 
-> One of the NodeJs builtin [[Modules]]
+> One of the [[NodeJs]] builtin [[Modules]]
 > Used for creating web applications that listen on ports ad send and receive responses and requests
+> [[Express Framework]] is used instead because it is better
 
 ---
 

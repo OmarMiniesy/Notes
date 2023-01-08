@@ -113,7 +113,8 @@ let emp : Employee = {
 	id: 1,
 	name: "Mins",
 	retire: (age:number) => {
-	console.log(age)
+		console.log(age)
+	}
 }
 ```
 > Create a custom type to be used to create objects without repeatedly creating the object and defining the properties.
@@ -179,5 +180,24 @@ greet("Omar");
 greet(null);
 ```
 >If null value for parameter could be used, use the union type.
+
+
+#### Generics
+
+>Used to make the function have a type to fix issues around functions used for generic types.
+>The function here works for both strings and numbers as it infers the type.
+```JavaScript
+function insertAtBeginning<T>(array: T[], item: T){
+	const newArray = [item, ...array];
+	return newArray;
+}
+
+const demo = [1,2,3];
+const updatedDemo = insertAtBeginning(demo, 5);
+
+const demo1 = ["1", "2", "3"];
+const updatedDemo1 = insertAtBeginning(demo1, "5");
+
+```
 
 ---

@@ -46,6 +46,9 @@ ___
 
 >IAM **role** is an identity that has permissions and privileges, these are attached to users or groups
 
+-   IAM user role: an IAM role can give a user a set of permissions to access one or more services.
+-   IAM service role: an IAM role gives a service a set of permissions to access one or more services.
+
 >Policy defines granular level permissions that can be attached.
 >There are default policies, and policies can be created using `json`
 >[Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)

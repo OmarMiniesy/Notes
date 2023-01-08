@@ -1,6 +1,7 @@
 
 ### Response Codes for Requesting Data
 
+>The HTTP status code can be seen from the network tab in the developer tools.
 > [HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html)
 
 ___

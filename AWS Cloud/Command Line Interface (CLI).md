@@ -7,7 +7,7 @@
 
 To use the CLI:
 1. AWS CLI must be installed 
-2. [[Security Services]] IAM users with admin privelages using
+2. [[Security Services]] IAM users with admin privelages
 3. Configure AWS CLI
 
 > Version of AWS running

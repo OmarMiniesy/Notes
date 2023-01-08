@@ -1,6 +1,6 @@
 
 
->Used to install packages and building blocks for node [npmjs](https://www.npmjs.com/)
+>Used to install packages and building blocks for [[NodeJs]] [npmjs](https://www.npmjs.com/)
 
 > `-g` is the global flag. Append it to any command to play with packages on the global scale, not just in a single project.
 ---
