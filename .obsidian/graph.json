@@ -22,13 +22,6 @@
       }
     },
     {
-      "query": "path:Languages",
-      "color": {
-        "a": 1,
-        "rgb": 14701254
-      }
-    },
-    {
       "query": "path:GitHub",
       "color": {
         "a": 1,
@@ -53,6 +46,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4779501433373082,
+  "scale": 0.4779501433373085,
   "close": true
 }

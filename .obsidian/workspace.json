@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9d65289e754bac20",
+        "id": "4cd732cc8541054e",
         "type": "tabs",
         "children": [
           {
-            "id": "9d3a84b19c132f3d",
+            "id": "8d7216098e62e0d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b2c4d56dcb568a77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/Components.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Angular.md",
+                "file": "JavaScript/Angular/Components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Angular.md",
+                "file": "JavaScript/Angular/Components.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Angular.md"
+                "file": "JavaScript/Angular/Components.md"
               }
             }
           },
@@ -156,17 +169,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "b2c4d56dcb568a77",
   "lastOpenFiles": [
-    "JavaScript/TypeScript/TypeScript Syntax.md",
-    "JavaScript/TypeScript/TypeScript.md",
+    "JavaScript/Angular/Components.md",
     "JavaScript/Angular/Angular.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md",
-    "JavaScript/NodeJs/Config Module.md",
-    "JavaScript/NodeJs/Configuration.md",
-    "JavaScript/NodeJs/Development Dependencies.md",
-    "JavaScript/NodeJs/Environment.md",
-    "JavaScript/NodeJs/Events Module.md"
+    "JavaScript/NodeJs/Modules.md",
+    "GitHub/gitignore.md",
+    "HTTP.md",
+    "Ionic CLI.md",
+    "JavaScript/TypeScript/TypeScript Syntax.md",
+    "JavaScript/TypeScript/TypeScript.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md"
   ]
 }
