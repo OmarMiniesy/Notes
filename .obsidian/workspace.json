@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8d7216098e62e0d2",
+            "id": "53226e8a7c17064f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "b2c4d56dcb568a77",
+            "id": "8d7216098e62e0d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Components.md",
+                "file": "JavaScript/Angular/Angular.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Components.md",
+                "file": "JavaScript/Angular/Angular.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Components.md"
+                "file": "JavaScript/Angular/Angular.md"
               }
             }
           },
@@ -169,17 +168,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b2c4d56dcb568a77",
+  "active": "53226e8a7c17064f",
   "lastOpenFiles": [
     "JavaScript/Angular/Components.md",
     "JavaScript/Angular/Angular.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Modules.md",
-    "GitHub/gitignore.md",
-    "HTTP.md",
-    "Ionic CLI.md",
-    "JavaScript/TypeScript/TypeScript Syntax.md",
-    "JavaScript/TypeScript/TypeScript.md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md"
+    "AWS Cloud/Security Services.md",
+    "AWS Cloud/Simple Notification Service (SNS).md",
+    "AWS Cloud/Lambda.md",
+    "AWS Cloud/Elastic Load Balancer.md",
+    "AWS Cloud/Elastic Container Surface (ECS).md",
+    "AWS Cloud/Elastic Cloud Compute (EC2).md",
+    "AWS Cloud/Elastic Block Storage (EBS).md",
+    "AWS Cloud/Elastic Beanstalk.md"
   ]
 }
