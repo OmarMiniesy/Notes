@@ -267,5 +267,5 @@ router.get('/', (req, res) => {    //change app to router and change /api/course
 > In the index.js file, 
 ```JavaScript
 const courses = require('./routes/courses');
-app.use('/api/courses', courses); //the first parameter is the route and the second is the variable that holds the required omdule.
+app.use('/api/courses', courses); //the first parameter is the route and the second is the variable that holds the required module.
 ```

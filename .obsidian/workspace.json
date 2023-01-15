@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4cd732cc8541054e",
+        "id": "147d1a560c006073",
         "type": "tabs",
         "children": [
           {
-            "id": "53226e8a7c17064f",
+            "id": "46d1bf93c684807f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,7 +20,55 @@
             }
           },
           {
-            "id": "8d7216098e62e0d2",
+            "id": "4c9b65fb2e5c7f20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/Components.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8d2cddd60ab56c33",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/Event Binding.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ec1576ae28fafe1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/Property Binding.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fae965007c6b6358",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/String Interpolation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "12d9470e30d0f569",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -97,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Angular.md",
+                "file": "JavaScript/Angular/Components.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Angular.md",
+                "file": "JavaScript/Angular/Components.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Angular.md"
+                "file": "JavaScript/Angular/Components.md"
               }
             }
           },
@@ -168,17 +217,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "53226e8a7c17064f",
+  "active": "12d9470e30d0f569",
   "lastOpenFiles": [
+    "JavaScript/TypeScript/TypeScript Syntax.md",
+    "JavaScript/TypeScript/TypeScript.md",
+    "JavaScript/Angular/Event Binding.md",
     "JavaScript/Angular/Components.md",
     "JavaScript/Angular/Angular.md",
-    "AWS Cloud/Security Services.md",
-    "AWS Cloud/Simple Notification Service (SNS).md",
-    "AWS Cloud/Lambda.md",
-    "AWS Cloud/Elastic Load Balancer.md",
-    "AWS Cloud/Elastic Container Surface (ECS).md",
-    "AWS Cloud/Elastic Cloud Compute (EC2).md",
-    "AWS Cloud/Elastic Block Storage (EBS).md",
-    "AWS Cloud/Elastic Beanstalk.md"
+    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/String Interpolation.md",
+    "HTTP.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Callbacks.md"
   ]
 }

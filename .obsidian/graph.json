@@ -34,6 +34,13 @@
         "a": 1,
         "rgb": 5431473
       }
+    },
+    {
+      "query": "path:Markdown",
+      "color": {
+        "a": 1,
+        "rgb": 10048224
+      }
     }
   ],
   "collapse-display": false,
@@ -46,6 +53,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4779501433373085,
+  "scale": 0.4581838284047266,
   "close": true
 }
