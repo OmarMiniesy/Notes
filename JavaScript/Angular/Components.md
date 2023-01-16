@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> A component is a typescript class so that [[angular]] can instantiate to create objects
+> A component is a [[typescript]] class so that [[angular]] can instantiate to create objects
 > Each componenet has its own template, styling, and business logic
 > Split a complex application by splitting into multiple components to be reusable
 

@@ -20,7 +20,7 @@
             }
           },
           {
-            "id": "4c9b65fb2e5c7f20",
+            "id": "66e80b2a7dfef983",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -38,6 +38,18 @@
               "type": "markdown",
               "state": {
                 "file": "JavaScript/Angular/Event Binding.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06bbe94851231594",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/Angular/Two Way Binding.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,19 +80,15 @@
             }
           },
           {
-            "id": "12d9470e30d0f569",
+            "id": "596566b5665d3d9a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Components.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -130,7 +138,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 263.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -146,7 +155,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Components.md",
+                "file": "JavaScript/Angular/Two Way Binding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +172,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Components.md",
+                "file": "JavaScript/Angular/Two Way Binding.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +195,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Components.md"
+                "file": "JavaScript/Angular/Two Way Binding.md"
               }
             }
           },
@@ -217,17 +226,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12d9470e30d0f569",
+  "active": "06bbe94851231594",
   "lastOpenFiles": [
-    "JavaScript/TypeScript/TypeScript Syntax.md",
-    "JavaScript/TypeScript/TypeScript.md",
     "JavaScript/Angular/Event Binding.md",
-    "JavaScript/Angular/Components.md",
     "JavaScript/Angular/Angular.md",
-    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/Components.md",
     "JavaScript/Angular/String Interpolation.md",
-    "HTTP.md",
-    "JavaScript/NodeJs/Promises.md",
-    "JavaScript/NodeJs/Callbacks.md"
+    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/TypeScript/TypeScript.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/TypeScript/TypeScript Syntax.md"
   ]
 }

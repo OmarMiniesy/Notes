@@ -32,6 +32,16 @@ ng new <project_name> --no-strict
 ng serve
 ```
 
+
+> If a project is cloned by github, the dependancies and [[Modules]] used need to be installed
+```bash
+npm i 
+```
+> If this brings up the socket and proxy error, run this command then install again
+``` bash
+npm config set registry http://registry.npmjs.org/
+```
+
 ---
 
 ### CSS Styling 
