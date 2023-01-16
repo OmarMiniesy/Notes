@@ -8,87 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "46d1bf93c684807f",
+            "id": "b932b4c5c8f369d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Angular/Angular.md",
+                "file": "JavaScript/Angular/Directives.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "66e80b2a7dfef983",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Components.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8d2cddd60ab56c33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Event Binding.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "06bbe94851231594",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Two Way Binding.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ec1576ae28fafe1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Property Binding.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fae965007c6b6358",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/String Interpolation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "596566b5665d3d9a",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -155,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Two Way Binding.md",
+                "file": "JavaScript/Angular/Directives.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Two Way Binding.md",
+                "file": "JavaScript/Angular/Directives.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -195,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Two Way Binding.md"
+                "file": "JavaScript/Angular/Directives.md"
               }
             }
           },
@@ -226,17 +157,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "06bbe94851231594",
+  "active": "b932b4c5c8f369d0",
   "lastOpenFiles": [
-    "JavaScript/Angular/Event Binding.md",
     "JavaScript/Angular/Angular.md",
     "JavaScript/Angular/Components.md",
-    "JavaScript/Angular/String Interpolation.md",
+    "JavaScript/Angular/Directives.md",
+    "JavaScript/Angular/Event Binding.md",
+    "JavaScript/Angular/Two Way Binding.md",
     "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/String Interpolation.md",
     "JavaScript/TypeScript/TypeScript.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/NodeJs.md",
-    "JavaScript/NodeJs/Modules.md",
-    "JavaScript/TypeScript/TypeScript Syntax.md"
+    "JavaScript/NodeJs/NodeJs.md"
   ]
 }
