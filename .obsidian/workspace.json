@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "147d1a560c006073",
+        "id": "a52a95ba53f47ec6",
         "type": "tabs",
         "children": [
           {
-            "id": "b932b4c5c8f369d0",
+            "id": "037045e6877ef353",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5,
-    "collapsed": true
+    "width": 333.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaScript/Angular/Angular Material.md"
-              }
+              "state": {}
             }
           },
           {
@@ -157,8 +148,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b932b4c5c8f369d0",
+  "active": "037045e6877ef353",
   "lastOpenFiles": [
+    "GitHub/gitignore.md",
     "JavaScript/Angular/Angular Material.md",
     "GitHub/Pushing Changes.md",
     "JavaScript/Angular/Angular.md",
@@ -167,7 +159,6 @@
     "GitHub/Git Commands.md",
     "JavaScript/Angular/Directives.md",
     "JavaScript/Angular/Property Binding.md",
-    "JavaScript/Angular/Two Way Binding.md",
-    "JavaScript/Angular/String Interpolation.md"
+    "JavaScript/Angular/Two Way Binding.md"
   ]
 }
