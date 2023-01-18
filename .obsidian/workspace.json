@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/Angular/Directives.md",
+                "file": "JavaScript/Angular/Angular Material.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5,
+    "width": 333.5,
     "collapsed": true
   },
   "right": {
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Directives.md",
+                "file": "JavaScript/Angular/Angular Material.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Directives.md",
+                "file": "JavaScript/Angular/Angular Material.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Directives.md"
+                "file": "JavaScript/Angular/Angular Material.md"
               }
             }
           },
@@ -159,15 +159,15 @@
   },
   "active": "b932b4c5c8f369d0",
   "lastOpenFiles": [
+    "JavaScript/Angular/Angular Material.md",
+    "GitHub/Pushing Changes.md",
     "JavaScript/Angular/Angular.md",
-    "JavaScript/Angular/Components.md",
-    "JavaScript/Angular/Directives.md",
+    "AWS Cloud/Elastic Load Balancer.md",
     "JavaScript/Angular/Event Binding.md",
-    "JavaScript/Angular/Two Way Binding.md",
+    "GitHub/Git Commands.md",
+    "JavaScript/Angular/Directives.md",
     "JavaScript/Angular/Property Binding.md",
-    "JavaScript/Angular/String Interpolation.md",
-    "JavaScript/TypeScript/TypeScript.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/NodeJs.md"
+    "JavaScript/Angular/Two Way Binding.md",
+    "JavaScript/Angular/String Interpolation.md"
   ]
 }
