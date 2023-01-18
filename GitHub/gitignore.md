@@ -2,6 +2,7 @@
 ### General Notes
 
 > File that contains files or folders that we dont want uploaded to github
+> `.gitignore`
 
 ---
 

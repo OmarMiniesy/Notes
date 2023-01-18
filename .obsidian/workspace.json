@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a52a95ba53f47ec6",
+        "id": "edbde8bceb36ba97",
         "type": "tabs",
         "children": [
           {
-            "id": "037045e6877ef353",
+            "id": "09bb40799e6ac2b4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -148,7 +148,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "037045e6877ef353",
+  "active": "09bb40799e6ac2b4",
   "lastOpenFiles": [
     "GitHub/gitignore.md",
     "JavaScript/Angular/Angular Material.md",
