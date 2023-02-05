@@ -41,6 +41,13 @@
         "a": 1,
         "rgb": 10048224
       }
+    },
+    {
+      "query": "path:Rust",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
     }
   ],
   "collapse-display": false,
@@ -53,6 +60,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.5970327355232046,
+  "scale": 0.4030971588236078,
   "close": true
 }

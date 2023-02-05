@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "edbde8bceb36ba97",
+        "id": "239ce9b1671dc4ce",
         "type": "tabs",
         "children": [
           {
-            "id": "09bb40799e6ac2b4",
+            "id": "9796286530f9c3bb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5,
-    "collapsed": true
+    "width": 281.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -86,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
+                "file": "JavaScript/Angular/Adding an Image.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Angular Material.md",
+                "file": "JavaScript/Angular/Adding an Image.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Angular Material.md"
+                "file": "JavaScript/Angular/Adding an Image.md"
               }
             }
           },
@@ -157,17 +152,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09bb40799e6ac2b4",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "GitHub/gitignore.md",
-    "JavaScript/Angular/Angular Material.md",
-    "GitHub/Pushing Changes.md",
-    "JavaScript/Angular/Angular.md",
-    "AWS Cloud/Elastic Load Balancer.md",
-    "JavaScript/Angular/Event Binding.md",
-    "GitHub/Git Commands.md",
-    "JavaScript/Angular/Directives.md",
-    "JavaScript/Angular/Property Binding.md",
-    "JavaScript/Angular/Two Way Binding.md"
+    "component.md",
+    "JavaScript/Angular/Adding an Image.md",
+    "Operating Systems/1. Introduction.md",
+    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
+    "JavaScript/NodeJs/Semantic Versioning.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/Modules.md"
   ]
 }

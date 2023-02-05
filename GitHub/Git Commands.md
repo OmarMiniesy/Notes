@@ -10,3 +10,8 @@ git init
 git status
 ```
 
+> Switch to a different branch
+```bash
+git checkout <branch-name>
+```
+

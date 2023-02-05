@@ -44,6 +44,11 @@ npm config set registry http://registry.npmjs.org/
 
 ---
 
+### error:0308010C:digital envelope routines::unsupported
+
+> [fix](https://bobbyhadz.com/blog/react-error-digital-envelope-routines-unsupported)
+
+---
 ### CSS Styling 
 
 > Use a CSS bootstrap package to help with styling
