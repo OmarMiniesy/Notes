@@ -8,11 +8,15 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9796286530f9c3bb",
+            "id": "a70cf5d390763e5b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Rust/Rust.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -45,9 +49,9 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 342.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/Angular/Adding an Image.md",
+                "file": "Rust/Rust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/Angular/Adding an Image.md",
+                "file": "Rust/Rust.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/Angular/Adding an Image.md"
+                "file": "Rust/Rust.md"
               }
             }
           },
@@ -152,17 +156,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "a70cf5d390763e5b",
   "lastOpenFiles": [
-    "component.md",
-    "JavaScript/Angular/Adding an Image.md",
-    "Operating Systems/1. Introduction.md",
-    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
-    "JavaScript/NodeJs/Semantic Versioning.md",
-    "JavaScript/NodeJs/Promises.md",
-    "JavaScript/NodeJs/Nodemon Module.md",
-    "JavaScript/NodeJs/NodeJs.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Modules.md"
+    "Operating Systems/Chapter 2.md",
+    "Rust/Rust.md",
+    "Operating Systems/Chapter 1.md",
+    "AWS Cloud/Route 53.md",
+    "AWS Cloud/Redshift.md",
+    "AWS Cloud/EC2 Auto Scaling.md",
+    "AWS Cloud/Elastic Cloud Compute (EC2).md",
+    "AWS Cloud/CloudFront.md",
+    "AWS Cloud/Cloud Watch.md",
+    "AWS Cloud/Cloud Formation.md"
   ]
 }

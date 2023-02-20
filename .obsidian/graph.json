@@ -29,13 +29,6 @@
       }
     },
     {
-      "query": "path:JavaScript",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
-      }
-    },
-    {
       "query": "path:Markdown",
       "color": {
         "a": 1,
@@ -47,6 +40,27 @@
       "color": {
         "a": 1,
         "rgb": 5419488
+      }
+    },
+    {
+      "query": "path:JavaScript/Angular",
+      "color": {
+        "a": 1,
+        "rgb": 8251583
+      }
+    },
+    {
+      "query": "path:JavaScript/NodeJs",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
+      }
+    },
+    {
+      "query": "path:JavaScript/TypeScript",
+      "color": {
+        "a": 1,
+        "rgb": 11621088
       }
     }
   ],
@@ -60,6 +74,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.4030971588236078,
+  "scale": 0.3854484709959478,
   "close": true
 }
