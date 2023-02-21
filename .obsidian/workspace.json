@@ -49,14 +49,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/Protocol.md",
+                "file": "Rust/Rust.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "99c6bc6ee95fd650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Rust/Rust Syntax.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -106,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 271,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/Protocol.md",
+                "file": "Rust/Rust Syntax.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/Protocol.md",
+                "file": "Rust/Rust Syntax.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +175,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Networking/Protocol.md"
+                "file": "Rust/Rust Syntax.md"
               }
             }
           },
@@ -193,17 +206,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ef05118ac1997d23",
+  "active": "99c6bc6ee95fd650",
   "lastOpenFiles": [
+    "Rust/Rust.md",
+    "Networking/Protocol.md",
     "Networking/Routing.md",
     "Networking/Virtual Private Network (VPN).md",
     "Networking/IP.md",
-    "Networking/Protocol.md",
     "Networking/HTTP.md",
     "Security Tools/Wireshark.md",
     "JavaScript/NodeJs/Application Programming Interface (API).md",
     "JavaScript/Angular/Adding an Image.md",
-    "component.md",
-    "Rust/Cargo.md"
+    "component.md"
   ]
 }
