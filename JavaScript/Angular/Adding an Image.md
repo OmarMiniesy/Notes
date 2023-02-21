@@ -6,7 +6,7 @@
 ```TypeScript
 logo: string = "../assets/logo.png";
 ```
->[[component]] typescript file
+>[[Components]] typescript file
 
 2. Create the `img` element in the `HTML` file and add the `src` attribute. Using [[Property Binding]] add the variable created in step 1.
 ```HTMl

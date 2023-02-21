@@ -62,6 +62,20 @@
         "a": 1,
         "rgb": 11621088
       }
+    },
+    {
+      "query": "path:\"Security Tools\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
+    },
+    {
+      "query": "path:Networking",
+      "color": {
+        "a": 1,
+        "rgb": 9849600
+      }
     }
   ],
   "collapse-display": false,
@@ -74,6 +88,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.3854484709959478,
+  "scale": 0.38544847099594837,
   "close": true
 }
