@@ -5,6 +5,8 @@
 > It sends datagrams (packets) to the communicating nodes, and uses IP Addresses to identify hosts.
 > Hosts are identified by unique IP Addresses.
 
+> `ip addr` on Linux to view the IPs, MAC, and interfaces.
+
 ---
 
 ### IPV4 

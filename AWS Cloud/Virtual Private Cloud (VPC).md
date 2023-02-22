@@ -5,9 +5,9 @@
 2. Can launch services like [[Elastic Cloud Compute (EC2)]]
 3. Spans all AZ (Availability Zones) in the region
 4. Can control 
-	* IP address ranges
+	* [[IP]] address ranges
 	* subnets
-	* route tables
+	* [[Routing]] tables
 	* network gateways
 
 ____

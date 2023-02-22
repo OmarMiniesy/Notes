@@ -14,7 +14,7 @@ ___
 
 ## AWS WAF (Web Application Firewall)
 
-> This is a firewall that protects the web applications
+> This is a [[Firewall]] that protects the web applications
 
 > Protect application from common exploits by monitoring and controlling the requests.
 

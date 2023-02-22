@@ -21,7 +21,14 @@
 
 > Routing tables are found on routers and on hosts.
 > To print the route tables: 
-* `ip route` Linux
+* `ip route` or `route` Linux
 * `route print` Windows
 
+> To print the interfaces:
+* `ifconfig` Linux
+
 ---
+
+### Other Commands
+
+> Add a route to the route table ` ip route add <ip>/<subnet> via <router-ip>`

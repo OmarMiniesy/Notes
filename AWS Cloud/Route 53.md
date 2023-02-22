@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> DNS for AWS
+> [[Domain Name System (DNS)]] for AWS
 
 ___
 

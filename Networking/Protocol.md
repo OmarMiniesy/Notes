@@ -25,9 +25,9 @@
 1. Application
 2. Presentation
 3. Session
-4. Transport
-5. Network
-6. Data Link
+4. [[Transport Layer]]: This is where a cummincation channel is held between different hosts.
+5. Network: This is where [[IP]] addresses are used to identify hosts
+6. [[Data Link Layer]]: This is where packet forwarding happens to identify the unique network card via the MAC Address
 7. Physical
 
 ---

@@ -76,6 +76,13 @@
         "a": 1,
         "rgb": 9849600
       }
+    },
+    {
+      "query": "path:\"Web Applications\"",
+      "color": {
+        "a": 1,
+        "rgb": 13799054
+      }
     }
   ],
   "collapse-display": false,
@@ -88,6 +95,6 @@
   "repelStrength": 13.75,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.38544847099594837,
+  "scale": 0.0814610182123723,
   "close": true
 }

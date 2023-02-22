@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> Audit and log everything that happens in the AWS account by recording all API calls.
+> Audit and log everything that happens in the AWS account by recording all [[Application Programming Interface (API)]] calls.
 
 Provides an event history: 
 -   who has logged in

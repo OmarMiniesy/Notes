@@ -12,8 +12,8 @@ ___
 
 ### Application Load Balancer (ALB)
 
-> Host different API endpoints of an application on different servers
-> Redirects the incoming HTTP traffic to the suitable server
+> Host different [[Application Programming Interface (API)]] endpoints of an application on different servers
+> Redirects the incoming [[HTTP]] traffic to the suitable server
 
 ___
 

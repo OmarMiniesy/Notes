@@ -4,47 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5a7e411d279e5b78",
+        "id": "7159008b4303040d",
         "type": "tabs",
         "children": [
           {
-            "id": "740caf3e4123c67f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/HTTP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "517cb852e03dc251",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Protocol.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "213c8a53ac5d6716",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/IP.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef05118ac1997d23",
+            "id": "33654056c7148090",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -54,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "99c6bc6ee95fd650",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Rust/Rust Syntax.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -118,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271,
-    "collapsed": true
+    "width": 271
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -135,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Rust/Rust Syntax.md",
+                "file": "Rust/Rust.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Rust/Rust Syntax.md",
+                "file": "Rust/Rust.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -175,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Rust/Rust Syntax.md"
+                "file": "Rust/Rust.md"
               }
             }
           },
@@ -206,17 +156,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "99c6bc6ee95fd650",
+  "active": "33654056c7148090",
   "lastOpenFiles": [
+    "Rust/Rust Syntax.md",
+    "Rust/rustfmt.md",
     "Rust/Rust.md",
-    "Networking/Protocol.md",
+    "Rust/Cargo.md",
+    "Web Applications/HTTP.md",
     "Networking/Routing.md",
-    "Networking/Virtual Private Network (VPN).md",
-    "Networking/IP.md",
-    "Networking/HTTP.md",
+    "Untitled.md",
     "Security Tools/Wireshark.md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md",
-    "JavaScript/Angular/Adding an Image.md",
-    "component.md"
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Virtual Private Network (VPN).md"
   ]
 }
