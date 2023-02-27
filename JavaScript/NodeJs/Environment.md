@@ -13,7 +13,7 @@
 
 ### Usage
 
-> Through NodeJs, it is stored in `process.env.NODE_ENV` or `app.get('env')`
+> Through [[NodeJs]], it is stored in `process.env.NODE_ENV` or `app.get('env')`
 > To set environment variables `export NODE_ENV=<environment_name>` in linux or `set` in windows.
 
 ---

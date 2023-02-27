@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> A suite of many pre-built [[Angular]] [[Components]]
+> A suite of many pre-built [[Angular]] [[JavaScript/Angular/Components]]
 > Styling of google material design and logic implemented within angular components
 
 > CDK (Component Development Kit) is a separate package that contains utility functionalities and base components.

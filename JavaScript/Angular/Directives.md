@@ -2,7 +2,7 @@
 ### General Notes
 
 > Directives are instructions in the DOM used by [[Angular]]
-> [[Components]] are a kind of directives with a template
+> [[JavaScript/Angular/Components]] are a kind of directives with a template
 > There are directives without templates, these are added with the attribute selectors
 > Directives are defined using the `@Directive` decorator
 
@@ -55,7 +55,7 @@
 #### 4. ngFor Directive
 
 > Structural directive, can change the DOM, so a `*` is needed before its name when added
-> Can add [[Components]] if used inside a component selector
+> Can add [[JavaScript/Angular/Components]] if used inside a component selector
 > Works using a for loop
 
 ```HTML

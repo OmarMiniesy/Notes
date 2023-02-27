@@ -5,31 +5,45 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:\"AWS Cloud\"",
+      "query": "path:JavaScript/ReactJs",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "path:Docker",
+      "query": "path:JavaScript/TypeScript",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:JavaScript/NodeJs",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "path:JavaScript/Angular",
       "color": {
         "a": 1,
         "rgb": 5431378
       }
     },
     {
-      "query": "path:Markdown",
+      "query": "path:\"Web Applications\"",
       "color": {
         "a": 1,
         "rgb": 5431473
       }
     },
     {
-      "query": "path:Rust",
+      "query": "path:\"Security Tools\"",
       "color": {
         "a": 1,
         "rgb": 5419488
@@ -43,44 +57,51 @@
       }
     },
     {
-      "query": "path:\"Security Tools\"",
+      "query": "path:Rust",
       "color": {
         "a": 1,
         "rgb": 11621088
       }
     },
     {
-      "query": "path:\"Web Applications\"",
+      "query": "path:\"AWS Cloud\"",
       "color": {
         "a": 1,
         "rgb": 14701233
-      }
-    },
-    {
-      "query": "path:JavaScript",
-      "color": {
-        "a": 1,
-        "rgb": 16753152
       }
     },
     {
       "query": "path:GitHub",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:Docker",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "path:Markdown",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.3,
-  "nodeSizeMultiplier": 0.508333333333333,
-  "lineSizeMultiplier": 0.835,
+  "textFadeMultiplier": -0.4,
+  "nodeSizeMultiplier": 0.446764322916667,
+  "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.420833333333333,
-  "repelStrength": 8.08203125,
+  "centerStrength": 0.479166666666667,
+  "repelStrength": 10.9166666666667,
   "linkStrength": 1,
-  "linkDistance": 196,
-  "scale": 0.504926643233199,
-  "close": false
+  "linkDistance": 30,
+  "scale": 0.5425142056999303,
+  "close": true
 }

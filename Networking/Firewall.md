@@ -15,8 +15,8 @@
 * Source [[IP]]
 * Destination IP
 * Protocol
-* Source [[Ports]]
-* Destination Ports
+* Source [[Port]]
+* Destination [[Port]]
 
 > Packet filters inspect the header of the packet and take action
 * **Allow** a packet to pass

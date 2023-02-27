@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> A way of reacting to HTML events in the DOM for [[Angular]] [[Components]] 
+> A way of reacting to HTML events in the DOM for [[Angular]] [[JavaScript/Angular/Components]] 
 
 ---
 

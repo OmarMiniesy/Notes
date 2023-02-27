@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d11513c00bff1773",
+        "id": "192c5469934a4f5e",
         "type": "tabs",
         "children": [
           {
-            "id": "b9d78e795fec62f4",
+            "id": "2d2bf104d2a01a80",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
+                "file": "Rust/Data Types.md",
                 "mode": "source",
                 "source": false
               }
@@ -51,7 +51,7 @@
                 "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
+                "file": "Rust/Data Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
+                "file": "Rust/Data Types.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md"
+                "file": "Rust/Data Types.md"
               }
             }
           },
@@ -155,34 +155,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b9d78e795fec62f4",
+  "active": "2d2bf104d2a01a80",
   "lastOpenFiles": [
-    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
-    "JavaScript/NodeJs/Semantic Versioning.md",
-    "JavaScript/NodeJs/Promises.md",
-    "JavaScript/NodeJs/Nodemon Module.md",
-    "JavaScript/NodeJs/NodeJs.md",
+    "Rust/Control Flow.md",
+    "Rust/Variables and Mutability.md",
+    "Rust/Functions.md",
+    "Rust/Data Types.md",
+    "Rust/Rust.md",
+    "JavaScript/ReactJs/Components.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/Angular/Components.md",
+    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/Angular Material.md",
+    "JavaScript/Angular/Adding an Image.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Modules.md",
-    "JavaScript/NodeJs/JOI Module.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/Events Module.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Semantic Versioning.md",
     "JavaScript/NodeJs/Environment.md",
     "JavaScript/NodeJs/Development Dependencies.md",
+    "JavaScript/Angular/Angular.md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
     "JavaScript/NodeJs/Configuration.md",
-    "JavaScript/NodeJs/Config Module.md",
-    "JavaScript/NodeJs/Callbacks.md",
-    "JavaScript/NodeJs/Await-Async.md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md",
     "JavaScript/Angular/Two Way Binding.md",
     "JavaScript/Angular/String Interpolation.md",
-    "JavaScript/Angular/Property Binding.md",
-    "JavaScript/Angular/Event Binding.md",
     "JavaScript/Angular/Directives.md",
-    "JavaScript/Angular/Components.md",
-    "JavaScript/Angular/Angular Material.md",
-    "JavaScript/Angular/Angular.md",
+    "Networking/Data Link Layer.md",
+    "Networking/Domain Name System (DNS).md",
     "JavaScript/ReactJs",
     "Untitled.canvas"
   ]

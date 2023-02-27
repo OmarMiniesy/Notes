@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> A way of dynamically changing HTML properties in the DOM for [[Angular]] [[Components]] 
+> A way of dynamically changing HTML properties in the DOM for [[Angular]] [[JavaScript/Angular/Components]] 
 > Can also use [[String Interpolation]] instead
 
 ___

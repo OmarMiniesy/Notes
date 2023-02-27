@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> A method to bind data in [[Angular]] between the typescript code and template files for [[Components]]
+> A method to bind data in [[Angular]] between the typescript code and template files for [[JavaScript/Angular/Components]]
 > It works only for anything that can resolve into a string, such as a property, a method, a variable, ...
 > Can't write multi-line expressions. Ternary expressions work
 
