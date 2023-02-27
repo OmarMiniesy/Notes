@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:\"AWS Cloud\"",
@@ -18,21 +18,14 @@
       "query": "path:Docker",
       "color": {
         "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:GitHub",
-      "color": {
-        "a": 1,
-        "rgb": 5431380
+        "rgb": 5431378
       }
     },
     {
       "query": "path:Markdown",
       "color": {
         "a": 1,
-        "rgb": 10048224
+        "rgb": 5431473
       }
     },
     {
@@ -43,58 +36,51 @@
       }
     },
     {
-      "query": "path:JavaScript/Angular",
-      "color": {
-        "a": 1,
-        "rgb": 8251583
-      }
-    },
-    {
-      "query": "path:JavaScript/NodeJs",
+      "query": "path:Networking",
       "color": {
         "a": 1,
         "rgb": 5395168
       }
     },
     {
-      "query": "path:JavaScript/TypeScript",
+      "query": "path:\"Security Tools\"",
       "color": {
         "a": 1,
         "rgb": 11621088
       }
     },
     {
-      "query": "path:\"Security Tools\"",
+      "query": "path:\"Web Applications\"",
       "color": {
         "a": 1,
         "rgb": 14701233
       }
     },
     {
-      "query": "path:Networking",
+      "query": "path:JavaScript",
       "color": {
         "a": 1,
-        "rgb": 9849600
+        "rgb": 16753152
       }
     },
     {
-      "query": "path:\"Web Applications\"",
+      "query": "path:GitHub",
       "color": {
         "a": 1,
-        "rgb": 13799054
+        "rgb": 14701233
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.7,
-  "nodeSizeMultiplier": 0.692083333333333,
-  "lineSizeMultiplier": 1,
+  "textFadeMultiplier": -0.3,
+  "nodeSizeMultiplier": 0.508333333333333,
+  "lineSizeMultiplier": 0.835,
   "collapse-forces": false,
-  "centerStrength": 0.508268229166667,
-  "repelStrength": 13.75,
+  "centerStrength": 0.420833333333333,
+  "repelStrength": 8.08203125,
   "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.3511396467925359,
-  "close": true
+  "linkDistance": 196,
+  "scale": 0.504926643233199,
+  "close": false
 }

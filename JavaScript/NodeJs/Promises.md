@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> One way to handle the issues with [[Synchronous and Asynchronous]] function returns
+> One way to handle the issues with [[Synchronous and Asynchronous]] function returns in [[NodeJs]]
 > Promise is an object that holds the eventual result of an asynchronous operation
 > This result can be something correct returned or an error
 

@@ -2,6 +2,8 @@
 ### General Notes
 
 > Programming language interested in low level details
+> Expression based language
+> Statically typed language
 > [The Rust Book](https://doc.rust-lang.org/book/) for documentation and installation
 > Rust files end in `.rs` extension
 
@@ -36,6 +38,8 @@ fn main(){
     println!("Hello, World");
 }
 ```
+
+> Comments are done using  `//` 
 
 ---
 

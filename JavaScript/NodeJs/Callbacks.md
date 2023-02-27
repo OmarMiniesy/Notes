@@ -2,7 +2,7 @@
 
 ### General Notes
 
-> One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions
+> One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions in [[NodeJs]]
 
 ---
 

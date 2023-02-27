@@ -20,7 +20,7 @@ server.on("connection", (socket) => {
 server.listen(3000);
 ```
 
-Code that creates a server that listens on port 3000. A connection is an event, and once it is established, the event is captured.
+Code that creates a server that listens on [[Ports]] 3000. A connection is an event, and once it is established, the event is captured.
 
 
 >Another way is to use function inside the server itself instead of using events

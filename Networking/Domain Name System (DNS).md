@@ -27,7 +27,7 @@ Host - sub domain - domain - TLD
 1. Resolver contacts root name servers, contains info about TLDs
 2. TLDs are asked about the domain
 3. If there are subdomains, step 2 is repeated
-4. Then the name is asked for the host.
+4. Then the host name is requested.
 
 > IP address of root server are hardcoded in configuration of resolver
 

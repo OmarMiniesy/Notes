@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "8c1fe89aa6adb126",
+        "id": "d11513c00bff1773",
         "type": "tabs",
         "children": [
           {
-            "id": "a576d531498c68ad",
+            "id": "b9d78e795fec62f4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "JavaScript/ReactJs/ReactJs.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 308.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -81,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AWS Cloud/Cloud Watch.md",
+                "file": "JavaScript/ReactJs/ReactJs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AWS Cloud/Cloud Watch.md",
+                "file": "JavaScript/ReactJs/ReactJs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -121,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AWS Cloud/Cloud Watch.md"
+                "file": "JavaScript/ReactJs/ReactJs.md"
               }
             }
           },
@@ -133,12 +137,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -151,23 +155,35 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "b9d78e795fec62f4",
   "lastOpenFiles": [
-    "Security Tools/Burp Suite.md",
-    "Security Tools/Wireshark.md",
-    "Web Applications/HTTP.md",
-    "Web Applications/Sessions.md",
-    "Web Applications/Same Origin Policy (SOP).md",
-    "Web Applications/Cookies.md",
-    "Web Applications/HTTPS.md",
-    "Networking/Transport Layer.md",
-    "Untitled.canvas",
-    "Rust/Rust.md",
-    "Rust/Rust Syntax.md",
-    "Rust/rustfmt.md",
-    "Rust/Cargo.md",
-    "Networking/Routing.md",
-    "Networking/Domain Name System (DNS).md",
-    "Networking/Virtual Private Network (VPN).md"
+    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
+    "JavaScript/NodeJs/Semantic Versioning.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/NodeJs/JOI Module.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Express Framework.md",
+    "JavaScript/NodeJs/Events Module.md",
+    "JavaScript/NodeJs/Environment.md",
+    "JavaScript/NodeJs/Development Dependencies.md",
+    "JavaScript/NodeJs/Configuration.md",
+    "JavaScript/NodeJs/Config Module.md",
+    "JavaScript/NodeJs/Callbacks.md",
+    "JavaScript/NodeJs/Await-Async.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "JavaScript/Angular/Two Way Binding.md",
+    "JavaScript/Angular/String Interpolation.md",
+    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/Event Binding.md",
+    "JavaScript/Angular/Directives.md",
+    "JavaScript/Angular/Components.md",
+    "JavaScript/Angular/Angular Material.md",
+    "JavaScript/Angular/Angular.md",
+    "JavaScript/ReactJs",
+    "Untitled.canvas"
   ]
 }

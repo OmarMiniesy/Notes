@@ -2,6 +2,7 @@
 
 > Create a project for [[Rust]] using Cargo.
 > Manages the dependancies and files
+> Can compile, run, and check compilation
 
 ---
 
@@ -16,7 +17,7 @@ cargo new <projectName>
 1. Adds the `src` folder that contains the code
    > There should be a `main.rs` file to be the entry point of the program.
 2. Adds the [[gitignore]] file for GitHub projects
-3. Adds the `Cargo.toml` for configuration
+3. Adds the `Cargo.toml` for configuration. Contains the Development Dependencies used as well. Similar to [[NodeJs]]
 
 ---
 
