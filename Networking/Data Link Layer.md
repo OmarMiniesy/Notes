@@ -32,7 +32,7 @@
 1. The packet has Source IP and MAC of the source computer 
 2. The packet has Destination IP of the recipient computer
 3. The packet has Destination MAC of the router
-4. Once packet reaches the router, [[Routing]] occurs.
+4. Once packet reaches the router, [[Networking/Routing]] occurs.
 5. The router doesnt change source and destination IP
 6. The router changes MAC source to that of router
 7. The router changes MAC destination to that of recipient host.

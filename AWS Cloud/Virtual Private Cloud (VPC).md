@@ -7,7 +7,7 @@
 4. Can control 
 	* [[IP]] address ranges
 	* subnets
-	* [[Routing]] tables
+	* [[Networking/Routing]] tables
 	* network gateways
 
 ____

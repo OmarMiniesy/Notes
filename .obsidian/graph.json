@@ -46,7 +46,7 @@
       "query": "path:\"Security Tools\"",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 7193582
       }
     },
     {
@@ -102,6 +102,6 @@
   "repelStrength": 10.9166666666667,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.5425142056999303,
+  "scale": 0.35504903630116563,
   "close": true
 }

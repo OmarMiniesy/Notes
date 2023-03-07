@@ -3,6 +3,7 @@
 
  > Variables in [[Rust]] are immutable, meaning their values cannot be changed
  > Variables must be mutable to be change by adding `mut` keyword
+ > Cannot play with two variables of different [[Data Types]] in the same expression or statement.
  
 ```Rust
 fn main() {

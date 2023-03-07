@@ -2,6 +2,7 @@
 ### General Notes
 
 > Conditionals and loops for [[Rust]]
+> The match construct.
 
 ---
 
@@ -133,5 +134,54 @@ fn main() {
     }
 }
 ```
+
+---
+
+### Match 
+
+> Compare values against patterns and operate based on which pattern matches.
+> The expression of the match can be of any type, not just boolean like if statements.
+> Then, there arms that contain the pattern and the respective code to be executed.
+> Match must be exhaustive: must cover all cases.
+
+```Rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+```
+>The [[Enums]] says that the coin can be any one of the 4. The match then takes a variable of the type of the enum and then checks which variant it is.
+
+>To check on `Option<T>` data types for the enum, we check if it is `none` or if it is `Some()`
+```Rust
+fn main() {
+    fn plus_one(x: Option<i32>) -> Option<i32> {
+        match x {
+            None => None,
+            Some(i) => Some(i + 1),
+        }
+    }
+
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+}
+
+``` 
+
+> There is also  `other` , which is like a defualt that catches the cases that dont match. Use other on the left part of the arm.
+> There is the `_` placeholder, which means we dont want to use the value entered. Rust ignores it.
+> We can combine `_ => ()` which means if it isnt any of the other cases, then do nothing and ignore it.
 
 ---

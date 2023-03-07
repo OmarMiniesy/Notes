@@ -1,3 +1,4 @@
+
 ### General Notes
 
 > Used to properly format files for [[rust]]

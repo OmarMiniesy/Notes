@@ -5,6 +5,7 @@
 >Check out integrated accounts
 >Figure out if there is an email schema. Mail systems inform the sender that mail wasnt delivered because user doesnt exist
 
+> [[Subdomain Enumeration]] is also OSINT
 ---
 
 ### Tools
@@ -13,3 +14,5 @@
 
 > Whois database has information about owner, street address, email address, and technical contacts of an Internet domain
 > `whois` on linux
+
+---
