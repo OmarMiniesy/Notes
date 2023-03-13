@@ -35,6 +35,8 @@
 | FTP           | 21            |
 | RDP           | 3389          |
 | MySQL         | 3306          |
-| MS SQL SERVER | 1433          |
+| MS SQL SERVER | 1433, 1434    |
+| SMB           | 445           |
+| DNS           | 53            | 
 
 ---

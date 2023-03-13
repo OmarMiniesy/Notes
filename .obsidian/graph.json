@@ -64,13 +64,6 @@
       }
     },
     {
-      "query": "path:\"AWS Cloud\"",
-      "color": {
-        "a": 1,
-        "rgb": 14701233
-      }
-    },
-    {
       "query": "path:GitHub",
       "color": {
         "a": 1,
@@ -90,6 +83,20 @@
         "a": 1,
         "rgb": 11657298
       }
+    },
+    {
+      "query": "path:\"AWS Cloud\"",
+      "color": {
+        "a": 1,
+        "rgb": 7528164
+      }
+    },
+    {
+      "query": "path:Security",
+      "color": {
+        "a": 1,
+        "rgb": 14701235
+      }
     }
   ],
   "collapse-display": false,
@@ -102,6 +109,6 @@
   "repelStrength": 10.9166666666667,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.35504903630116563,
-  "close": true
+  "scale": 0.4915052965488615,
+  "close": false
 }

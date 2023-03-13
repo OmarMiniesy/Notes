@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "15fa12dea825ee81",
+        "id": "a4d16ba314c45af8",
         "type": "tabs",
         "children": [
           {
-            "id": "325fbf2fa109db80",
+            "id": "65f954b41f820383",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Rust/Error Handling.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ping",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 256.5
+    "width": 250.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Rust/Error Handling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Rust/Error Handling.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Rust/Error Handling.md"
+              }
             }
           },
           {
@@ -147,34 +155,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "325fbf2fa109db80",
+  "active": "65f954b41f820383",
   "lastOpenFiles": [
+    "Networking/Transport Layer.md",
+    "Networking/Port.md",
+    "Security/Wireshark.md",
+    "Security/Footprinting and Scanning.md",
+    "Networking/Domain Name System (DNS).md",
+    "Rust/Error Handling.md",
+    "Rust/Cargo.md",
+    "Rust/Collection Types.md",
+    "Rust/Ownership and References.md",
+    "Rust/Methods.md",
+    "Rust/Data Types.md",
+    "Rust/rustfmt.md",
     "Rust/Control Flow.md",
     "Rust/Enums.md",
-    "Rust/Methods.md",
     "Rust/Structs.md",
     "Rust/Functions.md",
     "JavaScript/ReactJs/Routing.md",
     "Security/Burp Suite.md",
     "Security/OSINT.md",
     "Security/Subdomain Enumeration.md",
-    "Security/Wireshark.md",
-    "Rust/Ownership and References.md",
     "Rust/Variables and Mutability.md",
     "Rust/Rust.md",
-    "Rust/Data Types.md",
-    "Rust/Cargo.md",
-    "Networking/Domain Name System (DNS).md",
     "JavaScript/ReactJs/Pass Data Dynamically.md",
     "JavaScript/ReactJs/Events.md",
     "JavaScript/ReactJs/State.md",
     "JavaScript/ReactJs/Components.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "JavaScript/NodeJs/Environment.md",
-    "Rust/rustfmt.md",
-    "JavaScript/ReactJs/Event Handling.md",
-    "Networking/Virtual Private Network (VPN).md",
-    "JavaScript/Angular/Components.md",
     "JavaScript/ReactJs",
     "Untitled.canvas"
   ]
