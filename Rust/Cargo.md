@@ -6,7 +6,7 @@
 
 ---
 
-### Creating a Project
+### Creating a Project MINS MISN MISN
 
 ```Rust
 cargo new <projectName>
