@@ -50,3 +50,14 @@ Message Body \r\n
 
 ---
 
+### HTTP Verbs
+
+#### Get
+> Used to request a resource.
+> `GET /page.php HTTP/1.1`
+
+>Can pass arguments, add after the `?` character.
+>`GET /page.php?name=mins HTTP/1.1`
+
+#### Post
+> 

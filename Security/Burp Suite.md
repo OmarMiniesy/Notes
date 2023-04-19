@@ -14,7 +14,8 @@ ___
 * Build requests manually
 * Crawl a website by visiting every page
 * Fuzz web application by sending patterns of valid and invalid inputs to test behaviour
- ---
+
+---
 
 ### History
 
