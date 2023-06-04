@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b516535abcf488aa",
+        "id": "a6f0dde65e2ffee6",
         "type": "tabs",
         "children": [
           {
-            "id": "e4753ba97d89e773",
+            "id": "f8dc24d011981861",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OpenLane/OpenLane.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "netcat",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 252.5
+    "width": 330.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OpenLane/OpenLane.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OpenLane/OpenLane.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "OpenLane/OpenLane.md"
-              }
+              "state": {}
             }
           },
           {
@@ -163,10 +155,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e4753ba97d89e773",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Docker/Docker.md",
+    "Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Security/Footprinting and Scanning.md",
+    "Networking/Transport Layer.md",
+    "Security/Web Application Fingerprinting.md",
+    "Security/netcat.md",
+    "Security/Subdomain Enumeration.md",
+    "Web Applications/HTTP.md",
+    "Security/OSINT.md",
+    "Security/Wireshark.md",
+    "Web Applications/Cookies.md",
+    "Web Applications/HTTPS.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/HTTP Module.md",
     "OpenLane/OpenLane.md",
+    "Markdown/Markdown Syntax.md",
+    "Markdown",
+    "Docker/Docker.md",
     "JavaScript/ReactJs/State.md",
     "OpenLane",
     "JavaScript/ReactJs/Routing.md",
@@ -177,21 +185,6 @@
     "GitHub/Git Commands.md",
     "Rust/Control Flow.md",
     "Rust/Functions.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/NodeJs.md",
-    "Rust/Collection Types.md",
-    "GitHub/gitignore.md",
-    "Rust/Cargo.md",
-    "Rust/Ownership and References.md",
-    "GitHub/Pushing Changes.md",
-    "Rust/Data Types.md",
-    "Security/Subdomain Enumeration.md",
-    "Security/Footprinting and Scanning.md",
-    "Rust/Structs.md",
-    "Networking/Data Link Layer.md",
-    "Security/Web Application Fingerprinting.md",
-    "Rust/Enums.md",
-    "Rust/Error Handling.md",
     "JavaScript/ReactJs",
     "Untitled.canvas"
   ]

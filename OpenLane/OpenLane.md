@@ -5,6 +5,7 @@
 > Collection of scripts that run tools for chip design.
 > [Documentation](https://openlane.readthedocs.io/en/latest/)
 
+>[Config File](https://github.com/The-OpenROAD-Project/OpenLane/blob/master/configuration/README.md)
 ---
 
 ### Run a design
@@ -25,3 +26,9 @@ make mount
 > We can then run openlane one of the designs called `xtea`.
 
 ---
+
+### Info
+
+> These can be found in the run folder of the design.
+* `runtime.yaml` for the time taken for each step of running the flow.
+* 

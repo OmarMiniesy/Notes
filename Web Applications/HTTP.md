@@ -60,4 +60,38 @@ Message Body \r\n
 >`GET /page.php?name=mins HTTP/1.1`
 
 #### Post
-> 
+> Used to submit `HTML` form data.
+> `POST /login.php HTTP/1.1`
+
+> Can pass arguments only in the message body.
+```
+< Header >\r\n
+\r\n
+username=mins&password=mins
+``` 
+
+#### Head
+> Requests the headers that would be returned if it was used with the `GET` verb.
+> `HEAD / HTTP/1.1
+
+#### Put 
+> Used to upload a file to the server.
+> `PUT /path/to/destination HTTP/1.1`
+
+> The file to be placed is put in the message body.
+```
+< Header >\r\n
+\r\n
+<PUT data>
+```
+
+#### Delete
+> Used to delete a file from the server.
+   `DELETE /path/to/destination HTTP/1.1`
+
+#### Options
+> Used to query the webserver for the enabled `HTTP` verbs.
+> `OPTIONS / HTTP/1.1`
+
+---
+
