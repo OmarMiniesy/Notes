@@ -14,7 +14,7 @@
 >Netcat to act as a server to listen on a specific port.
 >`-l` flag to listen.
 >`-v` flag for verbosity.
->`-p` flag to choose port `8888`.
+>`-p` flag to choose [[Port]] `8888`.
 >`-u` flag for udp.
 ```
 nc -lvp 8888
@@ -26,7 +26,7 @@ nc -lvup 9999
 
 ### netcat as a client: Connector
 
-> Netcat to act as a client to a specific target address and port.
+> Netcat to act as a client to a specific target [[IP]] address and port.
 ```
 nc -v <ip-address> <port>
 

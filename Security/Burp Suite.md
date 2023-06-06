@@ -4,6 +4,7 @@
 > A tool that helps study and analyze web applications
 > It is an **intercepting proxy**
 
+> Can be used to detect [[Cross Site Scripting (XSS)]] vulnerabilities.
 ___
 
 ### Intercepting Proxy
