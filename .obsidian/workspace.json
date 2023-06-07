@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "e3455d9c801030f8",
+        "id": "6ba8ad3309101f22",
         "type": "tabs",
         "children": [
           {
-            "id": "9f45bc90659f6591",
+            "id": "10f66b4f075a287c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Cross Site Scripting (XSS).md",
+                "file": "Security/SQL Injections.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "61626214d430be1b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/SQLMap.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Cross Site Scripting (XSS).md",
+                "file": "Security/SQLMap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Cross Site Scripting (XSS).md",
+                "file": "Security/SQLMap.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Cross Site Scripting (XSS).md"
+                "file": "Security/SQLMap.md"
               }
             }
           },
@@ -163,15 +176,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "61626214d430be1b",
   "lastOpenFiles": [
+    "Security/SQL Injections.md",
+    "Security/SQLMap.md",
+    "Security/Burp Suite.md",
+    "Untitled.md",
+    "Security/Subdomain Enumeration.md",
+    "Security/OSINT.md",
+    "Security/Footprinting and Scanning.md",
+    "Security/Web Application Fingerprinting.md",
+    "Security/Cross Site Scripting (XSS).md",
     "Databases",
     "SQL Injection.md",
-    "Security/Cross Site Scripting (XSS).md",
-    "Security/Burp Suite.md",
     "JavaScript/NodeJs/HTTP Module.md",
     "Web Applications/Cookies.md",
-    "Security/Footprinting and Scanning.md",
     "Security/Directory and File Enumeration.md",
     "Security/Google Hacking.md",
     "Rust/Collection Types.md",
@@ -184,13 +203,8 @@
     "Rust/Ownership and References.md",
     "Rust/Methods.md",
     "Rust/Functions.md",
-    "Security/Subdomain Enumeration.md",
     "Security/netcat.md",
     "Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Networking/Transport Layer.md",
-    "Security/Web Application Fingerprinting.md",
-    "Web Applications/HTTP.md",
-    "Security/OSINT.md",
     "Markdown",
     "OpenLane",
     "JavaScript/ReactJs",

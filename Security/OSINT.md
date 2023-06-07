@@ -12,7 +12,7 @@
 
 > [CrunchBase](http://www.crunchbase.com) is a database where details about founders, investors, buyouts, and acquisitions
 
-> Whois database has information about owner, street address, email address, and technical contacts of an Internet domain
-> `whois` on linux
+> Whois database has information about owner, street address, email address, and technical contacts of an Internet domain.
+> `whois` on linux.
 
 ---
