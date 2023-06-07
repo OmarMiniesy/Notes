@@ -43,13 +43,6 @@
       }
     },
     {
-      "query": "path:\"Security Tools\"",
-      "color": {
-        "a": 1,
-        "rgb": 7193582
-      }
-    },
-    {
       "query": "path:Networking",
       "color": {
         "a": 1,
@@ -92,10 +85,24 @@
       }
     },
     {
-      "query": "path:Security",
+      "query": "path:\"Web Application Security\"",
       "color": {
         "a": 1,
-        "rgb": 14701235
+        "rgb": 14701173
+      }
+    },
+    {
+      "query": "path:\"Network Security\"",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "path:\"System Security\"",
+      "color": {
+        "a": 1,
+        "rgb": 5399264
       }
     }
   ],
@@ -109,6 +116,6 @@
   "repelStrength": 10.9166666666667,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.37827060793745365,
-  "close": true
+  "scale": 0.47667305962738227,
+  "close": false
 }
