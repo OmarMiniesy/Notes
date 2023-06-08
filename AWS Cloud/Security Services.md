@@ -8,7 +8,7 @@
 1. These rules are numbered and ordered
 2. Lowest number rule evaluated first
 
-> The rules compromise conditions, such as checking the IP of the sender.
+> The rules compromise conditions, such as checking the [[IP]] of the sender.
 
 ___
 

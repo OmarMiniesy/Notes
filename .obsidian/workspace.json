@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "26d48e61724b501f",
+        "id": "bfce8ec6059a82f4",
         "type": "tabs",
         "children": [
           {
-            "id": "691982c47a4a7ae0",
+            "id": "9f790095e647a972",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "System Security/John the Ripper.md",
+                "file": "Network Security/Hydra.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "System Security/John the Ripper.md",
+                "file": "Network Security/Hydra.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "System Security/John the Ripper.md",
+                "file": "Network Security/Hydra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "System Security/John the Ripper.md"
+                "file": "Network Security/Hydra.md"
               }
             }
           },
@@ -163,37 +163,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "691982c47a4a7ae0",
+  "active": "9f790095e647a972",
   "lastOpenFiles": [
-    "Networking/Domain Name System (DNS).md",
-    "System Security/John the Ripper.md",
-    "Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "System Security/Malware.md",
-    "System Security/Backdoors.md",
-    "Web Application Security/SQL Injections.md",
-    "GitHub/Git Commands.md",
-    "GitHub/gitignore.md",
-    "GitHub/Pushing Changes.md",
-    "Networking/Port.md",
-    "System Security",
-    "Web Application Security/netcat.md",
-    "Network Security/Wireshark.md",
-    "Network Security",
-    "Web Application Security/SQLMap.md",
-    "Web Application Security/Burp Suite.md",
-    "Web Application Security/Subdomain Enumeration.md",
-    "Web Application Security/OSINT.md",
     "Web Application Security/Footprinting and Scanning.md",
-    "Web Application Security/Web Application Fingerprinting.md",
-    "Web Application Security/Cross Site Scripting (XSS).md",
-    "Databases",
-    "SQL Injection.md",
+    "Network Security/Hydra.md",
+    "AWS Cloud/Simple Queue Service (SQS).md",
+    "System Security/John the Ripper.md",
+    "AWS Cloud/Security Services.md",
+    "AWS Cloud/Lambda.md",
+    "AWS Cloud/Elastic Container Surface (ECS).md",
+    "AWS Cloud/EC2 Auto Scaling.md",
+    "AWS Cloud/Cloud Watch.md",
+    "AWS Cloud/CloudFront.md",
+    "AWS Cloud/CloudTrail.md",
+    "AWS Cloud/Elastic Block Storage (EBS).md",
+    "AWS Cloud/Dynamo DB.md",
+    "JavaScript/NodeJs/Config Module.md",
     "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Environment.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "Web Applications/Sessions.md",
+    "Web Applications/Same Origin Policy (SOP).md",
     "Web Applications/Cookies.md",
+    "Web Applications/HTTP.md",
+    "Web Application Security/Subdomain Enumeration.md",
+    "Web Application Security/SQL Injections.md",
+    "Web Application Security/OSINT.md",
     "Web Application Security/Directory and File Enumeration.md",
-    "Web Application Security/Google Hacking.md",
-    "Rust/Collection Types.md",
-    "Rust/Error Handling.md",
+    "Web Application Security/Cross Site Scripting (XSS).md",
+    "System Security",
+    "Network Security",
+    "Databases",
     "Markdown",
     "OpenLane",
     "JavaScript/ReactJs",
