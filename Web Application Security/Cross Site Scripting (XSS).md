@@ -41,7 +41,7 @@
 > When the malicious payload is sent to the webserver and **stored** there.
 > When a webpage then loads, it pulls this payload from the server and the malicious code is displayed within the HTML output.
 
-> Common in HTML forms where users submit content to the webserver and then is displayed back to users.s
+>Common in HTML forms where users submit content to the webserver and then is displayed back to users.s
 * Commen sections
 * User profiles
 * Forum posts
