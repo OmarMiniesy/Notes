@@ -32,7 +32,7 @@
       "query": "path:JavaScript/Angular",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 15594477
       }
     },
     {
@@ -85,24 +85,10 @@
       }
     },
     {
-      "query": "path:\"Web Application Security\"",
-      "color": {
-        "a": 1,
-        "rgb": 14701173
-      }
-    },
-    {
-      "query": "path:\"Network Security\"",
+      "query": "path:Security",
       "color": {
         "a": 1,
         "rgb": 14701138
-      }
-    },
-    {
-      "query": "path:\"System Security\"",
-      "color": {
-        "a": 1,
-        "rgb": 5399264
       }
     }
   ],
@@ -116,6 +102,6 @@
   "repelStrength": 8.25363825363825,
   "linkStrength": 1,
   "linkDistance": 204,
-  "scale": 0.7271918488979776,
+  "scale": 0.23563133841590522,
   "close": true
 }
