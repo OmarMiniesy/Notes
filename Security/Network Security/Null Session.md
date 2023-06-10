@@ -5,7 +5,8 @@
 > Lets an attacker connect to a local or remote share.
 
 > Not against any share. Those that have IPC, or the file server and printer sharing service.
-> First test by using `nmap` to check the [[Port]]s: 135, 139, 445.
+> First test by using `nmap` to check the [[Port]]s: 135, 139, 445 running [[Server Message Block (SMB)]] [[Protocol]] or NETBIOS [[Transport Layer]] [[Protocol]].
+
 
 ---
 
@@ -31,8 +32,9 @@ NET VIEW <ip-address>
 ##### Connect to share
 > To check if they are vulnerable to null sessions we try to connect to a share using empty credentials.
 ```
-NET USE \\<ip-address>\<share-name$> '' /u:''
+NET USE \\<ip-address>\<share-name> '' /u:''
 ```
+> Include the `$` sign if there is.
 
 
 ### `nmblookup` for linux
@@ -57,8 +59,9 @@ smbclient -L //<target-ip> -N
 ##### Connect to share
 > Check if there are null sessions. Some can work, and some might not. 
 ```
-smbclient //<ip-address>/<share$> -N
+smbclient //<ip-address>/<share-name> -N
 ```
+> Include the `$` sign if there is.
 
 ---
 
@@ -122,5 +125,12 @@ smbmap -H <ip-address>
 > To enumerate users use `--script=smb-enum-users`.
 > To brute force the user passwords use `--script=smb-brute`.
 > To check vulnerabilities use `--script=smb-check-vulns`.
+
+### `smbclient` commands
+
+> Download a file
+```
+get <filename>
+```
 
 ---
