@@ -12,7 +12,7 @@
 5. Running the exploit and getting access to vulnerable machine.
 
 > Mostly used to gain shells on target machines. Similar to [[Backdoors]].
-> Use the meterpreter payload to do that.
+> Use the [[Meterpreter]] payload to do that.
 
 >Update metasploit frequently using `msfupdate`.
 
