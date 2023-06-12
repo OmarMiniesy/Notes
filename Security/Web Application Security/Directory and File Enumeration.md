@@ -23,3 +23,15 @@
 > `-H` flag to pass headers.
 
 ---
+
+### `Gobuster`
+
+> To enumerate a given IP address for directories with a given file type.
+```
+gobuster dir -u http://<ip-address> -w /usr/share/wordlists/dirb/common.txt -x php
+```
+
+---
+
+### `Dirbuster`
+

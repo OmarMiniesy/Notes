@@ -43,6 +43,8 @@
 > `nmap` scans by default the most famous ports
 > To specify ports, use the `-p` flag.
 
+> To use the default scripts to get more information: `-sC`.
+
 > There is the `TCP Connect, TCP SYN, Version Detection Scans`
 
 #### 1. TCP CONNECT SCAN `-sT`
