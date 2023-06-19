@@ -17,7 +17,7 @@
 
 > When a browser sees an HTML entity, it will show the symbol to the user and will not interpret it as HTML language.
 
-> For a character, check the name from this [list]([HTML Standard (whatwg.org)](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references)).
+> For a character, check the name from this [list](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 > Then to encode it `& + name + ;` such as `&lt;`.
 
 > For a number encode it as such `&# + D + ;`. Where `D` is the number.

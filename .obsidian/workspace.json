@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 206.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/Cookies.md"
+                "file": "Security/Web Application Security/SQL Injections.md"
               }
             }
           },
@@ -163,10 +163,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "563333ce381de2c7",
   "lastOpenFiles": [
-    "Web Applications/Same Origin Policy (SOP).md",
     "Web Applications/Web Encoding.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "AWS Cloud/CloudFront.md",
+    "AWS Cloud/Cloud Watch.md",
+    "AWS Cloud/Cloud Formation.md",
+    "Markdown/Markdown Syntax.md",
+    "HTML.md",
+    "[HTML.md",
+    "Security/Web Application Security/Out-of-band application security testing (OAST).md",
+    "Untitled",
+    "Web Applications/Cookies.md",
+    "Web Applications/Same Origin Policy (SOP).md",
     "Untitled.canvas",
     "Web Applications/HTTP.md",
     "Web Applications/HTTPS.md",
@@ -176,8 +186,6 @@
     "Security/System Security/Backdoors.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "JavaScript/NodeJs/Express Framework.md",
-    "Markdown/Markdown Syntax.md",
-    "Web Applications/Cookies.md",
     "JavaScript/NodeJs/HTTP Module.md",
     "JavaScript/NodeJs/Events Module.md",
     "PHP/PHP.md",
@@ -186,13 +194,6 @@
     "Networking/IP.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Network Security/Footprinting and Scanning.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Networking/Firewall.md",
-    "JavaScript/NodeJs/Modules.md",
-    "JavaScript/NodeJs/JOI Module.md",
-    "JavaScript/NodeJs/Config Module.md",
-    "JavaScript/NodeJs/Promises.md",
-    "JavaScript/NodeJs/Nodemon Module.md",
     "Security/Tools",
     "Security",
     "Security/System Security",

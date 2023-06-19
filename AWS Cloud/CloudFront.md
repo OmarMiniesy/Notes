@@ -41,4 +41,4 @@ ___
 ### Deletion
 
 * Disable and delete the cloudfront distribution
-* delete origin access policy from origin access identity service
+* delete origin access policy from origin access identity serviceS
