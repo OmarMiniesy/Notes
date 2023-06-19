@@ -65,7 +65,7 @@ mod(<parameters>);
 
 ### Built In Modules
 
-> From [Node.js v18.12.1 LTS](https://nodejs.org/dist/latest-v18.x/docs/api/)
+> From [Node.js](https://nodejs.org/dist/latest-v18.x/docs/api/)
 
 >Using the parameters for the `require` function assumes default names for the built in modules. If they are not there, then it will check for the actual files present in the directory.
 

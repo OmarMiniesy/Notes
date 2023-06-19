@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ae7dec1f72e6164f",
+        "id": "cfff566f46f5ca28",
         "type": "tabs",
         "children": [
           {
-            "id": "2f8f9d61e70bb47f",
+            "id": "563333ce381de2c7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Web Applications/Cookies.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nmap",
+                "query": "only",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 249.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -89,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/ReactJs/Components.md",
+                "file": "Web Applications/Cookies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/ReactJs/Components.md",
+                "file": "Web Applications/Cookies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "JavaScript/ReactJs/Components.md"
+                "file": "Web Applications/Cookies.md"
               }
             }
           },
@@ -161,39 +165,41 @@
   },
   "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Security/Tools/mysql.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Security/Network Security/Footprinting and Scanning.md",
-    "Networking/Port.md",
-    "Security/Tools",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Web Applications/Same Origin Policy (SOP).md",
+    "Web Applications/Web Encoding.md",
+    "Untitled.canvas",
     "Web Applications/HTTP.md",
-    "Security/Web Application Security/OSINT.md",
-    "Security/System Security/Meterpreter.md",
-    "Security/Tools/Metasploit.md",
-    "Security/System Security/Backdoors.md",
-    "Networking/Server Message Block (SMB).md",
-    "Security/Network Security/Null Session.md",
-    "JavaScript/NodeJs/NodeJs.md",
-    "Security/Tools/Hydra.md",
-    "Security/Web Application Security/SQLMap.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Security/Web Application Security/Web Application Fingerprinting.md",
-    "Security/Tools/netcat.md",
-    "Security/Network Security/Arp Poisoning.md",
-    "Security/Network Security/Wireshark.md",
+    "Web Applications/HTTPS.md",
+    "Security/Tools/mysql.md",
     "Security/Tools/Burp Suite.md",
     "Security/System Security/Malware.md",
+    "Security/System Security/Backdoors.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "JavaScript/NodeJs/Express Framework.md",
+    "Markdown/Markdown Syntax.md",
+    "Web Applications/Cookies.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Events Module.md",
+    "PHP/PHP.md",
+    "PHP",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Networking/IP.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Networking/Firewall.md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/NodeJs/JOI Module.md",
+    "JavaScript/NodeJs/Config Module.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "Security/Tools",
     "Security",
     "Security/System Security",
     "Security/Network Security",
     "Databases",
     "Markdown",
     "OpenLane",
-    "JavaScript/ReactJs",
-    "Untitled.canvas"
+    "JavaScript/ReactJs"
   ]
 }

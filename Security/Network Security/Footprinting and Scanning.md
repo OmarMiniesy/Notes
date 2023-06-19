@@ -42,6 +42,7 @@
 
 > `nmap` scans by default the most famous ports
 > To specify ports, use the `-p` flag.
+> For all ports, use `-p-` flag. Use `--min-rate <num>` to speed up as num goes higher.
 
 > To use the default scripts to get more information: `-sC`.
 

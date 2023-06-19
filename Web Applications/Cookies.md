@@ -2,9 +2,9 @@
 ### General Notes
 
 > Created to make [[HTTP]] [[Protocol]] stateful.
-> They are textual information installed by a website into the Cookie Jar of the **browser**
-> Cookie Jar is storage space where web browser stores cookies
-> Storing data on the client side instead of the server side ([[Sessions]])
+> They are textual information installed by a website into the Cookie Jar of the **browser**.
+> Cookie Jar is storage space where web browser stores cookies.
+> Storing data on the client side instead of the server side ([[Sessions]]).
 
 > Can be viewed in JavaScript using `document.cookie`
 
@@ -14,11 +14,11 @@
 
 > Server can set cookie via the `Set-Cookie` HTTP header in a response message
 > Cookies contain the following data:
-* Cookie Content: Key-Value pairs that contain data
+* Cookie Content: Text Key-Value pairs that contain data
 * Expiration Date
-* Path
+* Path: sends the cookies to all subsequent requests to this path and everything under it.
 * Domain
-* HTTP Only Flag: only HTML technology can read the cookie
+* HTTP Only Flag: only HTML technology can read the cookie. Secure against [[Cross Site Scripting (XSS)]].
 * Secure Flag: Cookies are only sent over [[HTTPS]]
 
 > Cookies are sent to the valid domain and path and only when they are not expired and according to the flags.
