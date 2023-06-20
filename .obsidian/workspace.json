@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Tools/SQLMap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9a7e9d4eb971a445",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/Cookies.md"
+                "file": "Security/Web Application Security/SQL Injections.md"
               }
             }
           },
@@ -163,11 +176,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "818951c91b02d426",
+  "active": "9a7e9d4eb971a445",
   "lastOpenFiles": [
-    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Web Applications/Cookies.md",
+    "Security/Tools/SQLMap.md",
     "Security/Web Application Security/SQL Injections.md",
+    "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/OSINT.md",
+    "Security/Web Application Security/Google Hacking.md",
+    "Web Applications/Sessions.md",
+    "Web Applications/Cookies.md",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
     "Web Applications/Web Encoding.md",
     "AWS Cloud/CloudFront.md",
     "AWS Cloud/Cloud Watch.md",
@@ -182,18 +200,13 @@
     "Web Applications/HTTP.md",
     "Web Applications/HTTPS.md",
     "Security/Tools/mysql.md",
-    "Security/Tools/Burp Suite.md",
     "Security/System Security/Malware.md",
     "Security/System Security/Backdoors.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "JavaScript/NodeJs/Express Framework.md",
     "JavaScript/NodeJs/HTTP Module.md",
     "JavaScript/NodeJs/Events Module.md",
-    "PHP/PHP.md",
     "PHP",
-    "Networking/IP.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Network Security/Footprinting and Scanning.md",
     "Security/Tools",
     "Security",
     "Security/System Security",

@@ -15,7 +15,7 @@
 
 ### Session Cookies
 
-> Session cookies contain single parameter value pairs referring to the session
+> Session cookies contain single parameter value pairs referring to the session.
 > These are found in the `set-cookie` header
 > Examples:
 * `SESSION=<session-ID>

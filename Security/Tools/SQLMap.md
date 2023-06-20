@@ -36,3 +36,10 @@ sqlmap -u <'url'> -p <parameter> --cookie <"">
 ```
 
 ---
+
+### Usefull Commands
+
+> To avoid asking for user input and work with defaults
+```
+--batch
+```

