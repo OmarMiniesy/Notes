@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1c1a56b9e2596e16",
+        "id": "8fba8e0a30fd731e",
         "type": "tabs",
         "children": [
           {
-            "id": "818951c91b02d426",
+            "id": "a310a4782a11b333",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/SQLMap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9a7e9d4eb971a445",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/OSINT.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "only",
+                "query": "lookup",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/OSINT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/OSINT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md"
+                "file": "Security/Web Application Security/OSINT.md"
               }
             }
           },
@@ -176,12 +163,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9a7e9d4eb971a445",
+  "active": "a310a4782a11b333",
   "lastOpenFiles": [
+    "netcraft.com.md",
+    "Security/Web Application Security/OSINT.md",
+    "Networking/Domain Name System (DNS).md",
     "Security/Tools/SQLMap.md",
     "Security/Web Application Security/SQL Injections.md",
     "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/OSINT.md",
     "Security/Web Application Security/Google Hacking.md",
     "Web Applications/Sessions.md",
     "Web Applications/Cookies.md",
@@ -204,8 +193,6 @@
     "Security/System Security/Backdoors.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "JavaScript/NodeJs/Events Module.md",
     "PHP",
     "Security/Tools",
     "Security",
