@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cfff566f46f5ca28",
+        "id": "1c1a56b9e2596e16",
         "type": "tabs",
         "children": [
           {
-            "id": "563333ce381de2c7",
+            "id": "818951c91b02d426",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Web Applications/Cookies.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 206.5
+    "width": 304.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Web Applications/Cookies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Web Applications/Cookies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md"
+                "file": "Web Applications/Cookies.md"
               }
             }
           },
@@ -163,10 +163,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "563333ce381de2c7",
+  "active": "818951c91b02d426",
   "lastOpenFiles": [
-    "Web Applications/Web Encoding.md",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Web Applications/Cookies.md",
     "Security/Web Application Security/SQL Injections.md",
+    "Web Applications/Web Encoding.md",
     "AWS Cloud/CloudFront.md",
     "AWS Cloud/Cloud Watch.md",
     "AWS Cloud/Cloud Formation.md",
@@ -175,7 +177,6 @@
     "[HTML.md",
     "Security/Web Application Security/Out-of-band application security testing (OAST).md",
     "Untitled",
-    "Web Applications/Cookies.md",
     "Web Applications/Same Origin Policy (SOP).md",
     "Untitled.canvas",
     "Web Applications/HTTP.md",
@@ -190,7 +191,6 @@
     "JavaScript/NodeJs/Events Module.md",
     "PHP/PHP.md",
     "PHP",
-    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
     "Networking/IP.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Network Security/Footprinting and Scanning.md",

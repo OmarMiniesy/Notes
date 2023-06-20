@@ -37,3 +37,15 @@
 > What this does, is that the browser now manages to maintain a stateful connection to the server, meaning that all subsequent requests dont need authentication again.
 
 ---
+
+### Cookie Domain
+
+> A cookie with a domain value specified is only sent to the target with the same domain value.
+> A cookie with a domain value different from the target but is a suffix of the target domain then it is also sent.
+
+> Higher level subdomains cannot set cookies for lower level subdomains.
+> Lower level subdomains can set cookies for higher level subdomains.
+
+> Cookie with `host-only-flag` set to true is one that does not have a domain value. Sent only to target domain that set it.
+
+---
