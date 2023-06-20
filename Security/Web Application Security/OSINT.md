@@ -10,7 +10,6 @@
 
 ### Tools
 
-
 ##### CrunchBase
 > [CrunchBase](http://www.crunchbase.com) is a database where details about founders, investors, buyouts, and acquisitions
 

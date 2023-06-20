@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "a310a4782a11b333",
+            "id": "89396e1ea6b1b509",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/OSINT.md",
+                "file": "Security/Web Application Security/File Inclusion.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/OSINT.md",
+                "file": "Security/Web Application Security/File Inclusion.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/OSINT.md",
+                "file": "Security/Web Application Security/File Inclusion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/OSINT.md"
+                "file": "Security/Web Application Security/File Inclusion.md"
               }
             }
           },
@@ -163,11 +163,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a310a4782a11b333",
+  "active": "89396e1ea6b1b509",
   "lastOpenFiles": [
-    "netcraft.com.md",
-    "Security/Web Application Security/OSINT.md",
+    "Web Applications/Name Based Virtual Hosting.md",
+    "Security/Web Application Security/File Inclusion.md",
     "Networking/Domain Name System (DNS).md",
+    "Security/Web Application Security/OSINT.md",
+    "netcraft.com.md",
     "Security/Tools/SQLMap.md",
     "Security/Web Application Security/SQL Injections.md",
     "Security/Tools/Burp Suite.md",
@@ -191,8 +193,6 @@
     "Security/Tools/mysql.md",
     "Security/System Security/Malware.md",
     "Security/System Security/Backdoors.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "JavaScript/NodeJs/Express Framework.md",
     "PHP",
     "Security/Tools",
     "Security",
