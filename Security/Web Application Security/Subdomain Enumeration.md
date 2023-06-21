@@ -13,7 +13,15 @@
 
 > [dnsdumpster.com](https://dnsdumpster.com/) can be used for subdomain enumeration.
 > `sublist3r` can be used for [[Domain Name System (DNS)]] enumeration.
+> `the harvester`
+> `dnsrecon`
 
 > These can identify publically available targets.
+
+---
+
+### `gobuster`
+
+
 
 ---

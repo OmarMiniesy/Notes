@@ -21,4 +21,7 @@
 ##### [netcraft](http://netcraft.com)
 > Used to get ISP's and useful information regarding the domains and IP addresses.
 
+##### Whatweb, Netcat
+> Used to get information about the server infrastructure.
+
 ---
