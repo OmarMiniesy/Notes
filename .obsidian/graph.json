@@ -8,38 +8,45 @@
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "path:JavaScript/ReactJs",
+      "query": "path:JavaScript",
       "color": {
         "a": 1,
         "rgb": 14701138
       }
     },
     {
-      "query": "path:JavaScript/TypeScript",
+      "query": "path:\"AWS Cloud\"",
       "color": {
         "a": 1,
         "rgb": 14725458
       }
     },
     {
-      "query": "path:JavaScript/NodeJs",
+      "query": "path:\"Web Applications\"",
       "color": {
         "a": 1,
         "rgb": 11657298
       }
     },
     {
-      "query": "path:JavaScript/Angular",
+      "query": "path:Docker",
       "color": {
         "a": 1,
-        "rgb": 15594477
+        "rgb": 5431378
       }
     },
     {
-      "query": "path:\"Web Applications\"",
+      "query": "path:GitHub",
       "color": {
         "a": 1,
         "rgb": 5431473
+      }
+    },
+    {
+      "query": "path:Rust",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
       }
     },
     {
@@ -50,58 +57,30 @@
       }
     },
     {
-      "query": "path:Rust",
+      "query": "",
       "color": {
         "a": 1,
         "rgb": 11621088
       }
     },
     {
-      "query": "path:GitHub",
-      "color": {
-        "a": 1,
-        "rgb": 14701138
-      }
-    },
-    {
-      "query": "path:Docker",
-      "color": {
-        "a": 1,
-        "rgb": 14725458
-      }
-    },
-    {
-      "query": "path:Markdown",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
-      }
-    },
-    {
-      "query": "path:\"AWS Cloud\"",
-      "color": {
-        "a": 1,
-        "rgb": 7528164
-      }
-    },
-    {
       "query": "path:Security",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 14701233
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.4,
-  "nodeSizeMultiplier": 0.446764322916667,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
   "lineSizeMultiplier": 1,
   "collapse-forces": false,
-  "centerStrength": 0.304573804573805,
-  "repelStrength": 8.25363825363825,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
   "linkStrength": 1,
-  "linkDistance": 204,
-  "scale": 0.5553831401227057,
+  "linkDistance": 250,
+  "scale": 0.5553831401227102,
   "close": true
 }

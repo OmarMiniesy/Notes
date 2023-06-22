@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "8fba8e0a30fd731e",
+        "id": "3ec28f6e13748c98",
         "type": "tabs",
         "children": [
           {
-            "id": "89396e1ea6b1b509",
+            "id": "b333bc420324f4f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 222.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md"
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md"
               }
             }
           },
@@ -163,12 +163,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "89396e1ea6b1b509",
+  "active": "b333bc420324f4f8",
   "lastOpenFiles": [
-    "Markdown/Markdown Syntax.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/OSINT.md",
+    "Markdown/Markdown Syntax.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/File Inclusion.md",
     "Web Applications/Name Based Virtual Hosting.md",
@@ -192,7 +193,6 @@
     "Untitled.canvas",
     "Web Applications/HTTP.md",
     "Web Applications/HTTPS.md",
-    "Security/Tools/mysql.md",
     "PHP",
     "Security/Tools",
     "Security",
