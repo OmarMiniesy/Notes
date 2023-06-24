@@ -22,7 +22,7 @@
 
 > For a number encode it as such `&# + D + ;`. Where `D` is the number.
 
-> For a hexadecimal encode it as such `&# + H + ;`. Where `H` is the case insensitive hex.
+> For a hexadecimal encode it as such `&# + xH + ;`. Where `H` is the case insensitive hex.
 
 ---
 

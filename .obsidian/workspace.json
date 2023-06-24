@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5
+    "width": 229.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -165,8 +165,10 @@
   },
   "active": "b333bc420324f4f8",
   "lastOpenFiles": [
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "JavaScript/Angular/String Interpolation.md",
+    "Web Applications/Web Encoding.md",
     "Security/Web Application Security/OSINT.md",
     "Markdown/Markdown Syntax.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
@@ -181,7 +183,6 @@
     "Web Applications/Sessions.md",
     "Web Applications/Cookies.md",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Web Applications/Web Encoding.md",
     "AWS Cloud/CloudFront.md",
     "AWS Cloud/Cloud Watch.md",
     "AWS Cloud/Cloud Formation.md",
@@ -192,7 +193,6 @@
     "Web Applications/Same Origin Policy (SOP).md",
     "Untitled.canvas",
     "Web Applications/HTTP.md",
-    "Web Applications/HTTPS.md",
     "PHP",
     "Security/Tools",
     "Security",
