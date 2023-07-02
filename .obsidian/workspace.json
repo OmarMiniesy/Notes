@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3ec28f6e13748c98",
+        "id": "645f1e120371340d",
         "type": "tabs",
         "children": [
           {
-            "id": "bc0c6e863570a9c2",
+            "id": "cd2af12826352a82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/Burp Suite.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "75ab4e88dc13d7d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/HTTP.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 223.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Tools/Burp Suite.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Tools/Burp Suite.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Tools/Burp Suite.md"
+                "file": "Security/Web Application Security/Authentication.md"
               }
             }
           },
@@ -175,11 +163,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc0c6e863570a9c2",
+  "active": "cd2af12826352a82",
   "lastOpenFiles": [
-    "Security/Web Application Security/Authentication.md",
     "Web Applications/HTTP.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Tools/Burp Suite.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Tools/John the Ripper.md",
+    "Web Applications/Name Based Virtual Hosting.md",
     "Security/Web Application Security/SQL Injections.md",
     "JavaScript/Angular/String Interpolation.md",
     "Web Applications/Web Encoding.md",
@@ -188,11 +179,9 @@
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/File Inclusion.md",
-    "Web Applications/Name Based Virtual Hosting.md",
     "Networking/Domain Name System (DNS).md",
     "netcraft.com.md",
     "Security/Tools/SQLMap.md",
-    "Security/Tools/Burp Suite.md",
     "Security/Web Application Security/Google Hacking.md",
     "Web Applications/Sessions.md",
     "Web Applications/Cookies.md",
@@ -202,7 +191,6 @@
     "AWS Cloud/Cloud Formation.md",
     "HTML.md",
     "[HTML.md",
-    "Security/Web Application Security/Out-of-band application security testing (OAST).md",
     "Untitled",
     "Untitled.canvas",
     "PHP",

@@ -64,4 +64,9 @@ john -wordlist=<path-to-wordlist> -rules <file-to-crack>
 grep -A 30 ENCRYT_METHOD /etc/login.defs
 ```
 
+> To view previously cracked passwords for a specific hashing technique.
+```
+john --show -format=<hash-method> <filename>
+```
+
 ---

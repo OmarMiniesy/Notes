@@ -33,3 +33,26 @@ ___
 > Download the required extensions.
 
 ---
+
+### View Response In Browser
+
+> Need to open the burp proxy and enable it on the broswer to view responses in the browser and follow the trail of responses.
+
+---
+
+### Intruder
+
+> To enumerate a single list multiple times, use the clusterbomb attack and set one of the payloads as null values.
+> Set the number of null values to the number of repetittions wanted.
+
+---
+
+### Macro Sessions
+
+> To add a macro, go to settings and then sessions.
+> Add a rule and make sure its scope is set.
+> Add a macro and select the requests needed in order and test the macro to make sure it works as required.
+
+> This macro will work after every request in the desired tools in burp.
+
+---

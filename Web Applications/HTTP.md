@@ -37,6 +37,8 @@ Message Body \r\n
 >  Request has a verb from these  [HTTP Verbs](https://www.restapitutorial.com/lessons/httpmethods.html#:~:text=The%20primary%20or%20most%2Dcommonly,but%20are%20utilized%20less%20frequently.)
 >  After the verb, the path requested and the protcol version is stated: `verb /path HTTP/<version>`. Example: `GET / HTTP/1.1`
 
+> To check if a header can be added, try it in [[Burp Suite]] repeater, and check the response. If the response has no errors and is normally operating, then maybe it is accepted.
+
 ##### Header Fields
 > Header field has format `header-name: header-value`.
 > [List of Header Fields](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
