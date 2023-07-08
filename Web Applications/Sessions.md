@@ -3,6 +3,7 @@
 
 > Stores information on the server side instead of the client side.
 > This is to hide application logic, or to stop transferring [[Cookies]].
+> Used to identify which [[HTTP]] requests are made by same user.
 
 > Sessions are a mechanism that let the website store variables for a given visit on the server.
 > Each session, for a user, is identified by a **session id** or token that the server assigns to the client.
