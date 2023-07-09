@@ -56,8 +56,19 @@ DENY: POST, /admin/deleteUser, managers
 * `X-Rewrite-URL: /admin/deleteUser`.
 
 > Can be used to bypass these rules.
+> Sometimes these rules can be bypassed by trying different [[HTTP]] methods (verbs).
+> Trying `GET` instead of `POST`. Do that using [[Burp Suite]] repeater change request method.
 
+###### 4. URL-Matching
 
+> Inconsistent capitalization. Treating the same endpoint but with different capitalization as 2 different endpoints.
+
+> Spring framework `useSuffixPatternMatch`. Paths with any file extension are the same as paths without the file extensions.
+
+> Adding a trailing backslash in the end could be regarded as 2 different endpoints.
+
+> These techniques can be used to bypass access controls. 
+> Trying to capitalize, add file extensions, and adding trailing backslashed could lead to the same endpoint but are regarded differently by the browser.
 
 ---
 
@@ -66,10 +77,70 @@ DENY: POST, /admin/deleteUser, managers
 > Mechanisms that restrict access of resources to users who have access to them.
 > Different users have access to subset of the same resources.
 
+
+#### Horizontal Privilege Escalation
+
+> User gaining access to resources of another user.
+> Using similar techniques as Vertical Privilege Escalation.
+
+###### 1. 
+> Changing the parameters in the URL.
+```
+https://insecure-website.com/myaccount?id=123
+```
+> User entering a different value for `id` and the browser allowing it could allow for access to their resources.
+
+###### 2.
+> Some applications use GUIDs to identify users. (Globally unique identifiers).
+> These GUIDs can be disclosed in different places in the application, such as messages or reviews.
+> These can be used in the `id` parameter.
+
+###### 3. 
+> When these attacks fail, sometimes the website redirects.
+> Checking the response for the redirect might contain sensitive data belonging to targeted user.
+
 ---
 
 ### Context-Dependant Access Control
 
 > Restrict access to resources based on the state in which the user is in, such as performing actions in the wrong order.
+
+---
+
+### Insecure Direct Object References (IDOR)
+
+> Access control vulnerability when an application uses user input to access objects.
+
+> Can be used to gain horizontal or vertical privilege escalation using similar techniques as above.
+> The difference is that these access points lead directly into sensitive databases.
+
+> They are often present when resources are located in static files on the server.
+> These file names could be guessed or have their pattern cracked, so that attackers can access whichever files they want.
+```
+https://url/static/file.txt
+```
+> This file name can be altered by an attacker to view other files for other users as well.
+
+---
+
+### Referer HTTP Header Control
+
+> Some websites base controls on the `Referer` header.
+> It is added to requests to indicate the page from which the request initialized.
+
+> Some applications only use the `Referer` header for pages after a secured one.
+> For example the `/admin` page is very secure, but `/admin/delete` only uses the `Referer`.
+
+> So as an authorized user can add the `referer` header to access these unsecure but sensitive pages.
+
+---
+
+### Preventing Access Control Vulnerabilities
+
+* Never rely on obfuscation only. (Patterns or long ids)
+* Deny access to any resource not publically available.
+* Use a single application mechanism for enforcing control.
+* All resources should have their access declared and by defualt denied.
+* Thoroughly test access controls.
 
 ---

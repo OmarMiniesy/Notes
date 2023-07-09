@@ -62,3 +62,12 @@ https://<URL>/whoami.txt
 * `ps ef` for the running processes. 
 
 ---
+
+### Preventing Command Injection Attacks
+
+* Never call out to OS commands from application layer.
+* If that is not the case, then strong input validationr required.
+	* Validating against whitelist.
+	* Validating data type.
+
+---

@@ -65,3 +65,12 @@ filename=../../../etc/passwd%00.png
 > Here, we must end with a `.png`, but the null byte `%00` effectively terminates the path right before it.
 
 ---
+
+### Preventing Directory Traversal Attacks
+
+* Avoid passing user-supplied input into the file system, or any file system APIs.
+* If that cannot be the case, implement 2 layer defense:
+	1. Validate user input before processing.
+	2. Append the input to the base directory, and verify that the path starts with the expected base.
+
+---

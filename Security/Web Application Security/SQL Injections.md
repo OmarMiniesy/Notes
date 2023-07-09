@@ -259,3 +259,10 @@ SELECT username password FROM users
 ```
 
 ---
+
+### Preventing SQL Injections
+
+* Using parameterized queries instead of string concatention within the query.
+	* The string used in the query must be a constant and not contain variables.
+
+---

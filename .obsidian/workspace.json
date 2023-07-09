@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Access Control.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "751ca503dcd5c563",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Directory and File Enumeration.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Access Control.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Access Control.md",
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Access Control.md"
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md"
               }
             }
           },
@@ -177,21 +165,21 @@
   },
   "active": "d0985f026ef63f9e",
   "lastOpenFiles": [
-    "Web Applications/HTTP.md",
     "Security/Web Application Security/Access Control.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Web Applications/HTTP.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Web Applications/Sessions.md",
-    "Security/Web Application Security/Command Injection.md",
     "Security/Tools/Burp Suite.md",
     "Networking/Domain Name System (DNS).md",
     "Security/Network Security/Footprinting and Scanning.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/File Inclusion.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Tools/John the Ripper.md",
     "Web Applications/Name Based Virtual Hosting.md",
-    "Security/Web Application Security/SQL Injections.md",
     "JavaScript/Angular/String Interpolation.md",
     "Web Applications/Web Encoding.md",
     "Security/Web Application Security/OSINT.md",

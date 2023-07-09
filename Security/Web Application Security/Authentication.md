@@ -120,3 +120,23 @@ http://website.com/reset-password?user=<victim>
 > Observe the responses for each combination, and check if a pattern is in place that can be cracked.
 
 ---
+
+### Preventing Authentication Attacks
+
+* Taking care with user credentials.
+	* Never send login data over unencrypted connections.
+	* Any [[HTTP]] to be converted to [[HTTPS]].
+	* Audit the website so no private information is disclosed.
+* Do not count on users for security.
+	* Effective password policy.
+* Prevent username enumeration.
+	* Using identical generic error messages.
+	* Return same status codes for any login request.
+	* Make response times indestinguishable.
+* Protect against brute force.
+	* [[IP]]-based user rate limiting.
+	* Prevent attackers from manipulating their IP address.
+	* Complete CAPTCHA tests with each login attempt after a limit.
+* Proper Multi-Factor Authentication.
+
+---
