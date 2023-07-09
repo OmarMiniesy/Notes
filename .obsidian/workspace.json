@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4c76406be282e78d",
+        "id": "d55a525a7898ae76",
         "type": "tabs",
         "children": [
           {
-            "id": "d0985f026ef63f9e",
+            "id": "0e382988cd3a8d2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
+                "file": "Security/Web Application Security/Information Disclosure.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
+                "file": "Security/Web Application Security/Information Disclosure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
+                "file": "Security/Web Application Security/Information Disclosure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md"
+                "file": "Security/Web Application Security/Information Disclosure.md"
               }
             }
           },
@@ -163,9 +163,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0985f026ef63f9e",
+  "active": "0e382988cd3a8d2d",
   "lastOpenFiles": [
+    "Security/Web Application Security/OSINT.md",
     "Security/Web Application Security/Access Control.md",
+    "Security/Web Application Security/Information Disclosure.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Authentication.md",
@@ -177,12 +180,10 @@
     "Networking/Domain Name System (DNS).md",
     "Security/Network Security/Footprinting and Scanning.md",
     "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Tools/John the Ripper.md",
     "Web Applications/Name Based Virtual Hosting.md",
     "JavaScript/Angular/String Interpolation.md",
     "Web Applications/Web Encoding.md",
-    "Security/Web Application Security/OSINT.md",
     "Markdown/Markdown Syntax.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "netcraft.com.md",
@@ -190,7 +191,6 @@
     "Security/Web Application Security/Google Hacking.md",
     "Web Applications/Cookies.md",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "AWS Cloud/CloudFront.md",
     "Untitled",
     "Untitled.canvas",
     "PHP",
