@@ -1,5 +1,4 @@
 
-
 ### Synchronous
 
 > Synchronous code is **blocking**
@@ -12,7 +11,8 @@
 > Asynchronous code or functions are **non-blocking** 
 > They dont follow the order of execution
 
-Example: `setTimeout((function), (timeout))`
+Example: `setTimeout((function), (timeout))`.
+> Schedules a task that does the function after a timeout.
 
 > Can cause issues with returning values and assigning variables
 
@@ -22,3 +22,4 @@ To solve this issue:
  3. [[Await-Async]]
 
 
+---
