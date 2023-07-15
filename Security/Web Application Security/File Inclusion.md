@@ -3,7 +3,7 @@
 
 > Dynamic websites can include other pages based on some parameters such as:
 1. [[HTTP]] requests containing GET and POST.
-2. [[Cookies]]
+2. [[Cookies]].
 
 > Common file names present on most domains and systems. [List](https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt).
 

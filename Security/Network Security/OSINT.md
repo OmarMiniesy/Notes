@@ -5,7 +5,22 @@
 >Check out integrated accounts.
 >Figure out if there is an email schema. Mail systems inform the sender that mail wasnt delivered because user doesnt exist.
 
-> [[Subdomain Enumeration]] is also OSINT
+> [[Subdomain Enumeration]] is also OSINT.
+> Google Dorks. [[Google Hacking]].
+---
+
+### Gathering Information
+
+> Gathering emails.
+* hunter.io
+* phonebook.cz
+* emailhippo: check if emails exist.
+* clearbit
+* email-checker.net
+
+>Breached passwords for emails.
+* dehashed.com
+
 ---
 
 ### Tools
