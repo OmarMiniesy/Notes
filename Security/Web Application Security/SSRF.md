@@ -31,3 +31,47 @@
 > Since this URL originates from there, it will have access to areas non-accessible by normal users.
 
 ---
+
+### Bypassing Defenses
+
+##### Blacklist-based input filters
+
+> Applications can block `localhost` or `127.0.0.1`.
+> They can also block important URLs such as `/admin`.
+
+> Alternatives: 
+* Instead of `127.0.0.1`, use `2130706433`, `017700000001`, or `127.1`.
+* Registering a domain that resolves to `127.0.0.1`.
+* Using URL encoding to obfuscate blocked URL strings. [[Web Encoding]].
+* Provide a URL that I control that redirects to the desired URL. 
+	* Using different redirect codes.
+	* Different [[Protocol]]s, ([[HTTP]] and [[HTTPS]]).
+
+##### Whitelist-based input filters
+
+> Applications can sometimes only allow a predefined set of values.
+> These can be bypassed by exploiting inconsistencies in URL parsing.
+
+* Embed credentials inside a URL before the hostname.
+```
+https://username@expected-host
+```
+
+* Add URL fragments.
+```
+https://evil-host#expected-host
+```
+
+* Abuse the [[Domain Name System (DNS)]] naming hierarchy to place input into a domain that i control.
+```
+https://expected-host.evil-host
+```
+
+* Using URL encoding and double encoding. [[Web Encoding]].
+
+###### Open Redirection
+
+> If the value of a parameter is used to fetch another page.
+> We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from localhost.
+
+---
