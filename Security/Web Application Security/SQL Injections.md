@@ -168,7 +168,7 @@ CAST((SELECT x FROM y) AS int)
 ### Different Inputs and Obfuscating Attacks
 
 > Obfuscating is using [[Web Encoding]] to perform attacks that could be blocked using web application [[Firewall]]s.
-> Some websites take JSON or XML in their queries to ask the database.
+> Some websites take JSON or [[XML]] in their queries to ask the database.
 
 > For XML use `hex-entities` encoding in [[Burp Suite]]'s hackvertor extension to bypass.
 
