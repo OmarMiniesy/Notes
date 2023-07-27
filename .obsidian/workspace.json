@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "2765c3d7717eaf9e",
+        "id": "e5b0631a6345c188",
         "type": "tabs",
         "children": [
           {
-            "id": "127b41579b87191f",
+            "id": "2cc9094904d4b2f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/CSRF.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Security/Web Application Security/CSRF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Security/Web Application Security/CSRF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Security/Web Application Security/CSRF.md"
+              }
             }
           },
           {
@@ -155,35 +163,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "127b41579b87191f",
+  "active": "2cc9094904d4b2f2",
   "lastOpenFiles": [
-    "Web Applications/XML.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "AWS Cloud/Pictures/Pasted image 20230222213056.png",
+    "Web Applications/Cookies.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Web Applications/Web Encoding.md",
     "Security/Web Application Security/SSRF.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/Access Control.md",
+    "Web Applications/HTTP.md",
+    "JavaScript/NodeJs/Callbacks.md",
+    "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Web Applications/XML.md",
+    "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
     "Security/Web Application Security/Information Disclosure.md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/File Inclusion.md",
     "Security/Web Application Security/Untitled",
     "Security/Network Security/OSINT.md",
-    "Security/Web Application Security/Command Injection.md",
     "JavaScript/NodeJs/Synchronous and Asynchronous.md",
     "JavaScript/NodeJs/Semantic Versioning.md",
     "JavaScript/NodeJs/Promises.md",
     "JavaScript/NodeJs/Development Dependencies.md",
     "JavaScript/NodeJs/Configuration.md",
     "JavaScript/NodeJs/Config Module.md",
-    "JavaScript/NodeJs/Callbacks.md",
-    "JavaScript/NodeJs/Await-Async.md",
-    "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/JOI Module.md",
-    "JavaScript/NodeJs/Nodemon Module.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/NodeJs.md",
     "Untitled.canvas",
     "PHP",
     "Security/Tools",
