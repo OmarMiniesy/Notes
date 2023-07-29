@@ -79,10 +79,10 @@ email=wiener@normal-user.com
 > CSRF tokens must be included when performing sensitive actions.
 > Makes it hard for attackers to construct requests in behalf of victims.
 
-##### 2. SameSite Cookies
+##### 2. [[SameSite]] Cookies
 
 > Broswer security mechanism that identifies [[Cookies]] in requests and determines if they are coming from the same website or not.
-> To perform sensitive actions, session cookies are required, and SameSite restrictions prevent attackers from triggering such actions across different sites.
+> To perform sensitive actions, session cookies are required, and SameSite restrictions prevent attackers from triggering such actions across different sites. [[SameSite#What is a Site ?]].
 > `Lax` SameSite restrictions.
 
 ##### 3. Referer-Based Validation
@@ -91,7 +91,7 @@ email=wiener@normal-user.com
 
 ---
 
-### Bypassing Token Validation
+### 1. Bypassing Token Validation
 
 > The token is included as a hidden parameter both in the request, and in the HTML form.
 
@@ -121,5 +121,152 @@ email=wiener@normal-user.com
 > They duplicate each token within a cookie, and for validation, check that the cookie matches the token.
 > If there is any cookie modification/setting available - [[Cookies#Modifying Cookies for CSRF]] - , they obtain a token and put the token into the cookie as well.
 > They then feed this cookie and token into the victim browser through the CSRF attack.
+
+---
+
+### 2. Bypassing [[SameSite]] [[Cookies]]
+
+> The cookies involved here could be the session cookie which needs to be communicated between the request and browser in the CSRF attack.
+> We need to ensure that this session cookie is readable from our CSRF request, which is why we bypass the SameSite restrictions.
+
+###### Bypassing `Lax` using `GET` requests
+
+> Eliciting a `GET` request from the victim browser can create a CSRF attack.
+> The request must involve a top-level navigation.
+
+``` HTML
+<script> 
+	document.location = 'https://vulnerable-website.com/account/transfer-payment?recipient=hacker&amount=1000000'; 
+</script>
+```
+
+> If `GET` requests aren't allowed, override the specified request method type using the parameter `_method` in forms.
+> This takes precedence over the normal method.
+
+```HTMl
+<form action="https://vulnerable-website.com/account/transfer-payment" method="POST">
+	<input type="hidden" name="_method" value="GET"> 
+	<input type="hidden" name="recipient" value="hacker"> 
+	<input type="hidden" name="amount" value="1000000">
+</form>
+```
+
+> The first payload is a normal URL, this issues a `GET` request with the parameters as query parameters.
+> The second payload is a form that uses the `POST` method, but we override to `GET` and pass the parameters as inputs.
+
+> This can also be done in the opposite sense.
+> Sending a `GET` request, but setting the `_method` parameter to `POST`.
+> This can be done if we want to send a `GET` request, but it must be `POST`.
+
+```HTMl
+<script> 
+	document.location = 'https://vulnerable-website.com/account/transfer-payment?recipient=hacker&amount=1000000&_method=POST'; 
+</script>
+```
+
+###### Bypassing [[SameSite]] using on-site gadgets
+
+> For the `SameSite=Strict` cookie, it can be bypassed if a gadget is found that results in secondary requests within the same site.[[SameSite#What is a Site ?]].
+
+> A gadget could be a *client-side* redirect that constructs the redirect target using user input like URL parameters.
+> These aren't redirects for the browser, they are seen as normal, same-site requests.
+> Therefore, the cookies will be included for any cross-site request.
+
+> Manipulating the gadget to issue this secondary request can enable us to bypass the `Strict` restrictions.
+> Server-side requests have the restrictions applied on them, ths works for client-side requests.
+
+> After finding the gadget and bypassing the restriction, the payload will look something like this.
+```HTML
+<script> 
+	document.location = "URL"
+</script>
+```
+
+###### Bypassing [[SameSite]] `Lax` with newly issued [[Cookies]]
+
+> If the `SameSite` attribute isn't set when a cookie is created by default, Chrome applies `Lax` by default after 2 mins on top-level `POST` requests.
+> For 2 minutes, CSRF attacks are possible. Present on OAUTH mechanisms.
+> This is only for those where `SameSite` isn't set by defualt.
+
+> Finding a gadget on the same site that enables the victim to be issued a new cookie can allow for refreshing the cookie, giving us time to do the attack.
+> To trigger the cookie refresh without having the user login again, we use top-level navigation, and ensure the same cookies of the same session are included.
+> Moreover, we need to redirect the user back to our CSRF site to launch the attack.
+
+> Another way to refresh the cookies is from a new tab so browser doesn't leave the page before the attack. This tab redirects to the login page.
+> Browsers block pop up tabs, so we need to force the new tab to open.
+> Do that by wrapping the pop-up in an `onclick` event.
+
+```HTML
+<script>
+window.onclick = () => { 
+	window.open('https://vulnerable-website.com/login/sso'); 
+}
+</script>
+```
+
+----
+
+### 3. Bypassing Referer-Based Defenses
+
+> The `Referer` [[HTTP]] header is used to verify where the request is originating from.
+> Least effective technique.
+
+###### Validation of `Referer` header depends on presence
+
+> Applications verify it when it is present, but if it is not there it is not validated.
+> Craft a CSRF payload to drop the `Referer` header can then be used.
+
+```HTML
+<meta name="referrer" content="never">
+<meta name="referrer" content="no-refferer">
+```
+>Both work.
+
+###### Circumventing the `Referer` header
+
+> Some applications validate the `Referer` header in a naive way that can be bypassed. For example, if the application validates that the domain in the `Referer` starts with the expected value, then the attacker can place this as a subdomain of their own domain:
+
+```
+http://vulnerable-website.com.attacker-website.com/csrf-attack
+```
+
+> Likewise, if the application simply validates that the `Referer` contains its own domain name, then the attacker can place the required value elsewhere in the URL:
+
+```
+http://attacker-website.com/csrf-attack?vulnerable-website.com
+```
+
+> Many browsers now strip the query string from the Referer header by default as a security measure. To override this behavior and ensure that the full URL is included in the request add this header.
+```HTML
+Referrer-Policy: unsafe-url
+```
+
+---
+
+### Preventing CSRF Attacks
+
+> Using CSRF Tokens
+* Unpredictable with high randomness. Use a cryptographically secure pseudo-random number generator (CSPRNG), seeded with the timestamp when it was created plus a static secret.
+* Tied to the user session.
+* Validated in every step while the relevant action works.
+
+> The CSRF tokens should be treated as secrets, examples: 
+* In an HTML form as a hidden field.
+* Placed as early as possible in the document.
+* Placed as a query string in the URL but is less safe.
+	* Logged in various locations
+	* Liable to be trasnmitted to 3rd parties within the HTTP referer header.
+	* can be seen on the user screen.
+* Placed in custom request header, since custom requests aren't allowed to be transmitted cross-domain.
+
+> CSRF tokens should be validated by storing them server-side in the user's session data.
+> Any request that requires validation should be verified with the token present in the user's session.
+> This request should be disregarded if the token is not contained, or is invalid.
+
+> SameSite restrictions should be implemented for every cookie used.
+> Use `Strict` by default.
+
+> SameSite doesn't protect against cross-origin same-site attacks.
+> Insecure content should be isolated on a separate site.
 
 ---

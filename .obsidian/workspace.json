@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "2cc9094904d4b2f2",
+            "id": "92a15c0eb2501736",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "xml",
+                "query": "TLD",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,18 +163,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2cc9094904d4b2f2",
+  "active": "92a15c0eb2501736",
   "lastOpenFiles": [
-    "Web Applications/Cookies.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/CSRF.md",
+    "Web Applications/Same Origin Policy (SOP).md",
+    "Web Applications/SameSite.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Tools/Burp Suite.md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Server Message Block (SMB).md",
+    "Web Applications/HTTP.md",
+    "Web Applications/Cookies.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Web Applications/Web Encoding.md",
     "Security/Web Application Security/SSRF.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/Access Control.md",
-    "Web Applications/HTTP.md",
     "JavaScript/NodeJs/Callbacks.md",
     "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/File Upload.md",
@@ -188,11 +193,6 @@
     "Security/Web Application Security/Untitled",
     "Security/Network Security/OSINT.md",
     "JavaScript/NodeJs/Synchronous and Asynchronous.md",
-    "JavaScript/NodeJs/Semantic Versioning.md",
-    "JavaScript/NodeJs/Promises.md",
-    "JavaScript/NodeJs/Development Dependencies.md",
-    "JavaScript/NodeJs/Configuration.md",
-    "JavaScript/NodeJs/Config Module.md",
     "Untitled.canvas",
     "PHP",
     "Security/Tools",
