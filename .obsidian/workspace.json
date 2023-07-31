@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/CORS.md",
+                "file": "Security/Web Application Security/Clickjacking.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CORS",
+                "query": "CSP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/CORS.md",
+                "file": "Security/Web Application Security/Clickjacking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/CORS.md",
+                "file": "Security/Web Application Security/Clickjacking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/CORS.md"
+                "file": "Security/Web Application Security/Clickjacking.md"
               }
             }
           },
@@ -165,13 +165,14 @@
   },
   "active": "33e3087e96cf15e9",
   "lastOpenFiles": [
-    "TLS.md",
-    "Security/Web Application Security/CORS.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Web Application Security/Clickjacking.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/CORS.md",
+    "TLS.md",
     "Web Applications/Same Origin Policy (SOP).md",
     "Web Applications/SameSite.md",
     "Web Applications/HTTP.md",
-    "Security/Web Application Security/CSRF.md",
     "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/File Inclusion.md",
@@ -191,7 +192,6 @@
     "Web Applications/XML.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Security/Web Application Security/Information Disclosure.md",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
     "PHP",
