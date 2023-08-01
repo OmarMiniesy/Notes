@@ -11,7 +11,7 @@ ___
 1. Download the private key file  *.pem*
 2. Open terminal in same location as *.pem* file
 
-> Connect Via SSH
+> Connect Via [[Secure Shell Protocol (SSH)]]
 
 ``` bash
 ssh -i <path of private key file .pem> <user@public DNS>

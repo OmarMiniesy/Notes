@@ -54,6 +54,30 @@ john -wordlist=<path-to-wordlist> -rules <file-to-crack>
 ```
 
 ---
+### ssh2john
+
+> If there is a private [[Secure Shell Protocol (SSH)]] key found, `id_rsa` and it is password protected.
+> To know if it is password protected, open the file and check the header to see that it is encrypted.
+> Use this tool to convert it to a format that john can crack to obtain the password.
+```
+ssh2john id_rsa > new_id_rsa.txt
+```
+
+> Then, use a normal dictionary attack to crack the password.
+```
+john --wordlist=<path-to-wordlist> new_id_rsa.txt
+```
+
+> Finally, we can then connect via SSH using the obtained password and present private key.
+```
+ssh -i id_rsa <username>@<ip-address>
+```
+> If that doesn't work, try setting the permissions of the `id_rsa` to read only.
+```
+chmod 600 id_rsa
+```
+
+---
 
 ### Extra Info
 

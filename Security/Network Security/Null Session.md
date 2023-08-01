@@ -5,8 +5,7 @@
 > Lets an attacker connect to a local or remote share.
 
 > Not against any share. Those that have IPC, or the file server and printer sharing service.
-> First test by using `nmap` to check the [[Port]]s: 135, 139, 445 running [[Server Message Block (SMB)]] [[Protocol]] or NETBIOS [[Transport Layer]] [[Protocol]].
-
+> First test by using [[nmap]] to check the [[Port]]s: 135, 139, 445 running [[Server Message Block (SMB)]] [[Protocol]] or NETBIOS [[Transport Layer]] [[Protocol]].
 
 ---
 
@@ -104,9 +103,9 @@ enum4linux -P <ip-address>
 enum4linux -S <ip-address>
 ```
 
-> To do everything use the `-A` flag.
+> To do everything use the `-a` flag.
 ```
-enum4linux -A <ip-address>
+enum4linux -a <ip-address>
 ```
 
 ---
@@ -117,7 +116,6 @@ enum4linux -A <ip-address>
 ```
 smbmap -H <ip-address>
 ```
-
 
 #### Using `nmap` scripts
 

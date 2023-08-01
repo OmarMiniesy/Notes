@@ -2,12 +2,12 @@
 ### General Notes
 
 > Similar to [[John the Ripper]] but for services requiring Network authentication.
-* SSH
+* [[Secure Shell Protocol (SSH)]]
 * Telnet
 * Remote Desktop (RDP)
 * SMB
 * Cisco Auth
-* FTP
+* [[File Transfer Protocol (FTP)]]
 * IMAP
 * [[HTTP]] 
 
@@ -36,3 +36,14 @@ hydra <website> http-post-form "<login-path-file>:usr=^USER^&pwd=^PASS^:invalid 
 > `-V` for verbosity.
 
 ---
+
+### Scripts
+
+> Given a username and password wordlist to attack ssh.
+
+```
+hydra -l <username> -P <wordlist> ssh://<ip-address>
+```
+
+---
+

@@ -34,7 +34,7 @@
 
 ---
 
-# [[Port]] Scanning with `nmap`
+# [[Port]] Scanning with [[nmap]]
 
 > To discover the daemons and services running on the hosts.
 > To discover which [[Transport Layer]] protocol is used: `TCP` or `UDP`

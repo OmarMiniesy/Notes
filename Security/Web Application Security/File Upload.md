@@ -46,10 +46,14 @@
 GET /url/shell.php?command=<command_here> HTTP/1.1
 ```
 
+#### /usr/share/webshells/
+
+> There are famous reverse shells in this directory.
+> Include inside them the [[IP]] address of the machine that they should connect to, and on what [[Port]].
+
 ---
 
 ### Flawed Validations
-
 
 ##### Type Validation
 
