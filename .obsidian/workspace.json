@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "57e9c0c27a8b6540",
+        "id": "785547e5fb241dda",
         "type": "tabs",
         "children": [
           {
-            "id": "b326d8aa7e845fa3",
+            "id": "de88d09c5d60a0ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "47ab1cd57eeea92e",
+            "id": "85f186239d0d38f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/WebSockets.md",
+                "file": "Security/System Security/Reverse Shells.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md"
+                "file": "Security/System Security/Linux Privilege Escalation.md"
               }
             }
           },
@@ -175,34 +175,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b326d8aa7e845fa3",
+  "active": "de88d09c5d60a0ed",
   "lastOpenFiles": [
-    "Web Applications/HTTP.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Security/System Security/Reverse Shells.md",
+    "Security/System Security/Backdoors.md",
+    "Security/System Security/Malware.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Networking/Port.md",
+    "Security/System Security/Meterpreter.md",
+    "Networking/Firewall.md",
+    "Security/Tools/Hydra.md",
+    "Security/Tools/John the Ripper.md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Networking/Data Link Layer.md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Protocol.md",
+    "Networking/Transport Layer.md",
+    "Networking/Routing.md",
     "Web Applications/WebSockets.md",
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Web Applications/HTTP.md",
     "Security/Web Application Security/WebApplication Fingerprinting.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Web Application Security/File Upload.md",
     "Security/Web Application Security/File Inclusion.md",
     "Security/Tools/Burp Suite.md",
-    "Security/System Security/Privilege Escalation.md",
-    "Security/Tools/John the Ripper.md",
     "Security/Web Application Security/SQL Injections.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/Information Disclosure.md",
-    "Security/Tools/netcat.md",
-    "Security/Network Security/Footprinting and Scanning.md",
-    "Security/Network Security/Null Session.md",
-    "Security/System Security/Malware.md",
-    "Security/System Security/Meterpreter.md",
-    "Security/Tools/Metasploit.md",
-    "Security/System Security/Backdoors.md",
-    "Web Applications/Same Origin Policy (SOP).md",
-    "Networking/Secure Shell Protocol (SSH).md",
-    "Security/Tools/nmap.md",
-    "Networking/Port.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "AWS Cloud/Elastic Cloud Compute (EC2).md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

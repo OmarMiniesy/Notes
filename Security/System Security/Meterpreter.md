@@ -64,7 +64,7 @@ upload <destination-path-attacker> <path-to-file-in-attacked>
 
 ### Privilege Escalation
 
-> To raise privileges using a privilege escalation routine provided by meterpreter.
+> To raise privileges using a Privilege Escalation routine provided by meterpreter.
 ```
 getsystem
 ```
