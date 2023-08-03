@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "de88d09c5d60a0ed",
+            "id": "b29e7d16b274d0c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "85f186239d0d38f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/System Security/Reverse Shells.md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "mode": "source",
                 "source": false
               }
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md"
+                "file": "JavaScript/NodeJs/Express Framework.md"
               }
             }
           },
@@ -175,12 +163,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "de88d09c5d60a0ed",
+  "active": "b29e7d16b274d0c9",
   "lastOpenFiles": [
+    "JavaScript/NodeJs/Configuration.md",
+    "JavaScript/NodeJs/Environment.md",
+    "JavaScript/NodeJs/Development Dependencies.md",
+    "JavaScript/NodeJs/Await-Async.md",
+    "JavaScript/NodeJs/Callbacks.md",
+    "JavaScript/NodeJs/Config Module.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Express Framework.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "Security/System Security/Linux Privilege Escalation.md",
     "Security/System Security/Reverse Shells.md",
     "Security/System Security/Backdoors.md",
     "Security/System Security/Malware.md",
-    "Security/System Security/Linux Privilege Escalation.md",
     "Networking/Port.md",
     "Security/System Security/Meterpreter.md",
     "Networking/Firewall.md",
@@ -192,17 +191,6 @@
     "Networking/Protocol.md",
     "Networking/Transport Layer.md",
     "Networking/Routing.md",
-    "Web Applications/WebSockets.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
-    "Web Applications/HTTP.md",
-    "Security/Web Application Security/WebApplication Fingerprinting.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Information Disclosure.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

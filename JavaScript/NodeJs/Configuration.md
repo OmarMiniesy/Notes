@@ -9,12 +9,12 @@
 
 ### Config Folder
 
-* default.json : Has the default configuration settings.
-* development.json : Has the settings for the development environment and overrides the default configuration.
-* production.json : Has the settings for the production environment and overrides the default configuration.
-* custom-environment-variables.json : Has the fields that are secrets that should be stored in the machines environment variables. It holds the values of the fields as environment variables names.
+* `default.json` : Has the default configuration settings.
+* `development.json` : Has the settings for the development environment and overrides the default configuration.
+* `production.json` : Has the settings for the production environment and overrides the default configuration.
+* `custom-environment-variables.json` : Has the fields that are secrets that should be stored in the machines environment variables. It holds the values of the fields as environment variables names.
 
->custom-environment-variables.json
+>`custom-environment-variables.json`
 ```JSON
 {
 	"password": "app_password"

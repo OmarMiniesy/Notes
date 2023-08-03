@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> The environment describes in which process the project or code is in. It is set in the environment variables
+> The environment describes in which process the project or code is in. It is set in the environment variables.
 
 * Development
 * Staging
@@ -10,7 +10,6 @@
 >Different environments means different processes and actions, as well as how frequently it changes.
 
 ---
-
 ### Usage
 
 > Through [[NodeJs]], it is stored in `process.env.NODE_ENV` or `app.get('env')`
@@ -18,3 +17,8 @@
 
 ---
 
+### Environment Variables
+
+> These can be set using `export process.env.NAME=VALUE`.
+
+---

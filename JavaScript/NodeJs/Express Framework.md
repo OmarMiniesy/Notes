@@ -16,7 +16,7 @@ npm i express
 
 ### Running Using [[Nodemon Module]] 
 
-> Helps to quickly restard server without having to rerun the file.
+> Helps to quickly restart server without having to rerun the file.
 ```bash
 nodemon <file_name>
 ```
@@ -31,6 +31,7 @@ const express = require("express");
 const app = express();
 
 app.get(<"url">, <callbackfunction (req, res)>);
+
 app.get("/", (req, res) => {
 	res.write("Hello");
 	res.end()
@@ -44,7 +45,11 @@ app.listen(port);   //port to listen on localhost, if it is not set as an enviro
 
 ```
 
->This is a method for specifiying routes, the get method and the url (endpoint). The callback function is the route handler.
+>This is a method for specifiying routes, the get method and the url (endpoint). 
+>The callback function is also called the route handler.
+
+>The [[Port]] is taken from the environment variable `PORT`.
+>We set environment variables: `process.env.NAME=VALUE`.
 
 ---
 
@@ -230,7 +235,7 @@ function logger(req, res, next){
 //in main file
 app.use(logger());
 ```
-What happens here is that the `app.use` is a  function that calls a middleware function logger. This middleware function executes its instructions `console.log()` and then proceeds to the `next()` function. Without this `next()` function, the code will hang. Once the `next()` is called, flow continues again in the main file, which is the main idea of middleware.
+What happens here is that the `app.use` is a  function that calls a middleware function `logger`. This middleware function executes its instructions `console.log()` and then proceeds to the `next()` function. Without this `next()` function, the code will hang. Once the `next()` is called, flow continues again in the main file, which is the main idea of middleware.
 
 >Builtin middleware functions.
 ```JavaScript
@@ -251,20 +256,21 @@ This `static` middleware function allows to host static content, such as images 
 
 ### Proper Structuring
 
-> 1.  Place all the routes that begin with the same path in separate files in one folder called routes
-> 2. Place all the loggers and middleware functions in separate files in one folder called middlewares
-> And so on.
+1.  Place all the routes that begin with the same path in separate files in one folder called `routes`.
+2. Place all the loggers and middleware functions in separate files in one folder called `middlewares`.
+3. ...
 
-> In the file with the routes that begin with `/api/courses` called courses.js in the routes folder.  
+> In the file with the routes that begin with `/api/courses` called `courses.js` in the routes folder.  
 ```JavaScript
 const express = require('express');
 const router = express.Router();   //added this line and changed app to router
 router.get('/', (req, res) => {    //change app to router and change /api/courses to /
   res.send(genres);
 });
+module.exports = router;
 ```
 
-> In the index.js file, 
+> In the `index.js` file, 
 ```JavaScript
 const courses = require('./routes/courses');
 app.use('/api/courses', courses); //the first parameter is the route and the second is the variable that holds the required module.
