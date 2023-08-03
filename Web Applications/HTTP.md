@@ -30,7 +30,6 @@ Headers \r\n
 Message Body \r\n
 ```
 
-
 ##### Header
 > Header contains a request followed by some header fields.
 

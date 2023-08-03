@@ -8,12 +8,24 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3d1e2f1157341f9b",
+            "id": "b326d8aa7e845fa3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "47ab1cd57eeea92e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Applications/WebSockets.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "netcat",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 372.5
+    "width": 281.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md"
+                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md"
               }
             }
           },
@@ -163,34 +175,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3d1e2f1157341f9b",
+  "active": "b326d8aa7e845fa3",
   "lastOpenFiles": [
+    "Web Applications/HTTP.md",
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Web Applications/WebSockets.md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Tools/Burp Suite.md",
+    "Security/System Security/Privilege Escalation.md",
+    "Security/Tools/John the Ripper.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "Security/Web Application Security/Information Disclosure.md",
     "Security/Tools/netcat.md",
     "Security/Network Security/Footprinting and Scanning.md",
     "Security/Network Security/Null Session.md",
     "Security/System Security/Malware.md",
     "Security/System Security/Meterpreter.md",
-    "Security/System Security/Privilege Escalation.md",
     "Security/Tools/Metasploit.md",
     "Security/System Security/Backdoors.md",
     "Web Applications/Same Origin Policy (SOP).md",
     "Networking/Secure Shell Protocol (SSH).md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/File Upload.md",
     "Security/Tools/nmap.md",
-    "Web Applications/HTTP.md",
     "Networking/Port.md",
     "Security/Web Application Security/Directory Traversal.md",
-    "Security/Tools/John the Ripper.md",
     "AWS Cloud/Elastic Cloud Compute (EC2).md",
-    "Security/Tools/Hydra.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Clickjacking.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

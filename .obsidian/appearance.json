@@ -1,9 +1,9 @@
 {
-  "accentColor": "#00db2c",
+  "accentColor": "#f00000",
   "baseFontSize": 15,
   "theme": "obsidian",
   "interfaceFontFamily": "",
   "translucency": true,
   "nativeMenus": false,
-  "cssTheme": "Atom"
+  "cssTheme": ""
 }
