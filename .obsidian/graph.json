@@ -57,13 +57,6 @@
       }
     },
     {
-      "query": "",
-      "color": {
-        "a": 1,
-        "rgb": 11621088
-      }
-    },
-    {
       "query": "path:Security",
       "color": {
         "a": 1,
@@ -81,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.1816404991167259,
-  "close": true
+  "scale": 0.42273623612136185,
+  "close": false
 }

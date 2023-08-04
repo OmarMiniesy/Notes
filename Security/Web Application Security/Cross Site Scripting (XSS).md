@@ -51,7 +51,6 @@
 * Forum posts
 
 ---
-
 ### DOM-Based XSS
 
 > When javascript takes data from the attacker and passes it to a sink that supports dynamic code execution.
@@ -61,12 +60,10 @@
 > The Sink is the portion of code where the payload is entered and executes the attack.
 > There is a DOM vulnerability if there is an executable path through which data moves from source to sink.
 
-
 ##### HTML Sinks
 > Testing for DOM-based means including alphanumeric strings and checking where it appears in the HTML of the webpage.
 > Identify the HTML context, and try constructing a payload that breaks out.
 > Adding an extra `"` to break out of the existing tag maybe, or `>` to break out.
-
 
 #### JavaScript Execution Sinks
 > Use the JavaScript debugger to test how the input was sent and interpreted by the sink.
