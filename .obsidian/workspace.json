@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "608710936a2eca2d",
+            "id": "8f041d931eae7873",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Web Application Security/DOM Based Vulnerabilities.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 304.5
+    "width": 285.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Web Application Security/DOM Based Vulnerabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Web Application Security/DOM Based Vulnerabilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/OSINT.md"
+                "file": "Security/Web Application Security/DOM Based Vulnerabilities.md"
               }
             }
           },
@@ -163,12 +163,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "608710936a2eca2d",
+  "active": "8f041d931eae7873",
   "lastOpenFiles": [
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Web Application Security/CORS.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Clickjacking.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/Access Control.md",
     "Security/Web Application Security/DOM Based Vulnerabilities.md",
+    "Security/Network Security/OSINT.md",
     "GitHub/Pushing Changes.md",
     "GitHub/Git Commands.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/System Security/Linux Privilege Escalation.md",
     "Security/System Security/Reverse Shells.md",
     "Networking/Secure Shell Protocol (SSH).md",
@@ -185,12 +191,6 @@
     "JavaScript/NodeJs/Application Programming Interface (API).md",
     "Security/System Security/Backdoors.md",
     "Security/System Security/Malware.md",
-    "Networking/Port.md",
-    "Security/System Security/Meterpreter.md",
-    "Networking/Firewall.md",
-    "Security/Tools/Hydra.md",
-    "Security/Tools/John the Ripper.md",
-    "Networking/File Transfer Protocol (FTP).md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
