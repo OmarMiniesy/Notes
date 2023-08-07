@@ -27,9 +27,18 @@
 * POST parameters.  //Use [[Burp Suite]] proxy
 * [[HTTP]] headers.
 
+> Detecting injection points:
+* Enter the sinqle qoute character and look for weird responses.
+* Submit SQL syntax that evaluates that evaluates to true and false to see the difference, such as ` OR 1=1` and ` OR 1=2`.
+* Payloads to trigger time delays.
+* Submit payloads that trigger an out of band network interaction.
+
 ---
 
 #### Union Based Injections
+
+> The `UNION` keyword is used to retrieve data from other tables.
+> It appends the results of the additional query to those of the original query.
 
 > The queries must return the same amount of columns as the original one.
 > The queries must return data of the same or allowed data type as the original one.
@@ -38,13 +47,20 @@
 ##### Number of Columns using Added `NULL,`
 >  When the number of nulls matches the number of columns, an additional row of data will be returned in the result set, containing either the word NULL or an empty string.
 ```
-UNION SELECT NULL
+' UNION SELECT NULL--
 ```
 > For oracle, need to add FROM for every SELECT. Use the built in DUAL table.
+```
+' UNION SELECT NULL FROM DUAL-- 
+```
 
 ##### Number of Columns using `ORDER BY`
 > Keep changing the `ORDER BY` index until an error is recieved.
-
+```
+' ORDER BY 1--
+' ORDER BY 2--
+...
+```
 
 ##### Checking the Data Type of a column
 > Having known the number of columns, we can replace the `NULL` with a string/number/data-type and check the output.

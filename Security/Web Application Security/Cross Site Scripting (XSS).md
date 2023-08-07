@@ -10,6 +10,7 @@
 > Can steal other user [[Cookies]], or impersonate other user [[Sessions]].
 
 > XSS involves injecting malicious code in the output of the page that is then rendered by users of that page.
+> XSS circumvents the [[Same Origin Policy (SOP)]].
 
 ---
 
@@ -24,8 +25,8 @@
 2. Persistent.
 3. DOM Based.
 4. Dangling Markup.
----
 
+---
 ### Reflected XSS Attacks
 
 > When the payload is carried inside the request that the user (victim) browser sends to the vulnerable website.
@@ -35,14 +36,29 @@
 <script>alert("XSS")</script>
 ```
 
-> Called reflected because an input field of the [[HTTP]] request sent gets immediately reflected as output in the immediate response of the browser.
+> Called reflected because an input field of the [[HTTP]] request sent gets reflected as output in the immediate response of the browser.
 > There are reflected XSS filters built now to counter such attack.
+
+> To make a victim issue a request that an attacker controls, they can place links on a website the attacker controls, or through phishing.
+> If an attacker can control a script that is executed in the victim browser, then the attacker can fully compromise that user: 
+* Perform an action that the user can perform.
+* View any information the user can view.
+* Modify and information the user can view.
+* Initiate interactions with other users.
+
+> How to search for reflected XSS:
+* Test every entry point: URL query parameters, data in the URL query string or message body, URL file path and [[HTTP]] headers.
+* Submit random alphanumeric values.
+* Determine the reflection context: determine if the output is in HTML tags, in a tag attribute or in a JavaScript string.
+* Test a payload: leave the initial value and place the payload before or after it.
+* Test the attack in the browser.
 
 ---
 
-### Persistent XSS Attacks
+### Persistent (Stored) XSS Attacks
 
 > When the malicious payload is sent to the webserver and **stored** there.
+> When an application receives data from an untrusted source and includes that data within its later HTTP responses.
 > When a webpage then loads, it pulls this payload from the server and the malicious code is displayed within the HTML output.
 
 >Common in HTML forms where users submit content to the webserver and then is displayed back to users.
@@ -50,15 +66,22 @@
 * User profiles
 * Forum posts
 
+> These attacks are self-contained within the application, and the user doesn't have to be prompted to click on something for it work like reflected attacks.
+> The user is garaunteed to be logged in for these attacks to work, hence, easily compromising accounts.
+
+> How to search for stored XSS:
+*  Look for a link between entry and exit points, or the points where the payload is inserted, and where it shows in later responses.
+
 ---
 ### DOM-Based XSS
 
-> When javascript takes data from the attacker and passes it to a sink that supports dynamic code execution.
-> Such as the URL, which is passed with the `window.location` object.
-> Can be found using [[Burp Suite]] web vulnerability scanner.
+> [[DOM Based Vulnerabilities]].
+
+> When javascript takes data from the attacker in a source and passes it to a sink that supports dynamic code execution, such as `eval()` or `innerHTML`.
+> A sourrce such as the URL, which is passed with the `window.location` object, is the most common for DOM based XSS.
 
 > The Sink is the portion of code where the payload is entered and executes the attack.
-> There is a DOM vulnerability if there is an executable path through which data moves from source to sink.
+> There is a DOM vulnerability if there is an executable path through which data moves from source to sink. Also known as *taint flow*.
 
 ##### HTML Sinks
 > Testing for DOM-based means including alphanumeric strings and checking where it appears in the HTML of the webpage.
