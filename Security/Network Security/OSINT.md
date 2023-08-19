@@ -6,7 +6,7 @@
 >Figure out if there is an email schema. Mail systems inform the sender that mail wasnt delivered because user doesnt exist.
 
 > [[Subdomain Enumeration]] is also OSINT.
-> Google Dorks. [[Google Hacking]].
+> Google Dorks as well in [[Google Hacking]].
 ---
 
 ### Gathering Information
@@ -25,22 +25,36 @@
 
 ### Tools
 
+##### Amass
+> Tool for gathering information about webpages, such as sobdomains, ASNs, etc..
+
+##### Arjun
+> [Arjun](https://github.com/s0md3v/Arjun) finds hidden parameters in URLs and [[Application Programming Interface (API)]] endpoints.
+
 ##### CrunchBase
 > [CrunchBase](http://www.crunchbase.com) is a database where details about founders, investors, buyouts, and acquisitions
+
+##### httpx
+
+> Used to send requests asynchronously and get information about domains.
+> Title, wordcount, wordlength, status code, etc.. 
+
+##### [netcraft](http://netcraft.com)
+> Used to get ISP's and useful information regarding the domains and IP addresses.
+
+##### Subfinder
+> [subfinder](https://github.com/projectdiscovery/subfinder) is an online passive scanning tool that looks for subdomains.
 
 ##### Whois
 > Whois database has information about owner, street address, email address, and technical contacts of an Internet domain.
 > Can also get the [[IP]] addresses of several machines.
 > `whois` on linux. 
 
-##### [netcraft](http://netcraft.com)
-> Used to get ISP's and useful information regarding the domains and IP addresses.
-
 ##### Whatweb, Netcat
 > Used to get information about the server infrastructure.
 
-#### [wigle.net](https://wigle.net)
-
+##### [wigle.net](https://wigle.net)
 > Takes `BSSID` and `SSID` to get geographic location.
+
 
 ---

@@ -138,7 +138,7 @@ netstat -tpl
 netstat -i
 ```
 ##### `find`
-> Searching the system for specific files.
+> Searching the system for specific files. [Guide](https://pimylifeup.com/find-command/).
 1. Search in the given directory for `<file-name>`.
 ```shell
 find /<directory> -name <file-name>

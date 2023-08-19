@@ -33,3 +33,7 @@ gobuster dir -u http://<ip-address> -w /usr/share/wordlists/dirb/common.txt -x p
 ### `Dirbuster`
 
 ---
+
+### `ffuf`
+
+---

@@ -35,9 +35,8 @@ Host - sub domain - domain - TLD
 > `Ping` utility in linux does this.
 
 ---
+### `nslookup` and `host`
 
-### `nslookup`
-
-> tool that translates hostnames to [[IP]] addresses.
+> Tools that translates hostnames to [[IP]] addresses.
 
 ---

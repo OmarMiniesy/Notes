@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c0309221552327fa",
+        "id": "1316d754fc73b03a",
         "type": "tabs",
         "children": [
           {
-            "id": "e02a37b20f8a9ed7",
+            "id": "332d5218133282d5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/Burp Suite.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8b08f3767523a9d1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "JavaScript/ReactJs/ReactJs.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -61,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "OAST",
+                "query": "`host`",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 240.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "JavaScript/ReactJs/ReactJs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "JavaScript/ReactJs/ReactJs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md"
+                "file": "JavaScript/ReactJs/ReactJs.md"
               }
             }
           },
@@ -176,34 +163,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "8b08f3767523a9d1",
+  "active": "332d5218133282d5",
   "lastOpenFiles": [
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Tools/SQLMap.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Web Application Security/Access Control.md",
     "JavaScript/ReactJs/Components.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "Networking/Data Link Layer.md",
-    "Security/System Security/Dealing With Files of Different Types.md",
-    "Security/Tools/Hydra.md",
-    "Security/Tools/nmap.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Networking/Secure Shell Protocol (SSH).md",
-    "Security/Tools/John the Ripper.md",
+    "JavaScript/ReactJs/State.md",
     "JavaScript/ReactJs/Routing.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Security/Web Application Security/DOM Based Vulnerabilities.md",
-    "Security/Web Application Security/CORS.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/ReactJs/Pass Data Dynamically.md",
+    "JavaScript/ReactJs/Events.md",
     "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Clickjacking.md",
-    "Security/Web Application Security/Authentication.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Network Security/OSINT.md",
-    "GitHub/Pushing Changes.md",
-    "GitHub/Git Commands.md",
+    "Security/Tools/Wireshark.md",
+    "Security/Tools/SQLMap.md",
+    "Security/Tools/nmap.md",
+    "Security/Tools/netcat.md",
+    "Security/Tools/mysql.md",
+    "Security/Tools/Metasploit.md",
+    "Security/Tools/John the Ripper.md",
+    "Security/Tools/Hydra.md",
+    "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/CSRF.md",
     "Security/System Security/Reverse Shells.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Networking/Domain Name System (DNS).md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

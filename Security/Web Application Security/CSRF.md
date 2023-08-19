@@ -132,7 +132,7 @@ email=wiener@normal-user.com
 ###### Bypassing `Lax` using `GET` requests
 
 > Eliciting a `GET` request from the victim browser can create a CSRF attack.
-> The request must involve a top-level navigation.
+> The request must involve a top-level navigation, a `GET` request.
 
 ``` HTML
 <script> 

@@ -2,7 +2,7 @@
 ### General Notes
 
 > Using advanced search queries in the google search, **Google Dorks**.
-> [Google Hacking Database]([Google Hacking Database (GHDB) - Google Dorks, OSINT, Recon (exploit-db.com)](https://www.exploit-db.com/google-hacking-database))
+> [Google Hacking Database](https://www.exploit-db.com/google-hacking-database).
 
 ---
 
