@@ -2,7 +2,7 @@
 ### General Notes
 
 > When web servers allow users to upload files without validations.
-> Opens the door for remote code execution (RCE) vulnerabilities.
+> Opens the door for remote code execution (RCE) vulnerabilities and [[Reverse Shells]].
 > The attack is basically uploading a file, then using [[HTTP]] follow-up requests to trigger it.
 
 > Severity depends on the amount of validation enforced.
@@ -115,9 +115,15 @@ AddType application/x-httpd-php .php
 > Some servers do that by verifying properties of that file, such as the dimensions of an image.
 
 > Some file types always contain a series of bytes in their headers or footers.
-> These are like a signature for the files, such as `FF D8 FF` in the header of `JPEG` files. [Singatures](https://en.wikipedia.org/wiki/List_of_file_signatures).
+> These are like a signature for the files, such as `FF D8 FF E0` in the header of `JPEG` files. [Singatures](https://en.wikipedia.org/wiki/List_of_file_signatures).
+> Can use `hexedit` to edit the hex content of a file to add the signature in the beginning.
+> So to make a `.php` file seen as `.jpeg` file, add the hex characters `FF D8 DD E0` in the beginning of the file.
 
 > Can use the `exiftool`, a command line utility used to change and monitor the metadata of files.
+> Take an image, and then add a comment with the `php` code for the shell.
+```bash
+exiftool -comment='<?php echo system($_GET['command']);?>' pic.jpeg
+```
 
 ##### Race Conditions
 
