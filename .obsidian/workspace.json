@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1316d754fc73b03a",
+        "id": "7deffde896b48bf6",
         "type": "tabs",
         "children": [
           {
-            "id": "332d5218133282d5",
+            "id": "78f90a3c74ced1dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "`host`",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "JavaScript/ReactJs/ReactJs.md"
-              }
+              "state": {}
             }
           },
           {
@@ -163,14 +155,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "332d5218133282d5",
+  "active": "78f90a3c74ced1dd",
   "lastOpenFiles": [
     "JavaScript/ReactJs/Components.md",
+    "JavaScript/ReactJs/Styling.md",
+    "JavaScript/ReactJs/Pass Data Dynamically.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/ReactJs/Events.md",
+    "JavaScript/Angular/Directives.md",
+    "JavaScript/Angular/Components.md",
+    "JavaScript/Angular/Event Binding.md",
+    "JavaScript/Angular/Property Binding.md",
+    "JavaScript/Angular/String Interpolation.md",
+    "JavaScript/Angular/Two Way Binding.md",
     "JavaScript/ReactJs/State.md",
     "JavaScript/ReactJs/Routing.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "JavaScript/ReactJs/Pass Data Dynamically.md",
-    "JavaScript/ReactJs/Events.md",
+    "Security/Web Application Security/File Upload.md",
+    "GitHub/Pushing Changes.md",
+    "GitHub/gitignore.md",
+    "GitHub/Git Commands.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
     "Security/Web Application Security/Command Injection.md",
     "Security/System Security/Linux Privilege Escalation.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
@@ -179,18 +183,6 @@
     "Security/Tools/Wireshark.md",
     "Security/Tools/SQLMap.md",
     "Security/Tools/nmap.md",
-    "Security/Tools/netcat.md",
-    "Security/Tools/mysql.md",
-    "Security/Tools/Metasploit.md",
-    "Security/Tools/John the Ripper.md",
-    "Security/Tools/Hydra.md",
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/CSRF.md",
-    "Security/System Security/Reverse Shells.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Networking/Domain Name System (DNS).md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
