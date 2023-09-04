@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b3657fef12fe8271",
+        "id": "445d4e3dd55470cd",
         "type": "tabs",
         "children": [
           {
-            "id": "f304ef0697c17c39",
+            "id": "a4b91d7ba3720f76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "afe73de5208773a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/System Security/Reverse Shells.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 240.5
+    "width": 324.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md"
+                "file": "Security/Web Application Security/Command Injection.md"
               }
             }
           },
@@ -175,13 +163,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f304ef0697c17c39",
+  "active": "a4b91d7ba3720f76",
   "lastOpenFiles": [
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "GitHub/Pushing Changes.md",
+    "GitHub/Git Commands.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Tools/SQLMap.md",
     "Security/System Security/Reverse Shells.md",
-    "JavaScript/ReactJs/Components.md",
     "JavaScript/ReactJs/Styling.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/Command Injection.md",
+    "JavaScript/ReactJs/Components.md",
     "JavaScript/ReactJs/Pass Data Dynamically.md",
     "JavaScript/ReactJs/ReactJs.md",
     "JavaScript/ReactJs/Events.md",
@@ -193,16 +187,10 @@
     "JavaScript/Angular/Two Way Binding.md",
     "JavaScript/ReactJs/State.md",
     "JavaScript/ReactJs/Routing.md",
-    "GitHub/Pushing Changes.md",
     "GitHub/gitignore.md",
-    "GitHub/Git Commands.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
     "Security/System Security/Linux Privilege Escalation.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Network Security/OSINT.md",
-    "Security/Tools/Wireshark.md",
-    "Security/Tools/SQLMap.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

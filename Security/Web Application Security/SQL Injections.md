@@ -78,6 +78,19 @@
 2. Trigger a time delay using boolean injection to detect when the delay occurs in which boolean value.
 3. Trigger an out-of-band network interaction Out-of-band application security testing (OAST). For instance placing the data retrieved in a [[Domain Name System (DNS)]] lookup for a domain that you control.
 
+##### Simple test using `AND`
+
+> Try injecting a payload and use the `AND` operator with a false statement and a true statement and notice the difference in response.
+> This can be used to enumerate data from tables.
+
+```
+1) x" AND 1=1-- -
+2) x" AND 1=2-- -
+3) x" AND password LIKE 'a%'-- -
+4) x" AND length(password)>5-- -
+```
+> Number 3 checks if the first letter of the password is `a`. If we get the same response we get for true statements, or statements that produce a favorable output, then we know that the first letter is `a` and can continue enumeration.
+
 ##### Tracking [[Cookies]]. 
 > Some applications use tracking cookies to gather data about usage and users.
 > They are processed by a SQL query such as: 
@@ -275,6 +288,8 @@ SELECT username + password FROM users
 ```
 SELECT username password FROM users
 ```
+
+> To make SQL case sensitive, use the `BINARY` keyword.
 
 ---
 

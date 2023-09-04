@@ -63,6 +63,21 @@ https://<URL>/whoami.txt
 
 ---
 
+### Command Substitution
+
+> Executing a command, and replacing the commands text with the output of the command as text also.
+> Done using `$(command)`.
+
+```
+$ echo "mins$(echo 123)"
+> mins123
+```
+
+> Can be used in blind attacks to brute force passwords using grep.
+> Check Natas level [16](http://natas16.natas.labs.overthewire.org/)
+
+---
+
 ### Preventing Command Injection Attacks
 
 * Never call out to OS commands from application layer.
