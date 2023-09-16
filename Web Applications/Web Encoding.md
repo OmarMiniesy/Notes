@@ -33,7 +33,7 @@
 
 > Web browsers perform URL encoding and server side engines perform decoding.
 
-> [Encoding Reference]([HTML URL Encoding Reference (w3schools.com)](https://www.w3schools.com/tags/ref_urlencode.asp)).
+> [Encoding Reference](https://www.w3schools.com/tags/ref_urlencode.asp).
 
 ---
 

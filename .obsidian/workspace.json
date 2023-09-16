@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
+                "file": "Security/Web Application Security/Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md"
+                "file": "Security/Web Application Security/Authentication.md"
               }
             }
           },
@@ -143,6 +143,16 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "ecc3284dc9a99fd9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ]
@@ -165,16 +175,18 @@
   },
   "active": "a4b91d7ba3720f76",
   "lastOpenFiles": [
+    "Security/Web Application Security/SQL Injections.md",
+    "Web Applications/Web Encoding.md",
+    "[HTML.md",
+    "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "GitHub/Pushing Changes.md",
     "GitHub/Git Commands.md",
-    "Security/Web Application Security/SQL Injections.md",
     "Security/Tools/SQLMap.md",
     "Security/System Security/Reverse Shells.md",
     "JavaScript/ReactJs/Styling.md",
     "JavaScript/NodeJs/HTTP Module.md",
     "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/Command Injection.md",
     "JavaScript/ReactJs/Components.md",
     "JavaScript/ReactJs/Pass Data Dynamically.md",
     "JavaScript/ReactJs/ReactJs.md",
@@ -189,8 +201,6 @@
     "JavaScript/ReactJs/Routing.md",
     "GitHub/gitignore.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
