@@ -11,7 +11,6 @@
 > Allows domains to issue requests to other domains but not to access responses.
 
 ---
-
 ### Origin
 
 >The origin is defined by the 
@@ -56,12 +55,13 @@
 
 > Allows different documents regardless of SOP to communicate.
 
+#### PostMessage API
+
+> [[DOM Based Vulnerabilities#Web Message Manipulation]].
+
 #### Cross Origin Resource Sharing ([[CORS]])
 
 > Allows browser to bypass SOP to access some resources.
 > Using custom [[HTTP]] headers.
 
 ---
-
-
-

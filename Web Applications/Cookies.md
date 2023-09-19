@@ -18,11 +18,14 @@
 * Expiration Date
 * Path: sends the cookies to all subsequent requests to this path and everything under it.
 * Domain
-* HTTP Only Flag: only HTML technology can read the cookie. Secure against [[Cross Site Scripting (XSS)]].
-* Secure Flag: Cookies are only sent over [[HTTPS]]
+* `HTTPOnly` Flag: only HTML technology can read the cookie. Secure against [[Cross Site Scripting (XSS)]].
+* `Secure` Flag: Cookies are only sent over [[HTTPS]]
 
-> Cookies are sent to the valid domain and path and only when they are not expired and according to the flags.
-> If domain is not set, the Host-only flag is set, and cookie is only sent to the exact hostname. The domain becomes set to the hostname.
+##### Cookie Policy
+
+> Cookies are sent to the valid domain and path and only when they are not expired and according to the flags. They are also sent to the subdomains of that domain.
+> Path specifies the folder that the cookie is sent to in the domain. If the path is empty, it is sent to the whole damin.
+> If domain is not set, the `Host-only` flag is set, and cookie is only sent to the exact hostname of the request. The domain becomes set to the hostname.
 
 ---
 
@@ -46,7 +49,7 @@
 > Higher level subdomains cannot set cookies for lower level subdomains.
 > Lower level subdomains can set cookies for higher level subdomains.
 
-> Cookie with `host-only-flag` set to true is one that does not have a domain value. Sent only to target domain that set it.
+> Cookie with `host-only` flag set to true is one that does not have a domain value. Sent only to target domain that set it.
 
 ---
 

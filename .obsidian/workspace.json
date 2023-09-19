@@ -4,11 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "445d4e3dd55470cd",
+        "id": "fbc57f5d7139361a",
         "type": "tabs",
         "children": [
           {
-            "id": "a4b91d7ba3720f76",
+            "id": "2a8753f23762b4d1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Applications/Sessions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e8998fd86213b86c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Applications/Cookies.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b4b4e18de46aa81f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Access Control.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "90854f510ab23d24",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +85,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "HTTPOnly",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +110,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Authentication.md",
+                "file": "Web Applications/Cookies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Authentication.md",
+                "file": "Web Applications/Cookies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Authentication.md"
+                "file": "Web Applications/Cookies.md"
               }
             }
           },
@@ -173,13 +211,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a4b91d7ba3720f76",
+  "active": "cf0cbe23a54f532e",
   "lastOpenFiles": [
+    "Web Applications/Sessions.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/Access Control.md",
+    "Security/Web Application Security/DOM Based Vulnerabilities.md",
+    "Web Applications/Same Origin Policy (SOP).md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Security/Web Application Security/CORS.md",
     "Security/Web Application Security/SQL Injections.md",
     "Web Applications/Web Encoding.md",
     "[HTML.md",
     "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
     "GitHub/Pushing Changes.md",
     "GitHub/Git Commands.md",
     "Security/Tools/SQLMap.md",
@@ -191,16 +239,6 @@
     "JavaScript/ReactJs/Pass Data Dynamically.md",
     "JavaScript/ReactJs/ReactJs.md",
     "JavaScript/ReactJs/Events.md",
-    "JavaScript/Angular/Directives.md",
-    "JavaScript/Angular/Components.md",
-    "JavaScript/Angular/Event Binding.md",
-    "JavaScript/Angular/Property Binding.md",
-    "JavaScript/Angular/String Interpolation.md",
-    "JavaScript/Angular/Two Way Binding.md",
-    "JavaScript/ReactJs/State.md",
-    "JavaScript/ReactJs/Routing.md",
-    "GitHub/gitignore.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

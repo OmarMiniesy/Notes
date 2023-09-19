@@ -22,6 +22,9 @@
 * `SESSION=<session-ID>
 * `PHPSESSID=<>` For PHP websites
 * `JSESSIONID=<>` For JSP websites
+* `ASP.NET_SessionID` For ASP.net websites.
+
+> These session ids are used as an index in the server to get information related to that session.
 
 >Sequence of a login example:
 1. Client login using POST request
@@ -31,3 +34,4 @@
 > Session ID can also be transmitted via GET requests.
 
 ---
+
