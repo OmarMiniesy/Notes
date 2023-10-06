@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "fbc57f5d7139361a",
+        "id": "8996dad143f7e017",
         "type": "tabs",
         "children": [
           {
-            "id": "2a8753f23762b4d1",
+            "id": "ce83a0c9df158f1a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/Sessions.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e8998fd86213b86c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Cookies.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b4b4e18de46aa81f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Access Control.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "90854f510ab23d24",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Authentication.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -131,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/Cookies.md"
+                "file": "Security/Web Application Security/SQL Injections.md"
               }
             }
           },
@@ -211,34 +173,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "cf0cbe23a54f532e",
+  "active": "ce83a0c9df158f1a",
   "lastOpenFiles": [
-    "Web Applications/Sessions.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/DOM Based Vulnerabilities.md",
-    "Web Applications/Same Origin Policy (SOP).md",
+    "Rust/Functions.md",
+    "Rust/Enums.md",
+    "Rust/Data Types.md",
+    "Rust/Control Flow.md",
+    "Rust/Collection Types.md",
+    "GitHub/Pushing Changes.md",
+    "Security/Tools/netcat.md",
+    "Rust/Cargo.md",
+    "Rust/Rust.md",
     "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/WebSocket Vulnerabilities.md",
     "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Google Hacking.md",
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Networking/Routing.md",
+    "Networking/Data Link Layer.md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Transport Layer.md",
+    "Networking/Server Message Block (SMB).md",
+    "Networking/Protocol.md",
+    "Security/Network Security/OSINT.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Security/Web Application Security/CORS.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Web Applications/Web Encoding.md",
-    "[HTML.md",
     "Security/Web Application Security/Command Injection.md",
-    "GitHub/Pushing Changes.md",
-    "GitHub/Git Commands.md",
-    "Security/Tools/SQLMap.md",
-    "Security/System Security/Reverse Shells.md",
-    "JavaScript/ReactJs/Styling.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "Security/Web Application Security/File Upload.md",
-    "JavaScript/ReactJs/Components.md",
-    "JavaScript/ReactJs/Pass Data Dynamically.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "JavaScript/ReactJs/Events.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/Access Control.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
