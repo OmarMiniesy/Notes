@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SQL Injections.md"
+                "file": "Security/Web Application Security/Command Injection.md"
               }
             }
           },
@@ -175,6 +175,7 @@
   },
   "active": "ce83a0c9df158f1a",
   "lastOpenFiles": [
+    "Security/Web Application Security/SQL Injections.md",
     "Rust/Functions.md",
     "Rust/Enums.md",
     "Rust/Data Types.md",
@@ -200,7 +201,6 @@
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Access Control.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
