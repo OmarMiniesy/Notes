@@ -2,7 +2,7 @@
   "collapse-filter": false,
   "search": "",
   "showTags": false,
-  "showAttachments": true,
+  "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
@@ -18,7 +18,7 @@
       "query": "path:\"AWS Cloud\"",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 16754070
       }
     },
     {
@@ -62,18 +62,25 @@
         "a": 1,
         "rgb": 14701233
       }
+    },
+    {
+      "query": "path:\"Wireless Networks\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 16772393
+      }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1.20530145530146,
+  "textFadeMultiplier": -0.8,
+  "nodeSizeMultiplier": 0.757068607068607,
+  "lineSizeMultiplier": 1.59241164241164,
   "collapse-forces": false,
   "centerStrength": 0.518713248970312,
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.29899105287375016,
+  "scale": 0.4483173026386377,
   "close": true
 }

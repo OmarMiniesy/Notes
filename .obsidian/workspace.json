@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "8996dad143f7e017",
+        "id": "3c6070ef2da15d68",
         "type": "tabs",
         "children": [
           {
-            "id": "ce83a0c9df158f1a",
+            "id": "ee4837139cd4b31f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "HTTPOnly",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 324.5
+    "width": 235.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Security/Web Application Security/Command Injection.md"
-              }
+              "state": {}
             }
           },
           {
@@ -173,12 +165,28 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ce83a0c9df158f1a",
+  "active": "ee4837139cd4b31f",
   "lastOpenFiles": [
-    "Security/Web Application Security/SQL Injections.md",
-    "Rust/Functions.md",
+    "Security/Wireless Network Security/Security Standards.md",
+    "Wireless Networks/WiFi Connection.md",
+    "Web Applications/WebSockets.md",
+    "Security/Wireless Network Security",
+    "Wireless Networks/Wireless Channels.md",
+    "Wireless Networks/Service Sets.md",
+    "Wireless Networks/Identifiers.md",
+    "Wireless Networks/Device Types.md",
+    "AWS Cloud/Cloud Formation.md",
+    "Security/Network Security/OSINT.md",
+    "JavaScript/ReactJs/Pass Data Dynamically.md",
+    "Wireless Networks",
     "Rust/Enums.md",
+    "Markdown/Markdown Syntax.md",
+    "GitHub/Git Commands.md",
     "Rust/Data Types.md",
+    "Rust/Ownership and References.md",
+    "Rust/Functions.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/SQL Injections.md",
     "Rust/Control Flow.md",
     "Rust/Collection Types.md",
     "GitHub/Pushing Changes.md",
@@ -187,20 +195,6 @@
     "Rust/Rust.md",
     "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/WebSocket Vulnerabilities.md",
-    "Security/Web Application Security/WebApplication Fingerprinting.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Networking/Secure Shell Protocol (SSH).md",
-    "Networking/Routing.md",
-    "Networking/Data Link Layer.md",
-    "Networking/Domain Name System (DNS).md",
-    "Networking/Transport Layer.md",
-    "Networking/Server Message Block (SMB).md",
-    "Networking/Protocol.md",
-    "Security/Network Security/OSINT.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Authentication.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
@@ -210,8 +204,6 @@
     "Security/System Security",
     "Security/Network Security",
     "Databases",
-    "Markdown",
-    "OpenLane",
-    "JavaScript/ReactJs"
+    "Markdown"
   ]
 }
