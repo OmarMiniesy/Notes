@@ -25,7 +25,19 @@
 3. Larger attack surface due to introduced custom [[HTTP]] headers.
 
 ---
+### Cross-Site WebSocket Hijack
 
+> Arises when the websocket handshake request relies only on [[Cookies]] for [[Sessions]] handling and doesn't have any [[CSRF]] tokens.
+> Attacker can create a malicious page on their own domain that established a cross-site webocket connection to the vulnerable application.
+> The application then works with the connection of the websocket in the context of the victim user session.
+> Attacker can send data to the server and read responses, there is 2 way interaction.
+
+> Performing a cross-site websocket hijack.
+1. Review the handshake and check if they are vulnerable to CSRF.
+2. Check if the messages handle the user session only by cookies.
+3. Exploit using [[CSRF]] by opening a cross-site websocket request to the vulnerable site.
+
+---
 ### Securing WebSockets
 
 * Using the `wss://` [[Protocol]].

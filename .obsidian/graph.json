@@ -18,35 +18,35 @@
       "query": "path:\"AWS Cloud\"",
       "color": {
         "a": 1,
-        "rgb": 16754070
+        "rgb": 16248210
       }
     },
     {
       "query": "path:\"Web Applications\"",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 5526240
       }
     },
     {
       "query": "path:Docker",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 14706514
       }
     },
     {
       "query": "path:GitHub",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 16119285
       }
     },
     {
       "query": "path:Rust",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 16761549
       }
     },
     {
@@ -60,27 +60,27 @@
       "query": "path:Security",
       "color": {
         "a": 1,
-        "rgb": 14701233
+        "rgb": 7721376
       }
     },
     {
       "query": "path:\"Wireless Networks\"  ",
       "color": {
         "a": 1,
-        "rgb": 16772393
+        "rgb": 191218
       }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
-  "textFadeMultiplier": -0.8,
-  "nodeSizeMultiplier": 0.757068607068607,
-  "lineSizeMultiplier": 1.59241164241164,
+  "textFadeMultiplier": -0.7,
+  "nodeSizeMultiplier": 0.960810810810811,
+  "lineSizeMultiplier": 0.431081081081081,
   "collapse-forces": false,
-  "centerStrength": 0.518713248970312,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 250,
-  "scale": 0.4483173026386377,
+  "centerStrength": 0.312889812889813,
+  "repelStrength": 8.33679833679834,
+  "linkStrength": 0.824324324324324,
+  "linkDistance": 68,
+  "scale": 0.20045415572302003,
   "close": true
 }

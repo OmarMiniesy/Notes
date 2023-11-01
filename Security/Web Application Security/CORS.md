@@ -16,7 +16,8 @@
 
 > This header is returned by a server when a website requests resources across domains with the `Origin` header.
 > The browser compares values in this header with the requesting web `Origin` header and gives permissions.
-> The `Access-Control-Allow-Origin` header can have values of:
+
+The `Access-Control-Allow-Origin` header can have values of:
 * Multiple origins. (No browser supports this).
 * `null`
 * `*`

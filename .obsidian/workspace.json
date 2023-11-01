@@ -4,15 +4,43 @@
     "type": "split",
     "children": [
       {
-        "id": "3c6070ef2da15d68",
+        "id": "998a2fc04714f8e2",
         "type": "tabs",
         "children": [
           {
-            "id": "ee4837139cd4b31f",
+            "id": "c0e1851b25050d50",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/CSRF.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a1b57685a400953b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Web Applications/WebSockets.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "35bf4acbce79147f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/WebSocket Vulnerabilities.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +101,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 235.5
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -89,6 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Security/Web Application Security/CSRF.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Security/Web Application Security/CSRF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +157,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Security/Web Application Security/CSRF.md"
+              }
             }
           },
           {
@@ -165,11 +198,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ee4837139cd4b31f",
+  "active": "c0e1851b25050d50",
   "lastOpenFiles": [
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Web Applications/WebSockets.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/CORS.md",
+    "Markdown/Markdown Syntax.md",
+    "Docker/Docker.md",
     "Security/Wireless Network Security/Security Standards.md",
     "Wireless Networks/WiFi Connection.md",
-    "Web Applications/WebSockets.md",
     "Security/Wireless Network Security",
     "Wireless Networks/Wireless Channels.md",
     "Wireless Networks/Service Sets.md",
@@ -180,7 +218,6 @@
     "JavaScript/ReactJs/Pass Data Dynamically.md",
     "Wireless Networks",
     "Rust/Enums.md",
-    "Markdown/Markdown Syntax.md",
     "GitHub/Git Commands.md",
     "Rust/Data Types.md",
     "Rust/Ownership and References.md",
@@ -191,10 +228,6 @@
     "Rust/Collection Types.md",
     "GitHub/Pushing Changes.md",
     "Security/Tools/netcat.md",
-    "Rust/Cargo.md",
-    "Rust/Rust.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",

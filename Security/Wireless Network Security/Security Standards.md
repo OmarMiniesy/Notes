@@ -1,4 +1,3 @@
-
 ### General Notes
 
 > There is backwards compatibility of security standards on [[Device Types]].
