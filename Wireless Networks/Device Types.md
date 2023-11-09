@@ -1,5 +1,4 @@
-
-##### Access Point (AP)
+### Access Point (AP)
 
 This is the central point of the network, the WiFi router basically.
 From one side it is connected via a wired connection to the backhaul, and the other side is to the clients or stations.
@@ -12,7 +11,13 @@ There are multiple modes used by the access point:
 * Local (AP) Mode: basic mode used to connect wireless clients to the network.
 * Client Mode: when the access point acts as a client to another wireless network, allowing it to extend range of network.
 * Monitor Mode: used to monitor any packets that are recieved with no filtering.
-##### Client
+
+##### Types of Access Points
+
+
+
+---
+### Client
 
 Devices that are connected to the AP to get internet access.
 
