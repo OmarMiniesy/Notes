@@ -1,12 +1,12 @@
 
 ### General Notes
 
-> Application layer [[Protocol]]
+> Application layer support [[Protocol]].
 > Converts URLs to [[IP]] addresses, these URLs are called DNS names. **Name Resolution.**
-> It is a support protocol
+
+> Browsers look up records found in the `/etc/hosts` file before requests are sent to the DNS server.
 
 ---
-
 ### DNS Structure
 
 * Top Level Domain (TLD)
@@ -29,7 +29,7 @@ Host - sub domain - domain - TLD
 3. If there are subdomains, step 2 is repeated
 4. Then the host name is requested.
 
-> IP address of root server are hardcoded in configuration of resolver
+> IP address of root server are hardcoded in configuration of resolver.
 
 > This operation can be reversed, to get the DNS from the IP. 
 > `Ping` utility in linux does this.

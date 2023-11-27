@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "5922eb50643a452f",
+        "id": "4bc4ffcabe34bccc",
         "type": "tabs",
         "children": [
           {
-            "id": "3858d7c6fdfc646b",
+            "id": "443e575dad80ef6a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/cURL.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "MAC",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Security/Tools/cURL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Security/Tools/cURL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Security/Tools/cURL.md"
+              }
             }
           },
           {
@@ -166,8 +174,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3858d7c6fdfc646b",
+  "active": "443e575dad80ef6a",
   "lastOpenFiles": [
+    "Web Applications/HTTPS.md",
+    "AWS Cloud/Command Line Interface (CLI).md",
+    "Security/Tools/cURL.md",
+    "Networking/Domain Name System (DNS).md",
+    "Web Applications/Name Based Virtual Hosting.md",
+    "Rust/Data Types.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/DOM Based Vulnerabilities.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "GitHub/Git Commands.md",
     "Wireless Networks/Device Types.md",
     "Wireless Networks/WiFi Connection.md",
     "Security/Wireless Network Security/Security Standards.md",
@@ -183,19 +203,7 @@
     "Docker/Docker.md",
     "Security/Wireless Network Security",
     "AWS Cloud/Cloud Formation.md",
-    "Security/Network Security/OSINT.md",
-    "JavaScript/ReactJs/Pass Data Dynamically.md",
     "Wireless Networks",
-    "Rust/Enums.md",
-    "GitHub/Git Commands.md",
-    "Rust/Data Types.md",
-    "Rust/Ownership and References.md",
-    "Rust/Functions.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Rust/Control Flow.md",
-    "Rust/Collection Types.md",
-    "GitHub/Pushing Changes.md",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
