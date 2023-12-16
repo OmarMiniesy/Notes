@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4bc4ffcabe34bccc",
+        "id": "15b3921b372f832a",
         "type": "tabs",
         "children": [
           {
-            "id": "443e575dad80ef6a",
+            "id": "4b022a7a6003e91f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 268.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Tools/cURL.md"
+                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md"
               }
             }
           },
@@ -174,35 +174,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "443e575dad80ef6a",
+  "active": "4b022a7a6003e91f",
   "lastOpenFiles": [
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/Network Security/Null Session.md",
+    "Security/Tools/nmap.md",
+    "Security/Tools/Hydra.md",
+    "Security/Tools/cURL.md",
+    "JavaScript/NodeJs/Express Framework.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Events Module.md",
+    "JavaScript/NodeJs/Environment.md",
+    "JavaScript/NodeJs/Development Dependencies.md",
+    "JavaScript/NodeJs/Configuration.md",
+    "JavaScript/NodeJs/Config Module.md",
+    "JavaScript/NodeJs/Await-Async.md",
+    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
+    "JavaScript/NodeJs/Semantic Versioning.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "JavaScript/React Native/React Native.md",
+    "JavaScript/React Native",
+    "JavaScript/ReactJs/Routing.md",
     "Web Applications/HTTPS.md",
     "AWS Cloud/Command Line Interface (CLI).md",
-    "Security/Tools/cURL.md",
     "Networking/Domain Name System (DNS).md",
     "Web Applications/Name Based Virtual Hosting.md",
-    "Rust/Data Types.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Security/Web Application Security/DOM Based Vulnerabilities.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "GitHub/Git Commands.md",
-    "Wireless Networks/Device Types.md",
-    "Wireless Networks/WiFi Connection.md",
-    "Security/Wireless Network Security/Security Standards.md",
-    "Wireless Networks/Service Sets.md",
-    "Wireless Networks/Identifiers.md",
-    "Wireless Networks/Wireless Channels.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Security/Web Application Security/CSRF.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
-    "Web Applications/WebSockets.md",
-    "Security/Web Application Security/CORS.md",
-    "Markdown/Markdown Syntax.md",
-    "Docker/Docker.md",
     "Security/Wireless Network Security",
-    "AWS Cloud/Cloud Formation.md",
     "Wireless Networks",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
@@ -212,7 +213,6 @@
     "Security",
     "Security/System Security",
     "Security/Network Security",
-    "Databases",
-    "Markdown"
+    "Databases"
   ]
 }
