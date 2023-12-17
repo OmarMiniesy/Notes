@@ -32,6 +32,8 @@ gobuster dir -u http://<ip-address> -w /usr/share/wordlists/dirb/common.txt -x p
 ---
 ### `Dirbuster`
 
+Fast tool for enumeration using GUI.
+
 ---
 
 ### `ffuf`

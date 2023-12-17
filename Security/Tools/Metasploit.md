@@ -63,3 +63,19 @@ set payload <path-to-payload>
 > Using the command `exploit` or `run`.
 
 ---
+
+### Searchsploit
+
+> Used to search for vulnerabilities for software, found also on [exploitdb](https://www.exploit-db.com/).
+
+```shell
+searchsploit <target-software>
+```
+> This is used to look within the database for any vulnerabilites for the target software.
+
+```
+searchploit <code-num> -p
+```
+> To try one, type the name of the file as the code-num and then `-p` to view more details about it and then use it.
+
+---
