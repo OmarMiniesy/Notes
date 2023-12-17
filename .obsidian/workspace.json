@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "15b3921b372f832a",
+        "id": "dca34e9889516fd1",
         "type": "tabs",
         "children": [
           {
-            "id": "4b022a7a6003e91f",
+            "id": "d48412595e6e7c69",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+                "file": "Security/Web Application Security/File Upload.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1e5b0bc170c00e14",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "python server",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 247.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+                "file": "Security/System Security/Linux Privilege Escalation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md"
+                "file": "Security/System Security/Linux Privilege Escalation.md"
               }
             }
           },
@@ -174,11 +187,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4b022a7a6003e91f",
+  "active": "1e5b0bc170c00e14",
   "lastOpenFiles": [
+    "Security/System Security/Reverse Shells.md",
     "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Network Security/Null Session.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Tools/nmap.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Security/Network Security/Null Session.md",
     "Security/Tools/Hydra.md",
     "Security/Tools/cURL.md",
     "JavaScript/NodeJs/Express Framework.md",
@@ -195,14 +215,7 @@
     "JavaScript/NodeJs/Nodemon Module.md",
     "JavaScript/NodeJs/NodeJs.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md",
-    "JavaScript/React Native/React Native.md",
     "JavaScript/React Native",
-    "JavaScript/ReactJs/Routing.md",
-    "Web Applications/HTTPS.md",
-    "AWS Cloud/Command Line Interface (CLI).md",
-    "Networking/Domain Name System (DNS).md",
-    "Web Applications/Name Based Virtual Hosting.md",
     "Security/Wireless Network Security",
     "Wireless Networks",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",

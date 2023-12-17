@@ -26,7 +26,7 @@
 
 > To enumerate a given IP address for directories with a given file type.
 ```
-gobuster dir -u http://<ip-address> -w /usr/share/wordlists/dirb/common.txt -x php
+gobuster dir -u http://<ip-address> -w /usr/share/wordlists/dirb/common.txt -x php,cgi,html,js,css,py,sh,txt
 ```
 
 ---

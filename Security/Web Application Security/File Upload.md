@@ -64,7 +64,7 @@ GET /url/shell.php?command=<command_here> HTTP/1.1
 ##### Preventing Execution in Some Directories
 
 > Servers can be configured to run scripts that they were only configured to run, not any other script.
-> Instead of executing, they return thescript in plain text or some error message.
+> Instead of executing, they return the script in plain text or some error message.
 > Can leak source code.
 
 > This strict configuration is usually only in some directories that have some sort of user file upload.
