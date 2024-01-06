@@ -26,7 +26,7 @@
 ### Tools
 
 ##### Amass
-> Tool for gathering information about webpages, such as sobdomains, ASNs, etc..
+> Tool for gathering information about webpages, such as subdomains, ASNs, etc..
 
 ##### Arjun
 > [Arjun](https://github.com/s0md3v/Arjun) finds hidden parameters in URLs and [[Application Programming Interface (API)]] endpoints.

@@ -26,6 +26,17 @@ curl -o <file-name> www.google.com/index.html
 curl -v www.google.com
 ```
 
+* See the response headers only via the `-I` flag. To see the whole response message including body and headers use the `-i` flag.
+```bash
+curl -I www.google.com
+```
+
+* To add our own custom headers to a request being sent, use the `-H` flag. Some headers have their own custom flags as well:
+```bash
+curl www.google.com -A 'Mozzila/5.0'
+```
+> This sets the user-agent.
+
 ---
 ### HTTPS
 
