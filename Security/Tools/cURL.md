@@ -29,13 +29,35 @@ curl -v www.google.com
 * See the response headers only via the `-I` flag. To see the whole response message including body and headers use the `-i` flag.
 ```bash
 curl -I www.google.com
+curl -i www.google.com
 ```
 
 * To add our own custom headers to a request being sent, use the `-H` flag. Some headers have their own custom flags as well:
 ```bash
+curl www.google.com -H 'user-agent: Mozzila/5.0'
 curl www.google.com -A 'Mozzila/5.0'
+curl www.google.com -H 'Cookie: PHPSESSID=<>'
+curl www.google.com -b 'PHPSESSID=<>'
 ```
-> This sets the user-agent.
+> `-A` sets the user-agent.
+> `-b` adds [[Cookies]].
+
+* To add a username and password use the `-u` flag. Or add them before the URL with the `@`.
+```bash
+curl -u admin:admin www.google.com
+curl admin:admin@www.google.com
+```
+
+* To send a `POST` request use `-X POST`. To add data to be posted, use the `-d` flag.
+```bash
+curl -X POST -d "username=mins" www.google.com
+```
+> Any request method can be added using `-X <VERB>`.
+
+* To follow redirects, use the `-L` flag.
+```bash
+curl -X POST -d "username=mins" -L www.google.com
+```
 
 ---
 ### HTTPS

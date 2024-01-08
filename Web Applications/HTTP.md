@@ -64,7 +64,7 @@ Message Body \r\n
 >`GET /page.php?name=mins HTTP/1.1`
 
 #### Post
-> Used to submit `HTML` form data.
+> Used to submit `HTML` form data and transfer files.
 > `POST /login.php HTTP/1.1`
 
 > Can pass arguments only in the message body.
@@ -136,8 +136,34 @@ boundary="b4e4fbd93540"
 content-security-policy
 strict-transpot-policy
 referrer-policy
+WWW-Authenticate: Basic realm="Access Denied"
 ```
 > `content-security-policy` tells the browser to accept resources such as javascript scripts only from trusted domains. It controls the website policy towards external resources.
 > `strict-transpot-policy` prevents the browser from accessing the website over regular HTTP, must be over [[HTTPS]].
+> `Basic` states that this website uses basic HTTP authentication in the `WWW-Authenticate` header.
+
+---
+
+### Authentication
+
+Authentication by HTTP takes many forms, but they follow some steps:
+1. Client requests resource.
+2. Client doesn't have permission, so the server responds with a deny message.
+```
+WWW-Authenticate: <type> realm=<realm>
+```
+> The `type` is the type of authentication used, there are many types. And the `realm` is a message that indicates the scope of access.
+
+3. Client responds with `Authorization` header to authenticate and get access. This header usually contains the credentials encoded in some manner.
+```
+Authorization: <type> <credentials>
+```
+
+##### Basic Authentication
+
+The simplest form of HTTP authentication and it uses only `GET` requests.
+
+* The `WWW-Authenticate` header sent by the server to indicate invalid permissions has the `basic` type.
+* The `Authorization` header sent back by client has credentials encoded in base64. It also has the `basic` type.
 
 ---
