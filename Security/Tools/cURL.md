@@ -50,13 +50,13 @@ curl admin:admin@www.google.com
 
 * To send a `POST` request use `-X POST`. To add data to be posted, use the `-d` flag.
 ```bash
-curl -X POST -d "username=mins" www.google.com
+curl -X POST -d 'username=mins' www.google.com
 ```
 > Any request method can be added using `-X <VERB>`.
 
 * To follow redirects, use the `-L` flag.
 ```bash
-curl -X POST -d "username=mins" -L www.google.com
+curl -X POST -d 'username=mins' -L www.google.com
 ```
 
 ---

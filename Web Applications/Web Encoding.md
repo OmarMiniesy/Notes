@@ -26,10 +26,10 @@
 
 ---
 
-### URL Encoding
+### URL Encoding / Percent-Encoding
 
 > Some characters are encoded using the `%` character and 2 hex digits.
-> Reserved characters must be encoded in URLs.
+> URLs only display characters that are ASCII. Therefore, encoding is needed for those outside ASCII and some special dangerous ASCII characters.
 
 > Web browsers perform URL encoding and server side engines perform decoding.
 

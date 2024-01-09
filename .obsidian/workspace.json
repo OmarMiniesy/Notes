@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "2d8b45d52118d5c7",
+        "id": "4317769f02ba22a5",
         "type": "tabs",
         "children": [
           {
-            "id": "62137a98d5108b5e",
+            "id": "718bd1eaad9e7d3e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Security/Tools/cURL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "11043346d3f9b9ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/HTTP.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 277.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -169,8 +157,7 @@
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -188,34 +175,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "62137a98d5108b5e",
+  "active": "718bd1eaad9e7d3e",
   "lastOpenFiles": [
-    "Web Applications/HTTP.md",
     "Security/Tools/cURL.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/Directory Traversal.md",
+    "Security/System Security/Reverse Shells.md",
+    "Security/System Security/Meterpreter.md",
+    "Security/System Security/Malware.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/System Security/Dealing With Files of Different Types.md",
     "Security/Network Security/OSINT.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
+    "Web Applications/Name Based Virtual Hosting.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "JavaScript/ReactJs/Routing.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/ReactJs/Pass Data Dynamically.md",
+    "JavaScript/ReactJs/Events.md",
+    "JavaScript/ReactJs/Components.md",
+    "JavaScript/ReactJs/Styling.md",
+    "JavaScript/ReactJs/State.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "Web Applications/HTTP.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Web Applications/Web Encoding.md",
+    "Security/Web Application Security/Directory Traversal.md",
     "Networking/Data Link Layer.md",
     "Web Applications/WebSockets.md",
     "Web Applications/SameSite.md",
-    "Web Applications/Name Based Virtual Hosting.md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/System Security/Backdoors.md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Tools/Metasploit.md",
-    "Security/System Security/Reverse Shells.md",
-    "Security/System Security/Dealing With Files of Different Types.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Tools/nmap.md",
-    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Security/Network Security/Null Session.md",
-    "Security/Tools/Hydra.md",
-    "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "JavaScript/NodeJs/Events Module.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",
