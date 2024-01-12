@@ -79,3 +79,17 @@ searchploit <code-num> -p
 > To try one, type the name of the file as the code-num and then `-p` to view more details about it and then use it.
 
 ---
+
+### Proxy
+
+> To set a proxy such as [[Burp Suite]] to view requests and responses better.
+
+After choosing the exploit, we can set a the `PROXIES` flag to hold `HTTP:127.0.0.1:8080`.
+
+```
+set PROXIES HTTP:127.0.0.1:8080
+```
+
+This should route all traffic to Burp Suite, as the [[IP]], [[Port]], and [[Protocol]] used are the exact combination that BurpSuite listens on.
+
+---

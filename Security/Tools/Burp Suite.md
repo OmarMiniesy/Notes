@@ -6,8 +6,8 @@
 
 > Can be used to detect [[Cross Site Scripting (XSS)]] vulnerabilities.
 > Can be used to test [[SQL Injections]] vulnerabilities.
-___
 
+___
 ### Intercepting Proxy
 
  > A tool that can analyze and modify requests, as well as responses exchanged between [[HTTP]] client and server
@@ -16,6 +16,21 @@ ___
 * Build requests manually
 * Crawl a website by visiting every page
 * Fuzz web application by sending patterns of valid and invalid inputs to test behaviour
+
+##### To Intercept For Other Tools
+
+> Using `proxychains`, we can use proxies for tools like [[cURL]]. 
+> Can inspect requests and responses more accurately.
+
+1. Open `/etc/proxychains4.conf`.
+2. Add to the proxy sections at the very end of the file `http 127.0.0.1:8080`. This sets BurpSuite as our proxy.
+3. Optional: set quiet mode by uncommenting `quiet mode` in the file.
+
+To use proxychains, simply prepend it while using another tool as another argument:
+
+```bash
+proxychains curl www.google.com
+```
 
 ---
 

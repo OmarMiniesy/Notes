@@ -142,6 +142,18 @@ WWW-Authenticate: Basic realm="Access Denied"
 > `strict-transpot-policy` prevents the browser from accessing the website over regular HTTP, must be over [[HTTPS]].
 > `Basic` states that this website uses basic HTTP authentication in the `WWW-Authenticate` header.
 
+##### Cookie Headers
+
+* For the request:
+```
+Cookie: <name>=<value>
+```
+
+* For the response:
+```
+Set-Cookie: <name>=<value>
+```
+
 ---
 
 ### Authentication

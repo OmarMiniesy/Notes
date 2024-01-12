@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "4317769f02ba22a5",
+        "id": "e94fdd2d16c86dfb",
         "type": "tabs",
         "children": [
           {
-            "id": "718bd1eaad9e7d3e",
+            "id": "34b8fc6a39857611",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Web Applications/HTTP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ac05c3a39f948d59",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/Burp Suite.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "cookie",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Tools/Burp Suite.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Tools/Burp Suite.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Tools/cURL.md"
+                "file": "Security/Tools/Burp Suite.md"
               }
             }
           },
@@ -175,15 +188,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "718bd1eaad9e7d3e",
+  "active": "ac05c3a39f948d59",
   "lastOpenFiles": [
+    "Web Applications/HTTP.md",
+    "Web Applications/Cookies.md",
+    "Security/Tools/Metasploit.md",
+    "Security/Tools/nmap.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Security/Network Security/OSINT.md",
+    "Security/Tools/Burp Suite.md",
+    "Security/System Security/Linux Privilege Escalation.md",
     "Security/Tools/cURL.md",
     "Security/System Security/Reverse Shells.md",
     "Security/System Security/Meterpreter.md",
     "Security/System Security/Malware.md",
-    "Security/System Security/Linux Privilege Escalation.md",
     "Security/System Security/Dealing With Files of Different Types.md",
-    "Security/Network Security/OSINT.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Web Applications/Name Based Virtual Hosting.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
@@ -195,14 +214,8 @@
     "JavaScript/ReactJs/Styling.md",
     "JavaScript/ReactJs/State.md",
     "JavaScript/NodeJs/Application Programming Interface (API).md",
-    "Web Applications/HTTP.md",
     "Security/Web Application Security/CSRF.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Web Applications/Web Encoding.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Networking/Data Link Layer.md",
-    "Web Applications/WebSockets.md",
-    "Web Applications/SameSite.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",
