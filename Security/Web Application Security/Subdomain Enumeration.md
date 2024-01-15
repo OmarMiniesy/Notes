@@ -45,6 +45,11 @@ amass enum -d <link> -options
 > Get information about domains and lists domains for organizations.
 > Check for dev and admin domains.
 
+To save the subdomains using `crt.sh`:
+``` bash
+curl -s https://crt.sh/?q=<DOMAIN>&output=json | jq -r '.[]' "\(.name_value)\n\(.common_name)"' | sort -u > "<DOMAIN>_crt.sh.txt"
+```
+
 ###### 6. Using [ffuf](https://github.com/ffuf/ffuf)
 
 ```

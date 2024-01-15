@@ -47,14 +47,20 @@
 
 ##### Whois
 > Whois database has information about owner, street address, email address, and technical contacts of an Internet domain.
-> Can also get the [[IP]] addresses of several machines.
-> `whois` on linux. 
+> Shows the name servers used by the target as well.
+> Can also get the [[IP]] addresses of several machines. 
 
 ##### Whatweb, Netcat
 > Used to get information about the server infrastructure.
 
+##### WafW00f
+Used to identify firewalls and other security mechanisms.
+```
+wafw00f -v -a <URL>
+```
+> `-a` scans all firewalls and doesn't stop after first match.
+
 ##### [wigle.net](https://wigle.net)
 > Takes `BSSID` and `SSID` to get geographic location.
-
 
 ---
