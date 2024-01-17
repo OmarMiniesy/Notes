@@ -22,3 +22,5 @@
 ### Examples
 
 * The `.config` file that contains passwords and credentials
+
+---

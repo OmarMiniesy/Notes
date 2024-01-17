@@ -1,21 +1,36 @@
 
 ### General Notes
 
-> Tool that builds, runs, and tests containers.
+Docker manages everything that needs to run in a working environment and places it inside a container.
 
-> Docker desktop can be used to build containers locally.
+> A container is an isolated environment that contains all dependancies and libraries needed to run an application.
 
-> Docker compose can specify relations between multiple containers
+Virtual machines solve the same issues, but:
+1. has its own operating system.
+2. use more memory and resources.
 
-___
+[Installation Process](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
 
-### Docker Image
+---
+### [[Images]]
 
-> Portable template that contains instructions of how to create a container
+These are blueprints used for containers, they contain:
+* runtime environment.
+* application code.
+* dependencies.
+* configuration and environment variables.
 
-___
+> Images are read-only. Once they are created, they cannot be changed.
 
-### Docker File
+These images can be shared, and regardless of what is installed on the recipient computer, the image defines all what it needs and is contained inside it. The container is what runs this image.
 
-> Text file that contains commands to create images
+---
+### Containers
 
+Runnable instances of [[Images]]. 
+
+> A container is a process which runs our application outlined by the image.
+
+Containers are independant processes, and they are isolated from other process on the computer.
+
+---
