@@ -25,7 +25,7 @@ Images are made of layers.
 
 ### Running Images 
 
-Running an image spawns a container. After an image is run for the first time, the options are saved. The container can then be run afterward simply by stating its name.
+Running an image spawns a *new* [[Container]]. After an image is run for the first time, the options are saved. The container can then be run afterward simply by stating its name.
 
 * To run an image:
 ```bash
@@ -35,7 +35,7 @@ docker run --name <container-name> -d <image-name>:<tag>
 > The `image-name` is the name of an image that will be used to spawn this container. If it is not on the local machine it will be pulled from docker.hub.
 > `-d` flag adds detached mode which doesn't block the terminal when the container is spun up.
 
-* To map a [[Port]] from a container to that on a computer:
+* To map a [[Port]] from a container to that on a computer, add the `-p` flag.
 ```bash
 docker run -p <pc-port>:<container-port> <image-name>
 ```

@@ -12,7 +12,7 @@ Virtual machines solve the same issues, but:
 [Installation Process](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository).
 
 ---
-### [[Images]]
+### [[Image]]
 
 These are blueprints used for containers, they contain:
 * runtime environment.
@@ -25,9 +25,9 @@ These are blueprints used for containers, they contain:
 These images can be shared, and regardless of what is installed on the recipient computer, the image defines all what it needs and is contained inside it. The container is what runs this image.
 
 ---
-### Containers
+### [[Container]]
 
-Runnable instances of [[Images]]. 
+Runnable instances of [[Image]]. 
 
 > A container is a process which runs our application outlined by the image.
 

@@ -14,7 +14,7 @@ Very beneficial to reduce image size and to avoid publishing dangerous files, su
  > The file is called `.dockerignore` with no extensions.
  > Its presence is automatically detected by the build command given that it is located in the same directory as the [[Dockerfile]].
  
-It specifies all the files we dont want placed into the [[Images]] whilst building it using the [[Dockerfile]]. 
+It specifies all the files we dont want placed into the [[Image]] whilst building it using the [[Dockerfile]]. 
 
 Example: 
 ```dockerignore

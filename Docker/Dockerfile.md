@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> The [[Docker]]file is a file that gives the instructions on how to create the [[Images]]. 
+> The [[Docker]]file is a file that gives the instructions on how to create the [[Image]]. 
 
 This dockerfile lists all of the different layers and instructions that are to be used while building the image.
 
