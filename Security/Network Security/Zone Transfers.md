@@ -1,4 +1,3 @@
-
 ### General Notes
 
 A type of attack that relies on misconfiguration of [[Domain Name System (DNS)]] servers.

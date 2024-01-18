@@ -8,7 +8,7 @@
 > These resources may contain outdated, buggy software, sensitive information, or admin areas that are not secure.
 
 > These are only discoverable if they are made public, that is they are found on public [[Domain Name System (DNS)]] records.
-> To discover non-public subdomains, we do VHost ([[Name Based Virtual Hosting]]) enumeration. 
+> To discover non-public subdomains, we do VHost ([[Virtual Hosting]]) enumeration. 
 
 ---
 ### Public Subdomains - [Cheat Sheet](https://pentester.land/blog/subdomains-enumeration-cheatsheet/)
@@ -59,14 +59,14 @@ ffuf -u https://FUZZ.yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<
 
 ---
 
-### Non-public Subdomains and VHosts
+### Non-public Subdomains and [[Virtual Hosting]]
 
 > These non-public subdomains can be discovered by doing VHost fuzzing on a given [[IP]] address.
 
 Since VHosts are differentiated according to the value of their `host`, we can fuzz this [[HTTP]] header and see which responses have proper sizes that indicate the presence of an existing page.
 
 > The IP address must be added to the `/etc/hosts` file before running.
-```
+```bash
 ffuf -u https://yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<wordlist> -H 'Host: FUZZ.yahoo.com' -fs <size>
 ```
 > We fuzz the `host` header using the `-H` flag.

@@ -4,35 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "6350f12d6cfb892a",
+        "id": "5671bd23c0f39afd",
         "type": "tabs",
         "children": [
           {
-            "id": "c758b4f220176c4a",
+            "id": "213d29f3c998238f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Web Application Security/Subdomain Enumeration.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "11bf09933fc0ce9f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Name Based Virtual Hosting.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9489e108ecafac43",
+            "id": "85a270243a718996",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -44,7 +32,19 @@
             }
           },
           {
-            "id": "3dec01fda3df86e5",
+            "id": "94047adf670af35b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Network Security/OSINT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e2f9d2161d680792",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -85,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "dnsenu",
+                "query": "disclosure",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -114,7 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 207.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -130,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/Name Based Virtual Hosting.md",
+                "file": "Security/Web Application Security/Subdomain Enumeration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/Name Based Virtual Hosting.md",
+                "file": "Security/Web Application Security/Subdomain Enumeration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/Name Based Virtual Hosting.md"
+                "file": "Security/Web Application Security/Subdomain Enumeration.md"
               }
             }
           },
@@ -212,15 +211,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "11bf09933fc0ce9f",
+  "active": "213d29f3c998238f",
   "lastOpenFiles": [
-    "Security/Network Security/Zone Transfers.md",
-    "Networking/Domain Name System (DNS).md",
-    "Untitled.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Web Applications/Name Based Virtual Hosting.md",
     "Security/Network Security/OSINT.md",
+    "Networking/Domain Name System (DNS).md",
+    "Security/Network Security/Zone Transfers.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Security/Web Application Security/Information Disclosure.md",
+    "Web Applications/Virtual Hosting.md",
+    "Untitled.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Docker/Dockerfile.md",
     "Docker/Docker Compose.md",
     "Docker/Volumes.md",
@@ -238,8 +239,6 @@
     "JavaScript/NodeJs/Environment.md",
     "JavaScript/NodeJs/Configuration.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
-    "JavaScript/NodeJs/Modules.md",
-    "JavaScript/NodeJs/Promises.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",

@@ -21,6 +21,22 @@
 
 > Using [[Burp Suite]] Intruder, add payload positions, identify difference in [[HTTP]] responses (length, status code, response times), grep matching rules, and grep extraction rules.
 
+Using `cewl`, we can scrape a website and take keywords:
+```bash
+cewl -m5 --lowercase -w <path-to-save> <url>
+```
+> `-m5` finds all words with minimum length of 5.
+> `--lowercase` converts them all to lowercase.
+> These words are then saved into the wordlist using `-w`.
+
+Using ffuf, we can then try and fuzz for any files using this wordlist, in companionship with the `raft` seclists wordlists for extensions, as well as the `wp-admin`, `wp-content`, `wp-includes` folders that might contain sensitive information.
+
+```bash
+ffuf -w /folders.txt:FOLDERS, /wordlist.txt:WORDLIST, /extensions.txt:EXTENSIONS -u http://yahoo.com/FOLDERS?WORDLISTEXTENSIONS
+```
+> Saving the folders, extensions, and wordlists above into these file names, we can fuzz for sensitive information on the website using them.
+
+
 ---
 
 ### Sources of Information Disclosure
