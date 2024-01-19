@@ -13,7 +13,7 @@
 > This is an alternative for [[Angular]].
 > [[NodeJs]] needs to be installed.
 > [[Node Package Manager (NPM)]] manages the dependancies.
-> There is a `package.json` that holds metadata about the project, contains the [[Development Dependencies]], and uses [[Semantic Versioning]].
+> There is a `package.json` that holds metadata about the project, contains the Development Dependencies, and uses [[Semantic Versioning]].
 
 ---
 ### Create a Project

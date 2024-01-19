@@ -1,24 +1,14 @@
 
 ### General Notes
 
-> Express is a framework used to handle [[Application Programming Interface (API)]]s with a good structure
-> The documentation at [Expressjs - 4.x](https://expressjs.com/en/4x/api.html) has all the functionalities
+> Express is a framework used to handle [[Application Programming Interface (API)]]s with a good structure.
+> The documentation at [Expressjs - 4.x](https://expressjs.com/en/4x/api.html) has all the functionalities.
 > Use Postman to test.
 
 ---
-
 ### Installing Express using [[Node Package Manager (NPM)]]
 ```bash
 npm i express
-```
-
----
-
-### Running Using [[Nodemon Module]] 
-
-> Helps to quickly restart server without having to rerun the file.
-```bash
-nodemon <file_name>
 ```
 
 ---

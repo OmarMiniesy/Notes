@@ -1,11 +1,12 @@
+### General Notes
 
-
->Used to install packages and building blocks for [[NodeJs]] [npmjs](https://www.npmjs.com/)
+>Used to install packages and building blocks for [[NodeJs]] [npmjs](https://www.npmjs.com/).
 
 > `-g` is the global flag. Append it to any command to play with packages on the global scale, not just in a single project.
+
 ---
 
-### Check NPM Version
+### NPM Version Management
 
 ```bash
 npm -v
@@ -23,18 +24,11 @@ npm i -g npm
 
 ---
 
-### Package.json
+### `package.json`
 
-> File that contains metadata about the node project. Should be created before installing any node packages
-``` bash
-npm init --yes  
-```
+Any dependancy that is installed using npm is defined in the `package.json` file. This is where the metadata of the project is stored. Check [[NodeJs#Understanding `package.json`]].
 
->`--yes` to accepts default values
-
-> This package.json file also contains [[Development Dependencies]] modules.
-
-> Node packages also have their own package.json file with all the metadata of that module. This package can be viewed by
+> Node packages also have their own `package.json` file with all the metadata of that module. This package can be viewed by
 ```bash
 npm view <package-name>
 ```
@@ -43,20 +37,19 @@ npm view <package-name>
 
 ### Install Packages
 
-> When a node module is installed, it is installed in a directory called node_modules and the module is added to the package.json file with its version. Second command is to install a specific version of a module.
-
+> When a node module is installed, it is installed in a directory called node_modules and the module is added to the package.json file with its version
 ```bash
 npm i <package_name>
 npm i <package_name>@<version_num>
 ```
 
 
-> Installing all packages already present in a project in the `package.json` file. Downloads the versions based on [[Semantic Versioning]]
+> Installing all packages already present in a project in the `package.json` file. Downloads the versions with [[Semantic Versioning]].
 ```bash
 npm i
 ```
 
-> `node_modules` file shouldnt be included when saving the project in a GitHub repo, use the [[gitignore]] file.
+`node_modules` folder shouldnt be included when saving the project in a GitHub repo, use the [[gitignore]] file.
 
 ---
 

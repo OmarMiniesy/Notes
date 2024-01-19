@@ -1,7 +1,7 @@
 
 ### General Notes
 
-> Also known as TCP/IP, or Internet [[Protocol]]
+> Also known as TCP/IP, or Internet [[Protocol]].
 > It sends datagrams (packets) to the communicating nodes, and uses IP Addresses to identify hosts.
 > Hosts are identified by unique IP Addresses.
 
@@ -22,13 +22,17 @@
 * `192.168.0.0 - 192.168.255.255` for private networks
 
 ##### Netmask (Subnet)
-
 > Used to identify the network of the IP address.
 > Subnet and IP address together get the exact host required.
 >  The netmask can be represented as a number of consecutive ones.
 
-#### CIDR
-> To get the network IP address, simply AND the IP address with the netmask
+##### Classful Addressing
+* Class A : `0.0.0.0 - 127.255.255.255`
+* Class B: `128.0.0.0 - 191.255.255.255`
+* Class C: `192.0.0.0 - 223.255.255.255` 
+
+#### CIDR (Classless Addressing)
+> To get the network IP address, simply AND the IP address with the netmask.
 > After the AND, the IP address is the network prefix.
 > The network prefix can be represented as `xx.xx.xx.xx/<ones>`
 > The remaining part of the IP address, or the host address, can be deduced by ANDing with inverse of the subnet.
@@ -43,7 +47,6 @@
 > Therefore, total number of available hosts is $2^{x}- 2$.
 
 ---
-
 ### IPV6 
 
 > This is IP Version 6
@@ -56,14 +59,5 @@
 
 * `::1/128` Loopback address
 * `::FFFF:0:0/96` IPV4 mapped addresses
-
----
-
-### Layers
-
-1. Application
-2. Transport
-3. Network
-4. Data Link
 
 ---

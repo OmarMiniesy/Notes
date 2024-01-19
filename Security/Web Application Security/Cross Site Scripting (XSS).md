@@ -28,6 +28,14 @@
 3. DOM Based.
 4. Dangling Markup.
 
+##### Scanners
+
+* [XSStrike](https://github.com/s0md3v/XSStrike).
+```bash
+xsstrike -u http://<url>/param=mins
+```
+> must include the `param` to be tested against XSS.
+
 ---
 ### Reflected XSS Attacks
 
@@ -106,7 +114,7 @@
 
 ##### DOM XSS in jQuery
 
-> The `attr()` functio can change the attributes of DOM elements.
+> The `attr()` function can change the attributes of DOM elements.
 > If data read from a user controlled source and passed to the `attr()` function, we can insert a payload an create a XSS attack.
 > Identify jQuery via the `$` sign.
 

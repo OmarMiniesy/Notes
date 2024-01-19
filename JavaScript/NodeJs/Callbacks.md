@@ -2,13 +2,13 @@
 
 ### General Notes
 
-> One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions in [[NodeJs]]
+> One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions in [[NodeJs]].
 
 ---
 
 ### Method
 
-> Add a callback function parameter in the function
+> Add a callback function parameter in the function.
 * Add the callback parameter
 * Call the callback function with the return value of this function
 ```JavaScript

@@ -19,22 +19,20 @@
 
 ##### Layers
 
-> Different protocols are used for the different layers found in a network 
+> Different protocols are used for the different layers found in a network.
 > These layers are defined by models, a famous one is the ISO/OSI model
 
 1. Application
-2. Presentation
-3. Session
-4. [[Transport Layer]]: This is where a cummincation channel is held between different hosts.
-5. Network: This is where [[IP]] addresses are used to identify hosts
-6. [[Data Link Layer]]: This is where packet forwarding happens to identify the unique network card via the MAC Address
-7. Physical
+2. [[Transport Layer]]: This is where a cummincation channel is held between different hosts.
+3. Network: This is where [[IP]] addresses are used to identify hosts
+4. [[Data Link Layer]]: This is where packet forwarding happens to identify the unique network card via the MAC Address
+5. Physical
 
 ---
 
 ### Encapsulation
 
-> The different layers use different protocols
+> The different layers use different protocols.
 > The packets in each layer have different headers that are specific to the protocol.
 
 > To solve this issue to be able to communicate between layers, we use encapsulation.

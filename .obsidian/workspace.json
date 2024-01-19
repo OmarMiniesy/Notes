@@ -4,52 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5671bd23c0f39afd",
+        "id": "38f00b1bed5775e4",
         "type": "tabs",
         "children": [
           {
-            "id": "213d29f3c998238f",
+            "id": "1acc1dc278fb5230",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Subdomain Enumeration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "85a270243a718996",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Network Security/Zone Transfers.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "94047adf670af35b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Network Security/OSINT.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e2f9d2161d680792",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Domain Name System (DNS).md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "mode": "source",
                 "source": false
               }
@@ -84,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "disclosure",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -113,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 284.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -129,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Subdomain Enumeration.md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Subdomain Enumeration.md",
+                "file": "JavaScript/NodeJs/Express Framework.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Subdomain Enumeration.md"
+                "file": "JavaScript/NodeJs/Express Framework.md"
               }
             }
           },
@@ -211,34 +175,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "213d29f3c998238f",
+  "active": "1acc1dc278fb5230",
   "lastOpenFiles": [
-    "Security/Network Security/OSINT.md",
-    "Networking/Domain Name System (DNS).md",
-    "Security/Network Security/Zone Transfers.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Network Security/Footprinting and Scanning.md",
-    "Security/Web Application Security/Information Disclosure.md",
-    "Web Applications/Virtual Hosting.md",
-    "Untitled.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Docker/Dockerfile.md",
-    "Docker/Docker Compose.md",
-    "Docker/Volumes.md",
-    "Docker/Container.md",
-    "Docker/Image.md",
-    "Docker/Docker.md",
-    "JavaScript/Angular/String Interpolation.md",
-    "JavaScript/NodeJs/Nodemon Module.md",
-    "Docker/dockerignore.md",
-    "Security/System Security/Reverse Shells.md",
-    "GitHub/gitignore.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "JavaScript/NodeJs/Semantic Versioning.md",
+    "JavaScript/NodeJs/Events Module.md",
+    "JavaScript/NodeJs/Environment Variables.md",
     "JavaScript/NodeJs/NodeJs.md",
-    "JavaScript/NodeJs/Environment.md",
-    "JavaScript/NodeJs/Configuration.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Express Framework.md",
     "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/Callbacks.md",
+    "JavaScript/NodeJs/JOI Module.md",
+    "JavaScript/NodeJs/Config Module.md",
+    "JavaScript/NodeJs/Configuration.md",
+    "Rust/Cargo.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/NodeJs/Development Dependencies.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "JavaScript/NodeJs/Await-Async.md",
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Networking/Port.md",
+    "Networking/Firewall.md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Data Link Layer.md",
+    "Security/Web Application Security/Phishing.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Tools/Burp Suite.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",
