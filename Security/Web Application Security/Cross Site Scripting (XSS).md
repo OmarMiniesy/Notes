@@ -268,7 +268,7 @@ toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constru
 
 ---
 
-### [[Cookies]] Stealing With XSS
+### [[Cookies]] Stealing With XSS, Session Hijacking
 
 > JavaScript can only access [[Cookies]] if the `HttpOnly` flag is disabled. 
 > Cookies can be displayed with `<script>alert(document.cookie)</script>`.
