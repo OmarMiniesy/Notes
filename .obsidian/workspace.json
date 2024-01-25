@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "82d1582c28b540e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/SQL Injections.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -61,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "python ",
+                "query": "SQL ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 254.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -106,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md",
+                "file": "Security/Web Application Security/SQL Injections.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md"
+                "file": "Security/Web Application Security/SQL Injections.md"
               }
             }
           },
@@ -188,17 +200,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d951147db031c114",
+  "active": "82d1582c28b540e2",
   "lastOpenFiles": [
+    "Security/Web Application Security/Phishing.md",
+    "Security/Tools/mysql.md",
+    "Security/Web Application Security/SQL Injections.md",
     "Security/Network Security/Arp Poisoning.md",
-    "Networking/Address Resolution Protocol (ARP).md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Networking/Routing.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Wireless Network Security/Security Standards.md",
+    "Security/System Security/Reverse Shells.md",
     "Networking/Data Link Layer.md",
+    "Networking/Address Resolution Protocol (ARP).md",
     "Networking/IP.md",
     "Networking/Virtual Private Network (VPN).md",
     "Networking/Transport Layer.md",
     "Networking/Server Message Block (SMB).md",
     "Networking/Secure Shell Protocol (SSH).md",
-    "Networking/Routing.md",
     "Networking/Protocol.md",
     "Networking/Port.md",
     "Networking/Firewall.md",
@@ -206,16 +225,8 @@
     "Networking/Domain Name System (DNS).md",
     "Security/System Security/Linux Privilege Escalation.md",
     "JavaScript/NodeJs/Environment Variables.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Docker/Volumes.md",
     "JavaScript/ReactJs/Components.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "Security/Web Application Security/Phishing.md",
-    "JavaScript/NodeJs/Express Framework.md",
-    "JavaScript/NodeJs/Events Module.md",
-    "JavaScript/NodeJs/NodeJs.md",
-    "JavaScript/NodeJs/HTTP Module.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",

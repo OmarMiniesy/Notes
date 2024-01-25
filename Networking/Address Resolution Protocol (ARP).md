@@ -5,6 +5,10 @@
 
 > It was initially used to map the address of one protocol to the address of another protocol.
 
+>ARP is **stateless**. 
+
+This means replies dont have to be synced to a request sent before it. Any reply that is recieved by a machine updates the ARP cache of that machine, even if it didnt send a request for that [[IP]] address.
+
 ---
 ### [[Protocol]] Details
 

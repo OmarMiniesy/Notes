@@ -4,20 +4,12 @@
 > Used to intercept traffic on a network.
 > [[Address Resolution Protocol (ARP)]] packets are sent in the [[Data Link Layer]] to identify the MAC address.
 
-> Hosts save these MAC addresses in ARP cache tables.
+> Hosts save these MAC addresses in [[Address Resolution Protocol (ARP)#ARP Cache]] tables.
 > Attackers want to manipulate data in this cache table.
 
-> If attacker manages to change the data of the ARP tables of the two parties involved in a communication a Man in the Middle (MITM) attack is presented.
+> If attacker manages to change the data of the ARP tables of the two parties involved in a communication a Man in the Middle (MITM) attack can be presented.
 
 ---
-### ARP Simplicity
-
->ARP is **stateless**. 
-
-This means replies dont have to be synced to a request sent before it. Any reply that is recieved by a machine updates the ARP cache of that machine, even if it didnt send a request for that [[IP]] address.
-
----
-
 ### Attack Techniques
 
 There are three techniques to perform ARP cache poisoning. These might not all work in all scenarios.
@@ -36,7 +28,6 @@ There are three techniques to perform ARP cache poisoning. These might not all w
 * The target doesn't accept the spoofed request if there is no entry in the ARP cache for that IP address.
 
 ---
-
 ### Performing ARP Poisoning using `arpspoof`
 
 > Enable [[IP]] forwarding. This garauntees that the machine forwards the packets intercepted to the real destination hosts.
@@ -52,3 +43,26 @@ arpspoof -i <interface> -t <target-ip> -r <host-ip>
 > [[Wireshark]] can then be run to track and intercept the traffic.
 
 ---
+
+### Man in the Middle Attack
+
+The attacker needs to be in the same local network of the two communicating hosts.
+
+> To achieve the attack, both hosts need to have their ARP caches poisoned. They are convinced that the IP of the other host is mapped to the MAC of the attacker.
+
+Packets recieved at the attacker have a different destination IP address than that of the attacker. The attacker machine has two scenarios:
+* If attacker machine is configured as a router, it will relay the packet to the other host. This can be done by turning on IP forwarding.
+* If attacker machine is not configured as a router, it will not relay the packet to the other host. To achieve that, we need to stop IP forwarding. This drops the packets.
+
+```bash
+sudo sysctl net.ipv4.ip_forward=1 
+```
+> This turns on forwarding. Change to 0 to turn off.
+
+> To achieve MITM attack, we need the second scenario. However, we need to add some configurations
+
+Before the machine drops the packet, we need a copy of that packet to read the packet, and then we can manually send the packet to the other expecting host. 
+* This way, we gaurantee that the other host gets the packet from us, not from the real sending host.
+
+---
+

@@ -6,33 +6,40 @@
 
 ---
 
-### Connect to Host
+### Commands
 
-> To connect to host with a given [[IP]] address with given username. Try `root` as username to see if it works.
+* To connect to host.
 ```
-mysql -h <IP> -u <user/root>
+mysql -h <IP> -u <user> -p'password'
 ```
 > `-h` to specify host.
+> `-u` to specify user.
+> `-p` to enter password. If there is no password, dont add `-p`. Can either add the password like that, or don't add it to the command but enter it when prompted.
+> `-P` to specify port. (optional).
 
----
-
-### Post Connection
-
-> Can use normal SQL queries.
-
-> To show the databases present.
+* To show the databases present.
 ``` SQL
 SHOW databases;
 ```
 
-> To use a given database.
+*  To use a given database.
 ```SQL
 USE <database-name>;
 ```
 
-> To show the tables inside the selected database.
+* To return the current database.
+```SQL
+SELECT database();
+```
+
+*  To show the tables inside the selected database.
 ``` SQL
 SHOW tables;
+```
+
+* To see the columns and data types of a table.
+```SQL
+DESCRIBE <table-name>;
 ```
 
 ---
