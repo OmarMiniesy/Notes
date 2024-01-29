@@ -3,7 +3,7 @@
 
 ## 1. Ping Sweeping
 
-> Sends ICMP packets (echo request), if the host is alive, replies with ICMP echo reply packets.
+> Sends [[ICMP]] packets (echo request), if the host is alive, replies with ICMP echo reply packets.
 > They can perform this test on all the hosts alive on a network
 
 #### `fping`

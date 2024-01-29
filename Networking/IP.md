@@ -5,10 +5,14 @@
 > It sends datagrams (packets) to the communicating nodes, and uses IP Addresses to identify hosts.
 > Hosts are identified by unique IP Addresses.
 
-> `ip addr` on Linux to view the IPs, MAC, and interfaces.
+Used in the [[Network Layer]] of the protocol stack.
+The IP protocol has these properties:
+1. It is a best effort delivery system, with no gaurantees.
+2. Not responsible for a reliable transmission of packets.
+
+> `ip addr` on Linux to view the IPs, [[Data Link Layer]] MAC addresses, and interfaces.
 
 ---
-
 ### IPV4 
 
 > This is IP Version 4
@@ -54,10 +58,10 @@
 > Total 128 bits. First 64 are network, last 64 are device
 > The first 64 ends with 16 bits to indicate subnet
 
-
 ##### Special Addresses
 
 * `::1/128` Loopback address
 * `::FFFF:0:0/96` IPV4 mapped addresses
 
 ---
+

@@ -9,6 +9,8 @@
 
 > If attacker manages to change the data of the ARP tables of the two parties involved in a communication a Man in the Middle (MITM) attack can be presented.
 
+- Check My SEED Lab [Solution](https://github.com/OmarMiniesy/Walkthroughs/blob/main/SEED%20Labs/Network%20Security/ARP%20Cache%20Poisoning%20Attack%20Lab.md)
+
 ---
 ### Attack Techniques
 
@@ -44,7 +46,7 @@ arpspoof -i <interface> -t <target-ip> -r <host-ip>
 
 ---
 
-### Man in the Middle Attack
+### Man in the Middle Attack 
 
 The attacker needs to be in the same local network of the two communicating hosts.
 
