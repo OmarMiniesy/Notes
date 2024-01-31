@@ -16,3 +16,7 @@
 > [Filters](https://www.wireshark.org/docs/dfref/)
 
 ---
+
+Information that is displayed within square brackets is calculated by wireshark; it is not information that can be obtained from the packet.
+
+---

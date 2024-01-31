@@ -49,7 +49,7 @@ xsstrike -u http://<url>/param=mins
 > Called reflected because an input field of the [[HTTP]] request sent gets reflected as output in the immediate response of the browser.
 > There are reflected XSS filters built now to counter such attack.
 
-> To make a victim issue a request that an attacker controls, they can place links on a website the attacker controls, or through phishing.
+> To make a victim issue a request that an attacker controls, they can place links on a website the attacker controls, or through [[Phishing]].
 > If an attacker can control a script that is executed in the victim browser, then the attacker can fully compromise that user: 
 * Perform an action that the user can perform.
 * View any information the user can view.

@@ -15,11 +15,10 @@
 
 ### Well Known Ports
 
-> Ports between `0-1023` are called **the first 1024** and are well known ports
-> These are used by the most famous [[Protocol]]s, server processes, and famous daemons.
-> [Famous Ports](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+Ports between `0-1023` are called **the first 1024** and are well known ports. These are used by the most famous [[Protocol]]s, server processes, and famous daemons.
+>[Famous Ports](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
->Some famous ports: 
+Some famous ports:
 
 | Service       | Port          |
 | ------------- | ------------- |
@@ -37,6 +36,6 @@
 | MySQL         | 3306          |
 | MS SQL SERVER | 1433, 1434    |
 | SMB           | 445           |
-| DNS           | 53            | 
+| DNS           | 53            |
 
 ---

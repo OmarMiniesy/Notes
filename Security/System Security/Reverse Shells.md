@@ -29,7 +29,7 @@ chmod +x script.sh
 ```
 
 ---
-### Groovy script to connect to our machine
+##### Groovy script to connect to our machine
 
 ``` groovy
 String host="10.10.14.25";

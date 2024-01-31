@@ -47,6 +47,10 @@ document.getElementById('to-remove').remove();
 
 ##### 2. Stealing the Credentials
 
+Open a listener, etiher using [[netcat]], or a PHP server.
 
+```bash
+sudo PHP -s 0.0.0.0:80
+```
 
 ---
