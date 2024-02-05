@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "d6e8ba77001031fa",
+        "id": "65ff3cb7963fcab9",
         "type": "tabs",
         "children": [
           {
-            "id": "88c3425639802683",
+            "id": "742e9a128b7820d0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/System Security/Reverse Shells.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "e37da04957b89a7a",
+            "id": "67c084ad552a7dc7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/Wireshark.md",
+                "file": "Web Applications/Web Encoding.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +60,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "netstat",
+                "query": "tail ",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 263.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/System Security/Reverse Shells.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/System Security/Reverse Shells.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/System Security/Reverse Shells.md"
+                "file": "Security/Web Application Security/Command Injection.md"
               }
             }
           },
@@ -187,34 +188,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "88c3425639802683",
+  "active": "742e9a128b7820d0",
   "lastOpenFiles": [
+    "Web Applications/Web Encoding.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Web Application Security/CORS.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/Clickjacking.md",
+    "Security/Web Application Security/Access Control.md",
+    "Docker/Dockerfile.md",
+    "Docker/Image.md",
     "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Tools/Wireshark.md",
     "Security/Network Security/SYN Flooding Attack.md",
+    "Security/Tools/Wireshark.md",
+    "Docker/Volumes.md",
+    "Docker/Container.md",
+    "Docker/Docker Compose.md",
+    "Docker/Docker.md",
+    "Security/Tools/mysql.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/System Security/Reverse Shells.md",
     "Networking/Transport Layer.md",
     "Networking/Protocol.md",
     "AWS Cloud/CloudTrail.md",
     "Networking/Port.md",
-    "Security/Web Application Security/Phishing.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Networking/ICMP.md",
-    "Security/Network Security/Zone Transfers.md",
-    "Security/Network Security/ICMP Redirect Attack.md",
-    "Security/Network Security/Arp Poisoning.md",
-    "Networking/Network Layer.md",
-    "Security/Network Security/Footprinting and Scanning.md",
-    "Networking/Routing.md",
-    "Networking/IP.md",
-    "Networking/Data Link Layer.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Tools/SQLMap.md",
-    "Security/Web Application Security/CSRF.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Tools/mysql.md",
-    "Security/Wireless Network Security/Security Standards.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",

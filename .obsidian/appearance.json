@@ -1,9 +1,9 @@
 {
   "accentColor": "",
-  "baseFontSize": 18,
+  "baseFontSize": 15,
   "theme": "obsidian",
   "interfaceFontFamily": "",
   "translucency": true,
   "nativeMenus": false,
-  "cssTheme": ""
+  "cssTheme": "Obsidianite"
 }
