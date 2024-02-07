@@ -1,15 +1,16 @@
 
 ### General Notes
 
-> Serves as the communication channel for processes in the Application Layer.
-> Transmission Control [[Protocol]] (TCP) and User Datagram [[Protocol]] (UDP).
+Serves as the communication channel for processes in the Application Layer, and it has two major protocols:
+* Transmission Control [[Protocol]] (TCP)
+* User Datagram [[Protocol]] (UDP)
 
 > The transport layer uses [[Port]]s to identify the processes running on the machines that use this communication channel to send and recieve data.
 
 ---
 ## TCP
 
-> Famously used in TCP/[[IP]], used by the internet.
+> Famously used in TCP/[[IP]] by the internet.
 > Used by email clients, web browsers, and FTP clients
 #### Properties
 
