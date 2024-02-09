@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "3a732b94dbf46367",
+        "id": "09d24a3211e9a9e8",
         "type": "tabs",
         "children": [
           {
-            "id": "f556e983e4afea3d",
+            "id": "b84c4ba5d347bd7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Kubernetes/Kubernetes.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b861ccb2e2bc5e96",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Kubernetes Components.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4ce414584cce0d26",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/Kubernetes Configuration.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -93,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Kubernetes/Kubernetes Configuration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Kubernetes/Kubernetes Configuration.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md"
+                "file": "Kubernetes/Kubernetes Configuration.md"
               }
             }
           },
@@ -175,10 +200,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "f556e983e4afea3d",
+  "active": "4ce414584cce0d26",
   "lastOpenFiles": [
-    "Security/Web Application Security/Command Injection.md",
+    "Wireless Networks/Device Types.md",
+    "Kubernetes/Kubernetes Configuration.md",
+    "Kubernetes/Kubernetes Components.md",
     "Networking/Transport Layer.md",
+    "Security/Network Security/TCP Session Hijacking.md",
+    "Kubernetes/Kubernetes.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/File Upload.md",
+    "Kubernetes",
     "Security/Network Security/Mitnick Attack.md",
     "Security/Web Application Security/Access Control.md",
     "JavaScript/ReactJs/ReactJs.md",
@@ -193,16 +225,10 @@
     "Wireless Networks/WiFi Connection.md",
     "Wireless Networks/Service Sets.md",
     "Wireless Networks/Identifiers.md",
-    "Wireless Networks/Device Types.md",
     "JavaScript/Angular/Angular.md",
     "GitHub/Pushing Changes.md",
     "GitHub/gitignore.md",
     "GitHub/Git Commands.md",
-    "Web Applications/Web Encoding.md",
-    "Docker/Volumes.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/WebApplication Fingerprinting.md",
-    "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",
@@ -213,7 +239,6 @@
     "Security/Tools",
     "Security",
     "Security/System Security",
-    "Security/Network Security",
-    "Databases"
+    "Security/Network Security"
   ]
 }

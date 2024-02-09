@@ -69,18 +69,25 @@
         "a": 1,
         "rgb": 191218
       }
+    },
+    {
+      "query": "path:Kubernetes  ",
+      "color": {
+        "a": 1,
+        "rgb": 9166930
+      }
     }
   ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": -0.7,
   "nodeSizeMultiplier": 0.960810810810811,
-  "lineSizeMultiplier": 0.431081081081081,
+  "lineSizeMultiplier": 0.738020833333333,
   "collapse-forces": false,
   "centerStrength": 0.312889812889813,
   "repelStrength": 8.33679833679834,
   "linkStrength": 0.824324324324324,
   "linkDistance": 68,
-  "scale": 0.6705655182469444,
+  "scale": 0.24333975686073814,
   "close": true
 }
