@@ -1,15 +1,16 @@
 
 ### General Notes
 
-> When web servers allow users to upload files without validations.
-> Opens the door for remote code execution (RCE) vulnerabilities and [[Reverse Shells]].
-> The attack is basically uploading a file, then using [[HTTP]] follow-up requests to trigger it.
+When web servers allow users to upload files without validations, this opens the door for remote code execution (RCE) vulnerabilities and [[Reverse Shells]].
 
 > Severity depends on the amount of validation enforced.
-> If file type isn't validated, then php shells can be uploaded.
-> If name isn't validated, then important files can be replaced.
-> If [[Directory Traversal]] is a vulnerability of that server, then attackers can upload files to any place.
-> If file size isn't validated, DDOS attacks can take place by filling the disk space.
+* If file type isn't validated, then php shells can be uploaded.
+* If name isn't validated, then important files can be replaced.
+* If [[Directory Traversal]] is a vulnerability of that server, then attackers can upload files to any place.
+* If file size isn't validated, DDOS attacks can take place by filling the disk space.
+
+
+> The attack is basically uploading a file, then using [[HTTP]] follow-up requests to trigger it
 
 ---
 

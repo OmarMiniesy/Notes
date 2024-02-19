@@ -4,47 +4,46 @@
     "type": "split",
     "children": [
       {
-        "id": "09d24a3211e9a9e8",
+        "id": "34627daaa75dcc8e",
         "type": "tabs",
         "children": [
           {
-            "id": "b84c4ba5d347bd7b",
+            "id": "ada0b32e67242892",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Kubernetes.md",
+                "file": "Security/Cryptography/Encryption.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "b861ccb2e2bc5e96",
+            "id": "03cd345d33a08ba2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Kubernetes Components.md",
+                "file": "Security/Cryptography/Cryptanalysis.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4ce414584cce0d26",
+            "id": "ff08de7ab8601a71",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Kubernetes Configuration.md",
+                "file": "Security/Cryptography/Substitutional Ciphers.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -73,7 +72,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tail ",
+                "query": "encryption",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,7 +101,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 225.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -118,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Kubernetes Configuration.md",
+                "file": "Security/Cryptography/Encryption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kubernetes/Kubernetes Configuration.md",
+                "file": "Security/Cryptography/Encryption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Kubernetes Configuration.md"
+                "file": "Security/Cryptography/Encryption.md"
               }
             }
           },
@@ -200,35 +199,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ce414584cce0d26",
+  "active": "ada0b32e67242892",
   "lastOpenFiles": [
-    "Wireless Networks/Device Types.md",
+    "Security/Cryptography/Cryptanalysis.md",
+    "Security/Cryptography/Substitutional Ciphers.md",
+    "Security/Cryptography/Encryption.md",
+    "Security/Wireless Network Security/Security Standards.md",
+    "Security/Cryptography",
+    "Security/Network Security/Zone Transfers.md",
+    "Security/Tools/John the Ripper.md",
+    "Security/Web Application Security/File Upload.md",
+    "Networking/Address Resolution Protocol (ARP).md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Data Link Layer.md",
+    "JavaScript/ReactJs/State.md",
+    "JavaScript/ReactJs/Styling.md",
+    "JavaScript/ReactJs/Routing.md",
+    "JavaScript/ReactJs/ReactJs.md",
+    "JavaScript/ReactJs/Pass Data Dynamically.md",
+    "JavaScript/ReactJs/Events.md",
+    "JavaScript/ReactJs/Components.md",
     "Kubernetes/Kubernetes Configuration.md",
+    "Wireless Networks/Device Types.md",
     "Kubernetes/Kubernetes Components.md",
     "Networking/Transport Layer.md",
     "Security/Network Security/TCP Session Hijacking.md",
     "Kubernetes/Kubernetes.md",
     "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/File Upload.md",
     "Kubernetes",
     "Security/Network Security/Mitnick Attack.md",
-    "Security/Web Application Security/Access Control.md",
-    "JavaScript/ReactJs/ReactJs.md",
-    "2024-02-06.md",
-    "Markdown/Markdown Syntax.md",
-    "Docker/dockerignore.md",
-    "Docker/Docker.md",
-    "AWS Cloud/Elastic Beanstalk.md",
-    "AWS Cloud/Cloud Watch.md",
-    "AWS Cloud/Cloud Formation.md",
-    "Docker/Dockerfile.md",
-    "Wireless Networks/WiFi Connection.md",
-    "Wireless Networks/Service Sets.md",
-    "Wireless Networks/Identifiers.md",
-    "JavaScript/Angular/Angular.md",
-    "GitHub/Pushing Changes.md",
-    "GitHub/gitignore.md",
-    "GitHub/Git Commands.md",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
     "Wireless Networks",
@@ -238,7 +238,6 @@
     "PHP",
     "Security/Tools",
     "Security",
-    "Security/System Security",
-    "Security/Network Security"
+    "Security/System Security"
   ]
 }

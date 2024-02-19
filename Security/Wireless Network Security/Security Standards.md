@@ -6,7 +6,7 @@
 ### WPA2
 
 > Also known as RSN, Robust Securty Network.
-> Uses AES encryption and CCMP.
+> Uses AES [[Encryption]] and CCMP.
 
 Authentication in WPA2:
 * PSK, or personal mode: One shared password or shared key.
