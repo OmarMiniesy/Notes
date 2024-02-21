@@ -9,6 +9,8 @@ This is a technique through which cryptographic algorithms used for [[Encryption
 * **Confusion**: Obscure the relationship between the key and the ciphertext. Done through *substitution* operations.
 * **Diffusion**: Dissipate the statistical structure of the plaintext into the ciphertext, making it harder to perform statistical attacks. Done through *permutation* operations.
 
+> An [[Encryption]] scheme is secure if the attacker cannot learn anything about the plaintext if not previously known.
+
 ---
 ### Objectives
 
@@ -19,6 +21,35 @@ This is a technique through which cryptographic algorithms used for [[Encryption
 
 ---
 
+### Indistinguishability
+
+It pertains to the inability of an attacker to distinguish between ciphertexts that encrypt different messages, even if the attacker is allowed to choose the messages to be encrypted.
+
+> There are two types of indistinguishability.
+
+##### 1. IND-CPA
+
+This stands for *Indistinguishability under Chosen Plaintext Attack*. 
+
+* A security standard for encryption schemes, a basic requirement for encryption schemes.
+* Security against attackers that can choose plaintexts to encrypt and obtain their ciphertexts.
+* The attacker cannot gain any useful information from ciphertexts even though the plaintexts are known.
+
+Achieved using [[Encryption#Non-Deterministic Encryption]], where randomness is introduced in the encryption process.
+##### 2. IND-CCA
+
+This stands for *indistinguishability under Chosen Ciphertext Attack*.
+
+* A security standard that is stronger than **IND-CPA**.
+* Security against attackers that can choose ciphertexts and obtain their corresponding decrypted plaintext.
+* The attacker cannot gain useful information from decrypted plaintexts even though the ciphertext is known.
+
+Achieved using additional cryptographic mechanisms such as message authentication codes or digital signatures.
+
+1. **IND-CCA1**: The attacker must make all decryption queries before receiving the challenge ciphertext. After the challenge is received, the attacker cannot request the decryption of any more ciphertexts
+2. **IND-CCA2**: Allowing the attacker to continue making decryption queries even after receiving the challenge ciphertext. The attacker can adapt their strategy based on the information gained from previous decryption queries.
+
+---
 ### Attacks
 
 These are the types of cryptanalysis attacks that can be executed based on amount and type of information available to the attacker.

@@ -1,8 +1,8 @@
 
 ### General Notes
 
-> Computers over networks talk via protocols
-> Computers talk to exchange information in the form of packets.
+Set of standard rules that are followed.
+* Computers over networks talk via protocols
 
 ---
 
@@ -23,7 +23,7 @@
 > These layers are defined by models, a famous one is the ISO/OSI model
 
 1. Application
-2. [[Transport Layer]]: This is where a cummincation channel is held between different hosts.
+2. [[Transport Layer]]: This is where a communication channel is held between different hosts.
 3. [[Network Layer]]: This is where [[IP]] addresses are used to identify hosts
 4. [[Data Link Layer]]: This is where packet forwarding happens to identify the unique network card via the MAC Address
 5. Physical

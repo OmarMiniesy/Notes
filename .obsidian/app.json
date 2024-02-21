@@ -3,7 +3,7 @@
   "showLineNumber": false,
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "AWS Cloud/Pictures",
-  "spellcheck": false,
+  "spellcheck": true,
   "tabSize": 5,
   "pdfExportSettings": {
     "includeName": true,

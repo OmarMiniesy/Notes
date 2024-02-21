@@ -1,19 +1,22 @@
 
 ### General Notes
 
-> Lowest layer of the [[IP]] stack.
-> This is where packet forwarding happens, also called **frames**.
+ Lowest layer of the [[IP]] stack. 
+ * This is where forwarding happens. 
+ * The data unit here is called **frames**.
+ * Hubs and Switches are the devices in the local network that forward frames.
+
 > Link Layer network address is called the **MAC Address**.
-> Hubs and Switches are the devices in the local network that forward frames.
 
 ---
 
 ### MAC Address
 
-> Also known as the Media Access Control Address.
-> They are unique for each network card. A computer may have multiple network cards.
-> They are 6 bytes long, each byte represented in hexadecimal form. Each byte has 8 bits.
-> The bytes are separated by `:`
+Also known as the Media Access Control Address.
+* They are unique for each network card. A computer may have multiple network cards.
+* They are 6 bytes long, each byte represented in hexadecimal form. Each byte has 8 bits.
+* The first 24 bits are the same for each organization device (CISCO routers), and the second 24 bits are unique per device (different for every CISCO router).
+* The bytes are separated by `:`
 
 > To view the MACs of the network cards: 
 * `ipconfig /all` Windows
