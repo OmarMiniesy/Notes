@@ -22,16 +22,16 @@ sudo sysctl net.ipv4.conf.all.accepts_redirects=1
 
 Now, we can send these ICMP redirect messages.
 
-> The [[ICMP]] redirect message is sent by routers, and is triggered whenever a router recieves a packet from a host, but with a condition: 
+> The [[ICMP]] redirect message is sent by routers, and is triggered whenever a router receives a packet from a host, but with a condition: 
 * The router knows a better route to reach the intended destination of that packet.
 
 Therefore, we can abuse this, by sending *as attackers* to all machines in a network that we are the route that has the best cost. 
-* The other machines recieve this redirect message, and update their routing tables.
+* The other machines receive this redirect message, and update their routing tables.
 
 > We need, as attackers, to impersonate a router for this attack to succeed. Hence, we set the source [[IP]] address to be that of a router's on the network. 
 
 Since this is based on routing, the entries in the cache update frequently, so the attacker must constantly send these redirect messages.
 
-> After recieving the packets, we then need to forward them to their actual destination so as not to raise alarm.
+> After receiving the packets, we then need to forward them to their actual destination so as not to raise alarm.
 
 ---

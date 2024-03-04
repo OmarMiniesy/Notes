@@ -11,7 +11,7 @@ For 5 GHz radio frequency, there are 14 channels. Also known as `802.11ac`.
 
 Interference can decrease by decreasing overlapping and decreasing the bandwidth of the channel.
 The larger the frequency, the higher the probability of noise.
-Smaller frequencies are used in crowded areas and to garauntee correct transmission over large distance.
+Smaller frequencies are used in crowded areas and to guarantee correct transmission over large distance.
 
 Using WiFi analyzer tools can be used to set up [[Device Types#Access Point (AP)]] channels so as to check which channels are not congested to be used.
 

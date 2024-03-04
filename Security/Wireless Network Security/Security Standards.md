@@ -1,11 +1,12 @@
 ### General Notes
 
-> There is backwards compatibility of security standards on [[Device Types]].
+There is backwards compatibility of security standards on [[Device Types]].
 
 ---
 ### WPA2
 
-> Also known as RSN, Robust Securty Network.
+Also known as RSN, Robust Security Network.
+
 > Uses AES [[Encryption]] and CCMP.
 
 Authentication in WPA2:
