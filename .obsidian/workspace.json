@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tools",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 312.5,
-    "collapsed": true
+    "width": 375.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -178,8 +177,13 @@
   },
   "active": "e2e7182ef4935517",
   "lastOpenFiles": [
-    "Security/System Security/Reverse Shells.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Web Application Security/File Upload.md",
+    "Docker/Docker.md",
+    "Docker/Docker Compose.md",
+    "GitHub/Git Commands.md",
+    "Security/Tools/Metasploit.md",
+    "Security/System Security/Reverse Shells.md",
     "Security/Network Security/OSINT.md",
     "Security/Wireless Network Security/Security Standards.md",
     "Security/Cryptography/Symmetric Ciphers.md",
@@ -200,11 +204,6 @@
     "Networking/Protocol.md",
     "[[Encryption.md",
     "Security/Cryptography",
-    "Security/Network Security/Zone Transfers.md",
-    "Security/Tools/John the Ripper.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Networking/Domain Name System (DNS).md",
-    "JavaScript/ReactJs/State.md",
     "Kubernetes",
     "JavaScript/React Native",
     "Security/Wireless Network Security",
