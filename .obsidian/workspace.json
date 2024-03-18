@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "610c82699a45a9ca",
+        "id": "b6067e62129c0bd9",
         "type": "tabs",
         "children": [
           {
-            "id": "e2e7182ef4935517",
+            "id": "5cf3e37aed6e05f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Cryptography/Message Authentication.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "message authentication",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5
+    "width": 239.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Cryptography/Message Authentication.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md",
+                "file": "Security/Cryptography/Message Authentication.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Upload.md"
+                "file": "Security/Cryptography/Message Authentication.md"
               }
             }
           },
@@ -172,13 +172,31 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e2e7182ef4935517",
+  "active": "5cf3e37aed6e05f9",
   "lastOpenFiles": [
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Cryptography/Symmetric Ciphers.md",
+    "Security/Cryptography/Transposition Ciphers.md",
+    "Security/Cryptography/Message Authentication.md",
+    "Security/Cryptography/Encryption.md",
+    "Security/Cryptography/Digital Signatures.md",
+    "Security/Cryptography/Digital Envelopes.md",
+    "Security/Cryptography/Diffie-Hellman.md",
+    "Security/Cryptography/Substitutional Ciphers.md",
+    "Security/Cryptography/RSA.md",
+    "Security/Cryptography/Cryptanalysis.md",
+    "Security/Cryptography/Certificates.md",
+    "Security/Cryptography/Drawing 2024-03-16 11.05.03.excalidraw.md",
+    "Excalidraw",
+    "Security/System Security/Dealing With Files of Different Types.md",
+    "Docker/Dockerfile.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Network Security/TCP Session Hijacking.md",
     "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Docker/Docker.md",
     "Docker/Docker Compose.md",
     "GitHub/Git Commands.md",
@@ -186,23 +204,7 @@
     "Security/System Security/Reverse Shells.md",
     "Security/Network Security/OSINT.md",
     "Security/Wireless Network Security/Security Standards.md",
-    "Security/Cryptography/Symmetric Ciphers.md",
     "Wireless Networks/WiFi Connection.md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Cryptography/Cryptanalysis.md",
-    "Wireless Networks/Service Sets.md",
-    "Wireless Networks/Wireless Channels.md",
-    "Security/Cryptography/Substitutional Ciphers.md",
-    "Security/Network Security/ICMP Redirect Attack.md",
-    "Networking/ICMP.md",
-    "Security/Network Security/Arp Poisoning.md",
-    "Networking/Address Resolution Protocol (ARP).md",
-    "Networking/Data Link Layer.md",
-    "Security/Cryptography/Digital Envelopes.md",
-    "Security/Cryptography/Encryption.md",
-    "Security/Cryptography/Certificates.md",
-    "Networking/Protocol.md",
-    "[[Encryption.md",
     "Security/Cryptography",
     "Kubernetes",
     "JavaScript/React Native",
@@ -213,7 +215,6 @@
     "Untitled.canvas",
     "PHP",
     "Security/Tools",
-    "Security",
-    "Security/System Security"
+    "Security"
   ]
 }

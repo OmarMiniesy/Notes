@@ -1,10 +1,11 @@
 
 ### General Notes
 
-Symmetric ciphers are a type of cryptography technique that operates using one shared secret key.
+Symmetric ciphers are a type of cryptographic technique that operates using one shared secret key.
 
 There are two main types of symmetric ciphers; either **block** or **stream**.
 * **Block ciphers**: These encrypt data in fixed-size blocks, typically 64 or 128 bits at a time.
+	* These ciphers are *deterministic*. The same plaintext and key will always produce the same ciphertext.
 * **Stream ciphers**: These encrypt plaintext messages one bit or one byte at a time.
 
 > There are various modes that utilize both of these types.
@@ -16,7 +17,7 @@ There are two main types of symmetric ciphers; either **block** or **stream**.
 The plaintext is broken down into independent blocks, and each block is encrypted to its respective ciphertext block.
 * This uses the **Block ciphers** technique.
 
-> Useful for secure transmission of single values.
+> Useful for secure transmission of single values, or few blocks of data.
 
 ##### Decryption
 
@@ -72,7 +73,7 @@ The process is reversed, where each block of ciphertext is decrypted and the res
 
 This is another **stream cipher** technique but it functions similar to that of **block cipher**. It encrypts data in segments smaller than the block size, which is useful for data streams of size not divisible by the block size.
 * It takes an **Initialization Vector (IV)** for the first block and encrypts that, it should be unique and unpredictable. 
-* The encryption of the block or the IV in the first case is then `xor`ed with the plaintext that is available (not fixed size). This produces the cyphertext.
+* The encryption of the block or the IV in the first case is then `xor`ed with the plaintext that is available (not fixed size). This produces the ciphertext.
 
 > Useful for stream data encryption.
 ##### Decryption
@@ -86,7 +87,7 @@ Mirrors the encryption technique. The ciphertext from previous block or IV is en
 
 ##### Limitations
 
-* **Error propagation**: errors propagate throughout the process.
+* **Error propagation**: errors propagate throughout the process for a few blocks, not until the end.
 * **Stalling**: must stall after encrypting the number of bits that have arrived and wait for the next ones to arrive.
 
 > It is **IND-CPA** secure for a random **IV**.

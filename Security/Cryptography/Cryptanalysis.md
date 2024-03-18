@@ -5,9 +5,12 @@ This is a technique through which cryptographic algorithms used for [[Encryption
 
 > Another technique is through brute force, but this is very computationally expensive and takes a long time.
 
-**Confusion** and **Diffusion** are used to counter cryptanalysis attacks:
-* **Confusion**: Obscure the relationship between the key and the ciphertext. Done through *substitution* operations.
-* **Diffusion**: Dissipate the statistical structure of the plaintext into the ciphertext, making it harder to perform statistical attacks. Done through *permutation* operations.
+**Confusion** and **Diffusion** are used to counter cryptanalysis attacks using *(S-P)* networks:
+* **Confusion**: Obscure the relationship between the key and the ciphertext. Done through *substitution (S)* operations.
+* **Diffusion**: Dissipate the structure of the plaintext into the ciphertext, making it harder to perform statistical attacks. Done through *permutation (P)* operations.
+
+This is done to completely obscure the statistical properties of the original message.
+* The **Feistel Cipher** uses S-P networks to produce ciphertext.
 
 > An [[Encryption]] scheme is secure if the attacker cannot learn anything about the plaintext if not previously known.
 
@@ -17,7 +20,7 @@ This is a technique through which cryptographic algorithms used for [[Encryption
 - **Decrypting Messages**: The primary objective is to decrypt messages without having access to the key that was used for encryption.
 - **Finding the Key**: In some cases, cryptanalysts aim to recover the secret key itself. This allows them to decrypt all messages that were encrypted with that key.
 - **Identifying Weaknesses**: By finding vulnerabilities in cryptographic algorithms or implementations, cryptanalysts can help in strengthening those systems against attacks.
-- **Forgery**: Creating a message that appears to be encrypted by a specific key or mimicking the signature in digital signature schemes.
+- **Forgery**: Creating a message that appears to be encrypted by a specific key or mimicking the signature in [[Digital Signatures]] schemes.
 
 ---
 
@@ -44,7 +47,7 @@ This stands for *indistinguishability under Chosen Ciphertext Attack*.
 * Security against attackers that can choose ciphertexts and obtain their corresponding decrypted plaintext.
 * The attacker cannot gain useful information from decrypted plaintexts even though the ciphertext is known.
 
-Achieved using additional cryptographic mechanisms such as message authentication codes or digital signatures.
+Achieved using additional cryptographic mechanisms such as [[Message Authentication]] codes or digital signatures.
 
 1. **IND-CCA1**: The attacker must make all decryption queries before receiving the challenge ciphertext. After the challenge is received, the attacker cannot request the decryption of any more ciphertexts
 2. **IND-CCA2**: Allowing the attacker to continue making decryption queries even after receiving the challenge ciphertext. The attacker can adapt their strategy based on the information gained from previous decryption queries.

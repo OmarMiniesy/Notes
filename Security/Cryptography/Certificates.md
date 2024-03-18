@@ -8,7 +8,7 @@ Public key certificates, also known as digital certificates, are electronic docu
 They include the:
 * Public key being certified.
 * Information about the owner that holds private key.
-* The digital signature of a trusted third party entity called Certificate Authority (CA).
+* The [[Digital Signatures]] of a trusted third party entity called Certificate Authority (CA).
 
 ---
 

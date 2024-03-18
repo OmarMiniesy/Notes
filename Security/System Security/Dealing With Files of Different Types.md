@@ -31,7 +31,7 @@ binwalk <picture>
 binwalk -e <picture>
 ```
 
-> We can also check for stegenography, or stroing information inside images using the `steghide` tool.
+> We can also check for steganography, or storing information inside images using the `steghide` tool.
 
 ```shell
 steghide info <picture>

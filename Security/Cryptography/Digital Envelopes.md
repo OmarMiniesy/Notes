@@ -14,7 +14,7 @@ The process of using a digital envelope involves two main steps: encrypting the 
     - The sender generates a random symmetric key (also known as a session key) specifically for this message.
     - The message is encrypted using this symmetric key with a symmetric encryption algorithm (e.g., AES). Symmetric encryption is fast and efficient for encrypting large amounts of data.
 2. **Encrypting the Symmetric Key**:
-    - The sender then encrypts the symmetric key itself with the recipient's public key using an asymmetric encryption algorithm (e.g., RSA).
+    - The sender then encrypts the symmetric key itself with the recipient's public key using an asymmetric encryption algorithm (e.g., [[RSA]]).
     - This step ensures that only the recipient, who possesses the corresponding private key, can decrypt the symmetric key.
 3. **Sending the Digital Envelope**:
     - The sender transmits both the encrypted message (the ciphertext) and the encrypted symmetric key to the recipient.
