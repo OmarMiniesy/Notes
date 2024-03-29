@@ -38,7 +38,7 @@ Types of injections:
 
 #### Detection
 
-Injecting these characters in places that accept user input and observing unexpected behaviour is a sign that this injection point might be vulnerable. 
+Injecting these characters in places that accept user input and observing unexpected behavior is a sign that this injection point might be vulnerable. 
 
 > Check whether the response is coming from the backend or the fronted. Do this using the networks tab.
 * If no request was sent after trying out a malicious payload, then this is front end validation, which can be easily bypassed using a proxy like [[Burp Suite]].

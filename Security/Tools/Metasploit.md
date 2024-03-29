@@ -1,8 +1,8 @@
 
 ### General Notes
 
-> Framework used for penetration testing and exploit development.
-> This is done in the exploitation phase of the penetration test.
+Framework used for penetration testing and exploit development.
+- This is done in the exploitation phase of the penetration test.
 
 > Using `msfconsole`:
 1. Identify the vulnerable service.
@@ -11,8 +11,8 @@
 4. Load and configure the payload.
 5. Running the exploit and getting access to vulnerable machine.
 
-> Mostly used to gain shells on target machines. Similar to [[Backdoors]].
-> Use the [[Meterpreter]] payload to do that.
+Mostly used to gain shells on target machines. Similar to [[Backdoors]].
+- Use the [[Meterpreter]] payload to do that.
 
 >Update metasploit frequently using `msfupdate`.
 
@@ -22,23 +22,23 @@
 
 ### Exploits
 
-> Search for an exploit
+- Search for an exploit
 ```
 search <search-string>
 ```
 
-> Use an exploit
+- Use an exploit
 ```
 use <path-to-exploit>
 ```
 
-> Viewing an exploits info and its options after using it.
+- Viewing an exploits info and its options after using it.
 ```
 info
 show options
 ```
 
->Configuring an exploit after using it.
+- Configuring an exploit after using it.
 ```
 set <option-name> <option-value>
 ```
@@ -46,10 +46,10 @@ set <option-name> <option-value>
 
 ### Payloads
 
-> After choosing and configuring the exploit, we can set the payload.
-> `show payloads` shows all the available payloads for that set exploit.
+After choosing and configuring the exploit, we can set the payload.
+- `show payloads` shows all the available payloads for that set exploit.
 
->To set a payload
+- To set a payload
 ```
 set payload <path-to-payload>
 ```
@@ -60,7 +60,7 @@ set payload <path-to-payload>
 
 ## Running an Exploit
 
-> Using the command `exploit` or `run`.
+- Using the command `exploit` or `run`.
 
 ---
 
@@ -71,12 +71,12 @@ set payload <path-to-payload>
 ```shell
 searchsploit <target-software>
 ```
-> This is used to look within the database for any vulnerabilites for the target software.
+- This is used to look within the database for any vulnerabilities for the target software.
 
 ```
 searchploit <code-num> -p
 ```
-> To try one, type the name of the file as the code-num and then `-p` to view more details about it and then use it.
+- To try one, type the name of the file as the code-num and then `-p` to view more details about it and then use it.
 
 ---
 

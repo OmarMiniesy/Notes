@@ -1,14 +1,14 @@
 
 ### General Notes
 
-> Widening the attack surface by discovering the websites owned by the same organization.
-> Websites share the same top-level domain name.
-> Through subdomain enumeration, we can identitfy additional resources of a target.
+Widening the attack surface by discovering the websites owned by the same organization.
+- Websites share the same top-level domain name.
+- Through subdomain enumeration, we can identify additional resources of a target.
 
 > These resources may contain outdated, buggy software, sensitive information, or admin areas that are not secure.
 
-> These are only discoverable if they are made public, that is they are found on public [[Domain Name System (DNS)]] records.
-> To discover non-public subdomains, we do VHost ([[Virtual Hosting]]) enumeration. 
+These are only discoverable if they are made public, that is they are found on public [[Domain Name System (DNS)]] records.
+- To discover non-public subdomains, we do VHost ([[Virtual Hosting]]) enumeration. 
 
 ---
 ### Public Subdomains - [Cheat Sheet](https://pentester.land/blog/subdomains-enumeration-cheatsheet/)
@@ -18,8 +18,9 @@
 ```
 subfinder -d <link> -cs -o subdomainswithsources
 ```
-> Gets the subdomains and their sources as well (`cs`). The `-o` to save in output file.
-> Can then get only the subdomains with sources using `grep`.
+- Gets the subdomains and their sources as well (`cs`). The `-o` to save in output file.
+
+- Can then get only the subdomains with sources using `grep`.
 ```
 cat subdomainswithsources | grep -d "," -f 1 > subdomains
 ```
@@ -42,8 +43,8 @@ amass enum -d <link> -options
  
 ###### 5. Using [crt.sh](https://crt.sh/)
 
-> Get information about domains and lists domains for organizations.
-> Check for dev and admin domains.
+Get information about domains and lists domains for organizations.
+- Check for dev and admin domains.
 
 To save the subdomains using `crt.sh`:
 ``` bash
@@ -55,7 +56,7 @@ curl -s https://crt.sh/?q=<DOMAIN>&output=json | jq -r '.[]' "\(.name_value)\n\(
 ```
 ffuf -u https://FUZZ.yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<wordlist> -p 1
 ```
-> `-p` for delay between requests.
+- `-p` for delay between requests.
 
 ---
 
@@ -66,11 +67,12 @@ ffuf -u https://FUZZ.yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<
 Since VHosts are differentiated according to the value of their `host`, we can fuzz this [[HTTP]] header and see which responses have proper sizes that indicate the presence of an existing page.
 
 > The IP address must be added to the `/etc/hosts` file before running.
+
 ```bash
 ffuf -u https://yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<wordlist> -H 'Host: FUZZ.yahoo.com' -fs <size>
 ```
-> We fuzz the `host` header using the `-H` flag.
-> All responses will be `200 OK` since we are only changing the headers, but when a response returns and actual existing page, the size should be different.
-> Filter on the repeated size to see the pages that are different using `-fs`.
+-  We fuzz the `host` header using the `-H` flag.
+- All responses will be `200 OK` since we are only changing the headers, but when a response returns and actual existing page, the size should be different.
+- Filter on the repeated size to see the pages that are different using `-fs`.
 
 ---

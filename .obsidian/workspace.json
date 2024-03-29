@@ -4,34 +4,83 @@
     "type": "split",
     "children": [
       {
-        "id": "4d056e3a2f18e8db",
+        "id": "b37cfa14c3b38e42",
         "type": "tabs",
         "children": [
           {
-            "id": "7b180328c43756ea",
+            "id": "9bd423df15a2efd7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md",
+                "file": "Security/Web Application Security/Directory and File Enumeration.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "0e68e30e0499b384",
+            "id": "e362fc6d02dbee72",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/Address Resolution Protocol (ARP).md",
+                "file": "Security/Tools/Metasploit.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "01b81f7f2f4f3bcd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/John the Ripper.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0fb8c03c37179884",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Network Security/OSINT.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4686fcd2b176e914",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/nmap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6bb0f4291cf23ac2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Subdomain Enumeration.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -60,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "message authentication",
+                "query": "`-pN",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -105,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md",
+                "file": "Security/Tools/John the Ripper.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md",
+                "file": "Security/Tools/John the Ripper.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +194,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/Arp Poisoning.md"
+                "file": "Security/Tools/John the Ripper.md"
               }
             }
           },
@@ -188,13 +237,25 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7b180328c43756ea",
+  "active": "01b81f7f2f4f3bcd",
   "lastOpenFiles": [
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Security/Tools/Metasploit.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
+    "Security/Tools/nmap.md",
+    "Security/Network Security/OSINT.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Excalidraw/Drawing 2024-03-29 18.02.23.excalidraw.md",
+    "Excalidraw",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/CSRF.md",
+    "Networking/Address Resolution Protocol (ARP).md",
+    "Security/Network Security/Arp Poisoning.md",
     "Kubernetes/Kubernetes Components.md",
     "Kubernetes/Kubernetes Configuration.md",
     "Kubernetes/Kubernetes.md",
-    "Security/Network Security/Arp Poisoning.md",
-    "Networking/Address Resolution Protocol (ARP).md",
     "Security/Cryptography/Transposition Ciphers.md",
     "Docker/Image.md",
     "Docker/Docker.md",
@@ -205,18 +266,6 @@
     "Security/Cryptography/Substitutional Ciphers.md",
     "Security/Cryptography/Encryption.md",
     "Security/Cryptography/Symmetric Ciphers.md",
-    "Security/Cryptography/Message Authentication.md",
-    "Security/Cryptography/Digital Signatures.md",
-    "Security/Cryptography/Digital Envelopes.md",
-    "Security/Cryptography/Diffie-Hellman.md",
-    "Security/Cryptography/RSA.md",
-    "Security/Cryptography/Cryptanalysis.md",
-    "Security/Cryptography/Certificates.md",
-    "Security/Cryptography/Drawing 2024-03-16 11.05.03.excalidraw.md",
-    "Excalidraw",
-    "Security/System Security/Dealing With Files of Different Types.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Network Security/TCP Session Hijacking.md",
     "Security/Cryptography",
     "Kubernetes",
     "JavaScript/React Native",
