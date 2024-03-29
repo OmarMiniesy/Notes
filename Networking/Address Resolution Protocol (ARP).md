@@ -2,19 +2,18 @@
 ### General Notes
 
 [[Protocol]] used to determine the [[Data Link Layer]] MAC address, given the [[IP]] address of the host.
-
-> It was initially used to map the address of one protocol to the address of another protocol.
+* It was initially used to map the address of one protocol to the address of another protocol.
 
 >ARP is **stateless**. 
 
-This means replies dont have to be synced to a request sent before it. Any reply that is recieved by a machine updates the ARP cache of that machine, even if it didnt send a request for that [[IP]] address.
+This means replies don't have to be synced to a request sent before it. Any reply that is received by a machine updates the ARP cache of that machine, even if it didn't send a request for that [[IP]] address.
 
 ---
 ### [[Protocol]] Details
 
 There are two main messages being, the ARP reply and the ARP request.
 
-> The host initiating the connection sends a request, and the host that should recieve the message sends a reply back to the initiator.
+> The host initiating the connection sends a request, and the host that should receive the message sends a reply back to the initiator.
 ###### ARP Request From Sender
 Sent using broadcast to the entire network with these header fields:
 * SRC IP: Sender IP.
@@ -22,7 +21,7 @@ Sent using broadcast to the entire network with these header fields:
 * DST IP: RECIPIENT IP.
 * DST MAC: `00:00:00:00:00:00`.
 
-This packet is recieved by everyone on the network. Only the host that communication is intended with replies.
+This packet is received by everyone on the network. Only the host that communication is intended with replies.
 ###### ARP Reply From Recipient
 Sent using unicast to the initiator.
 * SRC IP: Recipient IP.

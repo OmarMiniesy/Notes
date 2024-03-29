@@ -31,6 +31,6 @@ Runnable instances of [[Image]].
 
 > A container is a process which runs our application outlined by the image.
 
-Containers are independant processes, and they are isolated from other process on the computer.
+Containers are independent processes, and they are isolated from other process on the computer.
 
 ---

@@ -36,7 +36,7 @@ Once a message is received, the recipient calculates a MAC for this message usin
 #### Security Features
 These MACs provide **authenticity** since they can only be calculated by the owners of the shared secret key.
 
-> MACs also provide **integrity** in the sense that these MACs cannot be themselves be forged since the key used to create them are only known by the communicating parties, hence, the message cannot be tampered with and go unnoticed. 
+> MACs also provide **integrity** in the sense that these MACs cannot themselves be forged since the keys used to create them are only known by the communicating parties, hence, the message cannot be tampered with and go unnoticed. 
 
 What is missing, is **confidentiality**. This can only be guaranteed if the message and its MAC are encrypted before being sent.
 - The MAC can be computed either after encryption, or before it.
