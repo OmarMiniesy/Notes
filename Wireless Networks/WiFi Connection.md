@@ -1,10 +1,8 @@
-
 ### General Notes
 
 > Also known as the `802.11` connection.
 
 ---
-
 ### Steps
 
 > Communication is basically between an Access Point and a Client. [[Device Types]].
@@ -30,7 +28,6 @@ Here the handshake algorithm takes place between client and access point.
 Client requests to associate with the network of the access point through a series of requests and responses.
 
 ---
-
 ### Authentication Handshake
 
 ##### Keys Generated and Used

@@ -1,7 +1,7 @@
 ### General Notes
 
-> Going from a lower permission account to a higher permission one.
-> Exploiting a vulnerability, design flaw, or configuration oversight in an OS or application to gain access to resources.
+Going from a lower permission account to a higher permission one.
+- Exploiting a vulnerability, design flaw, or configuration oversight in an OS or application to gain access to resources.
 
 > Gives you admin access and privileges to:
 1. Reset passwords.

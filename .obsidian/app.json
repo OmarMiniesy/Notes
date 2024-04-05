@@ -2,7 +2,7 @@
   "promptDelete": false,
   "showLineNumber": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "AWS Cloud/Pictures",
+  "attachmentFolderPath": "/",
   "spellcheck": true,
   "tabSize": 5,
   "pdfExportSettings": {
@@ -12,5 +12,9 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "autoPairMarkdown": true
+  "autoPairMarkdown": true,
+  "strictLineBreaks": true,
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true
 }

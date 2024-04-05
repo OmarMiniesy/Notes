@@ -1,11 +1,11 @@
 
 ### General Notes
 
-> HyperText Transfer Protocol (HTTP).
+> Hypertext Transfer Protocol (HTTP).
 > Application layer [[Protocol]].
 > Client-Server [[Protocol]] to transfer web pages and web application data.
 
-> HTTP connects to a web server such as Apache HTTP Server.
+> HTTP connects to a web server such as [[Apache]] HTTP Server.
 > Client sends requests and server sends back responses.
 > Works on top of the [[Transport Layer]]'s TCP protocol.
 

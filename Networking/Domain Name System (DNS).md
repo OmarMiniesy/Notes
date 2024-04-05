@@ -55,7 +55,6 @@ The information present in the different records found in DNS databases:
 [Resource](https://www.tutorialspoint.com/dns-resource-records).
 
 ---
-
 ### Tools
 
 ###### Nslookup

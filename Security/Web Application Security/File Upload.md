@@ -110,7 +110,7 @@ There are other file extensions that do the same job, and not all of them are bl
 
 ###### Overriding Server Configuration
 
-For Apache servers to execute files they need to be configured first.
+For [[Apache]] servers to execute files they need to be configured first.
 
 - Developers need to add directives to the `/etc/apache2/apache2.conf` file.
 ```
@@ -119,7 +119,7 @@ AddType application/x-httpd-php .php
 ```
 
 Servers allow developers to override default configurations and to create their own rules.
-- For Apache, they load this specific configuration from `.htaccess` file.
+- For [[Apache]], they load this specific configuration from `.htaccess` file.
 - For IIS,  they load this specific configuration from `.web.config` file.
 
 We can upload our own configuration files to allow for malicious uploads to map arbitrary file extensions to executable MIME types if the ones we need are blacklisted.
