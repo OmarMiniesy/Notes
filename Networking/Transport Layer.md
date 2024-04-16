@@ -10,20 +10,20 @@ Serves as the communication channel for processes in the Application Layer, and 
 ---
 ## TCP
 
-> Famously used in TCP/[[IP]] by the internet.
-> Used by email clients, web browsers, and FTP clients
+Famously used in TCP/[[IP]] by the internet.
+- Used by email clients, web browsers, and FTP clients
 #### Properties
 
->TCP garauntees packet delivery since it is connection oriented. 
+TCP guarantees packet delivery since it is connection oriented. 
 * must establish a connection before transferring the data.
 
 This somehow emulates some sort of virtual buffer, with the client buffer on one side, and the server buffer on the other side. Any data that is sent gets sent to these buffers, and then TCP decides when and how to send the data. 
 
-> The TCP buffer is cient specific. So if two different clients send to the server, the server can differentiate between their packets. This buffer is also application specific. So there is a unique buffer for every pair of [[Port]] and [[IP]] combination.
+> The TCP buffer is client specific. So if two different clients send to the server, the server can differentiate between their packets. This buffer is also application specific. So there is a unique buffer for every pair of [[Port]] and [[IP]] combination.
 
 For a single client, since the packets are sent in the buffer, all packets are merged together. There is no boundary implemented by default that says how many bytes are present by default. Applications place such boundary while sending packets to be able to differentiate between the packets.
 
-> TCP maintains order of packets being sent, even though [[Network Layer]] doesn't gaurantee in order delivery.
+> TCP maintains order of packets being sent, even though [[Network Layer]] doesn't guarantee in order delivery.
 * This is done through the sequence numbers, a header field in the packets.
 
 #### Three Way Handshake
@@ -67,8 +67,8 @@ The RST flag and the sequence numbers are used to close connections forcefully.
 
 > Only 1 packet is sent, the RST packet with a sequence number. There is no ACK packet sent in return.
 
-This closes the connection from both directions, which gave rise to the Reset Attack, where an attacker sends a RST packet to one of the clients in a communication channel, impersonating the other client.
-* The client that recieves the RST packet closes the connection.
+This closes the connection from both directions, which gave rise to the Reset Attack, where an attacker sends a RST packet to *one of the clients* in a communication channel, impersonating the other client.
+* The client that receives the RST packet closes the connection.
 * The other client, the one the attacker impersonates by using its [[IP]], is believed to have closed the connection.
 * The SEQ numbers must match correctly at the client recieving the RST packet for it to be used.
 

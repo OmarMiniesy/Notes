@@ -1,10 +1,12 @@
 
 ### General Notes
 
-This attack abuses the existence of the half open connection queue that is created during the [[Transport Layer]] TCP 3 way handshake [[Protocol]].
+This attack abuses the existence of the half open connection queue that is created during the [[Transport Layer]] TCP [[Protocol]] 3 way handshake.
+
+> Check my SEED Labs Solution.
 
 ---
-### Methodology
+### Methodology and Attack
 
 > To ensure this attack works, we first need to make sure that the server does not have SYN cookies enabled, as this is the countermeasure to this attack.
 ```bash
@@ -13,15 +15,22 @@ sudo sysctl -w net.ipv4.tcp_syncookies=0
 
 The main idea is that when a client wants to talk to a server, the 3 way handshake is started. The first packet sent from the client, the SYN packet, is stored into the half open connections queue at the server.
 * This queue is not that long, which creates a bottleneck.
-* This queue is [[Port]] specific.
+* **This queue is [[Port]] specific.**
 
-> The main goal for the attacker is to fill up this queue, preventing new connections from being opened at this port at the server side.
+> The main goal for the attacker is to fill up this queue, preventing new connections from being opened at this port at the server side for a specific [[Port]].
 
 However, if the attacker simply sends packets from his [[IP]], then the [[Firewall]]s can pick this up and place a filtering rule. Moreover, this can also hurt the attacker machine as the server is still trying to connect with that machine.
 
 > Hence, the attacker sends packets from random [[IP]]s quickly, bombarding the server with requests.
 
-Once that is complete, the server's network connections can be observered using the command:
+This can be done by using the `netwox` tool:
+```bash
+sudo netwox 76 -i <ip> -p <port>
+```
+- The `76` is the number of the SYN flood attack in the tool.
+- Enter the IP and PORT numbers for the victim machine.
+
+Once that is complete, the server's network connections can be observed using the command:
 ```bash
 netstat -nat
 ```

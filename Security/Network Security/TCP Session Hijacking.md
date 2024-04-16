@@ -28,7 +28,7 @@ This means that the data we append will only show at the current sequence number
 
 > Moreover, since the packets are added to the buffer (appended), the bytes are all concatenated together.
 
-In order to achieve proper execution or correct data transmission, the data we want to send as attacker should be surrounded by characters that gaurantee they are split from the remainder of the bytes.
+In order to achieve proper execution or correct data transmission, the data we want to send as attacker should be surrounded by characters that guarantee they are split from the remainder of the bytes.
 ```bash
 \n <data> \n
 ```
@@ -40,7 +40,6 @@ In order to achieve proper execution or correct data transmission, the data we w
 After correct incorcorporation of these numbers, the attacker can manage to send data to either one of the clients depending on which one it impersonates. However, this might break the existing connection.
 
 ---
-
 ### Aftermath
 
 > After applying this attack, the initial connection will disconnect because the synchronization between them both has been distrupted.
@@ -52,4 +51,3 @@ This is the case because we set SEQ numbers as attackers and send it to one of t
 Therefore, these two hosts will keep sending packets that will keep getting dropped, until the connection is terminated.
 
 ---
-
