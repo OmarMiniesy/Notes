@@ -3,6 +3,7 @@
 
 SSRF or Server Side Request Forgery.
 - An attacker makes the server send requests to different locations.
+- Abuse server functionality to perform internal/external resource requests.
 
 For example, the attacker causes the web server to make a connection with internal services inside the infrastructure, or connect to arbitrary external systems.
 
@@ -10,6 +11,13 @@ For example, the attacker causes the web server to make a connection with intern
 
 SSRF exploit trust relationships to escalate attacks from the web application.
 - These trust relationships could be with the server itself, or to other back-end systems found in the organization.
+
+To look for SSRF:
+- Parts of [[HTTP]] requests, including URLs
+- File imports such as HTML, PDFs, images, etc.
+- Remote server connections to fetch data
+- [Application Programming Interface (API)](Application%20Programming%20Interface%20(API).md) specification imports
+- Dashboards including ping and similar functionalities to check server statuses
 
 ---
 ### Attacks
@@ -36,10 +44,10 @@ Similar to the attack against the server, try fetching an IP address from within
 
 ##### Blacklist-based input filters
 
-> Applications can block `localhost` or `127.0.0.1`.
-> They can also block important URLs such as `/admin`.
+- Applications can block `localhost` or `127.0.0.1`.
+- They can also block important URLs such as `/admin`.
 
-> Alternatives: 
+Alternatives: 
 * Instead of `127.0.0.1`, use `2130706433`, `017700000001`, or `127.1`.
 * Registering a domain that resolves to `127.0.0.1`.
 * Using URL encoding to obfuscate blocked URL strings. [[Web Encoding]].
@@ -49,29 +57,29 @@ Similar to the attack against the server, try fetching an IP address from within
 
 ##### Whitelist-based input filters
 
-> Applications can sometimes only allow a predefined set of values.
-> These can be bypassed by exploiting inconsistencies in URL parsing.
+Applications can sometimes only allow a predefined set of values.
+- These can be bypassed by exploiting inconsistencies in URL parsing.
 
-* Embed credentials inside a URL before the hostname.
+1. Embed credentials inside a URL before the hostname.
 ```
 https://username@expected-host
 ```
 
-* Add URL fragments.
+2. Add URL fragments.
 ```
 https://evil-host#expected-host
 ```
 
-* Abuse the [[Domain Name System (DNS)]] naming hierarchy to place input into a domain that i control.
+3. Abuse the [[Domain Name System (DNS)]] naming hierarchy to place input into a domain that i control.
 ```
 https://expected-host.evil-host
 ```
 
-* Using URL encoding and double encoding. [[Web Encoding]].
+4.  Using URL encoding and double encoding. [[Web Encoding]].
 
 ###### Open Redirection
 
-> If the value of a parameter is used to fetch another page.
-> We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from localhost.
+If the value of a parameter is used to fetch another page.
+- We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from localhost.
 
 ---

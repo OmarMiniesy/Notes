@@ -37,5 +37,7 @@ Some famous ports:
 | MS SQL SERVER | 1433, 1434    |
 | SMB           | 445           |
 | DNS           | 53            |
+| DHCP Server   | 67            |
+| DHCP Client   | 68            |
 
 ---

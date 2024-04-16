@@ -15,6 +15,6 @@
   "autoPairMarkdown": true,
   "strictLineBreaks": true,
   "newFileLocation": "current",
-  "useMarkdownLinks": true,
+  "useMarkdownLinks": false,
   "showUnsupportedFiles": true
 }

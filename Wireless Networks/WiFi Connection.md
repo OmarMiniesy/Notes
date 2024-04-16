@@ -1,5 +1,11 @@
 ### General Notes
 
+This is done mainly through frames that are used to establish and manage connections between a client and an Access Point [[Device Types]].
+- **Management Frames**: Broadcast frames used by a wireless network to allow negotiation between AP and client.
+	- **Protected Management Frames**: Used to protect other frames to be secure against attacks. Not done by all [[Security Standards]], but mandatory in `WPA3`.
+- **Control Frames**: Used to mediate data transfer and packet flow.
+- **Data Frames**: Used to communicate the data itself.
+
 > Also known as the `802.11` connection.
 
 ---
@@ -9,10 +15,13 @@
 
 ###### Discovery
 1. Setting up the Access Point's SSID, or its name. [[Identifiers]].
-2. The Access point then broadcasts a beacon frame every set time frame. This shows that the clients can connect to this available network with the given name.
+2. The Access point then broadcasts a **beacon** frame every set time frame. This shows that the clients can connect to this available network with the given name.
 	* This time interval can be set up in the advanced configuration.
+	* Also contains [[Encryption]] information.
 3. The client sends a `probe request` with the same SSID to the access point.
 4. The access point responds with a `probe response` with the same SSID to the client.
+
+> Access points use the probe request to determine if the client can connect. If it cannot, then it sends a probe response with the same information as the beacon frame.
 
 The client chooses the [[Security Standards]] from the ones available at the access point - a cipher. This can be WPA2, WPA, etc..
 
@@ -22,14 +31,27 @@ The client chooses the [[Security Standards]] from the ones available at the acc
 
 Here the handshake algorithm takes place between client and access point.
 * This communication is encrypted.
+* Uses `authentication request` and `authentication response`.
+
+> If [[Security Standards]] **WEP** is used, an authentication request is sent first.
+
+To end a connection, a client sends a `de-authentication frame` to the access point, and it has a single field stating why the connection has to close.
 
 ###### Association
 
 Client requests to associate with the network of the access point through a series of requests and responses.
+- The `association request` includes the [[Encryption]] types it will use.
+- If these match the Access Point's capabilities, then an `association response` is sent stating connection is successful. 
+
+> The first step used by any [[Security Standards]] other than **WEP**.
+
+To end a connection, a client sends a `disassociation frame` to the access point, and it has a single field stating why the connection has to close.
+
 
 ---
 ### Authentication Handshake
 
+This handshake was introduced by WPA [[Security Standards]] and continued onwards.
 ##### Keys Generated and Used
 
 There are many keys that are generated to encrypt the messages shared over the wireless connection.

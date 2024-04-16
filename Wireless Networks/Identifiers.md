@@ -8,8 +8,8 @@ This is the name of the wireless network that a [[Device Types#Client / Station]
 
 ##### Basic Service Set Identifier (BSSID)
 
-This is the [[Data Link Layer#MAC Address]] of the AP.
-- Each AP has a different BSSID, even in the same WLAN.
+This is the [[Data Link Layer#MAC Address]] of the wireless interface of the Access Point.
+- Each Access Point has a different BSSID, even in the same WLAN.
 
 ---
 

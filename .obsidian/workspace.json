@@ -4,28 +4,52 @@
     "type": "split",
     "children": [
       {
-        "id": "24580bd0bb5a28c9",
+        "id": "28508d96f94a2a7f",
         "type": "tabs",
         "children": [
           {
-            "id": "ee8e52c078f05aba",
+            "id": "7dfc581a6e4a3a29",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/John the Ripper.md",
+                "file": "Security/Wireless Network Security/Attack Types.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "55aaada096a87da0",
+            "id": "c81d207640515e18",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md",
+                "file": "Security/Wireless Network Security/Evil Twin Attack.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10c1d2070d5e1024",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Wireless Network Security/Security Standards.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7c427ca6f44ffefd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wireless Networks/WiFi Connection.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +84,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Apache",
+                "query": "radius",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +113,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +129,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Tools/John the Ripper.md",
+                "file": "Security/Wireless Network Security/Attack Types.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +146,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Tools/John the Ripper.md",
+                "file": "Security/Wireless Network Security/Attack Types.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +169,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Tools/John the Ripper.md"
+                "file": "Security/Wireless Network Security/Attack Types.md"
               }
             }
           },
@@ -188,21 +212,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ee8e52c078f05aba",
+  "active": "7dfc581a6e4a3a29",
   "lastOpenFiles": [
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/Tools/John the Ripper.md",
-    "Security/System Security/Reverse Shells.md",
-    "Wireless Networks/WiFi Connection.md",
+    "Security/Wireless Network Security/Evil Twin Attack.md",
+    "Security/Wireless Network Security/Attack Types.md",
     "Security/Wireless Network Security/Security Standards.md",
-    "Wireless Networks/Identifiers.md",
+    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
+    "Wireless Networks/WiFi Connection.md",
     "Wireless Networks/Device Types.md",
+    "Wireless Networks/Identifiers.md",
     "Wireless Networks/Service Sets.md",
     "Wireless Networks/Wireless Channels.md",
     "Networking/Dynamic Host Configuration Protocol (DHCP).md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
     "Networking/Port.md",
+    "Networking/Data Link Layer.md",
+    "Networking/Domain Name System (DNS).md",
+    "Networking/Protocol.md",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Tools/John the Ripper.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/System Security/Reverse Shells.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Web Applications/HTTPS.md",
     "Networking/Apache.md",
     "Security/Web Application Security/File Upload.md",
@@ -210,12 +240,6 @@
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Tools/nmap.md",
     "Security/Network Security/OSINT.md",
-    "Networking/Domain Name System (DNS).md",
-    "Security/Network Security/Zone Transfers.md",
-    "Security/Tools/Metasploit.md",
-    "Networking/Secure Shell Protocol (SSH).md",
-    "Security/Web Application Security/WebApplication Fingerprinting.md",
-    "Excalidraw/Drawing 2024-03-29 18.02.23.excalidraw.md",
     "Excalidraw",
     "Security/Cryptography",
     "Kubernetes",
