@@ -1,28 +1,28 @@
 
 ### General Notes
 
-> Routers are devices connected to different networks.
-> They can forward [[IP]] datagrams between networks.
-> Forwarding is done through routing [[Protocol]]s.
+Routers are devices connected to different networks.
+- They can forward [[IP]] datagrams between networks.
+- Forwarding is done through routing [[Protocol]]s.
 
 Routers try to find the best path to send packets. They then forward the packets through one of its interfaces.
 
 ---
 ### Routing Protocols
 
-These are protocols through which the routes are created and modified. These protocols are what are used to fill up the Routing Table.
+These are [[Protocol]]s through which the routes are created and modified. These protocols are what are used to fill up the Routing Table.
 
 ---
 ### Routing Table
 
-> To choose which interface to route through, routers use the routing table.
-> The routing table contains [[IP]] - Interface binds.
+To choose which interface to route through, routers use the routing table.
+- The routing table contains [[IP]] - Interface binds.
 
-`0.0.0.0` is the Default Address, which is used when a packet is recieved with an unkown network destination.
+`0.0.0.0` is the Default Address, which is used when a packet is received with an unknown network destination.
 
 > To ensure the best path is selected, paths are also assigned a metric. This metric is defined based on congestion and bandwidth.
 
-> Routing tables are found on routers and on hosts.
+Routing tables are found on routers and on hosts.
 
 * To print the route tables: 
 ```
@@ -40,7 +40,7 @@ ip route add <ip>/<subnet> via <router-ip>
 ip route delete <ip>/<subnet>
 ```
 
-> To print the interfaces:
+To print the interfaces:
 * `ifconfig` Linux
 
 ---

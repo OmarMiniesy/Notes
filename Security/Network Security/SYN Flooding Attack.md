@@ -3,7 +3,7 @@
 
 This attack abuses the existence of the half open connection queue that is created during the [[Transport Layer]] TCP [[Protocol]] 3 way handshake.
 
-> Check my SEED Labs Solution.
+> Check my SEED Labs [Solution](https://github.com/OmarMiniesy/Walkthroughs/blob/main/SEED%20Labs/Network%20Security/TCP%20Attacks%20Lab.md).
 
 ---
 ### Methodology and Attack
