@@ -12,7 +12,7 @@ Set of standard rules that are followed.
 > These bits are then interpreted as data
 
 > Packets are composed of 
-1. Header : protocol specific structure that ensures the reciever can correctly handle the information in the payload.
+1. Header : protocol specific structure that ensures the receiver can correctly handle the information in the payload.
 2. Payload : contains the information
 
 > Through information in header, nodes that are communicating can understand and use the packets.
@@ -40,6 +40,6 @@ Set of standard rules that are followed.
 
 >TCP/[[IP]], a protocol, uses encapsulation.
 
-> For each packet sent and recieved, encapsulation is applied, in different orders respectively.
+> For each packet sent and received, encapsulation is applied, in different orders respectively.
 
 ---

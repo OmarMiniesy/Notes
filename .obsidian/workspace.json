@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "bad81302c73d243c",
+        "id": "f73c95b87e8042ee",
         "type": "tabs",
         "children": [
           {
-            "id": "6bb4d30159120037",
+            "id": "4c967db3bcfe1c50",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/TCP Session Hijacking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7616ea4a5a04f4f4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Network Security/SYN Flooding Attack.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "db8026b9eac93328",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Transport Layer.md",
+                "file": "Security/Network Security/BGP Security.md",
                 "mode": "source",
                 "source": false
               }
@@ -101,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300.5
+    "width": 268.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -117,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/TCP Session Hijacking.md",
+                "file": "Security/Network Security/BGP Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -134,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/TCP Session Hijacking.md",
+                "file": "Security/Network Security/BGP Security.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/TCP Session Hijacking.md"
+                "file": "Security/Network Security/BGP Security.md"
               }
             }
           },
@@ -200,34 +176,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6bb4d30159120037",
+  "active": "4c967db3bcfe1c50",
   "lastOpenFiles": [
-    "Security/Network Security/SYN Flooding Attack.md",
-    "Security/Network Security/TCP Session Hijacking.md",
-    "Networking/Transport Layer.md",
     "Networking/Routing.md",
-    "Wireless Networks/WiFi Connection.md",
+    "Security/Network Security/BGP Security.md",
+    "Security/Network Security/Null Session.md",
     "Security/Wireless Network Security/Security Standards.md",
-    "Security/Wireless Network Security/Evil Twin Attack.md",
-    "Security/Wireless Network Security/Attack Types.md",
     "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
-    "Wireless Networks/Device Types.md",
-    "Wireless Networks/Identifiers.md",
+    "Security/Wireless Network Security/Attack Types.md",
     "Wireless Networks/Service Sets.md",
     "Wireless Networks/Wireless Channels.md",
+    "Networking/Server Message Block (SMB).md",
+    "Networking/Protocol.md",
+    "AWS Cloud/Elastic Container Surface (ECS).md",
+    "AWS Cloud/Elastic Beanstalk.md",
+    "AWS Cloud/Cloud Watch.md",
+    "Security/Network Security/OSINT.md",
+    "Security/Web Application Security/Google Hacking.md",
+    "Security/Network Security/TCP Session Hijacking.md",
+    "Security/Network Security/SYN Flooding Attack.md",
+    "Networking/Transport Layer.md",
+    "Wireless Networks/WiFi Connection.md",
+    "Security/Wireless Network Security/Evil Twin Attack.md",
+    "Wireless Networks/Device Types.md",
+    "Wireless Networks/Identifiers.md",
     "Networking/Dynamic Host Configuration Protocol (DHCP).md",
     "Networking/Port.md",
     "Networking/Data Link Layer.md",
     "Networking/Domain Name System (DNS).md",
-    "Networking/Protocol.md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Tools/John the Ripper.md",
-    "Security/System Security/Linux Privilege Escalation.md",
-    "Security/System Security/Reverse Shells.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Web Applications/HTTPS.md",
-    "Networking/Apache.md",
-    "Security/Web Application Security/File Upload.md",
     "Excalidraw",
     "Security/Cryptography",
     "Kubernetes",

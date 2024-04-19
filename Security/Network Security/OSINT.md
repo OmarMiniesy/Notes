@@ -1,4 +1,3 @@
-
 ### Open Source Intelligence
 
 Exploiting information available on social networks and public sites.
