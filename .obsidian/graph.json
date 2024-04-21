@@ -76,6 +76,13 @@
         "a": 1,
         "rgb": 9166930
       }
+    },
+    {
+      "query": "path:Cryptography  ",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
     }
   ],
   "collapse-display": false,
@@ -86,8 +93,8 @@
   "collapse-forces": false,
   "centerStrength": 0.3125,
   "repelStrength": 8.33679833679834,
-  "linkStrength": 0.401041666666667,
+  "linkStrength": 0.729166666666667,
   "linkDistance": 68,
-  "scale": 0.11868198420609483,
+  "scale": 0.32704909083673495,
   "close": true
 }

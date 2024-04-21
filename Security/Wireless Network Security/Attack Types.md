@@ -8,7 +8,7 @@ Different vulnerabilities exist due to the nature of the wireless network. The d
 The attacker is in the middle of communication between Access Point and client. [[Device Types]].
 - The attacker can eavesdrop on traffic, as well as modify packets coming to and forth.
 
-> The [[Evil Twin Attack]] and is an example.
+> The [[Evil Twin Attack]] and [[Karma Attack]] are examples.
 
 ---
 ### Key Recovery

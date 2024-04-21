@@ -2,7 +2,7 @@
 
 This is done mainly through frames that are used to establish and manage connections between a client and an Access Point [[Device Types]].
 - **Management Frames**: Broadcast frames used by a wireless network to allow negotiation between AP and client.
-	- **Protected Management Frames**: Used to protect other frames to be secure against attacks. Not done by all [[Security Standards]], but mandatory in `WPA3`.
+	- **Protected Management Frames**: Used to protect management frames - **de-association** and **de-authentication** frames - to be secure against attacks. Not done by all [[Security Standards]], but mandatory in `WPA3`.
 - **Control Frames**: Used to mediate data transfer and packet flow.
 - **Data Frames**: Used to communicate the data itself.
 
@@ -11,13 +11,15 @@ This is done mainly through frames that are used to establish and manage connect
 ---
 ### Steps
 
-> Communication is basically between an Access Point and a Client. [[Device Types]].
+> Communication takes place between an Access Point and a Client. [[Device Types]].
 
+> All the frames discussed here are management frames.
 ###### Discovery
 1. Setting up the Access Point's SSID, or its name. [[Identifiers]].
 2. The Access point then broadcasts a **beacon** frame every set time frame. This shows that the clients can connect to this available network with the given name.
 	* This time interval can be set up in the advanced configuration.
-	* Also contains [[Encryption]] information.
+	* Contains configuration information and network capabilities.
+	* Contains also [[Encryption]] information.
 3. The client sends a `probe request` with the same SSID to the access point.
 4. The access point responds with a `probe response` with the same SSID to the client.
 
@@ -47,7 +49,6 @@ Client requests to associate with the network of the access point through a seri
 
 To end a connection, a client sends a `disassociation frame` to the access point, and it has a single field stating why the connection has to close.
 
-
 ---
 ### Authentication Handshake
 
@@ -74,7 +75,7 @@ PTK = PRF( PMK + ANonce + SNonce + MAC(AP) + MAC(C))
 > The GTK and PTK are third level keys created from the second level keys and are the ones used for encryption.
 
 PTK has other keys as well:
-* KCK (Key Confirmation Key): used to create the MIC (Message Integrity Check).
+* KCK (Key Confirmation Key): used to create the MIC (Message Integrity Check). [[Message Authentication]]
 * KEK (Key Encryption Key): used to encrypt data in communication.
 * TK (Temporary Key): used to encrypt unicast packets.
 ##### Actual Handshake
@@ -84,7 +85,6 @@ PTK has other keys as well:
 3. The access point sends the GTK in message 3 to the client. Access point creates the GTK. Also has MIC.
 4. Client sends final 4th message to access point to confirm that all keys are installed.
 
-> Now any unicast traffic is encyrpted via the PTK, and all multicast traffic is encrypted via GTK.
+> Now any unicast traffic is encrypted via the PTK, and all multicast traffic is encrypted via GTK.
 
 ---
-

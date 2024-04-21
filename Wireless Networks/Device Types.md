@@ -17,7 +17,7 @@ There are multiple modes used by the access point:
 
 * SOHO (Small Office Home Office): Simple, easy, and WPA or WPA2 security. [[Security Standards]].
 * Enterprise: Scalable, authentication server, and [[Data Link Layer]] filtering.
-* Military: Uses normal [[WiFi Connection]] (802.11) and on a different frequency.
+* Military: Uses normal [[Wi-Fi Connection]] (802.11) and on a different frequency.
 
 ---
 ### Client

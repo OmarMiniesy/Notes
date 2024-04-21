@@ -67,4 +67,13 @@ Before the machine drops the packet, we need a copy of that packet to read it, a
 * This way, we guarantee that the other host gets the packet from us, not from the real sending host.
 
 ---
+### Defenses
 
+1. **Static ARP Entries**: Manually configure ARP tables with static entries that map [[IP]] addresses to MAC addresses, which helps prevent unauthorized ARP replies.
+2. **Use of Security Software**: Deploy network security tools and antivirus software that can detect and prevent ARP spoofing. (arpwatch)
+3. **Network Segmentation**: Divide the network into smaller, manageable segments using VLANs. This limits the scope of ARP requests to smaller segments and makes it harder for an attacker to impact the entire network.
+4. **Packet Filtering**: Configure switches and routers to block or filter out suspicious ARP packets. Some advanced switches can be set to allow ARP packets only from ports where ARP requests were originated.
+5. **Monitoring and Alerts**: Regularly monitor network traffic for unusual ARP traffic and set up alerts for suspicious activities. This includes looking for multiple ARP requests/responses from the same IP or rapid changes in MAC addresses associated with an [[IP]].
+6. **Switches**: Switches have MAC caches, which tracks [[IP]] address and MAC pairings. If a requesting device queries a MAC address that is in the switches table, it is sent directly.
+
+---

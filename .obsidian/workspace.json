@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f73c95b87e8042ee",
+        "id": "4aa01031b82fe091",
         "type": "tabs",
         "children": [
           {
-            "id": "4c967db3bcfe1c50",
+            "id": "cd4715dd86ef7713",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/BGP Security.md",
+                "file": "Networking/Domain Name System (DNS).md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 291.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/BGP Security.md",
+                "file": "Networking/Domain Name System (DNS).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/BGP Security.md",
+                "file": "Networking/Domain Name System (DNS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/BGP Security.md"
+                "file": "Networking/Domain Name System (DNS).md"
               }
             }
           },
@@ -176,36 +177,36 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4c967db3bcfe1c50",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Networking/Routing.md",
-    "Security/Network Security/BGP Security.md",
-    "Security/Network Security/Null Session.md",
+    "Networking/Transport Layer Security (TLS).md",
     "Security/Wireless Network Security/Security Standards.md",
-    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
+    "Wireless Networks/Wi-Fi Connection.md",
+    "Cryptography/RSA.md",
+    "Cryptography/Symmetric Ciphers.md",
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Networking/Virtual Private Network (VPN).md",
+    "Wireless Networks/Device Types.md",
+    "Web Applications/HTTPS.md",
+    "Security/Network Security/BGP Security.md",
     "Security/Wireless Network Security/Attack Types.md",
+    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
+    "Security/Wireless Network Security/Karma Attack.md",
+    "Security/Wireless Network Security/Evil Twin Attack.md",
+    "Wireless Networks/Identifiers.md",
     "Wireless Networks/Service Sets.md",
+    "Networking/Dynamic Host Configuration Protocol (DHCP).md",
+    "Security/Network Security/Arp Poisoning.md",
+    "Networking/Routing.md",
+    "Security/Network Security/Null Session.md",
     "Wireless Networks/Wireless Channels.md",
     "Networking/Server Message Block (SMB).md",
     "Networking/Protocol.md",
     "AWS Cloud/Elastic Container Surface (ECS).md",
     "AWS Cloud/Elastic Beanstalk.md",
     "AWS Cloud/Cloud Watch.md",
-    "Security/Network Security/OSINT.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Network Security/SYN Flooding Attack.md",
-    "Networking/Transport Layer.md",
-    "Wireless Networks/WiFi Connection.md",
-    "Security/Wireless Network Security/Evil Twin Attack.md",
-    "Wireless Networks/Device Types.md",
-    "Wireless Networks/Identifiers.md",
-    "Networking/Dynamic Host Configuration Protocol (DHCP).md",
-    "Networking/Port.md",
-    "Networking/Data Link Layer.md",
-    "Networking/Domain Name System (DNS).md",
     "Excalidraw",
-    "Security/Cryptography",
+    "Cryptography",
     "Kubernetes",
     "JavaScript/React Native",
     "Security/Wireless Network Security",

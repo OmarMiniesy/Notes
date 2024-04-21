@@ -41,9 +41,16 @@ There are two techniques for authentication, **Open System Authentication** and 
 
 An update to WEP to fix its cryptography and security issues.
 - Uses TKIP (Temporal Key Integrity Protocol): adds sequence numbers to packets to protect against replay attacks.
+	- Also incorporates the MAC address of the devices into the encryption to generate different keys.
 - Adds MIC (Message Integrity Check): Better check on integrity than the CRC.
 
-> Introduced the 4 way authentication handshake found in [[WiFi Connection]].
+> Introduced the 4 way authentication handshake found in [[Wi-Fi Connection]].
+
+WPA uses a **PSK (Pre-Shared Key)**, which is like a password shared between access point and client.
+- Having the same PSK on both sides guarantees connectivity.
+- This is like a password.
+
+> Enterprise networks utilize protocols for authentication, such as RADIUS and TACAS+.
 
 ---
 ### WPA2
@@ -56,6 +63,14 @@ Authentication in WPA2:
 * PSK, or personal mode: One shared password or shared key.
 * RADIUS, or enterprise mode: Multiple passwords depending on user credentials, meaning users are verified based on credentials not a password.
 
+##### Vulnerabilities in the Authentication Handshake [[Wi-Fi Connection]]
+
+If an attacker manages to eavesdrop and capture the `Anonce` and `Snonce` values, as well as the password (`PSK`), then the attacker can generate the `PTK`, which is the key used to encrypt and decrypt all communication.
+- The main issue here is that any user connecting uses the *same* password.
+
+To solve this, using enterprise solutions such as **RADIUS** creates random keys for users once they are authenticated with a unique username and password to their servers.
+- The key generated this time is the **PMK**, Pairwise Master Key and it is used instead of the PSK to complete the handshake.
+
 ---
 ### WPA3
 
@@ -64,6 +79,8 @@ Uses stronger [[Encryption]] and introduces new authentication techniques before
 - **SAE**: Provides better security against dictionary attacks where the attacker can compromise the network key. Uses the **Dragonfly Key Exchange** which creates a new encryption key each time a new device connects.
 - **OWE**: Encryption that does not require a known password, as this is for public networks. It does not protect against MITM attacks, but it is still somewhat secure for a public network as the traffic is encrypted.
 
-After the authentication technique chosen, the **Association** frames pass and the handshake begins. [[WiFi Connection]].
+After the authentication technique chosen, the **Association** frames pass and the handshake begins. [[Wi-Fi Connection]].
+
+>One of the most significant improvements is that WPA3 provides forward secrecy. This means that even if an attacker manages to compromise the password, they cannot decrypt previously captured traffic.
 
 ---

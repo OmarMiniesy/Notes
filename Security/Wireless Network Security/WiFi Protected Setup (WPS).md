@@ -1,6 +1,6 @@
 ### Methods of Connection
 
-This is a network security standard designed to simplify the [[WiFi Connection]] of new devices.
+This is a network security standard designed to simplify the [[Wi-Fi Connection]] of new devices.
 - The [[Security Standards]] and the requirements are a lot, which called for some simplification.
 
 There are several types of connections possible:
