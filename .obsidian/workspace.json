@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4aa01031b82fe091",
+        "id": "13495d7593efd8aa",
         "type": "tabs",
         "children": [
           {
-            "id": "cd4715dd86ef7713",
+            "id": "f4bc41b468ace557",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Domain Name System (DNS).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5,
-    "collapsed": true
+    "width": 280.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Networking/Domain Name System (DNS).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Networking/Domain Name System (DNS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Networking/Domain Name System (DNS).md"
-              }
+              "state": {}
             }
           },
           {
@@ -179,32 +170,32 @@
   },
   "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Networking/Transport Layer Security (TLS).md",
-    "Security/Wireless Network Security/Security Standards.md",
+    "Security/Network Security/BGP Security.md",
     "Wireless Networks/Wi-Fi Connection.md",
+    "Security/Wireless Network Security/Security Standards.md",
+    "Security/Network Security/DNSSEC.md",
+    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
+    "Security/Network Security/Transport Layer Security (TLS).md",
+    "Networking/Dynamic Host Configuration Protocol (DHCP).md",
+    "Security/Network Security/Arp Poisoning.md",
+    "Networking/Domain Name System (DNS).md",
+    "Security/Network Security/Zone Transfers Attack.md",
+    "Networking/Port.md",
     "Cryptography/RSA.md",
     "Cryptography/Symmetric Ciphers.md",
     "Networking/Secure Shell Protocol (SSH).md",
     "Networking/Virtual Private Network (VPN).md",
     "Wireless Networks/Device Types.md",
     "Web Applications/HTTPS.md",
-    "Security/Network Security/BGP Security.md",
     "Security/Wireless Network Security/Attack Types.md",
-    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
     "Security/Wireless Network Security/Karma Attack.md",
     "Security/Wireless Network Security/Evil Twin Attack.md",
     "Wireless Networks/Identifiers.md",
     "Wireless Networks/Service Sets.md",
-    "Networking/Dynamic Host Configuration Protocol (DHCP).md",
-    "Security/Network Security/Arp Poisoning.md",
     "Networking/Routing.md",
     "Security/Network Security/Null Session.md",
     "Wireless Networks/Wireless Channels.md",
     "Networking/Server Message Block (SMB).md",
-    "Networking/Protocol.md",
-    "AWS Cloud/Elastic Container Surface (ECS).md",
-    "AWS Cloud/Elastic Beanstalk.md",
-    "AWS Cloud/Cloud Watch.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

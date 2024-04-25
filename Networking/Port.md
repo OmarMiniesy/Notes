@@ -1,22 +1,20 @@
-
 ### General Notes
 
-> Used to identify a single network process on a machine
-> To identify a process on a network or machine: `<IP>:<port>`
+Used to identify a single network process on a machine.
+- To identify a process on a network or machine: `<IP>:<port>`
+- Daemons, or programs that run services, use ports.
 
-> Daemons, or programs that run services, use ports.
 > The port number is found in the header of the packets of TCP or UDP
 
-> To view the listening ports and the current TCP connections:
+To view the listening ports and the current TCP connections:
 * `netstat -ano` Windows
 * `netstat -tunp` Linux
 
 ---
-
 ### Well Known Ports
 
 Ports between `0-1023` are called **the first 1024** and are well known ports. These are used by the most famous [[Protocol]]s, server processes, and famous daemons.
->[Famous Ports](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+- [Famous Ports](http://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
 Some famous ports:
 

@@ -48,7 +48,6 @@ An update to WEP to fix its cryptography and security issues.
 
 WPA uses a **PSK (Pre-Shared Key)**, which is like a password shared between access point and client.
 - Having the same PSK on both sides guarantees connectivity.
-- This is like a password.
 
 > Enterprise networks utilize protocols for authentication, such as RADIUS and TACAS+.
 

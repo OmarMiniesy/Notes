@@ -18,7 +18,6 @@ TLS operates by first performing a **handshake** process between the server and 
 - TLS also uses a **Record Layer** which is responsible for the actual encryption and decryption processes, as well as data management.
 - [[Certificates]] are also sent by the server to provide authentication.
 
-
 > The **Record Layer** provides abstraction to the application layer using TLS. The application layer simply transmits data normally, but the record layer is responsible to securely handle it.
 
 ---
