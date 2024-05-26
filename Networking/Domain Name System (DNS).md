@@ -10,6 +10,11 @@ Application layer support [[Protocol]].
 Uses UDP [[Protocol]] and [[Port]] number 53.
 
 Misconfiguration of DNS servers allows for the [[Zone Transfers Attack]].
+###### DNS Configuration
+Local DNS server information is found in `/etc/resolv.conf`.
+- Changes made to this file can be removed.
+- Change the `/etc/resolvconf/resolv.conf.d/head` file to ensure persistent changes in `/etc/resolv.conf`.
+- Run the `sudo resolvconf -u` command to update the contents in the file.
 
 ---
 ### DNS Records
@@ -46,8 +51,9 @@ There are different server levels in the hierarchy:
 > Each server in the hierarchy is responsible for its zone, and has the address of the root servers.
 
 There are different **Zones** found in this hierarchy. A DNS zone is an administrative part of the namespace that is managed by a certain organization, called the **administrator**.
-- They contain the records for all the domains found in that zone.
+- A large domain can be divided and stored in many zones.
 - This also goes for any subdomains for any of these domains. However, sometimes subdomains can be added to different zones.
+- A zone has DNS records related to the subdomains and domains that it contains.
 - The **authoritative name servers** are responsible for managing the DNS records for a zone by answering to queries aimed at this zone.
 - Each Zone has its own name server, but a name server can have many Zones.
 
@@ -58,13 +64,14 @@ There are different **Zones** found in this hierarchy. A DNS zone is an administ
 This server has access to all the records for a **DNS Zone**.
 - It is the server that is configured to answer any DNS requests for its zone without referring to another server.
 
-> It is the final reference for a query. When a query for a domain name reaches an authoritative name server, the server provides *the final answer*.
+> It is the final reference for a query. When a query for a domain name reaches an authoritative name server, the server provides the *final answer*.
 
 ---
 ### Name Resolution
 
 Performed by **recursive resolvers**: servers that contact TLD servers and follow the structure to resolve the name of the host.
 - Resolvers are DNS servers provided by ISP or are publicly available.
+- Also known as the local DNS server.
 
 1. **Initial Query**: When a user types a web address into a browser, the query first goes to a recursive resolver (typically provided by the user’s ISP or a third-party DNS service). The resolver's job is to find the IP address associated with the domain name.
 2. **Contacting Root and TLD Servers**: The recursive resolver first queries a root DNS server, which directs it to the appropriate Top-Level Domain (TLD) server for the domain’s suffix (e.g., `.com`, `.net`).

@@ -1,4 +1,3 @@
-
 ### General Notes
 
 SSRF or Server Side Request Forgery.
