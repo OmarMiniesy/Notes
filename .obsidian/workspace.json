@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "ce98c0f6db0dd6bb",
+        "id": "15c77e617071544f",
         "type": "tabs",
         "children": [
           {
-            "id": "a5869ca5d70de991",
+            "id": "84a837b7e46d7ccc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/DNSSEC.md",
+                "file": "Security/Network Security/Denial of Service (DOS).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d20327e2ddf29c83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/Firewall.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 274.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/DNSSEC.md",
+                "file": "Security/Network Security/Denial of Service (DOS).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/DNSSEC.md",
+                "file": "Security/Network Security/Denial of Service (DOS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/DNSSEC.md"
+                "file": "Security/Network Security/Denial of Service (DOS).md"
               }
             }
           },
@@ -176,17 +188,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a5869ca5d70de991",
+  "active": "84a837b7e46d7ccc",
   "lastOpenFiles": [
-    "Networking/Domain Name System (DNS).md",
+    "Networking/Firewall.md",
+    "Security/Network Security/Denial of Service (DOS).md",
+    "Security/Wireless Network Security/Attack Types.md",
+    "Security/System Security/Reverse Shells.md",
+    "Security/System Security/Malware.md",
+    "Security/Wireless Network Security/Security Standards.md",
     "Security/Network Security/DNSSEC.md",
+    "Networking/Domain Name System (DNS).md",
     "Security/Network Security/Footprinting and Scanning.md",
     "Security/Network Security/Transport Layer Security (TLS).md",
     "Security/Web Application Security/SSRF.md",
     "AWS Cloud/Elastic Container Surface (ECS).md",
     "Security/Network Security/BGP Security.md",
     "Wireless Networks/Wi-Fi Connection.md",
-    "Security/Wireless Network Security/Security Standards.md",
     "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
     "Networking/Dynamic Host Configuration Protocol (DHCP).md",
     "Security/Network Security/Arp Poisoning.md",
@@ -198,11 +215,7 @@
     "Networking/Virtual Private Network (VPN).md",
     "Wireless Networks/Device Types.md",
     "Web Applications/HTTPS.md",
-    "Security/Wireless Network Security/Attack Types.md",
     "Security/Wireless Network Security/Karma Attack.md",
-    "Security/Wireless Network Security/Evil Twin Attack.md",
-    "Wireless Networks/Identifiers.md",
-    "Wireless Networks/Service Sets.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

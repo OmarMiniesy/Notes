@@ -24,7 +24,7 @@ An attack where the attacker can break the [[Encryption]] of the communicated pa
 - If the attacker can obtain the key, then integrity is also compromised.
 
 ---
-### Denial of Service
+### [[Denial of Service (DOS)]]
 
 Attack that affects the availability of a system.
 - Can do that through bombarding it with requests to slow it down.
