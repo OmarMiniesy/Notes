@@ -40,10 +40,10 @@ In the header fields of the packets, the Sequence number, Acknowledgement number
 > ACK Packet
 4. Client completes handshake by sending a packet with Acknowledgement flag enabled. The sequence number is the same as previous Acknowledgement number, and Acknowledgement number is an increment of previous Sequence number sent by server.
 
-When a SYN packet gets sent in the first step, the server stores this source [[IP]] address in a queue. This queue holds all the half-open connections, and the entires get popped once the handshake is complete. The queue size is not large, but it is unique per [[Port]].
+When a SYN packet gets sent in the first step, the server stores this source [[IP]] address in a queue. This queue holds all the half-open connections, and the entries get popped once the handshake is complete. The queue size is not large, but it is unique per [[Port]].
 > This was the motivation for the [[SYN Flooding Attack]].
 
-#### [[Firewall]] or IDS Stopping the Handshake
+#### [[Firewall]] or [[Intrusion Detection Systems (IDS)]] Stopping the Handshake
 
 >  This can be used to detect the presence of a firewall or another device.
 * SYN is sent, but no SYN/ACK replied.
