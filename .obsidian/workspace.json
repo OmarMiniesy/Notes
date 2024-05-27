@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "15c77e617071544f",
+        "id": "73d4ebe2605879d8",
         "type": "tabs",
         "children": [
           {
-            "id": "84a837b7e46d7ccc",
+            "id": "e7f3c9df1c71d0c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/Denial of Service (DOS).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d20327e2ddf29c83",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Networking/Firewall.md",
+                "file": "Security/Network Security/Intrusion Detection and Prevention.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "radius",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/Denial of Service (DOS).md",
+                "file": "Security/Network Security/Intrusion Detection and Prevention.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/Denial of Service (DOS).md",
+                "file": "Security/Network Security/Intrusion Detection and Prevention.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/Denial of Service (DOS).md"
+                "file": "Security/Network Security/Intrusion Detection and Prevention.md"
               }
             }
           },
@@ -188,10 +177,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "84a837b7e46d7ccc",
+  "active": "e7f3c9df1c71d0c9",
   "lastOpenFiles": [
-    "Networking/Firewall.md",
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Security/Network Security/Intrusion Detection and Prevention.md",
+    "Security/Network Security/Firewall.md",
+    "Networking/Network Layer.md",
+    "Security/Network Security/Arp Poisoning.md",
     "Security/Network Security/Denial of Service (DOS).md",
+    "Security/Network Security/SYN Flooding Attack.md",
     "Security/Wireless Network Security/Attack Types.md",
     "Security/System Security/Reverse Shells.md",
     "Security/System Security/Malware.md",
@@ -206,16 +200,11 @@
     "Wireless Networks/Wi-Fi Connection.md",
     "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
     "Networking/Dynamic Host Configuration Protocol (DHCP).md",
-    "Security/Network Security/Arp Poisoning.md",
     "Security/Network Security/Zone Transfers Attack.md",
     "Networking/Port.md",
     "Cryptography/RSA.md",
     "Cryptography/Symmetric Ciphers.md",
-    "Networking/Secure Shell Protocol (SSH).md",
     "Networking/Virtual Private Network (VPN).md",
-    "Wireless Networks/Device Types.md",
-    "Web Applications/HTTPS.md",
-    "Security/Wireless Network Security/Karma Attack.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

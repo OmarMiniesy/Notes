@@ -2,7 +2,7 @@
 
 The [[IP]] address is used in the network layer of the protocol stack. It has several functions:
 * It performs [[Networking/Routing|Routing]].
-* Passess the packets to the [[Transport Layer]].
+* Passes the packets to the [[Transport Layer]].
 * Performs error detection and correction.
 
 ---
