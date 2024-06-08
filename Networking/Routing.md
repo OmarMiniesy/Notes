@@ -34,8 +34,7 @@ The external gateway protocol `BGP` enforces some policies that allow for the co
 It is the main external gateway protocol. Communication using this protocol is done between routers that establish a TCP connection first. [[Transport Layer#TCP]].
 - Routers send `keep alive` messages constantly every minute to keep the connection alive.
 
-The main goal for this protocol is to allow connectivity between different networks on the internet. It does this through enforcing some rules, or *routing 
-policies* that depend on relationships between the different ASs and ISPs.
+The main goal for this protocol is to allow connectivity between different networks on the internet. It does this through enforcing some rules, or *routing policies* that depend on relationships between the different ASs and ISPs.
 ###### Customer-Provider Relationship
 
 - The customer here could be a small ISP, or an organization that needs network connectivity. 

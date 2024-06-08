@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Public key certificates, also known as digital certificates, are electronic documents that certify the ownership of a public key. 

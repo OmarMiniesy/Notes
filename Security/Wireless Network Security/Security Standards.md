@@ -11,7 +11,7 @@ Important security objectives for wireless networks are:
 ---
 ### WEP
 
-The first security standard for WiFi (802.11).
+The first security standard for Wi-Fi (802.11).
 - Only goal was to prevent eavesdropping.
 
 The key is augmented with an Initialization Vector [[Encryption]], and uses the RC4 stream cipher.

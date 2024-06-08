@@ -12,7 +12,7 @@ Digital signatures are tools used to provide **authenticity**, **integrity**, an
 Therefore, digital signatures must:
 * Depend on the message itself.
 * Use information unique to sender.
-* Easy to produce, recognize, and verify.
+* Be easy to produce, recognize, and verify.
 * Hard to forge.
 
 ---

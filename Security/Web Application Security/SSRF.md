@@ -38,7 +38,6 @@ Similar to the attack against the server, try fetching an IP address from within
 - Since this URL originates from there, it will have access to areas non-accessible by normal users.
 
 ---
-
 ### Bypassing Defenses
 
 ##### Blacklist-based input filters
@@ -79,6 +78,20 @@ https://expected-host.evil-host
 ###### Open Redirection
 
 If the value of a parameter is used to fetch another page.
-- We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from localhost.
+- We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from `localhost`.
+
+---
+### Blind SSRF
+
+This type of vulnerability is hard to detect, because the response from the induced back-end request is not returned to the front-end that the attacker can easily monitor.
+- Hence, this results in a lower threat index.
+
+##### OAST using Burp suite Collaborator
+Blind vulnerabilities can be detected by using out-of-band techniques, such as those provided by [[Burp Suite]]'s `collaborator` tool.
+- The attacker can use collaborator to generate a unique domain name, and then record any interactions that happen with this domain.
+- Therefore, the attacker can input this collaborator domain into the back-end to test for the presence of the vulnerability, and monitor any [[Domain Name System (DNS)]] lookup requests.
+- If a lookup request is recorded, then this means the back-end server executed the payload entered, confirming the presence of the blind SSRF vulnerability.
+
+> However, this technique doesn't *exploit* the vulnerability, it only proves its existence. Combining this with other techniques can be used to obtain information and attack the target.
 
 ---

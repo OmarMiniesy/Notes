@@ -81,7 +81,7 @@ PTK has other keys as well:
 ##### Actual Handshake
 
 1. Access point sends the first message to the client with its ANonce. Client can now create the PTK as it has all the information.
-2. Client has PTK, it sends SNonce to the access point to create the PTK there too. This is sent with MIC (Message Integrity Check) for encryption.
+2. Client has PTK, it sends SNonce to the access point to create the PTK there too. This is sent with MIC (Message Integrity Check).
 3. The access point sends the GTK in message 3 to the client. Access point creates the GTK. Also has MIC.
 4. Client sends final 4th message to access point to confirm that all keys are installed.
 

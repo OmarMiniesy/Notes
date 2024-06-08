@@ -1,9 +1,9 @@
 
 ### General Notes
 
-> client URL.
-> Command line tool that supports [[HTTP]], [[HTTPS]], and other [[Protocol]]s.
-> Used to write scripts and automate sending requests and handling responses.
+Stands for client URL.
+- Command line tool that supports [[HTTP]], [[HTTPS]], and other [[Protocol]]s.
+- Used to write scripts and automate sending requests and handling responses.
 
 ---
 
@@ -62,8 +62,8 @@ curl -X POST -d 'username=mins' -L www.google.com
 ---
 ### HTTPS
 
->If the SSL certificate is invalid or outdated, then cURL will not work properly for [[HTTPS]] URLs.
->This is to protect against the Man-in-the-Middle HTTP downgrade attack.
+If the SSL certificate is invalid or outdated, then cURL will not work properly for [[HTTPS]] URLs.
+- This is to protect against the Man-in-the-Middle HTTP downgrade attack.
 
 * To skip the HTTPS certificate check, use the `-k` flag.
 ```bash

@@ -17,7 +17,6 @@ This cipher simply writes out the plain text in a diagonal pattern of a chosen n
 Simply try out different number of rows until the words diagonally start to make sense.
 
 ---
-
 ### Row Transposition
 
 Write out the plain text over a number of rows with a chosen number of columns.

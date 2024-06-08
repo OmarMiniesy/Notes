@@ -1,4 +1,3 @@
-
 ### General Notes
 
 A method for Asymmetric, public key, [[Encryption]].

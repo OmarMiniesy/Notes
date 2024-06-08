@@ -5,7 +5,7 @@ Serves as the communication channel for processes in the Application Layer, and 
 * Transmission Control [[Protocol]] (TCP)
 * User Datagram [[Protocol]] (UDP)
 
-> The transport layer uses [[Port]]s to identify the processes running on the machines that use this communication channel to send and recieve data.
+> The transport layer uses [[Port]]s to identify the processes running on the machines that use this communication channel to send and receive data.
 
 ---
 ## TCP

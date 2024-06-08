@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "73d4ebe2605879d8",
+        "id": "c0f3494ca8fd140b",
         "type": "tabs",
         "children": [
           {
-            "id": "e7f3c9df1c71d0c9",
+            "id": "03e3b2bd5654e33d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/Intrusion Detection Systems (IDS).md",
+                "file": "Security/Web Application Security/SSRF.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6eb87d1948e9851e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/Burp Suite.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 319.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,9 +105,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/Intrusion Detection Systems (IDS).md",
+                "file": "Security/Web Application Security/SSRF.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -110,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/Intrusion Detection Systems (IDS).md",
+                "file": "Security/Web Application Security/SSRF.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/Intrusion Detection Systems (IDS).md"
+                "file": "Security/Web Application Security/SSRF.md"
               }
             }
           },
@@ -157,7 +169,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -176,34 +189,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e7f3c9df1c71d0c9",
+  "active": "03e3b2bd5654e33d",
   "lastOpenFiles": [
+    "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/CSRF.md",
+    "Security/Tools/cURL.md",
+    "Security/Network Security/Transport Layer Security (TLS).md",
     "Networking/Transport Layer.md",
-    "Security/Network Security/Firewall.md",
-    "Security/Network Security/Intrusion Detection Systems (IDS).md",
-    "Networking/Secure Shell Protocol (SSH).md",
-    "Networking/Network Layer.md",
-    "Security/Network Security/Arp Poisoning.md",
     "Security/Network Security/Denial of Service (DOS).md",
     "Security/Network Security/SYN Flooding Attack.md",
-    "Security/Wireless Network Security/Attack Types.md",
-    "Security/System Security/Reverse Shells.md",
+    "Security/Network Security/TCP Session Hijacking.md",
+    "Security/Network Security/OSINT.md",
+    "Security/Network Security/Null Session.md",
     "Security/System Security/Malware.md",
-    "Security/Wireless Network Security/Security Standards.md",
     "Security/Network Security/DNSSEC.md",
     "Networking/Domain Name System (DNS).md",
-    "Security/Network Security/Footprinting and Scanning.md",
-    "Security/Network Security/Transport Layer Security (TLS).md",
-    "Security/Web Application Security/SSRF.md",
-    "AWS Cloud/Elastic Container Surface (ECS).md",
     "Security/Network Security/BGP Security.md",
+    "Networking/Routing.md",
+    "Security/Wireless Network Security/Evil Twin Attack.md",
+    "Security/Wireless Network Security/Attack Types.md",
+    "Security/Wireless Network Security/Security Standards.md",
     "Wireless Networks/Wi-Fi Connection.md",
-    "Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
-    "Networking/Dynamic Host Configuration Protocol (DHCP).md",
-    "Security/Network Security/Zone Transfers Attack.md",
-    "Networking/Port.md",
-    "Cryptography/RSA.md",
-    "Cryptography/Symmetric Ciphers.md",
+    "Wireless Networks/Wireless Channels.md",
+    "Wireless Networks/Service Sets.md",
+    "Wireless Networks/Identifiers.md",
+    "Wireless Networks/Device Types.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

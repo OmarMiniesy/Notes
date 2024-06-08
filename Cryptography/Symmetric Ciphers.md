@@ -1,17 +1,16 @@
-
 ### General Notes
 
 Symmetric ciphers are a type of cryptographic technique that operates using one shared secret key.
 
 There are two main types of symmetric ciphers; either **block** or **stream**.
 * **Block ciphers**: These encrypt data in fixed-size blocks, typically 64 or 128 bits at a time.
-	* These ciphers are *deterministic*. The same plaintext and key will always produce the same ciphertext.
 * **Stream ciphers**: These encrypt plaintext messages one bit or one byte at a time.
+
+These ciphers are *deterministic*. The same plaintext and key will always produce the same ciphertext.
 
 > There are various modes that utilize both of these types.
 
 ---
-
 ### Electronic Codebook Mode (ECB)
 
 The plaintext is broken down into independent blocks, and each block is encrypted to its respective ciphertext block.
@@ -38,7 +37,6 @@ The process is reversed, where each ciphertext block is decrypted into its respe
 > Shouldn't be used with data that have lots of patterns, or repeated content.
 
 ---
-
 ### Cipher Block Chaining (CBC)
 
 The plaintext is broken down into blocks, and each block of plaintext is `xor`ed with the previous ciphertext block before it is encrypted.
@@ -68,7 +66,6 @@ The process is reversed, where each block of ciphertext is decrypted and the res
 > **IND-CPA** secure for unpredictable **IV**.
 
 ---
-
 ### Cipher Feedback Mode (CFB)
 
 This is another **stream cipher** technique but it functions similar to that of **block cipher**. It encrypts data in segments smaller than the block size, which is useful for data streams of size not divisible by the block size.
@@ -93,7 +90,6 @@ Mirrors the encryption technique. The ciphertext from previous block or IV is en
 > It is **IND-CPA** secure for a random **IV**.
 
 ---
-
 ### Output Feedback Mode (OFB)
 
 **Stream cipher** technique that encrypts only the **Nonce** and the key together. This output is then chained to the other encryption blocks, this is the feedback.

@@ -12,7 +12,7 @@ To protect BGP, there are several techniques that have been implemented and shou
 
 The announcements made by routers should be **authenticated**.
 - This can be done by using hashes and [[Digital Signatures]].
-- Using **IPsec**, which encrypts the entire [[IP]] packet, protecting against attacks like source IP address spoofing.
+- Using **IPsec**, which encrypts the entire [[IP]] packet, protecting against attacks like source [[IP]] address spoofing.
 
 Utilizing a mechanism known as **PKI (Public Key Infrastructure)** that maps routes with Autonomous Systems(AS) using [[Certificates]].
 - This validates that an announcement made by a router in an AS is actually owned by that AS.
