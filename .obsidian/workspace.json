@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c0f3494ca8fd140b",
+        "id": "33d24f58ddd6b102",
         "type": "tabs",
         "children": [
           {
-            "id": "03e3b2bd5654e33d",
+            "id": "5f18a7fb3297062c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/SSRF.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6eb87d1948e9851e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Tools/Burp Suite.md",
+                "file": "Security/Network Security/OSINT.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IDS",
+                "query": "amass",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,11 +73,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 283.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -105,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/SSRF.md",
+                "file": "Security/Network Security/OSINT.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -122,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/SSRF.md",
+                "file": "Security/Network Security/OSINT.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/SSRF.md"
+                "file": "Security/Network Security/OSINT.md"
               }
             }
           },
@@ -189,34 +178,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "03e3b2bd5654e33d",
+  "active": "cf0cbe23a54f532e",
   "lastOpenFiles": [
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Networking/Domain Name System (DNS).md",
+    "Security/Network Security/OSINT.md",
+    "Wireless Networks/Identifiers.md",
+    "Cryptography/Digital Envelopes.md",
+    "Security/System Security/Dealing With Files of Different Types.md",
+    "Cryptography/Encryption.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Security/Web Application Security/Access Control.md",
     "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/CSRF.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Wireless Network Security/Evil Twin Attack.md",
     "Security/Tools/cURL.md",
+    "Web Applications/HTTP.md",
+    "Web Applications/Cookies.md",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/CSRF.md",
     "Security/Network Security/Transport Layer Security (TLS).md",
     "Networking/Transport Layer.md",
     "Security/Network Security/Denial of Service (DOS).md",
     "Security/Network Security/SYN Flooding Attack.md",
     "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Network Security/OSINT.md",
     "Security/Network Security/Null Session.md",
-    "Security/System Security/Malware.md",
-    "Security/Network Security/DNSSEC.md",
-    "Networking/Domain Name System (DNS).md",
-    "Security/Network Security/BGP Security.md",
-    "Networking/Routing.md",
-    "Security/Wireless Network Security/Evil Twin Attack.md",
-    "Security/Wireless Network Security/Attack Types.md",
-    "Security/Wireless Network Security/Security Standards.md",
-    "Wireless Networks/Wi-Fi Connection.md",
-    "Wireless Networks/Wireless Channels.md",
-    "Wireless Networks/Service Sets.md",
-    "Wireless Networks/Identifiers.md",
-    "Wireless Networks/Device Types.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",
