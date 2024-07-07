@@ -34,6 +34,6 @@ Vulnerability affecting ports 137, 138, 139, 445 on windows machines.
 nmap --proxies http://127.0.0.1:8080 <IP> -sC -sV
 ```
 
-This sets the [[IP]] address and [[Port]] combination `127.0.0.1:8080` using [[HTTP]] as proxy, which is the exact combination used by BurpSuite. Therefore, we can view all requests and responses in BurpSuite for any insepction.
+This sets the [[IP]] address and [[Port]] combination `127.0.0.1:8080` using [[HTTP]] as proxy, which is the exact combination used by [[Burp Suite]]. Therefore, we can view all requests and responses in [[Burp Suite]] for any inspection.
 
 ---

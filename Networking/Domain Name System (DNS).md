@@ -126,4 +126,9 @@ dig <TYPE> tesla.com
 ```
 - `<TYPE>` can be `a`, `mx`, `x` instead of `ptr`, `txt`, ...
 
+To show the full path for DNS resolution:
+```bash
+dig +trace tesla.com
+```
+
 ---

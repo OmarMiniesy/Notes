@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "33d24f58ddd6b102",
+        "id": "b3c22cd40d3c52fb",
         "type": "tabs",
         "children": [
           {
-            "id": "5f18a7fb3297062c",
+            "id": "e4cc594870fcdc46",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,8 +18,81 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e2dd1a64d89c8a50",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cryptography/Certificates.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "016c6373623d13b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Subdomain Enumeration.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3245233876e4ed2a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/nmap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "cc3dd5bc03ff602e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Network Security/Footprinting and Scanning.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "63cb057adf288ab9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/System Security/Linux Privilege Escalation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db3db6dddf37ee3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/cURL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -48,8 +121,8 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "amass",
-                "matchingCase": false,
+                "query": "nikto",
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -73,12 +146,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 283.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -94,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Tools/cURL.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
+                "file": "Security/Tools/cURL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +206,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Network Security/OSINT.md"
+                "file": "Security/Tools/cURL.md"
               }
             }
           },
@@ -178,34 +250,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cf0cbe23a54f532e",
+  "active": "db3db6dddf37ee3e",
   "lastOpenFiles": [
+    "Web Applications/Virtual Hosting.md",
+    "Security/System Security/Linux Privilege Escalation.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Security/Network Security/OSINT.md",
+    "Cryptography/Certificates.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Networking/Domain Name System (DNS).md",
-    "Security/Network Security/OSINT.md",
+    "Security/Tools/nmap.md",
+    "Networking/Port.md",
+    "Security/Network Security/Zone Transfers Attack.md",
+    "Security/Network Security/Transport Layer Security (TLS).md",
+    "Security/Network Security/TCP Session Hijacking.md",
+    "Security/Network Security/SYN Flooding Attack.md",
+    "Security/Network Security/Null Session.md",
+    "Security/Network Security/Intrusion Detection Systems (IDS).md",
+    "Security/Network Security/ICMP Redirect Attack.md",
+    "Security/Network Security/Firewall.md",
+    "Security/Network Security/Denial of Service (DOS).md",
+    "Security/Network Security/DNSSEC.md",
+    "Security/Network Security/BGP Security.md",
+    "Security/Network Security/Arp Poisoning.md",
+    "Security/Web Application Security/Command Injection.md",
     "Wireless Networks/Identifiers.md",
     "Cryptography/Digital Envelopes.md",
     "Security/System Security/Dealing With Files of Different Types.md",
     "Cryptography/Encryption.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Security/Wireless Network Security/Evil Twin Attack.md",
-    "Security/Tools/cURL.md",
-    "Web Applications/HTTP.md",
-    "Web Applications/Cookies.md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/CSRF.md",
-    "Security/Network Security/Transport Layer Security (TLS).md",
-    "Networking/Transport Layer.md",
-    "Security/Network Security/Denial of Service (DOS).md",
-    "Security/Network Security/SYN Flooding Attack.md",
-    "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Network Security/Null Session.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

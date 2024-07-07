@@ -31,3 +31,15 @@ They include the:
     - If a private key is compromised or if a certificate is issued in error, the certificate can be revoked before its expiration. Certificate revocation lists (CRLs) or the Online Certificate Status Protocol (OCSP) are used to distribute information about revoked certificates.
 
 ---
+### Certificate Transparency Logs
+
+These are public *append only* records that hold the new SSL/[[Transport Layer Security (TLS)]] certificates.
+- Basically, whenever a new certificate is issued by a Certificate Authority, it is added to multiple Transparency Logs.
+
+> This is like a global registry of certificates.
+
+Since CT logs provide a definitive record of certificates issued for a domain and its subdomains, it is very effective for [[subdomain enumeration]].
+- Access to direct information.
+- Access to old and expired certificates which might relate to subdomains that are no longer maintained.
+
+---

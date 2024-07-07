@@ -7,18 +7,16 @@ Exploiting information available on social networks and public sites.
 
 - [[Subdomain Enumeration]] is also OSINT.
 - Google Dorks as well in [[Google Hacking]].
+
 ---
+### Email Information
 
-### Gathering Information
-
-Gathering emails: 
-* hunter.io
-* phonebook.cz
-* emailhippo: check if emails exist.
-* clearbit
-* email-checker.net
-
->Breached passwords for emails.
-* dehashed.com
+* **hunter.io**
+* **phonebook.cz**
+* **emailhippo**: check if emails exist.
+* **clearbit**
+* **email-checker.net**
+* **dehashed.com**: passwords for breached emails.
+* **theHarvester**
 
 ---

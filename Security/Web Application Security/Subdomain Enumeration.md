@@ -45,6 +45,7 @@ amass enum -d <link> -options
 
 Get information about domains and lists domains for organizations.
 - Check for dev and admin domains.
+- Check for expired [[Certificates]] that may lead to old subdomains no longer maintained.
 
 To save the subdomains using `crt.sh`:
 ``` bash
