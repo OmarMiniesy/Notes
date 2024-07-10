@@ -32,7 +32,7 @@ const schema = Joi.object({
 });
 ```
 
->To validate, create an object and use the `validate` function with the request.body and the schema defined
+>To validate, create an object and use the `validate` function with the `request.body` and the schema defined
 ```JavaScript
 const result = schema.validate(req.body);
 ```

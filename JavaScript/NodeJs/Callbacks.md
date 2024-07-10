@@ -1,14 +1,12 @@
-
-
 ### General Notes
 
-> One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions in [[NodeJs]].
+One way to handle [[Synchronous and Asynchronous]] issues with returning values from functions in [[NodeJs]].
 
 ---
-
 ### Method
 
 > Add a callback function parameter in the function.
+
 * Add the callback parameter
 * Call the callback function with the return value of this function
 ```JavaScript
@@ -21,6 +19,7 @@ function getUser(id, callback) {
 ```
 
 > When calling the function, add the callback function
+
 * Add a parameter to hold the return value of the callback function
 * Can then use this parameter
 ```JavaScript

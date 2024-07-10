@@ -4,95 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b3c22cd40d3c52fb",
+        "id": "fbf5761b27e6cbfd",
         "type": "tabs",
         "children": [
           {
-            "id": "e4cc594870fcdc46",
+            "id": "539034999d56e6f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Network Security/OSINT.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e2dd1a64d89c8a50",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cryptography/Certificates.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "016c6373623d13b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Subdomain Enumeration.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3245233876e4ed2a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Tools/nmap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc3dd5bc03ff602e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Network Security/Footprinting and Scanning.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "63cb057adf288ab9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/System Security/Linux Privilege Escalation.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "db3db6dddf37ee3e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "JavaScript/NodeJs/Synchronous and Asynchronous.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -150,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 280.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -166,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "JavaScript/NodeJs/Synchronous and Asynchronous.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -183,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "JavaScript/NodeJs/Synchronous and Asynchronous.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Tools/cURL.md"
+                "file": "JavaScript/NodeJs/Synchronous and Asynchronous.md"
               }
             }
           },
@@ -250,8 +177,25 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "db3db6dddf37ee3e",
+  "active": "539034999d56e6f9",
   "lastOpenFiles": [
+    "JavaScript/NodeJs/Semantic Versioning.md",
+    "JavaScript/NodeJs/Promises.md",
+    "JavaScript/NodeJs/Nodemon Module.md",
+    "JavaScript/NodeJs/NodeJs.md",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "JavaScript/NodeJs/Modules.md",
+    "JavaScript/NodeJs/JOI Module.md",
+    "JavaScript/NodeJs/HTTP Module.md",
+    "JavaScript/NodeJs/Express Framework.md",
+    "JavaScript/NodeJs/Events Module.md",
+    "JavaScript/NodeJs/Environment Variables.md",
+    "JavaScript/NodeJs/Callbacks.md",
+    "JavaScript/NodeJs/Await-Async.md",
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "JavaScript/NodeJs/Synchronous and Asynchronous.md",
+    "GitHub/gitignore.md",
+    "Security/Tools/cURL.md",
     "Web Applications/Virtual Hosting.md",
     "Security/System Security/Linux Privilege Escalation.md",
     "Security/Network Security/Footprinting and Scanning.md",
@@ -261,23 +205,6 @@
     "Networking/Domain Name System (DNS).md",
     "Security/Tools/nmap.md",
     "Networking/Port.md",
-    "Security/Network Security/Zone Transfers Attack.md",
-    "Security/Network Security/Transport Layer Security (TLS).md",
-    "Security/Network Security/TCP Session Hijacking.md",
-    "Security/Network Security/SYN Flooding Attack.md",
-    "Security/Network Security/Null Session.md",
-    "Security/Network Security/Intrusion Detection Systems (IDS).md",
-    "Security/Network Security/ICMP Redirect Attack.md",
-    "Security/Network Security/Firewall.md",
-    "Security/Network Security/Denial of Service (DOS).md",
-    "Security/Network Security/DNSSEC.md",
-    "Security/Network Security/BGP Security.md",
-    "Security/Network Security/Arp Poisoning.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Wireless Networks/Identifiers.md",
-    "Cryptography/Digital Envelopes.md",
-    "Security/System Security/Dealing With Files of Different Types.md",
-    "Cryptography/Encryption.md",
     "Excalidraw",
     "Cryptography",
     "Kubernetes",

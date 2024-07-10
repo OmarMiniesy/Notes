@@ -19,28 +19,28 @@ There are multiple ways to handle environment variables in the project, and thes
 
 ### Using `dotenv` Package
 
-> Installing the `dotenv` package using [[Node Package Manager (NPM)]].
+- Installing the `dotenv` package using [[Node Package Manager (NPM)]].
 ```bash
 npm i dotenv
 ```
 
-> Adding the `NODE_ENV` and desired environment in the `package.json` scripts section:
+- Adding the `NODE_ENV` and desired environment in the `package.json` scripts section:
 ```JSON
   "scripts": {
     "start-dev": "NODE_ENV=production nodemon index.js",
     "start-prod": "NODE_ENV=development nodemon index.js"
   },
 ```
-* This ensures that whilst running the `start-dev` command, the environment is set to `development`. This can be used in the rest of the files in the project to get their correct environment variables.
+> This ensures that whilst running the `start-dev` command, the environment is set to `development`. This can be used in the rest of the files in the project to get their correct environment variables.
 
-> Create the actual files that contain the environment variables:
+- Create the actual files that contain the environment variables:
 ```
 .env.development
 .env.production
 ```
-* These files should be added to the [[gitignore]] file when pushing to github to avoid publishing secrets.
+> These files should be added to the [[gitignore]] file when pushing to github to avoid publishing secrets.
 
-> In the main file of the project, include the `dotenv` package and configure which variables are to be used based on the environment set in `NODE_ENV`.
+- In the main file of the project, include the `dotenv` package and configure which variables are to be used based on the environment set in `NODE_ENV`.
 ```javascript
 const dotenv = require("dotenv");
 
@@ -50,12 +50,12 @@ dotenv.config({ path: envFile });
 
 Now we can start using the environment variables for the respective environment in the project.
 
-> `.env.development`
+- In `.env.development`
 ```
 PORT = 5555
 ```
 
-> With a development environment:
+- With a development environment:
 ```javascript
 const port = process.env.PORT;
 console.log(port);

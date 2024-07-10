@@ -1,9 +1,9 @@
 
 ### General Notes
 
-> Express is a framework used to handle [[Application Programming Interface (API)]]s with a good structure.
-> The documentation at [Expressjs - 4.x](https://expressjs.com/en/4x/api.html) has all the functionalities.
-> Use Postman to test.
+Express is a framework used to handle [[Application Programming Interface (API)]]s with a good structure.
+- The documentation at [Expressjs - 4.x](https://expressjs.com/en/4x/api.html) has all the functionalities.
+- Use `Postman` to test.
 
 ---
 ### Installing Express using [[Node Package Manager (NPM)]]
@@ -12,10 +12,9 @@ npm i express
 ```
 
 ---
-
 ### Basic Route Handling
 
->Load the module and create an instance called app. Can use the [[HTTP]] verbs.
+- Load the module and create an instance called app. Can use the [[HTTP]] verbs.
 ```JavaScript
 const express = require("express");
 const app = express();
@@ -35,8 +34,8 @@ app.listen(port);   //port to listen on localhost, if it is not set as an enviro
 
 ```
 
->This is a method for specifiying routes, the get method and the url (endpoint). 
->The callback function is also called the route handler.
+This is a method for specifiying routes, the get method and the url (endpoint). 
+- The callback function is also called the route handler.
 
 >The [[Port]] is taken from the environment variable `PORT`.
 >We set environment variables: `process.env.NAME=VALUE`.
@@ -45,12 +44,12 @@ app.listen(port);   //port to listen on localhost, if it is not set as an enviro
 
 ### Using parameters
 
-> Route parameters: for essential or required data. These are in the endpoint path itself.
-> Query parameters: for optional features. These are after the question mark at the end.
+**Route parameters**: for essential or required data. These are in the endpoint path itself.
+**Query parameters**: for optional features. These are after the question mark at the end.
 
 > The `req.params` and `req.query` are objects that hold their data in key-value pairs
 
->Route Parameters
+- Route Parameters
 ``` JavaScript
 const express = require("express");
 const app = express();
@@ -68,7 +67,7 @@ const port = process.env.PORT || 3000;
 app.listen(port);
 ```
 
->Query Parameters
+- Query Parameters
 ```JavaScript
 const express = require("express");
 const app = express();
@@ -211,10 +210,10 @@ app.listen(port);
 
 ### Middleware Functions
 
-> Stops the request-response cyle and returns a response object, or passes control to another middleware function.
-> The route handler is a middleware function as it terminates the cycle and returns a response object.
+Stops the request-response cycle and returns a response object, or passes control to another middleware function.
+- The route handler is a middleware function as it terminates the cycle and returns a response object.
 
-> Custom middleware functions.
+- Custom middleware functions.
 ```JavaScript
 // in logger file
 function logger(req, res, next){
@@ -227,7 +226,7 @@ app.use(logger());
 ```
 What happens here is that the `app.use` is a  function that calls a middleware function `logger`. This middleware function executes its instructions `console.log()` and then proceeds to the `next()` function. Without this `next()` function, the code will hang. Once the `next()` is called, flow continues again in the main file, which is the main idea of middleware.
 
->Builtin middleware functions.
+- Built-in middleware functions.
 ```JavaScript
 app.use(express.urlencoded( {extended: true} ));
 ```
@@ -239,8 +238,8 @@ app.use(express.static(<foldername>));
 ```
 This `static` middleware function allows to host static content, such as images or text files. Add the name of the folder with the static content as the parameter. The static content will be visible from the root url of the site and not under the folder name.
 
-> Third party middleware functions can be found [Middleware Functions](https://expressjs.com/en/resources/middleware.html)
-> only use them if necessary as they impact the performance.
+Third party middleware functions can be found [Middleware Functions](https://expressjs.com/en/resources/middleware.html)
+- Only use them if necessary as they impact the performance.
 
 ---
 
