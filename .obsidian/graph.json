@@ -29,20 +29,6 @@
       }
     },
     {
-      "query": "path:Docker",
-      "color": {
-        "a": 1,
-        "rgb": 14706514
-      }
-    },
-    {
-      "query": "path:GitHub",
-      "color": {
-        "a": 1,
-        "rgb": 16119285
-      }
-    },
-    {
       "query": "path:Rust",
       "color": {
         "a": 1,
@@ -71,7 +57,7 @@
       }
     },
     {
-      "query": "path:Kubernetes  ",
+      "query": "path:DevOps  ",
       "color": {
         "a": 1,
         "rgb": 9166930
@@ -89,12 +75,12 @@
   "showArrow": false,
   "textFadeMultiplier": -0.7,
   "nodeSizeMultiplier": 0.960810810810811,
-  "lineSizeMultiplier": 0.559375,
+  "lineSizeMultiplier": 0.431770833333333,
   "collapse-forces": false,
-  "centerStrength": 0.3125,
-  "repelStrength": 8.33679833679834,
-  "linkStrength": 0.729166666666667,
-  "linkDistance": 68,
-  "scale": 0.24495894830276263,
+  "centerStrength": 0.114583333333333,
+  "repelStrength": 7.5,
+  "linkStrength": 0.140625,
+  "linkDistance": 121,
+  "scale": 0.08889250833638114,
   "close": true
 }
