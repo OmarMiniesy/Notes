@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "ff7ff8f7466b52bf",
+        "id": "c8e7eeffe5fff14f",
         "type": "tabs",
         "children": [
           {
-            "id": "4a8fc3d0ff14a937",
+            "id": "d3f477fda620ea3a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/Terraform/Terraform.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nikto",
+                "query": "infrastructure",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.5
+    "width": 200
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "DevOps/Terraform/Terraform.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "DevOps/Terraform/Terraform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "DevOps/Terraform/Terraform.md"
+              }
             }
           },
           {
@@ -169,8 +177,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4a8fc3d0ff14a937",
+  "active": "d3f477fda620ea3a",
   "lastOpenFiles": [
+    "JavaScript/NodeJs/Application Programming Interface (API).md",
+    "DevOps/Terraform/Terraform.md",
+    "DevOps/Terraform/(IAC) Infrastructure as Code.md",
+    "DevOps/Terraform",
+    "JavaScript/NodeJs/Node Package Manager (NPM).md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
     "AWS Cloud/Relational Database Server (RDS).md",
     "AWS Cloud/Route 53.md",
     "JavaScript/NodeJs/Synchronous and Asynchronous.md",
@@ -179,7 +194,6 @@
     "JavaScript/NodeJs/Promises.md",
     "JavaScript/NodeJs/Nodemon Module.md",
     "JavaScript/NodeJs/NodeJs.md",
-    "JavaScript/NodeJs/Node Package Manager (NPM).md",
     "JavaScript/NodeJs/Modules.md",
     "JavaScript/NodeJs/JOI Module.md",
     "JavaScript/NodeJs/HTTP Module.md",
@@ -188,16 +202,11 @@
     "JavaScript/NodeJs/Environment Variables.md",
     "JavaScript/NodeJs/Callbacks.md",
     "JavaScript/NodeJs/Await-Async.md",
-    "JavaScript/NodeJs/Application Programming Interface (API).md",
     "DevOps/GitHub/gitignore.md",
     "Security/Tools/cURL.md",
     "Web Applications/Virtual Hosting.md",
     "Security/System Security/Linux Privilege Escalation.md",
     "Security/Network Security/Footprinting and Scanning.md",
-    "Security/Network Security/OSINT.md",
-    "Cryptography/Certificates.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Networking/Domain Name System (DNS).md",
     "Excalidraw",
     "Cryptography",
     "DevOps/Kubernetes",
@@ -207,7 +216,6 @@
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
     "Security/Web Application Security/Untitled",
     "Untitled.canvas",
-    "PHP",
-    "Security/Tools"
+    "PHP"
   ]
 }

@@ -22,7 +22,6 @@ npm i -g npm
 ```
 
 ---
-
 ### `package.json`
 
 Any dependency that is installed using `npm` is defined in the `package.json` file. This is where the metadata of the project is stored. Check [[NodeJs#Understanding `package.json`]].
@@ -51,7 +50,6 @@ npm i
 > `node_modules` folder shouldn't be included when saving the project in a GitHub repo, use the [[gitignore]] file.
 
 ---
-
 ### Listing Installed Packages
 
 Used to check the versions of all packages installed
