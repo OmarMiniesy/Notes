@@ -1,6 +1,9 @@
 ### General Notes
 
 This is an [[(IAC) Infrastructure as Code]] tool that automates the handling and management of the necessary configuration files.
+- Done through the [[Configuration Language]].
+
+> A tool for building, changing, and versioning infrastructure efficiently.
 
 Terraform can create and manage resources by communicating with other services and vendors through [[Application Programming Interface (API)]]s. 
 - AWS, Azure, google cloud, [[Kubernetes]], GitHub, and [more](https://registry.terraform.io/).
