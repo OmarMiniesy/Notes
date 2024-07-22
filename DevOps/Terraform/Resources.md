@@ -29,11 +29,6 @@ resource "resource-type" "resource-name"{
 To access an attribute found in a resource to help configuring another resource, the following syntax can be used `resouce_type.resource_name.attribute`.
 
 ---
-### Meta-Arguments
-
-These arguments can be used to modify the behavior of resources.
-
----
 ### Removing and Destroying Resources
 
 To remove resources from the Terraform configuration, simply delete it from the files, this means that the actual infrastructure that was created due to this configuration will be destroyed.

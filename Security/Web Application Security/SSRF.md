@@ -18,6 +18,8 @@ To look for SSRF:
 - [Application Programming Interface (API)](Application%20Programming%20Interface%20(API).md) specification imports
 - Dashboards including ping and similar functionalities to check server statuses
 
+> After finding an SSRF endpoint to attack, use the [[Gopherus]] tool to exploit it.
+
 ---
 ### Attacks
 
