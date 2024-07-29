@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": false,
+  "collapse-color-groups": true,
   "colorGroups": [
     {
       "query": "path:JavaScript",
@@ -39,7 +39,7 @@
       "query": "path:Networking",
       "color": {
         "a": 1,
-        "rgb": 5395168
+        "rgb": 5422560
       }
     },
     {
@@ -69,6 +69,13 @@
         "a": 1,
         "rgb": 14725458
       }
+    },
+    {
+      "query": "path:Scripting  ",
+      "color": {
+        "a": 1,
+        "rgb": 12669664
+      }
     }
   ],
   "collapse-display": false,
@@ -81,6 +88,6 @@
   "repelStrength": 7.5,
   "linkStrength": 0.140625,
   "linkDistance": 121,
-  "scale": 0.2112970192691811,
+  "scale": 0.1102588967227829,
   "close": true
 }
