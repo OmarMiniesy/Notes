@@ -1,12 +1,11 @@
 
 ### General Notes
 
-> Used to get remote code execution (RCE).
+Used to get remote code execution (RCE).
 
-Can be found online: [Cheatsheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md).
+> Can be found online: [Cheatsheet](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md).
 
 ---
-
 ### Finding the Right Reverse shell
 
 Using the cheat sheet above, it has different techniques. Check first for the presence of that programming language or tool on the system before running these commands to make sure they can work.

@@ -39,6 +39,14 @@ Induce the application to make [[HTTP]] request back to the server hosting the a
 Similar to the attack against the server, try fetching an IP address from within the URL sent to the backend.
 - Since this URL originates from there, it will have access to areas non-accessible by normal users.
 
+###### Reading files using [[File Inclusion]]
+
+Sometimes, the endpoint allows for reading of files using the `file` protocol like this:
+```
+file://<path>
+file:///etc/passwrd
+```
+
 ---
 ### Bypassing Defenses
 

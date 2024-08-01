@@ -4,7 +4,7 @@
 > The process of verifying the identity of a user.
 
 * Knowledge Factors: Something you know like a password.
-* Possesion Factors: Something you have like a security token.
+* Possession Factors: Something you have like a security token.
 * Inherence Factors: Something you are like biometrics.
 
 > Authentication is verifying that a user is who they claim to be.
@@ -39,7 +39,7 @@
 
 ##### [[HTTP]] Basic Authentication
 
-> Client recieves token from server constructed by concatenating username and password and then encoding in Base64. ([[Web Encoding]])
+> Client receives token from server constructed by concatenating username and password and then encoding in Base64. ([[Web Encoding]])
 > This token is stored in the browser, and adds it in the `authorization` header of every request.
 ```
 Authorization: Basic base64(username:password)

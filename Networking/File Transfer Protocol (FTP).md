@@ -17,7 +17,7 @@ ftp anonymous@<ip-address>
 
 ---
 
-> To dowload a file from inside the FTP service and use/read it
+> To download a file from inside the FTP service and use/read it
 ```
 get <filename>
 ```

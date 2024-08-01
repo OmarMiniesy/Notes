@@ -2,13 +2,13 @@
 ### General Notes
 
 > Constraints on who can perform actions or access resources.
-> Dependant on [[Authentication]] and [[Sessions]] management.
+> Dependent on [[Authentication]] and [[Sessions]] management.
 
-> Vertical, Horizontal, and Context-dependant access controls.
+> Vertical, Horizontal, and Context-dependent access controls.
 
 ---
 
-### Vertial Access Control
+### Vertical Access Control
 
 > Mechanisms that restrict access to sensitive resources that aren't available to all users.
 > Different types of users have access to different resources.

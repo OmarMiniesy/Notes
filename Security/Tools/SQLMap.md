@@ -1,25 +1,24 @@
 
 ### General Notes
 
-> Automated tool to test for [[SQL Injections]].
-> Gets information about the Database and system being used.
+Automated tool to test for [[SQL Injections]].
+- Gets information about the Database and system being used.
 
-> Data is saved in `/usr/share/sqlmap/output/sqlmap.test` for each url used.
-> Can use `--flush-session` to reset this data.
+> Data is saved in `/usr/share/sqlmap/output/sqlmap.test` for each URL used. Can use `--flush-session` to reset this data.
 
-SQLmap performs automatic hash decryption using dictionary methods when it stumbles upon any value that resembles a hash format.
+`SQLmap` performs automatic hash decryption using dictionary methods when it stumbles upon any value that resembles a hash format.
 
 ---
 ### Finding Injections
 
-To properly obtain the URL as well as all the [[HTTP]] headers and [[Cookies]], we can copy the request from the network tab as [[cURL]]. It has the exact same format as SQLmap.
+To properly obtain the URL as well as all the [[HTTP]] headers and [[Cookies]], we can copy the request from the network tab as [[cURL]]. It has the exact same format as `SQLmap`.
 
 * To test a query parameter (`GET` [[HTTP]] parameter) :
 ```bash
 sqlmap -u "/url?param=1&param2=2" --batch
 sqlmap -u "/url?param=1&param2=2" -p param2
 ```
-> The parameter we want to test should be placed in the url, `param` in this case.
+> The parameter we want to test should be placed in the URL, `param` in this case.
 > `--batch` means don't ask for any user input and continue with default values.
 > `-p` specifies which parameter we want to test.
 
@@ -104,20 +103,18 @@ Adding the `*` in any of the above headers also tests for [[SQL Injections]] in 
 
 > To bypass this defense that makes it hard for automated tools to attack websites, the `--csrf-token` flag is passed. 
 
-SQLmap tries to parse the target response and obtain a new token so that it can be used in the next request. Even if `--csrf-token` flag isn't present but one of the parameters or data being passed has a CSRF token, SQLmap will prompt the user to update this token for the remaining requests.
+`SQLmap` tries to parse the target response and obtain a new token so that it can be used in the next request. Even if `--csrf-token` flag isn't present but one of the parameters or data being passed has a CSRF token, `SQLmap` will prompt the user to update this token for the remaining requests.
 
 ##### Bypassing Unique Value Requirements
 
-> Some parameters need unique values in parameters. To achieve this so that each request sent has a different value for the parameter, the `--randomize` flag is used with the name of the parameter that should be randomized.
-
+- Some parameters need unique values in parameters. To achieve this so that each request sent has a different value for the parameter, the `--randomize` flag is used with the name of the parameter that should be randomized.
 ```bash
 sqlmap -u "/url?param1=13" --randomize=param1
 ```
 
 ##### Calculated Parameters
 
-> Some parameters that get passed are a result of some modification or calculation. Thi can be achieved by using the `--eval` flag and writing python code that calculates this parameter.
-
+- Some parameters that get passed are a result of some modification or calculation. This can be achieved by using the `--eval` flag and writing python code that calculates this parameter.
 ```bash
 sqlmap -u "/url?p1=1&p2=2" --eval="p2=p1+1" 
 ```
@@ -131,7 +128,6 @@ These can be used to tamper with the requests to bypass some defense mechanisms.
 ```bash
 --tamper=<name1>,<name2>
 ```
-> using scripts.
 
 ---
 ### Post Exploitation

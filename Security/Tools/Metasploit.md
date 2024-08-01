@@ -66,7 +66,7 @@ set payload <path-to-payload>
 
 ### Searchsploit
 
-> Used to search for vulnerabilities for software, found also on [exploitdb](https://www.exploit-db.com/).
+Used to search for vulnerabilities for software, found also on [exploitdb](https://www.exploit-db.com/).
 
 ```shell
 searchsploit <target-software>
@@ -82,10 +82,9 @@ searchploit <code-num> -p
 
 ### Proxy
 
-> To set a proxy such as [[Burp Suite]] to view requests and responses better.
+To set a proxy such as [[Burp Suite]] to view requests and responses better.
 
-After choosing the exploit, we can set a the `PROXIES` flag to hold `HTTP:127.0.0.1:8080`.
-
+- After choosing the exploit, we can set a the `PROXIES` flag to hold `HTTP:127.0.0.1:8080`.
 ```
 set PROXIES HTTP:127.0.0.1:8080
 ```

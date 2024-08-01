@@ -24,7 +24,7 @@ let v = vec![1, 2, 3];
 
 ##### Update
 > To update a vector, it must be mutable `mut`, and we can use the `push` method.
-> We dont need to identify type as Rust infers the type from the data we push
+> We don't need to identify type as Rust infers the type from the data we push
 ```Rust
 let mut v = Vec::new();
 v.push(1);
