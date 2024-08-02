@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "354726120f790c2f",
+        "id": "3454a96ffd15c979",
         "type": "tabs",
         "children": [
           {
-            "id": "911462b91f173474",
+            "id": "b40951a0613209e2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Authentication.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "56faaa4ffec5cfdb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/Hydra.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -44,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SSI",
+                "query": "nmap ",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 261.5
+    "width": 221.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -89,6 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Security/Tools/Hydra.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -105,6 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Security/Tools/Hydra.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +146,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Security/Tools/Hydra.md"
+              }
             }
           },
           {
@@ -169,34 +191,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "911462b91f173474",
+  "active": "56faaa4ffec5cfdb",
   "lastOpenFiles": [
+    "Security/Web Application Security/Authentication.md",
+    "Security/Tools/Hydra.md",
+    "Web Applications/HTTP.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Security/Web Application Security/WebApplication Fingerprinting.md",
+    "Security/Web Application Security/Subdomain Enumeration.md",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Phishing.md",
+    "Security/Web Application Security/Information Disclosure.md",
+    "Security/Web Application Security/Google Hacking.md",
+    "Security/Web Application Security/File Upload.md",
+    "Security/Web Application Security/File Inclusion.md",
     "Security/Web Application Security/Exploiting Misconfigured HTTP Verbs.md",
     "Security/Web Application Security/DOM Based Vulnerabilities.md",
     "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/CSRF.md",
     "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Security/Web Application Security/CORS.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Clickjacking.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Tools/SQLMap.md",
-    "Security/Tools/Wireshark.md",
-    "Security/Tools/nmap.md",
-    "Security/Tools/netcat.md",
-    "Security/Tools/mysql.md",
-    "Security/Tools/Metasploit.md",
-    "Security/Tools/John the Ripper.md",
-    "Security/Tools/Hydra.md",
-    "Security/Tools/Gopherus.md",
-    "Security/Tools/cURL.md",
-    "Security/Tools/Burp Suite.md",
-    "Security/System Security/Reverse Shells.md",
-    "Security/System Security/Meterpreter.md",
-    "Security/System Security/Malware.md",
-    "Security/System Security/Linux Privilege Escalation.md",
+    "Web Applications/XML.md",
+    "Web Applications/WebSockets.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",

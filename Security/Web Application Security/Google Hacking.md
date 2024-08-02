@@ -1,11 +1,10 @@
 
 ### General Notes
 
-> Using advanced search queries in the google search, **Google Dorks**.
-> [Google Hacking Database](https://www.exploit-db.com/google-hacking-database).
+Using advanced search queries in the google search, **Google Dorks**.
+- [Google Hacking Database](https://www.exploit-db.com/google-hacking-database).
 
 ---
-
 ### Commands
 
 * `site`: You can use this command to include only results on a given hostname. 

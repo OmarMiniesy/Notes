@@ -59,7 +59,7 @@
 
 > [[DOM Based Vulnerabilities#Web Message Manipulation]].
 
-#### Cross Origin Resource Sharing ([[CORS]])
+#### Cross Origin Resource Sharing ([[Cross-Origin Resource Sharing (CORS)]])
 
 > Allows browser to bypass SOP to access some resources.
 > Using custom [[HTTP]] headers.

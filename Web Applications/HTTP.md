@@ -1,25 +1,24 @@
 
 ### General Notes
 
-> Hypertext Transfer Protocol (HTTP).
-> Application layer [[Protocol]].
-> Client-Server [[Protocol]] to transfer web pages and web application data.
+Hypertext Transfer Protocol (HTTP).
+- Application layer [[Protocol]].
+- Client-Server [[Protocol]] to transfer web pages and web application data.
 
-> HTTP connects to a web server such as [[Apache]] HTTP Server.
-> Client sends requests and server sends back responses.
-> Works on top of the [[Transport Layer]]'s TCP protocol.
+HTTP connects to a web server such as [[Apache]] HTTP Server.
+- Client sends requests and server sends back responses.
+- Works on top of the [[Transport Layer]]'s TCP protocol.
 
-> Its a clear text protocol, so it can be intercepted. 
-> There is no authentication present between parties communicating.
-> Therefore, to protect HTTP, [[HTTPS]] is used.
+Its a clear text protocol, so it can be intercepted. 
+- There is no authentication present between parties communicating.
+- Therefore, to protect HTTP, [[HTTPS]] is used.
 
-> HTTP is stateless, meaning that each request is completely unrelated to the ones preceding it/
-> [[Cookies]] were created to make HTTP stateful.
+HTTP is stateless, meaning that each request is completely unrelated to the ones preceding it
+- [[Cookies]] were created to make HTTP stateful.
 
 > [HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html).
 
 ---
-
 ### HTTP Request
 
 Format of HTTP request. 
@@ -41,7 +40,8 @@ Message Body \r\n
 
 ### HTTP Response
 
-> Contains the Status-Line which has the protocol version and the response code with its meaning.
+Contains the Status-Line which has the protocol version and the response code with its meaning.
+
 > [HTTP Status Codes](https://www.restapitutorial.com/httpstatuscodes.html) : The response codes.
 
 | Type  | Description                                                                                                                                 |
@@ -57,17 +57,23 @@ Message Body \r\n
 ### HTTP Verbs
 
 #### Get
-> Used to request a resource.
-> `GET /page.php HTTP/1.1`
+- Used to request a resource.
+ ```
+ GET /page.php HTTP/1.1
+ ```
 
->Can pass arguments, add after the `?` character.
->`GET /page.php?name=mins HTTP/1.1`
+- Can pass arguments, add after the `?` character.
+```
+GET /page.php?name=mins HTTP/1.1
+```
 
 #### Post
-> Used to submit `HTML` form data and transfer files.
-> `POST /login.php HTTP/1.1`
+- Used to submit `HTML` form data and transfer files.
+```
+POST /login.php HTTP/1.1`
+```
 
-> Can pass arguments only in the message body.
+- Can pass arguments only in the message body.
 ```
 < Header >\r\n
 \r\n
@@ -75,14 +81,17 @@ username=mins&password=mins
 ``` 
 
 #### Head
-> Requests the headers that would be returned if it was used with the `GET` verb.
-> `HEAD / HTTP/1.1`
-
+- Requests the headers that would be returned if it was used with the `GET` verb.
+```
+HEAD / HTTP/1.1
+```
 #### Put 
-> Used to upload a file to the server.
-> `PUT /path/to/destination HTTP/1.1`
+- Used to upload a file to the server.
+```
+PUT /path/to/destination HTTP/1.1
+```
 
-> The file to be placed is put in the message body.
+- The file to be placed is put in the message body.
 ```
 < Header >\r\n
 \r\n
@@ -90,19 +99,22 @@ username=mins&password=mins
 ```
 
 #### Delete
-> Used to delete a file from the server.
-   `DELETE /path/to/destination HTTP/1.1`
+- Used to delete a file from the server.
+```
+DELETE /path/to/destination HTTP/1.1
+```
 
 #### Options
-> Used to query the webserver for the enabled `HTTP` verbs.
-> `OPTIONS / HTTP/1.1`
+- Used to query the webserver for the enabled `HTTP` verbs.
+```
+OPTIONS / HTTP/1.1
+```
 
 ---
-
 ### HTTP Headers
 
 Headers have a format of `header-name:header-value`.
-> There can be multiple values for the same header.
+- There can be multiple values for the same header.
 ##### General Headers
 * Used in both responses and requests and are used to describe the message itself not its contents.
 
@@ -155,7 +167,6 @@ Set-Cookie: <name>=<value>
 ```
 
 ---
-
 ### Authentication
 
 Authentication by HTTP takes many forms, but they follow some steps:
@@ -164,7 +175,9 @@ Authentication by HTTP takes many forms, but they follow some steps:
 ```
 WWW-Authenticate: <type> realm=<realm>
 ```
-> The `type` is the type of authentication used, there are many types. And the `realm` is a message that indicates the scope of access.
+- This is accompanied by a status code of `401 Unauthorized`.
+
+> The `type` is the **type** of authentication used, there are many types. And the `realm` is a message that indicates the scope of access.
 
 3. Client responds with `Authorization` header to authenticate and get access. This header usually contains the credentials encoded in some manner.
 ```
@@ -175,7 +188,7 @@ Authorization: <type> <credentials>
 
 The simplest form of HTTP authentication and it uses only `GET` requests.
 
-* The `WWW-Authenticate` header sent by the server to indicate invalid permissions has the `basic` type.
-* The `Authorization` header sent back by client has credentials encoded in base64. It also has the `basic` type.
+* The `WWW-Authenticate` header sent by the server to indicate invalid permissions. Has the `basic` **type**.
+* The `Authorization` header sent back by client has credentials encoded in base64. It also has the `basic` **type**.
 
 ---
