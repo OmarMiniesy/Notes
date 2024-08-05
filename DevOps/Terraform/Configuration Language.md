@@ -1,4 +1,3 @@
-
 ### General Notes
 
 The language is used to create the configuration files that describe the needed *resources* that will be instantiated.

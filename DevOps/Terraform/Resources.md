@@ -4,7 +4,7 @@ This is the smallest *infrastructure* object that [[Terraform]] defines.
 - Defined using `Blocks` using the [[Configuration Language]].
 
 Each resource that is created is specified using the resource type, and for each type, there is different configuration that is specified using its arguments.
-- Some resources are made available through [[Providers]]
+- Some resources are made available through [[Providers]].
 
 For the resources defined in the configuration files to be deployed as real infrastructure, the `apply` process must be done.
 - When an infrastructure object is created, it is saved in the *state*.

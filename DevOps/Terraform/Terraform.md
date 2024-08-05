@@ -14,3 +14,18 @@ Terraform works in 3 stages:
 3. The plan is executed given approval, and the resources are created and provisioned, and dependencies are respected in the execution.
 
 ---
+### Files and Modules
+
+A **module** is a collection of `.tf` files kept together in a directory.
+- Nested directories are separate modules.
+
+> Files are saved using the `.tf` extension.
+
+All the files that comprise the module are grouped together and can be considered a single document.
+
+> There is always a root module, and there can only exist one instance of it.
+
+A terraform configuration is complete once it contains a root module, and a tree of child modules.
+- The root module is the working directory where Terraform is called.
+
+---

@@ -16,7 +16,6 @@ npm init --yes
 > This creates a node project with default values using the `--yes` flag.
 
 ---
-
 ### Understanding `package.json`
 
 This is how a `package.json` file looks like:
