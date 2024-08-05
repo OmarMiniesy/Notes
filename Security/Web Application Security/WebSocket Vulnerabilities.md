@@ -27,9 +27,9 @@
 ---
 ### Cross-Site WebSocket Hijack
 
-> Arises when the websocket handshake request relies only on [[Cookies]] for [[Sessions]] handling and doesn't have any [[CSRF]] tokens.
-> Attacker can create a malicious page on their own domain that established a cross-site webocket connection to the vulnerable application.
-> The application then works with the connection of the websocket in the context of the victim user session.
+> Arises when the WebSocket handshake request relies only on [[Cookies]] for [[Sessions]] handling and doesn't have any [[CSRF]] tokens.
+> Attacker can create a malicious page on their own domain that established a cross-site WebSocket connection to the vulnerable application.
+> The application then works with the connection of the WebSocket in the context of the victim user session.
 > Attacker can send data to the server and read responses, there is 2 way interaction.
 
 > Performing a cross-site websocket hijack.

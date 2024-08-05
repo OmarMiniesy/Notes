@@ -29,7 +29,7 @@ cewl -m5 --lowercase -w <path-to-save> <url>
 > `--lowercase` converts them all to lowercase.
 > These words are then saved into the wordlist using `-w`.
 
-Using ffuf, we can then try and fuzz for any files using this wordlist, in companionship with the `raft` seclists wordlists for extensions, as well as the `wp-admin`, `wp-content`, `wp-includes` folders that might contain sensitive information.
+Using [[ffuf]], we can then try and fuzz for any files using this wordlist, in companionship with the `raft` SecLists wordlists for extensions, as well as the `wp-admin`, `wp-content`, `wp-includes` folders that might contain sensitive information.
 
 ```bash
 ffuf -w /folders.txt:FOLDERS, /wordlist.txt:WORDLIST, /extensions.txt:EXTENSIONS -u http://yahoo.com/FOLDERS?WORDLISTEXTENSIONS

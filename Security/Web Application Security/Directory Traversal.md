@@ -26,7 +26,7 @@ filename=../../etc/passwd
 ##### Absolute Path
 
 > Some web applications can strip the directory traversal sequences.
-> This can be bypassed by using absolute pathes, starting directly from root directory.
+> This can be bypassed by using absolute paths, starting directly from root directory.
 ```
 filename=/etc/passwd
 ```

@@ -52,7 +52,7 @@ To save the subdomains using `crt.sh`:
 curl -s https://crt.sh/?q=<DOMAIN>&output=json | jq -r '.[]' "\(.name_value)\n\(.common_name)"' | sort -u > "<DOMAIN>_crt.sh.txt"
 ```
 
-###### 6. Using [ffuf](https://github.com/ffuf/ffuf)
+###### 6. Using [[ffuf]]
 
 ```
 ffuf -u https://FUZZ.yahoo.com/ -w /usr/share/wordlists/seclists/Discovery/DNS/<wordlist> -p 1

@@ -2,22 +2,22 @@
 ### General Notes
 
 The process of verifying the identity of a user.
-* Knowledge Factors: Something you know like a password.
-* Possession Factors: Something you have like a security token.
-* Inherence Factors: Something you are like biometrics.
+* Knowledge Factors: Something you know, like a password.
+* Possession Factors: Something you have, like a security token.
+* Inherence Factors: Something you are, like biometrics.
 
 > Authentication is verifying that a user is who they claim to be.
 > Authorization is verifying whether a user is allowed to do something.
 
 ---
-### Password Attacks
+### Username-Password Attacks
 
 Against websites that have username-password based login mechanisms.
 ##### Brute Force Attacks
 
 Trial and error attempts to guess valid user credentials while paying attention to:
 1. Status Codes: [[HTTP]] response codes can be observed. Sometimes the right username gives a different response than a wrong username.
-2. Error Messages: Returned error messages are sometimes different when both username *and* password are incorrect, not just one of them. Observe characters for spelling mistakes, and so on.
+2. Error Messages: Returned error messages are sometimes different when both username *and* password are incorrect, not just one of them. Observe characters for spelling mistakes, and so on. Check [[Authentication#Attack using ffuf]].
 3. Response Times: Observe response times. Sometimes websites will check password only if username is correct, so the response time increases. Can be checked by entering really large passwords, to make the website take longer to respond.
 4. Response sizes.
 
@@ -32,12 +32,25 @@ User rate limiting occurs when making too many login attempts in a short period 
 2. Manually by user after completing a CAPTCHA.
 3. Automatically after a certain time period.
 
-> User rate limiting can be bypassed by trying multiple passwords in one login request.
-
+> User rate limiting can be bypassed by trying multiple passwords in one login request. 
 ##### Default Passwords
 
 An important element to try is default username-password combinations.
 - SecLists has a default password directory: `/seclists/Passwords/Default-Credentials` with many files.
+
+###### Attack using [[ffuf]]
+
+To brute force usernames, we can use `ffuf` to check for different responses that can give us hints about their existence.
+
+We can exploit the difference in error messages returned when a valid and an invalid username is entered.
+```bash
+ffuf -w <wordlist> -u <URL> -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "username=FUZZ&password=whatever" -fr "Invalid username"
+```
+- This is a `POST` request to a login form, so the data and headers must be added. Check section 5.
+- The data `-d` parameters should be obtained from the target website, `username` and `password` are just examples.
+- The `-fr` flag is used to filter out the string `Invalid username`.
+
+> The same can be done to attack passwords by simply changing the location of the `FUZZ` parameter.
 
 ---
 ### Multi-Factor Authentication
