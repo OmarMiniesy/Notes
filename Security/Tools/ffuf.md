@@ -75,7 +75,7 @@ ffuf -u https://yahoo.com -w /usr/share/seclists/Discovery/Web-Content/burp-para
 ```
 > Add the parameters to the body using `-d`.
 > Add the header `content-type: application/x-www-form-urlencoded` in the case of PHP.
-> Add the `-x POST` to indicate a POST request.
+> Add the `-X POST` to indicate a POST request.
 
 After finding the parameter names, we can now fuzz for their values using a similar technique.
 

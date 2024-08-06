@@ -51,4 +51,11 @@ sed s/min/men/g <file-name>
 
 This takes the source string after `s`, the new string to replaced after it, then finally, the number of instance to be replaced. `g` means global, so all instances, but if it is a number n, then the first n occurrences are replaced.
 
+- To write a sequence of numbers to a file that have the same number of digits (adds 0s to the left):
+```bash
+seq -w <start> <end> > <file-name>
+```
+
+Specify the start and end number, and the `-w` flag is used to pad all numbers to the same length.
+
 ---
