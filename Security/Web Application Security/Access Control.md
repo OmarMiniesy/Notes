@@ -97,18 +97,6 @@ When these attacks fail, sometimes the website redirects.
 Restrict access to resources based on the state in which the user is in, such as performing actions in the wrong order.
 
 ---
-### Insecure Direct Object References (IDOR)
-
-Access control vulnerability when an application uses user input to access objects.
-- Can be used to gain horizontal or vertical privilege escalation using similar techniques as above.
-- The difference is that these access points lead directly into sensitive databases.
-- They are often present when resources are located in static files on the server.
-- These file names could be guessed or have their pattern cracked, so that attackers can access whichever files they want.
-
-> This file name can be altered by an attacker to view other files for other users as well.
-
----
-
 ### `Referer` HTTP Header Control
 
 Some websites base controls on the `Referer` header.
