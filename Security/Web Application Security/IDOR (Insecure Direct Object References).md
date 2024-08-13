@@ -40,3 +40,19 @@ Try logging in with multiple users and try calling functions from the first user
 - Monitor how the APIs are called from a user, and try making the same call from another user that shouldn't be able to perform it by duplicating parameters and their values.
 
 ---
+### Exploiting IDOR
+
+Once an IDOR vulnerability is located, basic techniques can be used to test it and see whether some data can be exposed.
+- If the basic techniques don't work, then we need to better *understand the website*, how the *object references are calculated*, and how the *access control system works*.
+
+##### Enumeration
+
+Once a specific IDOR vulnerability is located, try using fuzzing tools like [[ffuf]] or brute force through [[Burp Suite]]'s intruder to enumerate and expose data belonging to other users.
+
+> Try writing scrips that automate the process of calculating the value of the object reference using tools like [[cURL]]. 
+
+---
+### Preventing IDOR Vulnerabilities
+
+
+---

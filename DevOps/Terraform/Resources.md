@@ -10,6 +10,9 @@ For the resources defined in the configuration files to be deployed as real infr
 - When an infrastructure object is created, it is saved in the *state*.
 - When new resources are added, or old resources are modified, Terraform updates the state with the new configurations.
 
+Some resources need to be used in relationship with other resources, meaning that they need to be processed before other resources are processed.
+- This is called a dependency, and these are handled automatically by Terraform.
+
 > Full documentation [here](https://developer.hashicorp.com/terraform/language/resources).
 
 ---

@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Stands for client URL.
@@ -6,7 +5,6 @@ Stands for client URL.
 - Used to write scripts and automate sending requests and handling responses.
 
 ---
-
 ### Usage
 
 * Send a basic [[HTTP]] request by giving its URL.
@@ -14,7 +12,9 @@ Stands for client URL.
 curl [options...] www.google.com
 ```
 
-* To save the response into a file with the same name as the file in the path use `-O`. To choose the name of the output file use `-o`.
+* To save the response into a file with the same name as the file in the path use `-O`. 
+* To choose the name of the output file use `-o`.
+* To keep the same filename as that in the server, use `-OJ`.
 ```bash
 curl -O www.google.com/index.html
 curl -o <file-name> www.google.com/index.html
@@ -62,7 +62,7 @@ curl -X POST -d 'username=mins' -L www.google.com
 ---
 ### HTTPS
 
-If the SSL certificate is invalid or outdated, then cURL will not work properly for [[HTTPS]] URLs.
+If the SSL certificate is invalid or outdated, then `cURL` will not work properly for [[HTTPS]] URLs.
 - This is to protect against the Man-in-the-Middle HTTP downgrade attack.
 
 * To skip the HTTPS certificate check, use the `-k` flag.
