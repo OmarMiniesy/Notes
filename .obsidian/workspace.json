@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "8dbf33f2570f0322",
+        "id": "36776a93069d53b1",
         "type": "tabs",
         "children": [
           {
-            "id": "bef8a8d8aea0c4f1",
+            "id": "71c1700b6e0aaaa3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/cURL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "41b516f844a10d21",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Scripting/Bash Scripting.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 233.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Scripting/Bash Scripting.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -123,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Scripting/Bash Scripting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md"
+                "file": "Scripting/Bash Scripting.md"
               }
             }
           },
@@ -190,13 +178,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "41b516f844a10d21",
+  "active": "71c1700b6e0aaaa3",
   "lastOpenFiles": [
-    "Security/Tools/cURL.md",
-    "Scripting/Linux Commands - Permissions.md",
-    "Scripting/Linux Commands - Networks.md",
     "Scripting/Linux Commands - Files.md",
+    "Scripting/Bash Scripting.md",
+    "Scripting/Linux Commands - Networks.md",
+    "Scripting/Untitled",
+    "Security/Tools/cURL.md",
     "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+    "Scripting/Linux Commands - Permissions.md",
     "DevOps/Terraform/Meta-Arguments.md",
     "DevOps/Terraform/Dependency Lock File.md",
     "DevOps/Terraform/Resources.md",
@@ -216,7 +206,6 @@
     "Security/Web Application Security/Information Disclosure.md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Security/Web Application Security/WebSocket Vulnerabilities.md",
-    "Security/Web Application Security/SSRF.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
@@ -227,7 +216,6 @@
     "Security/Wireless Network Security",
     "Wireless Networks",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png",
-    "Security/Web Application Security/Untitled",
     "Untitled.canvas"
   ]
 }
