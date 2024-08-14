@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "36776a93069d53b1",
+        "id": "4725cd2a35eb9bbf",
         "type": "tabs",
         "children": [
           {
-            "id": "71c1700b6e0aaaa3",
+            "id": "2fb8f4a10fe0d1eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/Bash Scripting.md",
+                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5,
-    "collapsed": true
+    "width": 233.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scripting/Bash Scripting.md",
+                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Scripting/Bash Scripting.md",
+                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scripting/Bash Scripting.md"
+                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md"
               }
             }
           },
@@ -178,10 +177,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "71c1700b6e0aaaa3",
+  "active": "2fb8f4a10fe0d1eb",
   "lastOpenFiles": [
-    "Scripting/Linux Commands - Files.md",
     "Scripting/Bash Scripting.md",
+    "Scripting/Linux Commands - Files.md",
     "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
     "Security/Tools/cURL.md",

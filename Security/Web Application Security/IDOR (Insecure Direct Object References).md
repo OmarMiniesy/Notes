@@ -12,6 +12,10 @@ This vulnerability is usually the result of weak access control systems in the b
 
 > IDOR's main impact is having users access private files and resources that they do not have proper authorization to view.
 
+There are two types of IDOR vulnerabilities:
+- **Information disclosure**: obtaining access to files and resources that belong to other users.
+- **Insecure function calls**: obtaining access to call APIs or execute functions acting as another user.
+
 ---
 ### Identifying IDOR
 
@@ -43,16 +47,18 @@ Try logging in with multiple users and try calling functions from the first user
 ### Exploiting IDOR
 
 Once an IDOR vulnerability is located, basic techniques can be used to test it and see whether some data can be exposed.
+- Basic techniques such as changing file names, changing request method, changing the request path, and so on.
 - If the basic techniques don't work, then we need to better *understand the website*, how the *object references are calculated*, and how the *access control system works*.
-
-##### Enumeration
 
 Once a specific IDOR vulnerability is located, try using fuzzing tools like [[ffuf]] or brute force through [[Burp Suite]]'s intruder to enumerate and expose data belonging to other users.
 
 > Try writing scrips that automate the process of calculating the value of the object reference using tools like [[cURL]]. 
 
----
-### Preventing IDOR Vulnerabilities
+For websites that deal with files, try checking how the files are named, how they are uploaded, and the requests that deals with naming them.
+- Check how the requests send the data, and to which files are they uploaded and redirected to.
 
+Another security issue is when websites send access control related privileges through the frontend requests, or by the client.
+- They can be part of the parameters, the cookies, or part the body.
+- This means they are under the control of the client, meaning they can be changed through a proxy tool.
 
 ---
