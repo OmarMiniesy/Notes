@@ -3,6 +3,14 @@
 **eXtensible Markup Language**: Language used for storing and transporting data.
 - No predefined tags, user-created tags to customize and define the data.
 
+> Not focused on displaying data, but mostly on the process of storing it and representing it.
+
+An XML document comprises of element trees, where each element in the tree is denoted by a `tag`.
+- An XML document also starts with the **Declaration**, which defines the version used and the type of encoding used.
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+```
+
 ---
 ### XML Entity
 
@@ -22,6 +30,13 @@ DTD can be external, internal, or hybrid.
 * External DTD: The DTD is loaded into the document.
 * Internal DTD: The DTD is self-contained within the document.
 * Hybrid DTD: Both.
+
+DTDs can be placed within an XML document itself after the **Declaration**, or be referenced using the `SYSTEM` keyword:
+```XML
+<!DOCTYPE foo SYSTEM "foo.dtd">
+<!DOCTYPE foo SYSTEM "http://foo.com/foo.dtd">
+```
+- The reference can be to another file or a link to it. 
 
 ---
 ### Custom XML Entity
@@ -46,7 +61,7 @@ Custom entity whose definition is outside the DTD they are declared.
 
 ###### XML Parameter Entity
 
-Special kind of XML entity which is only referenced elsewhere within the same entity DTD.
+Special kind of XML entity which is only referenced elsewhere within the same entity DTD, unlike other entities that can be referenced anywhere in the XML document.
 ```XML
 <!DOCTYPE foo [ <!ENTITY % ext SYSTEM "file:///path/to/file" > ]>
 ```

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4725cd2a35eb9bbf",
+        "id": "a71340ee1296eb80",
         "type": "tabs",
         "children": [
           {
-            "id": "2fb8f4a10fe0d1eb",
+            "id": "d9aad32618f52218",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Web Applications/XML.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 308.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Web Applications/XML.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
+                "file": "Web Applications/XML.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/IDOR (Insecure Direct Object References).md"
+                "file": "Web Applications/XML.md"
               }
             }
           },
@@ -177,14 +177,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2fb8f4a10fe0d1eb",
+  "active": "d9aad32618f52218",
   "lastOpenFiles": [
+    "Security/Web Application Security/XXE Injection.md",
+    "Web Applications/XML.md",
+    "Security/Tools/cURL.md",
+    "Security/Web Application Security/[Command Injection.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Google Hacking.md",
+    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Scripting/Bash Scripting.md",
     "Scripting/Linux Commands - Files.md",
     "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
-    "Security/Tools/cURL.md",
-    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Scripting/Linux Commands - Permissions.md",
     "DevOps/Terraform/Meta-Arguments.md",
     "DevOps/Terraform/Dependency Lock File.md",
@@ -192,8 +197,6 @@
     "Security/Web Application Security/Access Control.md",
     "Security/Web Application Security/HTTP Verb Tampering.md",
     "Web Applications/HTTP.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Web Applications/XML.md",
     "Security/Web Application Security/Authentication.md",
     "Security/Tools/ffuf.md",
     "Web Applications/Sessions.md",
@@ -203,8 +206,6 @@
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/WebApplication Fingerprinting.md",
     "Security/Web Application Security/Information Disclosure.md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
