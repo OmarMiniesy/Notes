@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/XML.md",
+                "file": "Security/Web Application Security/XXE Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/XML.md",
+                "file": "Security/Web Application Security/XXE Injection.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/XML.md",
+                "file": "Security/Web Application Security/XXE Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/XML.md"
+                "file": "Security/Web Application Security/XXE Injection.md"
               }
             }
           },
@@ -157,8 +157,7 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
@@ -179,8 +178,9 @@
   },
   "active": "d9aad32618f52218",
   "lastOpenFiles": [
-    "Security/Web Application Security/XXE Injection.md",
     "Web Applications/XML.md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/XXE Injection.md",
     "Security/Tools/cURL.md",
     "Security/Web Application Security/[Command Injection.md",
     "Security/Web Application Security/Command Injection.md",
@@ -205,7 +205,6 @@
     "Web Applications/Cookies.md",
     "Security/Web Application Security/Subdomain Enumeration.md",
     "Security/Web Application Security/WebApplication Fingerprinting.md",
-    "Security/Web Application Security/Information Disclosure.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
