@@ -18,6 +18,42 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "48ba8651bced333f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/HTTP Verb Tampering.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "901984442a934f25",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/cURL.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10180cb33066a2a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Scripting/Bash Scripting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -178,15 +214,15 @@
   },
   "active": "d9aad32618f52218",
   "lastOpenFiles": [
-    "Web Applications/XML.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Security/Web Application Security/XXE Injection.md",
+    "Scripting/Bash Scripting.md",
     "Security/Tools/cURL.md",
+    "Security/Web Application Security/HTTP Verb Tampering.md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Web Applications/XML.md",
     "Security/Web Application Security/[Command Injection.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Google Hacking.md",
     "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
-    "Scripting/Bash Scripting.md",
     "Scripting/Linux Commands - Files.md",
     "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
@@ -195,7 +231,6 @@
     "DevOps/Terraform/Dependency Lock File.md",
     "DevOps/Terraform/Resources.md",
     "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/HTTP Verb Tampering.md",
     "Web Applications/HTTP.md",
     "Security/Web Application Security/Authentication.md",
     "Security/Tools/ffuf.md",

@@ -96,7 +96,7 @@ while [ <condition> ]; do
 
 - For loop:
 ```bash
-for i in {1..5} do
+for i in {1..5}; do
 	echo $i
 done
 ```

