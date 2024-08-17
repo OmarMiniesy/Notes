@@ -4,11 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "a71340ee1296eb80",
+        "id": "69cbfda0b86687b1",
         "type": "tabs",
         "children": [
           {
-            "id": "d9aad32618f52218",
+            "id": "a79271f778debfaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/File Inclusion.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fd2253c75479e178",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,36 +32,36 @@
             }
           },
           {
-            "id": "48ba8651bced333f",
+            "id": "5ecb3b71c4aaeafe",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/HTTP Verb Tampering.md",
+                "file": "Security/Tools/ffuf.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "901984442a934f25",
+            "id": "a20984c138f59857",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Tools/cURL.md",
+                "file": "Security/Web Application Security/Directory Traversal.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "10180cb33066a2a2",
+            "id": "04f36571e55d885b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/Bash Scripting.md",
+                "file": "Security/Web Application Security/Command Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -129,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/XXE Injection.md",
+                "file": "Security/Web Application Security/File Inclusion.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,7 +158,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/XXE Injection.md",
+                "file": "Security/Web Application Security/File Inclusion.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/XXE Injection.md"
+                "file": "Security/Web Application Security/File Inclusion.md"
               }
             }
           },
@@ -212,15 +224,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d9aad32618f52218",
+  "active": "a79271f778debfaf",
   "lastOpenFiles": [
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/File Inclusion.md",
+    "Security/Tools/ffuf.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Directory and File Enumeration.md",
     "Scripting/Bash Scripting.md",
+    "Security/Web Application Security/File Upload.md",
     "Security/Tools/cURL.md",
     "Security/Web Application Security/HTTP Verb Tampering.md",
-    "Security/Web Application Security/XXE Injection.md",
     "Web Applications/XML.md",
     "Security/Web Application Security/[Command Injection.md",
-    "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Google Hacking.md",
     "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Scripting/Linux Commands - Files.md",
@@ -233,13 +250,9 @@
     "Security/Web Application Security/Access Control.md",
     "Web Applications/HTTP.md",
     "Security/Web Application Security/Authentication.md",
-    "Security/Tools/ffuf.md",
     "Web Applications/Sessions.md",
     "Security/Tools/OSINT.md",
     "Markdown/Markdown Syntax.md",
-    "Web Applications/Cookies.md",
-    "Security/Web Application Security/Subdomain Enumeration.md",
-    "Security/Web Application Security/WebApplication Fingerprinting.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",

