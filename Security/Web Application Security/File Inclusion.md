@@ -22,9 +22,12 @@ Identify injection points where attacker input can change the data being display
 - Using techniques from the [[Directory Traversal]] note, attackers can bypass defenses that are put in place to protect against file inclusion vulnerabilities.
 - Check out also [[Command Injection]] note for more complex techniques to bypass filters.
 
-##### Using PHP Filters
+##### Using PHP Wrappers
 
-We can use `php` filters, which are a type of `php` wrappers that can take input and filter it in a defined manner by the type of filter used.
+`PHP` wrappers are special stream wrappers that allow `PHP` to interact with various types of data streams, such as files, URLs, or even custom [[Protocol]]s, in a consistent and unified way.
+###### Filter Wrapper
+
+This takes input and filters it in a defined manner by the type of filter used.
 - The `filter` wrapper has 2 important parameters, which are `resource` and `read`, that define how to apply the filter and the resource file to be applied on.
 
 The base64 conversion filter is useful in disclosing source code, and it can be used by specifying the file name:
@@ -33,4 +36,20 @@ php://filter/read=convert.base64-encode/resource=filename
 ```
 - The filename can be discovered by using a fuzzing tool as part of [[Directory and File Enumeration]] with a *fixed* file type extension at the end of `.php`.
 
----
+###### Data Wrapper
+
+This can be used to include external data, such as `php` code.
+- Can **only** be used if the `allow_url_include` setting is enabled in the configuration file.
+- it is set to off by default, so check it before trying to exploit.
+
+> The configuration file is found at `/etc/php/X.Y/apache2/php.ini` for Apache and `/etc/php/X.Y/fpm/php.ini` for Nginx, where `X.Y` is the `php` version.
+
+To read the configuration file, we will use the `filter` wrapper with the base64 filter because the characters they contain can break the output stream:
+```url
+php://filter/read=convert.base64-encode/resource=../../../../etc/php/7.4/apache2/php.ini
+```
+- Try different versions starting from the latest and keep going for earlier versions.
+- Base64 decode the output and find the setting for `allow_url_include`.
+
+If it is set to on, then the `Data` wrapper can be used to be upload data, in this case, a web shell is the winner.
+- The data could be uploaded encoded as Base64
