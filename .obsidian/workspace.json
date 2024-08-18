@@ -4,64 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "69cbfda0b86687b1",
+        "id": "f8bd3c588add4a14",
         "type": "tabs",
         "children": [
           {
-            "id": "a79271f778debfaf",
+            "id": "7db20db6e594005d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Security/Web Application Security/File Inclusion.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fd2253c75479e178",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/XXE Injection.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5ecb3b71c4aaeafe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Tools/ffuf.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a20984c138f59857",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Directory Traversal.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "04f36571e55d885b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/Command Injection.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Permis",
+                "query": "expect",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -125,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 308.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -224,13 +177,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a79271f778debfaf",
+  "active": "7db20db6e594005d",
   "lastOpenFiles": [
-    "Security/Web Application Security/XXE Injection.md",
+    "Security/System Security/Reverse Shells.md",
     "Security/Web Application Security/File Inclusion.md",
-    "Security/Tools/ffuf.md",
-    "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Tools/ffuf.md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Security/Web Application Security/Directory and File Enumeration.md",
     "Scripting/Bash Scripting.md",
     "Security/Web Application Security/File Upload.md",
@@ -239,7 +194,6 @@
     "Web Applications/XML.md",
     "Security/Web Application Security/[Command Injection.md",
     "Security/Web Application Security/Google Hacking.md",
-    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Scripting/Linux Commands - Files.md",
     "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
@@ -252,7 +206,6 @@
     "Security/Web Application Security/Authentication.md",
     "Web Applications/Sessions.md",
     "Security/Tools/OSINT.md",
-    "Markdown/Markdown Syntax.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
