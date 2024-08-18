@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -179,8 +178,9 @@
   },
   "active": "7db20db6e594005d",
   "lastOpenFiles": [
-    "Security/System Security/Reverse Shells.md",
+    "Security/Web Application Security/SQL Injections.md",
     "Security/Web Application Security/File Inclusion.md",
+    "Security/System Security/Reverse Shells.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Directory Traversal.md",
     "Security/Tools/ffuf.md",
@@ -205,7 +205,6 @@
     "Web Applications/HTTP.md",
     "Security/Web Application Security/Authentication.md",
     "Web Applications/Sessions.md",
-    "Security/Tools/OSINT.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
