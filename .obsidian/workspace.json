@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5779ec71208b6477",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Security/Tools/ffuf.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -77,7 +89,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5
+    "width": 297.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -178,16 +191,17 @@
   },
   "active": "7db20db6e594005d",
   "lastOpenFiles": [
-    "Security/Web Application Security/SQL Injections.md",
+    "Security/Tools/ffuf.md",
     "Security/Web Application Security/File Inclusion.md",
+    "Security/Network Security/Firewall.md",
+    "Scripting/Bash Scripting.md",
+    "Security/Web Application Security/SQL Injections.md",
     "Security/System Security/Reverse Shells.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Directory Traversal.md",
-    "Security/Tools/ffuf.md",
     "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Security/Web Application Security/Directory and File Enumeration.md",
-    "Scripting/Bash Scripting.md",
     "Security/Web Application Security/File Upload.md",
     "Security/Tools/cURL.md",
     "Security/Web Application Security/HTTP Verb Tampering.md",
@@ -204,7 +218,6 @@
     "Security/Web Application Security/Access Control.md",
     "Web Applications/HTTP.md",
     "Security/Web Application Security/Authentication.md",
-    "Web Applications/Sessions.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",
