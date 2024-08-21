@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f8bd3c588add4a14",
+        "id": "051ad933bbefd76e",
         "type": "tabs",
         "children": [
           {
-            "id": "7db20db6e594005d",
+            "id": "3a3f516bce049201",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5779ec71208b6477",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Tools/ffuf.md",
+                "file": "Web Applications/Sessions.md",
                 "mode": "source",
                 "source": false
               }
@@ -60,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "expect",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -89,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5,
+    "width": 200,
     "collapsed": true
   },
   "right": {
@@ -106,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
+                "file": "Web Applications/Sessions.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -123,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md",
+                "file": "Web Applications/Sessions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/File Inclusion.md"
+                "file": "Web Applications/Sessions.md"
               }
             }
           },
@@ -189,16 +177,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "7db20db6e594005d",
+  "active": "3a3f516bce049201",
   "lastOpenFiles": [
     "Security/Tools/ffuf.md",
     "Security/Web Application Security/File Inclusion.md",
+    "Security/Web Application Security/Command Injection.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Web Applications/Cookies.md",
+    "Scripting/Linux Commands - Files.md",
     "Security/Network Security/Firewall.md",
     "Scripting/Bash Scripting.md",
     "Security/Web Application Security/SQL Injections.md",
     "Security/System Security/Reverse Shells.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Directory Traversal.md",
     "Security/Web Application Security/XXE Injection.md",
     "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
     "Security/Web Application Security/Directory and File Enumeration.md",
@@ -208,7 +198,6 @@
     "Web Applications/XML.md",
     "Security/Web Application Security/[Command Injection.md",
     "Security/Web Application Security/Google Hacking.md",
-    "Scripting/Linux Commands - Files.md",
     "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
     "Scripting/Linux Commands - Permissions.md",
@@ -217,7 +206,6 @@
     "DevOps/Terraform/Resources.md",
     "Security/Web Application Security/Access Control.md",
     "Web Applications/HTTP.md",
-    "Security/Web Application Security/Authentication.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",

