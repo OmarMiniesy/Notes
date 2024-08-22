@@ -3,7 +3,7 @@
 
 A user is tricked into clicking on actionable content in a decoy website, leading to victims submitting their data to false sources.
 
-> Clickjacking attacks are not mitigated by the [[CSRF]] token as a target session is established with content loaded from an authentic website and with all requests happening on-domain.
+> Clickjacking attacks are not mitigated by the [[Cross Site Request Forgery (CSRF)]] token as a target session is established with content loaded from an authentic website and with all requests happening on-domain.
 
 > Can use [[Burp Suite]]'s Clickbandit tool to create clickjacking payloads.
 ---

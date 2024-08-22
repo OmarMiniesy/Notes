@@ -99,7 +99,7 @@ Adding the `*` in any of the above headers also tests for [[SQL Injections]] in 
 
 ### Bypassing Web Application Protections
 
-##### Bypassing Anti-[[CSRF]]  
+##### Bypassing Anti-[[Cross Site Request Forgery (CSRF)]]  
 
 > To bypass this defense that makes it hard for automated tools to attack websites, the `--csrf-token` flag is passed. 
 

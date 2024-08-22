@@ -27,7 +27,7 @@
 ---
 ### Cross-Site WebSocket Hijack
 
-> Arises when the WebSocket handshake request relies only on [[Cookies]] for [[Sessions]] handling and doesn't have any [[CSRF]] tokens.
+> Arises when the WebSocket handshake request relies only on [[Cookies]] for [[Sessions]] handling and doesn't have any [[Cross Site Request Forgery (CSRF)]] tokens.
 > Attacker can create a malicious page on their own domain that established a cross-site WebSocket connection to the vulnerable application.
 > The application then works with the connection of the WebSocket in the context of the victim user session.
 > Attacker can send data to the server and read responses, there is 2 way interaction.
@@ -35,14 +35,14 @@
 > Performing a cross-site websocket hijack.
 1. Review the handshake and check if they are vulnerable to CSRF.
 2. Check if the messages handle the user session only by cookies.
-3. Exploit using [[CSRF]] by opening a cross-site websocket request to the vulnerable site.
+3. Exploit using [[Cross Site Request Forgery (CSRF)]] by opening a cross-site websocket request to the vulnerable site.
 
 ---
 ### Securing WebSockets
 
 * Using the `wss://` [[Protocol]].
 * Hard code the URL of the websocket endpoint and don't include user-input data.
-* Protect WebSocket handshake from [[CSRF]] to avoid cross-site hijacking.
+* Protect WebSocket handshake from [[Cross Site Request Forgery (CSRF)]] to avoid cross-site hijacking.
 * Treat data recieved on both sides of the connection as unclean and handle safely.
 
 ---

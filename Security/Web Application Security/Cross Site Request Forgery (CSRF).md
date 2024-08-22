@@ -1,8 +1,6 @@
 
 ### General Notes
 
-> Cross-Site Request Forgery.
-
 > Allows an attacker to induce a user to perform actions that they don't intend to perform.
 > Attackers personate other users.
 > Allows attackers to bypass the [[Same Origin Policy (SOP)]].

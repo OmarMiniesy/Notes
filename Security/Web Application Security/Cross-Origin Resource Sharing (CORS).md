@@ -7,7 +7,7 @@ Browser mechanism that enables controlled access to resources located outside of
 
 CORS relaxes the [[Same Origin Policy (SOP)]] for [[HTTP]] requests between websites with different domains through the use of HTTP headers.
 
-> CORS doesn't protect against [[CSRF]].
+> CORS doesn't protect against [[Cross Site Request Forgery (CSRF)]].
 
 ---
 
@@ -45,7 +45,7 @@ When a cross-domain request uses a non standard [[HTTP]] method or headers, this
 Some applications simply read the `origin` header from the incoming request, and then respond with the ACAO header set to the value in that `origin` header.
 - They can also respond with the ACAC header to allow including [[Cookies]].
 
-- If a [[CSRF]] token or [[Application Programming Interface (API)]] key is included in the response, use this payload.
+- If a [[Cross Site Request Forgery (CSRF)]] token or [[Application Programming Interface (API)]] key is included in the response, use this payload.
 ```JavaScript
 var req = new XMLHttpRequest();
 req.onload = reqListener;

@@ -55,7 +55,7 @@ Higher level subdomains cannot set cookies for lower level subdomains.
 > Cookie with `host-only` flag set to true is one that does not have a domain value. Sent only to target domain that set it.
 
 ---
-### Modifying Cookies for [[CSRF]]
+### Modifying Cookies for [[Cross Site Request Forgery (CSRF)]]
 
 - A technique to check for adding cookies is through header injection.
 ```

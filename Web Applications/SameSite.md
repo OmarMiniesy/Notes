@@ -1,7 +1,7 @@
 
 ### General Notes
 
-Used to prevent [[CSRF]] attacks.
+Used to prevent [[Cross Site Request Forgery (CSRF)]] attacks.
 
 ---
 ### What is a Site ? 
