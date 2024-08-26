@@ -1,20 +1,11 @@
 
 ### General notes
 
-> `ORCHESTRATION SERVICE`
+Service that deploys webapp and handles all the necessary other services such as [[Elastic Cloud Compute (EC2)]], [[Virtual Private Cloud (VPC)]], and the storage in [[Simple Storage Service (S3)]] buckets.
+- As this service is *elastic*, it can add and remove resources as it sees fit to meet performance requirements.
 
-> Service that deploys webapp and handles all the necessary other services such as [[Elastic Cloud Compute (EC2)]], [[Virtual Private Cloud (VPC)]], and more.
+This service provides a layer of abstraction that helps developers achieve their goals and launch applications without going through the hassle of configuring everything.
 
-> Takes about 10 minutes to be created.
-
+> It is called an *orchestration service*, or a *PaaS*, Platform as a Service.
 
 ___
-### Creation
-
-> Copy link and paste in browser to open the webapp created
-
-____
-
-### Deletion
-
-> Must delete the Beanstalk application, the Beanstalk environment, and [[Simple Storage Service (S3)]] buckets.

@@ -1,26 +1,21 @@
-
 ### General Notes
 
-> Access and control AWS account using command line
-
-> Uses python
+Access and control AWS account and services using the command line.
 
 To use the CLI:
-1. AWS CLI must be installed 
-2. [[Security Services]] IAM users with admin privelages
-3. Configure AWS CLI
+1. AWS CLI must be installed.
+2. [[Security Services]] IAM users with admin privileges.
+3. Configure AWS CLI.
 
-> Version of AWS running
+- Version of AWS running
 ``` bash
 aws --version
 ```
 
+>All AWS commands: [CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/#available-services) , [Config Basics](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html), [Config and credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html), [Environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html).
 
->All AWS commands: [CLI Command Reference](https://docs.aws.amazon.com/cli/latest/reference/#available-services)
 ___
-
 ### 1. Installation - Linux
-
 
 1. Download the installation file, `-o` renames the download file
 ```bash
@@ -45,7 +40,6 @@ aws --version
 Reference: [Installing or updating the latest version of the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 ___
-
 ### 2. IAM Admin User
 
 1. Create user and choose the `Programmatic Access`
@@ -53,7 +47,6 @@ ___
 3. Save the `Access key ID` and `Secret Access Key`
 
 ___
-
 ### 3. Configuration
 
 1. Enter this command to configure the CLI
@@ -78,37 +71,34 @@ aws configure set aws_session_token "<generated access key>"
 ```
 
 
-> The access key is stored in `~/.aws/credentials` , check it out with `cat` command
-> The profile is stored in `~/.aws/config` , check it out with `cat` command
+- The access key is stored in `~/.aws/credentials` , check it out with `cat` command.
+- The profile is stored in `~/.aws/config` , check it out with `cat` command
 
-> Change any of the parameters `aws configure set <parameter> <value>`
+> Change any of the parameters `aws configure set <parameter> <value>`.
 
->If you already have a profile set locally, you can use `--profile <profile-name>` option with any of the AWS commands above. This will resolve the conflict with the existing profiles set up locally.
+If you already have a profile set locally, you can use `--profile <profile-name>` option with any of the AWS commands above. 
+- This will resolve the conflict with the existing profiles set up locally.
 
->View the current configuration
+- View the current configuration
 ```bash
 aws configure list
 ```
 
->View all existing profiles
+- View all existing profiles
 ```bash
 aws configure list-profiles
 ```
 
-> View the users
+- View the users
 ```bash
 aws iam list-users
 ```
 
-> Environment variables
+- Environment variables
 ```bash
 export AWS_CONFIG_FILE=~/.aws/config
 export AWS_SHARED_CREDENTIALS_FILE=~/.aws/credentials
 ```
-
-> [Config Basics](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
-> [Config and credentials](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
-> [Environment variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
 ___
 

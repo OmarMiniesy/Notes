@@ -4,40 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "051ad933bbefd76e",
+        "id": "80b9db10315169c2",
         "type": "tabs",
         "children": [
           {
-            "id": "3a3f516bce049201",
+            "id": "3744f7e58c768adf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Session Security.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c8400d970bb81811",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Cookies.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b381170d2531a438",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Sessions.md",
+                "file": "AWS Cloud/CloudFront.md",
                 "mode": "source",
                 "source": false
               }
@@ -117,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Security/Web Application Security/Session Security.md",
+                "file": "AWS Cloud/CloudFront.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -134,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Security/Web Application Security/Session Security.md",
+                "file": "AWS Cloud/CloudFront.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -157,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Security/Web Application Security/Session Security.md"
+                "file": "AWS Cloud/CloudFront.md"
               }
             }
           },
@@ -200,35 +176,35 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3a3f516bce049201",
+  "active": "3744f7e58c768adf",
   "lastOpenFiles": [
+    "AWS Cloud/CloudTrail.md",
+    "AWS Cloud/Command Line Interface (CLI).md",
+    "AWS Cloud/Route 53.md",
+    "AWS Cloud/CloudFront.md",
+    "AWS Cloud/Cloud Watch.md",
+    "AWS Cloud/Cloud Formation.md",
+    "AWS Cloud/Security Services.md",
+    "AWS Cloud/Redshift.md",
+    "AWS Cloud/Relational Database Server (RDS).md",
+    "AWS Cloud/Dynamo DB.md",
+    "AWS Cloud/Elastic Block Storage (EBS).md",
+    "AWS Cloud/Simple Storage Service (S3).md",
+    "AWS Cloud/Virtual Private Cloud (VPC).md",
+    "AWS Cloud/Simple Queue Service (SQS).md",
+    "AWS Cloud/Simple Notification Service (SNS).md",
+    "AWS Cloud/Lambda.md",
+    "AWS Cloud/Elastic Load Balancer.md",
+    "AWS Cloud/Elastic Container Surface (ECS).md",
+    "AWS Cloud/Elastic Cloud Compute (EC2).md",
+    "AWS Cloud/Elastic Beanstalk.md",
+    "AWS Cloud/EC2 Auto Scaling.md",
     "Web Applications/Sessions.md",
-    "Security/Web Application Security/Session Security.md",
     "Web Applications/Cookies.md",
+    "Security/Web Application Security/Session Security.md",
     "Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
     "Security/Tools/ffuf.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Scripting/Linux Commands - Files.md",
-    "Security/Network Security/Firewall.md",
-    "Scripting/Bash Scripting.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/System Security/Reverse Shells.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
-    "Security/Web Application Security/Directory and File Enumeration.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Tools/cURL.md",
-    "Security/Web Application Security/HTTP Verb Tampering.md",
-    "Web Applications/XML.md",
-    "Security/Web Application Security/[Command Injection.md",
-    "Security/Web Application Security/Google Hacking.md",
-    "Scripting/Linux Commands - Networks.md",
     "Scripting/Untitled",
-    "Scripting/Linux Commands - Permissions.md",
-    "DevOps/Terraform/Meta-Arguments.md",
-    "DevOps/Terraform/Dependency Lock File.md",
     "Scripting",
     "DevOps/Terraform",
     "DevOps",

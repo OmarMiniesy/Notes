@@ -1,15 +1,13 @@
 
 ### General Notes
 
-> Model an entire infrastructure in a text file written in `json`
-
-> Cloud Formation designer can be used to create the templates, called stacks
+Model an entire infrastructure in a text file written in `json`.
+- Cloud Formation designer can be used to create the templates, called stacks.
 
 ___
-
 ### Creating a Stack
 
-> Creating a stack that creates an [[Simple Storage Service (S3)]] bucket
+Creating a stack that creates an [[Simple Storage Service (S3)]] bucket.
 
 1. Designer tab, and drag a [[Simple Storage Service (S3)]] bucket
 2. For the `json` properties, add this `json` code 
@@ -41,3 +39,5 @@ ___
 4. validate template to check validity
 5. Deploy stack
 6. Delete stack after done for charges
+
+---

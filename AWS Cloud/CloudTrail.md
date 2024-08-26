@@ -13,15 +13,8 @@ Provides an event history:
 -   parameters for the actions
 -   responses returned
 
-> Have up to 5 cloud trails per region
-> stores for up to 90 days
+> Have up to 5 cloud trails per region and stores for up to 90 days.
 
-> Logs can be stored in [[Simple Storage Service (S3)]] buckets or delivered to CloudWatch
-
-___
-
-### Important 
-
->Remember, that the first trail does not attract billing charges. However, you incur charges for the [[Simple Storage Service (S3)]] bucket that will store your logs. You can create additional trails on a charge-basis.
+Logs can be stored in [[Simple Storage Service (S3)]] buckets or delivered to CloudWatch.
 
 ___

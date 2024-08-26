@@ -1,10 +1,9 @@
 
 ### General Notes
 
-> [[Domain Name System (DNS)]] for AWS
+[[Domain Name System (DNS)]] for AWS
 
 ___
-
 ### Features
 
 -   scales automatically to manage spikes in DNS queries

@@ -1,11 +1,15 @@
 
 ### General Notes
 
->  NoSQL document database service that is fully managed
+NoSQL database service that is fully managed.
+- It is cheap, fast, and can scale horizontally.
+- However, it is hard to model relational date.
+
 >  Data stored in `JSON` format 
 
-___
+There is another service called Document DB that is similar to mongodb.
 
+___
 ### Tables
 
 > Must have primary key
