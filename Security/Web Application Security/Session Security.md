@@ -11,12 +11,16 @@ If an attacker manages to grab a hold of a user session, then the attacker can i
 
 There are several ways to have access to session identifiers belonging to another user:
 - Traffic sniffing using a tool like [[Wireshark]].
-- [[Cross Site Scripting (XSS)]].
+- [[Cross Site Scripting (XSS)]]: crafting an XSS payload that sends to the attacker the user session information.
 - Browser history.
 - Log diving
 - Access to a database with session information.
 
-##### PHP Session IDs: `PHPSESSID`
+#### Obtaining Identifiers Post Exploitation 
+
+Given the case that the server has already been exploited, these methods below are ways of obtaining the session identifiers given access to the server.
+
+###### PHP Session IDs: `PHPSESSID`
 
 The location where session IDs are saved on a PHP server is identified in the `PHP.ini` file in an entry called `session.save_path`.
 - Therefore, the first step is identifying *where* the `PHP.ini` file is, and then checking the value of the `session.save_path` variable.
@@ -28,18 +32,31 @@ cat /path/of/php.ini | grep "session.save_path"
 The output of this command will tell us where the session identifiers are stored.
 - The files in this directory are of the format: `sess_valueofphpsessid`.
 
-##### Java Session IDs:
+###### Java Session IDs:
 
+The `manager` element is responsible for creating and storing information about [[HTTP]] sessions.
+- The session data is stored in either a default location called `SESSIONS.ser`, or in a storage location chosen by the `Store` element.
+- More info [here](https://tomcat.apache.org/tomcat-6.0-doc/config/manager.html).
 
-##### .NET Session IDs
+###### .NET Session IDs
 
+Session data can be found in:
+- The application worker process (aspnet_wp.exe) - This is the case in the _InProc Session mode_.
+- StateServer (A Windows Service residing on IIS or a separate server) - This is the case in the _OutProc Session mode_.
+- An SQL Server
 
+More info:  [Introduction To ASP.NET Sessions](https://www.c-sharpcorner.com/UploadFile/225740/introduction-of-session-in-Asp-Net/).
 
 ---
 ### Session Hijacking
 
 The attacker takes advantage of insecure session identifiers and finds a way to obtain them.
 - The attacker then uses them to authenticate to the server and impersonate the victim.
+
+Below are a list of techniques that can be used to perform session hijacking.
+##### Using [[Cross Site Scripting (XSS)]]
+
+##### Using [[Cross Site Request Forgery (CSRF)]]
 
 ---
 ### Session Fixation
@@ -60,3 +77,5 @@ Check if there are any valid session identifier values **present in the URL**, a
 - Try testing it by entering a random value in the parameter, and see if this value gets saved in the cookie. If that is the case, then there is the fixation vulnerability.
 
 ---
+
+

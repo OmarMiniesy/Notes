@@ -6,7 +6,7 @@ This provides compute power and resources by creating a virtual computer.
 They are essential servers provided for rent in the cloud using a "pay as you go" business model. 
 - Therefore, make sure to stop or terminate when not in use to prevent payment.
 
-> Can have extra storage by using [[Elastic Block Storage (EBS)]]
+> Can have extra storage by using [[Elastic Block Storage (EBS)]].
 
 ___
 ### How to Connect - Linux/Mac

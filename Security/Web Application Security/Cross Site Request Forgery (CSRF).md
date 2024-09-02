@@ -122,6 +122,11 @@ email=wiener@normal-user.com
 > If there is any cookie modification/setting available - [[Cookies#Modifying Cookies for CSRF]] - , they obtain a token and put the token into the cookie as well.
 > They then feed this cookie and token into the victim browser through the CSRF attack.
 
+###### CSRF token generation is simple
+> Try and check if the token is generated using a simple technique, like `md5(username)`, `sha1(username)`, `md5(current date + username)` etc..
+> If there is a match, then the token is not unique and can be easily forged.
+
+
 ---
 
 ### 2. Bypassing [[SameSite]] [[Cookies]]

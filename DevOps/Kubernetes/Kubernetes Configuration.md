@@ -32,7 +32,7 @@ These files are either written in `YAML` or `JSON`, and they are stored in the c
 	* These are specific to the `kind` found in the configuration file.
 2. The status:
 	* Added automatically by [[Kubernetes]], and is used to determine if what is actually running in the cluster is what is required.
-	* Updated continously to monitor the cluster, and whenever a component dies, kubernetes acts.
+	* Updated continuously to monitor the cluster, and whenever a component dies, Kubernetes acts.
 
 > The status information comes from the `etcd` found in the master node.
 

@@ -7,14 +7,14 @@ This is an open source *container orchestration tool*. These can be [[Docker]] [
 * Virtual machines.
 * Physical machines.
 * Cloud environments.
-* Hybried environments.
+* Hybrid environments.
 
 Kubernetes guarantees the following:
 * High availability; no downtime.
 * High scalability; performance varies with load.
 * Disaster recovery; backups and restorations.
 
-> A kubernetes system is also called a **cluster**.
+> A Kubernetes system is also called a **cluster**.
 
 ---
 ### Architecture of the Cluster
@@ -22,7 +22,7 @@ Kubernetes guarantees the following:
 ##### Overview
 The cluster is composed of:
 * A master node. (At least 1, 2 in production)
-	* Runs several kubernetes processes required for functionality.
+	* Runs several Kubernetes processes required for functionality.
 * Worker nodes.
 	* These have the applications that we want to run.
 * Virtual network.
@@ -33,8 +33,8 @@ The master node has several process that are essential to ensure that the cluste
 
 1. [[Application Programming Interface (API)]] server [[Container]].
 * The entry point to the cluster for the different clients.
-* These clients are the kubernetes UI, API, CLI. 
-> The UI is used by the kubernetes dashboard and the API is used by scripts to automate tasks.
+* These clients are the Kubernetes UI, API, CLI. 
+> The UI is used by the Kubernetes dashboard and the API is used by scripts to automate tasks.
 * Important for the [[Kubernetes Configuration]].
 
 2. The Controller Manager.

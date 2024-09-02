@@ -5,7 +5,7 @@
 > Manipulated by JavaScript.
 
 > DOM attacks arise when a website takes JavaScript from users, or a **source**, and passes it into a function, a **sink**.
-> DOM vulnerabilities occcur when problems arise from client-side code manipulating attacker-controllable data.
+> DOM vulnerabilities occur when problems arise from client-side code manipulating attacker-controllable data.
 
 > The URL is accessed via the `location` object.
 
@@ -87,8 +87,8 @@ $.ajax()
 ```
 
 > If an attacker can modify the string passed to a redirection API, then this vulnerability can be escalated into a JavaScript injection attack.
-> Basically, we can use `javascript:` and enter javascript code that can be executed into the URL.
-> Once the URL is pressed, the javascript code is executed.
+> Basically, we can use `javascript:` and enter JavaScript code that can be executed into the URL.
+> Once the URL is pressed, the JavaScript code is executed.
 
 ###### Prevention
 

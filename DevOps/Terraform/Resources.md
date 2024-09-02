@@ -4,7 +4,7 @@ This is the smallest *infrastructure* object that [[Terraform]] defines.
 - Defined using `Blocks` using the [[Configuration Language]].
 
 Each resource that is created is specified using the resource type, and for each type, there is different configuration that is specified using its arguments.
-- Some resources are made available through [[Providers]].
+- Some resources are made available through [[Provider]].
 
 For the resources defined in the configuration files to be deployed as real infrastructure, the `apply` process must be done.
 - When an infrastructure object is created, it is saved in the *state*.
@@ -12,6 +12,7 @@ For the resources defined in the configuration files to be deployed as real infr
 
 Some resources need to be used in relationship with other resources, meaning that they need to be processed before other resources are processed.
 - This is called a dependency, and these are handled automatically by Terraform.
+- Check the `depends-on` [[Meta-Arguments]] for more information.
 
 > Full documentation [here](https://developer.hashicorp.com/terraform/language/resources).
 

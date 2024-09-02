@@ -1,4 +1,3 @@
-
 ### General notes
 
 Service that deploys webapp and handles all the necessary other services such as [[Elastic Cloud Compute (EC2)]], [[Virtual Private Cloud (VPC)]], and the storage in [[Simple Storage Service (S3)]] buckets.

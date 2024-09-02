@@ -1,6 +1,6 @@
 ### General Notes
 
-[[Terraform]] uses external dependencies to manage the configurations. These external dependencies can be [[Resources]] or [[Providers]].
+[[Terraform]] uses external dependencies to manage the configurations. These external dependencies can be [[Resources]] or [[Provider]].
 - These dependencies are independent, meaning they are updated and managed separately, requiring that some sort of *version control* needs to be implemented.
 
 > There are **version constraints** that can be defined whilst writing the files using the [[Configuration Language]] which specifically state the versions of the resources to be called.

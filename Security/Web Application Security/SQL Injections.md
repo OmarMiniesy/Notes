@@ -1,7 +1,7 @@
 ### General Notes
 
 > Unauthorized user take control over SQL statements used by a web application.
-> To explot SQL Injections, first find the injection point, and then craft a payload to take control over a query.
+> To exploit SQL Injections, first find the injection point, and then craft a payload to take control over a query.
 > Try TRUE and FALSE injections to check which one works.
 
 > SQL queries inside web applications must connect to the database, submit the query, and then retrieve the results.
