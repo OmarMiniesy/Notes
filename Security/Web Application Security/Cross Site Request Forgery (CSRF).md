@@ -3,7 +3,7 @@
 
 > Allows an attacker to induce a user to perform actions that they don't intend to perform.
 > Attackers personate other users.
-> Allows attackers to bypass the [[Same Origin Policy (SOP)]].
+> Allows attackers to bypass the [[Same Origin Policy (SOP)]] since the attacker doesn't need to read the response from the server.
 > Could allow for full account take over.
 
 > CSRF vulnerabilities occur when vulnerable web apps simply trust the cookies sent by web browsers without further validation.

@@ -35,7 +35,7 @@ Different injection characters to try and their [[Web Encoding#URL Encoding / Pe
 |`)`|`%29`|
 
 > Detecting injection points:
-* Enter the sinqle qoute character `'` and look for weird responses.
+* Enter the single quote character `'` and look for weird responses.
 * Submit SQL syntax that evaluates that evaluates to true and false to see the difference, such as ` OR 1=1` and ` OR 1=2`.
 * Payloads to trigger time delays.
 * Submit payloads that trigger an out of band network interaction.
