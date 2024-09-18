@@ -1,4 +1,3 @@
-
 ### General Notes
 
 The process of verifying the identity of a user.
