@@ -32,13 +32,18 @@ curl -s -X GET <URL> | sed 's/href=/\n/g' | sed 's/src=/\n/g' | grep 'themes' | 
 ```
 
 Not all plugins and themes can be passively discovered, sometimes, we need to try and access the files themselves of that software, using active enumeration.
-- One technique is to use directory listing to show all the files in the directory.
+- One technique is to use the directory indexing to show all the files in the directory.
 
 ```bash
 curl -s -X GET http://blog.inlanefreight.com/wp-content/plugins/mail-masta/ | html2text
 ```
 
 > Plugins can be active or inactive, and in both cases, they are still accessible. If a plugin is deleted, then it is inaccessible.
+
+Can also use the `wpscan` tool to enumerate for plugins and themes.
+```bash
+wpscan --url <link> -e ap --plugins-detection aggressive
+```
 
 ###### 3. Users
 
@@ -50,7 +55,20 @@ To identify users, we can start observing the posts and trying to discover the `
 Another technique is to use the `JSON` endpoint that returns a list of users.
 - This was the case in [[WordPress]] before version 4.7.1, after that, it was patched.
 
+```bash
+curl http://blog.inlanefreight.com/wp-json/wp/v2/users | jq
+```
+
 > We can try to send credentials to the `xmlrpc.php` file, and we can check if the credentials are valid based on the response. 
 
+---
+### Exploitation
+
+- To brute force logging in, we can use the `wpscan` tool:
+```bash
+wpscan --password-attack xmlrpc -t 20 -U <user> -P <passwords-list> --url <url> --rua
+```
+
+- Can also use the `wp_admin_shell_upload` module using [[Metasploit]].
 
 ---
