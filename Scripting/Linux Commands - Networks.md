@@ -1,6 +1,8 @@
 
 A collection of some of the commands I found useful and convenient to use. Check the [[Linux Privilege Escalation]] file for scripts focusing more on security.
 
+> Checkout this [website](https://linux.die.net/abs-guide/index.html) for a guide to bash scripting.
+
 ### IP Address Manipulation 
 
 - To change the [[IP]] address, subnet mask, and-or broadcast address of an interface:

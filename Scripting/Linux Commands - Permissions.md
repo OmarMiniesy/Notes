@@ -1,6 +1,8 @@
 
 A collection of some of the commands I found useful and convenient to use. Check the [[Linux Privilege Escalation]] file for scripts focusing more on security.
 
+> Checkout this [website](https://linux.die.net/abs-guide/index.html) for a guide to bash scripting.
+
 > The permissions of a file are displayed as a string of 10 characters. The first character is `d` for directories and `-` for files. The remaining 9 are `rwx` repeated 3 times. The first 3 are for the user owner, the middle 3 are for the group, and the final 3 are for all the users. If the permission is not granted, it is replaced by a `-`.
 
 ### Changing Permissions

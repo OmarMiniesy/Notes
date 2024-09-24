@@ -2,6 +2,8 @@
 
 A shell script is simply a file containing commands that can be entered in the terminal but are grouped together to execute a larger functionality.
 
+> Checkout this [website](https://linux.die.net/abs-guide/index.html) for a guide to bash scripting.
+
 To write a shell script, the interpreter must be specified.
 - This is done by adding the following at the beginning of the file: `#!`.
 - This is then followed by the path of the shell type used, such as `/bin/bash`.

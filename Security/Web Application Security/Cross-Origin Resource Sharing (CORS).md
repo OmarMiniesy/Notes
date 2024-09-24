@@ -62,7 +62,7 @@ function reqListener() {
 Supporting multiple origins usually works by having a whitelist.
 - A request with the origin header has its value compared against whitelist, if it is found, then the ACAO header is added to the response.
 
-This matching with the whitelist can be played around by appending to the end or the beginning, or by using regular expressions.
+This matching with the whitelist can be played around by appending to the end or the beginning, or by using [[Regular Expressions]].
 * The beginning by testing if it allows all subdomains.
 * To the end if it simply checks the required origin is present.
 

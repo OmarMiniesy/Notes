@@ -76,9 +76,16 @@
         "a": 1,
         "rgb": 12669664
       }
+    },
+    {
+      "query": "path:\"Regular Expressions\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 12272823
+      }
     }
   ],
-  "collapse-display": false,
+  "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": -0.7,
   "nodeSizeMultiplier": 0.960810810810811,
@@ -88,6 +95,6 @@
   "repelStrength": 6.875,
   "linkStrength": 1,
   "linkDistance": 272,
-  "scale": 0.27922616473100953,
+  "scale": 0.14205963007161326,
   "close": true
 }
