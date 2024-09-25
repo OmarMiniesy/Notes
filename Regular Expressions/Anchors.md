@@ -1,6 +1,6 @@
 ### General Notes
 
-These are used to denote the beginning or the end of an expression or word.
+These are used to denote the beginning or the end of an expression or word in [[Regular Expressions]].
 
 ---
 ##### Caret `^`

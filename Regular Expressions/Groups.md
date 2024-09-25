@@ -1,5 +1,7 @@
 ### General Notes
 
+Sometimes, we need to simplify matters in [[Regular Expressions]] by creating groups to hold information in a single unit, similar to mathematics.
+
 We can group some expressions, and then use these groups as references, or to extract information.
 - This is done using the parenthesis `()`.
 

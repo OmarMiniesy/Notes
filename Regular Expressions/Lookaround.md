@@ -1,5 +1,7 @@
 ### General Notes
 
+Used in [[Regular Expressions]] to look for strings and patterns that are present after or before certain phrases.
+
 If the match we are looking for comes right before or right after another phrase, we can use *lookarounds* to achieve our goal, with 4 different variations:
 - Positive lookahead `(?=)`
 - Negative lookahead
