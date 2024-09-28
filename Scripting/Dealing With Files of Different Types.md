@@ -37,4 +37,12 @@ steghide --extract -sf cute-alien.jpg
 ```
 
 ---
+### Decompressing Compressed Files
 
+There are various types of compression mechanisms, such as `bzip2`, `tar`, `gzip`, and so on.
+- In order to determine which compression type is being used, either use the `file` command, or observe the hexdump of the file using the `xxd` tool and check the file's signature.
+- The signature can be compared using this [list](https://en.wikipedia.org/wiki/List_of_file_signatures).
+
+> In order to properly de-compress files, they must be renamed with the extension of the compression algorithm used. Use the `mv` command to achieve this.
+
+---

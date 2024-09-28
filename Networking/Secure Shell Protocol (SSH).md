@@ -33,6 +33,9 @@ ssh -i id_rsa <username>@<ip-address>
 chmod 600 id_rsa
 ```
 
+##### Permissions Error
+If trying to `ssh` using the private key file isn't working due to some permission error, the private key file must have permissions of `600`. It should also be present in the `~/.ssh/` directory.
+
 ---
 
 ### Downloading Files

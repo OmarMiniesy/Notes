@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7a859f12567b6349",
+        "id": "fd0a35d740bf0185",
         "type": "tabs",
         "children": [
           {
-            "id": "43b7c9bcabca73e3",
+            "id": "34a3193f2902cb73",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Insecure Deserialization.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 234.5
+    "width": 234.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Security/Web Application Security/Insecure Deserialization.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Security/Web Application Security/Insecure Deserialization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Security/Web Application Security/Insecure Deserialization.md"
+              }
             }
           },
           {
@@ -169,8 +178,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "34a3193f2902cb73",
   "lastOpenFiles": [
+    "Security/Web Application Security/Insecure Deserialization.md",
+    "Networking/Secure Shell Protocol (SSH).md",
+    "Scripting/Dealing With Files of Different Types.md",
     "Regular Expressions/Regular Expressions.md",
     "Regular Expressions/Matching Letters and Numbers.md",
     "Regular Expressions/Lookaround.md",
@@ -196,9 +208,6 @@
     "Security/Web Application Security/File Upload.md",
     "Security/Web Application Security/Session Security.md",
     "Web Applications/Same Origin Policy (SOP).md",
-    "Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
-    "Web Applications/HTTP.md",
-    "Web Applications/HTTPS.md",
     "Scripting/Untitled",
     "Scripting",
     "DevOps/Terraform",
