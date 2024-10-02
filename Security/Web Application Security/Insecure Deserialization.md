@@ -78,3 +78,30 @@ Classes in Java that implement the interface `java.io.Serializable` can be seria
 ---
 ### Exploiting Insecure Deserialization
 
+There are 2 ways of manipulating serialized objects;
+- Edit the object in its byte stream form.
+- Write a script in the language needed to create and serialize a new object.
+
+> The idea is to change the data inside a serialized object in some way, and then pass this new malicious object into the website via a deserialization process
+
+##### Modifying Object Attributes
+
+Identifying a serialized object to store data, and then change the value of some of the attributes, and then re-send that data.
+- If the server uses this data to give access to certain features, or identify users, then this new object can be used to gain unauthorized access.
+
+It is essential that the new serialized object that was modified to be syntactically correct, so that when the server receives this object and deserializes it to use it, it properly executes what the attacker desires.
+
+> However, this is not always the case if the serialized object has its authenticity first checked.
+
+##### Modifying Data Types
+
+Modifying the data types of serialized objects is especially common in `PHP` based logic due to the *loose comparison* `==` operator.
+- The loose comparison operator when comparing string with integers, it tries to convert the string to an integer and compare them.
+
+This loose comparison operator does the following:
+- `5 == '5'` will result in *true*, since the string is converted to an integer. This is treated as `5 == 5`.
+- `5 == "5 of something"` will result in *true*, where PHP converts the entire alphanumeric string to the first integer. The integer has to be the first character in the string. This is treated as `5 == 5`.
+- For the number `0`, things change. `0 == "no numbers"` this returns *true* because there are no numbers in the string, hence, the entire string is treated as `0`.
+
+> These conditions introduce dangerous logical flaws, hence, it is important to remember indicating the correct data type while serializing to take advantage.
+

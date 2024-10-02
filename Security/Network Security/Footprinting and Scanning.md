@@ -28,7 +28,7 @@ Can be used to perform ping sweeps using the `-sn` flag
 ## 2. OS Fingerprinting
 
 After the network is mapped with the alive hosts, we need to detect if they are [[Networking/Routing]] routers, servers, or clients.
-- Do this by anaysing the response packets we get.
+- Do this by analyzing the response packets we get.
 - A signature is created for the different hosts, and is compared to known ones in a database.
 
 #### [[nmap]]

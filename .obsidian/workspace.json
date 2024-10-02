@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fd0a35d740bf0185",
+        "id": "ac88602ec751f46a",
         "type": "tabs",
         "children": [
           {
-            "id": "34a3193f2902cb73",
+            "id": "e761920411de950c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -178,8 +178,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "34a3193f2902cb73",
+  "active": "e761920411de950c",
   "lastOpenFiles": [
+    "Regular Expressions/Repetitions.md",
+    "Security/Network Security/Footprinting and Scanning.md",
+    "Security/Tools/nmap.md",
+    "Security/Tools/netcat.md",
+    "Regular Expressions/Character Classes.md",
     "Security/Web Application Security/Insecure Deserialization.md",
     "Networking/Secure Shell Protocol (SSH).md",
     "Scripting/Dealing With Files of Different Types.md",
@@ -187,12 +192,10 @@
     "Regular Expressions/Matching Letters and Numbers.md",
     "Regular Expressions/Lookaround.md",
     "Regular Expressions/Groups.md",
-    "Regular Expressions/Character Classes.md",
     "Scripting/Bash Scripting.md",
     "Regular Expressions/Anchors.md",
     "Excalidraw/Drawing 2024-09-24 17.57.00.excalidraw.md",
     "Excalidraw",
-    "Regular Expressions/Repetitions.md",
     "Regular Expressions",
     "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
     "Scripting/Linux Commands - Files.md",
@@ -205,9 +208,6 @@
     "Security/Tools/SQLMap.md",
     "Security/Tools/ffuf.md",
     "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/Session Security.md",
-    "Web Applications/Same Origin Policy (SOP).md",
     "Scripting/Untitled",
     "Scripting",
     "DevOps/Terraform",
