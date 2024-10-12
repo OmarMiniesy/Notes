@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Created to make [[HTTP]] [[Protocol]] stateful.

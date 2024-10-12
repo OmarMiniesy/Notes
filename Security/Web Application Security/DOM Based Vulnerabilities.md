@@ -1,8 +1,9 @@
 
 ### General Notes
 
-> The DOM, or Document Object Model is the browser's hierarchal representation of elements on page.
-> Manipulated by JavaScript.
+The DOM, or Document Object Model is the browser's hierarchal representation of elements on page.
+- This DOM is an API for accessing the HTML in a tree-like structure using JavaScript.
+- The DOM allows changing the HTML of the page in a dynamic way.
 
 > DOM attacks arise when a website takes JavaScript from users, or a **source**, and passes it into a function, a **sink**.
 > DOM vulnerabilities occur when problems arise from client-side code manipulating attacker-controllable data.

@@ -41,8 +41,8 @@ Sec-WebSocket-Accept: 0FFP+2nmNIf/h+4BP36k9uzrYGk=
 ```
 
 > The headers used:
-1. `Connection` and `Upgrade` indicate this is a websocket handshake.
-2. `Sec-WebSocket-Version` specifices the protocol version.
+1. `Connection` and `Upgrade` indicate this is a WebSocket handshake.
+2. `Sec-WebSocket-Version` specifies the protocol version.
 3. `Sec-WebSocket-Key` contains a Base64 encoded random value that is randomly generated in each request.
 4. `Sec-WebSocket-Accept` is a hash of the value submitted in the `Sec-WebSocket-Key`, concatenate with a string defined in the protocol specification. Done to prevent misleading responses from any misconfiguration.
 

@@ -34,7 +34,7 @@ Message Body \r\n
 * The PATH specifies the path to the resource to be accessed. Can have query string after: `?id=1`.
 * The VERSION specifies the HTTP version used.
 * The Headers pass information between client and server. [List of Header Fields](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
-* The Body contains paramters if any are sent. It can be empty.
+* The Body contains parameters if any are sent. It can be empty.
 
 ---
 
@@ -79,6 +79,8 @@ POST /login.php HTTP/1.1`
 \r\n
 username=mins&password=mins
 ``` 
+
+> GET requests can be cached and bookmarked in the browser, and can appear in the browser history. POST requests are not.
 
 #### Head
 - Requests the headers that would be returned if it was used with the `GET` verb.
