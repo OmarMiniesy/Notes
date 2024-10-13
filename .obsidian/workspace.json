@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d44d2c06eee22498",
+            "id": "d6fcc21cafc8f25b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web Applications/Cookies.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "748c763f22d30756",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Web Applications/Sessions.md",
+                "file": "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
                 "mode": "source",
                 "source": false
               }
@@ -89,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 352.5,
-    "collapsed": true
+    "width": 352.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -106,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -123,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web Applications/Cookies.md",
+                "file": "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web Applications/Cookies.md"
+                "file": "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md"
               }
             }
           },
@@ -190,14 +177,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "d44d2c06eee22498",
+  "active": "d6fcc21cafc8f25b",
   "lastOpenFiles": [
-    "Web Applications/Same Origin Policy (SOP).md",
     "Web Applications/Sessions.md",
+    "Web Applications/Same Origin Policy (SOP).md",
+    "Web Applications/Cookies.md",
     "Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
+    "Security/Web Application Security/Session Security.md",
     "Web Applications/HTTP.md",
     "Web Applications/HTTPS.md",
-    "Web Applications/Cookies.md",
     "Security/Web Application Security/DOM Based Vulnerabilities.md",
     "Web Applications/WebSockets.md",
     "Web Applications/SameSite.md",
@@ -217,7 +205,6 @@
     "Regular Expressions/Lookaround.md",
     "Regular Expressions/Groups.md",
     "Scripting/Bash Scripting.md",
-    "Regular Expressions/Anchors.md",
     "Excalidraw",
     "Regular Expressions",
     "Scripting/Untitled",

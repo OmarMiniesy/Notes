@@ -1,7 +1,7 @@
 ### General Notes
 
 Created to make [[HTTP]] [[Protocol]] stateful.
-- They are textual information installed by a website into the Cookie Jar of the **browser**.
+- They are textual information that is set by the server, and then installed by a website into the Cookie Jar of the **browser**.
 - Storing data on the client side instead of the server side ([[Sessions]]).
 
 > Cookie Jar is storage space where web browser stores cookies.
@@ -11,25 +11,42 @@ Can be viewed in JavaScript using `document.cookie` through the DOM, or the Docu
 ---
 ### Cookie Format
 
-Servers can set cookie via the `Set-Cookie` [[HTTP]] header in a response message.
-Cookies contain the following data:
-* **Cookie Content**: Text Key-Value pairs that contain data.
-* **Expiration Date**: The data when the cookie is no longer to be used, or not to be sent by the browser to the server.
+Servers can set cookie via the `Set-Cookie` [[HTTP]] header in a response message. Cookies are formed of key=value pairs. In addition to the cookie data, there are some other flags and options that need to be set such as:
+* **Expiration Date**: The data when the cookie is no longer to be used, or not to be sent by the browser to the server. Done using `expires`.
 * **Path**: sends the cookies to all subsequent requests to this path and everything under it.
 * **Domain**: the scope of the cookie, or which domains and subdomains it has access to.
 * `HTTPOnly` Flag: only HTML technology can read the cookie. Secure against [[Cross Site Scripting (XSS)]].
 * `Secure` Flag: Cookies are only sent over [[HTTPS]].
 
+##### Cookie Types
+
+**Non-persistent Cookies**: These are also called [[Sessions]] cookies, and they are temporary cookies that are stored while a website is being used. 
+- Once the browser closes, or the browser session is over, these cookies are deleted.
+- These offer enhanced privacy as they do not persist or track users beyond the current session.
+
+**Persistent Cookies**: These remain on the browser or device for a specified period of time as defined by the **expiration date** of the cookie.
+- They preserve information between browser sessions, and are useful for maintaining user preferences.
+- However, they can be used to track users across multiple sessions and monitor behavior.
+
+**Secure Cookies**: These are cookies that can only be transmitted over [[HTTPS]], and are marked by the `secure` flag.
+- These help protect session information and user data.
+
+**HTTPOnly Cookies**: These are cookies that *can not* be accessed by JavaScript.
+- These are useful for storing session information and guaranteeing security by preventing scripting technology to access its data.
+
 ##### Cookie Policy
 
 Cookies are sent to the valid domain and path, and only when they are not expired.
-- They also are managed according to the flags that are set. 
-- Cookies are sent to the subdomains of that domain as well.
+- They also are managed according to the flags that are set.
 
-> The **Path** specifies the folder that the cookie is sent to in the **domain**. If the path is empty, it is sent to the whole domain.
+**Domain Policy**:
+- Cookies can be sent to the subdomains of the domain set, but not vice versa.
+- Subdomains can set cookies for their direct super-domain, but not vice versa. This does not apply to TLDs.
+- If the domain is not set, the `Host-Only` flag is enabled, and the cookie is only sent to the exact host of the request, or the current domain only.
 
-If **domain** is not set, the `Host-only` flag is set, and the cookie is only sent to the exact hostname of the request. 
-- The domain becomes set to the hostname.
+**Path Policy**:
+- Cookies can be sent to the path specified, and anything under that path.
+- If the path is empty, the cookie is only sent while accessing the path of the requested resource only.
 
 ---
 ### Cookie Protocol
@@ -41,17 +58,6 @@ Login Example:
 4. If the checks pass, then a cookie will be inserted in the header of the browser request
 
 > What this does, is that the browser now manages to maintain a *stateful* connection to the server, meaning that all subsequent requests don't need authentication again.
-
----
-### Cookie Domain
-
-A cookie with a domain value specified is only sent to the target with the same domain value.
-- A cookie with a domain value different from the target but is a suffix of the target domain then it is also sent.
-
-Higher level subdomains cannot set cookies for lower level subdomains.
-- But lower level subdomains can set cookies for higher level subdomains.
-
-> Cookie with `host-only` flag set to true is one that does not have a domain value. Sent only to target domain that set it.
 
 ---
 ### Modifying Cookies for [[Cross Site Request Forgery (CSRF)]]

@@ -30,7 +30,7 @@ Cross-origin communication is sometimes needed, and there are 3 types of this co
 3. Cross-origin *embeddings*.
 
 **Cross-origin Writes** are allowed, and this means when data is sent from one origin to another origin.
-- Links, redirects, and form submissions are allowed between different origins.
+- Links, redirects, and form submissions are allowed between different origins. This does not mean that if data is sent to the recipient it must be accepted.
 - These requests are typically allowed, but sometimes, some request types don't work. This can be checked by sending an `OPTIONS` request to check for allowed request types.
 
 **Cross-origin Reads** are *disallowed*, as this means data can be read between different webpages, which can expose sensitive information. However, sometimes data can be leaked:
@@ -45,7 +45,7 @@ Cross-origin communication is sometimes needed, and there are 3 types of this co
 
 ###### `document.domain`
 To allow organizations that have webpages on different subdomains to communicate with each other, a script can be used to change the origin of the webpages *only to the current domain, or to a super-domain of that domain*.
-- For example, for `marketing.example.com` to read and access the content of the domain `example.com`, both of these domains need to set `document.domain = example.com`.
+- For example, for `marketing.example.com` to read and access the content of the domain `example.com`, *both* of these domains need to set `document.domain = example.com`.
 
 ###### PostMessage API
 This is a special function used by JavaScript to allow webpages from different origins to communicate with one another.
