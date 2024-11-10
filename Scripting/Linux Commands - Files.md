@@ -23,6 +23,13 @@ This tries to locate a file (since `-type f` is used )called `file-name` in a di
 ---
 ### Reading From Files
 
+- To read a file line by line:
+```bash
+while IFS= read -r line; do
+    echo "Text read from file: $line"
+done < my_filename.txt
+```
+
 - To read a specific number of lines from the beginning or the end of a file:
 ```bash
 head -n <file-path>
