@@ -8,15 +8,16 @@ For example, the attacker causes the web server to make a connection with intern
 
 > This can cause leaks of sensitive data, and a main target is to achieve RCE through [[Reverse Shells]].
 
-SSRF exploit trust relationships to escalate attacks from the web application.
+SSRF exploits trust relationships to escalate attacks from the web application.
 - These trust relationships could be with the server itself, or to other back-end systems found in the organization.
 
 To look for SSRF:
-- Parts of [[HTTP]] requests, including URLs
+- Parts of [[HTTP]] requests, including URLs.
 - File imports such as HTML, PDFs, images, etc.
-- Remote server connections to fetch data
-- [Application Programming Interface (API)](Application%20Programming%20Interface%20(API).md) specification imports
-- Dashboards including ping and similar functionalities to check server statuses
+- The `Referer` header.
+- Remote server connections to fetch data.
+- [Application Programming Interface (API)](Application%20Programming%20Interface%20(API).md) specification imports.
+- Dashboards including ping and similar functionalities to check server statuses.
 
 > After finding an SSRF endpoint to attack, use the [[Gopherus]] tool to exploit it.
 
@@ -27,6 +28,7 @@ To look for SSRF:
 
 Induce the application to make [[HTTP]] request back to the server hosting the application via an [[IP]] address that points back to it, such as `127.0.0.1` or `localhost`.
 - Accessing pages from the server itself can sometimes bypass some [[Access Control]] functionalities.
+- Try also visiting different [[Port]]s.
 
 > Modifying the URL that is taken by a backend *internal* [[Application Programming Interface (API)]] to something like `http://localhost/admin` can unlock the admin page, unlike visiting in the URL normally which would require credentials.
 
@@ -57,7 +59,7 @@ file:///etc/passwrd
 
 Alternatives: 
 * Instead of `127.0.0.1`, use `2130706433`, `017700000001`, or `127.1`.
-* Registering a domain that resolves to `127.0.0.1`.
+* Registering a domain that resolves to `127.0.0.1`. [[Burp Suite]] Collaborator can be used.
 * Using URL encoding to obfuscate blocked URL strings. [[Web Encoding]].
 * Provide a URL that I control that redirects to the desired URL. 
 	* Using different redirect codes.
@@ -66,11 +68,12 @@ Alternatives:
 ##### Whitelist-based input filters
 
 Applications can sometimes only allow a predefined set of values.
+- They can look try to match the beginning only, or for a value contained in it.
 - These can be bypassed by exploiting inconsistencies in URL parsing.
 
 1. Embed credentials inside a URL before the hostname.
 ```
-https://username@expected-host
+https://expected-host:fakepassword@evil-host
 ```
 
 2. Add URL fragments.
@@ -85,7 +88,7 @@ https://expected-host.evil-host
 
 4.  Using URL encoding and double encoding. [[Web Encoding]].
 
-###### Open Redirection
+##### Open Redirection
 
 If the value of a parameter is used to fetch another page.
 - We can try playing with the value in that parameter, and make it fetch the page we desire with the path starting from `localhost`.
@@ -95,8 +98,7 @@ If the value of a parameter is used to fetch another page.
 
 This type of vulnerability is hard to detect, because the response from the induced back-end request is not returned to the front-end that the attacker can easily monitor.
 - Hence, this results in a lower threat index.
-
-##### OAST using Burp suite Collaborator
+###### OAST using Burp suite Collaborator
 Blind vulnerabilities can be detected by using out-of-band techniques, such as those provided by [[Burp Suite]]'s `collaborator` tool.
 - The attacker can use collaborator to generate a unique domain name, and then record any interactions that happen with this domain.
 - Therefore, the attacker can input this collaborator domain into the back-end to test for the presence of the vulnerability, and monitor any [[Domain Name System (DNS)]] lookup requests.

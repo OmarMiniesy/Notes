@@ -1,11 +1,13 @@
 ### General Notes
 
 Also known as file path traversal.
-- Attacker can read arbitrary files on a server running the web application.
+- Attacker can read arbitrary files on a server.
 
-Sometimes, attackers can write to files, as well as include others - [[File Inclusion]] -  allowing them to take full control.
+Other possible attacks include:
+- Writing to arbitrary files on the server, modifying the data and content.
+- Including other files, [[File Inclusion]].
 
-> Images present in the directory `/var/www/images`.
+> Images are present in the directory `/var/www/images`.
 
 ---
 ### Reading Files
@@ -48,6 +50,8 @@ converts to
 
 Using URL encoding to encode the `../` jump to `%2e%2e%2f`.
 - We can also double encode the jump to `%252e%252e%252f`.
+
+> Burp Intruder also gives a list `Fuzzing - path traversal` to try.
 
 ##### Validating Start of Path
 

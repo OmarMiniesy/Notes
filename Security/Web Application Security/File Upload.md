@@ -2,31 +2,30 @@
 
 When web servers allow users to upload files without validations, this opens the door for remote code execution (RCE) vulnerabilities and [[Reverse Shells]].
 
-> Severity depends on the amount of validation enforced.
+Severity depends on the amount of validation enforced.
 * If file type isn't validated, then `php` shells can be uploaded.
 * If name isn't validated, then important files can be replaced.
 * If [[Directory Traversal]] is a vulnerability of that server, then attackers can upload files to any place.
 * If file size isn't validated, DDOS attacks can take place by filling the disk space.
 * Can be used to upload HTML files that can implement `javascript` code to carry out [[Cross Site Scripting (XSS)]] or [[Cross Site Request Forgery (CSRF)]] attacks.
 
-
 > The attack is basically uploading a file, then using [[HTTP]] follow-up requests to trigger it
 
 ---
 ### Handling Static Files
 
-Server parses the path in the request to identify file extension. Determines the type of file by comparing it to a list of mappings between extensions and MIME types.
+The way static files are handled is done by first identifying the extension of the file in the path. 
+- It then determines the type of file by comparing it to a list of mappings between extensions and MIME types.
 
-* If file is non-executable, server sends the file in [[HTTP]] response.
-* If file is executable and server executes files, it will assign the variables with the given parameters and run the script. Output may be sent in HTTP response.
+What happens next is the following:
+* If file is non-executable (image or HTML page), server sends the file in [[HTTP]] response to the client.
+* If file is executable and server executes these files, it will assign the variables with the given parameters and run the script. Output may be sent in HTTP response to client.
 * If file is executable and server doesn't execute files, it will respond with an error. Sometimes the contents of the file may be served as plain text in a response.
 
-> [[HTTP]] header `Content-Type` tells us what the server thinks the file type is.
-> If the header isn't explicitly sent, it contains result of file extension/MIME mapping.
+> [[HTTP]] header `Content-Type` tells us what the server thinks the file type is. If the header isn't explicitly sent, it contains result of file extension/MIME mapping.
 
 ---
-
-### Web Shell
+### Web Shells
 
 ##### Framework Identification
 
@@ -55,9 +54,7 @@ Where `command` is the parameter of the `GET` request being sent to the location
 GET /url/shell.php?command=<command_here> HTTP/1.1
 ```
 
-##### `/usr/share/webshells/`
-
-There are famous reverse shells in this directory.
+There are famous reverse shells in this directory: `/usr/share/webshells/`.
 * Include inside them the [[IP]] address of the machine that they should connect to, and on what [[Port]].
 
 ##### Using `msfvenom`
@@ -83,16 +80,18 @@ This can be done through forcing error messages as these can give us information
 ---
 ### Flawed Validations
 
-##### Type Validation
+###### Type Validation
 
 HTML forms are submitted using `POST` requests with `content-type` header set to `application/x-www-form-url-encoded` when sending text. But for large sizes the header is set to `multipart/form-data`.
-* We can change the content-type header to whatever is required but leave our data as is. This will work if the server doesn't validate the type of the actual data.
+* We can change the `content-type` header to whatever is required but leave our data as is. This will work if the server doesn't validate the type of the actual data.
+
+For example, we can upload a PHP shell as the body, but place in the `content-type` header `image/png` to bypass validations that only use the header.
 
 > Done using [[Burp Suite]] repeater.
 
-##### Preventing Execution in Some Directories
+###### Preventing Execution in Some Directories
 
-Servers can be configured to run scripts that they were only configured to run, not any other script.
+Servers can be configured to not run any script unless the ones that are specified, either by checking a specific MIME type, or by executing those in a specific directory only.
 * Instead of executing, they return the script in plain text or some error message.
 - Can leak source code.
 
@@ -100,18 +99,19 @@ Servers can be configured to run scripts that they were only configured to run, 
 
 We can try to upload files to other directories that might not have these strong defenses, one where user supplied scripts shouldn't be present.
 - The `filename` field in form or multipart requests is used to determine where the file will be stored.
+- Can modify the `filename` field using the techniques discovered in [[Directory Traversal]] to upload it to another place with less strict controls.
 
-> Can modify the `filename` field using the techniques discovered in [[Directory Traversal]].
-
-##### Insufficient Blacklisting of File Types
+###### Insufficient Blacklisting of File Types
 
 There are other file extensions that do the same job, and not all of them are blacklisted.
-- One example is `phtml`.
+- It is hard to block all the possible extensions, it is better to use whitelists.
+- One example is `phtml` that runs `php` files.
+
+> Check [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/Upload%20Insecure%20Files).
 
 ###### Overriding Server Configuration
 
 For [[Apache]] servers to execute files they need to be configured first.
-
 - Developers need to add directives to the `/etc/apache2/apache2.conf` file.
 ```
 LoadModule php_module /usr/lib/apache2/modules/libphp.so 
@@ -122,7 +122,7 @@ Servers allow developers to override default configurations and to create their 
 - For [[Apache]], they load this specific configuration from `.htaccess` file.
 - For IIS,  they load this specific configuration from `.web.config` file.
 
-We can upload our own configuration files to allow for malicious uploads to map arbitrary file extensions to executable MIME types if the ones we need are blacklisted.
+We can upload our own configuration files to allow for malicious uploads to map arbitrary file extensions to executable MIME types, if the ones we need are blacklisted.
 
 > Do that by taking the directives written in the `apache2.conf` file and putting them in the the `.htaccess` file, but changing the `.php` in the end to another file extension, such as `.l33t`.
 
@@ -138,7 +138,7 @@ We can upload our own configuration files to allow for malicious uploads to map 
 
 - Trying to URL encode, [[Web Encoding]], the dots and slashes: `mins%2Ephp`.
 
-- Adding semicolons or null byte characters: `mins.php;.jpg` or `mins.php%00.jpg`. Other chars to inject:
+- Adding semicolons or null byte characters before the file extension: `mins.php;.jpg` or `mins.php%00.jpg`. Other chars to inject:
 ```
 %20
 %0a
@@ -161,16 +161,14 @@ More secure servers verify that the contents of the file match what is expected 
 - Some servers do that by verifying properties of that file, such as the dimensions of an image.
 - Some file types always contain a series of bytes in their headers or footers. These are like a signature for the files, such as `FF D8 FF E0` in the header of `JPEG` files. [Signatures](https://en.wikipedia.org/wiki/List_of_file_signatures).
 
-> Can use `hexedit` to edit the hex content of a file to add the signature in the beginning.
+Can use `hexedit` to edit the hex content of a file to add the signature in the beginning.
 - So to make a `.php` file seen as `.jpeg` file, add the hex characters `FF D8 DD E0` in the beginning of the file.
 
-> Can use the `exiftool`, a command line utility used to change and monitor the metadata of files.
-
+Can use the `exiftool`, a command line utility used to change and monitor the metadata of files.
 - Take an image, and then add a comment with the `php` code for the shell.
 ```bash
 exiftool -comment='<?php echo system($_GET['command']);?>' pic.jpeg
 ```
-
 * To execute a [[Cross Site Scripting (XSS)]] attack, we can try to break out of tags.
 ```bash
 exiftool -comment=' "><img src=1 onerror=alert(window.origin)>' pic.jpeg

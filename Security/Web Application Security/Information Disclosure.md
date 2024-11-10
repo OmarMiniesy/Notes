@@ -17,7 +17,7 @@
 ### Fuzzing
 
 > Submit unexpected data types and crafted fuzz strings to see the effects.
-> Responses can hint at the application behaviour, such as time taken or different error messages.
+> Responses can hint at the application behavior, such as time taken or different error messages.
 
 > Using [[Burp Suite]] Intruder, add payload positions, identify difference in [[HTTP]] responses (length, status code, response times), grep matching rules, and grep extraction rules.
 

