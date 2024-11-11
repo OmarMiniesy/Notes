@@ -1,166 +1,181 @@
-
 ### General Notes
 
-> Allows an attacker to control the content of a web application.
-> Can target the application users.
+XSS is a vulnerability that allows attackers to compromise the user's interactions with a website.
+- It bypasses the [[Same Origin Policy (SOP)]].
+- Can steal other user [[Cookies]], or impersonate other user [[Sessions]].
 
-> When a web application uses unfiltered user input to build content.
-> Attackers can control the output HTML and JavaScript.
+This attack takes place by manipulating a website such that it returns malicious JavaScript to users.
+- Once this JavaScript is executed at the victim's browser, the attack can then impersonate the user or control the user's interaction with the website.
 
-> Can steal other user [[Cookies]], or impersonate other user [[Sessions]].
-
-> XSS involves injecting malicious code in the output of the page that is then rendered by users of that page.
-> XSS circumvents the [[Same Origin Policy (SOP)]].
+There are 3 types of XSS attacks:
+- **Reflected**: The injected scripts comes from the current [[HTTP]] request.
+- **Stored**: The injected script is stored in the website's database, and is returned from there.
+- **DOM-Based**: There is a vulnerability in the client side code that process input user data in an unsafe way.
 
 ---
-
 ### Finding XSS
 
-> Look at every user input, and test if it's displayed as output.
-* [[HTTP]] headers, `POST`/`GET` variables, and [[Cookies]] variables.
+Look at every user input, and test if it's displayed as output.
+* [[HTTP]] headers
+* Request parameters
+* [[Cookies]].
 
-> Try injecting HTML tag to see if the HTML is interpreted: `<i>, <h1>`.
-> Try injecting JavaScript: `<script>alert('XSS')</script>`.
+Try injecting HTML and JavaScript and see how the website reacts:
+- Try injecting HTML tag to see if the HTML is interpreted: `<i>, <h1>`.
+- Try injecting JavaScript: `<script>alert('XSS')</script>`.
 
-> To exploit the XSS, there are different types of attacks:
-1. Reflected.
-2. Persistent.
-3. DOM Based.
-4. Dangling Markup.
-
-##### Scanners
-
-* [XSStrike](https://github.com/s0md3v/XSStrike).
+ Can use automated tools like [XSStrike](https://github.com/s0md3v/XSStrike).
 ```bash
 xsstrike -u http://<url>/param=mins
 ```
-> must include the `param` to be tested against XSS.
+- Must include the `param` to be tested against XSS.
 
 ---
-### Reflected XSS Attacks
+### Reflected XSS
 
-> When the payload is carried inside the request that the user (victim) browser sends to the vulnerable website.
-* Example: A link to a website with an embedded payload. `http://victim.site/search.php?find=<payload>`.
-> Use the simple payload as proof of concept.
+This type of XSS attack arises when there is an injected payload that is sent to the application through an [[HTTP]] request, and the application responds with that injected script in an immediate response.
+- In the immediate HTTP response to the request carrying the payload, there is data reflected on the application as a result of the injected script.
+- Untrusted data is sent to a web application, and this untrusted content is displayed.
+
+> This is a server-side vulnerability.
+
+If an attacker can control a script that is placed in a victim user's browser, then the attacker can compromise that user, however, that user has to be logged in for the attack to have a profound effect.
+- To create a reflected XSS attack, the attacker needs to get a victim user to click on a link that contains this payload.
+- Hence, reflected XSS attacks need some kind of external interaction by the user, making it less severe than other XSS types.
 ```
-<script>alert("XSS")</script>
+https://insecure-website.com/search?term=<script>alert(document.cookie)</script>
 ```
 
-> Called reflected because an input field of the [[HTTP]] request sent gets reflected as output in the immediate response of the browser.
-> There are reflected XSS filters built now to counter such attack.
-
-> To make a victim issue a request that an attacker controls, they can place links on a website the attacker controls, or through [[Phishing]].
-> If an attacker can control a script that is executed in the victim browser, then the attacker can fully compromise that user: 
-* Perform an action that the user can perform.
-* View any information the user can view.
-* Modify and information the user can view.
-* Initiate interactions with other users.
-
-> How to search for reflected XSS:
-* Test every entry point: URL query parameters, data in the URL query string or message body, URL file path and [[HTTP]] headers.
-* Submit random alphanumeric values.
-* Determine the reflection context: determine if the output is in HTML tags, in a tag attribute or in a JavaScript string.
-* Test a payload: leave the initial value and place the payload before or after it.
-* Test the attack in the browser.
+This can be done by sending emails with links, placing malicious links on websites, or sending links via social media.
+- *The idea is to force a user to make a request that is controlled by the attacker.* 
+- Forcing a request is as simple as clicking on a link that is crafted by an attacker.
 
 ---
+### Stored (persistent) XSS
 
-### Persistent (Stored) XSS Attacks
+When the malicious payload is sent to the webserver and **stored** there.
+- When an application receives data from an untrusted source and includes that data within its later HTTP responses by fetching it from the database.
 
-> When the malicious payload is sent to the webserver and **stored** there.
-> When an application receives data from an untrusted source and includes that data within its later HTTP responses.
-> When a webpage then loads, it pulls this payload from the server and the malicious code is displayed within the HTML output.
+When a webpage then loads, it pulls this payload from the server and the malicious code is displayed within the HTML output.
+- Common in HTML forms where users submit content to the webserver and then is displayed back to users, such as comment sections, user profiles, and forums.
 
->Common in HTML forms where users submit content to the webserver and then is displayed back to users.
-* Common sections
-* User profiles
-* Forum posts
-
-> These attacks are self-contained within the application, and the user doesn't have to be prompted to click on something for it work like reflected attacks.
-> The user is garaunteed to be logged in for these attacks to work, hence, easily compromising accounts.
-
-> How to search for stored XSS:
-*  Look for a link between entry and exit points, or the points where the payload is inserted, and where it shows in later responses.
+These attacks are self-contained within the application, and the user doesn't have to be prompted to click on something for it work like reflected XSS attacks.
+- As a result, the users when they are subject to this attack will most probably be logged in, causing a damaging effect.
 
 ---
 ### DOM-Based XSS
 
-> [[DOM Based Vulnerabilities]].
+This attack arises when JavaScript takes data from the attacker in a *source* and passes it to a *sink* that supports dynamic code execution.
+- This is a type of [[DOM Based Vulnerabilities]].
 
-> When javascript takes data from the attacker in a source and passes it to a sink that supports dynamic code execution, such as `eval()` or `innerHTML`.
-> A sourrce such as the URL, which is passed with the `window.location` object, is the most common for DOM based XSS.
+The DOM based attack works as follows:
+1. A *source* is a data source, like the `window.location` object which contains the URL.
+2. A *sink* is a function that can execute code, like `eval` or `innerHTML`.
+3. A *taint flow* is an executable path through which data moves from *source* to *sink*.
+4. Attacker controlled data is placed in a *source*, and this data is propagated to a *sink* through the *taint flow*, causing execution of attacker controlled JavaScript.
 
-> The Sink is the portion of code where the payload is entered and executes the attack.
-> There is a DOM vulnerability if there is an executable path through which data moves from source to sink. Also known as *taint flow*.
+> Can use DOM Invader extension in [[Burp Suite]].
 
-##### HTML Sinks
-> Testing for DOM-based means including alphanumeric strings and checking where it appears in the HTML of the webpage.
-> Identify the HTML context, and try constructing a payload that breaks out.
-> Adding an extra `"` to break out of the existing tag maybe, or `>` to break out.
+> Check [[DOM Based Vulnerabilities#Source]] and [[DOM Based Vulnerabilities#Sinks]] for a list of sources and sinks.
 
-#### JavaScript Execution Sinks
-> Use the JavaScript debugger to test how the input was sent and interpreted by the sink.
-> Identify the JavaScript context, and look at the different variables and areas that the data moves to.
-> Try to form a payload that exits or adds another element or tag.
+###### Testing HTML Sinks
+Testing for DOM-based means including a random alphanumeric string in a *source* and check where it appears in the HTML of the web application.
+- A *source* can be in the URL, in a search bar, or wherever user input exists.
+- Use `CTRL F` to look for the entered string in the source code (developer tools).
+- Identify the HTML context, and try constructing a payload that breaks out, by adding special characters like quotes, angle brackets, and so on.
+###### Testing JavaScript Sinks
+This is harder than HTML sinks as the entered data will not be found in the source code.
+- Use the JavaScript debugger to test how the input was sent and where.
+- Use `CTRL F` to look for where the *source* is, and where it is used.
+- Identify the JavaScript context, and look at the different variables and areas that the input data moves to.
+
+> The `innerHTML` sink doesn't accept `script` elements on any modern browser, nor will `svg onload` events fire.
+
+###### DOM XSS in jQuery
+
+The `attr()` function can change the attributes of DOM elements.
+- If data read from a user controlled *source* and passed to the `attr()` function, the *sink*, we can insert a payload an create an XSS attack.
+
+The `$()` selector function can also be used to inject malicious objects.
+- `location.hash` was used for scrolling animations done using the `hashchange` event handler. ([[Events Module]])
+- The `hash` is the area that is scrolled to by the website, and it is user controllable, so user input can be placed there.
+- However, to exploit this, the `hashchange` event needs to be triggered without user interaction, which can be done using an `iframe`.
 
 ```
-"> < svg onload = alert(1) >
+<iframe src = "https://website.com#" onload="this.src+='<img src=1 onerror=alert(1)>'"> </iframe>
 ```
 
-> Sometimes, we can introduce errors, and then call the onerror attribute with the payload.
-```
-<img src=1 onerror=alert(1)>
-```
+This basically loads the website in an `iframe` and adds at the end the `#` character.
+- Once the `iframe` has loaded, the `src` attribute has `<img src=1 onerror=alert(1)>` appended to it, which is basically appending this payload at the end of the URL.
+- This causes the URL to look like this: `https://website.com#<img src=1 onerror=alert(1)>`.
+- This triggers the `hashchange` event without any user interaction, and causes the `alert` to pop.
 
-##### DOM XSS in jQuery
+###### DOM XSS in [[Angular]]
 
-> The `attr()` function can change the attributes of DOM elements.
-> If data read from a user controlled source and passed to the `attr()` function, we can insert a payload an create a XSS attack.
-> Identify jQuery via the `$` sign.
+If a webpage uses the `ng-app` attribute, JavaScript inside double curly braces `{{ <code> }}` will be executed anywhere inside the HTML.
 
-> To execute JavaScript inside attributes, such as `href`, add `javascript: <code>` inside the `href` attribute.
+Use the `constructor` function to return references to creating functions. 
+- These functions can be executed by adding `()` afterwards. [Function Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function).
 
-> `location.hash` was used for scrolling animations done using the `hashchange` event handler. ([[Events Module]])
-> The `hash` is user controllable, the area that is scrolled to. Payload can be inserted there.
-> The payload must trigger `hashchange` without user interaction.
-```
-<iframe src = "https://website.com#" onload="this.src+='<img src=1 onerror=alert(1)>'"
-```
-
-##### DOM XSS in [[Angular]]
-
-> If a webpage uses the `ng-app` attribute, JavaScript inside double curly braces `{{ <code> }}` will be executed anywhere inside the HTML.
-> Use the `constructor` function to return references to creating functions. These functions can be executed by adding `()` afterwards. [Function Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function).
-> Used by going to a function in scope, and then calling the constructor with the `alert` function.
+Used by going to a function in scope, and then calling the constructor with the `alert` function.
 ```
 {{ $new.constructor('alert()') () }}
 ```
-> The `$` is used in JavaScript frameworks and libraries.
+- The `$` is used in JavaScript frameworks and libraries.
 
-> Checking the functions in the scope using the `id` of an element in that scope.
+Checking the functions in the scope using the `id` of an element in that scope.
 ```
-anular.element(document.getElementById('<ID>')).scope()
+angular.element(document.getElementById('<ID>')).scope()
 ```
 
-##### Reflected DOM XSS
+###### Reflected DOM XSS
 
-> Sometimes websites reflect in their URL parameters data from the response.
-> The server produces data from a request, and echoes it in a response.
-> This data could be placed into an item within the DOM, such as in forms.
-> A script can then read this data, and places it into a sink that causes the exploit.
+The server can process data from a request, (unsafe data), and then returns this data back in a response.
+- This data is reflected in a response, and placed in the DOM.
+- This data could be processed by a script on the website that could eventually place it in a *sink*.
 
-##### Stored DOM XSS
+> The idea is the same, to look for a *taint flow*, but the data could be coming from the server.
 
-> Websites can store data on the server and is then included in a later response.
-> A JavaScript script within this repsonse can contain a sink that can cause the exploit.
+###### Stored DOM XSS
+
+Data is stored at the server, and then returned to the website in a later response.
+- A script with a *sink* could later process this data in an unsafe way.
 
 ---
+### Injections and Payloads
 
-### XSS Payloads
+Some payloads and methods to inject payloads.
+- If the spaces cause errors, remove them.
+- Try using all special characters to see which ones work: `< > " ' \ / ;`
+- `iframes` can be used to create attacks that operate without user input.
 
-> If the spaces cause errors, remove them.
-> Sometimes double qoutes dont work, replace them with single qoutes.
-> To break out of a string, use the `\"` to insert a qoute. If that doesn't work, try `</script>` and then insert the payload.
+###### Injecting in HTML Tags
+
+```
+<img src=1 onerror=alert(1)>
+```
+- If tags and events are blocked, use the [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) and try all the tags and events there using [[Burp Suite]] Intruder.
+
+###### Escaping the Escape Character `\`
+
+Sometimes, trying to inject special characters like `"` gets escaped by the addition of a backslash `\`.
+- Add an extra backslash `\` such that the one added by the application gets escaped by the one we added.
+```
+\" alert(1)
+```
+
+###### Breaking out of a String
+```
+'-alert(document.domain)-' 
+';alert(document.domain)//
+
+\'-alert(document.domain)-\' 
+\';alert(document.domain)//
+```
+- Try adding `\` before the quotes if they are escaped by the application.
+- Adding `//` comments out everything after it.
+
+
 ```
 mins"> <svg onload=alert(1)>     //closing off a tag and adding a new one.
 
@@ -190,16 +205,7 @@ onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 ```
 > This last one creates a custom tag `mins`, and adds the attribute `onfocus` and then focuses on it using the `#omar` at the end using its id, triggering the event. Can use the `autofocus` attribute as well.
 
-
-##### Breaking out of a JavaScript string
-```
-'-alert(document.domain)-' 
-';alert(document.domain)//
-```
-> If they don't work, try adding `\` in the beginning to escape out of the string the single qoute.
-
-
-##### Using HTML- [[Web Encoding]]
+###### Using HTML- [[Web Encoding]]
 
 > Using HTML encoding to bypass sanitization checks.
 > The browser can decode the encoded attack while interpreting the JavaScript, so the attack succeeds.
@@ -210,7 +216,7 @@ onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 > Find the list of codes [here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 > Can also use the hex version encoding, or numbers.
 
-##### `<svg>`
+###### `<svg>`
 
 > The `svg` tag allows for other tags inside it, which can be used to craft more complex exploits where some tags are blocked.
 ``` HTML
@@ -222,7 +228,7 @@ onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 </a> </svg>
 ```
 
-##### JavaScript String Literals
+###### JavaScript String Literals
 
 > Similar to Angular [[String Interpolation]], where there is javascript executed inside html between the ` `` ` backticks.
 > If the XSS input is there, we can put the payload between `${ <code> }` .
@@ -230,19 +236,11 @@ onerror=alert; throw,1       // when brackets are encoded and cannot be used.
 ${alert(1)}
 ```
 
-##### Canonical Tags in XSS
+###### Canonical Tags in XSS
 
 > Some events aren't fired automatically.
 > They use the `accesskey` attribute that defines a letter.
 > If this letter is pressed with a combination of other keys, the assigned event is triggered.
-
-##### Finding the Right Tag and Event Attribute Using [[Burp Suite]]
-
-> Head to the [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet).
-1. Open the Burp Suite Intruder tab and inject the placeholders inside `<>` tags to test first the tag itself.
-2. Set the payloads to be the copied tags from the cheat sheet.
-3. After finding the correct element, find the right attribute by placing the placeholders `<element-found XX=1>`. 
-4. Set the payloads to be the copied attributes from the cheat sheet.
 
 ---
 

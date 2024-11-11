@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Constraints on who can perform actions or access resources.

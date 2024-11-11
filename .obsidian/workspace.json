@@ -11,10 +11,14 @@
             "id": "da2bdceb06b7e1a2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Security/Web Application Security/Cross Site Scripting (XSS).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Cross Site Scripting (XSS)"
             }
           }
         ]
@@ -198,14 +202,17 @@
   },
   "active": "da2bdceb06b7e1a2",
   "lastOpenFiles": [
+    "Security/Web Application Security/DOM Based Vulnerabilities.md",
+    "Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Networking/Apache.md",
+    "Security/Web Application Security/Untitled.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Security/Web Application Security/Access Control.md",
     "Security/Web Application Security/File Upload.md",
     "Security/Web Application Security/Information Disclosure.md",
     "Security/Web Application Security/SSRF.md",
     "Security/Web Application Security/Command Injection.md",
     "Security/Web Application Security/Directory Traversal.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/DOM Based Vulnerabilities.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Security/Tools/cURL.md",
     "Security/Web Application Security/XXE Injection.md",
     "Networking/Secure Shell Protocol (SSH).md",
@@ -221,9 +228,6 @@
     "Web Applications/Cookies.md",
     "Security/Web Application Security/Session Security.md",
     "Web Applications/HTTP.md",
-    "Web Applications/HTTPS.md",
-    "Web Applications/WebSockets.md",
-    "Web Applications/SameSite.md",
     "Excalidraw",
     "Regular Expressions",
     "Scripting/Untitled",

