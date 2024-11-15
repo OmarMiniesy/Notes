@@ -6,7 +6,7 @@ Severity depends on the amount of validation enforced.
 * If file type isn't validated, then `php` shells can be uploaded.
 * If name isn't validated, then important files can be replaced.
 * If [[Directory Traversal]] is a vulnerability of that server, then attackers can upload files to any place.
-* If file size isn't validated, DDOS attacks can take place by filling the disk space.
+* If file size isn't validated, [[Denial of Service (DOS)]] attacks can take place by filling the disk space.
 * Can be used to upload HTML files that can implement `javascript` code to carry out [[Cross Site Scripting (XSS)]] or [[Cross Site Request Forgery (CSRF)]] attacks.
 
 > The attack is basically uploading a file, then using [[HTTP]] follow-up requests to trigger it

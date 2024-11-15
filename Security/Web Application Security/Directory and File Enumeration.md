@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Find hidden resources that contain information about new features, backup files, or notes.

