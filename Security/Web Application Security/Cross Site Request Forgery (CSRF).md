@@ -1,16 +1,14 @@
-
 ### General Notes
 
-> Allows an attacker to induce a user to perform actions that they don't intend to perform.
-> Attackers personate other users.
-> Allows attackers to bypass the [[Same Origin Policy (SOP)]] since the attacker doesn't need to read the response from the server.
-> Could allow for full account take over.
+Allows an attacker to make a user perform actions that they didn't intend to perform.
+- Could allow for full account take over.
 
-> CSRF vulnerabilities occur when vulnerable web apps simply trust the cookies sent by web browsers without further validation.
+Allows attackers to bypass the [[Same Origin Policy (SOP)]] since the attacker doesn't need to read the response from the server.
+
+> CSRF vulnerabilities occur when vulnerable web apps simply trust the [[Cookies]] sent by web browsers without further validation.
 
 ---
-
-### How it Works
+### CSRF Process
 
 1. 
 > There must be a **relevant action** that the attacker has a reason to induce
@@ -70,7 +68,6 @@ email=wiener@normal-user.com
 > These links can be placed in comments, emails, or messages.
 
 ---
-
 ### CSRF Defences
 
 ##### 1. CSRF Token Validation
@@ -90,7 +87,6 @@ email=wiener@normal-user.com
 > Some applications use the `Referer` [[HTTP]] header to defend against CSRF by verifying the request comes from the app's domain.
 
 ---
-
 ### 1. Bypassing Token Validation
 
 > The token is included as a hidden parameter both in the request, and in the HTML form.
@@ -128,7 +124,6 @@ email=wiener@normal-user.com
 
 
 ---
-
 ### 2. Bypassing [[SameSite]] [[Cookies]]
 
 > The cookies involved here could be the session cookie which needs to be communicated between the request and browser in the CSRF attack.
@@ -210,7 +205,6 @@ window.onclick = () => {
 ```
 
 ----
-
 ### 3. Bypassing Referer-Based Defenses
 
 > The `Referer` [[HTTP]] header is used to verify where the request is originating from.
@@ -247,7 +241,6 @@ Referrer-Policy: unsafe-url
 ```
 
 ---
-
 ### Preventing CSRF Attacks
 
 > Using CSRF Tokens
@@ -260,7 +253,7 @@ Referrer-Policy: unsafe-url
 * Placed as early as possible in the document.
 * Placed as a query string in the URL but is less safe.
 	* Logged in various locations
-	* Liable to be trasnmitted to 3rd parties within the HTTP referer header.
+	* Liable to be transmitted to 3rd parties within the [[HTTP]] `referer` header.
 	* can be seen on the user screen.
 * Placed in custom request header, since custom requests aren't allowed to be transmitted cross-domain.
 

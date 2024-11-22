@@ -105,3 +105,24 @@ This loose comparison operator does the following:
 
 > These conditions introduce dangerous logical flaws, hence, it is important to remember indicating the correct data type while serializing to take advantage.
 
+##### Magic Methods
+
+These are methods that are automatically called when an event occurs.
+- They are identified by having double underscores before and/or after the function name.
+```
+__init__
+__construct()
+```
+
+Magic methods automatically execute, meaning they are vulnerable if they take attacker controlled input.
+- Some magic methods are executed during deserialization, such as `__wakeup()` in PHP and `readObject()` in Java.
+- These methods depend on the class of the object, and sometimes, these methods can be overridden.
+
+The methods for an object are defined by the class of that object.
+- If the class can be changed by the attacker, then the attacker can influence which methods are called on the injected object.
+- If deserializing functions do not check the data they are dealing with, then this is possible, allowing attackers to create objects of any arbitrary class.
+
+To conduct an attack like that, the attacker should have access to the source code, and understand the different classes that exist.
+- The attacker should then identify any deserialization magic methods if any exist, and check if they perform any dangerous operations.
+
+> Source code of a file can be obtained by inserting a `~` after the filename. Check [[Information Disclosure#Source Code Disclosure Via Backup Files]].

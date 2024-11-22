@@ -1,4 +1,3 @@
-
 ### General Notes
 
 A user is tricked into clicking on actionable content in a decoy website, leading to victims submitting their data to false sources.
