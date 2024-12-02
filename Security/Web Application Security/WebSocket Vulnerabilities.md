@@ -41,7 +41,7 @@
 ### Securing WebSockets
 
 * Using the `wss://` [[Protocol]].
-* Hard code the URL of the websocket endpoint and don't include user-input data.
+* Hard code the URL of the WebSocket endpoint and don't include user-input data.
 * Protect WebSocket handshake from [[Cross Site Request Forgery (CSRF)]] to avoid cross-site hijacking.
 * Treat data recieved on both sides of the connection as unclean and handle safely.
 

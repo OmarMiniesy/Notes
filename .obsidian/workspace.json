@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "de4796d370d609d0",
+        "id": "aca80f9c836ecde6",
         "type": "tabs",
         "children": [
           {
-            "id": "6f9dce797830a2f7",
+            "id": "3d3b0efe6cc5925d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Security/Web Application Security/Race Conditions.md",
+                "file": "Security/Web Application Security/NoSQL Injection.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Race Conditions"
+              "title": "NoSQL Injection"
             }
           }
         ]
@@ -52,7 +52,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nonce",
+                "query": "proxy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -200,34 +200,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6f9dce797830a2f7",
+  "active": "3d3b0efe6cc5925d",
   "lastOpenFiles": [
+    "Security/Tools/Burp Suite.md",
+    "Security/Web Application Security/NoSQL Injection.md",
+    "Security/Web Application Security/SQL Injections.md",
+    "Regular Expressions/Repetitions.md",
+    "Regular Expressions/Matching Letters and Numbers.md",
+    "Regular Expressions/Groups.md",
+    "Regular Expressions/Character Classes.md",
+    "Regular Expressions/Anchors.md",
+    "Regular Expressions/Regular Expressions.md",
+    "DevOps/Terraform/Provider.md",
+    "DevOps/Terraform/Terraform.md",
+    "DevOps/Terraform/Resources.md",
+    "DevOps/Terraform/Dependency Lock File.md",
+    "DevOps/Terraform/Data Sources.md",
+    "DevOps/Terraform/Configuration Language.md",
+    "DevOps/Terraform/(IAC) Infrastructure as Code.md",
+    "Security/Web Application Security/Directory Traversal.md",
+    "Security/Web Application Security/DOM Based Vulnerabilities.md",
+    "Security/Web Application Security/WebSocket Vulnerabilities.md",
+    "Security/Web Application Security/SSRF.md",
+    "Security/Web Application Security/XXE Injection.md",
+    "Security/Web Application Security/Authentication.md",
+    "Security/Web Application Security/Access Control.md",
     "Security/Web Application Security/Race Conditions.md",
     "Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
     "Security/Web Application Security/Clickjacking.md",
-    "Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Cryptography/Encryption.md",
-    "Security/Tools/ffuf.md",
-    "Security/Web Application Security/File Upload.md",
-    "Security/Web Application Security/Command Injection.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Security/Web Application Security/Insecure Deserialization.md",
-    "Security/Tools/SQLMap.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/File Inclusion.md",
-    "Security/Web Application Security/Information Disclosure.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Web Applications/Web Encoding.md",
-    "Security/Tools/Burp Suite.md",
-    "Security/Tools/OSINT.md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/IDOR (Insecure Direct Object References).md",
-    "Security/Tools/nmap.md",
-    "Security/Tools/netcat.md",
-    "Security/Tools/mysql.md",
-    "Security/Tools/Metasploit.md",
-    "Security/Tools/John the Ripper.md",
-    "Security/Tools/Hydra.md",
     "Excalidraw",
     "Regular Expressions",
     "Scripting/Untitled",
