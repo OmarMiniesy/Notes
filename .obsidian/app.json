@@ -16,5 +16,6 @@
   "strictLineBreaks": true,
   "newFileLocation": "current",
   "useMarkdownLinks": false,
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "readableLineLength": true
 }

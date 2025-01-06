@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "aca80f9c836ecde6",
+        "id": "51cd1716fe688e31",
         "type": "tabs",
         "children": [
           {
-            "id": "3d3b0efe6cc5925d",
+            "id": "eccb2db7e54c7db9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Security/Web Application Security/NoSQL Injection.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "NoSQL Injection"
+              "title": "New tab"
             }
           }
         ]
@@ -52,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "proxy",
+                "query": "content security policy",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -87,8 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 324.5,
-    "collapsed": true
+    "width": 324.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -200,34 +195,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "3d3b0efe6cc5925d",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Security/Tools/Burp Suite.md",
-    "Security/Web Application Security/NoSQL Injection.md",
-    "Security/Web Application Security/SQL Injections.md",
-    "Regular Expressions/Repetitions.md",
-    "Regular Expressions/Matching Letters and Numbers.md",
-    "Regular Expressions/Groups.md",
-    "Regular Expressions/Character Classes.md",
-    "Regular Expressions/Anchors.md",
-    "Regular Expressions/Regular Expressions.md",
-    "DevOps/Terraform/Provider.md",
-    "DevOps/Terraform/Terraform.md",
-    "DevOps/Terraform/Resources.md",
-    "DevOps/Terraform/Dependency Lock File.md",
-    "DevOps/Terraform/Data Sources.md",
-    "DevOps/Terraform/Configuration Language.md",
-    "DevOps/Terraform/(IAC) Infrastructure as Code.md",
-    "Security/Web Application Security/Directory Traversal.md",
-    "Security/Web Application Security/DOM Based Vulnerabilities.md",
-    "Security/Web Application Security/WebSocket Vulnerabilities.md",
-    "Security/Web Application Security/SSRF.md",
-    "Security/Web Application Security/XXE Injection.md",
-    "Security/Web Application Security/Authentication.md",
-    "Security/Web Application Security/Access Control.md",
-    "Security/Web Application Security/Race Conditions.md",
-    "Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
-    "Security/Web Application Security/Clickjacking.md",
+    "Windows and Active Directory",
+    "Offensive Security/System Security/Linux Privilege Escalation.md",
+    "Markdown/Markdown Syntax.md",
+    "Offensive Security/Tools/OSINT.md",
+    "Offensive Security/Tools/Meterpreter.md",
+    "Offensive Security/Network Security/Zone Transfers Attack.md",
+    "Offensive Security/Network Security/DNSSEC.md",
+    "Offensive Security/Network Security/ICMP Redirect Attack.md",
+    "Offensive Security/System Security/Malware.md",
+    "Offensive Security/System Security/Reverse Shells.md",
+    "Offensive Security/Web Application Security/NoSQL Injection.md",
+    "Offensive Security/Windows Security",
+    "Defense/Session.md",
+    "Offensive Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
+    "Offensive Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
+    "Offensive Security/Web Application Security/Clickjacking.md",
+    "Offensive Security/Web Application Security/Cross Site Scripting (XSS).md",
+    "Web Applications/SameSite.md",
+    "Web Applications/Sessions.md",
+    "Web Applications/Cookies.md",
+    "Web Applications/Same Origin Policy (SOP).md",
+    "Offensive Security/Web Application Security/SSRF.md",
+    "Offensive Security/Web Application Security/SQL Injections.md",
+    "Untitled.canvas",
+    "Offensive Security/Web Application Security/File Upload.md",
+    "Offensive Security/Web Application Security/Directory Traversal.md",
+    "Offensive Security/Web Application Security/Command Injection.md",
+    "Web Applications/Web Encoding.md",
+    "Defensive Security",
     "Excalidraw",
     "Regular Expressions",
     "Scripting/Untitled",
@@ -236,9 +234,6 @@
     "DevOps",
     "Cryptography",
     "DevOps/Kubernetes",
-    "JavaScript/React Native",
-    "Security/Wireless Network Security",
-    "AWS Cloud/Pictures/Pasted image 20230222213056.png",
-    "Untitled.canvas"
+    "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
 }

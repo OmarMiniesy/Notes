@@ -1,12 +1,9 @@
-
 ### General Notes
 
 A very powerful shell that can be used to attack machines and install [[Backdoors]].
 
 ---
-## Usage inside [[Metasploit]] `msfconsole`
-
-###### Two Types of Payloads
+### Usage inside [[Metasploit]] `msfconsole`
 
 - **Bind TCP**: runs a server process on the target and waits for connection from attacker. `bind_tcp`
 - **Reverse TCP**: performs a TCP connection back to the attacker machine. Helps evade [[Firewall]]s. `reverse_tcp`
@@ -56,7 +53,6 @@ upload <destination-path-attacker> <path-to-file-in-attacked>
 > For window use `\` and Linux use `/`.
 
 ---
-
 ### Privilege Escalation
 
 - To raise privileges using a Privilege Escalation routine provided by meterpreter.
@@ -76,7 +72,6 @@ set session <meterpreter session>
 > This opens a new meterpreter shell session that can use the `getsystem` command.
 
 ---
-
 ### Dumping Password Database
 
 Saving the password database and cracking it using [[John the Ripper]] for instance.

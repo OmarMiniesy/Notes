@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Used to get remote code execution (RCE).

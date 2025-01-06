@@ -7,8 +7,8 @@ A type of attack that relies on misconfiguration of [[Domain Name System (DNS)]]
 
 These are how secondary DNS servers receive information from the primary DNS server, as well as any updates. Zone transfers copy a domain's database from primary server or secondary server to any unauthenticated other server/[[IP]] address.
 
-> Using a master-slave architecture.
-> The master DNS is sometimes misconfigured, but it should be configured to allow for zone transfers with restrictions.
+Using a master-slave architecture.
+- The master DNS is sometimes misconfigured, but it should be configured to allow for zone transfers with restrictions.
 
 > If an attacker can perform a zone transfer with the primary or secondary name servers for a domain, the attack can view all of the DNS records for that domain.
 

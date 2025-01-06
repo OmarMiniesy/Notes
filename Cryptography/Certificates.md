@@ -38,7 +38,7 @@ These are public *append only* records that hold the new SSL/[[Transport Layer S
 
 > This is like a global registry of certificates.
 
-Since CT logs provide a definitive record of certificates issued for a domain and its subdomains, it is very effective for [[subdomain enumeration]].
+Since CT logs provide a definitive record of certificates issued for a domain and its subdomains, it is very effective for [[Subdomain Enumeration]].
 - Access to direct information.
 - Access to old and expired certificates which might relate to subdomains that are no longer maintained.
 

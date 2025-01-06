@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Used to prevent [[Cross Site Request Forgery (CSRF)]] attacks.
@@ -23,12 +22,12 @@ https://app.example.com:443
 1 + 3 + 4 : site
 1 + 2 + 3 + 4 + 5 : Origin
 ```
->[[Port]] is inferred from scheme.
+- [[Port]] is inferred from scheme.
 
 ---
 #### What is SameSite ?
 
-- Reduces exposure to cross-site attacks by limiting the [[Cookies]] sent by cross-site requests.
+Reduces exposure to cross-site attacks by limiting the [[Cookies]] sent by cross-site requests.
 
 There are 3 SameSite restriction levels:
 * `Strict`.

@@ -1,12 +1,11 @@
 ### General Notes
 
 A user is tricked into clicking on actionable content in a decoy website, leading to victims submitting their data to false sources.
+- Can use [[Burp Suite]]'s Clickbandit tool to create clickjacking payloads.
 
 > Clickjacking attacks are not mitigated by the [[Cross Site Request Forgery (CSRF)]] token as a target session is established with content loaded from an authentic website and with all requests happening on-domain.
 
-> Can use [[Burp Suite]]'s Clickbandit tool to create clickjacking payloads.
 ---
-
 ### Constructing a clickjacking attack
 
 Using `CSS` to create multiple layers.
@@ -38,9 +37,9 @@ So when the user thinks he is clicking on the decoy, he is actually clicking on 
 	<iframe id="target_website" src="https://vulnerable-website.com"> </iframe> 
 </body>
 ```
-> Using `z-index` to place layers, the larger appears on top.
-> Opacity is set by default in browser to counteract click-jacking, therefore, the opacity styling must be placed.
-> The `relative` and `absolute` positioning is used to keep the target on top of the decoy with these `width` and `height` values.
+- Using `z-index` to place layers, the larger appears on top.
+- Opacity is set by default in browser to counteract click-jacking, therefore, the opacity styling must be placed.
+- The `relative` and `absolute` positioning is used to keep the target on top of the decoy with these `width` and `height` values.
 
 ##### Clickjacking with prefilled form
 
@@ -48,7 +47,7 @@ Some websites permit forms to be prepopulated using [[HTTP]] `GET` parameters.
 - The target URL can be modified to include such input values.
 - Done by changing the `src` in the `iframe` above to include the form parameters that are to be prefilled.
 
-###### Clickjacking with [[Cross Site Scripting (XSS)]]
+##### Clickjacking with [[Cross Site Scripting (XSS)]]
 
 Identifying the XSS exploit on the website.
 - The XSS payload is combined with the `iframe` URL so that when the user clicks, the XSS attack is also carried out.
@@ -58,6 +57,7 @@ Identifying the XSS exploit on the website.
 
 The clickjacking technique works when we are able to put a website into an `iframe`, or a frame.
 - There are client-side protection techniques to use frame busting or frame breaking scripts.
+- These allow a website to prevent itself from being included in `iframe`s.
 
 This is done through JavaScript add-ons or extensions, such as `NoScript`, and they: 
 1. Check that the current application window is the main/top window.
@@ -74,7 +74,6 @@ To work around the frame busting scripts, we use the `sandbox` attribute for `if
 ```
 
 ---
-
 ### Preventing clickjacking
 
 * `X-Frame-Options`: response header that provides website owner with control over `iframe`s or objects so that no webpage can be included inside frames.

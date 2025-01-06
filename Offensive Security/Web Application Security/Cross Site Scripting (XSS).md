@@ -330,6 +330,11 @@ This is a browser security mechanism that is used to protect against XSS.
 - It restricts the resources that a page can load, such as images and scripts.
 - It restricts if pages can be loaded using frames like `iframe`.
 
+If you enable CSP, you can no longer run _any_ scripts that are embedded directly in the HTML document. 
+- You can only load external scripts specified by the `script` tag and an external URL. 
+- These scripts can only be fetched from the sites specified in the CSP. 
+- This prevents an attacker from directly injecting scripts into an HTML document or modifying the HTML document to fetch scripts from the attacker’s domain
+
 For CSP to be enabled, the responses need to contain the [[HTTP]] header `Content-Security-Policy`. 
 - The value of this header contains policies, and these are the ones used.
 - The policies are a list of directives that are separated by semicolons.
