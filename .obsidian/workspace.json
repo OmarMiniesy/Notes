@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "51cd1716fe688e31",
+        "id": "dec46de8979635b1",
         "type": "tabs",
         "children": [
           {
-            "id": "eccb2db7e54c7db9",
+            "id": "3dd3477a809d3c57",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "content security policy",
+                "query": "environment variable",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -197,7 +197,12 @@
   },
   "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Windows and Active Directory",
+    "AWS Cloud/EC2 Auto Scaling.md",
+    "Windows/System Configuration.md",
+    "Windows/File System.md",
+    "Windows/User Access Control (UAC).md",
+    "JavaScript/NodeJs/Environment Variables.md",
+    "Windows",
     "Offensive Security/System Security/Linux Privilege Escalation.md",
     "Markdown/Markdown Syntax.md",
     "Offensive Security/Tools/OSINT.md",
@@ -221,10 +226,6 @@
     "Offensive Security/Web Application Security/SSRF.md",
     "Offensive Security/Web Application Security/SQL Injections.md",
     "Untitled.canvas",
-    "Offensive Security/Web Application Security/File Upload.md",
-    "Offensive Security/Web Application Security/Directory Traversal.md",
-    "Offensive Security/Web Application Security/Command Injection.md",
-    "Web Applications/Web Encoding.md",
     "Defensive Security",
     "Excalidraw",
     "Regular Expressions",
@@ -233,7 +234,6 @@
     "DevOps/Terraform",
     "DevOps",
     "Cryptography",
-    "DevOps/Kubernetes",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
 }

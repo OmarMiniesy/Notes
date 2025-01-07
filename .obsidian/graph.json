@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "path:JavaScript",
@@ -83,6 +83,13 @@
         "a": 1,
         "rgb": 12272823
       }
+    },
+    {
+      "query": "path:\"Windows\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 6851363
+      }
     }
   ],
   "collapse-display": false,
@@ -95,6 +102,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.1372238345690706,
+  "scale": 0.08994999762025388,
   "close": true
 }
