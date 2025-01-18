@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "dec46de8979635b1",
+        "id": "4ce36c75df21b590",
         "type": "tabs",
         "children": [
           {
-            "id": "3dd3477a809d3c57",
+            "id": "9f3b9c95b81c77b7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Offensive Security/Red Teaming/Campaign Planning.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Campaign Planning"
             }
           }
         ]
@@ -195,12 +199,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "9f3b9c95b81c77b7",
   "lastOpenFiles": [
+    "Offensive Security/Red Teaming/Cyber Kill Chains.md",
+    "Offensive Security/Red Teaming/Campaign Planning.md",
+    "Offensive Security/Red Teaming/Rules of Engagement.md",
+    "Offensive Security/Red Teaming/Threat Intelligence.md",
+    "Active Directory/Trees, Forests, and Trusts.md",
+    "Offensive Security/Red Teaming",
+    "Active Directory/Group Policy Management.md",
+    "Active Directory/Authentication Methods.md",
+    "Active Directory/Active Directory Users and Computers.md",
+    "Active Directory/Active Directory.md",
+    "Active Directory",
+    "Windows/User Access Control (UAC).md",
     "AWS Cloud/EC2 Auto Scaling.md",
     "Windows/System Configuration.md",
     "Windows/File System.md",
-    "Windows/User Access Control (UAC).md",
     "JavaScript/NodeJs/Environment Variables.md",
     "Windows",
     "Offensive Security/System Security/Linux Privilege Escalation.md",
@@ -216,15 +231,6 @@
     "Offensive Security/Windows Security",
     "Defense/Session.md",
     "Offensive Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
-    "Offensive Security/Web Application Security/Cross Site Request Forgery (CSRF).md",
-    "Offensive Security/Web Application Security/Clickjacking.md",
-    "Offensive Security/Web Application Security/Cross Site Scripting (XSS).md",
-    "Web Applications/SameSite.md",
-    "Web Applications/Sessions.md",
-    "Web Applications/Cookies.md",
-    "Web Applications/Same Origin Policy (SOP).md",
-    "Offensive Security/Web Application Security/SSRF.md",
-    "Offensive Security/Web Application Security/SQL Injections.md",
     "Untitled.canvas",
     "Defensive Security",
     "Excalidraw",
@@ -232,8 +238,6 @@
     "Scripting/Untitled",
     "Scripting",
     "DevOps/Terraform",
-    "DevOps",
-    "Cryptography",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
 }
