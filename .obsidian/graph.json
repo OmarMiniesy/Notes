@@ -90,6 +90,20 @@
         "a": 1,
         "rgb": 6851363
       }
+    },
+    {
+      "query": "path:\"Active Directory\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "path:\"Defensive Security\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
     }
   ],
   "collapse-display": false,
@@ -102,6 +116,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.08994999762025388,
+  "scale": 0.08994999762025428,
   "close": true
 }
