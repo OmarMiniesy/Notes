@@ -11,8 +11,6 @@ There are several plans that exist that can be followed as templates:
 |Mission Plan|The exact commands to run and execution time of the engagement.|Commands to run, Time Objectives, Responsible Operator, etc.|
 |Remediation Plan|Defines how the engagement will proceed after the campaign is finished.|Report, Remediation consultation, etc.|
 
-> A more general checklist to follow : link
-
 ---
 
 ### Engagement Documentation
