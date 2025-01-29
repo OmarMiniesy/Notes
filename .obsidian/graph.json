@@ -43,10 +43,10 @@
       }
     },
     {
-      "query": "path:Security",
+      "query": "path:\"Offensive Security\"  ",
       "color": {
         "a": 1,
-        "rgb": 7721376
+        "rgb": 13793657
       }
     },
     {
@@ -116,6 +116,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.08994999762025428,
+  "scale": 0.13722383456907153,
   "close": true
 }

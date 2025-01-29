@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "532a33f3ce12f72f",
+        "id": "84b4d43289a50e86",
         "type": "tabs",
         "children": [
           {
-            "id": "a3505af4821b008f",
+            "id": "320f852088bc4b09",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Windows Events Logs.md",
+                "file": "Windows/Event Tracing for Windows (ETW).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows Events Logs"
+              "title": "Event Tracing for Windows (ETW)"
             }
           }
         ]
@@ -199,10 +199,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a3505af4821b008f",
+  "active": "320f852088bc4b09",
   "lastOpenFiles": [
+    "Defensive Security/Tools/Process Hacker.md",
+    "Windows/Event Tracing for Windows (ETW).md",
+    "Windows/Windows Events Log.md",
+    "Defensive Security/Tools/Sysmon.md",
+    "Defensive Security/SOC/Incident Handling.md",
     "Windows/System Configuration.md",
-    "Windows/Windows Events Logs.md",
+    "AWS Cloud/Route 53.md",
+    "Defensive Security/Tools/The Elastic Stack.md",
     "Windows/File System.md",
     "Windows/User Access Control (UAC).md",
     "Offensive Security/Web Application Security/Insecure Deserialization.md",
@@ -216,22 +222,16 @@
     "Offensive Security/Red Teaming/Threat Intelligence.md",
     "Offensive Security/Red Teaming/Cyber Kill Chains.md",
     "Offensive Security/Red Teaming/Rules of Engagement.md",
-    "Defensive Security/Technologies",
+    "Defensive Security/Tools",
     "Defensive Security/SOC/Use Case.md",
-    "Defensive Security/Technologies/The Elastic Stack.md",
     "Defensive Security/SOC/SIEM.md",
     "Defensive Security/SOC/MITRE ATT&CK Framework.md",
-    "Defensive Security/SOC/Incident Handling.md",
     "Defensive Security/SOC/Alert Triaging.md",
     "Defensive Security/SOC",
     "Offensive Security/Red Teaming",
     "Active Directory/Active Directory.md",
     "Active Directory",
-    "AWS Cloud/EC2 Auto Scaling.md",
-    "JavaScript/NodeJs/Environment Variables.md",
     "Windows",
-    "Offensive Security/System Security/Linux Privilege Escalation.md",
-    "Markdown/Markdown Syntax.md",
     "Offensive Security/Windows Security",
     "Untitled.canvas",
     "Defensive Security",

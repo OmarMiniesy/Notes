@@ -12,10 +12,6 @@ This utility is used for advanced troubleshooting, and it has several tabs that 
 - Each tool has a name, description, and the command that will be run if it is selected.
 
 ---
-### Tools
-
-Some of the tools that exist in the Tools tab in the System Configuration panel.
-
 #### Change [[User Access Control (UAC)]] Settings
 
 Controls the UAC settings on the computer.
@@ -60,6 +56,6 @@ This tool shows information about the computer and displays a comprehensive view
 ### Registry Editor
 
 The **Windows Registry** is a central database that stores information about users, applications, and the hardware of a computer.
-- To view/edit the registry, the command `regedit.exe` can be types in the command prompt.
+- To view/edit the registry, the command `regedit.exe` can be typed in the command prompt.
 
 ---
