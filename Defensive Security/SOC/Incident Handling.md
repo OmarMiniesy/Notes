@@ -32,7 +32,6 @@ These 4 stages have two main objectives in mind, which are **investigation** and
 - The recovery activity is used to create and implement a recovery plan.
 
 ---
-
 ### Preparation
 
 In this phase, the organization is interested in developing an _Incident Handling_ capability.
@@ -44,7 +43,7 @@ For an organization to be prepared, it needs to have:
 - Clear policies and documentation,
 - The necessary software and hardware tools.
 
-### DMARC
+##### DMARC
 
 This is a technology used to protect against email phishing.
 - It does that by rejecting emails that pretend to originate from a given domain. It prevents email spoofing.
@@ -55,7 +54,7 @@ Some email systems use DMARC and add a header to that evaluates to true of false
 - This can be used by _email filtering rules_ that can check the value of the DMARC header and act accordingly.
 - This can be dangerous in the case of false positives.
 
-### Endpoint Hardening
+##### Endpoint Hardening
 
 Endpoints are the entry points for attackers, and they must be protected accordingly. Some protections that can be implemented include:
 - Disable LLMNR/NetBIOS
@@ -66,7 +65,7 @@ Endpoints are the entry points for attackers, and they must be protected accordi
 - Utilize host-based [[Firewall]]s.
 - Deploy an EDR product.
 
-### Network Protection
+##### Network Protection
 
 The network should be divided and properly segmented to ensure that malicious actors cannot move easily inside.
 - Different departments or different business critical components should be segregated.
@@ -77,7 +76,6 @@ If there is access to the network remotely, then security must be applied using 
 - If there are cloud resources, then utilizing solutions similar to conditional access are required.
 
 ---
-
 ### Detection & Analysis
 
 This phase includes:
@@ -110,7 +108,7 @@ To perform proper analysis of the incident after it is detected, as much informa
 
 > This information allows us to build a timeline of what has happened, and provide an overall picture of the current state.
 
-### Investigations
+##### Investigations
 
 To conduct an investigation and reach a valid conclusion, leads need to be discovered throughout the process itself, not just initially.
 - These leads are also called _Indicators of Compromise (IOCs)_.

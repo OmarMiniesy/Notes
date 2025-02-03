@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "84b4d43289a50e86",
+        "id": "6120f8297dbcab81",
         "type": "tabs",
         "children": [
           {
-            "id": "320f852088bc4b09",
+            "id": "a4c3f60a4a803416",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Event Tracing for Windows (ETW).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Event Tracing for Windows (ETW)"
+              "title": "New tab"
             }
           }
         ]
@@ -199,37 +195,38 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "320f852088bc4b09",
+  "active": "a4c3f60a4a803416",
   "lastOpenFiles": [
-    "Defensive Security/Tools/Process Hacker.md",
-    "Windows/Event Tracing for Windows (ETW).md",
-    "Windows/Windows Events Log.md",
-    "Defensive Security/Tools/Sysmon.md",
-    "Defensive Security/SOC/Incident Handling.md",
-    "Windows/System Configuration.md",
-    "AWS Cloud/Route 53.md",
-    "Defensive Security/Tools/The Elastic Stack.md",
-    "Windows/File System.md",
+    "Defensive Security/SOC/SIEM.md",
+    "Defensive Security/Tools/Get-WinEvent.md",
     "Windows/User Access Control (UAC).md",
+    "Windows/Windows Events Log.md",
+    "Windows/File System.md",
+    "Windows/System Configuration.md",
+    "Windows/Event Tracing for Windows (ETW).md",
+    "Defensive Security/Tools/SilkETW.md",
+    "Defensive Security/Tools/Logman.md",
+    "Windows/Tools",
+    "Windows/Untitled.md",
+    "Offensive Security/Red Teaming/Rules of Engagement.md",
+    "Offensive Security/Red Teaming/Threat Intelligence.md",
+    "Offensive Security/Red Teaming/Operation Security (OPSEC).md",
+    "Offensive Security/Red Teaming/Cyber Kill Chains.md",
+    "Offensive Security/Red Teaming/Campaign Planning.md",
+    "Defensive Security/Tools/The Elastic Stack.md",
+    "Defensive Security/Tools/Sysmon.md",
+    "Defensive Security/Tools/Process Hacker.md",
+    "Defensive Security/SOC/Alert Triaging.md",
+    "Defensive Security/SOC/Incident Handling.md",
+    "Defensive Security/SOC/MITRE ATT&CK Framework.md",
+    "Defensive Security/SOC/Use Case.md",
+    "Meeting with Mahmoud.md",
+    "AWS Cloud/Route 53.md",
     "Offensive Security/Web Application Security/Insecure Deserialization.md",
     "Offensive Security/Web Application Security/Information Disclosure.md",
-    "Offensive Security/Web Application Security/Command Injection.md",
-    "Offensive Security/Red Teaming/Campaign Planning.md",
-    "Active Directory/Trees, Forests, and Trusts.md",
-    "Active Directory/Group Policy Management.md",
-    "Active Directory/Authentication Methods.md",
-    "Active Directory/Active Directory Users and Computers.md",
-    "Offensive Security/Red Teaming/Threat Intelligence.md",
-    "Offensive Security/Red Teaming/Cyber Kill Chains.md",
-    "Offensive Security/Red Teaming/Rules of Engagement.md",
     "Defensive Security/Tools",
-    "Defensive Security/SOC/Use Case.md",
-    "Defensive Security/SOC/SIEM.md",
-    "Defensive Security/SOC/MITRE ATT&CK Framework.md",
-    "Defensive Security/SOC/Alert Triaging.md",
     "Defensive Security/SOC",
     "Offensive Security/Red Teaming",
-    "Active Directory/Active Directory.md",
     "Active Directory",
     "Windows",
     "Offensive Security/Windows Security",
@@ -237,7 +234,6 @@
     "Defensive Security",
     "Excalidraw",
     "Regular Expressions",
-    "Scripting/Untitled",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
 }

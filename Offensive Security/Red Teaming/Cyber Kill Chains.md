@@ -1,11 +1,9 @@
 ### General Notes
 
 It describes the steps attackers follow to breach a system, from reconnaissance to achieving their objective.
-
 - Understanding the kill chain allows organizations to identify and disrupt attacks at various stages, enhancing their security posture.
 
 There are several Kill Chains present, examples include:
-
 - [Lockheed Martin Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 - [Unified Kill Chain](https://unifiedkillchain.com/)
 - [Varonis Cyber Kill Chain](https://www.varonis.com/blog/cyber-kill-chain/)

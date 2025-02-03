@@ -1,13 +1,11 @@
 ### General Notes
 
 This a collection of 3 applications that work together to offer search and visualization capabilities of log files.
-
 - **Kibana** : Visualization
 - **Elasticsearch** : Searching and analyzing
 - **Logstash** : Ingesting (storing/collecting)
 
 **Beats** are an another component of the stack.
-
 - These are used as remote shippers of data.
 - They are installed on remote machines and are used to send data to **Logstash** or _Elasticsearch_.
 
@@ -16,7 +14,6 @@ This a collection of 3 applications that work together to offer search and visua
 ### Elasticsearch
 
 This is a JSON based search engine.
-
 - Handles indexing, storing, and querying of data.
 - Allows for complex querying on log files stored.
 
@@ -25,7 +22,6 @@ This is a JSON based search engine.
 ### Logstash
 
 This is responsible for collecting, transforming, and transporting log data files.
-
 - It can obtain data from various resources and normalize them into a standard format.
 - It works following 3 functions.
 
@@ -38,7 +34,6 @@ This is responsible for collecting, transforming, and transporting log data file
 ### Kibana
 
 This is the visualization tool for the documents stored in Elasticsearch.
-
 - The data stored can be viewed.
 - Queries can be executed on Kibana, and the results are presented as output there.
 - It utilizes charts, tables, and dashboards.

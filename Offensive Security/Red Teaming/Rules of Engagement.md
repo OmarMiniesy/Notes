@@ -1,7 +1,6 @@
 ### General Notes
 
 This is a legally binding outline of the objectives that the client needs.
-
 - This is treated as the contract between the client and the red team.
 
 |**Section Name**|**Section Details**|

@@ -8,3 +8,10 @@ By seeing what processes are created and being able to identify network connecti
 > Uses color coding to differentiate between processes. The legend can be found in Hacker > Options > Highlighting.
 
 ---
+### Parent-Child Relationships
+
+Process hacker can be used to detect unusual parent-child relationships between processes.
+- Understanding these relationships can help detect the unusual ones, and identify anomalies.
+- Common parent-child relationships: [here](https://twitter.com/SBousseaden/status/1195373669930983424).
+
+---
