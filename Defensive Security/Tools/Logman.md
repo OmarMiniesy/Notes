@@ -32,6 +32,6 @@ logman.exe query providers Microsoft-Windows-Winlogon
 ```
 - This shows the keywords, its GUID, the events that are available, and which processes are using that provider.
 
-> There are GUI based alternatives for `logman`,  these are *Performance Monitor* and the  [EtwExplorer project](https://github.com/zodiacon/EtwExplorer).
+> There are GUI based alternatives for `logman`,  these are *Performance Monitor* which is found in [[System Configuration]] and the  [EtwExplorer project](https://github.com/zodiacon/EtwExplorer).
 
 ---
