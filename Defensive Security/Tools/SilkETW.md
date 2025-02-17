@@ -17,6 +17,6 @@ silkETW.exe -t user -pn Microsoft-Windows-Kernel-Process
 silkETW.exe -t user -pn Microsoft-Windows-Kernel-Process -ot file -p C:\windows\temp\etw.json
 ```
 
-> SilkETW logs can be integrated with *event viewer* through `silkservice`. 
+> SilkETW logs can be integrated with [[Event Viewer]] through `silkservice`. 
 
 ---

@@ -11,7 +11,7 @@ This stores logs from different parts of the system, including:
 
 It provides comprehensive information about errors, events, and diagnostics.
 - These logs can be of type _Application_, _System_, _Security_, _Setup_, _Forwarded Events_ or other based on their source and purpose.
-- These logs can be accessed from the [[System Configuration#System Tools|Event Viewer]] application.
+- These logs can be accessed from the [[Event Viewer]] application.
 
 > Forwarded Events has log data forwarded from other machines.
 
@@ -19,7 +19,6 @@ Event log data is stored in files with the `.evtx` extension.
 - It uses an XML based schema.
 
 ---
-
 ### Event Entry
 
 Each entry in the Windows Event Log is an event, and it has this set of information:

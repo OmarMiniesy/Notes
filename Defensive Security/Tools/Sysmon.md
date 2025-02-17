@@ -28,7 +28,7 @@ sysmon.exe -c filename.xml
 
 ### Using Sysmon
 
-To open Sysmon and view the events it logs, we open The Event Viewer application, then access:
+To open Sysmon and view the events it logs, we open The [[Event Viewer]] application, then access:
 1. Applications and Services
 2. Microsoft
 3. Windows

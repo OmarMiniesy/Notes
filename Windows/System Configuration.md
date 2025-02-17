@@ -31,7 +31,7 @@ It has 3 primary sections:
 
 This section has several tools, these are:
 - **Task Scheduler**: Similar to cron jobs in Linux, which are tasks that are run at specified times.
-- **Event Viewer**: View events (actions that can be logged) that have occurred on the computer. Used to investigate actions and diagnose problems.
+- **[[Event Viewer]]**: View events (actions that can be logged) that have occurred on the computer. Used to investigate actions and diagnose problems.
 - **Shared Folders**: Shows a list of windows shares and folders that can be accessed by other users. Under the **sessions** tab, a list of users that are connected will be shown. And in **open files**, the current files that are opened.
 - **Performance** opens the performance monitor utility (`perfmon`).
 - **Device Manager** is used to configure the hardware attached to the computer.
