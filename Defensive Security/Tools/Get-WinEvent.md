@@ -41,11 +41,31 @@ To retrieve events from a `.evtx` file, we need to specify the path:
 Get-WinEvent -Path 'C:\Tools\chainsaw\EVTX-ATTACK-SAMPLES\Execution\exec_sysmon_1_lolbin_pcalua.evtx' -MaxEvents 5 | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
 ```
 
-To filter windows events, the `-FilterHashtable` flag can be used to define conditions:
+To filter *windows events*, the `-FilterHashtable` flag can be used to define conditions:
 ```powershell
 Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=1,3} | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
 ```
 - This obtains events with IDs 1 and 3.
+
+Another example given a path for the log file, and looking for *DLL hijack* attacks.
+```powershell
+ Get-WinEvent -FilterHashtable @{Path="C:\Logs\DLLHijack\*"; ID=7} | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Where-Object {$_.Message -match ‘Signed: false’} | ForEach-Object {Write-Host $_.Message `n}
+```
+- ID of 7 for image load.
+- Outputs the needed columns and checks if the content contains `Signed: false`.
+
+To look for a certain library that is being loaded:
+```powershell
+Get-WinEvent -FilterHashtable @{Path='C:\Logs\PowershellExec\*'; Id=7} | Select-Object TimeCreated, Id, Message | Where-Object {$_.Message -match 'ImageLoaded:\s+C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\clr.dll'} | Format-List
+```
+- Used to detect unmanaged PowerShell code. 
+- The presence of "Microsoft .NET Runtime...", `clr.dll`, and `clrjit.dll`
+
+To check for process access:
+```powershell
+Get-WinEvent -FilterHashtable @{Path='C:\Logs\Dump\*'; Id=10} | Select-Object TimeCreated, Id, Message | Where-Object {$_.Message -match 'TargetImage:\s+C:\\Windows\\system32\\lsass.exe' -and $_.Message -notmatch 'SourceImage:\s+C:\\Windows\\system32\\svchost.exe'} | Format-List
+```
+- here we check that the image that is loaded is `lsass`, and that the image loading it is not `svchost`.
 
 To get logs based on certain dates, we can create date variables:
 ```powershell
@@ -70,4 +90,24 @@ New-Object PSObject -Property @{
 }  | Where-Object {$_.DestinationIP -eq "52.113.194.132"}
 ```
 - The Windows XML EventLog (EVTX) format can be found [here](https://github.com/libyal/libevtx/blob/main/documentation/Windows%20XML%20Event%20Log%20(EVTX).asciidoc).
+
+Filtering events with *FilterXPath*. 
+- To use XPath queries with `Get-WinEvent`, we need to use the `-FilterXPath` parameter. This allows us to craft an XPath query to filter the event logs.
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[EventData[Data[@Name='Image']='C:\Windows\System32\reg.exe']] and *[EventData[Data[@Name='CommandLine']='`"C:\Windows\system32\reg.exe`" ADD HKCU\Software\Sysinternals /v EulaAccepted /t REG_DWORD /d 1 /f']]" | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
+```
+
+Suppose we want to investigate any network connections to a particular suspicious [IP] address (`52.113.194.132`) that [[Sysmon]] has logged.
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[System[EventID=3] and EventData[Data[@Name='DestinationIp']='52.113.194.132']]"
+```
+
+Filtering events based on property values. 
+- The `-Property *` parameter, when used with `Select-Object`, instructs the command to select all properties of the objects passed to it.
+```powershell
+Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=1} -MaxEvents 1 | Select-Object -Property *
+```
+
+---
+
 

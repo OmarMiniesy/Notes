@@ -25,7 +25,7 @@
       "query": "path:\"Web Applications\"",
       "color": {
         "a": 1,
-        "rgb": 5526240
+        "rgb": 6973678
       }
     },
     {
@@ -46,7 +46,7 @@
       "query": "path:\"Offensive Security\"  ",
       "color": {
         "a": 1,
-        "rgb": 13793657
+        "rgb": 5513169
       }
     },
     {
@@ -116,6 +116,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.14931905406513382,
+  "scale": 0.1787452186040196,
   "close": true
 }

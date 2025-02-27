@@ -31,7 +31,8 @@ To view the details of a single provider, provide its name.
 logman.exe query providers Microsoft-Windows-Winlogon
 ```
 - This shows the keywords, its GUID, the events that are available, and which processes are using that provider.
+- The `Microsoft-Windows-Winlogon/Diagnostic` and `Microsoft-Windows-Winlogon/Operational` keywords reference the event logs generated from this provider.
 
-> There are GUI based alternatives for `logman`,  these are *Performance Monitor* which is found in [[System Configuration]] and the  [EtwExplorer project](https://github.com/zodiacon/EtwExplorer).
+> There are GUI based alternatives for `logman`,  these is *Performance Monitor -> Data Collector Sets -> Event Trace Sessions* which is found in [[System Configuration]] and the  [EtwExplorer project](https://github.com/zodiacon/EtwExplorer).
 
 ---

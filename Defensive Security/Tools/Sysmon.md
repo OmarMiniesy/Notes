@@ -19,7 +19,7 @@ Sysmon uses XML configuration file, which can be edited to characterize the type
 sysmon.exe -i -accepteula -h md5,sha256,imphash -l -n
 ```
 
-- To use a custom configuration file:
+- To use a custom configuration file: (MUST)
 ```powershell
 sysmon.exe -c filename.xml
 ```

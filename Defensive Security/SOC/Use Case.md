@@ -1,13 +1,11 @@
 ### General Notes
 
 A [[SIEM]] _use case_ allows the SOC team to identify potential security incidents by illustrating a specific situation/scenario.
-
 - Based on the log data generated and used by the SIEM, the use cases are developed to make sense of the events and correlate them to match and detect for incidents.
 
 > Use cases are used to generate alerts. These alerts are then attended to by the SOC team, or are acted upon by some automation rules or workflows.
 
 ---
-
 ### Creating a Use Case
 
 To properly define a use case and ensure its efficiency, they need to be created following a cycle that has several stages:
@@ -32,7 +30,6 @@ To ensure the use case is working properly, these two quantitative measures will
 ### Incident Response
 
 The use cases developed produce alerts, and these alerts can be aggregated into incidents if needed.
-
 - Therefore, an _incident response plan (IRP)_ needs to be set up for managing the alerts and to address the true positive incidents.
 
 > SLAs and OLAs need to be created between teams to handle alerts and to follow the IRP.

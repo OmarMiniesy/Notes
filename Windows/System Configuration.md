@@ -23,11 +23,11 @@ This tool contains a collection of administrative tools to manage a windows comp
 - Can be run by typing the command `compmgmt` in the windows search bar.
 
 It has 3 primary sections: 
-- **System Tools**.
-- **Storage**.
-- **Services and Applications**.
+1. **System Tools**.
+2. **Storage**.
+3. **Services and Applications**.
 
-###### System Tools
+###### 1. System Tools
 
 This section has several tools, these are:
 - **Task Scheduler**: Similar to cron jobs in Linux, which are tasks that are run at specified times.
@@ -36,11 +36,11 @@ This section has several tools, these are:
 - **Performance** opens the performance monitor utility (`perfmon`).
 - **Device Manager** is used to configure the hardware attached to the computer.
 
-###### Storage
+###### 2. Storage
 
 This section has the **Disk Management** tool, which can be used to view the current storage configuration, as well as modify it.
 
-###### Services and Applications
+###### 3. Services and Applications
 
 This sections has 2 tools:
 - **Services**: This shows the services on the computer and allows for more granular control over the service.

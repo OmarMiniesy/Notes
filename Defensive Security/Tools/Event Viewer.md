@@ -10,3 +10,9 @@ Advanced filtering using [[XML]] can be performed by choosing *filter current lo
 - This [article](https://techcommunity.microsoft.com/blog/askds/advanced-xml-filtering-in-the-windows-event-viewer/399761) has advanced filtering explained.
 
 ---
+### Some XML Queries
+
+- To filter for DLL hijack attacks:
+```
+*[System[(EventID=7)]] and *[EventData[Data[@Name='Signed'] != 'true']]
+```

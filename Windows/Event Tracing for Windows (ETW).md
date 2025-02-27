@@ -12,7 +12,7 @@ ETW operates with *Event Providers*, which are components that generate specific
 
 To retrieve logs from ETW, there is a PowerShell cmdlet called [[Get-WinEvent]] which simplifies the parsing and analysis of ETW logs.
 - Also allows for filtering and event correlation mechanisms on the logs captured by ETW.
-- There are also tools that can be used like [[Logman]] and 
+- There are also tools that can be used like [[Logman]] and [[SilkETW]].
 
 ---
 ### ETW Architecture & Components
