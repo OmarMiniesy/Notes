@@ -23,7 +23,6 @@ The framework is organized in a matrix structure, and can be filtered based on s
 - [ICS](https://attack.mitre.org/matrices/ics/)
 
 ---
-
 ### Framework Uses
 
 **Detection and Response** : The framework supports SOCs in devising detection and response plans based on recognized attacker TTPs, empowering security teams to pinpoint potential dangers and develop proactive countermeasures.

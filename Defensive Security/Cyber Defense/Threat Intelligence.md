@@ -18,11 +18,10 @@ The red team uses Threat Intelligence to analyze and emulate the behavior of adv
 - **Procedures**: Step-by-step sequences or workflows adversaries follow to execute their techniques.
 
 ---
-
 ### TTP Mapping
 
 Collecting this Threat Intelligence helps in understanding and defending against adversaries.
-- In combination with this information, TTPs from attack frameworks like [[MITRE ATT&CK FRAMEWORK]] or the TIBER-EU framework helps to understand how attackers operate.
+- In combination with this information, TTPs from attack frameworks like [[MITRE ATT&CK Framework]] or the TIBER-EU framework helps to understand how attackers operate.
 
 Once an attacker is chosen, the goal is identify the TTPs used by this attacker and map it to a [[Cyber Kill Chains|Cyber Kill Chain]].
 - This helps in understanding how the attacker moves and how to simulate the attacker.
