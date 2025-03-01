@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Cyber Defense/Cyber Kill Chains.md",
+                "file": "Defensive Security/Cyber Defense/Cyber Threat Intelligence.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cyber Kill Chains"
+              "title": "Cyber Threat Intelligence"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"threat intelligence\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -203,17 +203,20 @@
   "active": "bc2e4067d3fe7507",
   "lastOpenFiles": [
     "Offensive Security/Red Teaming/OSINT.md",
+    "Defensive Security/Cyber Defense/Cyber Threat Intelligence.md",
     "Defensive Security/Cyber Defense/Cyber Kill Chains.md",
+    "Defensive Security/SOC Analyst/Alert Triaging.md",
+    "Defensive Security/SOC Analyst/SIEM.md",
+    "Defensive Security/SOC Analyst/Incident Handling.md",
+    "Defensive Security/Cyber Defense/Untitled.md",
+    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
+    "Offensive Security/Red Teaming/Rules of Engagement.md",
     "Offensive Security/Red Teaming/Operation Security (OPSEC).md",
     "Offensive Security/Wireless Network Security/Attack Types.md",
     "Offensive Security/Wireless Network Security/Evil Twin Attack.md",
     "Offensive Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
     "Defensive Security/Cyber Defense/Pyramid of Pain.md",
     "Defensive Security/Cyber Defense",
-    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
-    "Defensive Security/SOC Analyst/SIEM.md",
-    "Defensive Security/SOC Analyst/Incident Handling.md",
-    "Defensive Security/Cyber Defense/Threat Intelligence.md",
     "Defensive Security/SOC Analyst/Use Case.md",
     "Defensive Security/SOC Analyst/Log Files.md",
     "Defensive Security/Tools/Get-WinEvent.md",
@@ -226,11 +229,8 @@
     "Windows/Windows Events Log.md",
     "Windows/File System.md",
     "Windows/System Configuration.md",
-    "Windows/User Access Control (UAC).md",
     "Defensive Security/SOC/Untitled",
-    "Defensive Security/SOC Analyst/Alert Triaging.md",
     "Windows/Tools",
-    "Windows/Untitled.md",
     "Defensive Security/Tools",
     "Defensive Security/SOC Analyst",
     "Offensive Security/Red Teaming",

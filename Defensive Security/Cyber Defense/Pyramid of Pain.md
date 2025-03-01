@@ -1,7 +1,7 @@
 ### General Notes
 
 This is a model that shows the importance of identifying Indicators of Compromise *IOCs* to cause disruptions for attackers and improve the cybersecurity posture of an organization.
-- By utilizing [[Threat Intelligence]], organizations can target hard to change behaviors of attackers and improve their defensive measures.
+- By utilizing [[Cyber Threat Intelligence]], organizations can target hard to change behaviors of attackers and improve their defensive measures.
 - This model lays out the correct plan to properly utilize threat intelligence. 
 
 ---

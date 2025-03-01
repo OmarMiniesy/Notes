@@ -24,7 +24,7 @@ _Escalation_ is the process of notifying the personnel that have authority to ma
 
 - Cross-reference the alert with related alerts, events, or incidents to identify patterns, similarities, or potential indicators of compromise (IOCs).
 - Query the [[SIEM]] or log management system to gather relevant log data.
-- Leverage [[Threat Intelligence]] feeds to check for known attack patterns or malware signatures.
+- Leverage [[Cyber Threat Intelligence]] feeds to check for known attack patterns or malware signatures.
 
 ##### 4. Enrichment of Alert Data:
 

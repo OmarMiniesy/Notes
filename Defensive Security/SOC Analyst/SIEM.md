@@ -31,7 +31,7 @@ Using log consolidation, the SOC team can identify incidents and events that thr
 Possible threats that are observed by the SIEM's collection of logs are reported.
 - This allows the security team to carry out fast investigations and respond to incidents quickly.
 
-Using analytics carried out over the logs, combined with threat intelligence information, SIEMs can recognize potential threats and produce alerts.
+Using analytics carried out over the logs, combined with [[Cyber Threat Intelligence]] information, SIEMs can recognize potential threats and produce alerts.
 - Alerts produced are accompanied with details that allows investigations to be conducted on this alert.
 
 #### Contextualization & Response

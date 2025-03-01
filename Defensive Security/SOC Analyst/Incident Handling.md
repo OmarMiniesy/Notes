@@ -80,7 +80,7 @@ If there is access to the network remotely, then security must be applied using 
 
 This phase includes:
 - Detecting the incidents by utilizing logs, sensors, and security professionals.
-- Sharing information and utilizing threat intelligence.
+- Sharing information and utilizing [[Cyber Threat Intelligence]].
 - Full visibility into the network architecture, with its segmentation technologies in place.
 
 Detection is done at various levels of the network:
@@ -117,7 +117,7 @@ An IOC is a sign that an incident has occurred. It is documented in a structured
 - This includes IP addresses, file names, or hashes of files.
 - There are known languages for documenting IOCs, such as _Yara_ and _OpenIOC_.
 
-> IOCs can also obtained from third party vendors, and in this case they are used as threat intelligence.
+> IOCs can also obtained from third party vendors, and in this case they are used as [[Cyber Threat Intelligence]].
 
 Using these IOCs we can try and look for them or similarities of them in other systems.
 - In that case, we can collect and document the state of these systems to continue the investigation and discover other leads.
