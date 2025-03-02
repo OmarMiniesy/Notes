@@ -26,7 +26,6 @@ To ensure the use case is working properly, these two quantitative measures will
 > The use case needs to be mapped to the [[MITRE ATT&CK Framework]] to map with known TTPs.
 
 ---
-
 ### Incident Response
 
 The use cases developed produce alerts, and these alerts can be aggregated into incidents if needed.

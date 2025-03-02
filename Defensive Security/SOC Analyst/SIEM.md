@@ -2,7 +2,7 @@
 
 _SIEM_ or _Security Information and Events Management_ is a software that possesses a large amount of functionalities:
 - Collection and administration of logs and events.
-- [[Incident Handling]]
+- [[Incident Handling]].
 - Visual summaries and documentation.
 
 SIEM systems gather data from various resources, both on the network and outside of the network.

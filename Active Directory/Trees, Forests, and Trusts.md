@@ -6,7 +6,6 @@ Simple [[Active Directory/Active Directory|Active Directory]] setups can be buil
 > To manage multiple domains in a single organization, a new Security Group needs to be introduced call Enterprise Admins. This group grants users admin privileges over all the domains in an enterprise.
 
 ---
-
 ### Trees
 
 This is used to join domains that share the same namespace.
@@ -15,14 +14,12 @@ This is used to join domains that share the same namespace.
 Here, the 2 subdomains will be the child nodes of the parent domain in the Tree structure.
 
 ---
-
 ### Forests
 
 In the case of domains with different namespaces, there will be different _Trees_ present.
 - Combining these trees with different namespaces creates a _Forest_.
 
 ---
-
 ### Trust Relationships
 
 Domains arranged in _Trees_ and _Forests_ need to have _trust relationships_ configured between them to allow users to access content between these domains.

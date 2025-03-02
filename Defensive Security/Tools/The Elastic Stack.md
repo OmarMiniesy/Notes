@@ -10,7 +10,6 @@ This a collection of 3 applications that work together to offer search and visua
 - They are installed on remote machines and are used to send data to **Logstash** or _Elasticsearch_.
 
 ---
-
 ### Elasticsearch
 
 This is a JSON based search engine.

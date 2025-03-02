@@ -62,4 +62,12 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 - *ThreatFox* is a tool that can share IOCs associated with malware and export them in various formats.
 - *YARA IFY* is a repository of YARA rules to identify and classify malware.
 
+**[Talos Intelligence](https://talosintelligence.com/)**
+- **Threat Intelligence & Interdiction:** Quick correlation and tracking of threats provide a means to turn simple IOCs into context-rich intel.
+- **Detection Research:** Vulnerability and malware analysis is performed to create rules and content for threat detection.
+- **Engineering & Development:** Provides the maintenance support for the inspection engines and keeps them up-to-date to identify and triage emerging threats.
+- **Vulnerability Research & Discovery:** Working with service and software vendors to develop repeatable means of identifying and reporting security vulnerabilities.
+- **Communities:** Maintains the image of the team and the open-source solutions.
+- **Global Outreach:** Disseminates intelligence to customers and the security community through publications.
+
 ---
