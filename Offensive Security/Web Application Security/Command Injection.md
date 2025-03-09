@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Command injection allows attackers to execute operating system commands on the hosting server running a web application. It mainly arises from the idea of accepting user input into a query without being properly sanitized, allowing for an escape into the system.

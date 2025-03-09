@@ -12,3 +12,10 @@ The `*tmp` files that hold logon history information.
 The content in this file follows the `utmp` struct format.
 - To read these files, either use `last` or use `utmpdump`.
 
+---
+### Windows Files
+
+###### `C:\Windows\System32\winevt\Logs`
+
+Has [[Windows Events Log]]s files.
+

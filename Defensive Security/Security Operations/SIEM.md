@@ -4,6 +4,7 @@ _SIEM_ or _Security Information and Events Management_ is a software that posses
 - Collection and administration of logs and events.
 - [[Incident Handling]].
 - Visual summaries and documentation.
+- [[Threat Hunting]].
 
 SIEM systems gather data from various resources, both on the network and outside of the network.
 - This data is standardized and used for analysis.
@@ -18,7 +19,7 @@ An _alert_ is generated when an event or incident takes place that needs to be e
 
 By serving as a central hub that collects data from various sources, SIEM solutions offer a platform to easily and efficiently manage risks and handle incidents.
 
-#### Log Aggregation and Normalization
+##### Log Aggregation and Normalization
 
 A SIEM has responsibilities of collections logs of various types and from various sources, and normalizing them into a single standard format.
 - This process of collecting logs from various sources is known as _log consolidating_.
@@ -26,7 +27,7 @@ A SIEM has responsibilities of collections logs of various types and from variou
 Using log consolidation, the SOC team can identify incidents and events that threaten the security of the infrastructure.
 - By centralizing and collecting information from these sources, threat detection and handling is made simpler by outlining patterns, tendencies, and highlighting outliers and irregularities.
 
-#### Threat Alerting
+##### Threat Alerting
 
 Possible threats that are observed by the SIEM's collection of logs are reported.
 - This allows the security team to carry out fast investigations and respond to incidents quickly.
@@ -34,7 +35,7 @@ Possible threats that are observed by the SIEM's collection of logs are reported
 Using analytics carried out over the logs, combined with [[Cyber Threat Intelligence]] information, SIEMs can recognize potential threats and produce alerts.
 - Alerts produced are accompanied with details that allows investigations to be conducted on this alert.
 
-#### Contextualization & Response
+##### Contextualization & Response
 
 SIEMs should not be generating a large number of alerts, as this not only overwhelms the security team, but is also an indicator of a large number of false positives.
 - To tackle this issue, the alerts need to have enough context to allow easy sorting through these alerts.

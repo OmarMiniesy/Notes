@@ -3,14 +3,22 @@
 Cyber Threat Intelligence (CTI) is the grouping of data, called *IOCs*, or *Indicators of Compromise*, and is distributed by *ISACs*, or *Information and Sharing Analysis Centers*.
 - This data is used by teams and companies to be able to detect threats, or build their defenses using this information.
 - Threat Intel is geared towards understanding the relationship between your operational environment and your adversary.
+- Threat Intel gives insights into potential adversary operations, such as their TTPs and some of their artifacts, which can be useful for [[Threat Hunting]] to inform their operations.
 
 > Indicators of Compromise are traces that are left by attackers that could indicate that they were present, this includes [[IP]] addresses, domains, files, or even strings.
 
+###### Threat Intelligence Categories
 Threat intelligence can be categorized as **strategic**, **operational**, **technical**, or **tactical** intelligence.
 - *Strategic Intelligence*: High level intel that observes the current organization's environment and outlines risks based on current or emerging threats.
 - *Technical Intelligence*: These are the IOCs left by adversaries that can be used to create a baseline attack surface and develop defense mechanisms.
 - *Tactical Intelligence*: This is the intelligence of the adversaries **TTPs**, allowing organizations to strengthen their security posture by understanding the methods used by attackers.
 - *Operational Intelligence*: Understanding the motives and intentions behind an attack to understand the available critical assets that are to be targeted.
+
+For threat intelligence to be useful to an organization, it needs to be:
+- **Actionable**
+- **Timely**
+- **Relevant**
+- **Accurate**
 
 ---
 ### CTI Lifecycle

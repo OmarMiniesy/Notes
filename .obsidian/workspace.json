@@ -4,20 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "5ef87ddb67a06696",
+        "id": "f2b64f7e3955bba0",
         "type": "tabs",
         "children": [
           {
-            "id": "5c346633766db1ec",
+            "id": "cd0e9e95f07a7851",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Operations/Threat Hunting.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Threat Hunting"
+            }
+          },
+          {
+            "id": "d0a94d5dc80c0b5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Sysinternals.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sysinternals"
+            }
+          },
+          {
+            "id": "5b8a428f2aa27277",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Endpoint Security/Endpoint Security.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Endpoint Security"
+            }
+          },
+          {
+            "id": "8c335122e3f45a30",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Windows Events Log.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Events Log"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -49,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"threat intelligence\"",
+                "query": "netstat",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,7 +131,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 302.50152587890625
+    "width": 274.5026054382324
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -196,45 +243,45 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "5b8a428f2aa27277",
   "lastOpenFiles": [
-    "Active Directory/Group Policy Management.md",
-    "Active Directory/Authentication Methods.md",
-    "Active Directory/Active Directory Users and Computers.md",
-    "Active Directory/Active Directory.md",
-    "Web Applications/WordPress.md",
-    "Offensive Security/Web Application Security/WordPress Security.md",
-    "Offensive Security/Web Application Security/Phishing.md",
-    "Offensive Security/System Security/Reverse Shells.md",
-    "Offensive Security/System Security/Malware.md",
-    "Defensive Security/SOC Analyst/SIEM.md",
-    "Defensive Security/Tools/The Elastic Stack.md",
+    "Defensive Security/Endpoint Security/Log Files.md",
+    "Windows/Windows Events Log.md",
+    "Markdown/Markdown Syntax.md",
+    "Defensive Security/Security Operations/SIEM.md",
+    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
+    "Windows/Sysinternals.md",
+    "Defensive Security/Security Operations/Threat Hunting.md",
+    "Web Applications/HTTP.md",
+    "Offensive Security/Tools/Meterpreter.md",
+    "Offensive Security/Tools/Metasploit.md",
+    "Offensive Security/Tools/ffuf.md",
+    "Offensive Security/Tools/cURL.md",
+    "Offensive Security/Web Application Security/Authentication.md",
+    "Offensive Security/Web Application Security/Command Injection.md",
+    "Defensive Security/Tools/OSQuery.md",
     "Defensive Security/Tools/Sysmon.md",
-    "Defensive Security/Tools/SilkETW.md",
-    "Defensive Security/Tools/Process Hacker.md",
-    "Defensive Security/Tools/Logman.md",
-    "Defensive Security/Tools/Get-WinEvent.md",
-    "Defensive Security/Tools/Event Viewer.md",
-    "Defensive Security/SOC Analyst/Incident Handling.md",
-    "Defensive Security/SOC Analyst/Alert Triaging.md",
-    "Defensive Security/SOC Analyst/Use Case.md",
-    "Defensive Security/SOC Analyst/Log Files.md",
-    "Offensive Security/Wireless Network Security/Security Standards.md",
-    "Offensive Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
-    "Offensive Security/Network Security/Intrusion Detection Systems (IDS).md",
-    "Offensive Security/Red Teaming/Campaign Planning.md",
     "Defensive Security/Cyber Defense/Cyber Threat Intelligence.md",
+    "Defensive Security/Endpoint Security",
+    "Offensive Security/Network Security/Transport Layer Security (TLS).md",
+    "Offensive Security/Network Security/Firewall.md",
+    "Offensive Security/Network Security/Footprinting and Scanning.md",
+    "Defensive Security/Security Operations/Use Case.md",
+    "Defensive Security/Security Operations/Incident Handling.md",
+    "Defensive Security/Endpoint Security/Endpoint Security.md",
+    "Defensive Security/Cyber Defense/Cyber Kill Chains.md",
+    "Active Directory/Trees, Forests, and Trusts.md",
+    "Active Directory/Group Policy Management.md",
     "Defensive Security/Cyber Defense",
     "Defensive Security/SOC/Untitled",
     "Windows/Tools",
     "Defensive Security/Tools",
-    "Defensive Security/SOC Analyst",
+    "Defensive Security/Security Operations",
     "Offensive Security/Red Teaming",
     "Active Directory",
     "Windows",
     "Offensive Security/Windows Security",
     "Untitled.canvas",
-    "Defensive Security",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
 }
