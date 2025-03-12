@@ -42,7 +42,7 @@ _Escalation_ is the process of notifying the personnel that have authority to ma
 ##### 6. Contextual Analysis:
 
 - The analyst considers the context surrounding the alert, including the affected assets, their criticality, and the sensitivity of the data they handle.
-- They evaluate the security controls in place, such as [[Firewall]]s, [[Intrusion Detection Systems (IDS)]], and endpoint protection solutions, to determine if the alert indicates a potential control failure or evasion technique.
+- They evaluate the security controls in place, such as [[Firewall]]s, [[IDS & IPS]], and endpoint protection solutions, to determine if the alert indicates a potential control failure or evasion technique.
 - The analyst assesses the relevant compliance requirements, industry regulations, and contractual obligations to understand the implications of the alert on the organization's legal and regulatory compliance posture.
 
 ##### 7. Incident Response Planning:

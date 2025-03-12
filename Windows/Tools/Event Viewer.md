@@ -16,3 +16,5 @@ Advanced filtering using [[XML]] can be performed by choosing *filter current lo
 ```
 *[System[(EventID=7)]] and *[EventData[Data[@Name='Signed'] != 'true']]
 ```
+
+---

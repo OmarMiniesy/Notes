@@ -70,7 +70,7 @@ Endpoints are the entry points for attackers, and they must be protected accordi
 The network should be divided and properly segmented to ensure that malicious actors cannot move easily inside.
 - Different departments or different business critical components should be segregated.
 - If internal resources are to face the internet, they should be placed in a DMZ.
-- Utilizing technology like [[Intrusion Detection Systems (IDS)]]/IPS to be able to read the traffic and identify malicious content.
+- Utilizing technology like [[IDS & IPS]]/IPS to be able to read the traffic and identify malicious content.
 
 If there is access to the network remotely, then security must be applied using techniques like `802.1x`.
 - If there are cloud resources, then utilizing solutions similar to conditional access are required.

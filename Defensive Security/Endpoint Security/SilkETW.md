@@ -1,6 +1,6 @@
 ### General Notes
 
-This is a tool that is used to interact with [[SilkETW]] in a simple interface.
+This is a tool that is used to interact with [[Event Tracing for Windows (ETW)]] in a simple interface.
 
 - To specify the tracing mode, that is either user mode or kernel mode, use the `-t` flag followed by the mode.
 ```

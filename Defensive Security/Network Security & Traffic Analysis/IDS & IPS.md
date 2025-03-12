@@ -1,21 +1,32 @@
 ### General Notes
 
-A network device that can detect malicious packets and alerts administrators.
+Network devices that are used to enhance network security.
+##### Intrusion Detection Systems (IDS)
+
+A passive monitoring network device that can detect malicious packets and alerts administrators.
 - Similar to a [[Firewall]], but it cannot take action against these packets.
 - It can only detect, monitor, and create logs.
 
 There are several types of IDS such as:
-- Network Intrusion Detection Systems (NIDS)
-- Host-Based Intrusion Detection Systems (HIDS)
-- Logging Systems
+- [[#Network Intrusion Detection Systems (NIDS)]]
+- [[#Host-Based Intrusion Detection Systems (HIDS)]]
+- [[#Logging Systems]]
 
 However, these systems aren't perfect, and they suffer from misclassification of packets.
 - For instance, some packets can be flagged as malicious when they are normal packets, and vice versa.
 - There is a detection rate for these systems that outlines the probabilities of correct detection.
 - Hence, there are different detection mechanisms in place.
+
 ##### Intrusion Prevention Systems (IPS)
-These are an extra step above IDS, that can take action, instead of just analyzing and reporting malicious activity.
+
+An extra step above IDS, that can take action, instead of just analyzing and reporting malicious activity.
 - They can block and drop packets.
+
+There are several types of IPS:
+- *Network Intrusion Prevention Systems (NIPS)*: If a malicious signature is identified, the connection is terminated.
+- *Behavior-Based Intrusion Prevention Systems (Network Behavior Analysis NBA)*: The system is first in a training period to understand the normal behavior of the network (baselining). Once abnormal behavior is detected, the connections are terminated.
+- *Wireless Intrusion Prevention Systems (WIPS)*: Connections are terminated in wireless networks if malicious behavior is detected.
+- *Host-Based Intrusion Prevention Systems (HIPS)*: Protects the traffic flow for a single endpoint device, and terminates connection if signatures of malicious activity are identified.
 
 ---
 ### Network Intrusion Detection System (NIDS)
@@ -46,12 +57,12 @@ These are placed on the end hosts themselves.
 > However, these HIDS must be present on every end host, which is expensive. Moreover, they also can be bypassed by using **evasion techniques** such as obfuscation of attack commands.
 
 ---
-### Logging
+### Logging Systems
 
 This type of detection is where logs generated are analyzed by a device.
 - These logs can be scanned through to look for any attacks that have taken place.
 - They are cheap, and can be implemented for all end hosts.
-- Moreover, they are similar to HIDS, where they can understand packets.
+- Moreover, they are similar to *HIDS*, where they can understand packets.
 
 > Logging is not done in real time, hence, attacks are discovered a while after they actually take place. Attackers can also modify the logs, so as to remove any trace they leave.
 

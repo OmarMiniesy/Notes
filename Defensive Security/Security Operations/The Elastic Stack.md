@@ -17,7 +17,6 @@ This is a JSON based search engine.
 - Allows for complex querying on log files stored.
 
 ---
-
 ### Logstash
 
 This is responsible for collecting, transforming, and transporting log data files.
@@ -29,7 +28,6 @@ This is responsible for collecting, transforming, and transporting log data file
 3. **Send to Elasticsearch**: These logs are then sent to Elasticsearch using output plugins.
 
 ---
-
 ### Kibana
 
 This is the visualization tool for the documents stored in Elasticsearch.
