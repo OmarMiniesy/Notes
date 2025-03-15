@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8636502daad32129",
+        "id": "bcd239a723ff21a6",
         "type": "tabs",
         "children": [
           {
-            "id": "701fa77062211269",
+            "id": "3254b24174a45734",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,20 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "Snort"
-            }
-          },
-          {
-            "id": "1c9aff883aae89e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Wireshark"
             }
           }
         ]
@@ -215,10 +201,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "701fa77062211269",
+  "active": "3254b24174a45734",
   "lastOpenFiles": [
-    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+    "Offensive Security/Network Security/Firewall.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort.md",
+    "Defensive Security/Security Operations/SIEM.md",
+    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Defensive Security/Network Security & Traffic Analysis/IDS & IPS.md",
     "Windows/Tools/Logman.md",
     "Windows/Tools/Get-WinEvent.md",
@@ -236,7 +224,6 @@
     "Defensive Security/Endpoint Security/Log Files.md",
     "Windows/Windows Events Log.md",
     "Markdown/Markdown Syntax.md",
-    "Defensive Security/Security Operations/SIEM.md",
     "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
     "Web Applications/HTTP.md",
     "Offensive Security/Tools/Meterpreter.md",
@@ -244,7 +231,6 @@
     "Offensive Security/Tools/ffuf.md",
     "Offensive Security/Tools/cURL.md",
     "Offensive Security/Web Application Security/Authentication.md",
-    "Offensive Security/Web Application Security/Command Injection.md",
     "Defensive Security/Endpoint Security",
     "Defensive Security/Cyber Defense",
     "Defensive Security/SOC/Untitled",
