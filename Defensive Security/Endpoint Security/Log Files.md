@@ -12,10 +12,24 @@ The `*tmp` files that hold logon history information.
 The content in this file follows the `utmp` struct format.
 - To read these files, either use `last` or use `utmpdump`.
 
+###### `/var/log/kern`
+Stores kernel related events.
+
+###### `/var/log/httpd`
+Stores [[HTTP]] request/response logs and any errors.
+- Also has *Apache* related logs, which can also be found in `/var/log/apache`.
+
+###### `/var/log/cron`
+Events related to cron jobs.
+
+
 ---
 ### Windows Files
+
+All windows logs can be viewed through the [[Event Viewer]] utility.
 
 ###### `C:\Windows\System32\winevt\Logs`
 
 Has [[Windows Events Log]]s files.
 
+---

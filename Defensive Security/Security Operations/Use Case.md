@@ -2,6 +2,8 @@
 
 A [[SIEM]] _use case_ allows the SOC team to identify potential security incidents by illustrating a specific situation/scenario.
 - Based on the log data generated and used by the SIEM, the use cases are developed to make sense of the events and correlate them to match and detect for incidents.
+- They are logical conditions that are used to match on the log data.
+- They can also be called *correlation rules*.
 
 > Use cases are used to generate alerts. These alerts are then attended to by the SOC team, or are acted upon by some automation rules or workflows.
 
