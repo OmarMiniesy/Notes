@@ -1,11 +1,9 @@
-
 ### General Notes
 
-> A communication [[Protocol]] to share files, printers, and [[Port]]s.
-> Mostly running on windows machines.
+This is a [[Protocol]] used in windows environments to share resources like printers and shares using a common network architecture.
+- Connection oriented protocol (using [[Transport Layer#TCP|TCP]]) that requires user authentication from the host to the resources needed to ensure the relevant permissions are present.
 
-> Usually found on TCP [[Port]] 445.
-> The [[Transport Layer]] that SMB uses is NETBIOS, so we scan also [[Port]] 137-139.
+> SMB now supports direct TCP transport over [[Port]] 445, *NetBIOS* over TCP port 139, and even the QUIC protocol.
 
 > Used in the [[Null Session]] attacks.
 

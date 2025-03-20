@@ -12,12 +12,16 @@ This stores logs from different parts of the system, including:
 It provides comprehensive information about errors, events, and diagnostics.
 - These logs can be of type _Application_, _System_, _Security_, _Setup_, _Forwarded Events_ or other based on their source and purpose.
 - These logs can be accessed from the [[Event Viewer]] application, the [[Get-WinEvent]] cmdlet, or `Wevtutil.exe`.
+- Each type of log has a different ID for the type of event it logs. The full list is [here](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events).
 
 > *Forwarded Events* has log data forwarded from other machines.
 
 Event log data is stored in files with the `.evtx` extension.
 - It uses an XML based schema.
 - Stored at `C:\Windows\System32\winevt\Logs`.
+
+To use [[Elastic]] as a [[SIEM]] for Windows Events Logs, view the [Winlogbeat](https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html) documentation on Elastic Docs.
+- The [Exported Fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields.html) page has all the available fields that can be used to query the logs.
 
 ---
 ### Event Entry
