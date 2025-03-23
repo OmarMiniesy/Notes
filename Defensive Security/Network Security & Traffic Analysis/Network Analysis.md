@@ -13,5 +13,18 @@ Traffic capture can either be *passive* or *active*.
 - **Active** analysis, also referred to as *in-line* analysis, is when real time analysis is conducted on the packets as they are moving. A *network tap*, or a *host with multiple Network Interface Cards* (NICs) is an example.
 
 ---
+### Analysis in Practice
 
+Traffic analysis is a dynamic process and it is influenced by what we are looking for. The process is comprised of several stages:
+- **Descriptive Analysis**: The process of first describing the issue, then defining what we are looking for and when it happened, and then finally defining where we are looking (scope).
+- **Diagnostic Analysis**: This provides insights through correlation and interpretation. It starts by first capturing traffic around the case of the issue, filtering out what is not needed, then inspecting and understanding the remaining captured data.
+- **Predictive Analysis**: Predicts a model for the future by using analysis to identify trends and detect deviations. This includes evaluation of the current data and comparing it to both, the baseline, and to known markers of exploitation. Done by annotating everything and keeping summaries of relevant details. 
+- **Prescriptive Analysis**: This is used to decide on what actions to take, or prescribe the solution.
 
+However, the approach to analysis can be simplified by doing the following:
+- Starting first with standard [[Protocol]]s and those that are relevant to the organization. Begin first with the internet related protocols, then move onto network communication protocols.
+- Start looking for patterns.
+- Start looking for any host to host communication.
+- Look for unique events, such as weird user agents, weird requests, weird ports.
+
+---

@@ -7,7 +7,7 @@
 The `*tmp` files that hold logon history information.
 - `/var/log/btmp` logs failed logon attempts.
 - `/var/run/utmp` logs stats, including successful logons, boot time, logouts, and other events of the _current state_ of the system — i.e., since its last boot.
-- `/var/log/wtmp` contains historical content of `utmp`, allowing you to peek back in time.
+- `/var/log/wtmp` contains historical content of `utmp`, allowing you to peek back in time. Check `wtmp` [man page](https://linux.die.net/man/5/wtmp) for information on how to read the entries, and the types of entries.
 
 The content in this file follows the `utmp` struct format.
 - To read these files, either use `last` or use `utmpdump`.

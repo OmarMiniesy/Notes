@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
+                "file": "Defensive Security/Endpoint Security/Log Files.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Network Analysis"
+              "title": "Log Files"
             }
           }
         ]
@@ -203,8 +203,9 @@
   },
   "active": "6c786226930f74c6",
   "lastOpenFiles": [
-    "Networking/Server Message Block (SMB).md",
     "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
+    "Offensive Security/Web Application Security/Insecure Deserialization.md",
+    "Networking/Server Message Block (SMB).md",
     "JavaScript/ReactJs/Routing.md",
     "JavaScript/ReactJs/State.md",
     "JavaScript/ReactJs/Pass Data Dynamically.md",
@@ -229,7 +230,6 @@
     "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Digital Forensics & Incident Response",
-    "Defensive Security/Security Operations/Use Case.md",
     "Windows/Tools",
     "Defensive Security/Network Security & Traffic Analysis",
     "Defensive Security/Endpoint Security",
