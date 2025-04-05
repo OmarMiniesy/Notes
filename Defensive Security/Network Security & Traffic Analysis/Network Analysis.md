@@ -27,4 +27,13 @@ However, the approach to analysis can be simplified by doing the following:
 - Start looking for any host to host communication.
 - Look for unique events, such as weird user agents, weird requests, weird ports.
 
+Below is a list of questions we can ask ourselves during the analysis process to keep on track.
+- What type of traffic do you see? (protocol, port, etc.)
+- Is there more than one conversation? (how many?)
+- How many unique hosts?
+- What is the timestamp of the first conversation in the PCAP (TCP traffic)
+- What traffic can I filter out to clean up my view?
+- Who are the servers in the PCAP? (answering on well-known ports, 53, 80, etc.)
+- What records were requested or methods used? (GET, POST, DNS A records, etc.)
+
 ---
