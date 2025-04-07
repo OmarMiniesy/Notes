@@ -1,6 +1,6 @@
 ### General Notes
 
-_Sysmon_ short for _System Monitor_ is a Windows system service and driver that monitors system activity and logs it to the [[Windows Events Log]].
+_Sysmon_ short for _System Monitor_ is a Windows system service part of the [[Sysinternals]] tool suite and driver that monitors system activity and logs it to the [[Windows Events Log]].
 - System activity includes network connections, process creation, changes to files, ...
 - Each type of event that is logged has a unique ID: [list of IDs](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events).
 

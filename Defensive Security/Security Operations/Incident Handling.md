@@ -108,6 +108,7 @@ To perform proper analysis of the incident after it is detected, as much informa
 
 > This information allows us to build a timeline of what has happened, and provide an overall picture of the current state.
 
+Once a [[Use Case]] is triggered based on the data that is observed, an alert is triggered, opening the next phase of [[Alert Triaging]] and investigations.
 ##### Investigations
 
 To conduct an investigation and reach a valid conclusion, leads need to be discovered throughout the process itself, not just initially.

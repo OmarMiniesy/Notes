@@ -1,4 +1,3 @@
-
 ### General Notes
 
 The *File Transfer Protocol* (FTP) is a standard application layer [[protocol]] used to transfer computer files from a server to a client on a computer network.

@@ -29,7 +29,7 @@ Some famous ports:
 | NETBIOS       | 137, 138, 139 |
 | SFTP          | 115           |
 | TELNET        | 23            |
-| FTP           | 21            |
+| FTP           | 20, 21        |
 | RDP           | 3389          |
 | MySQL         | 3306          |
 | MS SQL SERVER | 1433, 1434    |
