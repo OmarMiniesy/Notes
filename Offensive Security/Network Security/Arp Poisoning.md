@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Used to intercept traffic on a network and conduct man in the middle attacks (MITM). 
@@ -45,7 +44,6 @@ arpspoof -i <interface> -t <target-ip> -r <host-ip>
 > [[Wireshark]] can then be run to track and intercept the traffic.
 
 ---
-
 ### Man in the Middle Attack 
 
 The attacker needs to be in the same local network of the two communicating hosts.

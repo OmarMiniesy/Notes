@@ -51,6 +51,14 @@ To extract data and files from a capture:
 4. Choose the protocol to extract from.
 
 ---
+### Decrypting Traffic
+
+If the key used for encryption is obtained for [[Protocol]]s like [[HTTPS]] or Remote Desktop (RDP), it can be placed in Wireshark to decrypt the traffic for easier analysis..
+- Head to *Edit*, then *Preferences*, then *Protocols*, then *TLS*.
+- We can then choose *Edit* next to *RSA Keys list*. and fill in the needed data for the [[IP]] address of the server, the [[Port]] used, the protocol, and the key file itself.
+- Saving and refreshing the `pcap` file will allow us to investigate in clear-text.
+
+---
 ### Investigating [[File Transfer Protocol (FTP)]]
 
 To save files that were transported over `ftp`:
