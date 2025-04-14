@@ -12,7 +12,10 @@ This stores logs from different parts of the system, including:
 It provides comprehensive information about errors, events, and diagnostics.
 - These logs can be of type _Application_, _System_, _Security_, _Setup_, _Forwarded Events_ or other based on their source and purpose.
 - These logs can be accessed from the [[Event Viewer]] application, the [[Get-WinEvent]] cmdlet, or `Wevtutil.exe`.
-- Each type of log has a different ID for the type of event it logs. The full list is [here](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events).
+- Each type of log has a different ID for the type of event it logs.
+
+The type of events that are recorded is controlled by the *Audit Policy*.
+- [Security Audit Policy](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing)
 
 > *Forwarded Events* has log data forwarded from other machines.
 
