@@ -35,7 +35,7 @@ Splunk has several layers that work together to collect, index, search, analyze,
 
 ##### Key Components
 
-**Search Processing Language (SPL)**: The query language for Splunk, allowing users to search, filter, and manipulate the indexed data.
+**[[Splunk Processing Language (SPL)]]**: The query language for Splunk, allowing users to search, filter, and manipulate the indexed data.
 
 **Knowledge Objects**: These include fields, tags, event types, lookups, macros, data models, and alerts that enhance the data in Splunk, making it easier to search and analyze.
 
