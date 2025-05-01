@@ -1,6 +1,7 @@
 #### General Notes
 
 The query language by [[Splunk]], allowing users to search, filter, and manipulate the indexed data.
+- Check out [[Handling Data]].
 
 > Searching queries can be concatenated together using the pipe `|`, similar to *KQL (Kusto Query Language)*.
 
@@ -12,7 +13,7 @@ To search for events, the `search` keyword is used. However, the search command 
 To use SPL to search for data, an **index** must be specified. 
 - This can be done using the `index` keyword, and specifying the name of that index between quotes.
 
-Boolean operators can be used for more specific queries: `not, and, or`.
+Boolean operators can be used for more specific queries: `NOT, AND, OR`.
 - Wildcards can be used to replace any number of characters: `*`.
 
 This searches in the `main` index for any event that includes the keywords specified in the end.
@@ -27,6 +28,8 @@ Users can manually define fields to search for, and Splunk can automatically ide
 - `sourcetype`
 - `host`
 - `eventcode`
+
+> Fields can also be called [Indexed Fields](https://docs.splunk.com/Splexicon:Indexedfield), and those are stored in Splunk's inverted index, meaning that searches on these fields are faster and consume less resources. There are a set of automatically indexed fields, like `_time`, `host`, `source`, `sourcetype`, and `_raw`.
 
 Fields can be used with comparison operators for more precise searching:
 - `=, !=, <, >, <=, >=`.

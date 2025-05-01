@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Handling Data.md",
+                "file": "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Handling Data"
+              "title": "Splunk Processing Language (SPL)"
             }
           },
           {
@@ -34,8 +34,23 @@
               "icon": "lucide-file",
               "title": "Splunk"
             }
+          },
+          {
+            "id": "deb92c549468f5b5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Handling Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Handling Data"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -214,7 +229,7 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e3aa4e5ef6dd47e3",
+  "active": "deb92c549468f5b5",
   "lastOpenFiles": [
     "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
     "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Handling Data.md",
