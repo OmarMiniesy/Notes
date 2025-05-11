@@ -38,6 +38,7 @@ Splunk has several layers that work together to collect, index, search, analyze,
 **[[Splunk Processing Language (SPL)]]**: The query language for Splunk, allowing users to search, filter, and manipulate the indexed data.
 
 **Knowledge Objects**: These include fields, tags, event types, lookups, macros, data models, and alerts that enhance the data in Splunk, making it easier to search and analyze.
+- *Macros*: These are predefined search strings or queries that can be reused, it is like a shortcut to be used for a more complex query, and arguments can be passed if variables are needed.
 
 **Apps and Add-ons**: Apps can provide specific functionalities within Splunk, while add-ons can extend current capabilities or integrations.
 - Apps can be found on [Splunkbase](https://splunkbase.splunk.com/), and they provide additional functionalities and pre-configured solutions.

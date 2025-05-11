@@ -8,7 +8,8 @@ The query language by [[Splunk]], allowing users to search, filter, and manipula
 ---
 ##### Searching
 
-To search for events, the `search` keyword is used. However, the search command is usually implicit and is not written out. 
+To search for events, the `search` keyword is used. However, the search command is usually implicit and is not written out.
+- This is done using the *Searching & Reporting* [[Splunk Application]].
 
 To use SPL to search for data, an **index** must be specified. 
 - This can be done using the `index` keyword, and specifying the name of that index between quotes.
