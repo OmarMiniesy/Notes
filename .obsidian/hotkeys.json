@@ -31,5 +31,13 @@
       ],
       "key": "'"
     }
+  ],
+  "editor:toggle-code": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "'"
+    }
   ]
 }

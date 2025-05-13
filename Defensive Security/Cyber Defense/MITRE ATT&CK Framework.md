@@ -33,7 +33,7 @@ The framework is organized in a matrix structure, and can be filtered based on s
 
 The framework provides a model for adversarial behavior, and there is a unified nomenclature for this framework.
 
-**TTPs**:
+###### TTPs
 - **Tactics**: High-level objectives adversaries aim to achieve (e.g., data exfiltration, persistence).
 - **Techniques**: Specific methods adversaries use to accomplish their tactics (e.g., phishing, lateral movement).
 - **Procedures**: Step-by-step sequences or workflows adversaries follow to execute their techniques.
