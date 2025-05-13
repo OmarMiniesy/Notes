@@ -7,6 +7,10 @@ This single repository that allows the administration of the components of a Win
 - The AD is the underlying service that provides for Windows domains.
 - There can be many domains in the case of a larger organization, each with its own systems and computers.
 
+*AD* is a distributed, hierarchical structure that allows centralized management of an organization's resources, including users, computers, groups, network devices and file shares, group policies, devices, and trusts. 
+- *AD* provides authentication, accounting, and authorization functionalities within a Windows enterprise environment. 
+- It also allows administrators to manage permissions and access to network resources.
+
 At the core of the Windows domain, is the _Domain Controller_.
 - This is a server responsible for running the Active Directory services.
 - It is the central authority for the domain.

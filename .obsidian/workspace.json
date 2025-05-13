@@ -4,24 +4,81 @@
     "type": "split",
     "children": [
       {
-        "id": "032f2a85b88a11f5",
+        "id": "63f46fddc9c88232",
         "type": "tabs",
         "children": [
           {
-            "id": "c9163d02a1ad0ee8",
+            "id": "15ae7fecbb590f3d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Active Directory/Active Directory.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory"
+              "title": "DFIR"
+            }
+          },
+          {
+            "id": "eaf3baf3f144f3c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Handling Data"
+            }
+          },
+          {
+            "id": "e8da1583ca3a3d06",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Splunk"
+            }
+          },
+          {
+            "id": "339ea6af8a2fb7b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Handling Data"
+            }
+          },
+          {
+            "id": "ffdbaf3ee631fe36",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Sysmon.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sysmon"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -88,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5026054382324
+    "width": 371.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -200,36 +257,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c9163d02a1ad0ee8",
+  "active": "339ea6af8a2fb7b0",
   "lastOpenFiles": [
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Splunk.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
     "Windows/Sysmon.md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Splunk Application.md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Handling Data.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Active Directory/Trees, Forests, and Trusts.md",
+    "Active Directory/Authentication Methods.md",
+    "Active Directory/Active Directory Users and Computers.md",
+    "Active Directory/Active Directory.md",
+    "Defensive Security/Windows Security/Detecting Windows Attacks.md",
+    "Defensive Security/Windows Security",
+    "Active Directory/Group Policy Management.md",
+    "Markdown/Markdown Syntax.md",
+    "Offensive Security/System Security/Linux Privilege Escalation.md",
+    "Scripting/Bash Scripting.md",
+    "Scripting/Dealing With Files of Different Types.md",
+    "Scripting/Linux Commands - Permissions.md",
+    "Scripting/Linux Commands - Networks.md",
+    "Scripting/Linux Commands - Files.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Application.md",
     "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort.md",
     "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk/Search Processing Language (SPL).md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Splunk",
+    "Defensive Security/Security Info & Events Mgmt/Splunk",
     "Defensive Security/Security Operations/Incident Handling.md",
     "Windows/Windows Events Log.md",
     "Windows/Event Tracing for Windows (ETW).md",
-    "Offensive Security/Network Security/Arp Poisoning.md",
-    "Defensive Security/Security Operations/Cyber Threat Intelligence.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Offensive Security/System Security/Malware.md",
-    "Networking/Port.md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/Use Case.md",
-    "Defensive Security/Security Operations/Alert Triaging.md",
-    "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt/SIEM.md",
-    "Defensive Security/Security Operations/Security Info & Events Mgmt",
-    "Windows/Tools/Sysinternals.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
-    "Defensive Security/Cyber Defense/Cyber Kill Chains.md",
-    "Defensive Security/Security Operations/Threat Hunting.md",
+    "Defensive Security/Security Info & Events Mgmt",
     "Defensive Security/Digital Forensics & Incident Response",
     "Windows/Tools",
     "Defensive Security/Network Security & Traffic Analysis",
@@ -237,7 +295,6 @@
     "Defensive Security/Cyber Defense",
     "Defensive Security/SOC/Untitled",
     "Windows/Tools",
-    "Defensive Security/Tools",
     "Untitled.canvas",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]

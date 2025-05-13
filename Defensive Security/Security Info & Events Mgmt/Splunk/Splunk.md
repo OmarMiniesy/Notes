@@ -45,3 +45,10 @@ Splunk has several layers that work together to collect, index, search, analyze,
 - Add-ons serve as an abstraction layer for data collection methods. They often include relevant field extractions, allowing for schema-on-the-fly functionality.
 
 ---
+### Datasets
+
+Links to datasets that can be used to learn Splunk.
+-  [BOTS](https://github.com/splunk/botsv3)
+- [nginx_json_logs](https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/nginx_json_logs/nginx_json_logs)
+
+---

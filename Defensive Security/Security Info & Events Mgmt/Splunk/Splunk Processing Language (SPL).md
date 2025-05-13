@@ -22,6 +22,12 @@ This searches in the `main` index for any event that includes the keywords speci
 index="main" "data-to-search-for"
 ```
 
+A *macro* is a placeholder for a more complex search query that can take arguments if variables are needed.
+- Macros are created from the settings, and they referenced using the backticks.
+```SPL
+`macro-name`
+```
+
 ##### Fields and Comparison Operators
 
 Users can manually define fields to search for, and Splunk can automatically identify data fields like:
@@ -29,6 +35,13 @@ Users can manually define fields to search for, and Splunk can automatically ide
 - `sourcetype`
 - `host`
 - `eventcode`
+
+There are some default fields that Splunk attaches to all events:
+- `source`
+- `sourcetype`
+- `host`
+- - `_time`
+- `index`
 
 > Fields can also be called [Indexed Fields](https://docs.splunk.com/Splexicon:Indexedfield), and those are stored in Splunk's inverted index, meaning that searches on these fields are faster and consume less resources. There are a set of automatically indexed fields, like `_time`, `host`, `source`, `sourcetype`, and `_raw`.
 
@@ -87,7 +100,6 @@ index="main" sourcetype="WinEventLog:Sysmon" EventCode=3 | stats count by _time,
 - This will return an extra column called `count`, that counts the number of unique combinations of `_time` and `Image`.
 
 > The `chart` command can be used to visualize statistical operations. Instead of `stats`, use `chart`.
-
 
 ---
 

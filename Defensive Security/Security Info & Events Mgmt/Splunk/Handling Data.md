@@ -13,6 +13,7 @@ To properly use a [[SIEM]] like [[Splunk]], the available data sources sending d
 
 Splunk digests a large source information from various data sources, and each data source formats the data differently.
 - These are called different source types, or *indexes* available. To view them, use this command:
+- The default index is Splunk is `defaultdb`
 ```SPL
 | eventcount summarize=false index=* | table index
 ```
@@ -23,6 +24,12 @@ We can also use the `metadata` command that gives statistics about the specified
 | metadata type=<sourcetypes|sources|hosts> index=*
 ```
 
+##### Listing `SourceType`s
+
+We can also view the different `sourcetype`s using this command:
+```SPL
+index="main" | stats count by sourcetype
+```
 ##### Understanding a `SourceType`
 
 Once we identify a `sourcetype` of interest, we can see the raw textual event data of that source type.

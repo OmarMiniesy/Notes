@@ -8,11 +8,11 @@ This is an application on the Domain Controller that allows for managing the obj
 ### Organizational Units (OUs)
 
 An _OU_ is used to define a set of users with similar policy requirements.
-- _OU_s provide a hierarchical structure to AD enabling admins to organize resources based on the organization's structure.
-- _OU_s can contain other _OU_s.
-- A user can be part of only one _OU_ at a time.
+- OU's provide a hierarchical structure to AD enabling admins to organize resources based on the organization's structure.
+- OUs can contain other OUs.
+- A user can be part of only one OU at a time.
 
-There are also some default _OU_s that are created by Windows:
+There are also some default OUs that are created by Windows:
 - **Builtin**: This contains default groups that are available to all Windows hosts.
 - **Computers**: This contains any machine that joins the network.
 - **Domain Controllers**: This contains the DCs of the network.
