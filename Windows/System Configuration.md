@@ -53,7 +53,7 @@ This tool shows information about the computer and displays a comprehensive view
 
 > Software information includes network information and environment variables.
 
-### Registry Editor
+### [[Windows Registry]] Editor
 
 The **Windows Registry** is a central database that stores information about users, applications, and the hardware of a computer.
 - To view/edit the registry, the command `regedit.exe` can be typed in the command prompt.

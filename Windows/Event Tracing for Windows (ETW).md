@@ -2,7 +2,7 @@
 
 This is a high speed tracing facility provided by the operating system that utilizes buffering and logging technologies implemented in the Kernel.
 - That way, it can trace events raised by user mode applications and kernel mode drivers.
-- It captures more data than normal logging technologies, such as system calls, process creation, registry modifications, and more.
+- It captures more data than normal logging technologies, such as system calls, process creation, [[Windows Registry]] modifications, and more.
 
 ETW operates with *Event Providers*, which are components that generate specific types of events and can be integrated into applications, the OS, or third party software.
 - The needed and relevant event providers can be enabled, and others can be disabled; allowing us to adjust the scope of data collection. 
