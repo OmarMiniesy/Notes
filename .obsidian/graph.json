@@ -11,7 +11,7 @@
       "query": "path:JavaScript",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 5431439
       }
     },
     {
@@ -102,7 +102,7 @@
       "query": "path:\"Defensive Security\"  ",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 14097929
       }
     }
   ],
@@ -116,6 +116,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.3037405065090372,
-  "close": true
+  "scale": 0.03193139853953536,
+  "close": false
 }

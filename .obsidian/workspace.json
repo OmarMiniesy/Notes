@@ -4,35 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8c24cb3f94330af8",
+        "id": "71b39b3824276327",
         "type": "tabs",
         "children": [
           {
-            "id": "18c89d4ba9747c03",
+            "id": "5b41a9039a8b0f40",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Windows Forensics"
-            }
-          },
-          {
-            "id": "fc893c82ca511b60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows Registry.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Registry"
+              "title": "New tab"
             }
           }
         ]
@@ -67,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"TTPs",
+                "query": "etl",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,7 +84,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 335.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -214,19 +196,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "18c89d4ba9747c03",
+  "active": "5b41a9039a8b0f40",
   "lastOpenFiles": [
-    "Windows/Event Tracing for Windows (ETW).md",
+    "Windows/System Resource Usage Monitor (SRUM).md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Security Operations/Incident Handling.md",
     "Windows/Windows Registry.md",
+    "Windows/Windows Events Log.md",
+    "Windows/Event Tracing for Windows (ETW).md",
     "Windows/File System.md",
-    "Windows/Sysmon.md",
     "Windows/System Configuration.md",
     "Windows/User Access Control (UAC).md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-    "Defensive Security/Endpoint Security/Log Files.md",
-    "Windows/Windows Events Log.md",
-    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
     "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
+    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+    "Defensive Security/Network Security & Traffic Analysis/Snort.md",
+    "Windows/Sysmon.md",
+    "Defensive Security/Endpoint Security/Log Files.md",
+    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
     "Defensive Security/Security Operations/Threat Hunting.md",
     "Defensive Security/Cyber Defense/Pyramid of Pain.md",
     "Untitled.md",
@@ -237,12 +224,7 @@
     "Active Directory/Authentication Methods.md",
     "Active Directory/Active Directory Users and Computers.md",
     "Active Directory/Active Directory.md",
-    "Defensive Security/Windows Security/Detecting Windows Attacks.md",
     "Defensive Security/Windows Security",
-    "Active Directory/Group Policy Management.md",
-    "Markdown/Markdown Syntax.md",
-    "Offensive Security/System Security/Linux Privilege Escalation.md",
-    "Scripting/Bash Scripting.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk",
     "Defensive Security/Security Info & Events Mgmt",
     "Defensive Security/Digital Forensics & Incident Response",

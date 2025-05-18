@@ -33,6 +33,7 @@ Basic concepts and terms that are used in digital forensics.
 This is a piece of evidence that points to activities performed on a system.
 - Artifacts are mainly used to support a hypothesis or claim about attacker activity.
 - Artifacts can be collected from the *file system*, the *memory*, or *network activity*.
+- Check out [[Windows Forensics]] and [[Web Browser Forensics]] for where to find artifacts.
 
 ##### Evidence Preservation
 All evidence and artifacts need to be preserved to maintain its integrity and authenticity.
