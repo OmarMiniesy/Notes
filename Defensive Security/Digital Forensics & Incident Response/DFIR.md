@@ -28,7 +28,6 @@ DFIR is performed by experts in the two fields of:
 ### Terminology
 
 Basic concepts and terms that are used in digital forensics.
-
 ##### Artifacts
 This is a piece of evidence that points to activities performed on a system.
 - Artifacts are mainly used to support a hypothesis or claim about attacker activity.
@@ -38,6 +37,7 @@ This is a piece of evidence that points to activities performed on a system.
 ##### Evidence Preservation
 All evidence and artifacts need to be preserved to maintain its integrity and authenticity.
 - Before performing any forensic analysis, the evidence must first be collected and write-protected, and then analysis is allowed on a *copy* of the write-protected data.
+- Check out [[Evidence Acquisition]] for techniques of collecting evidence.
 
 ##### Chain of Custody
 Making sure that the evidence is kept in secure custody, and only those with the necessary permissions and relationships with the investigation are allowed to access/see it.

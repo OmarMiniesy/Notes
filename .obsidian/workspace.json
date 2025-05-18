@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5b41a9039a8b0f40",
+            "id": "c6c1a04efde3820a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "DFIR"
             }
           }
         ]
@@ -196,8 +200,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5b41a9039a8b0f40",
+  "active": "c6c1a04efde3820a",
   "lastOpenFiles": [
+    "Defensive Security/Digital Forensics & Incident Response/Evidence Acquisition.md",
+    "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Windows/System Resource Usage Monitor (SRUM).md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
     "Defensive Security/Security Operations/Incident Handling.md",
@@ -207,7 +214,6 @@
     "Windows/File System.md",
     "Windows/System Configuration.md",
     "Windows/User Access Control (UAC).md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
     "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort.md",
@@ -222,8 +228,6 @@
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
     "Active Directory/Trees, Forests, and Trusts.md",
     "Active Directory/Authentication Methods.md",
-    "Active Directory/Active Directory Users and Computers.md",
-    "Active Directory/Active Directory.md",
     "Defensive Security/Windows Security",
     "Defensive Security/Security Info & Events Mgmt/Splunk",
     "Defensive Security/Security Info & Events Mgmt",
