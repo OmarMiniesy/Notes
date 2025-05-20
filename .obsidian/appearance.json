@@ -6,5 +6,6 @@
   "translucency": true,
   "nativeMenus": false,
   "cssTheme": "Obsidianite",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "showRibbon": true
 }
