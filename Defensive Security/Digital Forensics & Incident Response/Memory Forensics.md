@@ -39,3 +39,42 @@ To be able to identify all processes and pin point the malicious ones, the follo
 
 ##### Dive into Process Components
 
+Once *potentially* rogue processes are flagged out, the *DLLs (Dynamically Linked Libraries)* and *handles* should be assessed.
+- [[Malware]] utilize DLLs to conceal their activities.
+
+To assess these components, the following actions should be done:
+- Examine the DLLs linked to the suspicious process.
+- Check for unauthorized or malicious DLLs.
+- Investigate for DLL injections or hijacking.
+
+##### Analyze Network Activity
+
+Malware operate in stages, and one stage is to connect to the *Command and Control C2* beacon to exfiltrate data or receive/send commands over the internet.
+
+To uncover such activity, the following can be done:
+- Review active/passive network connections in the system memory.
+- Identify and document external [[IP]] addresses and any domains.
+- Study the communication and determine its purpose to:
+	- Validate the process legitimacy.
+	- Check if network connectivity is usually exercised by this process.
+	- Trace back to the parent process, and evaluate its behavior.
+
+##### Code Injection Detection
+
+Adversaries can perform *process hollowing* or utilize *unmapped memory* sections. To investigate this, the following can be done:
+- Memory analysis tools or signs of these techniques.
+- Identify processes that occupy unusual memory spaces.
+
+##### Rootkit Discovery
+
+Rootkits embed deep into the operating system and they grant persistence for the adversary, as well as privilege escalation. This can be analyzed by:
+- Scanning for signs of rootkit activity or operating system alterations.
+- Identify processes or drivers operating at high privileges or trying to hide their actions.
+
+##### Extraction of Suspicious Elements
+
+After any suspicious processes, drivers, or executables are located, they should be isolated and extracted. This can be done by:
+- Dumping the memory components.
+- Storing them for examination using forensics tools.
+
+---
