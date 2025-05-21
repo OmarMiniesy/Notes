@@ -34,6 +34,7 @@ This is a piece of evidence that points to activities performed on a system.
 Check out for where to find artifacts:
 - [[Windows Forensics]]
 - [[Web Browser Forensics]]
+- [[Memory Forensics]]
 
 ---
 ### Evidence Preservation and Acquisition

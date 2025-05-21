@@ -22,10 +22,19 @@ Some of the data that can be obtained through memory forensics:
 - *System configuration*
 - *Process memory regions*
 
+##### Kernel Objects
+These are data structures that represent system resources that is stored in the kernel-mode memory space.
+- They provide a unified way for the operating system to handle processes, files, network connections, drivers, and more.
+- Each kernel object has a unique *pool tag* to be able to identify it.
+
+**Pool Scanning:** We can utilize memory scanning tools like [[Volatility]] to scan the memory and look for these kernel objects using these *pool tags*.
+- They can reveal hidden or terminated artifacts that can be missed by normal user inspection.
+
 ---
 ### Approach to Memory Forensics
 
 The following is a systematic approach to memory forensics following the SANS methodology.
+- This can be done using the [[Volatility]] framework.
 ##### Process Identification & Verification
 
 This is where all active processes should be identified.
