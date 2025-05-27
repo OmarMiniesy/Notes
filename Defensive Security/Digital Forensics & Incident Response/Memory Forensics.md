@@ -45,6 +45,17 @@ To be able to identify all processes and pin point the malicious ones, the follo
 - Determining the *origin* of these processes from the operating system.
 - Cross-referencing these processes with legitimate ones.
 - Highlighting differences or suspicious processes. 
+###### `EPROCESS`
+The `EPROCESS` data structure exists in the Windows kernel and is used to represent a process.
+- Each process in the operating system has an `EPROCESS` block in memory.
+- Can be used to study processes.
+
+Inside the `EPROCESS` there is a linked list called `ActiveProcessLinks` that has a list of all the active processes on the system.
+- There is an `flink` field that points to the next process in the list, and  a `blink` field that points to the previous process in that list.
+- This linked listed found in all of the processes can be used to iterate through all the active processes on a system.
+
+Rootkits can try to alter these fields to hide processes.
+- Use the [[Volatility]] `psscan` plugin to look for these hidden processes.
 
 ##### Dive into Process Components
 
@@ -85,5 +96,25 @@ Rootkits embed deep into the operating system and they grant persistence for the
 After any suspicious processes, drivers, or executables are located, they should be isolated and extracted. This can be done by:
 - Dumping the memory components.
 - Storing them for examination using forensics tools.
+
+---
+### Using `strings`
+
+We can use the `strings` tool to analyze strings in memory dumps which can be used to identify human readable information like [[IP]] addresses, file paths, messages, or passwords.
+
+- To look for [[IP]] addresses, the following [[Regular Expressions]] can be used:
+```
+strings <memory.file> | grep -E "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+```
+
+- To look for email addresses:
+```shell-session
+strings <memory.file> | grep -oE "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b"
+```
+
+- To look for commands on the command prompt or PowerShell, or any terminal commands:
+```
+strings <memory.file> | grep -E "(cmd|powershell|bash)[^\s]+"
+```
 
 ---

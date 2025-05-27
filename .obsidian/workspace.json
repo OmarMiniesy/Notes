@@ -8,35 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "36d4261524bd1cc7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Rapid Triage"
-            }
-          },
-          {
             "id": "7e60d930b9351b7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Volatility.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Volatility"
-            }
-          },
-          {
-            "id": "65cec7ce55a2f3b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,6 +19,20 @@
               },
               "icon": "lucide-file",
               "title": "Memory Forensics"
+            }
+          },
+          {
+            "id": "aa735e29f5ca2d11",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Volatility.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Volatility"
             }
           },
           {
@@ -64,7 +50,21 @@
             }
           },
           {
-            "id": "3aff85a892a72112",
+            "id": "36d4261524bd1cc7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Rapid Triage"
+            }
+          },
+          {
+            "id": "65cec7ce55a2f3b5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -77,8 +77,7 @@
               "title": "Memory Forensics"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,8 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5,
-    "collapsed": true
+    "width": 306.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -260,10 +258,17 @@
   },
   "active": "7e60d930b9351b7d",
   "lastOpenFiles": [
-    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Volatility.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
+    "Active Directory/Active Directory.md",
+    "Active Directory/Active Directory Users and Computers.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Defensive Security/Endpoint Security/SilkETW.md",
+    "Defensive Security/Endpoint Security/Process Hacker.md",
+    "Defensive Security/Endpoint Security/Log Files.md",
+    "Defensive Security/Endpoint Security/OSQuery.md",
+    "Defensive Security/Endpoint Security/Endpoint Security.md",
     "Defensive Security/Digital Forensics & Incident Response/KAPE.md",
     "Defensive Security/Digital Forensics & Incident Response/Velociraptor.md",
     "Defensive Security/Digital Forensics & Incident Response/Evidence Acquisition.md",
@@ -279,13 +284,6 @@
     "Windows/User Access Control (UAC).md",
     "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
     "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort.md",
-    "Windows/Sysmon.md",
-    "Defensive Security/Endpoint Security/Log Files.md",
-    "Defensive Security/Cyber Defense/MITRE ATT&CK Framework.md",
-    "Defensive Security/Security Operations/Threat Hunting.md",
-    "Defensive Security/Cyber Defense/Pyramid of Pain.md",
-    "Untitled.md",
     "Defensive Security/Windows Security",
     "Defensive Security/Security Info & Events Mgmt/Splunk",
     "Defensive Security/Security Info & Events Mgmt",

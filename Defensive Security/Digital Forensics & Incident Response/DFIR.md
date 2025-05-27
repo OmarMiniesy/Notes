@@ -55,6 +55,7 @@ Some tools used in [[Rapid Triage]]:
 [[Memory Forensics]]: A system's memory is crucial in investigations, as it provides extra details, like traces of executable files and [[Malware]]. However, this memory is volatile, meaning it is lost after logoffs or after shutdowns of the system. Memory forensics deals with the live state of a system at a particular moment in time. 
 
 Some memory acquisition solutions are:
+- [[Volatility]]
 - [WinPmem](https://github.com/Velocidex/WinPmem): The default open source memory acquisition driver for windows for a long time.
 - [DumpIt](https://www.magnetforensics.com/resources/magnet-dumpit-for-windows/): A simplistic utility that generates a physical memory dump of Windows and Linux machines. On Windows, it concatenates 32-bit and 64-bit system physical memory into a single output file, making it extremely easy to use.
 - [MemDump](http://www.nirsoft.net/utils/nircmd.html): Command-line utility that enables us to capture the contents of a system's RAM. It’s quite beneficial in forensics investigations or when analyzing a system for malicious activity.
