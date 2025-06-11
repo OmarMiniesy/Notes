@@ -35,6 +35,7 @@ Check out for where to find artifacts:
 - [[Windows Forensics]]
 - [[Web Browser Forensics]]
 - [[Memory Forensics]]
+- [[Disk Forensics]]
 
 ---
 ### Evidence Preservation and Acquisition
@@ -63,6 +64,8 @@ Some memory acquisition solutions are:
 - [LiME (Linux Memory Extractor)](https://github.com/504ensicsLabs/LiME): A *Loadable Kernel Module (LKM)* which allows the acquisition of volatile memory. It's designed to be transparent to the target system, evading many common anti-forensic measures.
 
 **Network Forensics**: This is done through [[Network Analysis]], and working with [[IDS & IPS]] solutions, [[Firewall]]s, and using tools like [[Wireshark]] and [[Tcpdump]].
+
+**Disk Forensics**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
 
 ---
 ### Chain of Custody
