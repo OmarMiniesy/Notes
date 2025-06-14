@@ -9,7 +9,7 @@ Digital forensics allows for rapid action on large amounts of data to pinpoint t
 - This allows for faster action to contain and mitigate the threat.
 - Allows for an enhancement of [[Incident Handling]] strategies.
 
-> Insights gained from digital forensics can be used for proactive [[Threat Hunting]] in the environment based on the obtained Indicators of Compromise (IOCs) and [[MITRE ATT&CK Framework#TTPs|TTPs]].
+> Insights gained from digital forensics can be used for proactive [[Threat Hunting]] in the environment based on the obtained Indicators of Compromise (IOCs) and [[MITRE ATT&CK#TTPs|TTPs]].
 
 The digital forensics process involves these stages:
 - *Identification*: Determining potential sources of evidence.

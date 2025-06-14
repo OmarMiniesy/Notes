@@ -25,7 +25,7 @@ To ensure the use case is working properly, these two quantitative measures will
 - **Time to Detection (TTD)**
 - **Time to Response (TTR)**
 
-> The use case needs to be mapped to the [[MITRE ATT&CK Framework]] to map with known TTPs.
+> The use case needs to be mapped to the [[MITRE ATT&CK]] to map with known TTPs.
 
 ---
 ### Incident Response

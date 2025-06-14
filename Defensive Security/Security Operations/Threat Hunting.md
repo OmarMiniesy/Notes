@@ -15,7 +15,7 @@ Threat hunting operations should be done in a periodic manner, but these instanc
 ###### Minimizing Dwell Time
 Threat hunting is used to minimize dwell time by recognizing malicious entities at the earliest stages of the [[Cyber Kill Chains]], to prevent them from expanding and growing inside the network.
 1. The process starts by first gathering all assets that could be targets.
-2. Analyze the [[MITRE ATT&CK Framework#Framework Structure|TTPs]] (Tactics, Techniques, & Procedures) that are employed by adversaries using [[Cyber Threat Intelligence]].
+2. Analyze the [[MITRE ATT&CK#Framework Structure|TTPs]] (Tactics, Techniques, & Procedures) that are employed by adversaries using [[Cyber Threat Intelligence]].
 3. The identified artifacts are then isolated and validated if any activity is exhibited that deviates from the established baseline.
 
 ###### Threat Hunting & Incident Response

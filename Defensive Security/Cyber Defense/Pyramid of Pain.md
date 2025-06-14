@@ -13,7 +13,7 @@ The model is a hierarchical one, and it organizes IOCs and behaviors of attacker
 3. Domain Names
 4. Network/Host Artifacts
 5. Tools
-6. TTPs ([[MITRE ATT&CK Framework]])
+6. TTPs ([[MITRE ATT&CK]])
 
 ##### Hash Values - Trivial
 

@@ -8,7 +8,7 @@ There are several Kill Chains present, examples include:
 - [Unified Kill Chain](https://unifiedkillchain.com/)
 - [Varonis Cyber Kill Chain](https://www.varonis.com/blog/cyber-kill-chain/)
 - [Active Directory Attack Cycle](https://github.com/infosecn1nja/AD-Attack-Defense)
-- [[MITRE ATT&CK Framework]]
+- [[MITRE ATT&CK]]
 
 ---
 ### Kill Chain Components
