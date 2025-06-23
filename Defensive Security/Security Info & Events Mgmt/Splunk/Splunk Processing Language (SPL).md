@@ -40,7 +40,7 @@ There are some default fields that Splunk attaches to all events:
 - `source`
 - `sourcetype`
 - `host`
-- - `_time`
+- `_time`
 - `index`
 
 > Fields can also be called [Indexed Fields](https://docs.splunk.com/Splexicon:Indexedfield), and those are stored in Splunk's inverted index, meaning that searches on these fields are faster and consume less resources. There are a set of automatically indexed fields, like `_time`, `host`, `source`, `sourcetype`, and `_raw`.

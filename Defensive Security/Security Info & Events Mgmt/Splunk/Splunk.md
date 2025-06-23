@@ -2,6 +2,10 @@
 
 This is a data analytics software known for its ability ingest, index, analyze, and visualize large amounts of data.
 - This makes it very useful for several use cases, such as a [[SIEM]], where it allows for data analysis, monitoring, incident response, and [[Threat Hunting]].
+###### Datasets
+Links to datasets that can be used to learn Splunk.
+- [BOTS](https://github.com/splunk/botsv3)
+- [nginx_json_logs](https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/nginx_json_logs/nginx_json_logs)
 
 ---
 ### Splunk Architecture & Components
@@ -43,12 +47,5 @@ Splunk has several layers that work together to collect, index, search, analyze,
 **Apps and Add-ons**: Apps can provide specific functionalities within Splunk, while add-ons can extend current capabilities or integrations.
 - Apps can be found on [Splunkbase](https://splunkbase.splunk.com/), and they provide additional functionalities and pre-configured solutions.
 - Add-ons serve as an abstraction layer for data collection methods. They often include relevant field extractions, allowing for schema-on-the-fly functionality.
-
----
-### Datasets
-
-Links to datasets that can be used to learn Splunk.
--  [BOTS](https://github.com/splunk/botsv3)
-- [nginx_json_logs](https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/nginx_json_logs/nginx_json_logs)
 
 ---

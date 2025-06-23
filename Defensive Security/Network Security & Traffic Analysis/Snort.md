@@ -15,7 +15,6 @@ Snort uses *configuration files* that specifies rules, plugins, detection mechan
 
 > The `snort.conf` file is the main configuration file, and the `local.rules` is the user generated rules file. They are found in the `/etc/snort` directory.
 
-
 ---
 ### Snort Rules
 
