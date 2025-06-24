@@ -83,4 +83,10 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 - **Communities:** Maintains the image of the team and the open-source solutions.
 - **Global Outreach:** Disseminates intelligence to customers and the security community through publications.
 
+**[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** - [Docs](https://docs.opencti.io/latest/)
+- Manage CTI through storage, analysis, visualization, and presentation of Malware, threat campaigns, and IOCs, using [[STIX]].
+- Can use the [[MITRE ATT&CK]] framework to structure data, and it can integrate with other tools like MISP and TheHive.
+- Has [connectors](https://docs.opencti.io/latest/deployment/connectors/) that are used to ingest, enrich, or export data to the platform.
+- The dashboard showcases all types of information such as Malware, TTPs, threat actors, campaigns, attack patterns, and showcases them in a divided and organized manner.
+
 ---
