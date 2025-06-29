@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "0158fe51c06e4513",
+        "id": "e3fb84c8e1edff41",
         "type": "tabs",
         "children": [
           {
-            "id": "262c94ddc79795c1",
+            "id": "abef4787ec36fbba",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Operations/Threat Intelligence/MISP.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "MISP"
             }
           }
         ]
@@ -196,8 +200,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "262c94ddc79795c1",
+  "active": "abef4787ec36fbba",
   "lastOpenFiles": [
+    "Defensive Security/Cyber Defense/Zero Trust.md",
+    "Defensive Security/Security Operations/Threat Intelligence/STIX.md",
+    "Defensive Security/Security Operations/Threat Intelligence/Cyber Threat Intelligence.md",
+    "Defensive Security/Security Operations/Threat Intelligence/MISP.md",
     "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
     "Windows/File System.md",
@@ -206,8 +214,6 @@
     "Windows/System Resource Usage Monitor (SRUM).md",
     "JavaScript/NodeJs/Environment Variables.md",
     "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
-    "Defensive Security/Security Operations/Threat Intelligence/Cyber Threat Intelligence.md",
-    "Defensive Security/Security Operations/Threat Intelligence/STIX.md",
     "Defensive Security/Cyber Defense/Pyramid of Pain.md",
     "Defensive Security/Security Operations/Threat Intelligence",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
@@ -224,8 +230,6 @@
     "Defensive Security/Cyber Defense/MITRE/MITRE ENGAGE.md",
     "Defensive Security/Cyber Defense/MITRE/Cyber Analytics Repository (CAR).md",
     "Defensive Security/Cyber Defense/MITRE",
-    "Defensive Security/Cyber Defense/Diamond Model.md",
-    "Defensive Security/Cyber Defense/Cyber Kill Chains.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools",
     "Defensive Security/Windows Security",
     "Defensive Security/Security Info & Events Mgmt/Splunk",

@@ -5,7 +5,7 @@ Cyber Threat Intelligence (CTI) is the grouping of data, called *IOCs*, or *Indi
 - Threat Intel is geared towards understanding the relationship between your operational environment and your adversary.
 - Threat Intel gives insights into potential adversary operations, such as their TTPs and some of their artifacts, which can be useful for [[Threat Hunting]] to inform their operations.
 
-> Indicators of Compromise are traces that are left by attackers that could indicate that they were present, this includes [[IP]] addresses, domains, files, or even strings.
+> Indicators of Compromise are traces that are left by attackers that could indicate that they were present, this includes [[IP]] addresses, domains, files, or even strings. IOCs are composed of *attributes*, which are their building blocks. So an attribute is a single piece of information, while an IOC is a logical connection of attributes.
 
 ###### Threat Intelligence Categories
 Threat intelligence can be categorized as **strategic**, **operational**, **technical**, or **tactical** intelligence.
@@ -85,7 +85,7 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 
 **[OpenCTI](https://github.com/OpenCTI-Platform/opencti)** - [Docs](https://docs.opencti.io/latest/)
 - Manage CTI through storage, analysis, visualization, and presentation of Malware, threat campaigns, and IOCs, using [[STIX]].
-- Can use the [[MITRE ATT&CK]] framework to structure data, and it can integrate with other tools like MISP and TheHive.
+- Can use the [[MITRE ATT&CK]] framework to structure data, and it can integrate with other tools like [[MISP]] and TheHive.
 - Has [connectors](https://docs.opencti.io/latest/deployment/connectors/) that are used to ingest, enrich, or export data to the platform.
 - The dashboard showcases all types of information such as Malware, TTPs, threat actors, campaigns, attack patterns, and showcases them in a divided and organized manner.
 
