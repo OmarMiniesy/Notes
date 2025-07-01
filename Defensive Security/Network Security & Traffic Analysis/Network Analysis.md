@@ -6,7 +6,7 @@ Traffic analysis is a process that involves determining the origin and impact of
 
 Many tools like [[Firewall]]s, [[IDS & IPS]], and logging systems have signatures to detect attacks.
 - These tools also provide visibility into the network, and are able to create a baseline of normal traffic to determine when any changes take place.
-- These tools also send their logs to solutions like [[SIEM]]s, such as [[Elastic]] to monitor the traffic and correlate events.
+- These tools also send their logs to solutions like [[SIEM]]s, such as [[ELK - Elasticsearch, Kibana, & Logstash]] to monitor the traffic and correlate events.
 
 Traffic capture can either be *passive* or *active*.
 - **Passive** analysis is when a copy of the data is captured and has the operations performed on it, without directly interfering with the packets and the connections. *Port mirroring* is an example of such technique.

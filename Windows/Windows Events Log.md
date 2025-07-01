@@ -23,7 +23,7 @@ Event log data is stored in files with the `.evtx` extension.
 - It uses an XML based schema.
 - Stored at `C:\Windows\System32\winevt\Logs`.
 
-To use [[Elastic]] as a [[SIEM]] for Windows Events Logs, view the [Winlogbeat](https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html) documentation on Elastic Docs.
+To use [[ELK - Elasticsearch, Kibana, & Logstash]] as a [[SIEM]] for Windows Events Logs, view the [Winlogbeat](https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html) documentation on Elastic Docs.
 - The [Exported Fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields.html) page has all the available fields that can be used to query the logs.
 
 ---
