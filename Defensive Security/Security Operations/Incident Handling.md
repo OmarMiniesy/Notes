@@ -84,7 +84,7 @@ This phase includes:
 - Full visibility into the network architecture, with its segmentation technologies in place.
 
 Detection is done at various levels of the network:
-- Network perimeter using internet facing tools like firewalls, DMZs, and IPS/IDS.
+- Network perimeter using internet facing tools like [[Firewall]]s, DMZs, and [[IDS & IPS]].
 - Internal network using tools like local firewalls or host-based tools like IPS/IDS.
 - At the endpoint itself using tools like EDRs and antivirus.
 - At the application level using application or service logs.
@@ -116,7 +116,7 @@ To conduct an investigation and reach a valid conclusion, leads need to be disco
 
 An IOC is a sign that an incident has occurred. It is documented in a structured manner and it represents an artifact of compromise.
 - This includes IP addresses, file names, or hashes of files.
-- There are known languages for documenting IOCs, such as _Yara_ and _OpenIOC_.
+- There are known languages for documenting IOCs, such as  [[YARA]] and *OpenIOC*.
 
 > IOCs can also obtained from third party vendors, and in this case they are used as [[Cyber Threat Intelligence]].
 

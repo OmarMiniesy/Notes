@@ -91,7 +91,7 @@ index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 | eval Process_Path=low
 ```
 - This creates a new field which has the lower-case version of `Image`.
 
-> `rex` command can be used to create fields using [[Regular Expressions]].
+> `rex` command can be used to create fields using [[Regular Expressions]]. [Guide on Splunk docs](https://docs.splunk.com/Documentation/Splunk/9.4.2/SearchReference/Rex).
 
 The `stats` command can be used to perform statistical operations, such as counting.
 ```SPL

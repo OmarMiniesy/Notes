@@ -9,6 +9,7 @@ To properly use a [[SIEM]] like [[Splunk]], the available data sources sending d
 
 > Before running any of the commands using [[Splunk Processing Language (SPL)]], first select a suitable time range in the time picker of the application.
 
+The *data summary* button shows useful information about the indexes, sources, and source types available.
 ##### Understanding Indexes
 
 Splunk digests a large source information from various data sources, and each data source formats the data differently.
@@ -72,5 +73,16 @@ We can also use the `sistats` command to explore event diversity.
 index=* | sistats count by index, sourcetype, source, host
 ```
 - This command counts the number of events per `index`, `sourcetype`, `source`, and `host`, which can provide us a clear picture of the diversity and distribution of our data.
+
+##### Fields
+
+On the fields section on the left, clicking on *all fields* shows all the fields that are present in the events.
+- We can choose to *select fields* to show them on all the events and see statistics about them.
+- We can also look at the other fields in the list and see their values, which might be interesting after performing filters on certain IPs or suspicious activity. 
+
+To view all the values of a certain field, use this query:
+```SPL
+| stats count by fieldname
+```
 
 ---
