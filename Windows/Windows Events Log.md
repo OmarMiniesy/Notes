@@ -26,6 +26,8 @@ Event log data is stored in files with the `.evtx` extension.
 To use [[ELK - Elasticsearch, Kibana, & Logstash]] as a [[SIEM]] for Windows Events Logs, view the [Winlogbeat](https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html) documentation on Elastic Docs.
 - The [Exported Fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields.html) page has all the available fields that can be used to query the logs.
 
+> [List of Event IDs](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/) in the Windows Audit section.
+
 ---
 ### Event Entry
 
