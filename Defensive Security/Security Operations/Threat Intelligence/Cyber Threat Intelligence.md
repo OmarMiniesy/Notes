@@ -43,7 +43,7 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 - *External*: Threat intelligence feeds, online marketplaces, or public sources like government data.
 - *Published Threat Reports*: Reports from tech companies that research actively used attacks, such as Recorded Future.
 
-**Processing**: Once the needed sources are connected to and the data is now available, a new issue arises, and that is guaranteeing the data is presented in a unified and understanded format.
+**Processing**: Once the needed sources are connected to and the data is now available, a new issue arises, and that is guaranteeing the data is presented in a unified manner and understandable format.
 - Data from different sources regarding different topics can be represented differently, hence, a solution is needed to extract the data, sort it, organize it, and correlate it with proper tags.
 - This is needed to ensure that data that is collected is used in an efficient and correct manner. This can be done using a [[SIEM]] solution.
 
