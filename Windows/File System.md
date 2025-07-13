@@ -88,3 +88,5 @@ Entries in the MFT are called *records*, and records have a structured format th
 | 0xD0 (208)  | $EA_INFORMATION        | Used for backward compatibility with OS/2 applications (HPFS)                    |
 | 0xE0 (224)  | $EA                    | Used for backward compatibility with OS/2 applications (HPFS)                    |
 | 0x100 (256) | $LOGGED_UTILITY_STREAM | Keys and other information about encrypted attributes (NTFS 3.0+; Windows 2000+) |
+
+---

@@ -22,4 +22,6 @@ The *Sysinternals* tools are a compilation of over 70+ Windows-based tools. Each
 **Process Explorer**: This shows the currently active processes with their owning accounts, as well as extra information depending on the mode.
  - *Handle mode* shows the handles for the selected process, and *DLL mode* shows the DLLs and opened memory mapped files, with other modes.
 
+> Checkout [[Investigating Processes]] for more process utilities related to defensive security.
+
 ---

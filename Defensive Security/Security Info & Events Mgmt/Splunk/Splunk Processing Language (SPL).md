@@ -13,6 +13,7 @@ To search for events, the `search` keyword is used. However, the search command 
 
 To use SPL to search for data, an **index** must be specified. 
 - This can be done using the `index` keyword, and specifying the name of that index between quotes.
+- The `main` index is used by default and does not need to be specified.
 
 Boolean operators can be used for more specific queries: `NOT, AND, OR`.
 - Wildcards can be used to replace any number of characters: `*`.
@@ -21,6 +22,7 @@ This searches in the `main` index for any event that includes the keywords speci
 ```SPL
 index="main" "data-to-search-for"
 ```
+- Writing text without specifying a field will query all the fields. This is case insensitive.
 
 A *macro* is a placeholder for a more complex search query that can take arguments if variables are needed.
 - Macros are created from the settings, and they referenced using the backticks.
