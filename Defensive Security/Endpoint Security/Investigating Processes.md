@@ -18,7 +18,7 @@ There is also the `details` tab which can have extra columns added like the *ima
 - All the columns that can be added are in this [list](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/#:~:text=Here%27s%20what%20every%20possible%20column%20means%3A)
 ###### [[Process Hacker]]
 
-###### [[Sysinternals#Process Utilities|Sysinternals - Process Explorer]]
+###### [[Sysinternals#Process Utilities|Sysinternals Process Utilities]]
 
 There also exist other command line options to analyze processes like:
 - `tasklist`

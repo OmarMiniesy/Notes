@@ -23,6 +23,18 @@ The operating system is usually found at `C:\Windows`.
 
 The `C:\Windows\System32` folder is essential, as it holds the files necessary for the Operating System to function.
 
+##### Data Streams
+
+A data stream is a sequence of bytes that stores the file data.
+- Files have at least one data stream, the unnamed one, which has the main file content. Sometimes called `$DATA`
+
+There are also *Alternate Data Streams (ADS)* which are named data streams that can store additional information for the file, such as metadata.
+- ADS are not visible through the Windows Explorer, and they are used to store keywords, user information, thumbnails, and small executable files.
+- There are utilities that allow for the viewing this metadata in the ADS.
+- These have been used by [[Malware]] to hide data
+
+> Using the syntax `<file-name>:<stream-name>` allows reading and writing to the stream called `stream-name` of the file called `<file-name>`.
+
 ---
 ### MAC(b) Times in NTFS
 
