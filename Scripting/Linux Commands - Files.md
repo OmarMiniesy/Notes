@@ -56,6 +56,14 @@ Combining these commands can help in a chunk of lines that are around a desired 
 - To print `x` lines before that line number `y`, we use: `head -n-y | tail -nx`.
 - To print `x` lines after that line number `y`, we use: `tail -n+y | head -nx`.
 
+To deal with duplicate lines in files, use the `sort` and `uniq` tools:
+```bash
+cat file.txt | sort | uniq -c | sort -n
+```
+- The sort will first sort the lines of the file.
+- The `uniq - c` will then print each duplicated line once along with its count to its left.
+- The final `sort -n` will sort by the count in *ascending* order, add `-r` to sort in *descending* order. 
+
 ---
 ### Writing to Files
 

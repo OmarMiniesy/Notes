@@ -46,3 +46,8 @@ There are various types of compression mechanisms, such as `bzip2`, `tar`, `gzip
 > In order to properly de-compress files, they must be renamed with the extension of the compression algorithm used. Use the `mv` command to achieve this.
 
 ---
+### JSON Files
+
+To deal with JSON files, use the `jq` tool.
+
+---
