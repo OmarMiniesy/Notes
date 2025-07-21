@@ -1,6 +1,6 @@
 ### General Notes
 
-To efficiently manage the [[Active Directory/Active Directory|Active Directory]] network and the resources inside, we utilized [[Active Directory Users and Computers#Organizational Units (OUs)|Organizational Units (OUs)]].
+To efficiently manage the [[Active Directory|Active Directory]] network and the resources inside, we utilized [[Active Directory Users and Computers#Organizational Units (OUs)|Organizational Units (OUs)]].
 - That way, different departments of the organization inside the network can be easily managed.
 
 The policies that are defined for OUs to allow and prevent actions is managed through _Group Policy Objects (GPOs)_.

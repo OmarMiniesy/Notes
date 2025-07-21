@@ -2,34 +2,67 @@
 
 A windows domain is a group of users and computers under a single administration.
 - This is a centralized system for managing and securing users, computers, and devices in a network.
+- Domains have *Organizational Units OUs* inside.
 
 This single repository that allows the administration of the components of a Windows network is called the _Active Directory (AD)_.
 - The AD is the underlying service that provides for Windows domains.
+- It is like a read only database accessible by all users in the domain regardless of privilege level.
 - There can be many domains in the case of a larger organization, each with its own systems and computers.
 
 *AD* is a distributed, hierarchical structure that allows centralized management of an organization's resources, including users, computers, groups, network devices and file shares, group policies, devices, and trusts. 
 - *AD* provides authentication, accounting, and authorization functionalities within a Windows enterprise environment. 
 - It also allows administrators to manage permissions and access to network resources.
 
-At the core of the Windows domain, is the _Domain Controller_.
-- This is a server responsible for running the Active Directory services.
-- It is the central authority for the domain.
-
-The Active Directory inside the Windows domain allows for:
-- Centralized identity management.
-- Management of security policies.
-
 ---
 ### Active Directory Domain Services (AD DS)
 
 The _AD DS_ is the core of the Windows domain, and it acts as a catalogue that holds information about the objects in the network.
 - This acts as the central database of the domain.
+- The AD DS manages the rights of users on the network to access information and resources.
+
+At the core of the Windows domain, is the _Domain Controller_.
+- This is a server responsible for running the *Active Directory Services.*
+- It is the central authority for the domain.
+
+> A *Directory Service* is a database system that stores, organizes, and provides access to information about users, devices, applications, and resources in a network.
+
+---
+#### Objects and Attributes
+
+A resource inside AD is called an *object*. All objects have *attributes* that define its characteristics.
+- All attributes have an associated *LDAP* name that can be used through LDAP queries.
+- This [list](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes-all) has all of the attributes used by AD.
+
+The *GUID*, or Global Unique Identifier is a unique `128` bit value assigned to an object on creation.
+- It is used to represent an object and it is stored in the `objectGUID` attribute.
+- When looking for an object in the AD, the GUID is what to use.
+- The GUID never changes and it can never be removed from the object as long as the object exists in the domain.
+
+The *Distinguished Name, (DN)*, is the full path to an AD object.
+The *Relative Distinguished Name, (RDD)*, is taking one component of the *DN* and using to identify the object from other objects at the same level.
+- Two objects cannot have the same DN, but they can have the same RDN.
+
+A *container object* is a type of object that can hold and organize other objects.
+A *leaf object* is a type of object that does not contain another object.
+
+The *schema* defines what types of objects exist in the AD database and all its associated attributes.
+- This schema can be used by applications to understand what objects and properties are available.
+- This schema can be updated dynamically by modifying the schema object in the directory.
 
 Some of the objects supported by _AD_ are:
-- Users
+- Domain Users
+- Domain Computers
+- Domain Group Information
+- [[Active Directory Users and Computers#Organizational Units (OUs)| Organizational Units (OUs)]]
+- Default Domain Policy
+- Functional Domain Levels
+- Password Policy
+- [[Group Policy Management|Group Policy Objects (GPOs)]]
 - Groups
 - Machines
 - Shares
+- [[Trees, Forests, and Trusts#Trust Relationships|Domain Trusts]]
+- Access Control Lists (ACLs)
 
 > To configure users, groups, and machines in Active Directory, the [[Active Directory Users and Computers]] application needs to be run from the Domain Controller.
 

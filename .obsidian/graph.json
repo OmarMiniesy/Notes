@@ -92,13 +92,6 @@
       }
     },
     {
-      "query": "path:\"Active Directory\"  ",
-      "color": {
-        "a": 1,
-        "rgb": 5431378
-      }
-    },
-    {
       "query": "path:\"Defensive Security\"  ",
       "color": {
         "a": 1,
@@ -110,12 +103,12 @@
   "showArrow": false,
   "textFadeMultiplier": -1.1,
   "nodeSizeMultiplier": 1.19739583333333,
-  "lineSizeMultiplier": 1.40036363636364,
+  "lineSizeMultiplier": 0.538168888888889,
   "collapse-forces": false,
   "centerStrength": 0,
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.12779457198909747,
+  "scale": 0.09387614636203223,
   "close": true
 }

@@ -1,6 +1,6 @@
 ### General Notes
 
-Using windows domains and [[Active Directory/Active Directory|Active Directory]], all the credentials are stored in the _Domain Controllers_.
+Using windows domains and [[Active Directory|Active Directory]], all the credentials are stored in the _Domain Controllers_.
 - There needs to be a protocol or mechanism that governs how the users and machines on the domain to verify their credentials by communicating with the DC.
 
 There are 2 protocols that are used for authentication in Windows domains.

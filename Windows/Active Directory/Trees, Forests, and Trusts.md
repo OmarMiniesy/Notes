@@ -1,6 +1,6 @@
 ### General Notes
 
-Simple [[Active Directory/Active Directory|Active Directory]] setups can be built with a singular Windows domain.
+Simple [[Active Directory|Active Directory]] setups can be built with a singular Windows domain.
 - In the case that more than one domain needs to exists, then comes the concepts of _Trees_, _Forests_, and _Trusts_.
 
 > To manage multiple domains in a single organization, a new Security Group needs to be introduced call Enterprise Admins. This group grants users admin privileges over all the domains in an enterprise.
@@ -8,16 +8,17 @@ Simple [[Active Directory/Active Directory|Active Directory]] setups can be buil
 ---
 ### Trees
 
-This is used to join domains that share the same namespace.
-- For example, 2 subdomains of a single parent domain.
+A group of one or more *Domains* that have the same namespace, that is, all the domains that are subdomains of a single domain.
+- Domains and subdomains in the Tree share a parent-child *trust relationship*.
 
-Here, the 2 subdomains will be the child nodes of the parent domain in the Tree structure.
+All domains in a tree share a standard *Global Catalog* which contains all information about objects that belong to the tree.
 
 ---
 ### Forests
 
-In the case of domains with different namespaces, there will be different _Trees_ present.
-- Combining these trees with different namespaces creates a _Forest_.
+A forest is a collection of [[Active Directory]] *trees*
+- It is the biggest container in AD, and it can contain one or multiple domains.
+- Forests can have *trust relationships* with other forests.
 
 ---
 ### Trust Relationships

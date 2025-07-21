@@ -50,4 +50,10 @@ There are various types of compression mechanisms, such as `bzip2`, `tar`, `gzip
 
 To deal with JSON files, use the `jq` tool.
 
+Can be used to extract the value of a certain field from a file:
+```bash
+jq .[].arg1.arg2 filename.json -r
+```
+- The `-r` is top return it as a string.
+
 ---
