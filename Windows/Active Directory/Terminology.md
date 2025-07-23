@@ -3,6 +3,7 @@
 
 An object that can be authenticated, and is represented with a unique SID (security identifier).
 - It is an object that can be assigned permissions.
+- It is a securable object.
 
 ### SIDs
 
