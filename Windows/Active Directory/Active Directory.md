@@ -70,15 +70,25 @@ Some of the objects supported by _AD_ are:
 
 A user is an entity that represents an individual, a service, or an application that requires certain access privileges.
 - Each user is saved as an object and contains attributes to identify its identity, its permissions, and its settings.
+- A user is a _leaf object_.
+- Users have _SIDs (Secure IDs)_ and _GUIDs_.
 
 Users are also known as _security principles_.
 - A security principle is an object that can act upon other resources in the network.
-- However, they need to have the right permissions and privileges to be able to access these network resources.
+- It is an object that is securable and can be assigned permissions and rights.
+
+An SID is a unique identifier for security principals and security groups. 
+- Every object has a unique SID that is issued by the Domain Controller, stored in a secure database, and can only be used once even if the principle is no longer in use.
+- There are [well known SIDs](https://ldapwiki.com/wiki/Wiki.jsp?page=Well-known%20Security%20Identifiers) that are used for generic users and groups across all AD environments.
+
+> For ex, users when they are logged in get an access token that has their SID and all the SIDs they are groups of.
 
 ##### Machines
 
 A machine is used to represent a computer in the AD domain.
 - Machines are also considered as _security principles_.
+- They are also considered _leaf objects_.
+- They have an _SID_ and a _GUID_.
 
 When a machine is added to the domain, a _machine account_ is created for it in the AD.
 - This allows the machine to interact with the domain and participate in the network.
@@ -103,5 +113,7 @@ There are some default security groups that are created in a domain.
 - **Domain Users**: All the user accounts in the domain.
 - **Domain Computers**: All computers of the domain.
 - **Domain Controllers**: All the domain controllers of the domain.
+
+> The default security groups are held in the _built-in_ container.
 
 ---
