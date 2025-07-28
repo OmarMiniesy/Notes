@@ -13,11 +13,11 @@ Domain Controllers are the ones that can change data in the AD database, but sin
 - They introduced roles that are not bound to a single DC, known as FSMO roles.
 
 There are 5 roles that are assigned to the first DC in the forest root domain. Sysadmin can transfer the needed roles after.
-- Schema master: One per forest
-- Domain naming master: One per forst
-- RID master: One per domain
-- PDC(Primary Domain Controller) emulator: One per domain
-- Infrastructure master: One per domain
+- Schema master: One per forest, and it is responsible for managing the AD Schema.
+- Domain naming master: One per forset, and it is responsible for managing the domain names. Making sure that no 2 domains in the same forest have the same name.
+- RID (Relative ID) master: One per domain
+- PDC(Primary Domain Controller) emulator: One per domain, and it is the DC that responds to authentication requests, password changes, and managing GPOs. It also maintains time for the domain.
+- Infrastructure master: One per domain, and it is responsible for managing communication between domains in a single forest. It translates GUIDs, SIDs, and DNs between domains. If this is not properly functions, the ACLs will show SIDs instead of resolved names.
 
 ### Global Catalog (GC)
 
