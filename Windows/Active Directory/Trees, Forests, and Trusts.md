@@ -23,10 +23,17 @@ A forest is a collection of [[Active Directory]] *trees*
 ---
 ### Trust Relationships
 
-Domains arranged in _Trees_ and _Forests_ need to have _trust relationships_ configured between them to allow users to access content between these domains.
+Trusts are used to establish forest to forest, or domain to domain authentication.
+- This allows users to access resources in domains outside of their domains.
 
-There are _one-way_ and _two-way_ trust relationships.
-- Two-way trust relationships are formed by default when domains are joined in trees or forests.
+Trusts can be _transitive_ or _non-transitive_.
+- A _transitive_ trust means that trust is extended to objects that the child domain trusts.
+- In a _non-transitive_ trust, only the child domain itself is trusted.
+
+There are _one-way_ and _two-way_ (bidirectional) trust relationships.
+- _Two-way_ trusts means users from both domains can access resources.
+- _Two-way_ trust relationships are formed by default when domains are joined in trees or forests.
+- _One-way_ trust relationships allow users in the the trusted domain to access resources in the trusting domain.
 
 The direction of trust is opposite to the direction of access.
 - If a domain trusts another domain, then the trusted domain can access the resources of the domain that trusts it.
