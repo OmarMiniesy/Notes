@@ -4,8 +4,8 @@ Using windows domains and [[Active Directory|Active Directory]], all the credent
 - There needs to be a protocol or mechanism that governs how the users and machines on the domain to verify their credentials by communicating with the DC.
 
 There are 2 protocols that are used for authentication in Windows domains.
-- **Kerberos**, this is the default protocol that is used now.
-- **NetNTLM**, this protocol is legacy.
+- **Kerberos**, this is the default protocol that is used now. Uses Port 88 for both TCP and UDP.
+- **NetNTLM**, this protocol is legacy. 
 
 ---
 ### Kerberos Authentication
