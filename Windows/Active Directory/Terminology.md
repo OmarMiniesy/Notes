@@ -114,3 +114,30 @@ This is a string value attribute used to define forest-wide configurations.
 An attribute that determines whether or not the `SDProp` process protects the user.
 - If 0 or not set, then it is not protected.
 - If 1, then it is protected. (they are usually privileged accounts).
+
+### DNS
+
+AD DNS is used by private networks to facilitate communications between devices (servers, clients, ...)
+- AD has a database with DNS records called Service Records (SRV).
+- Dynamic DNS is used to automatically update the DNS database.
+
+When a client joins the network, the DC is located by:
+1. Sending a DNS query to the DNS service.
+2. The service retrieves the SRV record for the DC.
+3. It then transmit the DC hostname to the client, which then uses it to get the IP address of the DC.
+
+> DNS uses TCP/UDP port 53. UDP by default, but it changes to TCP for messages larger than 512 bytes.
+
+### LDAP - Lightweight Directory Access Protocol
+
+This is a protocol used for authentication against directory services like AD. It is how systems in the network communicate with AD.
+- Uses Port 389
+- LDAP over SSL, LDAPS uses port 636
+
+> LDAP is the protocol used by the Active Directory servers and clients.
+
+LDAP Authentication uses credentials using a `BIND` operation. There are two types of LDAP authentication:
+- Simple Authentication: A username and passowrd are used to create a `BIND` request to authenticate to LDAP server.
+- SASL Authentication: A framework that uses other authentication services, like Kerberos, to bind to the LDAP server, and then to authenticate to LDAP. The LDAP protocol is used to send messages with challenge/response packets to authenticate.
+
+> LDAP authentication is done in cleartext.
