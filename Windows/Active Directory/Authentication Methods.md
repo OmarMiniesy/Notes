@@ -30,6 +30,9 @@ There are 2 protocols that are used for authentication in Windows domains.
 ---
 ### NetNTLM Authentication
 
+- LM and NTLM are the hash names.
+- NTLMv1 and NTLMv2 are the authentication protocols that use these hashes.
+
 NetNTLM works using a challenge-response mechanism. The entire process is as follows:
 
 ![https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/2eab5cacbd0d3e9dc9afb86169b711ec.png](https://tryhackme-images.s3.amazonaws.com/user-uploads/5ed5961c6276df568891c3ea/room-content/2eab5cacbd0d3e9dc9afb86169b711ec.png)
