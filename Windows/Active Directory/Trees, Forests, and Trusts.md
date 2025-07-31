@@ -27,7 +27,7 @@ Trusts are used to establish forest to forest, or domain to domain authenticatio
 - This allows users to access resources in domains outside of their domains.
 
 Trusts can be _transitive_ or _non-transitive_.
-- A _transitive_ trust means that trust is extended to objects that the child domain trusts.
+- A _transitive_ trust means that trust is extended to [[Objects]] that the child domain trusts.
 - In a _non-transitive_ trust, only the child domain itself is trusted.
 
 There are _one-way_ and _two-way_ (bidirectional) trust relationships.

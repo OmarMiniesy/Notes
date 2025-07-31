@@ -1,6 +1,6 @@
 ### General Notes
 
-This is an application on the Domain Controller that allows for managing the objects of the Active Directory.
+This is an application on the [[Domain Controller]] that allows for managing the [[Objects]] of the Active Directory.
 - There is a list that shows a hierarchical diagram of all the users, computers, and groups that exist in this domain within containers called _organization units_.
 - **Organizational Units OUs** are logical *container objects*.
 
@@ -26,7 +26,7 @@ There are also some default OUs that are created by Windows:
 To delegate control of an OU to a certain user, right click on the OU and choose delegate control.
 - There, the user that should get these permissions is chosen, and the actions that they can do can be chosen.
 
-##### Difference between OUs and [[Active Directory#Security Groups|Security Groups]]
+##### Difference between OUs and [[Objects#Security Groups|Security Groups]]
 
 **OUs** are handy for **applying policies** to users and computers.
 - This includes specific configurations that pertain to sets of users depending on their particular role in the enterprise.

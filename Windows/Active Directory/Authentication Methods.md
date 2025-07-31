@@ -1,13 +1,3 @@
-### General Notes
-
-Using windows domains and [[Active Directory|Active Directory]], all the credentials are stored in the _Domain Controllers_.
-- There needs to be a protocol or mechanism that governs how the users and machines on the domain to verify their credentials by communicating with the DC.
-
-There are 2 protocols that are used for authentication in Windows domains.
-- **Kerberos**, this is the default protocol that is used now. Uses Port 88 for both TCP and UDP.
-- **NetNTLM**, this protocol is legacy. 
-
----
 ### Kerberos Authentication
 
 1. The user sends their username and a timestamp encrypted using a key derived from their password to the **Key Distribution Center (KDC)**, a service usually installed on the Domain Controller in charge of creating Kerberos tickets on the network.

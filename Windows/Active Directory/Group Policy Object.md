@@ -21,7 +21,7 @@ To apply the GPO to a specific set of computers/users in the OU, use _security f
 ---
 ### GPO Distribution
 
-GPOs are distributed across the network using a _shared directory_ called `SYSVOL`, that is stored in the _Domain Controller_.
+GPOs are distributed across the network using a _shared directory_ called `SYSVOL`, that is stored in the [[Domain Controller]].
 - This shared directory stores files and information that must be replicated among Domain Controllers in a domain.
 - All users in the domain should have access to this share via the network to be able to sync their GPOs.
 

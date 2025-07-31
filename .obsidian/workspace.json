@@ -8,77 +8,48 @@
         "type": "tabs",
         "children": [
           {
-            "id": "580ed44401c6d533",
+            "id": "7975560cabb80139",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Active Directory.md",
+                "file": "Windows/Active Directory/Authentication Methods.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory"
+              "title": "Authentication Methods"
             }
           },
           {
-            "id": "2e9395090074a778",
+            "id": "ddeebe35dd35fb27",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Active Directory Users and Computers.md",
+                "file": "Windows/Active Directory/Kerberos.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory Users and Computers"
+              "title": "Kerberos"
             }
           },
           {
-            "id": "572f281d1f55a8be",
+            "id": "205d4888ea70f7e6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Group Policy Management.md",
+                "file": "Windows/Active Directory/NTLM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Group Policy Management"
-            }
-          },
-          {
-            "id": "d42d6ae64658a3d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Trees, Forests, and Trusts.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Trees, Forests, and Trusts"
-            }
-          },
-          {
-            "id": "8f85be788665b357",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Terminology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Terminology"
+              "title": "NTLM"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -145,8 +116,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 272.51103591918945,
-    "collapsed": true
+    "width": 349.5110321044922
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -258,14 +228,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "8f85be788665b357",
+  "active": "7975560cabb80139",
   "lastOpenFiles": [
+    "Windows/Active Directory/Domain Controller.md",
     "Windows/Active Directory/Active Directory.md",
-    "Windows/Active Directory/Terminology.md",
-    "Windows/Active Directory/Active Directory Users and Computers.md",
-    "Windows/Active Directory/Trees, Forests, and Trusts.md",
-    "Windows/Active Directory/Group Policy Management.md",
     "Windows/Active Directory/Authentication Methods.md",
+    "Windows/Active Directory/NTLM.md",
+    "Windows/Active Directory/Security Stuff.md",
+    "Windows/Active Directory/Lightweight Directory Access Protocol (LDAP).md",
+    "Windows/Active Directory/Kerberos.md",
+    "Windows/Active Directory/Objects.md",
+    "Windows/Active Directory/Trees, Forests, and Trusts.md",
+    "Windows/Active Directory/Active Directory Users and Computers.md",
+    "Windows/Active Directory/Group Policy Object.md",
+    "Windows/Active Directory/Untitled",
+    "Web Applications/Cookies.md",
     "Defensive Security/Endpoint Security/SilkETW.md",
     "Defensive Security/Endpoint Security/Process Hacker.md",
     "Defensive Security/Endpoint Security/OSQuery.md",
@@ -281,12 +258,6 @@
     "Scripting/Dealing With Files of Different Types.md",
     "Scripting/Linux Commands - Files.md",
     "Scripting/Bash Scripting.md",
-    "Scripting/Linux Commands - Networks.md",
-    "Scripting/Linux Commands - Permissions.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
     "Defensive Security/Security Info & Events Mgmt/ELK",
     "Defensive Security/Security Operations/Threat Intelligence",
     "Defensive Security/Cyber Defense/MITRE",
@@ -295,7 +266,6 @@
     "Defensive Security/Security Info & Events Mgmt/Splunk",
     "Defensive Security/Security Info & Events Mgmt",
     "Defensive Security/Digital Forensics & Incident Response",
-    "Windows/Tools",
     "Untitled.canvas",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
