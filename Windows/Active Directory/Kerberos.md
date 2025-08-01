@@ -17,6 +17,8 @@ The TGT is encrypted with the secret key of the `krbtgt` account.
 
 > The TGT is encrypted using the `krbtgt` account's password hash, and therefore the user can't access its contents.
 
+> The `krbtgt` is the service account for the key distribution service. Gaining control over this account will enable an attacker to have access to anything on the domain. One attack on this is he *Golden Ticket* attack.
+
 The user then presents the TGT to the DC, requesting a *Ticket Granting Service (TGS)* ticket for a specific service.
 - To request a TGS, the user will send their username and a timestamp encrypted using the Session Key, along with the TGT and a [[Active Directory#Service Principal Name (SPN)|SPN]] which indicates the service and server name we intend to access.
 - This is the *TGS-REQ*. If the TGT is successfully validated, its data is copied to create a TGS ticket.

@@ -2,7 +2,6 @@
 
 This is an application on the [[Domain Controller]] that allows for managing the [[Objects]] of the Active Directory.
 - There is a list that shows a hierarchical diagram of all the users, computers, and groups that exist in this domain within containers called _organization units_.
-- **Organizational Units OUs** are logical *container objects*.
 
 ---
 ### Organizational Units (OUs)

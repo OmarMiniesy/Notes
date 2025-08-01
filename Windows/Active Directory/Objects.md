@@ -83,9 +83,21 @@ A user is an entity that represents an individual, a service, or an application 
 - Users have _SIDs (Secure IDs)_ and _GUIDs_.
 - Users are _security principles_.
 
+When a user logs in and correctly authenticates, an access token is created. 
+- This token contains the user's security identity and group membership.
+- This token is presented whenever the user interacts with a process.
+
 Some attributes for users:
-- `sAMAccountName` :  This is the user's logon name. It must be unique within the domain and with length less than or equal to 20.
-- `userPrincipalName` :  This is another username for the user object that is composed of their account name followed by the domain name.
+- `UserPrincipalName UPN` :  This is the primary logon name. Its composed of their account name followed by the domain name, or the user's email address.
+- `SAMAccountName` :  This is the user's logon name. It must be unique within the domain and with length less than or equal to 20.
+- `SIDHistory`: Has previous SIDs for the user object if moved between domains. The final SID is added to this attribute, and the new SID is set in the `objectSID` attribute.
+
+##### Local Accounts
+
+These are stored locally on a server or workstation, and are assigned rights on that host individually or via groups. These users are stored in the `Users` folder.
+- Since these are local accounts, the right are only granted for that specific host and won't work across the domain.
+- They are *security principles* for resources on a specific host.
+- This [list](https://learn.microsoft.com/en-us/windows/security/identity-protection/access-control/local-accounts#default-local-user-accounts) has the default user accounts.
 
 ---
 ### Machines
@@ -107,9 +119,18 @@ Machine accounts follow a naming scheme.
 ---
 ### Security Groups
 
-A group is an object that can contain other objects, like users, machines, or other groups.
+A group is an object that can contain other objects, like users, machines, or other groups. They are used to ease administration of permissions and assignment of resources.
 - The permissions of the objects inside the security group are inherited from the permissions of the security group itself.
 - Security groups are also considered _security principles_.
+
+Groups have a *type* and a *scope*.
+- The *type* is the group purpose, it is either `security` or `distribution`.
+	- `security` groups are used to assign permissions for a collection of users.
+	- `distribution` groups are used to distribute messages to all users of the group.
+- The *scope* is how the group can be used in the domain or [[Trees, Forests, and Trusts#Forests|Forest]].
+	- `Domain Local Group`: Used to manage permissions to domain resources in the same domain it was created. These groups cannot be used in another domain, but can contain users from other groups.
+	- `Global Group` : Used to grant access to resources in other domains. It can only contain users from the domain it was created.
+	- `Universal Group`: Used to manager resources across multiple domains and can be given permissions to objects in the same Forest. These are stored in the [[Domain Controller#Global Catalog (GC)|Global Catalog]].
 
 There are some default security groups that are created in a domain.
 - **Domain Admins**: Users in this group have admin privileges over the entire domain, including the [[Domain Controller]]s (DCs).
@@ -121,6 +142,13 @@ There are some default security groups that are created in a domain.
 - **Domain Controllers**: All the domain controllers of the domain.
 
 > The default security groups are held in the _built-in_ container.
+
+Some important group attributes are:
+- `cn`: This is the Common Name, or the name of the group.
+- `member`: This defines which user, group, or object is a member of the group.
+- `groupType`: An integer defining group type and scope.
+- `memberOf`: This shows nested group memberships. This shows a list of the groups that have this group as a member.
+- `objectSID`: This is the SID of the group.
 
 ---
 ### Access Control Lists
