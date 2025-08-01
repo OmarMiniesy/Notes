@@ -24,6 +24,22 @@ Every object has a *unique SID* that is issued by the [[Domain Controller]], sto
 - There are [well known SIDs](https://ldapwiki.com/wiki/Wiki.jsp?page=Well-known%20Security%20Identifiers) that are used for generic users and groups across all AD environments.
 - For ex, users when they are logged in get an access token that has their SID and all the SIDs they are groups of.
 
+###### RIDs
+An *RID* is the last part of the *SID*.
+- The ***RID*** distinguishes between different users or groups within the same domain or machine.
+- Combined with the domain/machine part of the SID, it forms a globally unique identifier.
+
+Certain accounts and groups always have fixed RIDs:
+
+|RID|Account/Group|
+|---|---|
+|500|Built-in **Administrator** account|
+|501|Built-in **Guest** account|
+|512|**Domain Admins** group|
+|513|**Domain Users** group|
+|544|**Administrators** group (local)|
+|545|**Users** group (local)|
+
 ###### Object Names
 
 The *Distinguished Name, (DN)*, is the full path to an AD object.

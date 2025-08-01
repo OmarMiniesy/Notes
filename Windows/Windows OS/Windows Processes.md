@@ -111,6 +111,8 @@ The *Local Security Authority Subsystem Service* is responsible for enforcing th
 - Creating security tokens for Security Account Manager (SAM), Active Directory, and NETLOGON.
 - It uses the authentication packages specified in `HKLM\System\CurrentControlSet\Control\Lsa`.
 
+> SAM is a windows system database that stores user account information and security descriptors for the computer. Resides in `C:\Windows\System32\config\SAM`. It is in the [[Windows Registry]] under `HKEY_LOCAL_MACHINE\SAM`.
+
 It has:
 - Image Path : `%SystemRoot%\System32\lsass.exe`
 - Parent Process : `wininit.exe`
