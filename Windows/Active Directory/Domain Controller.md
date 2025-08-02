@@ -4,6 +4,8 @@ At the core of the Windows domain, is the _Domain Controller_.
 - This is a server responsible for running the *Active Directory Services.*
 - It is the central authority for the domain.
 
+The *Default Domain Controllers policy* is created automatically with a domain and sets baseline security and auditing settings for all domain controllers in a given domain.
+
 > A *Directory Service* is a database system that stores, organizes, and provides access to information about users, devices, applications, and resources in a network.
 
 There can be several DCs in one AD network each with different roles:
@@ -25,10 +27,12 @@ This is when AD [[Objects]] are updated and transferred from one DC to another.
 
 ###### SYSVOL
 
-A folder that stores copies of public files in the domain. It is shared on an NTFS volume on all the DCs in a domain, and contains:
-- Policies folder: System policies, group policy settings
-- Scripts folder: logon/logoff scripts, other script types
+A folder that stores copies of public files in the domain. This shared directory stores files and information that must be replicated among Domain Controllers in a domain.
+- *Policies* folder: System policies, [[Group Policy Object]] settings.
+- *Scripts* folder: logon/logoff scripts, other script types
 - The content of the SYSVOL folder is replicated to the DCs within the environment using the File Replication Service (FRS).
+
+> This share is located at `C:\\\\Windows\\\\SYSVOL\\\\sysvol\\\\` in the domain controller.
 
 ###### NTDS.DIT
 
