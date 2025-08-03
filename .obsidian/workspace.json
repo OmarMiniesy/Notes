@@ -4,137 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "21adc769ad878156",
+        "id": "00e3774e14d8d2d7",
         "type": "tabs",
         "children": [
           {
-            "id": "9567fef464851985",
+            "id": "57a1df595e101ee4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Active Directory Security.md",
+                "file": "Windows/Windows OS/Windows Events Log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory Security"
+              "title": "Windows Events Log"
             }
           },
           {
-            "id": "c30ee54a8c8e1a61",
+            "id": "d7cb5e0567728b5a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Active Directory Security.md",
+                "file": "Windows/Tools/Get-WinEvent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory Security"
-            }
-          },
-          {
-            "id": "67d1499c5ecd0057",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Objects.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Objects"
-            }
-          },
-          {
-            "id": "b6ab2c069032672c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Group Policy Object.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Group Policy Object"
-            }
-          },
-          {
-            "id": "1b188ffd6b57fa41",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Domain Controller.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Domain Controller"
-            }
-          },
-          {
-            "id": "db99abb957029081",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Group Policy Object.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Group Policy Object"
-            }
-          },
-          {
-            "id": "b79757f6c909787b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Objects.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Objects"
-            }
-          },
-          {
-            "id": "7ca830a15bde94c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Kerberos.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kerberos"
-            }
-          },
-          {
-            "id": "fdbded30e680e0bd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Active Directory Users and Computers.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Active Directory Users and Computers"
+              "title": "Get-WinEvent"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "audit",
+                "query": "wevtutil",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -201,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 349.5110321044922
+    "width": 349.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -313,17 +216,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b6ab2c069032672c",
+  "active": "d7cb5e0567728b5a",
   "lastOpenFiles": [
+    "Windows/Windows OS/Windows Events Log.md",
+    "Windows/Tools/Get-WinEvent.md",
+    "Windows/Windows OS/Event Tracing for Windows (ETW).md",
+    "Windows/Tools/Logman.md",
+    "Windows/Active Directory/Active Directory Users and Computers.md",
+    "Windows/Active Directory/Kerberos.md",
     "Windows/Active Directory/Objects.md",
     "Windows/Active Directory/Group Policy Object.md",
     "Windows/Active Directory/Domain Controller.md",
     "Windows/Active Directory/Active Directory Security.md",
-    "Windows/Windows OS/Windows Events Log.md",
     "Windows/Active Directory/Rights & Privileges.md",
     "Windows/Active Directory/Active Directory.md",
-    "Windows/Active Directory/Kerberos.md",
-    "Windows/Active Directory/Active Directory Users and Computers.md",
     "Windows/Windows OS/User Access Control (UAC).md",
     "Windows/Windows OS/Windows Registry.md",
     "Windows/Windows OS/Windows Processes.md",
@@ -340,9 +246,6 @@
     "Defensive Security/Endpoint Security/Log Files.md",
     "Windows/Windows OS",
     "Windows/Windows OS/System Configuration.md",
-    "Windows/Windows OS/Event Tracing for Windows (ETW).md",
-    "Windows/Tools/Sysmon.md",
-    "Scripting/Dealing With Files of Different Types.md",
     "Defensive Security/Security Info & Events Mgmt/ELK",
     "Defensive Security/Security Operations/Threat Intelligence",
     "Defensive Security/Cyber Defense/MITRE",

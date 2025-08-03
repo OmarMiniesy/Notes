@@ -11,7 +11,9 @@ Logs are stored from different parts of the system, including applications, [[Ev
 - Each type of log has a different ID for the type of event it logs, [List of Event IDs](https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/).
 - The type of events that are recorded is controlled by the [Security Audit Policy](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/advanced-security-auditing).
 
-> These logs can be accessed from the [[Event Viewer]] application, the [[Get-WinEvent]] cmdlet, or `Wevtutil.exe`.
+> These logs can be accessed from the [[Event Viewer]] application, the [[Get-WinEvent]] cmdlet, or `wevtutil.exe`.
+
+> Interacting with the logs can be done using *XPath*, [documentation](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256115(v=vs.100)).
 
 Event log data is stored in files with the `.evtx` extension.
 - It uses an XML based schema.
