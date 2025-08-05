@@ -20,6 +20,8 @@ More efficient, here is the syntax. What's inside the curly braces are the param
 ---
 ### Using Get-WinEvent
 
+##### Simple Usage
+
 To list the available logs, we can use the `-ListLog` flag.
 ```powershell
 Get-WinEvent -ListLog *
@@ -55,6 +57,91 @@ To retrieve events from a `.evtx` file, we need to specify the path:
 Get-WinEvent -Path 'C:\Tools\chainsaw\EVTX-ATTACK-SAMPLES\Execution\exec_sysmon_1_lolbin_pcalua.evtx' -MaxEvents 5 | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
 ```
 
+##### Parsing `EventData`
+
+###### Using `Properties`
+This outputs all of the data found in a singular event record
+```powershell
+Get-WinEvent -Path C:\filepath.evtx -FilterXPath "*/System/EventID = 1" | Select-Object -Property *
+```
+- The `-Property *` parameter, when used with `Select-Object`, instructs the command to select all properties of the objects passed to it.
+- It outputs the content of `EventData` in field called `Properties` with several arrays.
+
+To output all of the content of `EventData` values in the `Properties` array:
+```powershell
+Get-WinEvent -Path C:\filepath.evtx -FilterXPath "*/System/EventID = 1" | Select-Object -ExpandProperty Properties
+```
+- This will print all of the *values only* found in the `EventData`.
+- Using the `XML` option, [[#Using `XML`|Using XML]], we can see both field name and value. 
+
+To get the content of a singular field, we have to know its index.
+```powershell
+Get-WinEvent -Path C:\filename.evtx -FilterXPath "*/System/EventID = 1" |
+ForEach-Object {
+    $_.Properties[4].Value
+}
+```
+- The `$_` is a variable for and entire log.
+- It then takes the `Properties` array and gets the content of the 5th element with index 4, which is the `Image` field.
+###### Using `XML`
+To output the content of the `EventData` with both field and value, we can convert the entire event into [[XML]] format, and then parse down to the individual data fields themselves:
+```powershell
+Get-WinEvent -Path C:\filepath.evtx |
+ForEach-Object {
+    [xml]$xml = $_.ToXml()
+    $xml.Event.EventData.Data | ForEach-Object {
+        "$($_.Name) : $($_.'#text')"
+    }
+    "`n`n`n"
+}
+```
+- This takes the entire event row `$_`, then converts it to `XML`.
+- Then, it drills down into the singular `Data` element, and for each object, it outputs the name and the value.
+	- This is made visible in Event Viewer application in the Details section of a log and going into the XML view.
+- The `.Name` is the `Name` attribute of the `XML` data, so it is the name of the singular data item.
+- The `#text` gets the textual value between the `XML` tags.
+
+To output only a singular data value from the entire `EventData`, we can do the following:
+```powershell
+Get-WinEvent -Path C:\filepath.evtx |
+ForEach-Object {
+    [xml]$xml = $_.ToXml()
+    $xml.Event.EventData.Data |
+	Where-Object {$_.Name -eq "Image"} |
+	Select-Object -ExpandProperty '#text'
+}
+```
+- This selects the `Image` value.
+
+To be able to differentiate between the output images, we can add the timestamp for each log:
+```powershell
+Get-WinEvent -Path C:\filepath.evtx |
+ForEach-Object {
+    [xml]$xml = $_.ToXml()
+    $utcTime = $xml.Event.EventData.Data | Where-Object { $_.Name -eq "UtcTime" } | Select-Object -ExpandProperty '#text'
+    $image   = $xml.Event.EventData.Data | Where-Object { $_.Name -eq "Image" }   | Select-Object -ExpandProperty '#text'
+
+    Write-Output "UtcTime : $utcTime"
+    Write-Output "Image   : $image"
+    "`n"
+}
+```
+
+##### Using XPath
+
+Filtering events with *FilterXPath*. 
+- To use XPath queries with `Get-WinEvent`, we need to use the `-FilterXPath` parameter. This allows us to craft an XPath query to filter the event logs.
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[EventData[Data[@Name='Image']='C:\Windows\System32\reg.exe']] and *[EventData[Data[@Name='CommandLine']='`"C:\Windows\system32\reg.exe`" ADD HKCU\Software\Sysinternals /v EulaAccepted /t REG_DWORD /d 1 /f']]" | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
+```
+
+Suppose we want to investigate any network connections to a particular suspicious [IP] address (`52.113.194.132`) that [[Sysmon]] has logged.
+```powershell
+Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[System[EventID=3] and EventData[Data[@Name='DestinationIp']='52.113.194.132']]"
+```
+
+##### Using Hash Table
+
 To filter *windows events*, the `-FilterHashtable` flag can be used to define conditions:
 ```powershell
 Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=1,3} | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
@@ -87,39 +174,6 @@ $startDate = (Get-Date -Year 2023 -Month 5 -Day 28).Date
 $endDate   = (Get-Date -Year 2023 -Month 6 -Day 3).Date
 
 Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=1,3; StartTime=$startDate; EndTime=$endDate} | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
-```
-
-To filter logs using XML:
-```powershell
-Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=3} |
-`ForEach-Object {
-$xml = [xml]$_.ToXml()
-$eventData = $xml.Event.EventData.Data
-New-Object PSObject -Property @{
-    SourceIP = $eventData | Where-Object {$_.Name -eq "SourceIp"} | Select-Object -ExpandProperty '#text'
-    DestinationIP = $eventData | Where-Object {$_.Name -eq "DestinationIp"} | Select-Object -ExpandProperty '#text'
-    ProcessGuid = $eventData | Where-Object {$_.Name -eq "ProcessGuid"} | Select-Object -ExpandProperty '#text'
-    ProcessId = $eventData | Where-Object {$_.Name -eq "ProcessId"} | Select-Object -ExpandProperty '#text'
-}
-}  | Where-Object {$_.DestinationIP -eq "52.113.194.132"}
-```
-- The Windows XML EventLog (EVTX) format can be found [here](https://github.com/libyal/libevtx/blob/main/documentation/Windows%20XML%20Event%20Log%20(EVTX).asciidoc).
-
-Filtering events with *FilterXPath*. 
-- To use XPath queries with `Get-WinEvent`, we need to use the `-FilterXPath` parameter. This allows us to craft an XPath query to filter the event logs.
-```powershell
-Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[EventData[Data[@Name='Image']='C:\Windows\System32\reg.exe']] and *[EventData[Data[@Name='CommandLine']='`"C:\Windows\system32\reg.exe`" ADD HKCU\Software\Sysinternals /v EulaAccepted /t REG_DWORD /d 1 /f']]" | Select-Object TimeCreated, ID, ProviderName, LevelDisplayName, Message | Format-Table -AutoSize
-```
-
-Suppose we want to investigate any network connections to a particular suspicious [IP] address (`52.113.194.132`) that [[Sysmon]] has logged.
-```powershell
-Get-WinEvent -LogName 'Microsoft-Windows-Sysmon/Operational' -FilterXPath "*[System[EventID=3] and EventData[Data[@Name='DestinationIp']='52.113.194.132']]"
-```
-
-Filtering events based on property values. 
-- The `-Property *` parameter, when used with `Select-Object`, instructs the command to select all properties of the objects passed to it.
-```powershell
-Get-WinEvent -FilterHashtable @{LogName='Microsoft-Windows-Sysmon/Operational'; ID=1} -MaxEvents 1 | Select-Object -Property *
 ```
 
 ---
