@@ -13,6 +13,8 @@ Logs are stored from different parts of the system, including applications, [[Ev
 
 > These logs can be accessed from the [[Event Viewer]] application, the [[Get-WinEvent]] cmdlet, or `wevtutil.exe`.
 
+> Using PowerShell `Measure-Object` is useful.
+
 > Interacting with the logs can be done using *XPath*, [documentation](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256115(v=vs.100)).
 
 Event log data is stored in files with the `.evtx` extension.
@@ -22,6 +24,8 @@ Event log data is stored in files with the `.evtx` extension.
 ###### Integrating with [[SIEM]]
 To use [[ELK - Elasticsearch, Kibana, & Logstash]] as a [[SIEM]] for Windows Events Logs, view the [Winlogbeat](https://www.elastic.co/guide/en/beats/winlogbeat/current/_winlogbeat_overview.html) documentation on Elastic Docs.
 - The [Exported Fields](https://www.elastic.co/guide/en/beats/winlogbeat/current/exported-fields.html) page has all the available fields that can be used to query the logs.
+
+> Sample [[MITRE ATT&CK]] logs to be used for practice [link](https://github.com/sbousseaden/EVTX-ATTACK-SAMPLES/tree/master).
 
 ---
 ### Event Entry

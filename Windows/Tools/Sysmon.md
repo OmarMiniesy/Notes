@@ -1,7 +1,7 @@
 ### General Notes
 
 _Sysmon_ short for _System Monitor_ is a Windows system service part of the [[Sysinternals]] tool suite and driver that monitors system activity and logs it to the [[Windows Events Log]].
-- System activity includes network connections, process creation, changes to files, ...
+- System activity includes network connections, process creation, changes to files..
 - Each type of event that is logged has a unique ID: [list of IDs](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events).
 
 > It can log information that doesn't appear in the *Security Event* logs, making it a powerful tool for deep system monitoring and forensic analysis.
@@ -10,6 +10,8 @@ Sysmon uses XML configuration file, which can be edited to characterize the type
 - [github.com/SwiftOnSecurity/sysmon-config](https://github.com/SwiftOnSecurity/sysmon-config).
     - Using this XML configuration file, we can enable events with certain IDs by changing the value of `onmatch` from `include` to `exclude`.
 - [github.com/olafhartong/sysmon-modular](https://github.com/olafhartong/sysmon-modular)
+
+> Sysmon resources [link](https://github.com/jymcheong/SysmonResources).
 
 ### Installing Sysmon
 
@@ -24,7 +26,7 @@ sysmon.exe -i -accepteula -h md5,sha256,imphash -l -n
 sysmon.exe -c filename.xml
 ```
 
-> There is a Sysmon for Linux
+> There is a Sysmon for Linux.
 
 ### Using Sysmon
 
@@ -33,6 +35,14 @@ To open Sysmon and view the events it logs, we open The [[Event Viewer]] applica
 2. Microsoft
 3. Windows
 4. Sysmon
+5. Operational
+
+To have better filtering control, the [[Get-WinEvent]] and `wevutil.exe` PowerShell modules are better to use. Example filters using `XPath` are:
+- Filter by Event ID: `*/System/EventID=<ID>`
+- Filter by XML Attribute/Name: `*/EventData/Data[@Name="<XML Attribute/Name>"]`
+- Filter by Event Data: `*/EventData/Data=<Data>`
+
+> [XPath Documentation](https://learn.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/ms256115(v=vs.100)).
 
 ---
 ### Sysmon Event Codes & Description
