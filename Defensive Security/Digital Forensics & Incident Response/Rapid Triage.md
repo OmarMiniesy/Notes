@@ -9,7 +9,7 @@ This is an approach used in [[DFIR]] to collect high value data quickly and prio
 [Eric Zimmerman tools](https://ericzimmerman.github.io/#!index.md) are a great resource for examination and analysis for rapid triage.
 - One of the tools also by Zimmerman is [[KAPE]].
 
-To perform evidence collection remotely and on a set of devices, an *Endpoint Detection & Response solution (EDR)* can be used.
+To perform evidence collection remotely and on a set of devices, an [[Endpoint Detection and Response (EDR)]] can be used.
 - An EDR is a technology focused on continuous monitoring and incident response on endpoints (devices).
 - It allows gathering forensic evidence from endpoints for analysis.
 - Can be done using [[Velociraptor]].

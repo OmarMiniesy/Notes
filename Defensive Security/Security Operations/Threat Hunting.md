@@ -26,7 +26,7 @@ Threat hunting goes hand in hand with [[Incident Handling]] in each of its phase
 ---
 ### Threat Hunting Process
 
-1. **Planning and Preparation**: This is where the *threat landscape is understood*, along with the business critical requirements, and the [[Cyber Threat Intelligence]] insights are documented and followed up on. It also includes *preparing the environment* for threat hunting by enabling logging and ensuring that threat hunting tools are set up such as [[IDS & IPS]], [[SIEM]], and *EDRs* (Endpoint Detection and Response).
+1. **Planning and Preparation**: This is where the *threat landscape is understood*, along with the business critical requirements, and the [[Cyber Threat Intelligence]] insights are documented and followed up on. It also includes *preparing the environment* for threat hunting by enabling logging and ensuring that threat hunting tools are set up such as [[IDS & IPS]], [[SIEM]], and [[Endpoint Detection and Response (EDR)]]s.
 2. **Hypothesis Formulation**: This is where *educated predictions* are made that will guide the hunting journey. Hypotheses are created by observing threat intelligence updates, alerts from the set up security tools, and industry updates.
 3. **Design the Hunting Strategy**: The data sources that will be analyzed (network logs, application logs, [[Domain Name System (DNS)]] logs, ...), the methodologies to be followed, the tools to be used, and the indicators of compromise (IOCs) that will be hunted for.
 4. **Data Gathering and Examination**: The data that is to be analyzed is gathered here and analyzed using the tools and methodologies defined in the strategy. This is where the *active threat hunt occurs*, and this is where the evidence is collected to either support/refute the hypothesis.

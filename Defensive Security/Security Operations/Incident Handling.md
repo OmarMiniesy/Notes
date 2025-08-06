@@ -63,7 +63,7 @@ Endpoints are the entry points for attackers, and they must be protected accordi
 - Enable Attack Surface Reduction (ASR) rules if using Microsoft Defender
 - Implement whitelisting.
 - Utilize host-based [[Firewall]]s.
-- Deploy an EDR product.
+- Deploy an [[Endpoint Detection and Response (EDR)]] product.
 
 ##### Network Protection
 

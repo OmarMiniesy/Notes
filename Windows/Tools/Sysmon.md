@@ -11,6 +11,7 @@ Sysmon uses XML configuration file, which can be edited to characterize the type
     - Using this XML configuration file, we can enable events with certain IDs by changing the value of `onmatch` from `include` to `exclude`.
 - [github.com/olafhartong/sysmon-modular](https://github.com/olafhartong/sysmon-modular)
 
+
 > Sysmon resources [link](https://github.com/jymcheong/SysmonResources).
 
 ### Installing Sysmon
@@ -21,10 +22,12 @@ Sysmon uses XML configuration file, which can be edited to characterize the type
 sysmon.exe -i -accepteula -h md5,sha256,imphash -l -n
 ```
 
-- To use a custom configuration file: (MUST)
+To use a custom configuration file: (MUST)
 ```powershell
 sysmon.exe -c filename.xml
 ```
+- Once the configuration file is changed and ran with Sysmon, the logs that it captures are now visible to be analyzed.
+
 
 > There is a Sysmon for Linux.
 
