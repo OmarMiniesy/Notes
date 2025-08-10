@@ -67,3 +67,26 @@ This gives the attacker access to any service, network, system, and permissions 
 ---
 ### Prevention & Detection
 
+To prevent this attack, the following techniques can be implemented:
+- Limiting the number of accounts with SPNs.
+- Disable accounts that are no longer used/needed.
+- Ensure strong passwords to counter the brute force cracking mechanisms. (100+ characters)
+- The usage of *Group Managed Service Accounts (GMSA)*, which are service accounts that are managed by [[Active Directory]] and cannot be user anywhere except their designated server.
+	- The password of these accounts are rotated automatically.
+
+
+To detect this attack, we can utilize [[Windows Events Log]] logs with Event ID `4769`.
+- This log is generated when TGS are requested.
+- This log is generated when a user attempts to access a service.
+- The log contains the ticket encryption type, which can be `AES`, `RC4`, or `DES`.
+- This event is generated a lot of times, so we should group it by the user requesting tickets and from which machine the tickets were requested from to see any abnormal behavior. Also filtering on the encryption type, to see if any type that is abnormal is being used in the environment.
+
+> Logs can be found in `Windows Logs/Security`.
+
+Another good detection technique is having a *honeypot user*. This is a user with no real value but they appear like a good target for an attacker. If logs are generated for this user, then we know that an attacker has infiltrated the system. Some qualities of the honeypot user are:
+- Relatively old user.
+- Strong password that hasn't been changed recently.
+- Have some privileges assigned to it to make it interesting.
+- Account must have an SPN registered. `IIS` and `SQL` accounts are good options.
+
+---

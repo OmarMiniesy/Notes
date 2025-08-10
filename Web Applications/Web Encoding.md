@@ -39,7 +39,11 @@
 
 ### Base64
 
-> Binary to text encoding to convert binary files and send them.
-> Used by HTML to include resources such as an image's binary content after being converted to base64.
+Binary to text encoding to convert binary files and send them.
+- Used by HTML to include resources such as an image's binary content after being converted to base64.
+
+Characteristics of Base64 strings:
+- Base64 encoded strings always end in a `0`, `1`, or `==`.
+- Length of a Base64 encoded string is always a multiple of 4.
 
 ---

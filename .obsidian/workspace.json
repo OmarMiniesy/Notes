@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offensive Security/Windows Security/Kerberoasting.md",
+                "file": "Web Applications/Web Encoding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kerberoasting"
+              "title": "Web Encoding"
             }
           },
           {
@@ -81,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "EDR",
+                "query": "base64",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,12 +112,12 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 305.5110321044922,
-    "collapsed": true
+    "width": 305.5110321044922
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -231,8 +231,8 @@
   },
   "active": "50a041b8eb408587",
   "lastOpenFiles": [
-    "Windows/Active Directory/Kerberos.md",
     "Offensive Security/Windows Security/Kerberoasting.md",
+    "Windows/Active Directory/Kerberos.md",
     "Windows/Active Directory/Active Directory.md",
     "Networking/Apache.md",
     "Offensive Security/Windows Security/apac.md",

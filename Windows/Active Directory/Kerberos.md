@@ -24,6 +24,8 @@ The user then presents the TGT to the DC, requesting a *Ticket Granting Service 
 - This is the *TGS-REQ*. If the TGT is successfully validated, its data is copied to create a TGS ticket.
 - Sent along with TGS is the *service session key*, which is used to authenticate to the service of choice.
 
+> When a TGS is requested, [[Windows Events Log]] generates a log with Event ID `4769`. This log is also generated when a user attempts to connect to a service.
+
 The TGS is encrypted with the [[NTLM]] password hash of the service or computer account in whose context the service instance is running and is delivered to the user in the *TGS_REP*.
 - The user presents the TGS to the service, and if it is valid, the user is permitted to connect to the resource *AP_REQ*.
 - The *service session key* is also checked by decrypting the TGS and ensuring its value.
