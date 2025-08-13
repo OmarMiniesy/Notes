@@ -63,3 +63,28 @@ jq .[].arg1.arg2 filename.json -r
 - The `-r` is top return it as a string.
 
 ---
+### Disk Images
+
+For a disk image that has several partitions, the `fdisk` command can be used to gain an understanding of the image.
+```bash
+fdisk -l <disk-file.dd>
+```
+- This shows the *sector size*.
+- The different *partitions*, each with their *start index* and *number of sectors*.
+
+To isolate a single partition using this information, we can run the following command:
+```bash
+dd if=<input-disk-file.dd> of=<output-partition-file.dd> bs=<sector-size> skip=<start-index> count=<number-of-sectors>
+```
+- Now, we can run `strings` to check out this singular partition.
+
+To mount a disk image to actually investigate it normally, we can create a temp folder to mount it on and then actually mount the disk image.
+```bash
+mkdir /<whatever-path>/
+sudo mount -o loop <disk-file.dd> /<whatever-path>/ 
+```
+- Now, this directory will hold the image and its files can be investigated.
+- `-o loop` creates a **loopback device** that points to this file, so the OS can access its filesystem structures as if it were a real disk.
+
+---
+

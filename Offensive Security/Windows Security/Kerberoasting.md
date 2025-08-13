@@ -47,7 +47,7 @@ The attacker uses offline tools like [[John the Ripper]] or `hashcat` to crack t
 
 Using `hashcat` with mode `13100`:
 ```bash
-hashcat -m 13100 -a 0 <spn.txt> <passwords.txt> --outfile="cracked.txt"
+hashcat -m 13100 -a 0 <spn.txt> <passwords-dictionary.txt> --outfile="cracked.txt"
 ```
 - The mode of `13100` for Kerberoastable TGS tickets.
 - The `spn.txt` file with the output from Rubeus containing the accounts to have their hashes cracked.

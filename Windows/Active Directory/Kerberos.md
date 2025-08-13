@@ -11,7 +11,7 @@ When a user logs in, their password is used to encrypt a timestamp, which is sen
 - The KDC is a service usually installed on the [[Domain Controller]] in charge of creating Kerberos tickets on the network.
 - The KDC service on the DC checks the authentication service request *AS-REQ*, verifies the user information, and creates a *Ticket Granting Ticket (TGT)*, which is delivered to the user.
 
-The TGT is encrypted with the secret key of the `krbtgt` account. 
+The TGT is encrypted with the secret key of the `krbtgt` account and sent to the user. This is the *AS-REP*.
 - This *TGT* is used to request service tickets for accessing network resources, allowing authentication without repeatedly transmitting the user's credentials.
 - Along with the TGT, a *Session Key* is given to the user as part of the content of the TGT, which they will need to generate the following requests.
 
