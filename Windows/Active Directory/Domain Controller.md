@@ -28,9 +28,9 @@ This is when AD [[Objects]] are updated and transferred from one DC to another.
 ###### SYSVOL
 
 A folder that stores copies of public files in the domain. This shared directory stores files and information that must be replicated among Domain Controllers in a domain.
-- *Policies* folder: System policies, [[Group Policy Object]] settings.
-- *Scripts* folder: logon/logoff scripts, other script types
-- The content of the SYSVOL folder is replicated to the DCs within the environment using the File Replication Service (FRS).
+- *Policies folder*: System policies, [[Group Policy Object]] and [[Group Policy Object#Group Policy Preferences|Group Policy Preferences]] settings.
+- *Scripts folder*: logon/logoff scripts, other script types
+- The content of the SYSVOL folder is replicated to the DCs within the environment using the *File Replication Service (FRS)*.
 
 > This share is located at `C:\\\\Windows\\\\SYSVOL\\\\sysvol\\\\` in the domain controller.
 
@@ -50,7 +50,7 @@ Domain Controllers are the ones that can change data in the AD database, but sin
 There are 5 roles that are assigned to the first DC in the forest root domain. *Sysadmin* can transfer the needed roles after.
 - *Schema master*: One per [[Trees, Forests, and Trusts#Forests|Forest]], and it is responsible for managing the *AD Schema*.
 - *Domain naming master*: One per forest, and it is responsible for managing the domain names. Making sure that no 2 domains in the same forest have the same name.
-- *RID (Relative ID) master*: One per domain
+- *RID (Relative ID) master*: One per domain that is responsible for allocating RIDs to other objects, and ensuring their uniqueness.
 - *PDC(Primary Domain Controller) emulator*: One per domain, and it is the DC that responds to authentication requests, password changes, and managing [[Group Policy Object]]s. It also maintains time for the domain.
 - *Infrastructure master*: One per domain, and it is responsible for managing communication between domains in a single forest. It translates *GUIDs, SIDs*, and *DNS* between domains. If this is not properly functions, the *ACLs* will show *SIDs* instead of resolved names.
 

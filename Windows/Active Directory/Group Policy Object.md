@@ -23,6 +23,13 @@ Exceptions to this ordering
 
 > Child OU have the highest priority, while Local policies have the lowest. If there are conflicting settings, the policy down the line is the one that wins. The order above is only the order they are processed.
 
+##### Group Policy Preferences
+
+These allow administrators to configure additional settings, and can be managed by the users directly.
+- The preferences are applied through client side extensions and are refreshed when Group Policy is updated.
+- There are several types of [Client-Side Extensions](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-preferences#client-side-extensions) that are used for configurations.
+- Allows filtering and targeting specific items, and can be used with Boolean logic.
+
 ---
 ### GPO Refreshing
 
@@ -72,5 +79,15 @@ GPOs are distributed across the network using the _shared directory_ [[Domain Co
 - Administrators can also use [Applocker](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/applocker/applocker-overview).
 
 *Advanced Audit Policy* is used to adjust the activities that are audited.
+
+---
+### GPO Security
+
+The GPO permissions should be locked down to ensure only a very particular [[Objects#Security Groups|Group]] can modify it or change its permissions.
+- The GPO permissions should be regularly reviewed, even having an automated task that regularly runs to checks deviations.
+
+GPO modification can be detected using the [[Windows Events Log]] with Event ID `5136` only if *Directory Service Changes* auditing is enabled.
+
+> `auditpol.exe` can be used to configure the auditing policies.
 
 ---
