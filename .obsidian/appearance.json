@@ -1,11 +1,11 @@
 {
   "accentColor": "",
-  "baseFontSize": 22,
-  "theme": "obsidian",
+  "baseFontSize": 21,
+  "theme": "moonstone",
   "interfaceFontFamily": "",
   "translucency": true,
   "nativeMenus": false,
-  "cssTheme": "Obsidianite",
+  "cssTheme": "Atom",
   "baseFontSizeAction": true,
   "showRibbon": true
 }

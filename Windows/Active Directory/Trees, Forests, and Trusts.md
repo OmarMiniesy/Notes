@@ -20,6 +20,9 @@ A forest is a collection of [[Active Directory]] *trees*
 - It is the biggest container in AD, and it can contain one or multiple domains.
 - Forests can have *trust relationships* with other forests.
 
+There is an automatic *two-way transitive [[Kerberos]] trust relationship* between all domains in the same forest.
+- [[Domain Controller]]s in the parent domain trusts *TGTs* issued by Domain Controllers in the child, and vice versa.
+
 ---
 ### Trust Relationships
 

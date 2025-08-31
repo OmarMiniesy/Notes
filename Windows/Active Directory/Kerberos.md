@@ -4,6 +4,15 @@ This is a stateless authentication [[Protocol]] based on the use of *tickets* in
 - Used by [[Active Directory]].
 - Uses [[Port]] 88 both [[Transport Layer|TCP and UDP]].
 
+##### `krbtgt` Service Account
+
+This is a built in service account for the *Key Distribution Center (KDC)* that is automatically created. All the [[Domain Controller]]s share the same `krbtgt` password.
+- It cannot be deleted and the account name cannot be changed.
+- The `krbtgt` account's password hash is the one used to encrypt and sign the *TGT*.
+- The TGT is what is used to request service tickets from the resources in the domain.
+
+> The weakness of the `krbtgt` is that if this account is compromised, attackers can generate and forge tickets and they can impersonate any user. This is the [[Golden Ticket]] attack.
+
 ---
 ### Authentication Process
 
