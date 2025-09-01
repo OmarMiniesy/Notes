@@ -9,7 +9,7 @@ Some of the essential concepts to know for this attack are:
 
 ###### Ticket Granting Service (TGS)
 
-By supplying the SPN of the service, the *Key Distribution Center (KDC)* issues a ticker for a user to be able to access that specific service.
+By supplying the *SPN* of the service, the *Key Distribution Center (KDC)* issues a ticket for a user to be able to access that specific service.
 - This ticket contains the user's data requesting the service.
 - This ticket is encrypted using the service account's [[NTLM]] password hash by the KDC. This is the service account key.
 - That way, when the service receives the TGS ticket that is encrypted with its own password, it can decrypt it and check the user that is requesting it.  
