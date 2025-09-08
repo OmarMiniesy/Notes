@@ -9,3 +9,8 @@ This is a tool used for network security monitoring and has many modes of operat
 Suricate can operate on:
 - Pre-captured `PCAP` files.
 - Live input by reading data directly from a network interface. 
+
+> The rules used by Suricate can be found at `/etc/suricata/rules/`, and variables used by the rule files can be found and edited at `/etc/suricata/suricata.yaml`.
+
+---
+### 
