@@ -1,11 +1,13 @@
 ### General Notes
 
-Network devices that are used to enhance network security.
+Network devices that are used to enhance network security by identifying threats and mitigating their impact.
+- Placing IDSs and IPSs in the network depends on the resources they are protecting and the functions they serve.
+
 ##### Intrusion Detection Systems (IDS)
 
-A passive monitoring network device that can detect malicious packets and alerts administrators.
-- Similar to a [[Firewall]], but it cannot take action against these packets.
-- It can only detect, monitor, and create logs.
+A passive monitoring network device that can detect malicious activity or policy violations, and produces reports sent to a management station.
+- Similar to a [[Firewall]], _IDSs_ are used to ensure visibility in the network and produce alerts.
+- Does not take action or prevent the intrusions. 
 
 There are several types of IDS such as:
 - [[#Network Intrusion Detection Systems (NIDS)]]
@@ -20,7 +22,7 @@ However, these systems aren't perfect, and they suffer from misclassification of
 ##### Intrusion Prevention Systems (IPS)
 
 An extra step above IDS, that can take action, instead of just analyzing and reporting malicious activity.
-- They can block and drop packets.
+- They are placed behind [[Firewall]]s and can take actions such as dropping malicious packets, blocking traffic, and terminating connections.
 
 There are several types of IPS:
 - *Network Intrusion Prevention Systems (NIPS)*: If a malicious signature is identified, the connection is terminated.
@@ -74,6 +76,8 @@ There are multiple types of detection strategies that are used by intrusion dete
 2. **Anomaly detection**
 3. **Specification detection**
 4. **Behavioral detection**
+
+
 #### 1. Signature Detection
 
 The packets are analyzed, and patterns or activities that match the structure of a known attack is flagged.
@@ -88,8 +92,8 @@ The packets are analyzed, and patterns or activities that match the structure of
 
 #### 2. Anomaly Detection
 
-Have an idea and a model that can describe and recognize normal activity.
-- Any packet activity that goes away from this standard is flagged.
+Have a baseline of normal behavior of the network.
+- Any packet activity that deviates away from this standard is flagged.
 - In other terms, a **whitelist** is maintained that describes allowed activity.
 ###### Advantages
 - Can detect new variants of attacks.
