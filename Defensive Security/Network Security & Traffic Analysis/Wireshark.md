@@ -50,6 +50,8 @@ To extract data and files from a capture:
 3. Choose `export`.
 4. Choose the protocol to extract from.
 
+> The `Expert Information` under the `analyze` tab shows remarks of several types, like errors, warnings, notes, chats, and comments.
+
 ---
 ### Decrypting Traffic
 
