@@ -35,6 +35,9 @@ For the *Statistics* tab, there are:
 - **Protocol Hierarchy**: Shows the protocols that were used in the hierarchy of the network stack, and shows the percentage and number of packets that were being used in each protocol.
 - **Conversations**: Shows all the conversations between the end devices for the different protocols. Give information about the addresses, the number of packets, their sizes, the packet directions, the bit speed, and the duration of the conversations.
 - **Endpoints**: Shows information for all packets per endpoint per protocol.
+- **Resolved Addresses**: This shows the address with the resolved names.
+
+We can open the `Edit` tab and open `preferences` and choose `Name Resolution`, we can then choose which names to resolve.
 
 For the *Analyze* tab, [[Transport Layer#TCP|TCP]] streams can be followed, conversation types can be filtered on, and packet filters can be added.
 
