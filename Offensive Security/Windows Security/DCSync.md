@@ -1,6 +1,6 @@
 ### General Notes
 
-This attack is where attackers impersonate [[Domain Controller]]s and requests [[Domain Controller#Replication|Replication]] data from a target domain controller.
+This attack is where attackers impersonate [[Domain Controller]]s and request [[Domain Controller#Replication|Replication]] data from a target domain controller.
 - This works because DCs replicate user account data between them to ensure synchronized changes.
 - So if an attacker manages to convince a DC into giving them this replication data, they can extract the *password hashes*.
 

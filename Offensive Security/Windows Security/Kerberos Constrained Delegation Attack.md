@@ -10,7 +10,7 @@ If an attacker owns - knows the password - to a service account, the attacker ca
 - This allows the user to get access to content without having to be assigned access.
 - There are 3 types of delegation, *constrained*, *unconstrained*, and *resource based*.
 
-**Unconstrained delegation** allows an account to delegate to any service.
+**Unconstrained delegation** allows an account to delegate to any service. This is a “collector box” that automatically saves the keys (TGTs) of anyone who connects to it.
 **Constrained delegation** allows a user account to have specified the services they can delegate to. 
 **Resource-based delegation** places the configuration at the delegated object side. That is, the service account that is to be delegated has stored which accounts can delegate to it.
 
