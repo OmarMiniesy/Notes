@@ -4,6 +4,7 @@ At the core of the Windows domain, is the _Domain Controller_.
 - This is a server responsible for running the *Active Directory Services.*
 - It is the central authority for the domain.
 
+
 The *Default Domain Controllers policy* is created automatically with a domain and sets baseline security and auditing settings for all domain controllers in a given domain.
 
 > A *Directory Service* is a database system that stores, organizes, and provides access to information about users, devices, applications, and resources in a network.
@@ -12,6 +13,8 @@ There can be several DCs in one AD network each with different roles:
 - [[#FSMO (Flexible Single Master Operation) Roles]]
 - [[#Global Catalog (GC)]]
 - [[#Read-Only Domain Controller (RODC)]]
+
+> [[Domain Controller]]s are trusted by default for *unconstrained delegation*.
 
 ###### Active Directory Domain Services (AD DS)
 

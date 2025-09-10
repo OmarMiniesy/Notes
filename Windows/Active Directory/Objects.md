@@ -70,7 +70,7 @@ Some of the objects supported by _AD_ are:
 - Machines
 - Shares
 - [[Trees, Forests, and Trusts#Trust Relationships|Domain Trusts]]
-- Access Control Lists (ACLs)
+- [[Access Control Lists (ACLs)]]
 
 > To configure users, groups, and machines in Active Directory, the [[Active Directory Users and Computers]] application needs to be run from the Domain Controller.
 
