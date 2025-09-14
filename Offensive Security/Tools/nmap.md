@@ -1,8 +1,9 @@
-
 ### General Notes
 
 Tool used in [[Footprinting and Scanning]].
 - Gathers information about [[Port]]s.
+
+> Detection logic here: [[Detecting Nmap Scans]].
 
 ---
 ### Best Scripts

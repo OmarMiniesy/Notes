@@ -26,20 +26,39 @@ There is filtering and processing capabilities present in Wireshark both before 
 > Information that is displayed within square brackets is calculated by Wireshark, it is not information that can be obtained directly from the packet.
 
 ---
+### Packet Navigation
+
+We can jump directly to a packet given its number using the *Go* tab and choosing *go to packet*.
+- Or pressing `CTRL+G`.
+
+To search for specific strings, hex, or using [[Regular Expressions]], we can use the *Edit* > *Find Packet*.
+- Or pressing `CTRL+F`.
+- Searching can be done in the packet list, the packet details, and the packet bytes.
+
+*Comments* can be added to packet by pressing on the packet and then choosing *Packet Comment*.
+- Or pressing `CTRL+ALT+C`.
+
+To change the *Time Display Format*, head to *view* tab and then chose *Time Display Format* and then specify the format wanted.
+
+A packet conversation can be colorized for better clarity by selecting a packet and then choosing *Colorize Conversation*.
+
+---
 ### Wireshark Plugins
 
 Wireshark has many plugins or extra tools that give us advanced analysis and monitoring capabilities.
 - Part of the tabs at the top are the *Analyze* and *Statistics* tabs which give great insights into the data and packets being examined.
 
+###### Statistics
 For the *Statistics* tab, there are:
 - **Protocol Hierarchy**: Shows the protocols that were used in the hierarchy of the network stack, and shows the percentage and number of packets that were being used in each protocol.
 - **Conversations**: Shows all the conversations between the end devices for the different protocols. Give information about the addresses, the number of packets, their sizes, the packet directions, the bit speed, and the duration of the conversations.
 - **Endpoints**: Shows information for all packets per endpoint per protocol.
 - **Resolved Addresses**: This shows the address with the resolved names.
+- **Protocol Specific Statistics**: This shows statistics for the several [[Protocol]] options available, like [[HTTP]], [[Domain Name System (DNS)]], and the 2 [[IP]] versions.
 
-We can open the `Edit` tab and open `preferences` and choose `Name Resolution`, we can then choose which names to resolve.
-
-For the *Analyze* tab, [[Transport Layer#TCP|TCP]] streams can be followed, conversation types can be filtered on, and packet filters can be added.
+> We can open the `Edit` tab and open `preferences` and choose `Name Resolution`, we can then choose which names to resolve.
+###### Analyze
+For the *Analyze* tab, [[Transport Layer#TCP|TCP]] streams can be *followed*, conversation types can be filtered on, and packet filters can be added.
 
 *Follow TCP Stream* is a feature that allows stitching together the TCP packets of a conversation in a readable format between the two communicating devices.
 - Is usable on any protocol that uses the TCP transport layer protocol.
@@ -51,6 +70,7 @@ To extract data and files from a capture:
 1. Stop the capture.
 2. Choose the `file` tab.
 3. Choose `export`.
+	1. There are several export options.
 4. Choose the protocol to extract from.
 
 > The `Expert Information` under the `analyze` tab shows remarks of several types, like errors, warnings, notes, chats, and comments.

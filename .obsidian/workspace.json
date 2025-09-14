@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "157ce11a99d94e7f",
+        "id": "2f155a82f1146d9d",
         "type": "tabs",
         "children": [
           {
-            "id": "333cc4fe4e0173e6",
+            "id": "b770b5821ad06fb7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Active Directory.md",
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Active Directory"
+              "title": "Detecting Nmap Scans"
+            }
+          },
+          {
+            "id": "ce2d05fdd2c77e6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/ICMP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ICMP"
             }
           }
         ]
@@ -78,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 273.5
+    "width": 375.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -191,14 +205,27 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "333cc4fe4e0173e6",
+  "active": "b770b5821ad06fb7",
   "lastOpenFiles": [
-    "Cryptography/Certificates.md",
+    "Networking/ICMP.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Offensive Security/Tools/nmap.md",
+    "Networking/Transport Layer.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection",
+    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
+    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+    "Windows/Active Directory/Active Directory Certificate Services.md",
+    "Offensive Security/Windows Security/Misconfigured Certificate Templates - ESC1.md",
+    "Offensive Security/Windows Security/NTLM Relay to AD CS HTTP Endpoints - ESC8.md",
+    "Offensive Security/Windows Security/Coercing Attacks.md",
     "Windows/Active Directory/Active Directory.md",
+    "Windows/Active Directory/Active Directory Security.md",
+    "Defensive Security/Cyber Defense/MITRE/Cyber Analytics Repository (CAR).md",
+    "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
+    "Cryptography/Certificates.md",
     "Offensive Security/Tools/BloodHound.md",
     "Windows/Active Directory/Objects.md",
     "Windows/Active Directory/Access Control Lists (ACLs).md",
-    "Offensive Security/Windows Security/Coercing Attacks.md",
     "Offensive Security/Windows Security/GPP Passwords.md",
     "Offensive Security/Windows Security/DCSync.md",
     "Offensive Security/Windows Security/Golden Ticket.md",
@@ -207,18 +234,6 @@
     "Offensive Security/Windows Security/AS-REProasting.md",
     "Windows/Active Directory/Domain Controller.md",
     "Offensive Security/Windows Security/Print Spooler.md",
-    "Offensive Security/Windows Security/Untitled 1.md",
-    "Scripting/Dealing With Files of Different Types.md",
-    "Scripting/Bash Scripting.md",
-    "Offensive Security/Windows Security/Kerberos Constrained Delegation Attack.md",
-    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
-    "Offensive Security/Web Application Security/Cross-Origin Resource Sharing (CORS).md",
-    "Offensive Security/Web Application Security/Google Hacking.md",
-    "Offensive Security/Web Application Security/IDOR (Insecure Direct Object References).md",
-    "Offensive Security/Web Application Security/NoSQL Injection.md",
-    "Offensive Security/Web Application Security/SQL Injections.md",
-    "Defensive Security/Security Operations/Threat Intelligence/Cyber Threat Intelligence.md",
-    "Defensive Security/Security Operations/Alert Triaging.md",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
     "Scripting/Resources/list-providers.ps1",
@@ -228,7 +243,6 @@
     "Windows/Windows OS",
     "Defensive Security/Security Info & Events Mgmt/ELK",
     "Defensive Security/Security Operations/Threat Intelligence",
-    "Defensive Security/Cyber Defense/MITRE",
     "Untitled.canvas",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
