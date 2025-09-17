@@ -146,3 +146,13 @@ _Short term containment_ includes the actions that leave a minimal footprint on 
 - Eradication also includes system hardening.
 
 ---
+### Key Roles & Responsibilities 
+
+- Incident Commander (IC): Leads the response effort, making critical decisions and coordinating across teams. Serves as the main point of contact for leadership and external stakeholders. Oversees post-incident reviews and process improvements.
+- SOC Analyst: Monitors systems for threats, investigates alerts, and escalates incidents. Identifies attack patterns and provides recommendations for containment.
+- Incident Handler: Executes containment, eradication, and recovery actions. Works closely with IT and security teams to mitigate threats and restore systems.
+- Forensics and Threat Intelligence: Conducts forensic analysis to determine root causes and impact. Identifies indicators of compromise (IoCs) and tracks attacker tactics. Integrates threat intelligence to enhance defenses.
+- IT/Network Administrator: Supports containment by isolating affected systems and applying patches. Ensures secure restoration and system integrity post-incident.
+- Compliance/Legal: Ensures response efforts align with legal and regulatory requirements. Advises on breach notification laws and internal reporting obligations.
+- Communications: Manages internal and external messaging to minimize reputational damage. Coordinates disclosure efforts with legal and executive teams.
+- Executive Sponsor/CISO: Provides strategic oversight and ensures alignment with business objectives. Allocates resources and drives post-incident improvements.
