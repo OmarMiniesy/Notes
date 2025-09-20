@@ -11,3 +11,8 @@ This is the [[Data Link Layer#MAC Address]] of the wireless interface of the Acc
 - Each Access Point has a different BSSID, even in the same WLAN.
 
 ---
+### Extended Service Set Identifier (ESSID)
+
+This is the name of the wireless network that uses multiple access points to cover a large geographic area.
+
+---

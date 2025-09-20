@@ -6,6 +6,14 @@ An attack conducted on wireless networks where an attacker mimics the properties
 This fake Access Point misleads users into connecting to it which exposes sensitive data.
 - Can also act as a Man in the Middle between the user and the internet.
 
+To detect evil access points, we can use `Airodump-ng`:
+```bash
+sudo airodump-ng -c 4 --essid <ESSID> <INTERFACE> -w raw
+```
+- The `-c` is the channel of the [[Device Types#Access Point (AP)|Access Point]].
+- The `-essid` is the [[Identifiers#Extended Service Set Identifier (ESSID)|ESSID]], or name of the wireless network.
+- The `-w` is the output file.
+
 ---
 ### How the Evil Twin Attack Works
 

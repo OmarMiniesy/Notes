@@ -4,66 +4,95 @@
     "type": "split",
     "children": [
       {
-        "id": "d1af2f8f7355aa1f",
+        "id": "91af2c7fc9537478",
         "type": "tabs",
         "children": [
           {
-            "id": "4c4ef628f9a6304f",
+            "id": "934cf9989cc6ea58",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting ARP Attacks.md",
+                "file": "Offensive Security/Wireless Network Security/Evil Twin Attack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Detecting ARP Attacks"
+              "title": "Evil Twin Attack"
             }
           },
           {
-            "id": "7a5f3da9c02e78e8",
+            "id": "dc7a49abb87d5661",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+                "file": "Wireless Networks/Identifiers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Detecting Nmap Scans"
+              "title": "Identifiers"
             }
           },
           {
-            "id": "7e117282f012fc74",
+            "id": "fcae42b3acf4d6a4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offensive Security/Network Security/Arp Poisoning.md",
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating 802.11.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Arp Poisoning"
+              "title": "Investigating 802.11"
             }
           },
           {
-            "id": "40394467a1430875",
+            "id": "50b05a1591b9ed8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/Address Resolution Protocol (ARP).md",
+                "file": "Offensive Security/Wireless Network Security/Deauthentication Attack.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Address Resolution Protocol (ARP)"
+              "title": "Deauthentication Attack"
+            }
+          },
+          {
+            "id": "a79303e3c094fc0f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating 802.11.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Investigating 802.11"
+            }
+          },
+          {
+            "id": "070402bada86d50b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Wireless Networks/Identifiers.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Identifiers"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -95,7 +124,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "certificate",
+                "query": "WIPS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -120,7 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 375.5
+    "width": 302.51103591918945
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -233,35 +262,35 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4c4ef628f9a6304f",
+  "active": "fcae42b3acf4d6a4",
   "lastOpenFiles": [
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Wireless Networks/Identifiers.md",
+    "Offensive Security/Wireless Network Security/Evil Twin Attack.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating 802.11.md",
+    "Offensive Security/Wireless Network Security/Deauthentication Attack.md",
+    "Offensive Security/Wireless Network Security/Attack Types.md",
+    "Wireless Networks/Wi-Fi Connection.md",
+    "Offensive Security/Wireless Network Security/Security Standards.md",
+    "Offensive Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
+    "Offensive Security/Wireless Network Security/[Wi-Fi Connection.md",
+    "Wireless Networks/Wireless Channels.md",
+    "Wireless Networks/Service Sets.md",
+    "Wireless Networks/Device Types.md",
+    "Offensive Security/Wireless Network Security/Karma Attack.md",
+    "Defensive Security/Network Security & Traffic Analysis/IDS & IPS.md",
+    "Defensive Security/Security Operations/Threat Intelligence/MISP.md",
+    "Defensive Security/Security Operations/Threat Intelligence/STIX.md",
+    "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
+    "Defensive Security/Endpoint Security/Investigating Processes.md",
+    "Defensive Security/Endpoint Security/Log Files.md",
+    "Offensive Security/Windows Security/Kerberoasting.md",
     "Networking/Address Resolution Protocol (ARP).md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting ARP Attacks.md",
     "Offensive Security/Network Security/Arp Poisoning.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting ARP Attacks.md",
     "Networking/ICMP.md",
     "Offensive Security/Tools/nmap.md",
-    "Networking/Transport Layer.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
-    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
-    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
-    "Windows/Active Directory/Active Directory Certificate Services.md",
-    "Offensive Security/Windows Security/Misconfigured Certificate Templates - ESC1.md",
-    "Offensive Security/Windows Security/NTLM Relay to AD CS HTTP Endpoints - ESC8.md",
-    "Offensive Security/Windows Security/Coercing Attacks.md",
-    "Windows/Active Directory/Active Directory.md",
-    "Windows/Active Directory/Active Directory Security.md",
-    "Defensive Security/Cyber Defense/MITRE/Cyber Analytics Repository (CAR).md",
-    "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
-    "Cryptography/Certificates.md",
-    "Offensive Security/Tools/BloodHound.md",
-    "Windows/Active Directory/Objects.md",
-    "Windows/Active Directory/Access Control Lists (ACLs).md",
-    "Offensive Security/Windows Security/GPP Passwords.md",
-    "Offensive Security/Windows Security/DCSync.md",
-    "Offensive Security/Windows Security/Golden Ticket.md",
-    "Offensive Security/Windows Security/Credentials in Shares.md",
-    "Offensive Security/Windows Security/Credentials in Object Properties.md",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
     "Scripting/Resources/list-providers.ps1",
