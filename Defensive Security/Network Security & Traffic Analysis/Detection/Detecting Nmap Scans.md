@@ -36,6 +36,16 @@ We can write a display filter to check for the initiation of a SYN connect scan.
 tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024
 ```
 
+###### TCP NULL Scans
+This is when packets are sent with no flags.
+- For open ports, server will not respond.
+- For closed ports, server will respond with `RST` packet.
+
+###### TCP ACK Scans
+This is when packets are sent with `ACK` flag.
+- For open ports, server will respond with `RST` packet or not at all.
+- For closed ports, server will respond with `RST` packet.
+
 ###### [[Transport Layer#UDP|UDP]] Scans
 UDP scans don't use the handshake process and there is no response from open ports, however, there is an [[ICMP]] error message returned for closed ports.
 - Client sends UDP packet.
