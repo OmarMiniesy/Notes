@@ -15,6 +15,11 @@ There is an incident handling team present, also called an _incident response_ t
 
 > NIST incident handling guide: [link](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
 
+##### Incident Response Playbooks
+
+These contain a description of the activities to be performed and by who at each stage of the incident handling process.
+- Check out this [link](https://www.gov.scot/publications/cyber-resilience-incident-management/) with a set of playbooks.
+
 ---
 ### Incident Handling Process
 
@@ -36,6 +41,8 @@ These 4 stages have two main objectives in mind, which are **investigation** and
 
 In this phase, the organization is interested in developing an _Incident Handling_ capability.
 - This capability is brought to life by first implementing the adequate protection mechanisms for the different technologies and risky areas in the organization.
+
+The objective of this phase is to prepare the response to the incident and informing the necessary stakeholders of their roles in remediating and reporting during the incident.
 
 For an organization to be prepared, it needs to have:
 - Incident handling team.
@@ -82,6 +89,9 @@ This phase includes:
 - Detecting the incidents by utilizing logs, sensors, and security professionals.
 - Sharing information and utilizing [[Cyber Threat Intelligence]].
 - Full visibility into the network architecture, with its segmentation technologies in place.
+
+The objective here is to detect and report a breach of the CIA triad, coupled wth a complete initial investigation and adequate reporting to the incident response team.
+- An analysis is then conducted on the incident to understand the scope, identify where the compromise is and what it affected, perform a full investigation, and start developing a remediation plan. 
 
 Detection is done at various levels of the network:
 - Network perimeter using internet facing tools like [[Firewall]]s, DMZs, and [[IDS & IPS]].
