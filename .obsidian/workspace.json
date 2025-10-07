@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 467.5110321044922
+    "width": 351.5110321044922
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -193,6 +193,9 @@
   },
   "active": "4389f19e326eb823",
   "lastOpenFiles": [
+    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
+    "Scripting/Dealing With Files of Different Types.md",
     "Defensive Security/Security Operations/Threat Hunting.md",
     "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
@@ -216,9 +219,6 @@
     "Offensive Security/Wireless Network Security/Security Standards.md",
     "Offensive Security/Wireless Network Security/WiFi Protected Setup (WPS).md",
     "Offensive Security/Wireless Network Security/[Wi-Fi Connection.md",
-    "Wireless Networks/Wireless Channels.md",
-    "Wireless Networks/Service Sets.md",
-    "Wireless Networks/Device Types.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
