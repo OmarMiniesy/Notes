@@ -1,7 +1,8 @@
 ### General Notes
 
-This is a post exploitation attack that targets the [[Kerberos]] authentication protocol in [[Active Directory]], and specifically, the *Ticket Granting Service (TGS)* ticket.
+This is a *post exploitation* attack that targets the [[Kerberos]] authentication protocol in [[Active Directory]], and specifically, the *Ticket Granting Service (TGS)* ticket.
 - The attacker here is after the service account password that is used to encrypt that TGS.
+- This is mapped to the [[MITRE ATT&CK]] sub-technique `T1558.003`.
 
 > This allows the attacker to impersonate an account; giving access to the system, services, networks, and anything else that the account is entitled to.
 
@@ -19,14 +20,18 @@ By supplying the *SPN* of the service, the *Key Distribution Center (KDC)* issue
 ###### Service Principal Name (SPN)
 
 Kerberos uses [[Active Directory#Service Principal Name (SPN)|Service Principal Names (SPNs)]] to associate the service with its service logon account to be able to obtain the password.
-- The KDC will look up the SPN, finds the service account for that service, and encrypts the TGS ticket with the account key.  
+- The KDC will look up the SPN, finds the service account for that service, and encrypts the TGS ticket with the account key. 
+
+> Host based accounts, or computer accounts that end in dollar signs, `$` are not vulnerable to Kerberoasting attacks given their long and complex passwords.
 
 ---
 ### Attack Flow
 
+> The attacker must have already gotten access to a user account to be able to do this.
+
 1. An attacker first enumerates SPNs in the domain.
 
-This indicates that the discovered service is mapped to an account, which the attacker can steal the password of.
+This indicates that the discovered service is mapped to an account, which the attacker can steal the password of. This can be done by using tools like `powerview`.
 
 2. The attacker then requests a TGS ticket for the targeted SPNs from the KDC.
 
@@ -65,7 +70,7 @@ sudo john spn.txt --fork=4 --format=krb5tgs --wordlist=passwords.txt
 This gives the attacker access to any service, network, system, and permissions that the compromised service account has. The attacker can now start to steal data, escalate privileges, or set [[Backdoors]].
 
 ---
-### Prevention & Detection
+### Prevention
 
 To prevent this attack, the following techniques can be implemented:
 - Limiting the number of accounts with SPNs.
@@ -74,12 +79,22 @@ To prevent this attack, the following techniques can be implemented:
 - The usage of *Group Managed Service Accounts (GMSA)*, which are service accounts that are managed by [[Active Directory]] and cannot be user anywhere except their designated server.
 	- The password of these accounts are rotated automatically.
 
+### Detection
 
 To detect this attack, we can utilize [[Windows Events Log]] logs with Event ID `4769`.
 - This log is generated when TGS are requested.
 - This log is generated when a user attempts to access a service.
-- The log contains the ticket encryption type, which can be `AES`, `RC4`, or `DES`.
+- The log contains the ticket encryption type, which can be `AES`, `RC4`, or `DES`. If it is `0x17`, then it is `RC4` which is vulnerable to Kerberoasting. `0x1` and `0x3` are `DES` and are also vulnerable.
 - This event is generated a lot of times, so we should group it by the user requesting tickets and from which machine the tickets were requested from to see any abnormal behavior. Also filtering on the encryption type, to see if any type that is abnormal is being used in the environment.
+
+Looking also for the *account name* that is not a machine account (not ending with `$`), and the *service name* also not being a machine account is also useful.
+- This is because machine accounts request TGS tickets all the time.
+- This is because service machine accounts will have large and complex passwords so it would be hard to crack them.
+
+To detect this using [[Splunk]]:
+```
+Event.EventData.TicketEncryptionType="0x17" Event.System.EventID="4769" Event.EventData.ServiceName!="*$" | table Event.EventData.ServiceName, Event.EventData.TargetUserName, Event.EventData.IpAddress
+```
 
 > Logs can be found in `Windows Logs/Security`.
 

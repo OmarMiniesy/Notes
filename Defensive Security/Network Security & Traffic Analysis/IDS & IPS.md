@@ -77,7 +77,6 @@ There are multiple types of detection strategies that are used by intrusion dete
 3. **Specification detection**
 4. **Behavioral detection**
 
-
 #### 1. Signature Detection
 
 The packets are analyzed, and patterns or activities that match the structure of a known attack is flagged.

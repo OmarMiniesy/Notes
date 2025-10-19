@@ -114,7 +114,8 @@ When a machine is added to the domain, a _machine account_ is created for it in 
 > Machine accounts are local administrators on the assigned computer.
 
 Machine accounts follow a naming scheme.
-- The machine account is the name of the computer followed by a dollar sign.
+- The machine account is the name of the computer followed by a dollar sign `$`.
+- Machine account passwords in Active Directory are randomly generated and changed automatically by the system every 30 days by default.
 
 ---
 ### Security Groups

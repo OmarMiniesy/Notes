@@ -22,11 +22,10 @@ Stores [[HTTP]] request/response logs and any errors.
 ###### `/var/log/cron`
 Events related to cron jobs.
 
-
 ---
 ### Windows Files
 
-All windows logs can be viewed through the [[Event Viewer]] utility.
+All windows logs can be viewed through the [[Event Viewer]] utility and can be analyzed using tools like [[Get-WinEvent]].
 
 ###### `C:\Windows\System32\winevt\Logs`
 

@@ -28,7 +28,7 @@ Each rule has a rule header and rule options.
 	- Direction: `->` which indicates source to destination, or `<>` which indicates bi-directional flow.
 	- Destination [[IP]]
 	- Destination [[port]]
-- The rule options placed inside brackets and separated by `;` semicolons in the form of `key:value` pairs.
+- The rule options are placed inside brackets and separated by `;` semicolons in the form of `key:value` pairs.
 	- The types of usable options are *general rule options*, *payload rule options*, and *non-payload rule options*.
 	- These can all be used together in different combinations.
 
