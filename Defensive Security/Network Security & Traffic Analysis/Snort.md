@@ -2,7 +2,9 @@
 
 This is an open source and *rule-based* [[IDS & IPS|NIDS/NIPS]].
 - Malicious network activity is defined through a set of rules which generate alerts when packets that match this description are matched.
-- The official website to download and for the documentation: [Snort](https://www.snort.org/).
+- The official website to download and for the documentation: [Snort](https://www.snort.org/documents#OfficialDocumentation).
+
+> Snort in *passive* mode only observes and detects, but in *inline* mode it can take action like blocking traffic.
 
 Snort has several use cases:
 1. *Packet sniffer*: Similar to tools like `tcmpdump` and is used in **sniffer mode**.
@@ -13,10 +15,25 @@ Snort has several use cases:
 Snort uses *configuration files* that specifies rules, plugins, detection mechanisms, actions, and output settings, and more settings.
 - There can be multiple configuration files present for different use cases, but only 1 configuration file can be active during runtime.
 
-> The `snort.conf` file is the main configuration file, and the `local.rules` is the user generated rules file. They are found in the `/etc/snort` directory.
+> The `snort.lua` file is the main configuration file, and the `local.rules` is the user generated rules file. They are found in the `/etc/snort` directory.
+
+###### Preprocessors
+Snort has plugins called *preprocessors* which are tailored for specific [[Protocol]]s and traffic types.
+- Preprocessors are only called a single time per packet and may perform highly
+complex functions
+###### Detection Plugins
+Snort also has *detection* plugins which are used to check a single aspect of a packet for a value defined within a rule and determine if the packet data meets their acceptance criteria.
 
 ---
 ### Snort Rules
+
+> The official Snort documentation for for writing rules: [Rule Writing Guide](https://docs.snort.org/).
+
+To run Rules with snort:
+```
+snort -R <./rule-file>
+snort --rule-path </directory-with-rule-files>
+```
 
 Each rule has a rule header and rule options.
 - To use the rules that are to be added, must specify the file path that contains these rules with the `-c` flag.
@@ -60,6 +77,8 @@ Each rule has a rule header and rule options.
 ---
 ### Using Snort
 
+> The command line basics for Snort can be found [here](https://docs.snort.org/start/help).
+
 To verify that snort is installed, we can check the version using the `-V` flag.
 ```
 snort -V
@@ -69,12 +88,28 @@ To identify the configuration file to be used, use the `-c` flag.
 ```
 sudo snort -c </path/to/file>
 ```
-- Usually, there is one here `/etc/snort/snort.conf`.
+- Usually, there is one here `/etc/snort/snort.lua`.
 
 To test that the configuration is correct, use the `-T` flag.
 ```
 sudo snort -c </path/to/file> -T
 ```
+
+Listing all available Snort modules:
+```
+snort --list-modules
+```
+
+Getting help on a specific Snort module:
+```
+snort --help-module <module>
+```
+
+Getting help on a specific rule option module:
+```
+snort --help-module <module>
+```
+
 
 ##### Sniffer Mode
 
