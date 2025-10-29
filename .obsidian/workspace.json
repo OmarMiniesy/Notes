@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Zeek.md",
+                "file": "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Zeek"
+              "title": "SANS Incident Handler's Handbook"
             }
           },
           {
@@ -92,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 320.5110321044922
+    "width": 320.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -207,8 +208,11 @@
   },
   "active": "c6b184fad8a4e3bf",
   "lastOpenFiles": [
-    "Scripting/Dealing With Files of Different Types.md",
+    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
+    "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
+    "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Network Security & Traffic Analysis/Zeek.md",
+    "Scripting/Dealing With Files of Different Types.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort.md",
     "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
     "DevOps/Docker/Volumes.md",
@@ -230,9 +234,6 @@
     "Windows/Tools/Event Viewer.md",
     "Windows/Tools/Get-WinEvent.md",
     "Windows/Tools/Logman.md",
-    "Windows/Tools/Sysmon.md",
-    "Defensive Security/Network Security & Traffic Analysis/IDS & IPS.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating TLS.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
