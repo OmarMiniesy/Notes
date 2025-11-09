@@ -31,7 +31,6 @@ Snort also has *detection* plugins which are used to check a single aspect of a 
 
 To run Rules with snort:
 ```
-snort -R <./rule-file>
 snort --rule-path </directory-with-rule-files>
 ```
 
@@ -136,7 +135,7 @@ This mode is used to manage traffic according to rules using these flags:
 - `-c <filename> -T` to specify the configuration file or the file with the rules. The `-T` is only used to test the file and is not used during normal operation.
 - `-N` to disable logging mode.
 - `-D` to run Snort in background mode as a background process.
-- `-A <mode>` for the alert mode. Using the rules found in the configuration file, if an alert is triggered, an alert file is created.
+- `-A <mode>` for the alert mode. Using the rules found in the configuration file, if an alert is triggered, an alert file is created. Can be used with the `-l` flag to specify the log file to output the data to.
 	- `console`: Provides fast style alerts on the console screen.
 	- `cmg`: Provides basic header details with payload in hex and text format.
 	- `full`: Full alert mode, providing all possible information about the alert. This outputs to a file, not the console.
