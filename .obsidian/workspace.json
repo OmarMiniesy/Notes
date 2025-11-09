@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
+                "file": "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Snort"
+              "title": "SANS Incident Handler's Handbook"
             }
           },
           {
@@ -135,7 +135,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 306.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -250,10 +251,10 @@
   },
   "active": "69a97d59d64210ee",
   "lastOpenFiles": [
+    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
     "Networking/File Transfer Protocol (FTP).md",
     "Offensive Security/Web Application Security/File Upload.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
     "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
     "Scripting/Linux Commands - Files.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort",

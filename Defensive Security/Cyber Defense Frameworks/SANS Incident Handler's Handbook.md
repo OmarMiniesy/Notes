@@ -99,9 +99,10 @@ This phase is needed to limit the damage caused by the incident and to prevent a
 ---
 ### Eradication
 
-This is the phase where the systems are restored and any malicious artifacts are removed.
-- Proper steps need to be taken to ensure that the malicious content was effectively removed from the systems. This includes scanning affected systems with anti-malware software and others to ensure that everything has been properly eradicated.
-- Example actions include restoring systems to the captured base images taken before, and then installing patches and disabling any unused services to harden the system.
+This phase focuses on removing the root cause and eliminating all traces of malicious activity.
+- Ensure that all infected files, user accounts, and backdoors are removed.
+- Validate the effectiveness of cleaning by rescanning affected systems with trusted tools.
+- Systems may be rebuilt from known-good base images, and additional hardening (patching, disabling unnecessary services, enforcing secure configurations) should be applied.
 
 ---
 ### Recovery
@@ -112,17 +113,11 @@ This is the phase where the affected systems are brought back to the production 
 ---
 ### Lessons Learned
 
-
-
+This phase takes place after the incident is fully contained and systems are restored.
+- The goal is to review what happened, why it happened, and how future responses can improve.
+- Conduct a post-incident review meeting with all involved parties.
+- Update the incident response plan, detection signatures, and training based on lessons learned.
+- Archive all documentation and evidence securely.
 
 ---
-
-
-
-
-
-
-
-
-
 
