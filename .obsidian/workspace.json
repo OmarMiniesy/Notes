@@ -4,66 +4,105 @@
     "type": "split",
     "children": [
       {
-        "id": "292bfc433bcf961b",
+        "id": "4a8d01abe184ce53",
         "type": "tabs",
         "children": [
           {
-            "id": "67daba962dd97529",
+            "id": "961c7a636568b186",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
+                "file": "Windows/Tools/Sysinternals.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SANS Incident Handler's Handbook"
+              "title": "Sysinternals"
             }
           },
           {
-            "id": "c0b681c9e7ee4b83",
+            "id": "fe412dafc31c1116",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Networking/File Transfer Protocol (FTP).md",
+                "file": "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Transfer Protocol (FTP)"
+              "title": "Suricata"
             }
           },
           {
-            "id": "87509c55070d2139",
+            "id": "b581fd5d02460def",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offensive Security/Web Application Security/File Upload.md",
+                "file": "Windows/Active Directory/NTLM.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "File Upload"
+              "title": "NTLM"
             }
           },
           {
-            "id": "b47d7e4a04194cd2",
+            "id": "218b14429f4da708",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
+                "file": "Offensive Security/Windows Security/Kerberoasting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tcpdump"
+              "title": "Kerberoasting"
+            }
+          },
+          {
+            "id": "96c5720ffe0f051c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Wireshark"
+            }
+          },
+          {
+            "id": "2036e144b3f8a4b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Snort in Action"
+            }
+          },
+          {
+            "id": "95a500c9a658a745",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -95,7 +134,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "17",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -120,8 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5,
-    "collapsed": true
+    "width": 306.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -234,17 +272,21 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "67daba962dd97529",
+  "active": "96c5720ffe0f051c",
   "lastOpenFiles": [
-    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
+    "Offensive Security/Windows Security/Kerberoasting.md",
+    "Windows/Active Directory/NTLM.md",
+    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
+    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
+    "Windows/Tools/Sysinternals.md",
     "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
+    "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
+    "Offensive Security/Web Application Security/File Upload.md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
     "Defensive Security/Cyber Defense Frameworks/Pyramid of Pain.md",
     "Defensive Security/Cyber Defense Frameworks/Diamond Model.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
-    "Offensive Security/Web Application Security/File Upload.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
-    "Networking/File Transfer Protocol (FTP).md",
-    "Defensive Security/Network Security & Traffic Analysis/Tcpdump.md",
     "Scripting/Linux Commands - Files.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
     "Untitled",
@@ -254,7 +296,6 @@
     "Offensive Security/Windows Security/Print Spooler.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
     "Defensive Security/Network Security & Traffic Analysis/Zeek.md",
-    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
     "Offensive Security/System Security/Malware.md",
     "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
@@ -262,9 +303,6 @@
     "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
     "DevOps/Docker/Volumes.md",
-    "DevOps/Docker/Image.md",
-    "DevOps/Docker/Docker Compose.md",
-    "DevOps/Docker/Dockerfile.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
