@@ -4,105 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "4a8d01abe184ce53",
+        "id": "3c4790afc2921307",
         "type": "tabs",
         "children": [
           {
-            "id": "961c7a636568b186",
+            "id": "cdba84d67fe87e99",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Tools/Sysinternals.md",
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sysinternals"
-            }
-          },
-          {
-            "id": "fe412dafc31c1116",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Suricata"
-            }
-          },
-          {
-            "id": "b581fd5d02460def",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/NTLM.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NTLM"
-            }
-          },
-          {
-            "id": "218b14429f4da708",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Offensive Security/Windows Security/Kerberoasting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Kerberoasting"
-            }
-          },
-          {
-            "id": "96c5720ffe0f051c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Wireshark"
-            }
-          },
-          {
-            "id": "2036e144b3f8a4b3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Snort in Action"
-            }
-          },
-          {
-            "id": "95a500c9a658a745",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Identifying Hosts"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 306.5
+    "width": 306.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -272,11 +192,18 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "96c5720ffe0f051c",
+  "active": "cdba84d67fe87e99",
   "lastOpenFiles": [
+    "Native API.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
+    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
+    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
+    "Untitled",
+    "Windows/Windows OS/Windows Events Log.md",
     "Offensive Security/Windows Security/Kerberoasting.md",
     "Windows/Active Directory/NTLM.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
     "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
     "Windows/Tools/Sysinternals.md",
     "Defensive Security/Cyber Defense Frameworks/SANS Incident Handler's Handbook.md",
@@ -286,10 +213,8 @@
     "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
     "Defensive Security/Cyber Defense Frameworks/Pyramid of Pain.md",
     "Defensive Security/Cyber Defense Frameworks/Diamond Model.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
     "Scripting/Linux Commands - Files.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
-    "Untitled",
     "Scripting/Bash Scripting.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort/Snort3 File System.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
@@ -297,12 +222,6 @@
     "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
     "Defensive Security/Network Security & Traffic Analysis/Zeek.md",
     "Offensive Security/System Security/Malware.md",
-    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
-    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
-    "Scripting/Dealing With Files of Different Types.md",
-    "Defensive Security/Security Operations/Incident Handling.md",
-    "Defensive Security/Security Operations/Threat Intelligence/YARA.md",
-    "DevOps/Docker/Volumes.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
