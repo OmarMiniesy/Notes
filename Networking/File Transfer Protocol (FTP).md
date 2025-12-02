@@ -7,6 +7,8 @@ The *File Transfer Protocol* (FTP) is a standard application layer [[protocol]] 
 FTP operates using a client-server architecture on a single connection, while utilizing the *TCP* [[Transport Layer]] protocol.
 - [[Port]] 20 is used for data transfer, and Port 21 is used for sending commands.
 
+> A list of all the FTP [response codes](http://en.wikipedia.org/wiki/List_of_FTP_server_return_codes).
+
 There are 2 modes of operation for FTP:
 - *Active*: Default mode where the server listens for commands from the client. The client specifies the port to use for data transfer using `PORT` command.
 - *Passive*: Used to access servers located behind [[Firewall]]s preventing TCP connections. The client sends the `PASV` command and waits for server to respond with [[IP]] and port to use for data transfer.

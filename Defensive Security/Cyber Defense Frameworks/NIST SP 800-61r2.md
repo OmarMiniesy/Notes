@@ -34,6 +34,19 @@ The incident response capability as a whole should include:
 ---
 ### Organizing a Computer Security Incident Response Capability
 
+##### Cyber Incidents
+An *event* is any observable occurrence that happens in the system.
+- An *adverse event* is an event with a negative consequence.
+
+A *cyber security incident* is a violation or the threat of violation of the defined security policies, acceptable use policies, or standard security practices.
+- These are caused by adverse events.
+
+##### Need for Incident Response
+
+Incident response helps personnel to minimize loss & theft of information and disruption of services.
+- Using the information and experience gained while handling an incident helps to better prepare and deal with future incidents. 
+
+Incident response is needed by law & regulations.
 
 
 ---

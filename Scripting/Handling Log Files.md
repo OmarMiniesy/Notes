@@ -9,11 +9,12 @@ I wanted to come up with some sort of plan for investigating log files, followin
 ```powershell
 .\list-providers.ps1 <sourcelogfile.evtx> <outputproviderlist.txt>
 ```
+- [[list-providers.ps1]]
 
 2. Run a Python script on the output text file to output only the providers in a unique list and sorted.
 ```
 python3 unique-providers <outputproviderlist.txt> <uniqueproviderlist.txt>
 ```
-
+- [[unique-providers.py]]
 
 ---
