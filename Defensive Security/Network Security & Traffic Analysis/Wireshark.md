@@ -75,6 +75,12 @@ To extract data and files from a capture:
 
 > The `Expert Information` under the `analyze` tab shows remarks of several types, like errors, warnings, notes, chats, and comments.
 
+###### Tools
+
+The *Tools* tab has nice tools:
+- **Credentials**: Shows any captured username and password credentials.
+- **Firewall ACL**: Shows ACL entries for [[Firewall]]s.
+
 ---
 ### Decrypting Traffic
 
