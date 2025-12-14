@@ -72,6 +72,9 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 - Automates browsing and crawling of websites to record activities and interactions. 
 - It provides information about the [[HTTP]] connections, the redirects present, any outgoing links, the [[Cookies]] and variables, as well as indicators ([[IP]]s, domains, and hashes) associated with the website.
 
+**[AbuseIPDB](https://abuseipdb.com)**
+- Used to identify malicious [[IP]] addresses.
+
 **[Abuse.ch](https://abuse.ch/)**
 - Has 6 tools that identify and track [[Malware]] and [[Malware#Bots and Botnet|Botnets]].
 - *Malware Bazaar* is a database that collects malware. Malware can be uploaded to contribute to the database, and searching for specific malware that match certain conditions (tags, signatures, [[YARA]] rules).
