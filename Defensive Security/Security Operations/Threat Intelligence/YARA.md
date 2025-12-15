@@ -96,4 +96,8 @@ python3 yarGen.py -m </path/to/files> -o output_file.yar
 This is the YARA compiler tool that compiles YARA rules into a binary format with `.yrc` extension.
 - This is best practice when using YARA in detection systems or working with large number of rules for better performance.
 
+#### [Unpac.me]([url](https://unpac.me))
+
+This is a tool for malware unpacking and it allows running YARA rules on the malware submissions present in their database.
+
 ---
