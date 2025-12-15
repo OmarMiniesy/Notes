@@ -18,7 +18,10 @@ silkETW.exe -t user -pn Microsoft-Windows-Kernel-Process -ot file -p C:\windows\
 ```
 
 - To enable [[YARA]] scanning, we can specify a path with the rules by using `-y <path>`
-- The output of the YARA rules can be set to _Matches_ to display all matches found by YARA scanning. This can be done using `-yo Matches`. 
+- The output of the YARA rules can be set to _Matches_ to display all matches found by YARA scanning. This can be done using `-yo Matches`.
+```powershell
+.\SilkETW.exe -t user -pn Microsoft-Windows-PowerShell -ot file -p ./etw_ps_logs.json -l verbose -y C:\Rules\yara  -yo Matches
+```
 
 > SilkETW logs can be integrated with [[Event Viewer]] through `silkservice`. 
 
