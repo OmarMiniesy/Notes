@@ -72,7 +72,7 @@ The registry files, or hives, can be dumped to showcase:
 
 ### Integration with [[YARA]]
 
-Volatility can be used with YARA to find matches.
+Volatility can be used with YARA to find matches using `yarascan`.
 1. Can be done by simply specifying the string to be found as a command line argument using the `-U` flag.
 ```bash
  vol.py -f /home/htb-student/MemoryDumps/compromised_system.raw yarascan -U "www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com"
