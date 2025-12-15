@@ -69,3 +69,15 @@ The registry files, or hives, can be dumped to showcase:
 - Identify persistence mechanisms by altered [[Windows Registry#Registry Keys|Registry Keys]].
 
 ---
+
+### Integration with [[YARA]]
+
+Volatility can be used with YARA to find matches.
+1. Can be done by simply specifying the string to be found as a command line argument using the `-U` flag.
+```bash
+ vol.py -f /home/htb-student/MemoryDumps/compromised_system.raw yarascan -U "www.iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com"
+```
+2. Can be dony by supplying regular YARA rules using the `-y` flag.
+```bash
+vol.py -f /home/htb-student/MemoryDumps/compromised_system.raw yarascan -y /home/htb-student/Rules/yara/wannacry_artifacts_memory.yar
+```
