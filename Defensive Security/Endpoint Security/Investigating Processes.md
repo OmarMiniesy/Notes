@@ -26,4 +26,11 @@ There also exist other command line options to analyze processes like:
 - `ps`
 - `wmic`
 
+##### [[YARA]]
+
+Can utilize YARA rules to scan processes for any malicious activity:
+```powershell
+Get-Process | ForEach-Object { "Scanning with Yara for XXX on PID "+$_.id; & "yara64.exe" "C:\Rules\yara\XXX.yar" $_.id }
+```
+
 ---
