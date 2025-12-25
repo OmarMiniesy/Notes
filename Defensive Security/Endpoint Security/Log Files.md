@@ -1,5 +1,7 @@
 ### Unix Files
 
+> Logs are present in the `/var/log` directory on Unix systems.
+
 ###### `/var/log/auth.log` 
  Has authorization information about user logins and authentication mechanisms used.
 - Has the date, followed by the [[IP]] of the machine that the log was generated on, the process and process ID that generated the log , the description of the log.

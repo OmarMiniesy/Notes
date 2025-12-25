@@ -1,4 +1,4 @@
-w### General Notes
+### General Notes
 
 KAPE, or *Kroll Artifact Parser and Extractor*, is a [[Rapid Triage]] tool used for collection and analysis of digital evidence on Windows systems.
 - KAPE works using *Targets* and *Modules*.

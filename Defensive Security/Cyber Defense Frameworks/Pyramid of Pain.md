@@ -74,7 +74,7 @@ Tools if detected, would need the attacker to rethink their strategy.
 To detect tools, these techniques are used:
 - File signatures used by antivirus software, check out [MalwareBazaar](https://bazaar.abuse.ch/).
 - Detection rules, check out [Threat Detection Marketplace](https://tdm.socprime.com/)
-- *YARA* rules.
+- [[YARA]] rules.
 
 ##### TTPs - Tough
 

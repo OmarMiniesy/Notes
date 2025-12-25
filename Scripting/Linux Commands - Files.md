@@ -10,13 +10,13 @@ A collection of some of the commands I found useful and convenient to use. Check
 find /<directory> -type f -name <file-name>
 ```
 
-This tries to locate a file (since `-type f` is used )called `file-name` in a directory called `directory`.
+This tries to locate a file (since `-type f` is used ) called `file-name` in a directory called `directory`.
 
 > To locate a file with spaces in the name, escape each space with a `\`, so the file name `menu file` would become `menu\ file`.
 
 - We can execute commands on the files we find using the `-exec` command.
 
-- We can use expressions, such as `!`, the not operator, while searching for files.
+- We can use expressions, such as `!`, the not operator, or `*` for wildcards while searching for files.
 
 - We can use the `size` flag to look for files with a certain size. Check the man page for the units to use.
 
