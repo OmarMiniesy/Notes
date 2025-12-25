@@ -1,6 +1,7 @@
 ### General Notes
 
 I wanted to come up with some sort of plan for investigating log files, following a structured approach to identify the necessary data to be able to properly filter.
+- Check out [[Log Analysis]].
 
 ---
 #### Obtain List of Providers
@@ -18,3 +19,4 @@ python3 unique-providers <outputproviderlist.txt> <uniqueproviderlist.txt>
 - [[unique-providers.py]]
 
 ---
+

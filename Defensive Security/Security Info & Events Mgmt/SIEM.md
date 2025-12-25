@@ -21,7 +21,7 @@ By serving as a central hub that collects data from various sources, SIEM soluti
 
 ##### Log Aggregation and Normalization
 
-A SIEM has responsibilities of collections logs of various types and from various sources, and normalizing them into a single standard format.
+A SIEM has responsibilities of collections [[Logs]] of various types and from various sources, and normalizing them into a single standard format.
 - This process of collecting logs from various sources is known as _log consolidating_.
 - This process takes place by collecting logs both from *host-centric* sources and *network-centric* sources.
 
