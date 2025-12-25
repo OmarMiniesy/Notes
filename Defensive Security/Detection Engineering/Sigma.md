@@ -117,5 +117,7 @@ More on values:
 ---
 ### Sigma Tools
 
-Sigma rules should be combined with tools like [Chainsaw](https://github.com/WithSecureLabs/chainsaw) and [Zircolite](https://github.com/wagga40/Zircolite) to speed up detection in large heaps of logs and information.
+Sigma rules should be combined with tools like [[Chainsaw]] and [Zircolite](https://github.com/wagga40/Zircolite) to speed up detection in large heaps of logs and information.
 - These tools allow scanning Sigma rules on multiple `.evtx` files concurrently.
+
+---
