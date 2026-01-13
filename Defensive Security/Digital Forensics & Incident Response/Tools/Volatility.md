@@ -35,7 +35,7 @@ Given the *profile*, we can then provide it and use another *plugin* to identify
 ##### Identifying Injected Code
 
 *Plugins* can be used to identify and extract injected code and malicious payloads from the *memory of a chosen process.*
-- Using the `malfind` plugin and specifying a process, it outputs memory regions that will be likely used by [[malware]] to hide, such as:
+- Using the `malfind` plugin and specifying a process, it outputs memory regions that will be likely used by [[Malware]] to hide, such as:
 	- Regions that are marked executable or writeable.
 	- Regions that contain code injections, like shellcode or DLLs.
 	- Hidden threads or *hooks* that can be used by malware.

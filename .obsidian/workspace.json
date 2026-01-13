@@ -4,24 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "0547eb36ce2443a5",
+        "id": "ff0ba67289c22911",
         "type": "tabs",
         "children": [
           {
-            "id": "ff96f7d6c754d1c7",
+            "id": "fa53c3b54bba5685",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+                "file": "Defensive Security/Phishing/Phishing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Log Analysis"
+              "title": "Phishing"
+            }
+          },
+          {
+            "id": "e80f2eb731422858",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Phishing/Phishing Analysis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Phishing Analysis"
+            }
+          },
+          {
+            "id": "d8408c96a819782c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cyber Threat Intelligence"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -41,7 +70,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -78,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5
+    "width": 292.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -191,10 +220,24 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "ff96f7d6c754d1c7",
+  "active": "e80f2eb731422858",
   "lastOpenFiles": [
-    "Scripting/Handling Log Files.md",
+    "Defensive Security/Malware Analysis/Malware.md",
+    "Defensive Security/Phishing/Phishing Analysis.md",
+    "Defensive Security/Malware Analysis",
+    "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
+    "Defensive Security/Phishing/Phishing.md",
+    "Offensive Security/Windows Security/DCSync.md",
+    "Offensive Security/Windows Security/Credentials in Shares.md",
+    "Offensive Security/Windows Security/AS-REProasting.md",
+    "Duah Collection.md",
+    "Umrah.md",
+    "Defensive Security/Phishing/Untitled",
+    "Defensive Security/Phishing",
+    "Offensive Security/Web Application Security/Phishing Payloads.md",
+    "Offensive Security/Social Engineering",
     "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+    "Scripting/Handling Log Files.md",
     "Defensive Security/Security Info & Events Mgmt/Logs.md",
     "Defensive Security/Security Info & Events Mgmt/SIEM.md",
     "Defensive Security/Detection Engineering/Chainsaw.md",
@@ -205,30 +248,15 @@
     "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
     "Hotels.md",
     "3omra w Super 3ala Gamb.md",
-    "Offensive Security/Windows Security/AS-REProasting.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Application.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
-    "Defensive Security/Security Operations/Sigma.md",
-    "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
     "Defensive Security/Detection Engineering",
-    "Defensive Security/Threat Detection.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
-    "Defensive Security/Cyber Defense Frameworks/Pyramid of Pain.md",
-    "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/KAPE.md",
-    "Defensive Security/Cyber Defense Frameworks/Zero Trust.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
     "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Scripting/Resources/unique-providers.py",
     "Scripting/Resources/script.py",
-    "Scripting/Resources/list-providers.ps1",
-    "Scripting/Resources/speed.ps1",
-    "Scripting/Resources",
-    "Windows/Active Directory/Untitled",
     "Untitled.canvas",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
