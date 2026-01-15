@@ -8,49 +8,69 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fa53c3b54bba5685",
+            "id": "2f7545cba876c09e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Phishing/Phishing.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Phishing"
+              "title": "DFIR"
             }
           },
           {
-            "id": "e80f2eb731422858",
+            "id": "2925def9bbaed416",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Phishing/Phishing Analysis.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Phishing Analysis"
+              "title": "Windows Registry Forensics"
             }
           },
           {
-            "id": "d8408c96a819782c",
+            "id": "d6334f69afefe28d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
+                "file": "Windows/Windows OS/Windows Registry.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cyber Threat Intelligence"
+              "title": "Windows Registry"
             }
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "e3ed180f33362797",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "913dd7c31571b5b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Forensics"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +102,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "regedit",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +127,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5
+    "width": 292.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -220,12 +241,29 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "e80f2eb731422858",
+  "active": "2925def9bbaed416",
   "lastOpenFiles": [
-    "Defensive Security/Malware Analysis/Malware.md",
-    "Defensive Security/Phishing/Phishing Analysis.md",
-    "Defensive Security/Malware Analysis",
+    "Windows/Windows OS/Windows Registry.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Windows/Active Directory/Objects.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+    "Defensive Security/Security Info & Events Mgmt/Logs.md",
+    "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Data Acquisition.md",
+    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
     "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
+    "Defensive Security/Security Operations/Alert Triaging.md",
+    "Defensive Security/Phishing/Phishing Analysis.md",
+    "Scripting/Linux Commands - Files.md",
+    "Scripting/Bash Scripting.md",
+    "Defensive Security/Phishing/Preventing Phishing.md",
+    "Defensive Security/Security Operations/Incident Handling.md",
+    "Defensive Security/Malware Analysis/Malware.md",
+    "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Phishing.md",
     "Offensive Security/Windows Security/DCSync.md",
     "Offensive Security/Windows Security/Credentials in Shares.md",
@@ -234,23 +272,7 @@
     "Umrah.md",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
-    "Offensive Security/Web Application Security/Phishing Payloads.md",
     "Offensive Security/Social Engineering",
-    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
-    "Scripting/Handling Log Files.md",
-    "Defensive Security/Security Info & Events Mgmt/Logs.md",
-    "Defensive Security/Security Info & Events Mgmt/SIEM.md",
-    "Defensive Security/Detection Engineering/Chainsaw.md",
-    "Defensive Security/Detection Engineering/Sigma.md",
-    "Defensive Security/Security Info & Events Mgmt/Use Case.md",
-    "Defensive Security/Security Operations/Alert Triaging.md",
-    "Defensive Security/Detection Engineering/YARA.md",
-    "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
-    "Hotels.md",
-    "3omra w Super 3ala Gamb.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Application.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
     "Defensive Security/Detection Engineering",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
     "Defensive Security/Network Security & Traffic Analysis/Snort",

@@ -53,6 +53,17 @@ Some tools used in [[Rapid Triage]]:
 - `DD and DCFLDD`: Both are command-line utilities available on Unix-based systems. `DD` is a versatile tool included in most Unix-based systems by default, while DCFLDD is an enhanced version of `DD` with features specifically useful for forensics, such as hashing.
 - **Virtualization Tools**: Depending on the specific virtualization solution, evidence can be gathered by temporarily halting the system and transferring the directory that houses it. Another method is to utilize the *snapshot capability* present in numerous virtualization software tools.
 
+**[[Disk Forensics]]**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
+
+[[Windows Registry Forensics]] : This is used to extract the windows registry for evidence of persistence, program execution history, and changes to system configuration.
+- Autopsy
+- FTK Imager
+- [[KAPE]]
+
+Once registry is extracted, we can now view the files of the registry for analysis. This can be done using tools like:
+- [Registry Explorer by Eric Zimmerman](https://ericzimmerman.github.io/#!index.md): Can load multiple hives and adds data from transactional logs.
+- [RegRipper](https://github.com/keydet89/RegRipper3.0): Takes a hive as input and outputs a report with the important keys and values. Does not take transactional logs into account.
+
 [[Memory Forensics]]: A system's memory is crucial in investigations, as it provides extra details, like traces of executable files and [[Malware]]. However, this memory is volatile, meaning it is lost after logoffs or after shutdowns of the system. Memory forensics deals with the live state of a system at a particular moment in time. 
 
 Some memory acquisition solutions are:
@@ -64,8 +75,6 @@ Some memory acquisition solutions are:
 - [LiME (Linux Memory Extractor)](https://github.com/504ensicsLabs/LiME): A *Loadable Kernel Module (LKM)* which allows the acquisition of volatile memory. It's designed to be transparent to the target system, evading many common anti-forensic measures.
 
 **Network Forensics**: This is done through [[Network Analysis]], and working with [[IDS & IPS]] solutions, [[Firewall]]s, and using tools like [[Wireshark]] and [[Tcpdump]].
-
-**Disk Forensics**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
 
 ---
 ### Chain of Custody
