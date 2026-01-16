@@ -4,55 +4,6 @@
     "type": "split",
     "children": [
       {
-        "id": "ff0ba67289c22911",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2f7545cba876c09e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DFIR"
-            }
-          },
-          {
-            "id": "2925def9bbaed416",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Registry Forensics"
-            }
-          },
-          {
-            "id": "d6334f69afefe28d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Windows Registry.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Registry"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "e3ed180f33362797",
         "type": "tabs",
         "children": [
@@ -68,6 +19,20 @@
               },
               "icon": "lucide-file",
               "title": "Windows Forensics"
+            }
+          },
+          {
+            "id": "6926d5d47aa2e218",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Windows OS/File System.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "File System"
             }
           }
         ]
@@ -102,7 +67,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "regedit",
+                "query": "shadow",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -127,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 292.5,
-    "collapsed": true
+    "width": 292.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -241,11 +205,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2925def9bbaed416",
+  "active": "913dd7c31571b5b4",
   "lastOpenFiles": [
-    "Windows/Windows OS/Windows Registry.md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Windows/Windows OS/File System.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Windows/Windows OS/Windows Registry.md",
     "Windows/Active Directory/Objects.md",
     "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
@@ -269,7 +234,6 @@
     "Offensive Security/Windows Security/Credentials in Shares.md",
     "Offensive Security/Windows Security/AS-REProasting.md",
     "Duah Collection.md",
-    "Umrah.md",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
     "Offensive Security/Social Engineering",

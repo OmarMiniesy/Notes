@@ -21,7 +21,7 @@ The operating system is usually found at `C:\Windows`.
 - Not always the case.
 - The location of that folder is stored in the `%windir%` environment variable.
 
-The `C:\Windows\System32` folder is essential, as it holds the files necessary for the Operating System to function.
+The `C:\Windows\System32` folder is essential, as it holds the files necessary for the Operating System to function, such as the [[Windows Registry]] hives.
 
 ##### Data Streams
 
@@ -34,6 +34,11 @@ There are also *Alternate Data Streams (ADS)* which are named data streams that 
 - These have been used by [[Malware]] to hide data
 
 > Using the syntax `<file-name>:<stream-name>` allows reading and writing to the stream called `stream-name` of the file called `<file-name>`.
+
+##### Journaling
+
+The NTFS file system keeps a log of changes to the metadata of the volume, helping the system recover from crashes.
+- This log is stored in the `$LOGFILE` in the root directory of the volume.
 
 ---
 ### MAC(b) Times in NTFS
