@@ -54,6 +54,7 @@ Some tools used in [[Rapid Triage]]:
 - **Virtualization Tools**: Depending on the specific virtualization solution, evidence can be gathered by temporarily halting the system and transferring the directory that houses it. Another method is to utilize the *snapshot capability* present in numerous virtualization software tools.
 
 **[[Disk Forensics]]**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
+- Includes finding and recovering deleted files.
 
 [[Windows Registry Forensics]] : This is used to extract the windows registry for evidence of persistence, program execution history, and changes to system configuration.
 - Autopsy

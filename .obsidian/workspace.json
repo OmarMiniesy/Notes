@@ -22,6 +22,34 @@
             }
           },
           {
+            "id": "9fd31c39a24220fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Eric Zimmerman Tools"
+            }
+          },
+          {
+            "id": "8b00d84676a7bb60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web Browser Forensics"
+            }
+          },
+          {
             "id": "6926d5d47aa2e218",
             "type": "leaf",
             "state": {
@@ -33,6 +61,20 @@
               },
               "icon": "lucide-file",
               "title": "File System"
+            }
+          },
+          {
+            "id": "52ce5e92b4e99b89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Disk Forensics"
             }
           }
         ]
@@ -67,7 +109,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shadow",
+                "query": "zimmerman",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -207,17 +249,19 @@
   },
   "active": "913dd7c31571b5b4",
   "lastOpenFiles": [
-    "Windows/Windows OS/File System.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Windows/Windows OS/File System.md",
+    "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
     "Windows/Windows OS/Windows Registry.md",
     "Windows/Active Directory/Objects.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
     "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
     "Defensive Security/Security Info & Events Mgmt/Logs.md",
-    "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Data Acquisition.md",
     "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
     "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
@@ -232,8 +276,6 @@
     "Defensive Security/Phishing/Phishing.md",
     "Offensive Security/Windows Security/DCSync.md",
     "Offensive Security/Windows Security/Credentials in Shares.md",
-    "Offensive Security/Windows Security/AS-REProasting.md",
-    "Duah Collection.md",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
     "Offensive Security/Social Engineering",

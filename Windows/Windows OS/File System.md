@@ -40,6 +40,12 @@ There are also *Alternate Data Streams (ADS)* which are named data streams that 
 The NTFS file system keeps a log of changes to the metadata of the volume, helping the system recover from crashes.
 - This log is stored in the `$LOGFILE` in the root directory of the volume.
 
+##### File Deletion
+
+When a file is deleted, the file system deletes the entries that the store the file location on the disk.
+- The location where the file existed is now available for writing again.
+- The actual content of the file deleted is still present on the disk, as long as it has not been rewritten.
+
 ---
 ### MAC(b) Times in NTFS
 
