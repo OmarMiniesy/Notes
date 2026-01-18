@@ -8,7 +8,7 @@ Log analysis can be done via [[SIEM]]s like [[Splunk]] or [[ELK - Elasticsearch,
 - `uniq`
 - `awk`
 - `sha256sum`
-- [Eric Zimmerman Tools](https://ericzimmerman.github.io/#!index.md)
+- [[Eric Zimmerman Tools]]
 - `Get-FileHash`
 
 [LogViewer](https://github.com/sevdokimov/log-viewer) is a Web application for monitoring server logs in real-time in the browser.

@@ -81,7 +81,7 @@ ps aux
 ```shell
 env
 echo $PATH
- ```
+```
 ##### `sudo -l`
 Command used to list the commands that the current user can run using `sudo`.
 ##### Listing hidden files

@@ -28,6 +28,7 @@ Every object has a *unique SID* that is issued by the [[Domain Controller]], sto
 An *RID* is the last part of the *SID*.
 - The ***RID*** distinguishes between different users or groups within the same domain or machine.
 - Combined with the domain/machine part of the SID, it forms a globally unique identifier.
+- User created accounts have RIDs of 1000 or more.
 
 Certain accounts and groups always have fixed RIDs:
 

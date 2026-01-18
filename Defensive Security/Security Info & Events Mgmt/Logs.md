@@ -44,11 +44,15 @@ A log format is defined by the structure & organization, encoding used, the entr
 ---
 ### Unix Logs
 
-> Logs are present in the `/var/log` directory on Unix systems.
+Check out [[Linux Forensics]] and [[Linux Privilege Escalation]] for more details.
+
+> Logs are present in the `/var/log/` directory on Unix systems. Third party logs are also present inside this directory within their own directories.
 
 ###### `/var/log/auth.log` 
  Has authorization information about user logins and authentication mechanisms used.
 - Has the date, followed by the [[IP]] of the machine that the log was generated on, the process and process ID that generated the log , the description of the log.
+- There can be several `auth.log.#` files, and there can be zipped files. Analyze all.
+- All commands that are run using `sudo` are stored in this log. Can be obtained by `grep COMMAND`.
 ###### `/var/log/*tmp` 
 The `*tmp` files that hold logon history information.
 - `/var/log/btmp` logs failed logon attempts.
@@ -57,6 +61,10 @@ The `*tmp` files that hold logon history information.
 
 The content in this file follows the `utmp` struct format.
 - To read these files, either use `last` or use `utmpdump`.
+
+```
+sudo last -f /var/log/wtmp
+```
 
 ###### `/var/log/kern`
 Stores kernel related events.
@@ -67,6 +75,11 @@ Stores [[HTTP]] request/response logs and any errors.
 
 ###### `/var/log/cron`
 Events related to cron jobs.
+
+###### `/var/log/syslog*`
+Syslog contains messages recorded by the host about system activity. The detail of these messages is configurable by the logging level.
+- It has information about system time, system name, process that created the log, and log details.
+- There is an asterisk at the end due to log rotation, so check all files.
 
 ---
 ### Windows Logs

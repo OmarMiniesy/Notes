@@ -56,7 +56,7 @@ The process has:
 
 ##### `wininit.exe`
 
-The `Windows Initialization Process` is responsible for launching `services.exe`, `lsass.exe`, and `lasiso.exe` all within *session 0*.
+The `Windows Initialization` process is responsible for launching `services.exe`, `lsass.exe`, and `lasiso.exe` all within *session 0*.
 - `services.exe` is the *service control manager*.
 - `lsass.exe` is the *local security authority*.
 - `lsaiso.exe` is the *Credential Guard and KeyGuard*.

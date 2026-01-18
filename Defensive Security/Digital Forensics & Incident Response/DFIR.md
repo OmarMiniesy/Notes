@@ -33,9 +33,11 @@ This is a piece of evidence that points to activities performed on a system.
 
 Check out for where to find artifacts:
 - [[Windows Forensics]]
+- [[Windows Registry Forensics]]
 - [[Web Browser Forensics]]
 - [[Memory Forensics]]
 - [[Disk Forensics]]
+- [[Linux Forensics]]
 
 ---
 ### Evidence Preservation and Acquisition
