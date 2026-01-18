@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Windows Processes"
             }
+          },
+          {
+            "id": "6d21cabab9ad3632",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Windows OS/Windows Processes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Processes"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -53,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "syslog",
+                "query": "\"executable\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -191,8 +206,16 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9f1fef83c1655f80",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
+    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
+    "Defensive Security/Endpoint Security/Investigating Processes.md",
+    "Windows/Windows OS/Windows Processes.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Windows/Tools/Sysinternals.md",
+    "Defensive Security/Endpoint Security/Process Hacker.md",
+    "Defensive Security/Endpoint Security/SilkETW.md",
+    "Defensive Security/Endpoint Security/Wazuh.md",
     "Defensive Security/Security Info & Events Mgmt/Logs.md",
     "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
     "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
@@ -211,14 +234,6 @@
     "Defensive Security/Malware Analysis/Malware.md",
     "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
     "Windows/Windows OS/File System.md",
-    "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-    "Windows/Windows OS/Windows Registry.md",
-    "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
-    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Data Acquisition.md",
-    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
-    "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

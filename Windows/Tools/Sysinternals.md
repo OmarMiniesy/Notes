@@ -36,6 +36,8 @@ The *Sysinternals* tools are a compilation of over 70+ Windows-based tools. Each
 **PsExec** : Allows remote process execution with full interactivity.
 - This [link](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) has details on how to use it.
 
+**Process Monitor (Procmon)**
+
 > Checkout [[Investigating Processes]] for more process utilities related to defensive security.
 
 ---

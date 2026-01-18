@@ -1,5 +1,16 @@
 ### General Notes
 
+A process maintains and represents the execution of a program. A process has:
+- *Virtual address space*: Virtual memory address for the process.
+- *Executable code*: The code and data stored in the virtual address space.
+- *Handles to system objects*: Open handles to system resources accessible by the process.
+- *Security context*: Defined by the access token, which has the user for the process, the security groups, privileges, and integrity level.
+- *Process Identifier*
+- *Environment variables*
+- *Priority class*
+- *Min/Max working set sites*
+- *At least 1 thread*: This is an executable unit deployed by the process. This is what controls the execution.
+
 Windows processes can either run in *user mode* or *kernel mode* and it depends on the type of code being executed.
 
 **User Mode** is for applications, and windows creates a process for these applications.
@@ -14,6 +25,36 @@ Windows processes can either run in *user mode* or *kernel mode* and it depends 
 **Sessions** are a collection of process that represent a single user's session.
 - Sessions are assigned unique IDs that are incremental starting from `1`.
 - Session `0` is used for Windows system services and is isolated.
+
+**DLLs**, or *Dynamic Link Libraries*, are files that contain code and data and can be used by more than one program.
+- DLLs promotes modularized code and efficient memory usage.
+- DLLs export function, and programs call these functions to use them.
+- DLLs are assigned as dependencies when they are loaded into a program.
+
+When *run-time dynamic linking* is used to load DLLs into a program, a function like `LoadLibrary` is used to load the DLL at run time. Then, `GetProcAddress` is needed to identify the exported DLL function to call.
+- This technique is used by attackers.
+
+#### Portable Executable (PE)
+
+This is a file format used to store and load executable code.
+- It contains headers that tell Windows how to deal with the file, map it to memory, and run it.
+- This includes `.exe`, `.dll`, `.sys`, and some `.ocx`.
+
+The PE layout is composed of the *Header* and the *Sections*
+- **Header**
+	1. *DOS Header*: This has the file type. It has the magic bytes `MZ` hex for `.exe` files, and it allows tools to recognize the file as an executable.
+	2. *DOS Stub*: This prints the message `This program cannot be run in DOS mode` if it is run in DOS. This is its only use.
+	3. *PE File Header*: This marks the start of the PE format, and it contains the file format, the signature and file header, and other important headers. It is identified by the `PE` hex.
+	4. *Optional Header*: Defines how the file is mapped in memory, contains the entry point, the image base, section alignment, size of the image, and DLL characteristics.
+	5. *Data Dictionaries*: Part of the optional header and they point to important tables.
+	6. *Section Table*: Defines the available sections and information present in the file. A section stores the content of a file, such as code, imports, or data.
+- **Sections** (Actual Content)
+	- `.text`: contains code and and entry point.
+	- `.data`: contains global variables and initialized data.
+	- `.rdata` `.idata`: contains imports
+	- `.reloc`: contains relocation information
+	- `.rsrc`: contains application resources like images or icons.
+	- `.debug`: contains debug information
 
 ---
 ##### `System` process
@@ -88,7 +129,7 @@ This process has:
 ##### `svchost.exe`
 
 The *Service Host* process is responsible for hosting and managing Windows services. These Windows services are implemented as DLLs.
-- The location of the  DLLs that are to be implemented are stored in the [[Windows Registry]] for each service in the `Parameters` subkey in `ServiceDLL`.
+- The location of the DLLs that are to be implemented are stored in the [[Windows Registry]] for each service in the `Parameters` subkey in `ServiceDLL`.
 ```path
 HKLM\SYSTEM\CurrentControlSet\Services\<SERVICE_NAME>\Parameters
 ```
