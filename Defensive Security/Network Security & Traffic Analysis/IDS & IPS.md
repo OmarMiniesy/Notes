@@ -71,7 +71,7 @@ This type of detection is where logs generated are analyzed by a device.
 ---
 ### Detection Strategies
 
-There are multiple types of detection strategies that are used by intrusion detection systems, similar to [[Malware]] detection strategies.
+There are multiple types of detection strategies that are used by intrusion detection systems, similar to [[Malware]] detection strategies and [[Endpoint Detection and Response (EDR)]] detection.
 1. **Signature detection**
 2. **Anomaly detection**
 3. **Specification detection**
@@ -82,6 +82,7 @@ There are multiple types of detection strategies that are used by intrusion dete
 The packets are analyzed, and patterns or activities that match the structure of a known attack is flagged.
 - A **blacklist** is maintained, and any structure that matches anything on the list is flagged.
 - These blacklists are obtained from previous or known attacks.
+- This includes IOC matching.
 ###### Advantages
 - Easy to implement.
 - Good at detecting *known* attacks.
