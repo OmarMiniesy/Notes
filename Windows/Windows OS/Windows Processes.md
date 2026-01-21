@@ -34,28 +34,6 @@ Windows processes can either run in *user mode* or *kernel mode* and it depends 
 When *run-time dynamic linking* is used to load DLLs into a program, a function like `LoadLibrary` is used to load the DLL at run time. Then, `GetProcAddress` is needed to identify the exported DLL function to call.
 - This technique is used by attackers.
 
-#### Portable Executable (PE)
-
-This is a file format used to store and load executable code.
-- It contains headers that tell Windows how to deal with the file, map it to memory, and run it.
-- This includes `.exe`, `.dll`, `.sys`, and some `.ocx`.
-
-The PE layout is composed of the *Header* and the *Sections*
-- **Header**
-	1. *DOS Header*: This has the file type. It has the magic bytes `MZ` hex for `.exe` files, and it allows tools to recognize the file as an executable.
-	2. *DOS Stub*: This prints the message `This program cannot be run in DOS mode` if it is run in DOS. This is its only use.
-	3. *PE File Header*: This marks the start of the PE format, and it contains the file format, the signature and file header, and other important headers. It is identified by the `PE` hex.
-	4. *Optional Header*: Defines how the file is mapped in memory, contains the entry point, the image base, section alignment, size of the image, and DLL characteristics.
-	5. *Data Dictionaries*: Part of the optional header and they point to important tables.
-	6. *Section Table*: Defines the available sections and information present in the file. A section stores the content of a file, such as code, imports, or data.
-- **Sections** (Actual Content)
-	- `.text`: contains code and and entry point.
-	- `.data`: contains global variables and initialized data.
-	- `.rdata` `.idata`: contains imports
-	- `.reloc`: contains relocation information
-	- `.rsrc`: contains application resources like images or icons.
-	- `.debug`: contains debug information
-
 ---
 ##### `System` process
 

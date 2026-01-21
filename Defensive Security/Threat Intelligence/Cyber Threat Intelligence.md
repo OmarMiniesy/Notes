@@ -66,7 +66,8 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 - Searching for [[IP]] addresses and domains.
 
 **[Hybrid-Analysis](https://hybrid-analysis.com/)**
-- This is a [[Malware]] behavior analysis website that gives information on network requests, [[Domain Name System (DNS)]], hosts, [[MITRE ATT&CK]] mapping, indicators, files, and more.
+- This is a [[Malware]] behavior analysis website that gives information on network requests, [[Domain Name System (DNS)]], hosts, [[MITRE ATT&CK]] mapping, indicators, files, and processes, and more.
+- Used for [[Dynamic Analysis]].
 
 **[Urlscan.io](https://urlscan.io/)** 
 - Automates browsing and crawling of websites to record activities and interactions. 
