@@ -52,6 +52,7 @@ Some tools used in [[Rapid Triage]]:
 **Forensic Imaging**: This is a process that involves creating an exact replica of storage media, which is crucial in preserving the original state of the data. Some of the tools used to do this:
 - [FTK Imager](https://www.exterro.com/ftk-imager): It allows us to create perfect copies (or images) of computer disks for analysis, preserving the integrity of the evidence. It also lets us view and analyze the contents of data storage devices.
 - [AFF4 Imager](https://github.com/Velocidex/c-aff4): It's user-friendly and compatible with numerous file systems. A benefit of the AFF4 Imager is its capability to extract files based on their creation time, segment volumes, and reduce the time taken for imaging through compression.
+- [OSFClone](https://www.osforensics.com/tools/create-disk-images.html): Open source utility for creating and cloning forensic disk images.
 - `DD and DCFLDD`: Both are command-line utilities available on Unix-based systems. `DD` is a versatile tool included in most Unix-based systems by default, while DCFLDD is an enhanced version of `DD` with features specifically useful for forensics, such as hashing.
 - **Virtualization Tools**: Depending on the specific virtualization solution, evidence can be gathered by temporarily halting the system and transferring the directory that houses it. Another method is to utilize the *snapshot capability* present in numerous virtualization software tools.
 
@@ -67,7 +68,8 @@ Once registry is extracted, we can now view the files of the registry for analys
 - [Registry Explorer by Eric Zimmerman](https://ericzimmerman.github.io/#!index.md): Can load multiple hives and adds data from transactional logs.
 - [RegRipper](https://github.com/keydet89/RegRipper3.0): Takes a hive as input and outputs a report with the important keys and values. Does not take transactional logs into account.
 
-[[Memory Forensics]]: A system's memory is crucial in investigations, as it provides extra details, like traces of executable files and [[Malware]]. However, this memory is volatile, meaning it is lost after logoffs or after shutdowns of the system. Memory forensics deals with the live state of a system at a particular moment in time. 
+[[Memory Forensics]]: A system's memory is crucial in investigations, as it provides extra details, like traces of executable files and [[Malware]]. However, this memory is volatile, meaning it is lost after logoffs or after shutdowns of the system. Memory forensics deals with the live state of a system at a particular moment in time.
+- Analyzing how malware interacts with the memory to identify injected code, hooks, or runtime manipulations.
 
 Some memory acquisition solutions are:
 - [[Volatility]]
