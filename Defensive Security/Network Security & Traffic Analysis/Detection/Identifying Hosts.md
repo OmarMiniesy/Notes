@@ -49,4 +49,19 @@ To look for all *Kerberos* traffic, we can use the `kerberos` filter.
 | `sname`          | This is the service and domain name for the generated ticket | `kerberos.snamestring == "krbtg"` |
 | `addresses`      | This is the client IP address and the NetBIOS name           |                                   |
 
+#### Identifying [[Domain Controller]]s
+
+To identify [[Active Directory]] DCs, we can use a multitude of methods, given the roles they carry out.
+
+Look for [[Kerberos]] traffic using the `kerberos` filter.
+- The [[IP]]s responding with the `AS-REP` or the `TGS-REP` are going to be the Domain Controllers.
+
+Look for [[Domain Name System (DNS)]] traffic, since the Domain Controller serves the purpose as the DNS server.
+- The IP responding to the queries is most probably the domain controller.
+
+Look for activity on the following [[Port]]s and [[Protocol]]s:
+- `88` -> [[Kerberos]]
+- `389` -> [[Lightweight Directory Access Protocol (LDAP)]]
+- [[Server Message Block (SMB)]] session startups. The destination host for `Tree Connect` is the DC.
+
 ---

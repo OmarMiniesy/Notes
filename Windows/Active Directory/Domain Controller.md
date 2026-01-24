@@ -4,6 +4,7 @@ At the core of the Windows domain, is the _Domain Controller_.
 - This is a server responsible for running the *Active Directory Services.*
 - It is the central authority for the domain.
 
+> To identify Domain Controllers in a network, check out [[Identifying Hosts#Identifying Domain Controller s|Identifying DCs in Wireshark]].
 
 The *Default Domain Controllers policy* is created automatically with a domain and sets baseline security and auditing settings for all domain controllers in a given domain.
 

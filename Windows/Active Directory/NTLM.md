@@ -8,6 +8,8 @@ This is another authentication method used by [[Active Directory]], and it inclu
 
 LM and NTLM are the hash names, and NTLMv1 and v2 are the authentication protocols that use these hashes.
 
+> Carried over the [[Server Message Block (SMB)]] protocol. Can analyze in [[Wireshark]] using `smb2` or `ntlmssp`.
+
 ---
 ### LM
 
@@ -59,6 +61,12 @@ The protocol works like this:
 2. Server responds with `CHALLENGE_MESSAGE` to client to verify identity with a nonce.
 3. Client responds with `AUTHENTICATE_MESSAGE` that is composed of the NT hash with more data like the timestamp, a client nonce, and the domain name creating a tougher hash.
 4. Server verifies response by doing the same calculations.
+
+The hash looks like this:
+```
+<username>::<domain>:<Challenge>:<NTProofStr>:<NTLMv2 Response>
+```
+- Remove the `NTProofStr` from the `NTLMv2 Response` to obtain the `NTLMv2 Response`.
 
 ---
 
