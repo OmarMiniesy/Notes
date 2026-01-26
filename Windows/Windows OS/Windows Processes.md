@@ -4,7 +4,7 @@ A process maintains and represents the execution of a program. A process has:
 - *Virtual address space*: Virtual memory address for the process.
 - *Executable code*: The code and data stored in the virtual address space.
 - *Handles to system objects*: Open handles to system resources accessible by the process.
-- *Security context*: Defined by the access token, which has the user for the process, the security groups, privileges, and integrity level.
+- *Access Token*: This is the security context of the process, which has the user, the security groups, privileges, and integrity level.
 - *Process Identifier*
 - *Environment variables*
 - *Priority class*
@@ -12,6 +12,7 @@ A process maintains and represents the execution of a program. A process has:
 - *At least 1 thread*: This is an executable unit deployed by the process. This is what controls the execution.
 
 Windows processes can either run in *user mode* or *kernel mode* and it depends on the type of code being executed.
+- Check [[Windows API Call Flow#Modes of Operation|Operation Modes]].
 
 **User Mode** is for applications, and windows creates a process for these applications.
 - These created processes come with a *private virtual address space* and a *private handle table*.

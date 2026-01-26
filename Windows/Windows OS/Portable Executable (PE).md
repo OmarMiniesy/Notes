@@ -26,12 +26,15 @@ This contains the metadata about the PE file.
 
 A PE file is divided into sections, each with a different purpose.
 
-- `.text`: contains code and and entry point.
-- `.data`: contains global variables and initialized data.
-- `.rdata` `.idata`: contains imports
-- `.reloc`: contains relocation information
-- `.rsrc`: contains application resources like images or icons.
-- `.debug`: contains debug information
+- `Text Section (.text)`: The hub where the executable code of the program resides.
+- `Data Section (.data)`: A storage for initialized global and static data variables.
+- `Read-only initialized data (.rdata)`: Houses read-only data such as constant values, string literals, and initialized global and static variables.
+- `Exception information (.pdata)`: A collection of function table entries utilized for exception handling.
+- `BSS Section (.bss)`: Holds uninitialized global and static data variables.
+- `Resource Section (.rsrc)`: Safeguards resources such as images, icons, strings, and version information.
+- `Import Section (.idata)`: Details about functions imported from other DLLs.
+- `Export Section (.edata)`: Information about functions exported by the executable.
+- `Relocation Section (.reloc)`: Details for relocating the executable's code and data when loaded at a different memory address.
 
 ---
 ### Tools
@@ -44,5 +47,7 @@ pecheck <file-name>
 ```
 
 The tool `pestudio` is also very nice.
+
+The tool `x64dbg` is also nice.
 
 ---
