@@ -6,6 +6,7 @@ SOAR, *Security Orchestration, Automation, and Response*, is a tool that unifies
 - **Response**: Taking action from a central interface while automating response.
 
 SOAR is mainly built on the concept of **playbooks**.
-- A playbook is a predefined workflow that contains several actions to follow during a certain scenario
+- A playbook is a predefined workflow that contains several actions to follow during a certain scenario.
+- It is a structured document that defines the steps required to investigate and remediate specific threats.
 
 ---
