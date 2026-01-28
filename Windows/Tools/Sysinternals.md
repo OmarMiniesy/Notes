@@ -1,182 +1,65 @@
 ### General Notes
 
-When [[Malware]] is analyzed without being executed, this is called *static analysis*.
-- The properties of the executable file are analyzed without actually running the file. Taking a look at the structure, strings, searching for well known signatures, and studying metadata.
-- Malware is usually in Portable Executable format, PE. Check [[Portable Executable (PE)]].
+The *Sysinternals* tools are a compilation of over 70+ Windows-based tools. Each of the tools falls into one of the following categories:
 
-Some static analysis techniques include:
-- Checking for strings in malware.
-- Checking the PE header for information related to different sections.
-- Using a disassembler to look at the code.
+- File and Disk Utilities
+- Networking Utilities
+- Process Utilities
+- Security Utilities
+- System Information
+- Miscellaneous
 
-> A **disassembler** converts the malware's code from binary to assembly so that an analyst can look at the instructions of the malware statically. A **debugger** allows placing break points during the malware execution to view instructions.
-
-To avoid static analysis, malware often use:
-- *Obfuscation*: deliberately making code hard to read, understand, or analyze, while keeping the same functionality. This evades signature based detection.
-- *Packing*: compressing or encrypting the executable so that the malicious code is not present in plaintext on disk. The malware is restored at runtime in the memory, and run directly.
-
-> This is where [[Dynamic Analysis]] comes in play.
-
-##### Tools
-
-- Dependency Walker
-- PeID: used to identify *packed* or *protected* executable files.
-- pestudio
-- Detect It Easy
-- PE Explorer
-- PEview
-- PE Tree
-- ResourceHacker
-- IDA Freeware
-- WinDbg
-- Strings
-- [VirusTotal](https://www.virustotal.com/gui/home/upload): Showcases the history, first & last submission, metadata, hashes, behavior, & comments.
+> Can be downloaded from this [link](https://docs.microsoft.com/en-us/sysinternals/downloads/). The tool can also be used from the web on this [link](https://live.sysinternals.com/). The tool can also be used from the command prompt live without downloading it following the instructions [here](https://kamransaifullah.medium.com/sysinternals-the-other-way-around-d0d009a01e48).
 
 ---
-### Static Analysis Techniques
+### [Network Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/networking-utilities)
 
-#### File Type
+**TCPView**: A program that shows a detailed list of all [[Transport Layer]] *TCP* and *UDP* endpoints and connections.
+- Similar to `netstat` tool.
+- `Tcpvcon` is the command line version of this tool.
 
-Determine the file type:
-```bash
-file <file-name>
+---
+### [Process Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/process-utilities)
+
+**Autoruns**: Has knowledge of auto-starting locations, or the programs that are configured to run during system bootup or login, and also for built in Windows applications.
+- Has information on [[Windows Registry]] keys for startup that can be used for persistence by attackers.
+- Reports Explorer shell extensions, toolbars, browser helper objects, `Winlogon` notifications, auto-start services,
+
+**Process Explorer**: This shows the currently active processes with their owning accounts, as well as extra information depending on the mode.
+ - *Handle mode* shows the handles for the selected process, and *DLL mode* shows the DLLs and opened memory mapped files, with other modes.
+
+> Process handles are unique identifiers provided by the operating system that allows a process to interact with other processes.
+
+**ProcDump** : CLI that monitors an application's CPU spikes and can generate crash dumps to investigate these spikes.
+- Can also be done using _process explorer_, by right clicking on a process and choosing _create dump_.
+
+**PsExec** : Allows remote process execution with full interactivity.
+- This [link](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) has details on how to use it.
+
+**Process Monitor (Procmon)**
+
+> Checkout [[Investigating Processes]] for more process utilities related to defensive security.
+
+---
+### [File & Disk Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/file-and-disk-utilities)
+
+**Sigcheck**: a tool that is used to analyze file version number, timestamps, [[Digital Signatures]] and [[Certificates]].
+- Can also utilize [[Cyber Threat Intelligence#OSINT CTI Tools|Virus Total]] to scan a file.
+- This [link](https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck) has all the usage commands for Sigcheck.
+
+To scan the `C:\Windows\System32` directory for any unsigned executable files:
+```powershell
+sigcheck -u -e C:\Windows\System32
 ```
+- `-u` is used to show unsigned files if Virus Total is not enabled.
+- `-e` is used to scan all executable files.
 
-Can also check for the header of the file by viewing the hex bytes using `hexdump`
-```bash
-hexdump <file-name>
+**Streams**: Is used to interact with the [[File System#Data Streams|Data Streams]] of files.
+- This [link](https://learn.microsoft.com/en-us/sysinternals/downloads/streams) explains how to use it.
+- This tool examines all of the streams of the directory/file specified, displaying their data and their sizes.
+- To view the content of a stream, use the following syntax:
 ```
-- Check the magic numbers to identify the file type and reference with this [list](https://en.wikipedia.org/wiki/List_of_file_signatures).
-
-Can use the tool `CFF Explorer` to analyze the file and check out the file type, or refer to the *hex editor* and check out the hex bytes to check for the magic bytes.
-
->  The presence of the ASCII string `MZ` (in hexadecimal: `4D 5A`) at the start of a file denotes an executable file.
-#### Malware Fingerprinting
-
-Create a unique identifier for the malware using cryptographic hashes like MD5, SHA256. This is used to:
-- Identify and track the malware
-- Scan a system for the presence of any identical malware
-- Confirmation of previous encounters
-- Share the IOC with [[Cyber Threat Intelligence]].
-
-```bash
-md5sum <file-name>
-sha256sum <file-name>
+notepad <file-name>:<stream-name>
 ```
-
-Can also use the PowerShell cmdlet `Get-FileHash` also:
-```PowerShell
-Get-FileHash -Algorithm MD5 <file-name>
-Get-FileHash -Algorithm SHA256 <file-name>
-```
-
-> This can then be used to identify the malware on [Virus Total](https://www.virustotal.com/gui/home/search).
-
-#### Import Hashing (IMPHASH)
-
-This hash is calculated from the import functions of a [[Portable Executable (PE)]] file.
-- It operates by converting all imported function names to lowercase and then fusing all the names together in a single string arranged in alphabetic order.
-- An MD5 hash is then generated for the result string.
-
-Can use the following code to obtain the IMPHASH of a file using Python:
-```python
-## imphash_calc.py
-
-import sys
-import pefile
-import peutils
-
-pe_file = sys.argv[1]
-pe = pefile.PE(pe_file)
-imphash = pe.get_imphash()
-
-print(imphash)
-```
-
-Then running the following command to obtain the IMPHASH of a file:
-```bash
-python3 imphash_calc.py <file-name>
-```
-
-#### Fuzzy Hashing (SSDEEP)
-
-Hashing technique to compute the content similarity between files by dissecting files into smaller fixed size blocks and calculating the hash for each block.
-- The resulting hashes are consolidated to generate the final hash.
-- It allocates more weight to longer sequences of common blocks making it effective at identifying minor modifications between files.
-
-The `ssdeep` command can be used to check the SSDEEP hash of a file.
-```bash
-ssdeep <file-name>
-```
-
-Can run `ssdeep` in a directory to find matches between files in that directory using the flags `-pb`.
-```bash
-ssdeep -pb *
-```
-- The number in between brackets shows the similarity percentage between the files.
-- `-p` for pretty matching mode.
-- `-b` to display only the file names.
-
-#### Section Hashing (*PE* Sections)
-
-This is used to identify sections of a *PE* file that have been modified to identify minor variations in malware samples.
-- Hash is calculated by calculating the hash of each section and comparing the same sections in different files.
-- This means that parts of the PE files that have been tampered can be identified.
-
-This Python code can be used to calculate the section hashes of a file:
-```python
-## section_hashing.py
-
-import sys
-import pefile
-
-pe_file = sys.argv[1]
-pe = pefile.PE(pe_file)
-
-for section in pe.sections:
-    print (section.Name, "MD5 hash:", section.get_hash_md5())
-    print (section.Name, "SHA256 hash:", section.get_hash_sha256())
-```
-
-Then run the command below:
-```python
-python3 section_hashing.py <file-name>
-```
-
-> Malware authors can obfuscate section names or use other names to bypass this type of check.
-
-#### Strings Analysis
-
-To list the strings present in a file to understand what the malware does, who it contacts, and so on:
-```bash
-strings <file-name>
-```
-- Sometimes the output is too much, so we can redirect to file and view the file.
-
-To specify printing strings of a minimum length, we can specify it using the `-n` flag.
-```bash
-strings -n 15 <file-name>
-```
-
-> `Strings` is also part of the *Sysinternals* suite.
-
-#### Unpacking Malware
-
-*Packing* is an obfuscation technique to:
-- Make it challenging to figure out the structure or functionality
-- It reduces the size of the file
-- Hinders normal reverse engineering
-- Impacts string analysis because string references are obscured.
-- Replaces conventional *PE* sections with a compact loader stub which retrieves code from a compressed data section.
-
-Running a `strings` command on a packed file does not yield actionable output, except for some information about the packer type used.
-
-To unpack `UPX` packed files:
-```bash
-upx -d -o <unpacked_file_name> <packed_file_name>
-```
-
-Determine the [[Portable Executable (PE)]] file *Imports* & *Exports* to understand behavior of malware.
-- Can be done using tools like `x64dbg` in the *Symbols* tab.
 
 ---
