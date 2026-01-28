@@ -32,6 +32,8 @@ _Escalation_ is the process of notifying the personnel that have authority to ma
     - Collect network packet captures, memory dumps, or file samples associated with the alert.
     - Utilize external threat intelligence sources, open-source tools, or sandboxes to analyze suspicious files, URLs, or [[IP]] addresses.
     - Conduct reconnaissance of affected systems for anomalies (network connections, processes, file modifications).
+    - This includes access to an _identity inventory_ with all user accounts, machine accounts, and their privileges, contacts, and roles.
+    - This also includes an _asset inventory_ which contains all computing resources, their properties, types, and status.
 
 ##### 5. Risk Assessment:
 
