@@ -20,4 +20,16 @@ There are also *Compound Targets* which are combinations of several *Targets*, w
 **Modules** are used to parse and analyze the collected artifacts to generate reports for examination.
 - They are [[XML]] files that specify how to parse or analyze the collected artifacts to produce summaries, timelines, or reports.
 
+The bin directory under _Modules_ contains executables that we want to run on the system but are not natively present on most systems. 
+- KAPE will run executables either from the bin directory or the complete path. 
+
+---
+### Running Kape
+
+Can be run in _cli_ mode or _gui_ mode using `kape.exe` and `gkape.exe` respectively.
+
+Can also be run in _batch_ mode where we provide a list of commands for KAPE to run in a file named `_kape.cli`. 
+- Keep this file in the directory containing the KAPE binary.
+- When `kape.exe` is executed as an administrator, it checks if there is `_kape.cli` file present in the directory. If so, it executes the commands mentioned in the cli file.
+
 ---
