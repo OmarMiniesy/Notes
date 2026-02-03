@@ -78,6 +78,18 @@ Some memory acquisition solutions are:
 - [MemDump](http://www.nirsoft.net/utils/nircmd.html): Command-line utility that enables us to capture the contents of a system's RAM. It’s quite beneficial in forensics investigations or when analyzing a system for malicious activity.
 - [Belkasoft RAM Capturer](https://belkasoft.com/ram-capturer): It can capture the RAM of a running Windows computer, even if there's active anti-debugging or anti-dumping protection. This makes it a highly effective tool for extracting as much data as possible during a live forensics investigation.
 - [LiME (Linux Memory Extractor)](https://github.com/504ensicsLabs/LiME): A *Loadable Kernel Module (LKM)* which allows the acquisition of volatile memory. It's designed to be transparent to the target system, evading many common anti-forensic measures.
+- FTK Imager
+- Redline
+- DumpIt.exe
+- win32dd.exe / win64dd.exe
+- Memoryze
+- FastDump
+
+For virtual machines, the memory file can simply be collected from the host machine's drive. The file can change depending on the hypervisor used:
+- _Vmware_ - `.vmem`
+- _Hyper-V_ - `.bin`
+- _Parallels_ - `.mem`
+- _VirtualBox_ - `.sav`
 
 **Network Forensics**: This is done through [[Network Analysis]], and working with [[IDS & IPS]] solutions, [[Firewall]]s, and using tools like [[Wireshark]] and [[Tcpdump]].
 
