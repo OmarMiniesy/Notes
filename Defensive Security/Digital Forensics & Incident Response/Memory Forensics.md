@@ -45,6 +45,7 @@ To be able to identify all processes and pin point the malicious ones, the follo
 - Determining the *origin* of these processes from the operating system.
 - Cross-referencing these processes with legitimate ones.
 - Highlighting differences or suspicious processes. 
+
 ###### `EPROCESS`
 The `EPROCESS` data structure exists in the Windows kernel and is used to represent a process.
 - Each process in the operating system has an `EPROCESS` block in memory.

@@ -1,8 +1,9 @@
 ### General Notes
 
-This is a [[DFIR]] framework used for [[Memory Forensics]].
+This is a [[DFIR]] tool used for [[Memory Forensics]].
 - Can assess images of most types of operating systems and their versions.
 - Open source and written in Python.
+- Extracts digital artifacts from the RAM.
 
 It utilizes plugins to dissect memory images.
 - A plugin is an extension that can enhance the function of Volatility by extracting specific information, or performing specific tasks on the memory images.
@@ -16,16 +17,19 @@ There are 2 versions of the framework:
 ---
 ### Using Volatility
 
+
 ##### Profiling the Image
 To be able to properly analyze a memory image, its **profile** must first be identified.
 - The profile outlines the operating system, version, kernel, and other important details that are essential for forensic analysis.
 - The profile is also important to know so that when other plugins are to be used, they know what to look for and where.
 - Check out the commands [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=Volatility%203%20counterparts.-,OS%20INFORMATION,-IMAGEINFO).
+
 ##### Identifying Running Processes
 
 Given the *profile*, we can then provide it and use another *plugin* to identify the processes that were running once the image of the memory was captured.
 - This lists the memory address, the profile name, its ID and its parent ID, the time it started, and the time it exited.
 - Check out the commands [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=the%20requested%20information-,PROCESS%20INFORMATION,-PSLIST).
+
 ##### Identifying Network Artifacts
 
 Given the *profile*, we can then provide it and use another *plugin* to identify network connections, showcasing [[IP]] addresses, [[Port]]s, connection state, the process ID, and the creation time of the connection.
@@ -44,7 +48,7 @@ Given the *profile*, we can then provide it and use another *plugin* to identify
 
 > *Hooks* are used to extend or modify the behavior of software by redirecting function calls or messages. often used for injecting malware by intercepting system calls or processes. Can also be used for monitoring, logging, or modifying behavior.
 
-#### Identifying Handles
+##### Identifying Handles
 
 A *Handle* is a reference to an object or file that is used by a process.
 - Understanding the handles used by a process reveals the resources and objects that the process is interacting with.
@@ -69,7 +73,6 @@ The registry files, or hives, can be dumped to showcase:
 - Identify persistence mechanisms by altered [[Windows Registry#Registry Keys|Registry Keys]].
 
 ---
-
 ### Integration with [[YARA]]
 
 Volatility can be used with YARA to find matches using `yarascan`.
@@ -81,3 +84,5 @@ Volatility can be used with YARA to find matches using `yarascan`.
 ```bash
 vol.py -f /home/htb-student/MemoryDumps/compromised_system.raw yarascan -y /home/htb-student/Rules/yara/wannacry_artifacts_memory.yar
 ```
+
+---

@@ -4,95 +4,52 @@
     "type": "split",
     "children": [
       {
-        "id": "223bea2013fbd3fb",
+        "id": "0ddda65b980b0dc6",
         "type": "tabs",
         "children": [
           {
-            "id": "a9d9cb1d94d11fa5",
+            "id": "5e5f0028cab4fcbb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Malware Analysis/Dynamic Analysis.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic Analysis"
+              "title": "Volatility"
             }
           },
           {
-            "id": "9559f8025c81d6d9",
+            "id": "57ac18a5b021e886",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Malware Analysis/Static Analysis.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Static Analysis"
+              "title": "Memory Forensics"
             }
           },
           {
-            "id": "cb4856fd1d0efad3",
+            "id": "4b4f5610677a8aca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/PowerShell Scripting.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PowerShell Scripting"
-            }
-          },
-          {
-            "id": "8576231bc5e2fd69",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Windows API Call Flow.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows API Call Flow"
-            }
-          },
-          {
-            "id": "0d9de4dd82329b62",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Windows Processes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Processes"
-            }
-          },
-          {
-            "id": "428233c32a71fed4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Portable Executable (PE).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Portable Executable (PE)"
+              "title": "DFIR"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -262,34 +219,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9559f8025c81d6d9",
+  "active": "5e5f0028cab4fcbb",
   "lastOpenFiles": [
-    "Windows/Windows OS/Windows API Call Flow.md",
-    "Scripting/PowerShell Scripting.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
+    "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
+    "Defensive Security/Security Operations/Incident Handling.md",
+    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
+    "Defensive Security/Malware Analysis/Malware.md",
+    "Defensive Security/Malware Analysis/Code Analysis.md",
+    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
     "Windows/Windows OS/Portable Executable (PE).md",
     "Windows/Windows OS/Windows Processes.md",
-    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
+    "Windows/Windows OS/Windows API Call Flow.md",
+    "Scripting/PowerShell Scripting.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
     "Windows/Windows OS/System Configuration.md",
     "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
     "Windows/Windows OS/File System.md",
-    "Defensive Security/Malware Analysis/Malware.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Windows/Active Directory/NTLM.md",
     "Windows/Active Directory/Domain Controller.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
     "Windows/Tools/Sysinternals.md",
     "Defensive Security/Endpoint Security/Investigating Processes.md",
-    "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
-    "Scripting/Bash Scripting.md",
-    "Defensive Security/Detection Engineering/Hunting for Malware.md",
-    "Defensive Security/Malware Analysis/Malware Types.md",
-    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
-    "Defensive Security/Security Operations/SOAR.md",
-    "Defensive Security/Security Operations/Alert Triaging.md",
-    "Defensive Security/Network Security & Traffic Analysis/IDS & IPS.md",
-    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
-    "Defensive Security/Endpoint Security/ids.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
