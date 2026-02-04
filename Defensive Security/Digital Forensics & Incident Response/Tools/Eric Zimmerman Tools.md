@@ -1,7 +1,7 @@
 ### General Notes
 
 A collection and guides on how to run the different Eric Zimmerman tools I stumbled upon.
-- [Link](iczimmerman.github.io/#!index.md) to all the tools.
+- [Link](ericzimmerman.github.io/#!index.md) to all the tools.
 
 > Tools should be run in an elevated command prompt for better usability.
 
@@ -52,3 +52,12 @@ JLECmd.exe -d <path-to-Jumplist-file> --csv <path-to-save-csv>
 ```
 
 ---
+### MFTEcmd
+
+Tool used to analyze the _MFT_ record.
+
+---
+### MFTExplorer
+
+Graphical interface tool used to analyze the metadata inside the _MFT_.
+- Contains info about files, directories, filenames, and timestamps.
