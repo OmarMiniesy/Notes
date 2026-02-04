@@ -29,6 +29,7 @@ To be able to properly analyze a memory image, its **profile** must first be ide
 - The profile outlines the operating system, version, kernel, and other important details that are essential for forensic analysis.
 - The profile is also important to know so that when other plugins are to be used, they know what to look for and where.
 - Check out the commands [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=Volatility%203%20counterparts.-,OS%20INFORMATION,-IMAGEINFO).
+
 ##### Identifying Running Processes
 
 Given the *profile*, we can then provide it and use another *plugin* to identify the processes that were running once the image of the memory was captured.
@@ -41,16 +42,23 @@ The plugins are:
 - Using `pstree` will list processes based on the parent process ID using the same technique as `pslist`.
 
 To inspect the memory layout of a process, we can use the `memmap` plugin can be used.
-- Can be used to output the memory dump of a process to inspect all its details.
+- Can be used to output the memory dump of a process to inspect all its details. The output is a `.dmp` file.
 ```bash
-python3 vol.py -f memory.raw --output-dir ./output_folder windows.memmap.Memmap --pid 1234 --dump
+python3 vol.py -f <memory.raw> --output-dir <./output_folder> windows.memmap.Memmap --pid 1234 --dump
 ```
+- Can the use `strings` to investigate the output.
+
 
 ##### Identifying Network Artifacts
 
 Given the *profile*, we can then provide it and use another *plugin* to identify network connections, showcasing [[IP]] addresses, [[Port]]s, connection state, the process ID, and the creation time of the connection.
 - We can also utilize [[Memory Forensics#Kernel Objects|Pool Scanning]] to identify terminated network connections.
 - Check out the commands [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=process%20name%2C%20args-,NETWORK%20INFORMATION,-NETSCAN).
+
+##### Identifying File Data
+
+- To check out data related to the files that have been accessed and where they are stored on disk, we can use the `filescan` plugin.
+- To check out data related to the timestamps of when the files were accessed and modified, we can use the `mftscan.MFTScan` plugin`.
 
 ##### Identifying Injected Code & Malware
 
@@ -78,7 +86,7 @@ Some other important plugins to use when looking for *Malware* are:
 - `moddump`
 - `handles`
 
-#### Identifying Handles
+##### Identifying Handles
 
 A *Handle* is a reference to an object or file that is used by a process.
 - Understanding the handles used by a process reveals the resources and objects that the process is interacting with. This includes mutex locks.
