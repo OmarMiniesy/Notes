@@ -19,6 +19,11 @@ There are 2 versions of the framework:
 
 > When using Volatility 3, there is no need to identify the profile. The OS of the image is stated in the plugin name.
 
+To list all the available plugins for a specific OS, we can write the following:
+```bash
+vol <windows> --help
+```
+
 ##### Profiling the Image
 To be able to properly analyze a memory image, its **profile** must first be identified.
 - The profile outlines the operating system, version, kernel, and other important details that are essential for forensic analysis.
