@@ -61,3 +61,5 @@ Tool used to analyze the _MFT_ record.
 
 Graphical interface tool used to analyze the metadata inside the _MFT_.
 - Contains info about files, directories, filenames, and timestamps.
+
+---

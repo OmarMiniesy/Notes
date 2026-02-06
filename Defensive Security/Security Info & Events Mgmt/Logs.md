@@ -52,7 +52,7 @@ Check out [[Linux Forensics]] and [[Linux Privilege Escalation]] for more detail
  Has authorization information about user logins and authentication mechanisms used.
 - Has the date, followed by the [[IP]] of the machine that the log was generated on, the process and process ID that generated the log , the description of the log.
 - There can be several `auth.log.#` files, and there can be zipped files. Analyze all.
-- All commands that are run using `sudo` are stored in this log. Can be obtained by `grep COMMAND`.
+- All commands that are run using `sudo` are stored in this log. Can be obtained by `grep <COMMAND>`.
 ###### `/var/log/*tmp` 
 The `*tmp` files that hold logon history information.
 - `/var/log/btmp` logs failed logon attempts.

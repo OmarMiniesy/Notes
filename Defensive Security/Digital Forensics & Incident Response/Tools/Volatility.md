@@ -48,7 +48,7 @@ Given the _profile_, we can then provide it and use another _plugin_ to identify
 The plugins are:
 
 - Using `pslist` will list all processes from the doubly linked list that keeps tracks of processes in memory. This will include all current processes and terminated processes with their exit times.
-- Using `psscan` will list processes by locating the `_EPROCESS` data structure. This can list false positives but it combats _Malware_ that tries to hide.
+- Using `psscan` will list processes by locating the `_EPROCESS` data structure. This can list false positives but it combats [[Malware]] that tries to hide.
 - Using `pstree` will list processes based on the parent process ID using the same technique as `pslist`.
 
 To inspect the memory layout of a process, we can use the `memmap` plugin can be used.
@@ -88,9 +88,9 @@ For **Volatility 3**, simply specify the plugin name `malfind`, and it will iden
 
 > _Hooks_ are used to extend or modify the behavior of software by redirecting function calls or messages. often used for injecting malware by intercepting system calls or processes. Can also be used for monitoring, logging, or modifying behavior.
 
-Some other important plugins to use when looking for _Malware_ are:
+Some other important plugins to use when looking for [[Malware]] are:
 
-- `ssdt` - searches for hooking within the _SSDT_ table, which enables malware to alter the location where the pointers point to, enabling them to point to a location that the malware controls.
+- `ssdt` - searches for hooking within the _SSDT_ table, [[Windows API Call Flow]], which enables malware to alter the location where the pointers point to, enabling them to point to a location that the malware controls.
 - `modules` - Dumps a list of loaded kernel modules to list malicious drivers.
 - `driverscan` - Dumps a list of drivers present on the system at the time of extraction. Identifies driver files that the `modules` plugin might have missed.
 - `modscan`

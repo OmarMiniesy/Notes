@@ -4,52 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "0ddda65b980b0dc6",
+        "id": "13870bb0fe78ea6a",
         "type": "tabs",
         "children": [
           {
-            "id": "5e5f0028cab4fcbb",
+            "id": "8d999a3917e78242",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Volatility"
+              "title": "Linux Forensics"
             }
           },
           {
-            "id": "57ac18a5b021e886",
+            "id": "3f51c8840a12f5be",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+                "file": "Defensive Security/Security Info & Events Mgmt/Logs.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Memory Forensics"
-            }
-          },
-          {
-            "id": "4b4f5610677a8aca",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DFIR"
+              "title": "Logs"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"registry explorer",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -219,15 +206,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5e5f0028cab4fcbb",
+  "active": "3f51c8840a12f5be",
   "lastOpenFiles": [
+    "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
+    "Defensive Security/Security Info & Events Mgmt/Logs.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Windows/Windows OS/Windows Registry.md",
     "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
-    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Windows/Windows OS/File System.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/KAPE.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
-    "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
     "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Malware Analysis/Dynamic Analysis.md",
@@ -238,15 +232,8 @@
     "Windows/Windows OS/Windows Processes.md",
     "Windows/Windows OS/Windows API Call Flow.md",
     "Scripting/PowerShell Scripting.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
     "Windows/Windows OS/System Configuration.md",
     "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
-    "Windows/Windows OS/File System.md",
-    "Windows/Active Directory/NTLM.md",
-    "Windows/Active Directory/Domain Controller.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
-    "Windows/Tools/Sysinternals.md",
-    "Defensive Security/Endpoint Security/Investigating Processes.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

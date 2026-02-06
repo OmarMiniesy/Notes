@@ -3,7 +3,8 @@
 Important locations for the [[Windows Registry]] while performing [[DFIR]].
 - The notation here used is that of the registry key location. To check the hive location on disk, check out [[Windows Registry#Accessing the Registry Hives|Registry Hive Locations]].
 - Reminder that `HKEY_CURRENT_USER` maps to `NTUSER.DAT` and that `HKEY_CURRENT_USER\Software\CLASSES` maps to `USRCLASS.DAT`.
-- Tool to use here is Registry Explorer by Eric Zimmerman.
+
+> [[Eric Zimmerman Tools]] - Registry Explorer.
 
 ---
 ### System Information & Accounts
