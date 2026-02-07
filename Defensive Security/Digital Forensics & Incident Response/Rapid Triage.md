@@ -6,7 +6,7 @@ This is an approach used in [[DFIR]] to collect high value data quickly and prio
 
 > The goal of rapid triage is to quickly determine the **severity of an incident**, the **scope of the compromise**, and the **evidence that needs to be preserved or analyzed further**.
 
-[Eric Zimmerman tools](https://ericzimmerman.github.io/#!index.md) are a great resource for examination and analysis for rapid triage.
+[[Eric Zimmerman tools]] are a great resource for examination and analysis for rapid triage.
 - One of the tools also by Zimmerman is [[KAPE]].
 
 To perform evidence collection remotely and on a set of devices, an [[Endpoint Detection and Response (EDR)]] can be used.

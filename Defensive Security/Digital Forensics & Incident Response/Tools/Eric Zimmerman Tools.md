@@ -52,9 +52,34 @@ JLECmd.exe -d <path-to-Jumplist-file> --csv <path-to-save-csv>
 ```
 
 ---
-### MFTEcmd
+### MFTECmd - Master File Table Explorer Command
 
-Tool used to analyze the _MFT_ record.
+Used to analyze [[File System#NTFS|NTFS]] metadata artifacts like:
+- `$MFT` - [[File System#MFT - Master File Table|Master File Table]]. It extracts and decodes the fields inside the MFT record entries. Check out [[File System#File Record|File Record]] in MFT.
+- `$J` - [[File System#Update Sequence Number|USN]] Journal
+- `$Boot`, `$LogFile`, `$Secure`, and more.
+- [GitHub Repo](https://github.com/EricZimmerman/MFTECmd).
+
+The output of this command can be ingested into the *timeline explorer* tool to view the contents and perform [[DFIR]].  
+
+To analyze the MFT:
+```PowerShell
+.\MFTECmd.exe -f 'C:\$MFT' --csv <output-dir> --csvf <output-file.csv>
+```
+
+To analyze the MFT record of a certain MFT entry:
+```powershell
+.\MFTECmd.exe -f 'C\$MFT' --de 0x16169
+```
+- the entry can be specified in either hex or decimal.
+- the entry number can be obtained first by first fully parsing the entire MFT table and then locating the needed entry. This can be done by removing the `--de` flag.
+
+To analyze the USN journal, we need to extract the `$J` and `$Max` data streams using [[KAPE]] by specifying the `$Extend\$UsnJrnl` target. Other techniques exist.
+- Now, we can use the following command:
+
+``` PowerShell
+.\MFTECmd.exe -f 'C:\$Extend\$J' --csv <output-dir> --csvf <output-file.csv>
+```
 
 ---
 ### MFTExplorer

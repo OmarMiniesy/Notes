@@ -35,6 +35,35 @@ There are also *Alternate Data Streams (ADS)* which are named data streams that 
 
 > Using the syntax `<file-name>:<stream-name>` allows reading and writing to the stream called `stream-name` of the file called `<file-name>`.
 
+To list all the alternate data streams for files in a directory:
+```powershell
+Get-Item * -Stream *
+```
+
+To read the content of a specific file stream of a specific file:
+```powershell
+Get-Content file.exe -Stream Zone.Identifier
+```
+
+##### Zone.Identifier
+
+This is an alternate data stream that is used to signify how the file came to be on the host.
+- It stores *Mark of the Web (MOTW)* information, to identify whether the file was downloaded from the internet or not.
+- This is how windows tells programs that this file might be unsafe because it was downloaded from the internet for example.
+
+```
+example.exe:Zone.Identifier:$DATA
+```
+
+The content of this data stream contains the links and [[IP]]s of where it was downloaded from, as well as the *ZoneId*, which can be :
+- 0 → Local machine
+- 1 → Local intranet
+- 2 → Trusted sites
+- 3 → Internet
+- 4 → Restricted zone
+
+> Zone.Identifier data can be viewed in the output of the [[Eric Zimmerman Tools#MFTEcmd - Master File Table Explorer Command|MFTECmd]] CSV file as it is a *resident* record.
+
 ##### Journaling
 
 The NTFS file system keeps a log of changes to the metadata of the volume, helping the system recover from crashes.
@@ -46,42 +75,35 @@ When a file is deleted, the file system deletes the entries that the store the f
 - The location where the file existed is now available for writing again.
 - The actual content of the file deleted is still present on the disk, as long as it has not been rewritten.
 
----
-### MAC(b) Times in NTFS
+##### Update Sequence Number
 
-These are the *timestamps* for files or objects and they showcase the events and actions that have been done on a file system in order. 
-- **Modified (M)**: This holds the time when the content of the file was last changed. 
-- **Accessed (A)**: This holds the time when the file was last accessed, read, or opened.
-- **Changed (C)**: This holds the time when the MFT record changes. It has the time when the file was created, or if it was copied or moved somewhere.
-- **Birthed (b)**: This is when the file was first instantiated, or created.
+The *Update Sequence Number*, or *USN*, is a journal that logs alterations to files and directories.
+- Allows monitoring file creation, renaming, deletion, and data overwriting.
+- The file is present in the `$Extend` directory and is called `$UsnJrnl`.
+- The actual entries are stores in the `$J` data stream.
+- There is another stream called `$Max` that contains the configuration information for the journal itself
 
-| Operation   | Modified       | Accessed | Birth (Created) |
-| ----------- | -------------- | -------- | --------------- |
-| File Create | Yes            | Yes      | Yes             |
-| File Modify | Yes            | No       | No              |
-| File Copy   | No (Inherited) | Yes      | Yes             |
-| File Access | No             | No*      | No              |
-
-These timestamps are stored in the `$MFT` file in the root system drive.
-- These timestamps are placed in 2 attributes in the `$MFT`:
-	1. `$STANDARD_INFORMATION`: The timestamps in the windows explorer come from here.
-	2. `$FILE_NAME`
-
-> The *Master File Table (MFT)* is a component of NTFS that stores metadata for all files and directories on a volume. Provides insights into file names, sizes, timestamps, and data storage locations.
+```PowerShell
+C:\$Extend\$UsnJrnl:$J
+C:\$Extend\$UsnJrnl:$Max
+```
+- Can be analyzed using the [[Eric Zimmerman Tools#MFTEcmd - Master File Table Explorer Command|MFTECmd]] Zimmerman tool.
 
 ---
 ### MFT - Master File Table
 
-The MFT is a file that is used to catalog the files and directories on an NTFS volume, where each file and directory has an entry in it with metadata and other details.
+The MFT is a file that is used to catalog the files and directories on an NTFS volume, where each file and directory has an entry in it with metadata and other details, including file creation, modification, deletion, and access.
 - The MFT also allows for the creation of timelines of events using the [[#MAC(b) Times in NTFS]].
 - The MFT also holds data about files and directories even after they are deleted.
 
+> The MFT is stored in `C:\$MFT`. The `$` symbolizes that this file is part of the NTFS itself and is not meant for user modification. Can be visualized using [Active@ Disk Editor](https://www.disk-editor.org/index.html) or by [[Eric Zimmerman Tools]]. 
+
 ##### File Record
 
-Entries in the MFT are called *records*, and records have a structured format that contain attributes about the file. Each file record has:
+Entries in the MFT are called *records*, and records have a structured format that contain *attribute records* about the file *The MFT record is 1024 bytes long*. Each file record has the following `$ATTRIBUTE` records:
 - **File Record Header**: Metadata about the file record itself:
 	- *Signature*: 4 bytes that is either `FILE` if the record is in use or `BAAD` if deallocated.
-	- *Offset to Update Sequence Array*: Offset for the USA that maintains the integrity of record during updates.
+	- *Offset to Update Sequence Array*: Offset for the *USA* that maintains the integrity of record during updates.
 	- *Size of Update Sequence Array*: The size of the USA in words.
 	- *Log File Sequence Number*: This number identifies the last update to the file record.
 	- *Sequence Number*: Number that identifies the file record. The records are numbered sequentially starting 0.
@@ -111,5 +133,25 @@ Entries in the MFT are called *records*, and records have a structured format th
 | 0xD0 (208)  | $EA_INFORMATION        | Used for backward compatibility with OS/2 applications (HPFS)                    |
 | 0xE0 (224)  | $EA                    | Used for backward compatibility with OS/2 applications (HPFS)                    |
 | 0x100 (256) | $LOGGED_UTILITY_STREAM | Keys and other information about encrypted attributes (NTFS 3.0+; Windows 2000+) |
+
+---
+### MAC(b) Times in NTFS
+
+These are the *timestamps* for files or objects and they showcase the events and actions that have been done on a file system in order. 
+- **Modified (M)**: This holds the time when the content of the file was last changed. 
+- **Accessed (A)**: This holds the time when the file was last accessed, read, or opened.
+- **Changed (C)**: This holds the time when the MFT record changes. It has the time when the file was created, or if it was copied or moved somewhere.
+- **Birthed (b)**: This is when the file was first instantiated, or created.
+
+| Operation   | Modified       | Accessed | Birth (Created) |
+| ----------- | -------------- | -------- | --------------- |
+| File Create | Yes            | Yes      | Yes             |
+| File Modify | Yes            | No       | No              |
+| File Copy   | No (Inherited) | Yes      | Yes             |
+| File Access | No             | No*      | No              |
+
+These timestamps are stored in the `$MFT` file in the root system drive. These timestamps are placed in 2 attributes in the `$MFT`:
+1. `$STANDARD_INFORMATION`: The timestamps in the windows explorer come from here.
+2. `$FILE_NAME`
 
 ---
