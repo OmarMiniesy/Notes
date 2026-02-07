@@ -58,6 +58,7 @@ Some tools used in [[Rapid Triage]]:
 
 **[[Disk Forensics]]**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
 - Includes finding and recovering deleted files.
+- Also includes analyzing the changes done to files in the file system itself. Check out [[Windows Forensics#File System NTFS NTFS|Windows NTFS Forensics]].
 
 [[Windows Registry Forensics]] : This is used to extract the windows registry for evidence of persistence, program execution history, and changes to system configuration.
 - Autopsy
