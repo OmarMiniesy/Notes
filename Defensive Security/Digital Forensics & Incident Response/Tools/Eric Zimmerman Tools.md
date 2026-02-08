@@ -90,7 +90,7 @@ Graphical interface tool used to analyze the metadata inside the _MFT_.
 ---
 ### EvtxECmd
 
-This is a tool that is used to parse `.evtx` _windows events log_ files.
+This is a tool that is used to parse `.evtx` [[Windows Events Log]] files.
 - Tool allows focusing on certain event IDs and ignoring others.
 - This tool utilizes _maps_ to convert event data into a standardized format. There are many already present and they can be created as needed.
 - The [GitHub Repo](https://github.com/EricZimmerman/evtx) and a nice [blog](https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html) for more information.
