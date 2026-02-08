@@ -88,3 +88,26 @@ Graphical interface tool used to analyze the metadata inside the _MFT_.
 - Contains info about files, directories, filenames, and timestamps.
 
 ---
+### EvtxECmd
+
+This is a tool that is used to parse `.evtx` _windows events log_ files.
+- Tool allows focusing on certain event IDs and ignoring others.
+- This tool utilizes _maps_ to convert event data into a standardized format. There are many already present and they can be created as needed.
+- The [GitHub Repo](https://github.com/EricZimmerman/evtx) and a nice [blog](https://binaryforay.blogspot.com/2019/04/introducing-evtxecmd.html) for more information.
+
+The standard fields present in the maps include:
+- `UserName`
+- `ExecutableInfo`: process command lines, scheduled tasks, ...
+- `RemoteHost`: This contains the [[IP]] addresses or host names or both.
+- 6 `PayloadData` fields: These contains the needed information as seen fit.
+
+> The idea is that maps can be created to include the needed fields to capture from the event log files.
+
+To run the tool against a chosen directory of event files:
+```powershell
+.\EvtxECmd.exe -d "C:\Windows\System32\winevt\logs\" --csv <output-dir> --csvf <output-file>
+```
+- The result can then be imported into **Timeline Explorer** for filtering and sorting. Columns can be dragged up to perform grouping and subgrouping as seen fit.
+
+---
+
