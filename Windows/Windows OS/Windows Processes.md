@@ -35,6 +35,18 @@ Windows processes can either run in *user mode* or *kernel mode* and it depends 
 When *run-time dynamic linking* is used to load DLLs into a program, a function like `LoadLibrary` is used to load the DLL at run time. Then, `GetProcAddress` is needed to identify the exported DLL function to call.
 - This technique is used by attackers.
 
+###### `EPROCESS`
+The `EPROCESS` data structure exists in the Windows kernel and is used to represent a process.
+- Each process in the operating system has an `EPROCESS` block in memory.
+- Can be used to study processes.
+
+Inside the `EPROCESS` there is a linked list called `ActiveProcessLinks` that has a list of all the active processes on the system.
+- There is an `flink` field that points to the next process in the list, and  a `blink` field that points to the previous process in that list.
+- This linked listed found in all of the processes can be used to iterate through all the active processes on a system.
+
+Rootkits can try to alter these fields to hide processes.
+- Use the [[Volatility]] `psscan` plugin to look for these hidden processes.
+
 ---
 ##### `System` process
 

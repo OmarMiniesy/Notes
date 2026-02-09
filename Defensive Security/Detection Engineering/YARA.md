@@ -14,6 +14,7 @@ GitHub repos with examples for YARA rules:
 - [Yara-Rules](https://github.com/Yara-Rules/rules/tree/master/malware).
 - [Open-Source-YARA-rules](https://github.com/mikesxrs/Open-Source-YARA-rules/tree/master).
 - [DFIR Report, Yara-Rules](https://github.com/The-DFIR-Report/Yara-Rules).
+- [YARA Signature Base](https://github.com/Neo23x0/signature-base/tree/master)
 
 YARA rules can be integrated with security tools such as [[SIEM]]s, log analysis systems, and incident response platforms.
 - This integration enables automation, correlation, and enrichment of security events, allowing SOC analysts to incorporate the rules into their existing security infrastructure.

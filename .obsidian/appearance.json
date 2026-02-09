@@ -1,7 +1,7 @@
 {
-  "accentColor": "",
+  "accentColor": "#eb1e32",
   "baseFontSize": 17,
-  "theme": "moonstone",
+  "theme": "obsidian",
   "interfaceFontFamily": "",
   "translucency": true,
   "nativeMenus": false,

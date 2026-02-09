@@ -6,21 +6,8 @@
       {
         "id": "53d8c636cea98b1f",
         "type": "tabs",
+        "dimension": 49.41089837997055,
         "children": [
-          {
-            "id": "66ac9af288ce3ae8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Windows Registry.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Registry"
-            }
-          },
           {
             "id": "62e3b1b2ad4a1b89",
             "type": "leaf",
@@ -34,13 +21,56 @@
               "icon": "lucide-file",
               "title": "File System"
             }
+          },
+          {
+            "id": "fbcc1f7d1a9e8e9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Memory Forensics"
+            }
+          },
+          {
+            "id": "6ef771f5a36c20d8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Windows OS/Windows Processes.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Processes"
+            }
+          },
+          {
+            "id": "96d802b4aa611d4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Detection Engineering/YARA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "YARA"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       },
       {
         "id": "bead9c426e438142",
         "type": "tabs",
+        "dimension": 50.58910162002945,
         "children": [
           {
             "id": "7bb9b55ec3263867",
@@ -57,49 +87,21 @@
             }
           },
           {
-            "id": "af09c0cef6ce85c7",
+            "id": "5514fa6383f45e8b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows Registry Forensics"
-            }
-          },
-          {
-            "id": "de0395f2ada36dc1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Forensics"
-            }
-          },
-          {
-            "id": "a890cf84ff7c2a3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Eric Zimmerman Tools"
+              "title": "Volatility"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -131,7 +133,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"entry number",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -152,8 +154,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -220,13 +221,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Eric Zimmerman Tools"
+              "title": "Outline of Volatility"
             }
           },
           {
@@ -274,16 +275,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a890cf84ff7c2a3a",
+  "active": "5514fa6383f45e8b",
   "lastOpenFiles": [
-    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-    "Windows/Windows OS/File System.md",
+    "Defensive Security/Detection Engineering/YARA.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Windows/Windows OS/Windows Processes.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Windows/Windows OS/File System.md",
     "Windows/Windows OS/Windows Registry.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
     "ericzimmerman.github.io.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Windows/Tools/Sysmon.md",
     "Defensive Security/Detection Engineering/Chainsaw.md",
     "Windows/Windows OS/Windows Events Log.md",
@@ -295,13 +300,9 @@
     "Defensive Security/Endpoint Security/Investigating Processes.md",
     "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/KAPE.md",
-    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
-    "Defensive Security/Security Operations/Incident Handling.md",
-    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

@@ -46,18 +46,6 @@ To be able to identify all processes and pin point the malicious ones, the follo
 - Cross-referencing these processes with legitimate ones.
 - Highlighting differences or suspicious processes. 
 
-###### `EPROCESS`
-The `EPROCESS` data structure exists in the Windows kernel and is used to represent a process.
-- Each process in the operating system has an `EPROCESS` block in memory.
-- Can be used to study processes.
-
-Inside the `EPROCESS` there is a linked list called `ActiveProcessLinks` that has a list of all the active processes on the system.
-- There is an `flink` field that points to the next process in the list, and  a `blink` field that points to the previous process in that list.
-- This linked listed found in all of the processes can be used to iterate through all the active processes on a system.
-
-Rootkits can try to alter these fields to hide processes.
-- Use the [[Volatility]] `psscan` plugin to look for these hidden processes.
-
 ##### Dive into Process Components
 
 Once *potentially* rogue processes are flagged out, the *DLLs (Dynamically Linked Libraries)* and *handles* should be assessed.
