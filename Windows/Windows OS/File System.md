@@ -62,7 +62,7 @@ The content of this data stream contains the links and [[IP]]s of where it was d
 - 3 → Internet
 - 4 → Restricted zone
 
-> Zone.Identifier data can be viewed in the output of the [[Eric Zimmerman Tools#MFTEcmd - Master File Table Explorer Command|MFTECmd]] CSV file as it is a *resident* record.
+> Zone.Identifier data can be viewed in the output of the [[Eric Zimmerman Tools#MFTEcmd - Master File Table Explorer Command|MFTECmd]] CSV file as it is a *resident* record. It is also present in *Autopsy*.
 
 ##### Journaling
 
@@ -98,6 +98,8 @@ The MFT is a file that is used to catalog the files and directories on an NTFS v
 
 > The MFT is stored in `C:\$MFT`. The `$` symbolizes that this file is part of the NTFS itself and is not meant for user modification. Can be visualized using [Active@ Disk Editor](https://www.disk-editor.org/index.html) or by [[Eric Zimmerman Tools]]. 
 
+`pagefile.sys` is a designated system file in Windows that supplements your computer's RAM. 
+- When RAM nears its capacity, the system offloads less critical data, like certain files and applications, to the pagefile.
 ##### File Record
 
 Entries in the MFT are called *records*, and records have a structured format that contain *attribute records* about the file *The MFT record is 1024 bytes long*. Each file record has the following `$ATTRIBUTE` records:
