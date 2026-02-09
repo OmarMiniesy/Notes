@@ -4,7 +4,7 @@ Important locations for the [[Windows Registry]] while performing [[DFIR]].
 - The notation here used is that of the registry key location. To check the hive location on disk, check out [[Windows Registry#Accessing the Registry Hives|Registry Hive Locations]].
 - Reminder that `HKEY_CURRENT_USER` maps to `NTUSER.DAT` and that `HKEY_CURRENT_USER\Software\CLASSES` maps to `USRCLASS.DAT`.
 
-> [[Eric Zimmerman Tools]] - Registry Explorer or [RegRipper](https://github.com/keydet89/RegRipper4.0).
+> [[Eric Zimmerman Tools]] - Registry Explorer or [[RegRipper]] to try and extract this information.
 
 ---
 ### System Information & Accounts
@@ -44,14 +44,18 @@ Important locations for the [[Windows Registry]] while performing [[DFIR]].
 ---
 ### Execution Evidence - [[Windows Forensics#Execution Artifacts|Windows Execution Artifacts]]
 
+**Prefetch**: This is a feature that optimizes the loading of application by preloading certain components. A prefetch file is created for every program that is executed on a Windows system. The naming convention of prefetch files is the original name of the executable followed by a hex value of the path of where it resides. The files end with a `.pf` extension.
+- Stored in the `C:\Windows\Prefetch\` directory.
+- Can be analyzed using the [[Eric Zimmerman Tools#PECmd - Prefetch Parser|PECmd]] tool by Eric Zimmerman.
+
 **UserAssist**: This contains information about program launches, the time of launch, and the number of launch times. *Does not contain programs run using the command line*. It groups the runs by the user GUID: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{guid}\count`
 
-**Shimcache**: Ensures application backward compatibility and stores information about the executables, including name, size, and last modified date: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache`
+**Shimcache (AppCompatCache)**: Ensures application backward compatibility and stores information about the executables, including name, size, and last modified date. The key found in the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache`
 
-**Amcache**: Similar to Shimcache, and it also stores data related to program execution, including path, installation, execution times, and a SHA1 hash: `C:\Windows\appcompat\Programs\Amcache.hve`. 
+**Amcache**: Similar to Shimcache, and it also stores data related to program execution, including path, installation, deletion, execution times, and a SHA1 hash. Can be analyzed using [[Eric Zimmerman Tools]], the *AmcacheParser* : `C:\Windows\appcompat\Programs\Amcache.hve`. 
 - Last executed programs can be found at:`C:\Windows\appcompat\Programs\Amcache.hve\Root\File\{volume guid}`
 
-**BAM/DAM - Background Activity Monitor/Desktop Activity Monitor**: These contain information about last run programs, their full paths, and the execution times.
+**BAM/DAM - Background Activity Monitor/Desktop Activity Monitor**: These contain information about last run programs, their full paths, and the execution times. Can be analyzed using [[RegRipper]] or *Registry Explorer* by Eric Zimmerman. 
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\UserSettings\{SID}`
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dam\UserSettings\{SID}`
 

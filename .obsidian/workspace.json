@@ -8,21 +8,56 @@
         "type": "tabs",
         "children": [
           {
-            "id": "1c0e579700b3ae45",
+            "id": "66ac9af288ce3ae8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Detection Engineering/Chainsaw.md",
+                "file": "Windows/Windows OS/Windows Registry.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Chainsaw"
+              "title": "Windows Registry"
             }
           },
           {
-            "id": "cb1de5f74402f6b9",
+            "id": "62e3b1b2ad4a1b89",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Windows OS/File System.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "File System"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "bead9c426e438142",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7bb9b55ec3263867",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DFIR"
+            }
+          },
+          {
+            "id": "af09c0cef6ce85c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -36,7 +71,7 @@
             }
           },
           {
-            "id": "f97f54fd4831715a",
+            "id": "de0395f2ada36dc1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -50,20 +85,21 @@
             }
           },
           {
-            "id": "e3e3fc127a93e1fd",
+            "id": "a890cf84ff7c2a3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DFIR"
+              "title": "Eric Zimmerman Tools"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -95,7 +131,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "chainsaw",
+                "query": "\"entry number",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -116,11 +152,13 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 315.5
+    "width": 315.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -182,10 +220,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scripting/Linux Commands - Files.md"
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Linux Commands - Files"
+              "title": "Outline of Eric Zimmerman Tools"
             }
           },
           {
@@ -233,22 +274,26 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1c0e579700b3ae45",
+  "active": "a890cf84ff7c2a3a",
   "lastOpenFiles": [
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Windows/Windows OS/File System.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+    "Windows/Windows OS/Windows Registry.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "ericzimmerman.github.io.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
+    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
+    "Windows/Tools/Sysmon.md",
+    "Defensive Security/Detection Engineering/Chainsaw.md",
     "Windows/Windows OS/Windows Events Log.md",
     "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
     "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
     "Scripting/Handling Log Files.md",
     "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
-    "Windows/Windows OS/File System.md",
     "Defensive Security/Security Info & Events Mgmt/Logs.md",
     "Defensive Security/Endpoint Security/Investigating Processes.md",
     "Defensive Security/Digital Forensics & Incident Response/Linux Forensics.md",
-    "Windows/Windows OS/Windows Registry.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/KAPE.md",
@@ -257,10 +302,6 @@
     "Defensive Security/Malware Analysis/Static Analysis.md",
     "Defensive Security/Security Operations/Incident Handling.md",
     "Defensive Security/Malware Analysis/Dynamic Analysis.md",
-    "Defensive Security/Malware Analysis/Malware.md",
-    "Defensive Security/Malware Analysis/Code Analysis.md",
-    "Windows/Windows OS/Portable Executable (PE).md",
-    "Windows/Windows OS/Windows Processes.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

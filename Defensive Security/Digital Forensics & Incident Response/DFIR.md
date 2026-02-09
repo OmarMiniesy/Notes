@@ -67,7 +67,7 @@ Some tools used in [[Rapid Triage]]:
 
 Once registry is extracted, we can now view the files of the registry for analysis. This can be done using tools like:
 - [Registry Explorer by Eric Zimmerman](https://ericzimmerman.github.io/#!index.md): Can load multiple hives and adds data from transactional logs.
-- [RegRipper](https://github.com/keydet89/RegRipper3.0): Takes a hive as input and outputs a report with the important keys and values. Does not take transactional logs into account.
+- [[RegRipper]]: Takes a hive as input and outputs a report with the important keys and values. Does not take transactional logs into account.
 
 [[Memory Forensics]]: A system's memory is crucial in investigations, as it provides extra details, like traces of executable files and [[Malware]]. However, this memory is volatile, meaning it is lost after logoffs or after shutdowns of the system. Memory forensics deals with the live state of a system at a particular moment in time.
 - Analyzing how malware interacts with the memory to identify injected code, hooks, or runtime manipulations.

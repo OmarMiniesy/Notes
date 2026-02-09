@@ -11,6 +11,13 @@ A collection and guides on how to run the different Eric Zimmerman tools I stumb
 Tool used to analyze Windows Prefetch files as part of execution artifacts for [[Windows Forensics]].
 - [GitHub Repo](https://github.com/EricZimmerman/PECmd).
 
+**PECmd** outputs information about:
+- First and last execution timestamps
+- Number of times the application was executed
+- Application name and path
+- File size and hash
+- Volumes and directories references by the executable.
+
 The prefetch files are usually found at `C:\Windows\Prefetch`
 
 To run Prefetch Parser on a file and save the results in a CSV, we can use the following command:
@@ -60,7 +67,8 @@ Used to analyze [[File System#NTFS|NTFS]] metadata artifacts like:
 - `$Boot`, `$LogFile`, `$Secure`, and more.
 - [GitHub Repo](https://github.com/EricZimmerman/MFTECmd).
 
-The output of this command can be ingested into the *timeline explorer* tool to view the contents and perform [[DFIR]].  
+The output of this command can be ingested into the *timeline explorer* tool to view the contents and perform [[DFIR]].
+- The output also contains an `entry number` column that can be used to pinpoint certain files.
 
 To analyze the MFT:
 ```PowerShell
