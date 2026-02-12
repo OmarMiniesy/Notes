@@ -1,11 +1,11 @@
 {
   "accentColor": "#eb1e32",
-  "baseFontSize": 20,
+  "baseFontSize": 19,
   "theme": "obsidian",
   "interfaceFontFamily": "",
   "translucency": true,
   "nativeMenus": false,
-  "cssTheme": "Red Graphite",
+  "cssTheme": "Obsidianite",
   "baseFontSizeAction": true,
   "showRibbon": true
 }
