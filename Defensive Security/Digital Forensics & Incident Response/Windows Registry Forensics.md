@@ -48,7 +48,7 @@ Important locations for the [[Windows Registry]] while performing [[DFIR]].
 - Stored in the `C:\Windows\Prefetch\` directory.
 - Can be analyzed using the [[Eric Zimmerman Tools#PECmd - Prefetch Parser|PECmd]] tool by Eric Zimmerman.
 
-**UserAssist**: This contains information about program launches, the time of launch, and the number of launch times. *Does not contain programs run using the command line*. It groups the runs by the user GUID: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{guid}\count`
+**UserAssist**: This contains information about program launches, the time of launch, the focus time, and the number of launch times. *Does not contain programs run using the command line*. It groups the runs by the user GUID: `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist\{guid}\count`
 
 **Shimcache (AppCompatCache)**: Ensures application backward compatibility and stores information about the executables, including name, size, and last modified date. The key found in the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache`
 

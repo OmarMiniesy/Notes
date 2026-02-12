@@ -4,202 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "53d8c636cea98b1f",
-        "type": "tabs",
-        "dimension": 49.41089837997055,
-        "children": [
-          {
-            "id": "62e3b1b2ad4a1b89",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/File System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "File System"
-            }
-          },
-          {
-            "id": "fbcc1f7d1a9e8e9b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Memory Forensics"
-            }
-          },
-          {
-            "id": "6ef771f5a36c20d8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/Windows Processes.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Windows Processes"
-            }
-          },
-          {
-            "id": "96d802b4aa611d4a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Detection Engineering/YARA.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "YARA"
-            }
-          },
-          {
-            "id": "345792974a4f47a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Tools/Sysinternals.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Sysinternals"
-            }
-          },
-          {
-            "id": "95f2b78ef2b42eb1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "System Resource Usage Monitor (SRUM)"
-            }
-          },
-          {
-            "id": "cf2daa1fdb32dc3a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Detection Engineering/Chainsaw.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chainsaw"
-            }
-          },
-          {
-            "id": "cb9b2226f6f91a12",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/File System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "File System"
-            }
-          }
-        ],
-        "currentTab": 7
-      },
-      {
         "id": "bead9c426e438142",
         "type": "tabs",
-        "dimension": 50.58910162002945,
         "children": [
-          {
-            "id": "7bb9b55ec3263867",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "DFIR"
-            }
-          },
-          {
-            "id": "5514fa6383f45e8b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Volatility"
-            }
-          },
-          {
-            "id": "298bd5a1b6eeb9cf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Windows OS/File System.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "File System"
-            }
-          },
-          {
-            "id": "ed2bd89bf972fc7a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Detecting Beaconing Malware"
-            }
-          },
           {
             "id": "6f19be4bd296f91e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Detection Engineering/Hunting for Malware.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Hunting for Malware"
+              "title": "Windows Registry Forensics"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -256,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 315.5,
-    "collapsed": true
+    "width": 383.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -319,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Defensive Security/Detection Engineering/Hunting for Malware.md",
+                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Hunting for Malware"
+              "title": "Outline of Windows Registry Forensics"
             }
           },
           {
@@ -375,26 +196,26 @@
   },
   "active": "6f19be4bd296f91e",
   "lastOpenFiles": [
+    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+    "Defensive Security/Detection Engineering/Hunting for Malware.md",
+    "ericzimmerman.github.io.md",
     "Windows/Windows OS/File System.md",
     "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
     "Windows/Windows OS/Windows Processes.md",
     "Defensive Security/Detection Engineering/Chainsaw.md",
     "Windows/Windows OS/System Resource Usage Monitor (SRUM).md",
     "Windows/Tools/Sysinternals.md",
     "Defensive Security/Detection Engineering/YARA.md",
-    "Defensive Security/Detection Engineering/Hunting for Malware.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting ARP Attacks.md",
     "Scripting/PowerShell Scripting.md",
     "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
     "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
     "Windows/Windows OS/Windows Registry.md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
-    "ericzimmerman.github.io.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
     "Windows/Tools/Sysmon.md",
     "Windows/Windows OS/Windows Events Log.md",
     "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
