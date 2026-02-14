@@ -82,6 +82,8 @@ Another technique for persistence is by using *Services* which are used to enabl
 - The registry can show these services at `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services`.
 - If the `start` key is set to `0x02`, then this service will start at boot.
 
+> Can be collected by [[Velociraptor]] using the `Windows.Sys.StartupItems` artifact.
+
 ---
 ### [[System Resource Usage Monitor (SRUM)]]
 

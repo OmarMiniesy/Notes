@@ -5,6 +5,10 @@ This is an [[Endpoint Detection and Response (EDR)]] tool that is used to gather
 - Can be used to dump the memory of an endpoint remotely.
 - [Velociraptor Documentation](https://docs.velociraptor.app/docs/)
 
+Artifact collection is the way velociraptor works.
+- By choosing an artifact to search for whatever is needed and configuring it.
+- Then performing queries on the output.
+
 > Velociraptor can utilize [[KAPE]] *target* files to collect evidence.
 
 ---
