@@ -2,6 +2,7 @@
 
 This is the server that allows the AD to have a public key cryptographic infrastructure with [[Digital Signatures]] and [[Certificates]].
 - It allows for the creation and running of a *Certificate Authority*, which is the server that issues, signs, and manages digital certificates.
+- This enables the organization to have certificate based logins and secure services.
 
 Certificates are usually valid for more than 1 year, and resetting a user's password does not invalidate the certificate.
 - This makes this a target by attackers.

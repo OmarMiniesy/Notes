@@ -64,6 +64,14 @@ cat file.txt | sort | uniq -c | sort -n
 - The `uniq - c` will then print each duplicated line once along with its count to its left.
 - The final `sort -n` will sort by the count in *ascending* order, add `-r` to sort in *descending* order. 
 
+The `grep` tool can be used with the following flags:
+- `-c` to count the number of entries the specific string occurs in the file.
+- `-n` to output the line number with the match.
+- `-v` to perform an inverse `grep` operation, returning only the lines that do not have the specified string.
+- `-E` flag to utilize [[Regular Expressions]].
+
+
+
 ---
 ### Writing to Files
 

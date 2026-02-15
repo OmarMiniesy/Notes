@@ -14,7 +14,7 @@ An _OU_ is used to define a set of users with similar policy requirements.
 There are also some default OUs that are created by Windows:
 - **Builtin**: This contains default groups that are available to all Windows hosts.
 - **Computers**: This contains any machine that joins the network.
-- **Domain Controllers**: This contains the DCs of the network.
+- **Domain Controllers**: This contains the [[Domain Controller]]s of the network.
 - **Users**: Contains the users and groups.
 - **Managed Services Accounts**: Holds the accounts used by services in the windows domain.
 

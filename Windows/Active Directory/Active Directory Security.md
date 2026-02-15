@@ -1,4 +1,3 @@
-
 ### AdminSDHolder
 
 This is an object that provides template permissions for the protected accounts and groups in the domain.

@@ -1,8 +1,8 @@
 ### General Notes
 
 A resource inside AD is called an *object*. All objects have *attributes* that define its characteristics.
-- All attributes have an associated *LDAP* name that can be used through LDAP queries.
-- This [list](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes-all) has all of the attributes used by AD.
+- All attributes have an associated [[Lightweight Directory Access Protocol (LDAP)]] name that can be used through LDAP queries.
+- This [list](https://learn.microsoft.com/en-us/windows/win32/adschema/attributes-all) has all of the attributes used by [[Active Directory]].
 
 The *schema* defines what types of objects exist in the [[Active Directory]] database and all its associated attributes.
 - This schema can be used by applications to understand what objects and properties are available.
@@ -28,9 +28,9 @@ Every object has a *unique SID* that is issued by the [[Domain Controller]], sto
 An *RID* is the last part of the *SID*.
 - The ***RID*** distinguishes between different users or groups within the same domain or machine.
 - Combined with the domain/machine part of the SID, it forms a globally unique identifier.
-- User created accounts have RIDs of 1000 or more.
+- *User created accounts have RIDs of 1000 or more.*
 
-Certain accounts and groups always have fixed RIDs:
+Certain accounts and groups always have fixed RIDs. Check the [[Rights & Privileges]] *Built In* groups section for more information.
 
 |RID|Account/Group|
 |---|---|
@@ -71,7 +71,7 @@ Some of the objects supported by _AD_ are:
 - Machines
 - Shares
 - [[Trees, Forests, and Trusts#Trust Relationships|Domain Trusts]]
-- [[Access Control Lists (ACLs)]]
+- [[#Access Control Lists]]
 
 > To configure users, groups, and machines in Active Directory, the [[Active Directory Users and Computers]] application needs to be run from the Domain Controller.
 

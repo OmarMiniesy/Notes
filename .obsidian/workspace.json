@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "33fcca98de8f1971",
+        "id": "f9df5deaff7bd303",
         "type": "tabs",
         "children": [
           {
-            "id": "b0614cfb6d65bb2f",
+            "id": "c9f051cc12331258",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Windows/Active Directory/Objects.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Objects"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "chainsaw",
+                "query": "SPN",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 401.5041847229004
+    "width": 368.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -190,9 +194,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b0614cfb6d65bb2f",
+  "active": "c9f051cc12331258",
   "lastOpenFiles": [
+    "Windows/Active Directory/Trees, Forests, and Trusts.md",
     "Windows/Active Directory/Objects.md",
+    "Windows/Active Directory/Rights & Privileges.md",
     "Windows/Active Directory/NTLM.md",
     "Windows/Active Directory/Lightweight Directory Access Protocol (LDAP).md",
     "Windows/Active Directory/Kerberos.md",
@@ -202,22 +208,20 @@
     "Windows/Active Directory/Active Directory Security.md",
     "Windows/Active Directory/Active Directory Certificate Services.md",
     "Windows/Active Directory/Active Directory.md",
-    "Offensive Security/Windows Security/Print Spooler.md",
-    "Offensive Security/Windows Security/Misconfigured Certificate Templates - ESC1.md",
-    "Offensive Security/Windows Security/Kerberos Constrained Delegation Attack.md",
-    "Offensive Security/Windows Security/GPP Passwords.md",
-    "Offensive Security/Windows Security/Golden Ticket.md",
-    "Offensive Security/Windows Security/DCSync.md",
-    "Offensive Security/Windows Security/Credentials in Object Properties.md",
-    "Offensive Security/Windows Security/Credentials in Shares.md",
-    "Offensive Security/Windows Security/Coercing Attacks.md",
-    "Offensive Security/Windows Security/AS-REProasting.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-    "Defensive Security/Digital Forensics & Incident Response/DFIR.md",
-    "Windows/Windows OS/Windows Registry.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
+    "Offensive Security/Web Application Security/Session Security.md",
+    "Defensive Security/Security Info & Events Mgmt/SIEM.md",
+    "Scripting/Linux Commands - Files.md",
+    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+    "Defensive Security/Detection Engineering/Sigma.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/ELK - Elasticsearch, Kibana, & Logstash.md",
+    "Regular Expressions/Character Classes.md",
+    "Regular Expressions/Anchors.md",
+    "Scripting/Handling Log Files.md",
+    "Scripting/Bash Scripting.md",
+    "Defensive Security/Security Info & Events Mgmt/Logs.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

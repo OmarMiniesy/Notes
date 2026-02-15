@@ -36,7 +36,7 @@ A folder that stores copies of public files in the domain. This shared directory
 - *Scripts folder*: logon/logoff scripts, other script types
 - The content of the SYSVOL folder is replicated to the DCs within the environment using the *File Replication Service (FRS)*.
 
-> This share is located at `C:\\\\Windows\\\\SYSVOL\\\\sysvol\\\\` in the domain controller.
+> This share is located at `C:\Windows\SYSVOL\sysvol` in the domain controller.
 
 ###### NTDS.DIT
 
