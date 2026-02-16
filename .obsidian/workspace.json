@@ -4,24 +4,82 @@
     "type": "split",
     "children": [
       {
-        "id": "f9df5deaff7bd303",
+        "id": "fafe4ae440595289",
         "type": "tabs",
+        "dimension": 99.99999999999999,
         "children": [
           {
-            "id": "c9f051cc12331258",
+            "id": "c34cf7668d5ceb7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Active Directory/Objects.md",
+                "file": "Offensive Security/Tools/BloodHound.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Objects"
+              "title": "BloodHound"
+            }
+          },
+          {
+            "id": "deb5b964fdf65409",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Offensive Security/Windows Security/Password Spraying.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Password Spraying"
+            }
+          },
+          {
+            "id": "649dbef92705b812",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Splunk Queries"
+            }
+          },
+          {
+            "id": "e38f58c4196d859a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Splunk Processing Language (SPL)"
+            }
+          },
+          {
+            "id": "fae5a4983c704c16",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Offensive Security/Windows Security/Domain Reconnaissance.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Domain Reconnaissance"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -53,7 +111,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "SPN",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -78,7 +136,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368.5
+    "width": 353.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -194,34 +252,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "c9f051cc12331258",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Windows/Active Directory/Trees, Forests, and Trusts.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
+    "Offensive Security/Windows Security/Password Spraying.md",
+    "Offensive Security/Tools/BloodHound.md",
+    "Offensive Security/Windows Security/Domain Reconnaissance.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+    "Defensive Security/Endpoint Security/SilkETW.md",
+    "Windows/Windows OS/Event Tracing for Windows (ETW).md",
+    "Windows/Tools/Get-WinEvent.md",
+    "Networking/Address Resolution Protocol (ARP).md",
+    "Windows/Active Directory/Active Directory.md",
+    "Windows/Active Directory/Group Policy Object.md",
     "Windows/Active Directory/Objects.md",
     "Windows/Active Directory/Rights & Privileges.md",
+    "Offensive Security/Windows Security/Credentials in Shares.md",
+    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Application.md",
+    "Cryptography/Certificates.md",
+    "Windows/Active Directory/Trees, Forests, and Trusts.md",
     "Windows/Active Directory/NTLM.md",
     "Windows/Active Directory/Lightweight Directory Access Protocol (LDAP).md",
     "Windows/Active Directory/Kerberos.md",
-    "Windows/Active Directory/Group Policy Object.md",
     "Windows/Active Directory/Domain Controller.md",
     "Windows/Active Directory/Active Directory Users and Computers.md",
     "Windows/Active Directory/Active Directory Security.md",
-    "Windows/Active Directory/Active Directory Certificate Services.md",
-    "Windows/Active Directory/Active Directory.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Identifying Hosts.md",
-    "Offensive Security/Web Application Security/Session Security.md",
-    "Defensive Security/Security Info & Events Mgmt/SIEM.md",
-    "Scripting/Linux Commands - Files.md",
-    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
-    "Defensive Security/Detection Engineering/Sigma.md",
-    "Defensive Security/Security Info & Events Mgmt/ELK/ELK - Elasticsearch, Kibana, & Logstash.md",
-    "Regular Expressions/Character Classes.md",
-    "Regular Expressions/Anchors.md",
-    "Scripting/Handling Log Files.md",
-    "Scripting/Bash Scripting.md",
-    "Defensive Security/Security Info & Events Mgmt/Logs.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

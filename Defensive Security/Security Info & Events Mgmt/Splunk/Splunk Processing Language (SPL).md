@@ -93,6 +93,13 @@ index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 | eval Process_Path=low
 ```
 - This creates a new field which has the lower-case version of `Image`.
 
+The `dc` function can be used to count the unique number of a certain field.
+```SPL
+index=main source="WinEventLog:Security" EventCode=4625
+| stats values(user) as Users, dc(user) as dc_user by src
+```
+- This groups by the `src` host the usernames and the distinct count of usernames tried.
+
 > `rex` command can be used to create fields using [[Regular Expressions]]. [Guide on Splunk docs](https://docs.splunk.com/Documentation/Splunk/9.4.2/SearchReference/Rex).
 
 The `stats` command can be used to perform statistical operations, such as counting.
@@ -100,6 +107,7 @@ The `stats` command can be used to perform statistical operations, such as count
 index="main" sourcetype="WinEventLog:Sysmon" EventCode=3 | stats count by _time, Image
 ```
 - This will return an extra column called `count`, that counts the number of unique combinations of `_time` and `Image`.
+- When using the `stats` with `values`, use the `as` to rename the column to be used in later filters using `where` if they are going to be used again.
 
 > The `chart` command can be used to visualize statistical operations. Instead of `stats`, use `chart`.
 

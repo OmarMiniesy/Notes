@@ -143,6 +143,8 @@ There are some default security groups that are created in a domain.
 - **Domain Computers**: All computers of the domain.
 - **Domain Controllers**: All the domain controllers of the domain.
 
+> Check out [[Rights & Privileges]] for a list of the built in groups.
+
 > The default security groups are held in the _built-in_ container.
 
 Some important group attributes are:
