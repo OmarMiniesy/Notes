@@ -56,12 +56,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
+                "file": "Offensive Security/Windows Security/Responder Attacks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Splunk Processing Language (SPL)"
+              "title": "Responder Attacks"
             }
           },
           {
@@ -79,7 +79,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -252,10 +252,11 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "fae5a4983c704c16",
   "lastOpenFiles": [
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
+    "Offensive Security/Windows Security/Responder Attacks.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
     "Offensive Security/Windows Security/Password Spraying.md",
     "Offensive Security/Tools/BloodHound.md",
@@ -279,7 +280,6 @@
     "Windows/Active Directory/Kerberos.md",
     "Windows/Active Directory/Domain Controller.md",
     "Windows/Active Directory/Active Directory Users and Computers.md",
-    "Windows/Active Directory/Active Directory Security.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
