@@ -1,13 +1,12 @@
 ### General Notes
 
 This is a *post exploitation* attack that targets the [[Kerberos]] authentication protocol in [[Active Directory]], and specifically, the *Ticket Granting Service (TGS)* ticket.
-- The attacker here is after the service account password that is used to encrypt that TGS.
+- The attacker here is after the service account password that is used to encrypt the TGS.
 - This is mapped to the [[MITRE ATT&CK]] sub-technique `T1558.003`.
 
 > This allows the attacker to impersonate an account; giving access to the system, services, networks, and anything else that the account is entitled to.
 
 Some of the essential concepts to know for this attack are:
-
 ###### Ticket Granting Service (TGS)
 
 By supplying the *SPN* of the service, the *Key Distribution Center (KDC)* issues a ticket for a user to be able to access that specific service.
@@ -81,11 +80,28 @@ To prevent this attack, the following techniques can be implemented:
 
 ### Detection
 
+Since the first part of this attack involves identifying target service accounts, we can monitor [[Lightweight Directory Access Protocol (LDAP)]] activity, specially for [[Domain Reconnaissance]] activity.
+- Check out [[BloodHound#Detecting Bloodhound Usage|LDAP Filters]] for filters on LDAP usage in reconnaissance.
+- For SPN querying, we can use the filter in the `SearchFilter` field in [[SilkETW]] output channel. Check out [[Splunk Queries#Detecting Recon by BloodHound]] for guidance.
+```
+*(&(samAccountType=805306368)(servicePrincipalName=*)*
+```
+
+Another detection idea is to understand the difference between Kerberoasting activity and normal activity.
+- For both, TGS tickets for services will be requested, but only in normal activity will the user login after the TGS is requested.
+- For Kerberoasting, this is not the case, as the attacker wants to crack the password.
+- We cam group all TGS request events by the same user and checking if there are logon events after these TGS request events.
+
 To detect this attack, we can utilize [[Windows Events Log]] logs with Event ID `4769`.
 - This log is generated when TGS are requested.
 - This log is generated when a user attempts to access a service.
 - The log contains the ticket encryption type, which can be `AES`, `RC4`, or `DES`. If it is `0x17`, then it is `RC4` which is vulnerable to Kerberoasting. `0x1` and `0x3` are `DES` and are also vulnerable.
 - This event is generated a lot of times, so we should group it by the user requesting tickets and from which machine the tickets were requested from to see any abnormal behavior. Also filtering on the encryption type, to see if any type that is abnormal is being used in the environment.
+
+The normal [[Kerberos]] authorization flow can also be useful by monitoring these [[Windows Events Log]] Event IDs:
+- `4768`: This is the Kerberos TGT request event.
+- `4769`: This is the Kerberos TGS request sent by the client for the needed service.
+- `4624`: This is the logon event when the user successfully logs in to the service.
 
 Looking also for the *account name* that is not a machine account (not ending with `$`), and the *service name* also not being a machine account is also useful.
 - This is because machine accounts request TGS tickets all the time.

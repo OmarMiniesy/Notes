@@ -4,13 +4,15 @@ This is a *proactive*, human-led, and hypothesis driven approach to search for s
 - Uncovering threats that are present inside the network that have not yet been detected by prioritizing anticipation over reaction.
 - It can also be a *reactive* approach to search for evidence related to incidents in the network.
 
-> The team between an actual security breach and its detection is called *dwell time*.
+> The time between an actual security breach and its detection is called *dwell time*.
 
 Threat hunting operations should be done in a periodic manner, but these instances require an immediate hunting operation:
 - New information about adversaries or vulnerabilities is known.
 - When new Indicators of Compromise are known that are associated with a known adversary.
 - When multiple concurrent network anomalies take place.
 - During incident response.
+
+> Check out the [Threat Hunting Project Documents](https://www.threathunting.net/reading-list) for a deeper dive into threat hunting.
 
 ###### Minimizing Dwell Time
 Threat hunting is used to minimize dwell time by recognizing malicious entities at the earliest stages of the [[Cyber Kill Chains]], to prevent them from expanding and growing inside the network.

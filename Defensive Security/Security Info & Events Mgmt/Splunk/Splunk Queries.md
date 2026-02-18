@@ -52,3 +52,33 @@ index=main source="WinEventLog:Security" EventCode=4625
 - This allows us to identify the usernames and the distinct count of usernames that had a failed log in attempt by the same source computer and the same destination computer. If we observe a lot of usernames, then this is indicative of password spraying.
 
 ---
+### Detecting [[Kerberoasting]] - TGS Requests
+
+```
+index=main EventCode=4648 OR (EventCode=4769 AND service_name=iis_svc)
+| dedup RecordNumber
+| rex field=user "(?<username>[^@]+)"
+| bin span=2m _time 
+| search username!=*$ 
+| stats values(EventCode) as Events, values(service_name) as service_name, values(Additional_Information) as Additional_Information, values(Target_Server_Name) as Target_Server_Name by _time, username
+| where !match(Events,"4648")
+```
+- This query is searching for all TGS requests that do not have a corresponding explicit credential logon in the same time window.
+- It filters out the events where the username ends in a `$`, which signifies a computer account.
+- `| rex field=user "(?<username>[^@]+)"`: Extracts the `username` portion of the `user` field using a regular expression and stores it in a new field called `username`.
+
+### Detecting [[Kerberoasting]] - TGS Transactions
+
+```
+index=main earliest=1690450374 latest=1690450483 EventCode=4648 OR (EventCode=4769 AND service_name=iis_svc)
+| dedup RecordNumber
+| rex field=user "(?<username>[^@]+)"
+| search username!=*$ 
+| transaction username keepevicted=true maxspan=5s endswith=(EventCode=4648) startswith=(EventCode=4769) 
+| where closed_txn=0 AND EventCode = 4769
+| table _time, EventCode, service_name, username
+```
+- `| transaction username keepevicted=true maxspan=5s endswith=(EventCode=4648) startswith=(EventCode=4769)`: Groups events into `transactions` based on the `username` field. The `keepevicted=true` option includes events that do not meet the transaction criteria. The `maxspan=5s` option sets the maximum time duration of a transaction to 5 seconds. The `endswith=(EventCode=4648)` and `startswith=(EventCode=4769)` options specify that transactions should start with an event with `EventCode 4769` and end with an event with `EventCode 4648`.
+- `| where closed_txn=0 AND EventCode = 4769`: Filters the results to only include transactions that are not closed (`closed_txn=0`) and have an `EventCode` of `4769`.
+- `| table _time, EventCode, service_name, username`: Displays the remaining events in tabular format with the specified fields.
+- This query focuses on identifying events with an `EventCode` of `4769` that are part of an incomplete transaction (i.e., they did not end with an event with `EventCode 4648` within the `5`-second window).
