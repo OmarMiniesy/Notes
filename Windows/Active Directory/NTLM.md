@@ -29,7 +29,7 @@ Before hashing, the 14 character password is split into 2 seven character chunks
 ###  NTLM
 
 The NT hash is the MD4 hash of the little-endian UTF-16 value of the password.
-- Stronger than LM but still susceptible to brute force attacks easily, and to the *pass the hash attack*, where the ciphertext of the password (hash) can be used without knowing the plaintext of the password.
+- Stronger than LM but still susceptible to brute force attacks easily, and to the [[Pass the Hash]] attack, where the ciphertext of the password (hash) can be used without knowing the plaintext of the password.
 
 > The NTLM is also stored in the SAM on Windows machines and in the `NTDS.DIT` on Domain Controllers.
 

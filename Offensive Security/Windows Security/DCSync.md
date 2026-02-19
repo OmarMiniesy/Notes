@@ -12,7 +12,7 @@ However, for an account to request replication, these permissions need to exist:
 
 Once the attacker has extracted the hashed passwords, the following can take place:
 - Crack the passwords offline using tools like [[John the Ripper]].
-- Perform *pass the hash* attacks, which are when the attacker simply places the hashed password as is during requests. The ciphertext is enough, the attacker does not need to know the plaintext.
+- Perform [[Pass the Hash]] attacks, which are when the attacker simply places the hashed password as is during requests. The ciphertext is enough, the attacker does not need to know the plaintext.
 
 ---
 ### Attack Path

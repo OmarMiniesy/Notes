@@ -4,7 +4,7 @@ A process maintains and represents the execution of a program. A process has:
 - *Virtual address space*: Virtual memory address for the process.
 - *Executable code*: The code and data stored in the virtual address space.
 - *Handles to system objects*: Open handles to system resources accessible by the process.
-- *Access Token*: This is the security context of the process, which has the user, the security groups, privileges, and integrity level.
+- *Access Token*: This is the security context of the process, which has the user, the security groups, privileges, and integrity level. They reference a `LogonSession` generated at user logon. This `LogonSession` security structure contains such information as Username, Domain, and AuthenticationID ([[NTLM]]), and is used when the process attempts to access *remote* resources.
 - *Process Identifier*
 - *Environment variables*
 - *Priority class*

@@ -4,67 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "fafe4ae440595289",
+        "id": "6481eecd9118af47",
         "type": "tabs",
         "children": [
           {
-            "id": "b6c44289f2081a0c",
+            "id": "cee711a1091151e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Offensive Security/Windows Security/Kerberoasting.md",
+                "file": "Offensive Security/Windows Security/Pass the Ticket.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kerberoasting"
-            }
-          },
-          {
-            "id": "93e787f2bd386a73",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Offensive Security/Windows Security/AS-REProasting.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "AS-REProasting"
-            }
-          },
-          {
-            "id": "e71c48abf55f4738",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Splunk Queries"
-            }
-          },
-          {
-            "id": "a18fb3ef1eda1375",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Offensive Security/Tools/BloodHound.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BloodHound"
+              "title": "Pass the Ticket"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -96,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"pass the hash\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -121,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 317.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -237,11 +194,22 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "93e787f2bd386a73",
+  "active": "cee711a1091151e2",
   "lastOpenFiles": [
-    "Offensive Security/Windows Security/Kerberoasting.md",
-    "Offensive Security/Tools/BloodHound.md",
+    "Offensive Security/Windows Security/Pass the Ticket.md",
+    "Windows/Active Directory/NTLM.md",
+    "Offensive Security/Windows Security/DCSync.md",
+    "Windows/Active Directory/Active Directory.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
+    "Windows/Active Directory/Pass the Hash.md",
+    "Windows/Windows OS/Windows Processes.md",
+    "Windows/Active Directory/Objects.md",
+    "Windows/Windows OS/Windows API Call Flow.md",
+    "Offensive Security/Windows Security/Golden Ticket.md",
+    "Offensive Security/Windows Security/Kerberoasting.md",
+    "Offensive Security/Windows Security/AS-REProasting.md",
+    "Offensive Security/Windows Security/Kerberos Constrained Delegation Attack.md",
+    "Offensive Security/Tools/BloodHound.md",
     "Defensive Security/Security Operations/Threat Hunting.md",
     "Offensive Security/Windows Security/Password Spraying.md",
     "Offensive Security/Windows Security/Responder Attacks.md",
@@ -253,18 +221,7 @@
     "Windows/Windows OS/Event Tracing for Windows (ETW).md",
     "Windows/Tools/Get-WinEvent.md",
     "Networking/Address Resolution Protocol (ARP).md",
-    "Windows/Active Directory/Active Directory.md",
     "Windows/Active Directory/Group Policy Object.md",
-    "Windows/Active Directory/Objects.md",
-    "Windows/Active Directory/Rights & Privileges.md",
-    "Offensive Security/Windows Security/Credentials in Shares.md",
-    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Application.md",
-    "Cryptography/Certificates.md",
-    "Windows/Active Directory/Trees, Forests, and Trusts.md",
-    "Windows/Active Directory/NTLM.md",
-    "Windows/Active Directory/Lightweight Directory Access Protocol (LDAP).md",
-    "Windows/Active Directory/Kerberos.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",

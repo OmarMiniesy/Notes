@@ -82,3 +82,43 @@ index=main earliest=1690450374 latest=1690450483 EventCode=4648 OR (EventCode=47
 - `| where closed_txn=0 AND EventCode = 4769`: Filters the results to only include transactions that are not closed (`closed_txn=0`) and have an `EventCode` of `4769`.
 - `| table _time, EventCode, service_name, username`: Displays the remaining events in tabular format with the specified fields.
 - This query focuses on identifying events with an `EventCode` of `4769` that are part of an incomplete transaction (i.e., they did not end with an event with `EventCode 4648` within the `5`-second window).
+
+---
+### Detecting [[AS-REProasting]]
+
+```
+index=main source="WinEventLog:SilkService-Log" 
+| spath input=Message 
+| rename XmlEventData.* as * 
+| table _time, ComputerName, ProcessName, DistinguishedName, SearchFilter 
+| search SearchFilter="*(samAccountType=805306368)(userAccountControl:1.2.840.113556.1.4.803:=4194304)*"
+```
+- Review the above queries to understand the `spath` and `rename` lines.
+- What this query does is that it filters only for user objects and for accounts with unconstrained delegation.
+
+```
+index=main source="WinEventLog:Security" EventCode=4768 Pre_Authentication_Type=0
+| rex field=src_ip "(\:\:ffff\:)?(?<src_ip>[0-9\.]+)"
+| table _time, src_ip, user, Pre_Authentication_Type, Ticket_Options, Ticket_Encryption_Type
+```
+- This query checks for TGT requests made for accounts with pre-authentication disabled.
+
+---
+### Detecting [[Pass the Hash]]
+
+```
+index=main source="WinEventLog:Security" EventCode=4624 Logon_Type=9 Logon_Process=seclogo
+| table _time, ComputerName, EventCode, user, Network_Account_Domain, Network_Account_Name, Logon_Type, Logon_Process
+```
+
+```
+index=main (source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=10 TargetImage="C:\\Windows\\system32\\lsass.exe" SourceImage!="C:\\ProgramData\\Microsoft\\Windows Defender\\platform\\*\\MsMpEng.exe") OR (source="WinEventLog:Security" EventCode=4624 Logon_Type=9 Logon_Process=seclogo)
+| sort _time, RecordNumber
+| transaction host maxspan=1m endswith=(EventCode=4624) startswith=(EventCode=10)
+| stats count by _time, Computer, SourceImage, SourceProcessId, Network_Account_Domain, Network_Account_Name, Logon_Type, Logon_Process
+| fields - count
+```
+- `(source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=10 TargetImage="C:\\Windows\\system32\\lsass.exe" SourceImage!="C:\\ProgramData\\Microsoft\\Windows Defender\\platform\\*\\MsMpEng.exe")`: Filters the search to only include `Sysmon` operational log events with an `EventCode` of `10` (Process Access). It further narrows down the results to events where the `TargetImage` is `C:\Windows\system32\lsass.exe` (indicating that the `lsass.exe` process is being accessed) and the `SourceImage` is not a known legitimate process from the Windows Defender directory.
+- `OR (source="WinEventLog:Security" EventCode=4624 Logon_Type=9 Logon_Process=seclogo)`: Filters the search to also include Security event log events with an `EventCode` of `4624` (Logon), `Logon_Type` of `9` (NewCredentials), and `Logon_Process` of `seclogo`.
+
+---

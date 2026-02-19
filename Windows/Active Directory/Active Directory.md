@@ -44,7 +44,7 @@ When a client joins the network, the [[Domain Controller]] is located by:
 
 In the case that the [[Domain Controller]]s are unreachable, *Domain Cached Credentials (DCC)* are used, using the *MSCache2* algorithm.
 - A host will save the last 10 hashes for any domain [[Objects#Users|Users]] that successfully authenticated in the `HKEY_LOCAL_MACHINE\SECURITY\CACHE` [[Windows Registry]] key.
-- Cannot be used in *pass the hash attacks* and are hard to brute force.
+- Cannot be used in [[Pass the Hash]] attacks and are hard to brute force.
 
 This is how they look:
 ```

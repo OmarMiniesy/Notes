@@ -2,10 +2,16 @@
 
 This is an attack similar to the [[Kerberoasting]] attack that also targets the [[Kerberos]] [[Active Directory]] authentication protocol.
 - This attack targets [[Objects#Users|User]] accounts that have the property `Do not require Kerberos preauthentication` enabled to obtain their hashed passwords and crack them.
-###### *Kerberos Preauthentication*
+
+> Also works on accounts with *unconstrained delegation* enabled.
+##### *Kerberos Preauthentication*
 
 Normally, a user account that has this property enabled forces the user to prove they know their password before the *KDC*, *Key Distribution Center*, can give them anything useful.
 - If this property is disabled, then the requesting user does not need to prove their identity to the KDC, and the KDC replies with data that is encrypted with the requesting user's password.
+
+When **pre-authentication is enabled**, requests sent by users to access services contain an encrypted timestamp `pA-ENC-TIMESTAMP` in the `AS-REQ`.
+- The KDC attempts to decrypt this timestamp using the user hash, and if successful, issues the TGT to the user in the `AS-REP`.
+- When **pre-authentication is disabled**, there is no timestamp validation by the KDC, allowing users to request TGT tickets without knowing the user password.
 
 Therefore, an attacker needs to send a fake logon request, *AS-REQ* to a KDC acting as a user that has *Kerberos Preauthentication* disabled.
 - The KDC replies with the *AS-REP* encrypted with the user's password. This response contains the *TGT*.
@@ -19,6 +25,7 @@ The attacker must first find users that have *Kerberos Preauthentication* disabl
 ```powershell
 Rubeus.exe asreproast /outfile:asrep.txt
 ```
+- Rubeus sends the AS-REQ under the hood to the KDC, and receives the AS-REP encrypted with the user's hash.
 
 Once the tool extracts the user hashes, we need to modify the output such that `hashcat` can crack the encryption.
 - We do this by adding `23$` after `krb5asrep$` in the output file.
@@ -35,6 +42,11 @@ sudo hashcat -m 18200 -a 0 <asrep.txt> <password-dictionary.txt> --outfile asrep
 ### Prevention & Detection
 
 Make sure that the accounts with the property `Kerberos Preauthentication` are reviewed regularly and have strong password policies.
+
+Since the first part of this attack involves identifying user accounts with no pre-authentication or with unconstrained delegation enabled, we can monitor [[Lightweight Directory Access Protocol (LDAP)]] activity, specially for [[Domain Reconnaissance]] activity.
+- Check out [[BloodHound#Detecting Bloodhound Usage|LDAP Filters]] for filters on LDAP usage in reconnaissance.
+- In event ID `4768` for TGT requests, can check for the `PreAuthType` attribute in the *additional information* part of the event which will show whether pre-authentication is enabled or not.
+- Check out [[Splunk Queries#Detecting AS-REProasting]]
 
 Since the attacker instigates the creation of a *TGT*, we can use the [[Windows Events Log]] Event with ID `4768` which creates a log when a *TGT* is requested.
 - The tool `Rubeus` will cause these logs to be generated.
