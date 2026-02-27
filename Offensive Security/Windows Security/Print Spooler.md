@@ -14,7 +14,7 @@ If any Domain Controller has *print spooler* service enabled - knowing it is the
 The following attacks are possible:
 1. The attacker can authenticate to another DC, and perform a [[DCSync]] attack to extract all the password hashes of the Active Directory. This is the case if [[Server Message Block (SMB)]] signing is off.
 2. Relay the authentication to *Active Directory Certificate Services* to obtain a [[Certificates|Certificate]] for the [[Domain Controller]] that can be used by attackers to pretend to be the Domain Controller.
-3. The attacker can relay the connection to a machine with [[Kerberos Constrained Delegation Attack#Delegation|Unconstrained Delegation]] enabled, which causes that machine to obtain the DC's *TGT*. The attacker can them dump the *TGT* of the DC from the machine and impersonate the DC.
+3. The attacker can relay the connection to a machine with [[Kerberos Delegation Attacks#Delegation|Unconstrained Delegation]] enabled, which causes that machine to obtain the DC's *TGT*. The attacker can them dump the *TGT* of the DC from the machine and impersonate the DC.
 
 > This is a type of [[Coercing Attacks]], where an attacker forces or tricks a Windows host into authenticating to another system controlled by the attacker.
 

@@ -151,3 +151,35 @@ index=main source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" (EventCo
 - We then keep only Event ID 3, we only used Event ID 1 to obtain the data about the processes, to show network connections.
 
 ---
+### Detecting [[Kerberos Delegation Attacks]]
+
+To detect *unconstrained delegation*:
+```
+index=main source="WinEventLog:Microsoft-Windows-PowerShell/Operational" EventCode=4104 
+Message="*TrustedForDelegation*" 
+OR Message="*userAccountControl:1.2.840.113556.1.4.803:=524288*" 
+| table _time, ComputerName, EventCode, Message
+```
+- This query detects the reconnaissance attempts to start the unconstrained delegation attack.
+- We use the `Message="*TrustedForDelegation*"` to look for any PowerShell scripts that have been employed to do reconnaissance for accounts with unconstrained delegation enabled.
+- Attackers also enumerate delegation via [[Lightweight Directory Access Protocol (LDAP)]] filters. Where the `userACcountControl` bit has the value `524288` in decimal which represents `TRUSTED_FOR_DELEGATION`.
+
+To detect *constrained delegation*:
+```
+index=main source="WinEventLog:Microsoft-Windows-PowerShell/Operational" EventCode=4104 Message="*msDS-AllowedToDelegateTo*" 
+| table _time, ComputerName, EventCode, Message
+```
+- The `AllowedToDelegateTo` is used to look for accounts with constrained delegation as it states only the services that can be delegated to.
+
+---
+### Detecting [[DCSync]]
+
+```
+index=main EventCode=4662 Message="*Replicating Directory Changes*"
+| rex field=Message "(?P<property>Replicating Directory Changes.*)"
+| table _time, user, object_file_name, Object_Server, property
+```
+- Filters for events that have the message containing `Replicating Directory Changes` which is done whenever DCSync happens.
+- We can then check the username and determine if it is malicious.
+
+---

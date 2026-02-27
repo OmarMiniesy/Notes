@@ -47,3 +47,18 @@ The TGS is encrypted with a secret key derived from the [[NTLM]] password hash o
 > The TGS is encrypted using a key derived from the password of the service being requested so that only the service can decrypt the ticket and verify it. 
 
 ---
+### Delegation
+
+Delegation basically delegates a service account to access resources/services on behalf of a [[Objects#Users|User]], which extends a user identity to the back-end server.
+- This allows the user to get access to content without having to be assigned access.
+- There are 3 types of delegation, *constrained*, *unconstrained*, and *resource based*.
+
+1. **Unconstrained delegation** allows an account to delegate to any service. This is a “collector box” that automatically saves the keys (TGTs) of anyone who connects to it.
+2. **Constrained delegation** allows services to delegate user credentials only to specified resources. Any user or computer accounts that have service principal names (SPNs) set in their `msDS-AllowedToDelegateTo` property can impersonate any user in the domain to those specific SPNs.
+3. **Resource-based delegation** places the configuration at the delegated object side. That is, the service account that is to be delegated has stored which accounts can delegate to it.
+
+When *unconstrained delegation* is enabled, when a user requests a *TGS* ticker for a service, the [[Domain Controller]] will embed the user's *TGT* into the *TGS*.
+- That way, when connecting to the remote service, the user will present both the TGS and the TGT.
+- That way, when the service needs to authenticate to another service on behalf of the user, it will present the user's *TGT* it has.
+
+---

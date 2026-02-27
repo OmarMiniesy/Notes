@@ -2,17 +2,11 @@
 
 If an attacker owns - knows the password - to a service account, the attacker can impersonate any user to the services that are trusted by this service account for delegation.
 - The services being accessed trust that the service account is allowed to delegate on behalf of the user.
+- Check out [[Kerberos#Delegation|Delegation]].
 
 > The attacker goes to the KDC as this service account, *pretends to be another user*, and asks for a ticket to access a specific service as that impersonated user.
 
-###### Delegation
-[[Kerberos]] delegation basically delegates a service account to access resources/services on behalf of a [[Objects#Users|User]], which extends a user identity to the back end server.
-- This allows the user to get access to content without having to be assigned access.
-- There are 3 types of delegation, *constrained*, *unconstrained*, and *resource based*.
-
-**Unconstrained delegation** allows an account to delegate to any service. This is a “collector box” that automatically saves the keys (TGTs) of anyone who connects to it.
-**Constrained delegation** allows a user account to have specified the services they can delegate to. 
-**Resource-based delegation** places the configuration at the delegated object side. That is, the service account that is to be delegated has stored which accounts can delegate to it.
+There are several types of delegation, each with its unique properties.
 
 ---
 ### Attack Path
@@ -29,6 +23,16 @@ We will see the name of the account, along with the `msds-allowedtodelegateto` a
 - This shows the service type, the host where the service lies, and the domain in order separated by `/` as shown below.
 ```
 msds-allowedtodelegateto: {http/DC1.eagle.local/eagle.local}
+```
+
+Can also use the following:
+```
+Get-ADObject -fi {(msDs-AllowedToDelegateTo -like "*")}
+```
+
+Can also use the following:
+```
+Get-ADComputer -Filter {TrustedForDelegation -eq $true}
 ```
 
 > Any attacker that gains access to the account that has this delegation attribute can ask the KDC for a ticket as the *Domain Admin* for `HTTP/DC1.eagle.local`. Now, the attacker has a [[Kerberos]] ticket that makes them domain admin whenever they connect to that HTTP service at that [[Domain Controller]], DC1.
@@ -77,3 +81,10 @@ To detect this, we should have a baseline and know the normal behavior of users,
 Successful logons with delegated tickets will show data about the ticket issuer in the `Transited Services` attribute.
 - This shows the account that was used to generate the ticket.
 - The account that can be delegated.
+
+Can look for PowerShell and [[Lightweight Directory Access Protocol (LDAP)]] search filters used for the discovery of accounts with delegation enabled.
+- Look for Event ID `4104` for PowerShell Script logging.
+- Look for LDAP filters that target delegation properties.
+- Check out [[Splunk Queries#Detecting Kerberos Delegation Attacks]]
+
+---
