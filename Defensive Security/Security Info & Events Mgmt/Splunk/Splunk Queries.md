@@ -83,6 +83,18 @@ index=main earliest=1690450374 latest=1690450483 EventCode=4648 OR (EventCode=47
 - `| table _time, EventCode, service_name, username`: Displays the remaining events in tabular format with the specified fields.
 - This query focuses on identifying events with an `EventCode` of `4769` that are part of an incomplete transaction (i.e., they did not end with an event with `EventCode 4648` within the `5`-second window).
 
+### Detecting [[Kerberoasting]] - RC4
+
+```
+index="sharphound" sourcetype="bro:kerberos:json"
+request_type=TGS cipher="rc4-hmac" 
+forwardable="true" renewable="true"
+| table _time, id.orig_h, id.resp_h, request_type, cipher, forwardable, renewable, client, service
+```
+- RC4-HMAC encryption is weak and can be brute forced/
+- Forwardable tickets can be used to move laterally and are used for delegation. Tools like Rubeus, Mimikatz, Sharphound request forwardable tickets by default.
+- Renewable tickets can be easily renewed to extend the lifespan of the ticket.
+
 ---
 ### Detecting [[AS-REProasting]]
 
@@ -181,5 +193,27 @@ index=main EventCode=4662 Message="*Replicating Directory Changes*"
 ```
 - Filters for events that have the message containing `Replicating Directory Changes` which is done whenever DCSync happens.
 - We can then check the username and determine if it is malicious.
+
+---
+### Detecting Brute Force
+
+```
+index="ssh_bruteforce" sourcetype="bro:ssh:json"
+| bin span=5m _time
+| stats sum(auth_attempts) as num by _time, id.orig_h, id.resp_h, client, server
+| where num > 30
+```
+- We do buckets of 5 minutes and then get the sum of the number authentication attempts by client and server.
+- This query can be modified, but this is the general idea.
+
+---
+### [[Detecting Nmap Scans]]
+
+```
+index="XX" sourcetype="XX" orig_bytes=0 dest_ip IN (XX, XX) 
+| bin span=5m _time 
+| stats dc(dest_port) as num_dest_port by _time, src_ip, dest_ip 
+| where num_dest_port >= 3
+```
 
 ---

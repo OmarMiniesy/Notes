@@ -1,3 +1,20 @@
+### Using [[Splunk]]
+
+The payload of the packets that [[nmap]] sends is 0.
+- Nmap does not try to send data, it only attempts to initiate a connection with a port:
+
+```
+index="XX" sourcetype="XX" orig_bytes=0 dest_ip IN (XX, XX) 
+| bin span=5m _time 
+| stats dc(dest_port) as num_dest_port by _time, src_ip, dest_ip 
+| where num_dest_port >= 3
+```
+- This query checks for a range of [[IP]] addresses if [[Port]] scanning was done.
+- It filters for events that have 0 bytes in the payload.
+- It groups events in 5 minute intervals.
+- It then counts the number of distinct destination ports accessed in the events grouped by source and destination [[IP]].
+- Finally, It shows only results where more than 3 ports were found.
+
 ### Using [[Wireshark]]
 
 The following showcases how to determine if [[nmap]] is being used through [[Wireshark]].

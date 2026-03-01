@@ -99,6 +99,7 @@ index=main source="WinEventLog:Security" EventCode=4625
 | stats values(user) as Users, dc(user) as dc_user by src
 ```
 - This groups by the `src` host the usernames and the distinct count of usernames tried.
+- The `values` function outputs all the values found in the filtered events.
 
 > `rex` command can be used to create fields using [[Regular Expressions]]. [Guide on Splunk docs](https://docs.splunk.com/Documentation/Splunk/9.4.2/SearchReference/Rex).
 
