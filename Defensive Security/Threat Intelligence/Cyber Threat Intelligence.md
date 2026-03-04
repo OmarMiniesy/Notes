@@ -78,7 +78,7 @@ CTI is obtained from a 6 step process that takes in raw data and transforms it i
 
 **[Abuse.ch](https://abuse.ch/)**
 - Has 6 tools that identify and track [[Malware]] and [[Malware#Bots and Botnet|Botnets]].
-- *Malware Bazaar* is a database that collects malware. Malware can be uploaded to contribute to the database, and searching for specific malware that match certain conditions (tags, signatures, [[YARA]] rules).
+- *Malware Bazaar* is a database that collects malware. Malware can be uploaded to contribute to the database, and searching for specific malware that match certain conditions (tags, signatures, [[YARA]] rules). Can also perform searches using different hash types like [[Static Analysis#Import Hashing (IMPHASH)|IMPHASH]].
 - *Feedo Tracker* is a database of the C&C servers that security analysts can search through and investigate any suspicious IP addresses they have come across. Additionally, they provide various [[IP]] and IOC blocklists and mitigation information to be used to prevent botnet infections.
 - *SSL Blacklist* is a tool to detect malicious [[Transport Layer Security (TLS)|SSL]] handshakes by identifying malicious SSL [[Certificates]] used by botnet servers. These certificates are then added to a list to be used as a blacklist.
 - *URLhaus* is a tool to share malicious URLs used for malware distribution. It contains a database of domains, URLs, hashes, and filetypes that are malicious.

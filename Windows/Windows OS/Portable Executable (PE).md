@@ -4,6 +4,8 @@ This is a file format used to store and load executable code.
 - It contains headers that tell Windows how to deal with the file, map it to memory, and run it.
 - This includes `.exe`, `.dll`, `.sys`, and some `.ocx`.
 
+> These files are portable because they can be taken to any system with the same Operating System and dependencies, and they will perform the same task on that system
+
 The PE layout is composed of the *Header* and the *Sections*.
 
 PE files rarely contain all of the code that they need to run on their own. 
@@ -19,7 +21,8 @@ This contains the metadata about the PE file.
 The first 2 headers are:
 1. *DOS Header*: This has the file type. It has the magic bytes `4D 5A` which translate to `MZ` in ASCII for `.exe` files, and it allows tools to recognize the file as an executable.
 	- The last value stored here is the `e_lfanew` and it has the address of where the *IMAGE_NT_HEADERS* start.
-2. *DOS Stub*: This prints the message `This program cannot be run in DOS mode` if it is run in DOS. This is its only use.
+2. *DOS Stub*: This prints the message `This program cannot be run in DOS mode` if it is run in DOS. This is its only use. Can be modified by malware to include a hidden message.
+	- Can be easily viewed using `strings`.
 
 *IMAGE_NT_HEADERS*:
 1. *PE File Header*: This marks the start of the PE format, and it contains the file format, the *signature* and *file header*, and other important headers. 
