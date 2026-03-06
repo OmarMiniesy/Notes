@@ -4,95 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "e46b95f8954c25da",
+        "id": "0c0312a70ed5e476",
         "type": "tabs",
         "children": [
           {
-            "id": "fe8ad3f5095cc707",
+            "id": "716e342e2290773a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Windows OS/Portable Executable (PE).md",
+                "file": "Defensive Security/Security Operations/Incident Reporting.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Portable Executable (PE)"
+              "title": "Incident Reporting"
             }
           },
           {
-            "id": "358ebe81de132ae2",
+            "id": "b59fdb9d2fbb2d23",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/Linux Commands - Files.md",
+                "file": "Defensive Security/Security Operations/Incident Handling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux Commands - Files"
-            }
-          },
-          {
-            "id": "5614ed57aea2f234",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/Logs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Logs"
-            }
-          },
-          {
-            "id": "877083f3a1008c72",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Malware Analysis/Static Analysis.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Static Analysis"
-            }
-          },
-          {
-            "id": "36a670753570e8eb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Cyber Defense Frameworks/MBC - Malware Behavior Catalogue.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "MBC - Malware Behavior Catalogue"
-            }
-          },
-          {
-            "id": "3f8ed49c99664c74",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cyber Threat Intelligence"
+              "title": "Incident Handling"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -149,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 317.5,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -265,8 +209,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5614ed57aea2f234",
+  "active": "716e342e2290773a",
   "lastOpenFiles": [
+    "Defensive Security/Security Operations/Incident Handling.md",
+    "Defensive Security/Security Operations/Incident Reporting.md",
+    "Defensive Security/Network Security & Traffic Analysis/Zeek.md",
+    "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
+    "Defensive Security/Security Info & Events Mgmt/Logs.md",
     "Scripting/Linux Commands - Files.md",
     "Windows/Windows OS/Portable Executable (PE).md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
@@ -288,11 +237,6 @@
     "Windows/Windows OS/Windows Registry.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
-    "Offensive Security/Windows Security/Kerberos Delegation Attacks.md",
-    "Windows/Active Directory/Domain Controller.md",
-    "Windows/Active Directory/Kerberos.md",
-    "Offensive Security/Windows Security/Pass the Ticket.md",
-    "Offensive Security/Tools/BloodHound.md",
     "Defensive Security/Malware Analysis",
     "Defensive Security/Phishing/Untitled",
     "Defensive Security/Phishing",
