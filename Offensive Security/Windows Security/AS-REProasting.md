@@ -1,9 +1,8 @@
 ### General Notes
 
 This is an attack similar to the [[Kerberoasting]] attack that also targets the [[Kerberos]] [[Active Directory]] authentication protocol.
-- This attack targets [[Objects#Users|User]] accounts that have the property `Do not require Kerberos preauthentication` enabled to obtain their hashed passwords and crack them.
+- This attack targets [[Objects#Users|User]] accounts that have the property **`Do not require Kerberos preauthentication`** enabled in order to obtain data encrypted with the user's password-derived key and crack it offline.
 
-> Also works on accounts with *unconstrained delegation* enabled.
 ##### *Kerberos Preauthentication*
 
 Normally, a user account that has this property enabled forces the user to prove they know their password before the *KDC*, *Key Distribution Center*, can give them anything useful.
@@ -13,10 +12,21 @@ When **pre-authentication is enabled**, requests sent by users to access service
 - The KDC attempts to decrypt this timestamp using the user hash, and if successful, issues the TGT to the user in the `AS-REP`.
 - When **pre-authentication is disabled**, there is no timestamp validation by the KDC, allowing users to request TGT tickets without knowing the user password.
 
-Therefore, an attacker needs to send a fake logon request, *AS-REQ* to a KDC acting as a user that has *Kerberos Preauthentication* disabled.
-- The KDC replies with the *AS-REP* encrypted with the user's password. This response contains the *TGT*.
-- This _AS-REP_ also contains the *TGT (Ticket Granting Ticket)* which is normally only given to authenticated users — but here the attacker forces its creation without needing to know the password.
-- The attacker then takes this _AS-REP_ and attempts to crack the user password offline using a tool like `hashcat` or [[John the Ripper]].
+##### When Preauthentication is Disabled
+
+If **pre-authentication is disabled**, the KDC does **not require the encrypted timestamp**.
+- This means **anyone can send an `AS-REQ` for that user without proving knowledge of the password**.
+
+The attack flow is therefore:
+1. The attacker sends a forged **`AS-REQ`** to the KDC requesting a **TGT** for a user with **Kerberos pre-authentication disabled**.
+2. The KDC responds with an **`AS-REP` containing a TGT**.
+3. Parts of the **AS-REP are encrypted using a key derived from the user's password**.
+4. The attacker extracts this encrypted blob from the AS-REP.
+5. The attacker then performs **offline password cracking** against this encrypted data using tools such as:
+    - `hashcat`
+    - [[John the Ripper]]
+
+If the password is successfully cracked, the attacker obtains the **user's plaintext password**, which can then be used to authenticate as that account.
 
 ---
 ### Attack Flow
@@ -47,6 +57,7 @@ Since the first part of this attack involves identifying user accounts with no p
 - Check out [[BloodHound#Detecting Bloodhound Usage|LDAP Filters]] for filters on LDAP usage in reconnaissance.
 - In event ID `4768` for TGT requests, can check for the `PreAuthType` attribute in the *additional information* part of the event which will show whether pre-authentication is enabled or not.
 - Check out [[Splunk Queries#Detecting AS-REProasting]]
+- Filtering for `preauthtype` of `0` and `ticket encryption type` is `0x17` (crackable encryption).
 
 Since the attacker instigates the creation of a *TGT*, we can use the [[Windows Events Log]] Event with ID `4768` which creates a log when a *TGT* is requested.
 - The tool `Rubeus` will cause these logs to be generated.
