@@ -21,12 +21,18 @@ The *Sysinternals* tools are a compilation of over 70+ Windows-based tools. Each
 ---
 ### [Process Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/process-utilities)
 
+> Checkout [[Investigating Processes]] for more process utilities related to defensive security.
+
 **Autoruns**: Has knowledge of auto-starting locations, or the programs that are configured to run during system bootup or login, and also for built in Windows applications.
 - Has information on [[Windows Registry]] keys for startup that can be used for persistence by attackers.
 - Reports Explorer shell extensions, toolbars, browser helper objects, `Winlogon` notifications, auto-start services,
 
 **Process Explorer**: This shows the currently active processes with their owning accounts, as well as extra information depending on the mode.
- - *Handle mode* shows the handles for the selected process, and *DLL mode* shows the DLLs and opened memory mapped files, with other modes.
+ - *Handle mode* shows the handles (resources in use) for the selected process, and *DLL mode* shows the DLLs and opened memory mapped files, with other modes.
+ - Enabling the lower pane from the `view` menu gives more information about the selected process.
+ - Right clicking on a process shows a lot of details. 
+	 - Can check for **process masquerading** (process pretending to be a process it is not by copying the name) in the `image` tab by clicking on the `verify` button to match the [[Digital Signatures]].
+	 - Can check for **process hollowing** (injecting malicious code in the memory of a process) by inspecting the `strings` tab. If the strings in the `memory` do not match that of the `image`, then this is process hollowing.
 
 > Process handles are unique identifiers provided by the operating system that allows a process to interact with other processes.
 
@@ -36,9 +42,10 @@ The *Sysinternals* tools are a compilation of over 70+ Windows-based tools. Each
 **PsExec** : Allows remote process execution with full interactivity.
 - This [link](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec) has details on how to use it.
 
-**Process Monitor (Procmon)**
-
-> Checkout [[Investigating Processes]] for more process utilities related to defensive security.
+**Process Monitor (Procmon)**: Monitors the current processes, [[Windows Registry]], Network, and File System activity.
+- Captures a lot of events, so make sure to use `CTRL + E` to start/stop capturing when needed.
+- Can use the filter to filter on everything related to the process for ease of use.
+- The last 4 toggles before the graph toggle can be used to toggle between process, registry, network, and file system events when looking at something in particular.
 
 ---
 ### [File & Disk Utilities](https://docs.microsoft.com/en-us/sysinternals/downloads/file-and-disk-utilities)

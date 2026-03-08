@@ -2,6 +2,10 @@
 
 Explaining **user mode** and **kernel mode** then showcasing the flow of calling an API from user mode application.
 
+> A list of all the APIs is present here in the [Microsoft documentation](https://learn.microsoft.com/en-us/windows/win32/api/).
+
+> The **API Logger** or **API Monitor** tools can be used to monitor the APIs called by a process.
+
 ---
 ### Modes of Operation
 
