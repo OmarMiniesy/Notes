@@ -13,7 +13,7 @@ As such, the usages of Sigma include:
 - **Community-driven Rule Sharing**
 - **Incident Response**: Enables analysts to quickly search and analyze logs for specific patterns or indicators.
 - **[[Threat Hunting]]**: By leveraging specific patterns, we can comb through our datasets to pinpoint anomalies or signs of adversarial activity.
-- **Seamless Integration with Automation Tools**: Integrate them with SOAR platforms and other automation tools, enabling automated responses.
+- **Seamless Integration with Automation Tools**: Integrate them with [[SOAR]] platforms and other automation tools, enabling automated responses.
 - **Gap Identification**: By aligning our rule set with the broader community, we can perform gap analysis, identifying areas where our detection capabilities might need enhancement.
 
 ---

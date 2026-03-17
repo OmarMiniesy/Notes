@@ -23,8 +23,8 @@ _Escalation_ is the process of notifying the personnel that have authority to ma
 ##### 3. Alert Correlation:
 
 - Cross-reference the alert with related alerts, events, or incidents to identify patterns, similarities, or potential indicators of compromise (IOCs).
-- Query the [[SIEM]] or log management system to gather relevant log data.
-- Leverage [[Cyber Threat Intelligence]] feeds to check for known attack patterns or malware signatures.
+- Query the [[SIEM]] or log management system to gather relevant log data. *Correlation* here also means correlation between log sources, where some sources provide certain data and others provide a different set.  
+- Leverage [[Cyber Threat Intelligence]] feeds to check for known attack patterns or [[Malware]] signatures.
 
 ##### 4. Enrichment of Alert Data:
 

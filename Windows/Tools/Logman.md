@@ -11,7 +11,7 @@ To view the current sessions and investigate them, use the `-ets` flag.
 logman.exe query -ets
 ```
 
-Investigating a session directly, we can see the Name, Max Log Size, Log Location, and the subscribed providers to that session.
+Investigating a session directly, we can see the Name, Provider GUID, Max Log Size, Log Location, and more of the subscribed providers.
 - To do that, specify the name of the tracing session, also called the `Data Colector Set`.
 ```CMD
 logman.exe query "EventLog-System" -ets

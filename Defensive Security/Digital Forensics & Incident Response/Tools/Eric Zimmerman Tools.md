@@ -1,7 +1,7 @@
 ### General Notes
 
 A collection and guides on how to run the different Eric Zimmerman tools I stumbled upon.
-- [Link](ericzimmerman.github.io/#!index.md) to all the tools.
+- [Link](https://ericzimmerman.github.io/#!index.md) to all the tools.
 
 > Tools should be run in an elevated command prompt for better usability.
 

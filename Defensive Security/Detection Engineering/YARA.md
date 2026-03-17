@@ -11,10 +11,11 @@ YARA rules utilize a standard format for rule structures, encouraging collaborat
 - [Summary](https://miro.medium.com/v2/resize:fit:875/1*gThGNPenpT-AS-gjr8JCtA.png) - Describes the anatomy of YARA rules. 
 
 GitHub repos with examples for YARA rules: 
-- [Yara-Rules](https://github.com/Yara-Rules/rules/tree/master/malware).
-- [Open-Source-YARA-rules](https://github.com/mikesxrs/Open-Source-YARA-rules/tree/master).
-- [DFIR Report, Yara-Rules](https://github.com/The-DFIR-Report/Yara-Rules).
+- [Yara-Rules](https://github.com/Yara-Rules/rules/tree/master/malware)
+- [Open-Source-YARA-rules](https://github.com/mikesxrs/Open-Source-YARA-rules/tree/master)
+- [DFIR Report, Yara-Rules](https://github.com/The-DFIR-Report/Yara-Rules)
 - [YARA Signature Base](https://github.com/Neo23x0/signature-base/tree/master)
+- [Elastic YARA Rules](https://github.com/elastic/protections-artifacts/tree/main/yara/rules)
 
 YARA rules can be integrated with security tools such as [[SIEM]]s, log analysis systems, and incident response platforms.
 - This integration enables automation, correlation, and enrichment of security events, allowing SOC analysts to incorporate the rules into their existing security infrastructure.
@@ -99,6 +100,6 @@ This is the YARA compiler tool that compiles YARA rules into a binary format wit
 
 #### [Unpac.me]([url](https://unpac.me))
 
-This is a tool for malware unpacking and it allows running YARA rules on the malware submissions present in their database.
+This is a tool for [[Malware]] unpacking and it allows running YARA rules on the malware submissions present in their database.
 
 ---

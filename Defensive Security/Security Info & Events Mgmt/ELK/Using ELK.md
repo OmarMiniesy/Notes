@@ -13,8 +13,11 @@ The *discover tab* in [[ELK - Elasticsearch, Kibana, & Logstash#Kibana|Kibana]] 
 ### Visualizations
 
 To create data visualizations like tables, pie charts, bar charts, ...
-- Clicking on any field in the *discover tab* and then clicking on visualization will spawn the visualization tab.
+- Clicking on any field in the *discover tab* and then clicking on visualization will spawn the visualization tab. *Need to modify the tame range before starting*.
 - Dragging fields from the left to the visualization will start creating correlations between these fields.
+- To edit the time range after, we can click on the *edit lens* and choose customize time range.
+
+> As Elasticsearch uses `buckets` to aggregate data (time ranges, etc.) into groups, we must use an `absolute` time range on every occasion when creating the visualization. If we don't consider this, the bucket will showcase a weekly interval instead of a daily one.
 
 ---
 ### Dashboards
