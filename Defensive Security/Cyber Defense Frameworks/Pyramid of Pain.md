@@ -26,7 +26,7 @@ The reason this is easy for attackers to deal with is because the hash is comput
 
 > Fuzzy hashing can be used to perform similarity analysis between files with minor differences. Check out [SSDeep](https://ssdeep-project.github.io/ssdeep/index.html).
 
-##### IP Address - Easy
+##### [[IP]] Address - Easy
 
 An IP address can be blocked, or have the packets coming from it dropped using a [[Firewall]] if it is known.
 - However, it is easy for attackers to circumvent this by simply obtaining a new IP address.

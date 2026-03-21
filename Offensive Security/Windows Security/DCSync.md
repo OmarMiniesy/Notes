@@ -46,9 +46,12 @@ We can detect this attack by detecting the Event ID of `4662` from [[Windows Eve
 - We can then check the *Account Name* that performed the replication. If it is not a Domain Controller username, we know immediately that the attack took place.
 - We can also whitelist certain accounts, like `Azure AD Connect`.
 
-If the *Properties* field has either of these Control Access Rights, it is indicative that the necessary permissions are in place.
+If the *Properties* field has either of these Control Access Rights, it is indicative that the necessary permissions are in place and the DCSync attack has taken place.
 - `1131f6aa-9c07-11d1-f79f-00c04fc2dcd2`
 - `1131f6ad-9c07-11d1-f79f-00c04fc2dcd2`
+
+We can also look at the `Access_Mask=0x100`.
+- `Access Mask 0x100` specifically requests `Control Access` typically needed for DCSync's high-level permissions.
 
 Whenever a tool like *mimikatz* performs DCSync, the Domain Controller logs:
 ```

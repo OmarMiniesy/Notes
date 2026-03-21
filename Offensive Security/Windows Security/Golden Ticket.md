@@ -6,6 +6,7 @@ This is an attack where threat agents can generate [[Kerberos]] tickets for any 
 This attack exploits the fact that:
 1. The Kerberos `krbtgt` service account has the same password across all Domain Controllers.
 2. This password is used to sign all the Kerberos tickets produced by the Key Distribution Center.
+3. This password's hash is the most trusted object in the entire Domain because it is how objects guarantee that the environment's Domain issued Kerberos tickets.
 
 #### Impact
 
@@ -65,6 +66,13 @@ We monitor for [[Windows Events Log]] events with ID `4769`, which mean that a [
 - We can then correlate with the client requesting the ticket and the service, and see if there is any abnormality
 - The service could be the `krbtgt` service.
 
+Another essential thing to do is to look for TGS requests with no preceding TGT requets. This is because for golden tickets, the TGT is forged locally.
+- Find `4769` events with no matching `4768` from the same account within a reasonable time window (e.g., 10 hours — the default TGT lifetime)
+
+Another idea to look for is accounts that logon with high privileges using event ID `4672`.
+- Look for accounts that are logging in with permissions that they shouldn't have.
+- So an non-admin account triggering `4762` is suspicious.
+
 If `SID filtering` is enabled, we will get alerts with the event ID `4675` during cross-domain escalation.
 
 We can also monitor for the extraction of the `krbtgt` hash by checking for:
@@ -73,5 +81,14 @@ We can also monitor for the extraction of the `krbtgt` hash by checking for:
 - [[Windows Processes#`lsass.exe`|LSASS]] memory read via [[Sysmon]] event ID `10`.
 
 > Can also be detected via the same techniques as [[Pass the Ticket]], check out [[Splunk Queries#Detecting Pass the Ticket]].
+
+|Priority|Detection|
+|---|---|
+|🔴 Critical|4769 with no preceding 4768 for same account|
+|🔴 Critical|RC4 encryption (0x17) in 4769 in an AES-enforced domain|
+|🟠 High|4769 ticket lifetime exceeding domain policy|
+|🟠 High|4624 Type 3 from account with no 4768 on any DC|
+|🟡 Medium|4672 for unexpected accounts correlated with above|
+|🟡 Medium|4662 (DCSync) in the same time window — attacker getting krbtgt|
 
 ---

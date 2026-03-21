@@ -194,6 +194,14 @@ index=main EventCode=4662 Message="*Replicating Directory Changes*"
 - Filters for events that have the message containing `Replicating Directory Changes` which is done whenever DCSync happens.
 - We can then check the username and determine if it is malicious.
 
+
+```
+index="main" EventCode=4662 Access_Mask=0x100 Account_Name!=*$
+```
+- Looks for event ID when an active directory object is accessed.
+- It also looks for the specified access mask which contains the rights needed for DCSync's high level permission.
+- Filters for user accounts and not computer or machine accounts.
+
 ---
 ### Detecting Brute Force
 

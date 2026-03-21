@@ -2,7 +2,6 @@
 
 This is an attack similar to the [[Kerberoasting]] attack that also targets the [[Kerberos]] [[Active Directory]] authentication protocol.
 - This attack targets [[Objects#Users|User]] accounts that have the property **`Do not require Kerberos preauthentication`** enabled in order to obtain data encrypted with the user's password-derived key and crack it offline.
-- 
 
 ##### *Kerberos Preauthentication*
 

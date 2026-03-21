@@ -16,7 +16,7 @@ Hyperlinks and IP addresses should be **defanged**
 
 To collect any links or URLs without clicking on them:
 - right click on the link and choose `copy link location`.
-- use tools like CyberChef to extract URLs
+- use tools like [CyberChef](https://gchq.github.io/CyberChef/) to extract URLs
 
 To check the reputation of files, we can save the file without opening it.
 - we can obtain the hash of the file using `sha256sum` for example.

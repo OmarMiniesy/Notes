@@ -1,4 +1,4 @@
-### The Elastic Stalk
+### The Elastic Stack
 
 This a collection of 3 applications that work together to offer search and visualization capabilities of log files.
 - **Kibana** : Visualization

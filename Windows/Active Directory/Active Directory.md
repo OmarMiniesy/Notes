@@ -19,6 +19,15 @@ There are 2 protocols that are used for authentication in Windows domains.
 - [[Kerberos]]: this is the default protocol that is used now. Uses [[Port]] 88 for both TCP and UDP.
 - [[NTLM]]: this protocol is legacy. 
 
+Some important [[Port]]s for Active Directory Environments:
+- `53`: [[#DNS|DNS]].
+- `88`: [[Kerberos]].
+- `135`: WMI/RPC.
+- `137-139 & 445`: [[Server Message Block (SMB)]].
+- `389 & 636`: [[Lightweight Directory Access Protocol (LDAP)]].
+- `3389`: RDP
+- `5985 & 5986`: PowerShell Remoting (`WinRM`)
+
 ---
 ### Service Principal Name (SPN)
 

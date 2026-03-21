@@ -47,5 +47,6 @@ Print Spooler should be disabled on all servers that are not printing servers.
 Additionally, there is an option to prevent the abuse of the `PrinterBug` while keeping the service running: 
 - The [[Windows Registry]] Key `RegisterSpoolerRemoteRpcEndPoint` can be set to `2` to disable any remote requests at `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers`.
 
-To detect this, look for [[Windows Events Log]] events with the successful logon ID where the source of login is coming from a weird IP address and the destination is a [[Domain Controller]].
+To detect this, look for [[Windows Events Log]] events with the successful logon ID where the source of login is coming from a weird [[IP]] address and the destination is a [[Domain Controller]].
 
+---

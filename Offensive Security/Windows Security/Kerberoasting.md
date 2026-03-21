@@ -4,6 +4,10 @@ This is a *post exploitation* attack that targets the [[Kerberos]] authenticatio
 - The attacker here is after the service account password that is used to encrypt the TGS.
 - This is mapped to the [[MITRE ATT&CK]] sub-technique `T1558.003`.
 
+When a service (e.g., MSSQL, HTTP, CIFS) wants to be reachable via Kerberos, an admin registers an SPN on a **user or computer account** in AD. 
+- That account becomes the **service account** — it's what holds the credentials used to encrypt the Kerberos service ticket.
+- This is what the attacker is after.
+
 > This allows the attacker to impersonate an account; giving access to the system, services, networks, and anything else that the account is entitled to.
 
 Some of the essential concepts to know for this attack are:
@@ -40,6 +44,8 @@ Using `Rubeus` and specifying the `kerberoast` action and an output file for the
 ```powershell
 Rubeus.exe kerberoast /outfile:spn.txt
 ```
+- This queries Active Directory via [[Lightweight Directory Access Protocol (LDAP)]] for all user accounts where the `servicePrincipalName` *attribute is not empty*.
+- For each account, a TGS ticket is requested from the KDC.
 
 3. The attacker receives the TGS ticket from the KDC.
 
@@ -75,7 +81,7 @@ To prevent this attack, the following techniques can be implemented:
 - Limiting the number of accounts with SPNs.
 - Disable accounts that are no longer used/needed.
 - Ensure strong passwords to counter the brute force cracking mechanisms. (100+ characters)
-- The usage of *Group Managed Service Accounts (GMSA)*, which are service accounts that are managed by [[Active Directory]] and cannot be user anywhere except their designated server.
+- The usage of *Group Managed Service Accounts (GMSA)*, which are service accounts that are managed by [[Active Directory]] and cannot be used anywhere except their designated server.
 	- The password of these accounts are rotated automatically.
 
 ### Detection
@@ -90,7 +96,7 @@ Since the first part of this attack involves identifying target service accounts
 Another detection idea is to understand the difference between Kerberoasting activity and normal activity.
 - For both, TGS tickets for services will be requested, but only in normal activity will the user login after the TGS is requested.
 - For Kerberoasting, this is not the case, as the attacker wants to crack the password.
-- We cam group all TGS request events by the same user and checking if there are logon events after these TGS request events.
+- We can group all TGS request events by the same user and checking if there are logon events after these TGS request events.
 
 To detect this attack, we can utilize [[Windows Events Log]] logs with Event ID `4769`.
 - This log is generated when TGS are requested.
@@ -108,6 +114,7 @@ Looking also for the *account name* that is not a machine account (not ending wi
 - This is because service machine accounts will have large and complex passwords so it would be hard to crack them.
 
 To detect this using [[Splunk]]:
+- Other queries to detect using Splunk: [[Splunk Queries#Detecting Kerberoasting - TGS Requests]], [[Splunk Queries#Detecting Kerberoasting - TGS Transactions]], [[Splunk Queries#Detecting Kerberoasting - RC4]].
 ```
 Event.EventData.TicketEncryptionType="0x17" Event.System.EventID="4769" Event.EventData.ServiceName!="*$" | table Event.EventData.ServiceName, Event.EventData.TargetUserName, Event.EventData.IpAddress
 ```
