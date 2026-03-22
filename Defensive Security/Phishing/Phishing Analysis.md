@@ -66,6 +66,7 @@ Tracking pixels can be embedded in the email to collect information about what h
 
 Some attachments in the body should be analyzed in *malware sandboxes* to see how it operates, what it communicates with, and other Indicators of Compromise that can be extracted.
 - Some online sandboxes to visit are [any.run](https://app.any.run/), [Hybrid Analysis](https://www.hybrid-analysis.com/), and [Joe Security](https://www.joesecurity.org/).
+- Check out [[Malicious Documents]] on how to analyze malicious documents.
 
 ---
 

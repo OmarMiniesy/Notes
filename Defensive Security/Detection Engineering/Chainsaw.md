@@ -12,7 +12,7 @@ After downloading chainsaw from the GitHub repo, we can use the `-h` flag to che
 
 To run Chainsaw against a target file and use Sigma detection rules, we can write the following command:
 ```powershell
-.\chainsaw.exe hunt <path\to\target\.evtx> -s <path\to\sigma\files> --mapping .\mappings\sigma-event-logs-all.yml 
+.\chainsaw.exe hunt <path\to\target\.evtx> -s <path\to\sigma\files> --mapping .\mappings\sigma-event-logs-all-new.yml 
 ```
 - Use the `hunt` option to look for threats in the target `evtx` using the specified sigma detection rules.
 - Use the `-s` to pinpoint the Sigma detection rule file or directory.

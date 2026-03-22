@@ -22,8 +22,9 @@ The prefetch files are usually found at `C:\Windows\Prefetch`
 
 To run Prefetch Parser on a file and save the results in a CSV, we can use the following command:
 ```
-PECmd.exe -f <path-to-Prefetch-files> --csv <path-to-save-csv>
+PECmd.exe -f <path-to-Prefetch-file> --csv <path-to-save-csv>
 ```
+- This can be used to analyze the first/last execution timestamps, number of execution times, volume and directory information, app name and path, and file information such as hash and size of an application.
 
 Similarly, for parsing a whole directory, we can use the following command:
 ```

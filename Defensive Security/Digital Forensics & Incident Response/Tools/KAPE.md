@@ -24,9 +24,9 @@ The bin directory under _Modules_ contains executables that we want to run on th
 - KAPE will run executables either from the bin directory or the complete path. 
 
 ---
-### Running Kape
+### Running KAPE
 
-Can be run in _cli_ mode or _gui_ mode using `kape.exe` and `gkape.exe` respectively.
+Can be run in CLI mode or GUI mode using `kape.exe` and `gkape.exe` respectively.
 
 Can also be run in _batch_ mode where we provide a list of commands for KAPE to run in a file named `_kape.cli`. 
 - Keep this file in the directory containing the KAPE binary.

@@ -13,6 +13,20 @@ There are 2 modes of operation for FTP:
 - *Active*: Default mode where the server listens for commands from the client. The client specifies the port to use for data transfer using `PORT` command.
 - *Passive*: Used to access servers located behind [[Firewall]]s preventing TCP connections. The client sends the `PASV` command and waits for server to respond with [[IP]] and port to use for data transfer.
 
+|**Command**|**Description**|
+|---|---|
+|`USER`|specifies the user to log in as.|
+|`PASS`|sends the password for the user attempting to log in.|
+|`PORT`|when in active mode, this will change the data port used.|
+|`PASV`|switches the connection to the server from active mode to passive.|
+|`LIST`|displays a list of the files in the current directory.|
+|`CWD`|will change the current working directory to one specified.|
+|`PWD`|prints out the directory you are currently working in.|
+|`SIZE`|will return the size of a file specified.|
+|`RETR`|retrieves the file from the FTP server.|
+|`QUIT`|ends the session.
+
+
 ---
 ### Using FTP
 

@@ -56,7 +56,7 @@ Some tools used in [[Rapid Triage]]:
 - `DD and DCFLDD`: Both are command-line utilities available on Unix-based systems. `DD` is a versatile tool included in most Unix-based systems by default, while DCFLDD is an enhanced version of `DD` with features specifically useful for forensics, such as hashing.
 - **Virtualization Tools**: Depending on the specific virtualization solution, evidence can be gathered by temporarily halting the system and transferring the directory that houses it. Another method is to utilize the *snapshot capability* present in numerous virtualization software tools.
 
-**[[Disk Forensics]]**: This is done through tools like *Autopsy* to understand the file structure of an image, as well as create a timeline of the events happened.
+**[[Disk Forensics]]**: This is done through tools like *Autopsy* and [[KAPE]] to understand the file structure of an image, as well as create a timeline of the events happened.
 - Includes finding and recovering deleted files.
 - Also includes analyzing the changes done to files in the file system itself. Check out [[Windows Forensics#File System NTFS NTFS|Windows NTFS Forensics]].
 

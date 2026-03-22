@@ -16,6 +16,16 @@ As such, the usages of Sigma include:
 - **Seamless Integration with Automation Tools**: Integrate them with [[SOAR]] platforms and other automation tools, enabling automated responses.
 - **Gap Identification**: By aligning our rule set with the broader community, we can perform gap analysis, identifying areas where our detection capabilities might need enhancement.
 
+Sigma rules should be combined with tools like [[Chainsaw]] and [Zircolite](https://github.com/wagga40/Zircolite) to speed up detection in large heaps of logs and information.
+- These tools allow scanning Sigma rules on multiple `.evtx` files concurrently.
+
+Resources for Sigma rule development.
+- [https://github.com/SigmaHQ/sigma/wiki/Rule-Creation-Guide](https://github.com/SigmaHQ/sigma/wiki/Rule-Creation-Guide)
+- [https://github.com/SigmaHQ/sigma-specification](https://github.com/SigmaHQ/sigma-specification)
+- [https://tech-en.netlify.app/articles/en510480/](https://tech-en.netlify.app/articles/en510480/)
+- [https://tech-en.netlify.app/articles/en513032/](https://tech-en.netlify.app/articles/en513032/)
+- [https://tech-en.netlify.app/articles/en515532/](https://tech-en.netlify.app/articles/en515532/)
+
 ---
 ### Rule Structure
 
@@ -117,7 +127,27 @@ More on values:
 ---
 ### Sigma Tools
 
-Sigma rules should be combined with tools like [[Chainsaw]] and [Zircolite](https://github.com/wagga40/Zircolite) to speed up detection in large heaps of logs and information.
-- These tools allow scanning Sigma rules on multiple `.evtx` files concurrently.
+#### Using `pySigma`
+
+Install it first using:
+```
+pip install sigma-cli
+```
+
+Then, we need to install the backends of our choice which we will be converting the Sigma rules to using:
+```
+sigma plugin install <backend>
+```
+- This could be [[Splunk]] or PowerShell or what is needed.
+
+We also need to install the *Pipelines* which will be used to do the field mapping:
+```
+sigma plugin install splunk_windows
+```
+
+So that in the end we can convert our rule of choice:
+```
+sigma convert -t splunk -p splunk_windows rule.yml
+```
 
 ---

@@ -39,6 +39,10 @@ To be able to properly analyze a memory image, its **profile** must first be ide
 vol -f <path-to-memory-file> windows.info
 ```
 
+```PowerShell
+vol -f <path-to-mem> imageinfo
+```
+
 ##### Identifying Running Processes
 
 Given the _profile_, we can then provide it and use another _plugin_ to identify the processes that were running once the image of the memory was captured.
@@ -49,7 +53,7 @@ The plugins are:
 - Using `pslist` will list all processes from the doubly linked list that keeps tracks of processes in memory. This will include all current processes and terminated processes with their exit times.
 - Using `psscan` will list processes by locating the `_EPROCESS` data structure. This can list false positives but it combats [[Malware]] that tries to hide.
 - Using `pstree` will list processes based on the parent process ID using the same technique as `pslist`.
-- Using `cmdline` will list the command line arguments per process. 
+- Using `cmdline` will list the command line arguments per process. Dont need to add PID.
 
 To inspect the memory layout of a process, we can use the `memmap` plugin can be used.
 - Can be used to output the memory dump of a process to inspect all its details. The output is a `.dmp` file.
@@ -108,6 +112,7 @@ A _Handle_ is a reference to an object or file that is used by a process.
 - Understanding the handles used by a process reveals the resources and objects that the process is interacting with. 
 - This includes mutex locks, files, registry keys.
 - Check out the usage of the command [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=path/to/dir%E2%80%9D-,HANDLES,-Volatility%202).
+- Can specify the type of object with `--object-type=`, can be `Key` or `File` or `Process`.
 
 ##### Identifying Windows Services
 

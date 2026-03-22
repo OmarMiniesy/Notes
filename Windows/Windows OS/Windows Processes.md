@@ -140,7 +140,7 @@ The *Local Security Authority Subsystem Service* is responsible for enforcing th
 - Handling password changes.
 - Creating access tokens.
 - Writing to the Windows Security Log in the [[Windows Events Log]].
-- Creating security tokens for Security Account Manager (SAM), Active Directory, and NETLOGON.
+- Creating security tokens for Security Account Manager (SAM), [[Active Directory]], and NETLOGON.
 - It uses the authentication packages specified in `HKLM\System\CurrentControlSet\Control\Lsa`.
 
 > SAM is a windows system database that stores user account information and security descriptors for the computer. Resides in `C:\Windows\System32\config\SAM`. It is in the [[Windows Registry]] under `HKEY_LOCAL_MACHINE\SAM`.
@@ -150,6 +150,7 @@ It has:
 - Parent Process : `wininit.exe`
 - It has one instance and it starts within seconds of boot time.
 - User Account : local `SYSTEM`
+
 ##### `winlogon.exe`
 
 The *Windows Logon* process is responsible for 
@@ -170,7 +171,7 @@ The *Windows Explorer* process is the process that gives user access to folders 
 
 It has:
 - Image Path : `%SystemRoot%\explorer.exe`
-- Parent Process : Since i t is called by `userinit.exe` which exits after it is done, there is no parent process.
+- Parent Process : Since it is called by `userinit.exe` which exits after it is done, there is no parent process.
 - User Account : the logged in user.
 - It has one instance per logged in user, and the start time of the first instance is at the first interactive login by a user.
 

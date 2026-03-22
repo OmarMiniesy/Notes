@@ -3,7 +3,7 @@
 YARA is a tool used by SOC analysts to enhance threat detection and incident response capabilities, such as:
 - File and memory analysis in Digital Forensics, by matching on file formats, types, versions, metadata, or packers.
 - Analysts can create specific patterns or signatures that correspond to known [[Malware]] traits or behaviors, by matching to malware signatures, behaviors, or file properties.
-- Also used to detect suspicious files and IoCs (Indicators of Compromise), by matching against specific patterns, file names, Windows Registry keys, or network artifacts.
+- Also used to detect suspicious files and IOCs (Indicators of Compromise), by matching against specific patterns, file names, Windows Registry keys, or network artifacts.
 - Used for incident response to quickly identify relevant artifacts.
 - Can be used to perform proactive searches to identify threats, or [[Threat Hunting]].
 
