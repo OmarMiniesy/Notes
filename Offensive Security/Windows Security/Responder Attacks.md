@@ -1,6 +1,7 @@
 ### General Notes
 
 A **Responder attack** is a credential harvesting technique where an attacker abuses Windows name resolution protocols to capture [[NTLM]] authentication hashes from machines on the same network.
+- This hash can the be cracked or relayed to other systems to gain access with these credentials.
 
 Windows systems try multiple name resolution methods when a hostname cannot be resolved in the following order based on the failure of the previous:
 1. [[Domain Name System (DNS)]]
@@ -18,3 +19,18 @@ Windows systems try multiple name resolution methods when a hostname cannot be r
 > Typically, attackers employ the [Responder](https://github.com/lgandx/Responder) tool to execute LLMNR, NBT-NS, or mDNS poisoning.
 
 ---
+### Detecting Responder Attacks
+
+[[Sysmon]] event ID `22` can be used to track [[Domain Name System (DNS)]] queries with incorrectly typed file shares or services.
+```
+index=main EventCode=22 
+| table _time, Computer, user, Image, QueryName, QueryResults
+```
+
+Can also use [[Windows Events Log]] with Event ID `4688` to look for logons with explicit credentials.
+- This can be used to check if the attacker used the stolen credentials to login to file shares.
+```
+index=main EventCode IN (4648) 
+| table _time, EventCode, source, name, user, Target_Server_Name, Message | sort 0 _time
+```
+

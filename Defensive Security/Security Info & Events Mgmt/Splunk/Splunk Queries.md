@@ -163,7 +163,7 @@ index=main source="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" (EventCo
 - We then keep only Event ID 3, we only used Event ID 1 to obtain the data about the processes, to show network connections.
 
 ---
-### Detecting [[Kerberos Delegation Attacks]]
+### Detecting [[Delegation Attacks]]
 
 To detect *unconstrained delegation*:
 ```
@@ -222,6 +222,55 @@ index="XX" sourcetype="XX" orig_bytes=0 dest_ip IN (XX, XX)
 | bin span=5m _time 
 | stats dc(dest_port) as num_dest_port by _time, src_ip, dest_ip 
 | where num_dest_port >= 3
+```
+
+---
+### Detecting [[HTTP]] Exfiltration
+
+```
+index=xx method=POST 
+| stats sum(request_body_len) as TotalBytes by src, dest, dest_port 
+| eval TotalBytes = TotalBytes/1024/1024
+```
+
+---
+### Detecting [[Domain Name System (DNS)]] Exfiltration
+
+```
+index=xx 
+| eval len_query=len(query) 
+| search len_query>=40 AND query!="*.ip6.arpa*" AND query!="*amazonaws.com*" AND query!="*._googlecast.*" AND query!="_ldap.*" 
+| bin _time span=24h 
+| stats count(query) as req_by_day by _time, id.orig_h, id.resp_h
+| where req_by_day>60 
+| table _time, id.orig_h, id.resp_h, req_by_day
+```
+
+---
+### Detecting Ransomware through Excessive Renaming With The Same Extension
+
+```
+index= XX action="SMB::FILE_RENAME" 
+| bin _time span=5m 
+| rex field="name" "\.(?<new_file_name_extension>[^\.]*$)" 
+| rex field="prev_name" "\.(?<old_file_name_extension>[^\.]*$)" 
+| stats count by _time, id.orig_h, id.resp_p, name, source, old_file_name_extension, new_file_name_extension, 
+| where new_file_name_extension!=old_file_name_extension 
+| stats count by _time, id.orig_h, id.resp_p, source, new_file_name_extension 
+| where count>20 
+| sort -count
+```
+
+### Detecting Ransomware through Excessive Overwriting
+
+```
+index=XX 
+| where action IN ("SMB::FILE_OPEN", "SMB::FILE_RENAME") 
+| bin _time span=5m 
+| stats count by _time, source, action 
+| where count>30 
+| stats sum(count) as count values(action) dc(action) as uniq_actions by _time, source 
+| where uniq_actions==2 AND count>100
 ```
 
 ---

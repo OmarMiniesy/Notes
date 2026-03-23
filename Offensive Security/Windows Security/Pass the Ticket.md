@@ -1,6 +1,6 @@
 ### General Notes
 
-A lateral movement technique by stealing [[Kerberos]] *TGTs* and *TGSs* from the memory of a compromised system and reuses it to authenticate to services without knowing the user's passwords.
+A lateral movement technique by stealing [[Kerberos]] *TGTs* and *TGSs* from the memory of a compromised system and reusing it to authenticate to services without knowing the user's passwords.
 - Instead of using an [[NTLM]] hash to authenticate, the attacker uses a valid Kerberos ticket that was already issued by the [[Domain Controller]].
 
 ---

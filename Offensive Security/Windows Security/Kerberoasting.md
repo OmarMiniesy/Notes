@@ -97,12 +97,14 @@ Another detection idea is to understand the difference between Kerberoasting act
 - For both, TGS tickets for services will be requested, but only in normal activity will the user login after the TGS is requested.
 - For Kerberoasting, this is not the case, as the attacker wants to crack the password.
 - We can group all TGS request events by the same user and checking if there are logon events after these TGS request events.
+- We can use Event ID `4648` to look for logons using explicit credentials done by the attacker.
 
 To detect this attack, we can utilize [[Windows Events Log]] logs with Event ID `4769`.
 - This log is generated when TGS are requested.
 - This log is generated when a user attempts to access a service.
 - The log contains the ticket encryption type, which can be `AES`, `RC4`, or `DES`. If it is `0x17`, then it is `RC4` which is vulnerable to Kerberoasting. `0x1` and `0x3` are `DES` and are also vulnerable.
 - This event is generated a lot of times, so we should group it by the user requesting tickets and from which machine the tickets were requested from to see any abnormal behavior. Also filtering on the encryption type, to see if any type that is abnormal is being used in the environment.
+
 
 The normal [[Kerberos]] authorization flow can also be useful by monitoring these [[Windows Events Log]] Event IDs:
 - `4768`: This is the Kerberos TGT request event.
