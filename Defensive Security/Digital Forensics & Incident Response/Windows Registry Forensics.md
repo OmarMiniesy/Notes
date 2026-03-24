@@ -27,7 +27,7 @@ Important locations for the [[Windows Registry]] while performing [[DFIR]].
 - `HKEY_CURRENT_USER\Software\Microsoft\<version>`, for example, `HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Word`
 - For Office 365, `HKEY_CURRENT_USER\Software\Microsoft\Office\<version>\UserMRU\LiveID_####\FileMRU`
 
-**Shellbags**: - [[Windows Forensics#File System NTFS NTFS|Shellbags]], Information about the windows shell, or the layout in which folders are opened. Has information 
+**Shellbags**: - [[Windows Forensics#File System NTFS NTFS|Shellbags]], Information about the windows shell, or the layout in which folders are opened. Has information about accessed files and folders.
 - `HKEY_CURRENT_USER\Software\CLASSES\Local Settings\Software\Microsoft\Windows\Shell\Bags`
 - `HKEY_CURRENT_USER\Software\CLASSES\Local Settings\Software\Microsoft\Windows\Shell\BagMRU`
 - `HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\BagMRU`

@@ -44,7 +44,7 @@ We can prevent this attack using an *RPC Firewall* which will allow replications
 We can detect this attack by detecting the Event ID of `4662` from [[Windows Events Log]], which logs on Domain Controller replications.
 - This records `DS-Replication-Get-Changes` operations, however, `Audit Policy Configuration` is needed since it is not enable by default.
 - We can then check the *Account Name* that performed the replication. If it is not a Domain Controller username, we know immediately that the attack took place.
-- We can also whitelist certain accounts, like `Azure AD Connect`.
+- We can also whitelist certain accounts, like `Azure AD Connect` and machine accounts.
 
 If the *Properties* field has either of these Control Access Rights, it is indicative that the necessary permissions are in place and the DCSync attack has taken place.
 - `1131f6aa-9c07-11d1-f79f-00c04fc2dcd2`

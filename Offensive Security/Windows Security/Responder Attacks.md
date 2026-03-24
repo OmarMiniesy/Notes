@@ -27,7 +27,7 @@ index=main EventCode=22
 | table _time, Computer, user, Image, QueryName, QueryResults
 ```
 
-Can also use [[Windows Events Log]] with Event ID `4688` to look for logons with explicit credentials.
+Can also use [[Windows Events Log]] with Event ID `4648` to look for logons with explicit credentials.
 - This can be used to check if the attacker used the stolen credentials to login to file shares.
 ```
 index=main EventCode IN (4648) 

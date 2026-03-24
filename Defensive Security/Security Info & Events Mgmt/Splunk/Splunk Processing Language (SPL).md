@@ -83,13 +83,15 @@ index="main" EventCode=1 | dedup Image
 
 The `sort` command is used to sort according to a field.
 ```SPL
-index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 | sort - _time
+index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 
+| sort - _time
 ```
 - This works in descending order, that is, the most recent events are shown first.
 
 The `eval` command can be used to create or redefine fields.
 ```SPL
-index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 | eval Process_Path=lower(Image)
+index="main" sourcetype="WinEventLog:Sysmon" EventCode=1 
+| eval Process_Path=lower(Image)
 ```
 - This creates a new field which has the lower-case version of `Image`.
 
@@ -113,4 +115,5 @@ index="main" sourcetype="WinEventLog:Sysmon" EventCode=3 | stats count by _time,
 > The `chart` command can be used to visualize statistical operations. Instead of `stats`, use `chart`.
 
 ---
+
 

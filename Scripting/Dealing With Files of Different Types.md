@@ -54,7 +54,7 @@ There are various types of compression mechanisms, such as `bzip2`, `tar`, `gzip
 ---
 ### JSON Files
 
-To deal with JSON files, use the `jq` tool.
+To deal with JSON files, use the [[JQ]] tool.
 - [JQ Manual](https://jqlang.org/manual/)
 
 Can be used to extract the value of a certain field from a file:

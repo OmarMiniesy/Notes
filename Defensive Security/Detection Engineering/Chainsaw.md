@@ -18,4 +18,10 @@ To run Chainsaw against a target file and use Sigma detection rules, we can writ
 - Use the `-s` to pinpoint the Sigma detection rule file or directory.
 - Use the `--mapping` with the given file to map the fields in the sigma files to the fields in the `evtx` log file.
 
+
+To convert `.evtx` files to JSON format for better parsing using the [[JQ]] tool, can use the `dump` command:
+```
+./chainsaw dump 'path-to-file.evtx' --json -o ./output-path
+```
+
 ---
