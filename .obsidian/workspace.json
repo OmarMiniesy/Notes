@@ -4,11 +4,53 @@
     "type": "split",
     "children": [
       {
-        "id": "95eb3829061dea01",
+        "id": "e9b6e422742570b7",
         "type": "tabs",
         "children": [
           {
-            "id": "f13ebced1dd854ae",
+            "id": "146f49915c544651",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Windows Forensics"
+            }
+          },
+          {
+            "id": "d98787ad8bc43905",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Volatility"
+            }
+          },
+          {
+            "id": "916198bdeb9983a9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RegRipper"
+            }
+          },
+          {
+            "id": "a5ad10062a7523c6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,48 +61,6 @@
               },
               "icon": "lucide-file",
               "title": "Eric Zimmerman Tools"
-            }
-          },
-          {
-            "id": "bd03db0b7cf502ce",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Scripting/JQ.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "JQ"
-            }
-          },
-          {
-            "id": "4b6a139a9319dcfe",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Scripting/Dealing With Files of Different Types.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Dealing With Files of Different Types"
-            }
-          },
-          {
-            "id": "cc64d44c2f4b22e7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Detection Engineering/Chainsaw.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chainsaw"
             }
           }
         ],
@@ -121,7 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 303.5
+    "width": 340.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -237,35 +237,35 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "bd03db0b7cf502ce",
+  "active": "d98787ad8bc43905",
   "lastOpenFiles": [
-    "Defensive Security/Detection Engineering/Chainsaw.md",
-    "Scripting/Dealing With Files of Different Types.md",
-    "Scripting/JQ.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-    "Scripting/Linux Commands - Files.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
-    "Pasted image 20260324145100.png",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
-    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
-    "Windows/Tools/Sysinternals.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
     "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
-    "Offensive Security/Windows Security/DCSync.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Queries.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/RegRipper.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
+    "Defensive Security/Digital Forensics & Incident Response/Web Browser Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Rapid Triage.md",
+    "Defensive Security/Digital Forensics & Incident Response/Disk Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Attack Specific Queries.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Investigation Methodology.md",
+    "Defensive Security/Digital Forensics & Incident Response/Memory Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Velociraptor.md",
+    "Windows/Tools/Get-WinEvent.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk.md",
+    "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
+    "Windows/Tools/Sysinternals.md",
     "Offensive Security/Windows Security/Responder Attacks.md",
-    "Offensive Security/Windows Security/Pass the Hash.md",
-    "Offensive Security/Web Application Security/Google Hacking.md",
-    "Defensive Security/Security Operations/Incident Reporting.md",
-    "Defensive Security/Cyber Defense Frameworks/MITRE/MITRE ATT&CK.md",
-    "Defensive Security/Cyber Defense Frameworks/Cyber Kill Chains.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
-    "Offensive Security/Windows Security/Delegation Attacks.md",
-    "Offensive Security/Windows Security/Golden Ticket.md",
-    "Offensive Security/Windows Security/Silver Ticket.md",
+    "Offensive Security/Windows Security/Print Spooler.md",
+    "Offensive Security/Windows Security/Password Spraying.md",
     "Offensive Security/Windows Security/Overpass the Hash.md",
+    "Offensive Security/Windows Security/AS-REProasting.md",
+    "Windows/Tools/Sysmon.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Handling Data.md",
+    "Defensive Security/Detection Engineering/Chainsaw.md",
+    "Scripting/Dealing With Files of Different Types.md",
+    "Pasted image 20260324145100.png",
     "DFIR Reports",
     "Pasted image 20260315000559.png",
     "Offensive Security/Malware Development",

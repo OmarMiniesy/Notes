@@ -34,6 +34,6 @@ Similar to detecting [[Pass the Hash#Detection|Pass the Hash]] when running the 
 
 For Rubeus, we need to look for communication with the [[Domain Controller]] on [[Port]] `88` starting from an unusual process.
 - Legitimate [[Kerberos]] traffic originates from [[Windows Processes#`lsass.exe`|LSASS.exe]], which is not the case through Rubeus.
-- Check out [[Splunk Queries#Detecting Overpass the Hash]]
+- Check out [[Splunk Attack Specific Queries#Detecting Overpass the Hash]]
 
 ---

@@ -27,7 +27,7 @@ mimikatz # sekurlsa::pth /user:<username> /ntlm:<hash> /domain:<domain>
 ---
 ### Detection
 
-> Check out [[Splunk Queries#Detecting Pass the Hash]].
+> Check out [[Splunk Attack Specific Queries#Detecting Pass the Hash]].
 
 Mimikatz accesses the `LSASS` process memory, check out [[Windows Processes#`lsass.exe`|lsass.exe]], and changes the `LogonSession` information in the access token.
 - This is a process access event and can be identified using [[Sysmon]] event ID 10.

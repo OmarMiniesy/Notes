@@ -5,6 +5,10 @@ The query language by [[Splunk]], allowing users to search, filter, and manipula
 
 > Searching queries can be concatenated together using the pipe `|`, similar to *KQL (Kusto Query Language)*.
 
+Important documentation links:
+- [All Commands](https://help.splunk.com/en/splunk-cloud-platform/search/search-reference/10.3.2512/quick-reference/command-quick-reference)
+- [Commands by Category](https://help.splunk.com/en/splunk-cloud-platform/search/search-reference/10.3.2512/quick-reference/commands-by-category)
+
 ---
 ##### Searching
 

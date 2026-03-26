@@ -26,7 +26,7 @@ klist
 ---
 ### Detection
 
-Check out [[Splunk Queries#Detecting Pass the Ticket]]
+Check out [[Splunk Attack Specific Queries#Detecting Pass the Ticket]]
 ###### Technique 1
 Detecting this attack from normal Kerberos authentication is to find a partial authentication process.
 - Since an attacker imports a TGT ticket into a logon session and requests a TGS ticket for a remote service, the TGT was never requested.

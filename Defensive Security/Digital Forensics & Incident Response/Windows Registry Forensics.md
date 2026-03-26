@@ -52,7 +52,7 @@ Important locations for the [[Windows Registry]] while performing [[DFIR]].
 
 **Shimcache (AppCompatCache)**: Ensures application backward compatibility and stores information about the executables, including name, size, and last modified date. The key found in the registry: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache`
 
-**Amcache**: Similar to Shimcache, and it also stores data related to program execution, including path, installation, deletion, execution times, and a SHA1 hash. Can be analyzed using [[Eric Zimmerman Tools]], the *AmcacheParser* : `C:\Windows\appcompat\Programs\Amcache.hve`. 
+**Amcache**: Similar to Shimcache, and it also stores data related to program execution, including path, installation, deletion, execution times, and a SHA1 hash. Can be analyzed using [[Eric Zimmerman Tools]], the *AmcacheParser* : `C:\Windows\appcompat\Programs\Amcache.hve`. Check the `Root\InventoryApplicationFile`
 - Last executed programs can be found at:`C:\Windows\appcompat\Programs\Amcache.hve\Root\File\{volume guid}`
 
 **BAM/DAM - Background Activity Monitor/Desktop Activity Monitor**: These contain information about last run programs, their full paths, and the execution times. Can be analyzed using [[RegRipper]] or *Registry Explorer* by Eric Zimmerman. 

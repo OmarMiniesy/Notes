@@ -85,6 +85,6 @@ Successful logons with delegated tickets will show data about the ticket issuer 
 Can look for PowerShell and [[Lightweight Directory Access Protocol (LDAP)]] search filters used for the discovery of accounts with delegation enabled.
 - Look for Event ID `4104` for PowerShell Script logging.
 - Look for LDAP filters that target delegation properties.
-- Check out [[Splunk Queries#Detecting Kerberos Delegation Attacks]]
+- Check out [[Splunk Attack Specific Queries#Detecting Kerberos Delegation Attacks]]
 
 ---

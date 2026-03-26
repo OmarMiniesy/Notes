@@ -31,6 +31,8 @@ Similarly, for parsing a whole directory, we can use the following command:
 PECmd.exe -d <path-to-Prefetch-directory> --csv <path-to-save-csv>
 ```
 
+> The output contains a normal output file, and a `timeline` file. The timeline file shows the executable details sorted by the run time.
+
 ---
 ### WxTCmd - Windows 10 Timeline database parser
 

@@ -88,7 +88,7 @@ To prevent this attack, the following techniques can be implemented:
 
 Since the first part of this attack involves identifying target service accounts, we can monitor [[Lightweight Directory Access Protocol (LDAP)]] activity, specially for [[Domain Reconnaissance]] activity.
 - Check out [[BloodHound#Detecting Bloodhound Usage|LDAP Filters]] for filters on LDAP usage in reconnaissance.
-- For SPN querying, we can use the filter in the `SearchFilter` field in [[SilkETW]] output channel. Check out [[Splunk Queries#Detecting Recon by BloodHound]] for guidance.
+- For SPN querying, we can use the filter in the `SearchFilter` field in [[SilkETW]] output channel. Check out [[Splunk Attack Specific Queries#Detecting Recon by BloodHound]] for guidance.
 ```
 *(&(samAccountType=805306368)(servicePrincipalName=*)*
 ```
@@ -116,7 +116,7 @@ Looking also for the *account name* that is not a machine account (not ending wi
 - This is because service machine accounts will have large and complex passwords so it would be hard to crack them.
 
 To detect this using [[Splunk]]:
-- Other queries to detect using Splunk: [[Splunk Queries#Detecting Kerberoasting - TGS Requests]], [[Splunk Queries#Detecting Kerberoasting - TGS Transactions]], [[Splunk Queries#Detecting Kerberoasting - RC4]].
+- Other queries to detect using Splunk: [[Splunk Attack Specific Queries#Detecting Kerberoasting - TGS Requests]], [[Splunk Attack Specific Queries#Detecting Kerberoasting - TGS Transactions]], [[Splunk Attack Specific Queries#Detecting Kerberoasting - RC4]].
 ```
 Event.EventData.TicketEncryptionType="0x17" Event.System.EventID="4769" Event.EventData.ServiceName!="*$" | table Event.EventData.ServiceName, Event.EventData.TargetUserName, Event.EventData.IpAddress
 ```

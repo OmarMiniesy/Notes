@@ -17,6 +17,6 @@ This can be detected by observing the following [[Windows Events Log]] Event IDs
 - `4648` - Authenticate Using Explicit Credentials
 - `4771` - [[Kerberos]] Pre-Authentication Failed
 
-> Checkout the [[Splunk Queries#Detecting Password Spraying]].
+> Checkout the [[Splunk Attack Specific Queries#Detecting Password Spraying]].
 
 ---

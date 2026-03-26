@@ -56,7 +56,7 @@ Make sure that the accounts with the property `Kerberos Preauthentication` are r
 Since the first part of this attack involves identifying user accounts with no pre-authentication or with unconstrained delegation enabled, we can monitor [[Lightweight Directory Access Protocol (LDAP)]] activity, specially for [[Domain Reconnaissance]] activity.
 - Check out [[BloodHound#Detecting Bloodhound Usage|LDAP Filters]] for filters on LDAP usage in reconnaissance.
 - In event ID `4768` for TGT requests, can check for the `PreAuthType` attribute in the *additional information* part of the event which will show whether pre-authentication is enabled or not.
-- Check out [[Splunk Queries#Detecting AS-REProasting]]
+- Check out [[Splunk Attack Specific Queries#Detecting AS-REProasting]]
 - Filtering for `preauthtype` of `0` and `ticket encryption type` is `0x17` (crackable encryption).
 
 Since the attacker instigates the creation of a *TGT*, we can use the [[Windows Events Log]] Event with ID `4768` which creates a log when a *TGT* is requested.

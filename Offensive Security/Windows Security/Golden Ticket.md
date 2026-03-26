@@ -80,7 +80,7 @@ We can also monitor for the extraction of the `krbtgt` hash by checking for:
 - `NTDS.dit` file access. (check out [[Domain Controller#NTDS.DIT|NTDS.dit]])
 - [[Windows Processes#`lsass.exe`|LSASS]] memory read via [[Sysmon]] event ID `10`.
 
-> Can also be detected via the same techniques as [[Pass the Ticket]], check out [[Splunk Queries#Detecting Pass the Ticket]].
+> Can also be detected via the same techniques as [[Pass the Ticket]], check out [[Splunk Attack Specific Queries#Detecting Pass the Ticket]].
 
 |Priority|Detection|
 |---|---|

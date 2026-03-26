@@ -28,7 +28,7 @@ To enumerate the available plugins that can be used by RegRipper:
 
 To use RegRipper to extract any data, we need to provide the location of the needed artifact by specifying the target *Hive*, and we need to specify the *plugin* name.
 ```powershell
-,\rip.exe -r "<path-to-registry>" -p <plugin-name>
+.\rip.exe -r "<path-to-registry>" -p <plugin-name>
 ```
 
 ---

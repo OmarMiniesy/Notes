@@ -58,6 +58,6 @@ Whenever a tool like *mimikatz* performs DCSync, the Domain Controller logs:
 Access Check: Replicating Directory Changes
 ```
 - We can filter for this in the `Message` property of the event log with ID `4662`.
-- Check out [[Splunk Queries#Detecting DCSync]]
+- Check out [[Splunk Attack Specific Queries#Detecting DCSync]]
 
 ---

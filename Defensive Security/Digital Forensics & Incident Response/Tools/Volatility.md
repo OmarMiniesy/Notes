@@ -73,6 +73,7 @@ To identify network connections, showcasing [[IP]] addresses, [[Port]]s, connect
 - We can also utilize [[Memory Forensics#Kernel Objects|Pool Scanning]] to identify terminated network connections.
 - Check out the commands [here](https://blog.onfvp.com/post/volatility-cheatsheet/#:~:text=process%20name%2C%20args-,NETWORK%20INFORMATION,-NETSCAN).
 - Plugins include `netstat`, `netscan`
+- The `connscan` command can be used to find `_TCPT_OBJECT` structures to find artifacts from previous connections that have been terminated.
 
 ##### Identifying File Data
 
@@ -85,6 +86,7 @@ To identify network connections, showcasing [[IP]] addresses, [[Port]]s, connect
 
 Using the `malfind` plugin and specifying a process, it outputs memory regions that will be likely used by [[Malware]] to hide, such as:
 - Regions that are marked executable or writeable. The permission `PAGE_EXECUTE_READWRITE` is used to both execute and write to the memory, which is sometimes malicious because memory should be segregated into the writing zone and the modifying zone.
+	- Malware can use this to execute code in the memory of another process.
 - Regions that contain code injections, like shellcode or DLLs.
 - Hidden threads or _hooks_ that can be used by malware.
 - It outputs the process ID, its name, the memory regions with their addresses, sizes, flags, and hex dumps.
@@ -122,13 +124,14 @@ Within a memory dump, the running windows services can be listed and analyzed us
 ##### Identifying Loaded DLLs
 
 The _DLLs, or Dynamic Link Libraries_, that are loaded into the address space of a process can be listed through the `windows.dlllist` plugin.
-- Need to specify the needed process by giving its PID using `--pid XXXX`
+- Can specify the needed process by giving its PID using `--pid XXXX`
 - This can be used to understand which libraries and functions that the process depends on.
 - Malware can inject or load malicious DLLs into legitimate processes to hide or to escalate privileges.
+- To look for certain `dll`, use `grep` and use the `-A x -B y` to show the `x` lines before and the `y` lines after.
 
 ##### Identifying [[Windows Registry|Registry]] Hives
 
-The registry files, or hives, can be dumped to showcase:
+The registry files, or hives, can be dumped using `hivelist` to showcase:
 - User and system configuration data.
 - The memory may hold the registry hive or parts of it.
 - Identify persistence mechanisms by altered [[Windows Registry#Registry Keys|Registry Keys]].
@@ -148,6 +151,24 @@ Volatility can be used with YARA to find matches using `yarascan`.
 
 ```bash
 vol.py -f /home/htb-student/MemoryDumps/compromised_system.raw yarascan -y /home/htb-student/Rules/yara/wannacry_artifacts_memory.yar
+```
+
+---
+### Using [[Regular Expressions]] with `strings`
+
+[[IP]] Addresses:
+```
+strings /x.vmem | grep -E "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+```
+
+Email:
+```
+strings /x.vmem | grep -oE "\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b"
+```
+
+Command Prompt or PowerShell Artifacts:
+```
+strings /x.vmem | grep -E "(cmd|powershell|bash)[^\s]+"
 ```
 
 ---

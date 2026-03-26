@@ -6,6 +6,7 @@ This is a data analytics software known for its ability ingest, index, analyze, 
 Links to datasets that can be used to learn Splunk.
 - [BOTS](https://github.com/splunk/botsv3)
 - [nginx_json_logs](https://raw.githubusercontent.com/elastic/examples/refs/heads/master/Common%20Data%20Formats/nginx_json_logs/nginx_json_logs)
+- https://bots.splunk.com/ -> Website with practical courses for Splunk. 
 
 ---
 ### Splunk Architecture & Components

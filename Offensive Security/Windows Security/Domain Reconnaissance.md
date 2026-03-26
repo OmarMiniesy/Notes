@@ -14,7 +14,7 @@
 ---
 ### Reconnaissance using Native Windows Executables
 
-> To try and detect these techniques, we can enable PowerShell script block logging and monitoring for execution of scripts or cmdlets. It has an Event ID of `4104`. Also, check out [[Splunk Queries#Detecting Domain Reconnaissance using Native Windows Binaries]].
+> To try and detect these techniques, we can enable PowerShell script block logging and monitoring for execution of scripts or cmdlets. It has an Event ID of `4104`. Also, check out [[Splunk Attack Specific Queries#Detecting Domain Reconnaissance using Native Windows Binaries]].
 ##### `net group`
 
 The command `net group` command can be used to identify the [[Objects#Security Groups|Groups]] present as well as the users of a certain group in the current domain.
