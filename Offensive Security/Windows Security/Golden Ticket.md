@@ -71,7 +71,7 @@ Another essential thing to do is to look for TGS requests with no preceding TGT 
 
 Another idea to look for is accounts that logon with high privileges using event ID `4672`.
 - Look for accounts that are logging in with permissions that they shouldn't have.
-- So an non-admin account triggering `4762` is suspicious.
+- So an non-admin account triggering `4672` is suspicious.
 
 If `SID filtering` is enabled, we will get alerts with the event ID `4675` during cross-domain escalation.
 

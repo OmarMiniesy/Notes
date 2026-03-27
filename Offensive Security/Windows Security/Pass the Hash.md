@@ -3,6 +3,7 @@
 Tis is an attack where attackers can use the [[NTLM]] password hash instead of the actual plain text password to authenticate.
 
 The attacker modifies credential material inside the **LogonSession** in [[Windows Processes#`lsass.exe`|LSASS.EXE]].  
+
 That is the defining signal of Pass-the-Hash.
 - Windows does **not** create an ordinary interactive logon.
 - No password is provided.
@@ -17,7 +18,7 @@ Using `mimikatz` on a machine to extract the NTLM hash of a user that is logged 
 mimikatz # sekurlsa::logonpasswords
 ```
 
-Running the `pth`, pass the hash, argument with the obtain credentials and the domain:
+Running the `pth`, pass the hash, argument with the obtained credentials and the domain:
 ```
 mimikatz # sekurlsa::pth /user:<username> /ntlm:<hash> /domain:<domain>
 ```

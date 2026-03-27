@@ -61,21 +61,3 @@ Understand parent-child process relationships. Check out known bad, or weird loo
 ```
 
 ---
-### Investigating Process Injections
-
-
----
-### Investigating C2 Behavior
-
-
----
-### Investigating DLL Hijacking
-
-
-
----
-### Investigating Credential Dumping
-
-
-
----

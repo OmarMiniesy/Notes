@@ -33,7 +33,7 @@ A patch was released by Microsoft to prevent passwords from being stored in poli
 > However, there are still environments that have passwords in the policy files regardless of the patch.
 
 To detect this attack done by the `GPPPassword` tool, we can check for file access events using [[Windows Events Log]] event with ID `4663`.
-- We can then check for failed, successful, or TGT request events (`4624`, `4624`, `4768` respectively) and mapping on the [[IP]] address used to check if it is normal behavior.
+- We can then check for failed, successful, or TGT request events (`4624`, `4625`, `4768` respectively) and mapping on the [[IP]] address used to check if it is normal behavior.
 
 Honeypots can also be used:
 - A semi-privileged user with a *wrong password*.

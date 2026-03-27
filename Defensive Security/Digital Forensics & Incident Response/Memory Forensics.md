@@ -73,6 +73,7 @@ To uncover such activity, the following can be done:
 Adversaries can perform *process hollowing* or utilize *unmapped memory* sections. To investigate this, the following can be done:
 - Memory analysis tools or signs of these techniques.
 - Identify processes that occupy unusual memory spaces.
+- Check the memory of the processes and look for weird permission such as `PAGE_EXECUTE_READWRITE`.
 
 ##### Rootkit Discovery
 
