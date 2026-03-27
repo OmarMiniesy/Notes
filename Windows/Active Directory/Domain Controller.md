@@ -28,6 +28,7 @@ The _AD DS_ is the core of the Windows domain, and it acts as a catalogue that h
 This is when AD [[Objects]] are updated and transferred from one DC to another.
 - When DCs are added, connection objects are created by the KCC (Knowledge Consistency Checker) service that is present on all DCs, to manage replication.
 - This feature is used to ensure that changes are always synchronized between DCs.
+- [[DCSync]] is an attack that abuses this functionality.
 
 ###### SYSVOL
 
