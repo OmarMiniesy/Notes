@@ -1,39 +1,69 @@
 ### GIT
 
-Cribl Stream creates a local git repo
-- Has Commit button to sync changes to the local repo
-- Has Deploy button to deploy configurations to the environment.
-- Forgetting to commit & deploy will not confirm these changes.
+See [[Git Commands]] for general Git concepts.
+
+Cribl Stream creates a local git repository to version-control all configurations.
+- **Commit** button: Saves configuration changes to the local git repo, creating a version history entry. This does *not* apply changes to the live environment.
+- **Deploy** button: Pushes the latest committed configuration to the worker nodes or agents in the environment.
+- Forgetting to commit and deploy means changes exist only in the UI and are not persisted or applied.
+- Because all changes are versioned in git, rolling back to any prior configuration state is possible by reverting to an earlier commit.
 
 ---
 ### JS
 
-cribl uses JS to manpuliate and filter data.
-- Cribl uses functions which are JS code to manipulate data.
+Cribl uses JavaScript expressions to manipulate and filter data inside pipeline functions.
+- JS is used within functions such as the Eval function and custom code functions to read, transform, and write event fields.
+- Event fields are accessed via the `__e` object. For example:
+  ```js
+  __e['new_field'] = __e['existing_field'].toUpperCase();
+  ```
+- This allows arbitrary field creation, deletion, type conversion, and conditional logic directly within a pipeline stage.
 
 ---
 ### Regex
 
-used to extract fields and match patterns.
-- used in stream and edge.
+See [[Regular Expressions]] for syntax reference.
+
+Regular expressions are used throughout Cribl to extract fields and match patterns.
+- **Event Breakers**: Regex patterns define how raw byte streams are split into discrete events (e.g., splitting on newlines, JSON array boundaries, or custom delimiters).
+- **Capture functions**: Extract named fields from unstructured log text using capture groups.
+- **Route conditions**: Regex can be used in routing rules to direct events matching a pattern to a specific pipeline or destination.
+- Used in both Stream and Edge.
 
 ---
 ### KQL
 
-query language developed by microsoft to query data.
-- cribl uses KQL as their default search language.
+See [[SIEM]] — KQL is also the query language used in Microsoft Sentinel.
+
+KQL (Kusto Query Language) is a read-only query language developed by Microsoft to query large datasets.
+- Cribl Search uses KQL as its default search language.
+- Queries are written as pipelines of operators separated by `|`. Basic structure:
+  ```kql
+  index
+  | where field == "value"
+  | project field1, field2
+  | summarize count() by field1
+  ```
+- Common operators: `where` (filter), `project` (select fields), `extend` (add computed fields), `summarize` (aggregate), `order by` (sort).
 
 ---
-### Knowledge Objects - Stream & Edge
+### Knowledge Objects - [[Cribl Products|Stream & Edge]]
 
-These are configuration objects that can help process data faster and in different ways.
-- to reach: top navi - processing - knowledge.
+Configuration objects that can be defined once and reused across pipelines to process data faster and in different ways.
+- To access: top navigation → Processing → Knowledge.
+- Knowledge Objects are shared across all pipelines within the same worker group.
 
-a lookup is a comma delimited file that can be used with lookup function to enrich events as they are processed.
+**Lookup**
+- A comma-delimited (CSV) file used with the Lookup pipeline function to enrich events during processing.
+- Fields in the incoming event are matched against columns in the lookup file, and matching rows add new fields to the event (e.g., mapping an IP address to a hostname or geo-location).
 
-event breakers allows breaking up incoming streams of data into discrete events.
-- Can be used to add, dlete, edit, search, tags
+**Event Breakers**
+- Define how raw incoming byte streams are split into discrete events before pipeline processing begins.
+- Supported break strategies include: newline-delimited, JSON arrays, regex-based patterns, and timestamp-anchored splitting.
+- Can be created, edited, deleted, searched, and tagged within the Knowledge section.
 
-There are regex libraries that contain known patterns.
+**Regex Libraries**
+- Reusable collections of named regex patterns that can be referenced across multiple pipeline functions without redefining them each time.
+- Cribl ships with built-in libraries of common patterns (e.g., for syslog, Apache access logs, Windows events). Custom patterns can be added.
 
 ---
