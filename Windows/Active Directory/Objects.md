@@ -32,14 +32,14 @@ An *RID* is the last part of the *SID*.
 
 Certain accounts and groups always have fixed RIDs. Check the [[Rights & Privileges]] *Built In* groups section for more information.
 
-|RID|Account/Group|
-|---|---|
-|500|Built-in **Administrator** account|
-|501|Built-in **Guest** account|
-|512|**Domain Admins** group|
-|513|**Domain Users** group|
-|544|**Administrators** group (local)|
-|545|**Users** group (local)|
+| RID | Account/Group                      |
+| --- | ---------------------------------- |
+| 500 | Built-in **Administrator** account |
+| 501 | Built-in **Guest** account         |
+| 512 | **Domain Admins** group            |
+| 513 | **Domain Users** group             |
+| 544 | **Administrators** group (local)   |
+| 545 | **Users** group (local)            |
 
 ###### Object Names
 

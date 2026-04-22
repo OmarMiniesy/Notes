@@ -2,7 +2,7 @@
   "promptDelete": false,
   "showLineNumber": false,
   "alwaysUpdateLinks": true,
-  "attachmentFolderPath": "/",
+  "attachmentFolderPath": "./pics",
   "spellcheck": true,
   "tabSize": 5,
   "pdfExportSettings": {

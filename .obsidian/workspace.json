@@ -4,53 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "50331f20bd1d61f3",
+        "id": "dde28894af97247d",
         "type": "tabs",
         "children": [
           {
-            "id": "efb9b3290a2a4331",
+            "id": "aaf677c28be1c245",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Windows/Tools/Get-WinEvent.md",
+                "file": "Cribl/Supporting Tech.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Get-WinEvent"
-            }
-          },
-          {
-            "id": "b9e63be699a6d8ac",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Detection Engineering/Chainsaw.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Chainsaw"
-            }
-          },
-          {
-            "id": "c2b7a68953a3c827",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Windows/Active Directory/Domain Controller.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Domain Controller"
+              "title": "Supporting Tech"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "ntds",
+                "query": "rubeu",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 331.5
+    "width": 323.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -223,34 +194,37 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "aaf677c28be1c245",
   "lastOpenFiles": [
-    "Defensive Security/Detection Engineering/Chainsaw.md",
-    "Defensive Security/Digital Forensics & Incident Response/Tools/Eric Zimmerman Tools.md",
-    "Windows/Tools/Get-WinEvent.md",
-    "Scripting/Handling Log Files.md",
-    "Defensive Security/Security Info & Events Mgmt/Use Case.md",
-    "Defensive Security/Security Info & Events Mgmt/Logs.md",
-    "Defensive Security/Security Info & Events Mgmt/SIEM.md",
-    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
-    "Defensive Security/Endpoint Security/Wazuh.md",
-    "Defensive Security/Endpoint Security/SilkETW.md",
-    "Defensive Security/Endpoint Security/Process Hacker.md",
-    "Defensive Security/Endpoint Security/OSQuery.md",
-    "Defensive Security/Endpoint Security/Investigating Processes.md",
-    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
-    "Windows/Active Directory/Domain Controller.md",
-    "Windows/Active Directory/Active Directory.md",
-    "Offensive Security/Windows Security/Password Spraying.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Attack Specific Queries.md",
-    "Offensive Security/Windows Security/Pass the Hash.md",
+    "Cribl/Cribl Products.md",
+    "Cribl/Supporting Tech.md",
+    "Cribl/Data Management.md",
+    "Cribl/pics/Data Management.png",
+    "Cribl/pics",
+    "Cryptography/Certificates.md",
+    "Cribl",
+    "Cryptography/Cryptanalysis.md",
+    "Scripting/JQ.md",
+    "Scripting/Linux Commands - Files.md",
+    "Scripting/Bash Scripting.md",
+    "Scripting/Dealing With Files of Different Types.md",
+    "Offensive Security/Windows Security/DCSync.md",
     "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Investigation Methodology.md",
-    "Offensive Security/Windows Security/Silver Ticket.md",
-    "Offensive Security/Windows Security/Responder Attacks.md",
-    "Offensive Security/Windows Security/Print Spooler.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Attack Specific Queries.md",
     "Offensive Security/Windows Security/Pass the Ticket.md",
-    "Offensive Security/Windows Security/Overpass the Hash.md",
-    "Offensive Security/Windows Security/Misconfigured Certificate Templates - ESC1.md",
+    "Offensive Security/Windows Security/Pass the Hash.md",
+    "Offensive Security/Windows Security/Kerberoasting.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Forensics.md",
+    "Defensive Security/Digital Forensics & Incident Response/Windows Registry Forensics.md",
+    "Windows/Windows OS/Windows Registry.md",
+    "Defensive Security/Digital Forensics & Incident Response/Tools/Volatility.md",
+    "Offensive Security/Tools/BloodHound.md",
+    "Windows/Active Directory/Objects.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/ELK - Elasticsearch, Kibana, & Logstash.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Kibana Query Language.md",
+    "Windows/Active Directory/Domain Controller.md",
+    "Defensive Security/Detection Engineering/Chainsaw.md",
     "Pasted image 20260324145100.png",
     "DFIR Reports",
     "Pasted image 20260315000559.png",
@@ -261,8 +235,6 @@
     "Offensive Security/Social Engineering",
     "Defensive Security/Detection Engineering",
     "Defensive Security/Network Security & Traffic Analysis/Snort",
-    "Defensive Security/Network Security & Traffic Analysis/Snort",
-    "Defensive Security/Network Security & Traffic Analysis/Detection",
     "Untitled.canvas",
     "AWS Cloud/Pictures/Pasted image 20230222213056.png"
   ]
