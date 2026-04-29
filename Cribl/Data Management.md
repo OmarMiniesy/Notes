@@ -74,7 +74,7 @@ Data Optimization is the process of improving the quality, efficiency, and effec
 - **Shaping**: The transformation and restructuring of data to make it more accessible and usable for downstream consumers.
 - **Enrichment**: Enhancing data with context, metadata, and external sources to improve its value and usefulness.
 
-> Optimization helps make better decisions, achieve business objectives, and leverage data as a strategic asset. In [[Supporting Tech]], each of these steps maps to a specific Cribl Stream pipeline function.
+> Optimization helps make better decisions, achieve business objectives, and leverage data as a strategic asset. In [[Supporting Tech]], each of these steps maps to a specific [[Stream]] pipeline function.
 
 MELT — the four pillars of telemetry data:
 - **Metrics**: Numeric representations of data measured over a defined interval of time (e.g., CPU usage at 5-second intervals). Aggregated and summarized — least verbose.
@@ -96,7 +96,7 @@ Common Solutions used in data management:
 Data is separated into phases as it meets different requirements. Each phase maps directly to a [[Cribl Products|Cribl product]]:
 
 - **Discovery**: Done by agents at the location where data is collected. Performs monitoring, collection, and forwarding of the data. → *Cribl Edge*
-- **Processing**: Done by a pipeline to transform, secure, enrich, and route data to the needed destination — see [[Supporting Tech]] for the functions used. → *Cribl Stream*
+- **Processing**: Done by a pipeline to transform, secure, enrich, and route data to the needed destination — see [[Supporting Tech]] for the functions used. → *[[Stream]]*
 - **Storing**: A database or object store to retain and manage the data long-term. → *Cribl Lake*
 - **Exploring**: The ability to query, explore, and visualize data for different analytical and operational needs. → *Cribl Search*
 

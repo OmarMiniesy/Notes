@@ -3,7 +3,7 @@
 
 > Gives more functionality to [[ReactJs]] by allowing [[components]] to register different states
 > These states allow us to render different outputs, and to react differently to different cases.
-> Useful for interaction with [[Events]].
+> Useful for interaction with [[JavaScript/ReactJs/Events]].
 
 > Whenever a state changes, the entire page is rendered again.
 

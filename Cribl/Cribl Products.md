@@ -1,5 +1,7 @@
 ### General Notes
 
+![[Cribl Products, pic1.png]]
+
 Cribl Edge: Part of the [[Data Management]] Discovery phase.
 - A lightweight agent deployed directly on the data source — edge nodes, servers, containers, or VMs.
 - Gathers and auto-discovers data at the source it is deployed on, including log files, metrics, and Windows events.
@@ -7,7 +9,7 @@ Cribl Edge: Part of the [[Data Management]] Discovery phase.
 - Auto-discovery identifies the relevant log files and data streams that need to be collected.
 - Can forward collected data to any destination for downstream processing — typically Cribl Stream.
 
-Cribl Stream: Part of the [[Data Management]] Processing phase.
+[[Stream]]: Part of the [[Data Management]] Processing phase.
 - The core data engine for processing machine data (logs, events, metrics) in real time.
 - Operates via configurable pipelines that apply functions to transform data as it flows through — see [[Supporting Tech]] for the JS functions and Regex used inside pipelines.
 - Supports any type of source: streaming, non-streaming, queues, pub/sub, and agents.

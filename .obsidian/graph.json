@@ -97,6 +97,13 @@
         "a": 1,
         "rgb": 14097929
       }
+    },
+    {
+      "query": "path:Cribl",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
+      }
     }
   ],
   "collapse-display": false,
@@ -109,6 +116,6 @@
   "repelStrength": 6.875,
   "linkStrength": 0.208939708939709,
   "linkDistance": 272,
-  "scale": 0.08793972086976287,
+  "scale": 0.09474885221186855,
   "close": true
 }
