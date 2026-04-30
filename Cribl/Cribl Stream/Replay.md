@@ -1,13 +1,12 @@
 ### General Notes
 
-This is a solution that allows storing data to be used to replay it later.
-- Put in cheap storage.
-- Saves money on retention.
-- Keeps the data around for longer
+Replay allows data to be stored cheaply and replayed later when needed.
+- Data is placed in low-cost object storage (e.g., [[Simple Storage Service (S3)|AWS S3]]).
+- Reduces retention costs while keeping data accessible for historical analysis.
 
-To replay data, we can point Cribl Stream to the storage location to replay the data.
-- Object retrieval and unpacking is resource heavy.
-- Should use searching against fields and not the `raw` field to improve performance.
+To replay data, point Cribl Stream at the storage location containing the archived data.
+- Object retrieval and unpacking are resource-intensive operations.
+- Search against indexed fields rather than the `_raw` field to improve performance.
 
 Better practices:
 - Use compatible storage classes.
@@ -16,7 +15,7 @@ Better practices:
 - Use also a filename filter to improve data quality and latency.
 - Adjust the path field to optimize performance by placing the time in the field name.
 - Check the API limits for object storage destination
-- Check the Event Breakers Ruleset.
+- Check the Event Breakers Ruleset — see [[Supporting Tech]] for how event breakers work.
 - Add a field to identify events that have been replayed.
 - Test the replay in preview mode.
 

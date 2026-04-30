@@ -1,10 +1,10 @@
 ### General Notes
 
 Digital transformation results in:
-- Increasing data volumes
+- Increasing data volumes.
 - Increasing data complexity.
 
-There are several types of tools used in the market for data management, with different types.
+There are several categories of tools used in the market for data management:
 
 ![[Data Management.png]]
 
@@ -20,10 +20,10 @@ A Data Processing Engine gives centralized control over data both at rest and in
 ---
 ### Dealing With Data
 
-- Too many tools and techniques, creating vendor lock-in and data silos.
+- Too many tools and techniques create vendor lock-in and data silos.
 - Storing data in various places and lakes with different tiers causes access issues, data fragmentation, and data inconsistency.
-- Data spread across different tools and locations results in data being difficult to govern and potentially compromised.
-- Different stakeholders need data from different places, and centralizing that data is tough given the variety of tools, storage locations, and formats.
+- Data spread across different tools and locations is difficult to govern and potentially vulnerable to compromise.
+- Different stakeholders need data from different places, and centralizing that data is challenging given the variety of tools, storage locations, and formats.
 
 Data Management is defined in the DAMA (Data Management Association) framework — the industry standard body for data management best practices. The aspects most relevant for IT and Security are:
 - **Data Quality**: Ensures data is easier to analyze and quicker to process.
@@ -66,6 +66,7 @@ O11y Data (Observability):
 
 Security Data:
 - Information related to security events, threat indicators, and compliance requirements.
+- Sources include [[Firewall]] logs, [[IDS & IPS]] alerts, endpoint telemetry, and [[Network Analysis|network captures]].
 - Feeds into [[SIEM]] and UEBA platforms for threat detection and investigation.
 
 Data Optimization is the process of improving the quality, efficiency, and effectiveness of data by enhancing:
@@ -79,13 +80,13 @@ Data Optimization is the process of improving the quality, efficiency, and effec
 MELT — the four pillars of telemetry data:
 - **Metrics**: Numeric representations of data measured over a defined interval of time (e.g., CPU usage at 5-second intervals). Aggregated and summarized — least verbose.
 - **Events**: Discrete occurrences observable at a specific point in time, represented as key-value pairs (e.g., a user login, a service restart).
-- **Logs**: Detailed, system-generated records describing what happened during or around an event. Most verbose — contains structured fields plus a free-form log message in any format.
+- **Logs**: Detailed, system-generated records describing what happened during or around an event. Most verbose — contains structured fields plus a free-form log message in any format. See [[Logs]] and [[Log Analysis]].
 - **Traces**: A record of the path taken by a transaction across an application. Connects individual spans across services to allow profiling and performance analysis of distributed systems.
 
 Common Solutions used in data management:
 - **Data Lake**: Centralized repository that allows organizations to store data at different cost tiers in different formats.
 - **Agents**: Software deployed on infrastructure nodes that collect information and forward or process it.
-- **Object Storage**: Manages data as objects — cheap, scalable, ideal for long-term retention.
+- **Object Storage**: Manages data as objects — cheap, scalable, ideal for long-term retention (e.g., [[Simple Storage Service (S3)|AWS S3]]).
 - **Time Series**: Sequences of data points collected over time, optimized for range queries and aggregations.
 - **Indexed Log Analytics**: Search engines optimized for investigations and full-text log searches.
 - **SIEM/UEBA**: Used for correlating security incidents and protecting against cyber threats — see [[SIEM]].

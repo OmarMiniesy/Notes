@@ -43,17 +43,17 @@ The collector process follows:
 ---
 ### Backpressure
 
-This is when there are issues with sending data or receiving data, either from the source or the destination side.
-- Backpressure is when the in memory queue is overwhelmed with data.
-- Persistent Queues (PQs) are used to hold the data that is overflowing to disk to ensure no data is lost. Data is processed first in first out when issues are gone.
+Backpressure occurs when there are issues sending or receiving data on either the source or destination side.
+- Specifically, it refers to the in-memory queue being overwhelmed with data.
+- Persistent Queues (PQs) spill the overflow to disk to ensure no data is lost. Data is processed first-in, first-out once the pressure subsides.
 
-Source Side Backpressure results in two decisions to be taken, either:
-- Can enable PQ upon pressure from destination.
-- Can have it to be always on to be used as a buffer.
+Source-side backpressure leads to two options:
+- Enable PQ only when pressure is detected from the destination.
+- Keep PQ always on to act as a permanent buffer.
 
-Destination Side Backpressure results in. Not all destinations support all these options.
-- Block any new events that are coming. Blocked events can then be later processed when ready.
-- Drop events that are addressed to the destination
-- Queue events to the destination using PQs.
+Destination-side backpressure can be handled in several ways. Not all destinations support all options:
+- **Block**: Stop accepting new events; resume once the destination recovers.
+- **Drop**: Discard events addressed to the destination.
+- **Queue**: Spill events to a PQ until the destination is ready.
 
 ---

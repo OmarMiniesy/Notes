@@ -1,8 +1,8 @@
 ### General Notes
 
-Pipelines are present after [[Routes]], there are optional pipelines:
-- Preprocessing used to normalize the data before it gets sent to the routes.
-- Postprocessing used to modify/normalize the data before it gets sent to the destinations.
+Pipelines sit after [[Routes]]. There are also optional pipelines that run outside the main routing flow:
+- **Preprocessing**: Normalizes data before it reaches the routes.
+- **Postprocessing**: Modifies or normalizes data after routing, before it is sent to the destinations.
 
 Inside the pipelines, are *functions* that can be used to perform actions on the data and process it.
 - There are also *packs* that are pre-configured configurations and actions that can be used directly to simplify making configurations and changes.
@@ -20,8 +20,8 @@ A series of functions that execute in order.
 
 Performs an action on the data it sees.
 - A collection of functions is a pipeline.
-- A function is a piece of JavaScript code that executes on an event.
-- Functions can be configured with filters as well to match necessary events.
+- A function is a piece of JavaScript code that executes on an event — see [[Supporting Tech]] for JS syntax used inside functions.
+- Functions can be configured with filters to match only the relevant events, including [[Regular Expressions|regex]]-based conditions.
 - There is the Final Flag as well, similar to the one in the [[Routes]].
 - Comments can be added for documentation.
 

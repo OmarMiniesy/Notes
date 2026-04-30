@@ -4,10 +4,10 @@ There are two types of ways to route traffic in Cribl:
 - **QuickConnect**: Fast and simple drag and drop UI to connect sources with destinations.
 - **Routes**: These are used to configure the data path by defining filter expressions to check what data is coming in, process, filter it, perform any actions on it, then route it to the appropriate pipeline/destination. Each route can be associated with only 1 pipeline and 1 destination.
 
-The data that comes is sent to multiple routes, all of it, in order.
-- Each route can then do modifications to the data and change it, and then send it to the destioanotin.
-- The final flag determines if all the data is copied down to the following route, or it stops there.
-- Each pipeline is responsible for modifying the data, and we cannot send data between rouotes or sequentially do stuff to the data using the routes. This is not what ther routes are used for.
+All incoming data is evaluated against every route in order.
+- Each route can modify the data through its associated pipeline and then send it to the configured destination.
+- The Final flag determines whether matched data stops at that route or continues to be evaluated by the routes below it.
+- Pipelines are responsible for modifying data — routes cannot pass data between each other or chain transformations sequentially. That is not their purpose.
 
 ---
 ### QuickConnect

@@ -1,6 +1,7 @@
 ### GIT
 
 See [[Git Commands]] for general Git concepts.
+- Git version `1.8.3.1` or higher is mandatory.
 
 Cribl Stream creates a local git repository to version-control all configurations.
 - **Commit** button: Saves configuration changes to the local git repo, creating a version history entry. This does *not* apply changes to the live environment.
@@ -26,14 +27,14 @@ See [[Regular Expressions]] for syntax reference.
 
 Regular expressions are used throughout Cribl to extract fields and match patterns.
 - **Event Breakers**: Regex patterns define how raw byte streams are split into discrete events (e.g., splitting on newlines, JSON array boundaries, or custom delimiters).
-- **Capture functions**: Extract named fields from unstructured log text using capture groups.
+- **Capture functions**: Extract named fields from unstructured [[Logs|log]] text using capture groups — useful for parsing formats covered in [[Log Analysis]].
 - **Route conditions**: Regex can be used in routing rules to direct events matching a pattern to a specific pipeline or destination.
 - Used in both Stream and Edge.
 
 ---
 ### KQL
 
-See [[SIEM]] — KQL is also the query language used in Microsoft Sentinel.
+See [[SIEM]] — KQL is also the query language used in Microsoft Sentinel. See [[Log Analysis]] for common query patterns applied to security logs.
 
 KQL (Kusto Query Language) is a read-only query language developed by Microsoft to query large datasets.
 - Cribl Search uses KQL as its default search language.

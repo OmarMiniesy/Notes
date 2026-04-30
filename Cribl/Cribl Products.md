@@ -3,8 +3,8 @@
 ![[Cribl Products, pic1.png]]
 
 Cribl Edge: Part of the [[Data Management]] Discovery phase.
-- A lightweight agent deployed directly on the data source — edge nodes, servers, containers, or VMs.
-- Gathers and auto-discovers data at the source it is deployed on, including log files, metrics, and Windows events.
+- A lightweight agent deployed directly on the data source — edge nodes, servers, [[Docker|containers]], [[Kubernetes|Kubernetes pods]], or VMs.
+- Gathers and auto-discovers data at the source it is deployed on, including [[Logs|log files]], metrics, syslog streams, and Windows events.
 - Provides a centralized view of all deployed agents across the environment.
 - Auto-discovery identifies the relevant log files and data streams that need to be collected.
 - Can forward collected data to any destination for downstream processing — typically Cribl Stream.
@@ -20,7 +20,7 @@ Cribl Edge: Part of the [[Data Management]] Discovery phase.
 Cribl Lake: Part of the [[Data Management]] Storing phase.
 - Stores data in an open, non-proprietary format (e.g., Parquet) to avoid vendor lock-in and ensure long-term accessibility.
 - Zero-configuration setup with automated provisioning — no manual schema or index management required.
-- BYOS (Bring Your Own Storage) option allows connecting S3-compatible storage (e.g., AWS S3, MinIO). Alternatively, Cribl can manage the storage entirely.
+- BYOS (Bring Your Own Storage) option allows connecting S3-compatible storage (e.g., [[Simple Storage Service (S3)|AWS S3]], MinIO). Alternatively, Cribl can manage the storage entirely.
 - Tiered storage design allows hot, warm, and cold data to be stored cost-effectively based on access frequency.
 
 Cribl Search: Part of the [[Data Management]] Exploring phase.
