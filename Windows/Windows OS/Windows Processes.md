@@ -27,7 +27,7 @@ Windows processes can either run in *user mode* or *kernel mode* and it depends 
 - Sessions are assigned unique IDs that are incremental starting from `1`.
 - Session `0` is used for Windows system services and is isolated.
 
-**DLLs**, or *Dynamic Link Libraries*, are files that contain code and data and can be used by more than one program.
+**DLLs**, or *Dynamic Link Libraries*, are files that contain executable code and data and can be used by more than one program or application.
 - DLLs promotes modularized code and efficient memory usage.
 - DLLs export function, and programs call these functions to use them.
 - DLLs are assigned as dependencies when they are loaded into a program.

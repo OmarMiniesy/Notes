@@ -53,7 +53,7 @@ A PE file is divided into sections, each with a different purpose.
 
 - `Text Section (.text)`: The hub where the executable code of the program resides.
 - `Data Section (.data)`: A storage for initialized global and static data variables.
-- `Read-only initialized data (.rdata)`: Houses read-only data such as constant values, string literals, and initialized global and static variables.
+- `Read-only initialized data (.rdata)`: Houses read-only data such as constant values, string literals, and initialized global and static variables. Also has the import and export information.
 - `Exception information (.pdata)`: A collection of function table entries utilized for exception handling.
 - `BSS Section (.bss)`: Holds uninitialized global and static data variables.
 - `Resource Section (.rsrc)`: Safeguards resources such as images, icons, strings, and version information.
@@ -69,5 +69,6 @@ These tools are used to analyze the headers of PE files and are very useful for 
 - `pestudio`
 - `x64dbg`
 - `pe-tree`
+- `peview`
 
 ---
