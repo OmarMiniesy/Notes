@@ -12,11 +12,13 @@ A **Token** is a single word/unit produced when [[ELK - Elasticsearch, Kibana, &
 A `text` field is *analyzed* (tokenized + lowercased). 
 - Use for: log messages, descriptions, full-text search
 - **Cannot** be sorted or aggregated.
+- Case insensitive
 - Docs: [text field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/text.html)
 
 A `keyword` field is *NOT analyzed*, stored as exact whole string. 
 - Use for: [[IP]]s, usernames, status codes, hostnames — exact match/filter/sort/aggregation
 - **Can** be sorted or aggregated.
+- Case sensitive
 
 > Analyzing is the process of tokenizing and lowercasing the values of a field. There are several types of analyzers present, each with different properties.
 

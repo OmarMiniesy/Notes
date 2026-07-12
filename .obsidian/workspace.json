@@ -4,25 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "4b4ef6bb66b3f1d5",
+        "id": "4c355ce556ab4a40",
         "type": "tabs",
         "children": [
           {
-            "id": "c0ae490a0050ce49",
+            "id": "673c588fc28a4669",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Malware Analysis/Dynamic Analysis.md",
+                "file": "Defensive Security/Security Info & Events Mgmt/ELK/Mappings.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Dynamic Analysis"
+              "title": "Mappings"
             }
           },
           {
-            "id": "2bcf2e4f744eef12",
+            "id": "7293af20a7b92dd4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Security Info & Events Mgmt/ELK/Using the Dev Console.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Using the Dev Console"
+            }
+          },
+          {
+            "id": "b9422dd42b7988ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -34,23 +48,9 @@
               "icon": "lucide-file",
               "title": "Strings and Field Types"
             }
-          },
-          {
-            "id": "c23b2b4aacc948c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Using ELK"
-            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -82,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "shot",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +107,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296.51103591918945
+    "width": 353.5
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -223,16 +223,19 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "2bcf2e4f744eef12",
+  "active": "b9422dd42b7988ef",
   "lastOpenFiles": [
-    "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
-    "Defensive Security/Security Info & Events Mgmt/ELK/ELK - Elasticsearch, Kibana, & Logstash.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Using the Dev Console.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Mappings.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Strings and Field Types.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Kibana Query Language.md",
-    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
-    "Windows/Tools/Sysinternals.md",
-    "Defensive Security/Malware Analysis/DLL Analysis.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/ELK - Elasticsearch, Kibana, & Logstash.md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
+    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
+    "Defensive Security/Malware Analysis/DLL Analysis.md",
+    "Windows/Windows OS/Portable Executable (PE).md",
+    "Windows/Tools/Sysinternals.md",
     "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Defensive Security/Endpoint Security/Investigating Processes.md",
     "Defensive Security/Malware Analysis/Anti-Reverse Engineering.md",
@@ -240,7 +243,6 @@
     "Offensive Security/Web Application Security/Cross Site Scripting (XSS).md",
     "Windows/Windows OS/Windows API Call Flow.md",
     "Windows/Windows OS/Code Linking.md",
-    "Windows/Windows OS/Portable Executable (PE).md",
     "Defensive Security/Malware Analysis/Ghidra.md",
     "Offensive Security/Web Application Security/Access Control.md",
     "Offensive Security/Web Application Security/Authentication.md",
@@ -250,8 +252,6 @@
     "Windows/Windows OS/System Configuration.md",
     "Windows/Windows OS/Code Linking.md.tmp.25872.1778444709357",
     "Defensive Security/Malware Analysis/Registers & Instructions.md",
-    "Defensive Security/Cyber Defense Frameworks/NIST SP 800-61r2.md",
-    "Defensive Security/Detection Engineering/YARA.md",
     "Cribl/Cribl Lake",
     "Cribl/Supporting Tech.md.tmp.7412.1777462247459",
     "Cribl/Cribl Products.md.tmp.7412.1777462230595",
