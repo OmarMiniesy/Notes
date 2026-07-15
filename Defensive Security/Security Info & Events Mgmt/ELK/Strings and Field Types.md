@@ -22,6 +22,21 @@ A `keyword` field is *NOT analyzed*, stored as exact whole string.
 
 > Analyzing is the process of tokenizing and lowercasing the values of a field. There are several types of analyzers present, each with different properties.
 
+#### Analyzers
+
+There is the `standard` and the `english` analyzer.
+- The `standard` analyzer simply splits on whitespace.
+- The `english` analyzer is preconfigured for English language, and it results in a more storage aware tokenization and performs *stemming*, which is returning the world to its root form. It also removes stop words and lowercases the text.
+
+These can be called using the `_analyze` API:
+```
+GET /_analyze
+{
+  "analyzer": "standard",
+  "text": "The Quick-Fox's jumps!"
+}
+```
+
 ---
 ### Multi-fields
 

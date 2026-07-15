@@ -14,7 +14,7 @@ PUT /my-index
 {
   "mappings": {
     "properties": {
-      "event_id":   { "type": "keyword" },
+      "event_id":   { "type": "keyword", "parameter1":"value" },
       "src_ip":     { "type": "ip" },
       "timestamp":  { "type": "date" },
       "user_name":  { "type": "keyword" },
@@ -55,5 +55,34 @@ POST _reindex
 ```
 
 > The `_count` API can be used to check whether all documents have been moved. This can be done in the case of timeouts or just to check.
+
+---
+### Mapping Parameters
+
+These are parameters used during mapping to enhance searching and storage.
+- `copy_to`
+- `doc_values`
+
+The `copy_to` parameter is used to copy the value of this field into another field that can be searched.
+- This allows a single query to search across the values of multiple fields by querying only this single field.
+- This target field is used during search only, and it is not present in the `_source`.
+- The target field's [[Strings and Field Types#Analyzers|Analyzer]] is used on the data.
+
+```json
+"source_field": {
+	"type":"keyword",
+	"copy_to":"target_field"
+}
+```
+
+The `doc_values` parameter is always enabled by default, and it allows for sorting and aggregation on the fields.
+- However, we can disable it for fields that we don't need sorting/aggregation on.
+
+```json
+"url": { 
+	"type": "keyword", 
+	"doc_values": false 
+} 
+```
 
 ---
