@@ -19,6 +19,7 @@ Full reference: [Query DSL docs](https://www.elastic.co/guide/en/elasticsearch/r
 - `term` → exact value match. Use on `keyword` fields.
     - Docs: [term query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-term-query.html)
 	- `term` on a `text` field usually fails — the raw string was never stored, only its tokens
+	- Check out [[Using the Dev Console#Writing Term Queries|Writing Term Queries]].
 
 > Check [[Strings and Field Types]] for details on `text` and `keyword` fields.
 

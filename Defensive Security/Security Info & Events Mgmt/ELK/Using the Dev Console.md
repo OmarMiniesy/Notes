@@ -134,4 +134,47 @@ GET my_index/_search
 	- `phrase_prefix` runs a `match_phrase_prefix` on each field: same as `phrase`, but the last term is treated as a prefix (useful for search-as-you-type).
 	- `bool_prefix` creates a `match_bool_prefix` per field: every term matched normally except the last, which matches as a prefix, but _without_ requiring phrase order. Also a search-as-you-type option, more forgiving than `phrase_prefix`.
 
----
+To count the number of matched documents, we can use the `_count` API instead of the `_search`.
+```
+GET blogs_fixed2/_count
+{
+  "query": {
+    "match": {
+      "authors.job_title": "Director of Engineering"
+    }
+  }
+}
+```
+
+#### Writing Range Queries
+
+We can also apply filters using `range` queries:
+```
+GET my_index/_search
+{
+  "_source": ["publish_date", "title"],
+  "query": {
+    "range": {
+      "publish_date": {
+        "gte": "2018-01-01",
+        "lt": "2019-01-01"
+      }
+    }
+  }
+}
+```
+- Using the `gte` and `lt` amongst other operators.
+
+#### Writing Term Queries
+
+To look for exact matches on unanalyzed fields, use the `term` query with the `keyword` field:
+```
+GET blogs_fixed2/_search
+{
+  "query": {
+    "term": {
+      "authors.job_title.keyword": "Director of Engineering"
+    }
+  }
+}
+```

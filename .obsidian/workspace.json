@@ -35,7 +35,8 @@
               "title": "Using ELK"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -208,10 +209,10 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "f2b30e62c0e82def",
+  "active": "0edce46d68a7418a",
   "lastOpenFiles": [
-    "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Using the Dev Console.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Using ELK.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Mappings.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Untitled.md",
     "Defensive Security/Security Info & Events Mgmt/ELK/Kibana Query Language.md",
