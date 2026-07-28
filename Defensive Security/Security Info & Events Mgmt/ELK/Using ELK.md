@@ -9,20 +9,6 @@ The *discover tab* in [[ELK - Elasticsearch, Kibana, & Logstash#Kibana|Kibana]] 
 - A *time filter* setting to limit and filter the logs we are searching on. 
 - A *time interval* graph that shows the distribution of the events over the time duration picked.
 
-##### Query types (Query DSL)
-
-Full reference: [Query DSL docs](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html)
-- `match` → searches against tokens. Use on `text` fields.
-    - Docs: [match query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-match-query.html)
-    - This query uses `or` logic.
-    - Check out [[Using the Dev Console#Writing Match Queries|Writing Match Queries]].
-- `term` → exact value match. Use on `keyword` fields.
-    - Docs: [term query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-term-query.html)
-	- `term` on a `text` field usually fails — the raw string was never stored, only its tokens
-	- Check out [[Using the Dev Console#Writing Term Queries|Writing Term Queries]].
-
-> Check [[Strings and Field Types]] for details on `text` and `keyword` fields.
-
 ---
 ### Visualizations
 

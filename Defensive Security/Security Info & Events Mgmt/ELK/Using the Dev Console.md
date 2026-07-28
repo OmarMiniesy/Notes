@@ -178,3 +178,91 @@ GET blogs_fixed2/_search
   }
 }
 ```
+
+#### Writing Bool Queries
+
+A `bool` query is a container that combines multiple clauses. It has 4 possible clause types, each takes a list of queries:
+```
+GET my_index/_search
+{
+  "query": {
+    "bool": {
+      "must": [ ],
+      "filter": [ ],
+      "must_not": [ ],
+      "should": [ ]
+    }
+  }
+}
+```
+- `must` — clause must match, **contributes** to relevance score. Use for real text search conditions.
+- `filter` — clause must match, does **not** contribute to score. Results are cached, so use for binary yes/no conditions (dates, exact values, exists checks) — cheaper than `must` for the same effect.
+- `must_not` — clause must **not** match. No scoring impact.
+- `should` — optional, boosts score if matched.
+    - If `must` or `filter` are present in the query, `should` is purely optional (only affects ranking).
+    - If `bool` has **no** `must`/`filter` clauses, at least one `should` must match (governed by `minimum_should_match`).
+
+Example — combine a text match with a date filter:
+```
+GET blogs_fixed2/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "multi_match": { "query": "meetups", "fields": ["content", "title"] } }
+      ],
+      "filter": [
+        { "range": { "publish_date": { "gt": "2016-06-01" } } }
+      ]
+    }
+  }
+}
+```
+
+Example — required term, excluded term, and required field existence:
+```
+GET blogs_fixed2/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "content": "visualization" } }
+      ],
+      "must_not": [
+        { "match": { "content": "lens" } }
+      ],
+      "filter": [
+        { "exists": { "field": "versions" } }
+      ]
+    }
+  }
+}
+```
+
+Example — soft-boost with `should` (doesn't change hit count, just reorders):
+```
+GET blogs_fixed2/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "content": "visualization" } }
+      ],
+      "must_not": [
+        { "match": { "content": "lens" } }
+      ],
+      "filter": [
+        { "exists": { "field": "versions" } }
+      ],
+      "should": [
+        { "match": { "versions": "8" } }
+      ]
+    }
+  }
+}
+```
+
+**Quick gut-check:** for each condition ask _"does matching this make the doc more relevant, or is it just a yes/no gate?"_
+- More relevant → `must` / `should`
+- Yes/no gate → `filter` / `must_not`
+
