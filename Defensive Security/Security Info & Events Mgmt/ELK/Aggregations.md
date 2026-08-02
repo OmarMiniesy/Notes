@@ -10,6 +10,11 @@ Some important terms useful to know:
 
 > When calculating the `cardinality` of a field, it is essential to use the `.keyword` field because the normal `text` field will treat each word in the field as unique, returning a wrong answer. Check out [[Strings and Field Types]] for more info on keyword and text fields.
 
+###### Best Practice
+Running multiple aggregations in one request is more efficient than separate calls.
+- Elasticsearch scans the data once and computes all aggregations in parallel.
+- Check out [[Using the Dev Console#Combining Aggregations|Combining Aggregations]].
+
 ---
 ### Metric Aggregations
 
@@ -101,5 +106,125 @@ GET my_index/_search
 - The `method_buckets` is used followed by the `terms` bucket aggregation.
 - Using `keyword` here is essential, similar to cardinality in normal metric aggregation.
 - We can also add `order` to sort the results.
+
+---
+### Nesting Aggregations
+
+Multi-level analytics can be created by performing:
+- Metrics within buckets, so the metric is calculated independently per bucket.
+- Sort buckets using the per bucket-metrics.
+- Applying aggregations on the outputs of other aggregations.
+
+First, performing *sub-aggregation* to run the metric aggregation separately for each bucket:
+- This calculates the median for each response code.
+```
+GET my_index/_search
+{
+  "size": 0,
+  "aggs": {
+    "bucket_name": {
+      "terms": {
+        "field": "response_code.keyword"
+      },
+      "aggs": {
+        "runtime": {
+          "percentiles": {
+            "field": "runtime_sec",
+            "percents": [
+              50
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+We can also *sort buckets by metrics* calculated inside of them:
+- Here, we modify the above query to sort by the median in descending order.
+- This is done by referencing the aggregation's name as the key. If there are multiple percentiles, we use this syntax: `aggregation_name.X` where `X` is the percentile value.
+- Here, the metric we want to sort the buckets by is the `runtime` percentile. We use the `.50` to specify the median percentile. If there were other percentiles being calculated, we would have to specify. This is optional.
+```
+GET my_index/_search
+{
+  "size": 0,
+  "aggs": {
+    "bucket_name": {
+      "terms": {
+        "field": "response_code.keyword",
+        "order": {
+          "runtime.50": "desc"
+        }
+      },
+      "aggs": {
+        "runtime": {
+          "percentiles": {
+            "field": "runtime_sec",
+            "percents": [
+              50
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Nesting buckets inside one another is useful to create 2D views of data:
+- Here, we first split the data into months, then inside each month, we create a bucket for the different response codes.
+```
+GET web_traffic/_search
+{
+  "size": 0,
+  "aggs": {
+    "logs_by_month": {
+      "date_histogram": {
+          "field": "@timestamp",
+          "calendar_interval": "month"
+      },
+      "aggs": {
+        "response": {
+          "terms": {
+            "field": "response_code.keyword"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Finally, we can apply aggregations on the output of aggregations on buckets. This is *pipeline aggregation*:
+- This is used to find the bucket with the highest value, the least value, and so on.
+- Here, the syntax used is the `>` and is used to traverse the aggregation hierarchy.
+- This aggregation below groups the runtimes per month, then gets the average for each bucket, then returns the max runtime from all the averages.
+```
+GET web_traffic/_search
+{
+  "size": 0,
+  "aggs": {
+    "runtime_avg_per_month": {
+      "date_histogram": {
+        "field": "@timestamp",
+        "calendar_interval": "month"
+      },
+      "aggs": {
+        "avg_runtime": {
+          "avg": {
+            "field": "runtime_sec"
+          }
+        }
+      }
+    },
+    "max_avg_runtime": {
+      "max_bucket": {
+        "buckets_path": "runtime_avg_per_month>avg_runtime"
+      }
+    }
+  }
+}
+```
 
 ---

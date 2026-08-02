@@ -36,4 +36,10 @@ The operators used:
 > Check [[Strings and Field Types]] for details on `text` and `keyword` fields.
 
 ---
+### Applying [[Aggregations]] to Queries
 
+It is usually useful to first filter on the needed data *then* perform the aggregations needed, as this is more efficient.
+- This way, wee aggregate only the needed, filtered data.
+- Check out [[Using the Dev Console#Combining Queries & Aggregations|Queries & Aggregations]].
+
+---

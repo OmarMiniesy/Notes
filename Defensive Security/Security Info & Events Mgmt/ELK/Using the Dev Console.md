@@ -266,3 +266,53 @@ GET blogs_fixed2/_search
 - More relevant → `must` / `should`
 - Yes/no gate → `filter` / `must_not`
 
+#### Combining Queries & Aggregations
+
+> References [[Aggregations]] and [[Queries]].
+
+Performing the `query` before the `aggs` is more efficient as that way, only the needed filtered data is aggregated on.
+```
+GET web_traffic/_search
+{
+  "size": 0,
+  "query": {
+    "term": {
+      "response_code.keyword": {
+        "value": "404"
+      }
+    }
+  },
+  "aggs": {
+    "logs_by_week": {
+      "date_histogram": {
+        "field": "@timestamp",
+        "calendar_interval": "week"
+      }
+    }
+  }
+}
+```
+
+#### Combining Aggregations
+
+```
+GET web_traffic/_search
+{
+  "size": 0,
+  "aggs": {
+    "average_request_time": {
+      "avg": {
+        "field": "runtime_sec"
+      }
+    },
+    "median": {
+      "percentiles": {
+        "field": "runtime_sec",
+        "percents": [
+          50
+        ]
+      }
+    }
+  }
+}
+```
