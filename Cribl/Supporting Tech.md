@@ -3,7 +3,7 @@
 See [[Git Commands]] for general Git concepts.
 - Git version `1.8.3.1` or higher is mandatory.
 
-Cribl Stream creates a local git repository to version-control all configurations.
+Cribl [[Stream]] creates a local git repository to version-control all configurations.
 - **Commit** button: Saves configuration changes to the local git repo, creating a version history entry. This does *not* apply changes to the live environment.
 - **Deploy** button: Pushes the latest committed configuration to the worker nodes or agents in the environment.
 - Forgetting to commit and deploy means changes exist only in the UI and are not persisted or applied.

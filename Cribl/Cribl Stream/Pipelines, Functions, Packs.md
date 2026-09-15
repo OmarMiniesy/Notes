@@ -15,6 +15,12 @@ A series of functions that execute in order.
 
 > Copilot Editor can help in generating pipelines.
 
+Pipelines are mainly used in the *processing* phase of the [[Data Management]] lifecycle.
+- *Transform the data*: Improving the quality of the data and adding additional context.
+- *Secure the data*: Redacting sensitive data and masking PII.
+- *Route the data*: Send data to destinations based on their needs, so to storage or analysis locations.
+- *Replay the data*: To replay the data from the long term storage through the pipeline and then to the location of choice.
+
 ---
 ### Function
 

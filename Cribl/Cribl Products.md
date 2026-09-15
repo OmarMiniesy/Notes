@@ -2,7 +2,7 @@
 
 ![[Cribl Products, pic1.png]]
 
-Cribl Edge: Part of the [[Data Management]] Discovery phase.
+Cribl [[Edge]]: Part of the [[Data Management]] Discovery phase.
 - A lightweight agent deployed directly on the data source — edge nodes, servers, [[Docker|containers]], [[Kubernetes|Kubernetes pods]], or VMs.
 - Gathers and auto-discovers data at the source it is deployed on, including [[Logs|log files]], metrics, syslog streams, and Windows events.
 - Provides a centralized view of all deployed agents across the environment.
@@ -17,20 +17,20 @@ Cribl Edge: Part of the [[Data Management]] Discovery phase.
 - Key pipeline capabilities: routing data to different destinations, reducing data volume, masking sensitive fields, and enriching events with metadata.
 - Delivers processed data to any chosen platform or destination.
 
-Cribl Lake: Part of the [[Data Management]] Storing phase.
+Cribl [[Lake]]: Part of the [[Data Management]] Storing phase.
 - Stores data in an open, non-proprietary format (e.g., Parquet) to avoid vendor lock-in and ensure long-term accessibility.
 - Zero-configuration setup with automated provisioning — no manual schema or index management required.
 - BYOS (Bring Your Own Storage) option allows connecting S3-compatible storage (e.g., [[Simple Storage Service (S3)|AWS S3]], MinIO). Alternatively, Cribl can manage the storage entirely.
 - Tiered storage design allows hot, warm, and cold data to be stored cost-effectively based on access frequency.
 
-Cribl Search: Part of the [[Data Management]] Exploring phase.
+Cribl [[Search]]: Part of the [[Data Management]] Exploring phase.
 - Federated search engine that queries data in place without requiring ingestion into a separate analytics platform.
 - Can explore data across Cribl Lake, object stores, and other sources simultaneously.
 - Uses KQL as the default query language — see [[Supporting Tech]] for query syntax and examples.
 - Allows pushing results or curated datasets to a [[SIEM]] for alerting and correlation.
 - Enables ad-hoc analysis without the cost and latency of full data ingestion.
 
-Cribl Cloud:
+[[Cribl Cloud]]:
 - The managed SaaS platform that bundles Edge, Stream, Lake, and Search into a single offering — no infrastructure setup required.
 - Hybrid architecture: supports a mix of worker nodes running on-premises and worker nodes in the cloud, offering flexibility based on data residency, latency, and compliance needs.
 - Built-in high availability and scalability are managed by Cribl, reducing operational overhead.

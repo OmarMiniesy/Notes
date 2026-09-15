@@ -18,6 +18,16 @@ Tool Sprawl is when many tools are used and each tool needs to obtain data in it
 A Data Processing Engine gives centralized control over data both at rest and in motion, acting as a single plane to route, reduce, and enrich data before it reaches downstream tools.
 
 ---
+### Lifecycle of Data Management
+
+Data is separated into phases as it meets different requirements. Each phase maps directly to a [[Cribl Products|Cribl product]]:
+
+- **Discovery**: Done by agents at the location where data is collected. Performs monitoring, collection, and forwarding of the data. → Cribl [[Edge]]
+- **Processing**: Done by a [[Pipelines, Functions, Packs#Pipeline|Pipeline]] to transform, secure, enrich, and route data to the needed destination — see [[Supporting Tech]] for the functions used. → Cribl [[Stream]]
+- **Storing**: A database or object store to retain and manage the data long-term. → Cribl [[Lake]]
+- **Exploring**: The ability to query, explore, and visualize data for different analytical and operational needs. → Cribl [[Search]]
+
+---
 ### Dealing With Data
 
 - Too many tools and techniques create vendor lock-in and data silos.
@@ -90,15 +100,5 @@ Common Solutions used in data management:
 - **Time Series**: Sequences of data points collected over time, optimized for range queries and aggregations.
 - **Indexed Log Analytics**: Search engines optimized for investigations and full-text log searches.
 - **SIEM/UEBA**: Used for correlating security incidents and protecting against cyber threats — see [[SIEM]].
-
----
-### Lifecycle
-
-Data is separated into phases as it meets different requirements. Each phase maps directly to a [[Cribl Products|Cribl product]]:
-
-- **Discovery**: Done by agents at the location where data is collected. Performs monitoring, collection, and forwarding of the data. → *Cribl Edge*
-- **Processing**: Done by a pipeline to transform, secure, enrich, and route data to the needed destination — see [[Supporting Tech]] for the functions used. → *[[Stream]]*
-- **Storing**: A database or object store to retain and manage the data long-term. → *Cribl Lake*
-- **Exploring**: The ability to query, explore, and visualize data for different analytical and operational needs. → *Cribl Search*
 
 ---
