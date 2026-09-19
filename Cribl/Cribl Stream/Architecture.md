@@ -63,5 +63,43 @@ Stream Worker Group to Worker Group:
 - The destination worker group configures a source (Cribl HTTP or Cribl TCP), route, and destination. 
 
 ---
+### Backpressure
+
+Backpressure occurs when there are issues sending or receiving data on either the [[Sources]] or [[Destinations]] side.
+- Specifically, it refers to the in-memory queue being overwhelmed with data.
+- Persistent Queues (PQs) spill the overflow to disk to ensure no data is lost. Data is processed first-in, first-out once the pressure subsides.
+
+Source-side backpressure leads to two options:
+- Enable PQ only when pressure is detected from the destination.
+- Keep PQ always on to act as a permanent buffer.
+
+Destination-side backpressure can be handled in several ways. Not all destinations support all options:
+- **Block**: Stop accepting new events; resume once the destination recovers.
+- **Drop**: Discard events addressed to the destination.
+- **Queue**: Spill events to a PQ until the destination is ready.
+
+---
+### Sending data from Cribl to Cribl 
+
+In order to utilize Stream components as both [[Sources]] and [[Destinations]], we need to ensure:
+- HTTP/TCP destinations and source must be connected to the same Leader Node and have the same Leader Node Address.
+- This is for using Cribl HTTP or Cribl TCP sources/destinations.
+
+Good practices include:
+- Process data on source workers to reduce the amount of data being transferred.
+- For heavy data processing, do that on the destination workers to utilize worker processes and parallelization.
+#### Between Worker Groups (stream to stream)
+
+To utilize advantages of data being sent inside the Cribl infrastructure, we can send data between [[Stream]] worker groups.
+- This can be used to send data from a worker group to another in JSON format.
+- This allows moving data from on-prem to cloud worker groups without incurring ingest costs.
+- This can also be used to send data between worker groups to avoid using a slow connection to another destination and utilize the compression offered by cribl.
+
+#### Between [[Edge]] Node to [[Stream]] Worker (edge to stream)
+
+This can be used to send data from an Edge node to a stream worker node to take advantage of data compression and save costs.
+- This can also be used to reduce the amount of data moving over slow connections.
+- Can also be used to perform additional processing on data.
 
 
+---

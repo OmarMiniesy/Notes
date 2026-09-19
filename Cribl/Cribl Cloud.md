@@ -22,7 +22,7 @@ Cribl Teams can be used to give access on team level.
 ---
 ### Default Sources & Ports
 
-There is a list of pre-enabled [[Port]]s and [[Sources, Destinations, Collectors#Sources|Sources]].
+There is a list of pre-enabled [[Port]]s and [[Sources]].
 - Ports `20000`-`20010` are open for configuration.
 - [[Transport Layer Security (TLS)]] encryption is enabled, and authentication is left on the protocol layer.
 - **mTLS** is not yet supported

@@ -25,6 +25,7 @@ The worker nodes do a lot of stuff, including:
 ##### Worker Process
 A worker node has many worker processes operating inside, where data coming from a single connection is operated on entirely by a single worker process.
 - As a result, data should come over multiple connections, so multiple processes spawn and handle data at the same time.
+- Processes do not know about each other.
 ##### Mapping Ruleset
 A **Mapping Ruleset** is used to map the *workers* to their designated *worker groups* using a set of filters. 
 - A ruleset has a list of rules that are matched against, and it works based on a first match wins algorithm.
@@ -43,6 +44,10 @@ The leader does a lot of work, so it should be maintained and have the necessary
 - Configuring the workers and handling the worker queue. It is the configuration source for all pipelines, routes, sources, .... 
 - Holds the state of pull sources, that is, which files have been collected and to maintain state to ensure no repetition.
 - Supports disaster recovery services and fault tolerance using git and others. Check out [[Architecture#Fault Tolerance & Reliability|Fault Tolerance]].
+
+##### Stream Directory Structure
+
+![[Stream, 5.png]]
 
 ---
 ### Stream Projects & Teams

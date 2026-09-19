@@ -94,7 +94,7 @@ A Lakehouse is a caching layer on top of a Lake Dataset that accelerates search 
 
 Data reaches Cribl Lake through several paths:
 
-- **[[Stream]] → Lake Destination**: The most common path. Stream processes and shapes data through [[Pipelines, Functions, Packs|pipelines]], then sends it to Lake as a configured destination — see [[Sources, Destinations, Collectors]].
+- **[[Stream]] → Lake Destination**: The most common path. Stream processes and shapes data through [[Pipelines, Functions, Packs|pipelines]], then sends it to Lake as a configured [[Destinations]].
 - **[[Cribl Products#Cribl Edge|Cribl Edge]] → Lake**: Edge nodes forward collected [[Logs|log]] and metric telemetry to Lake directly, or via Stream for processing first.
 - **Direct Access**: Data can be written to Lake directly over HTTP without going through Stream, bypassing pipeline processing.
 - **Cribl Lake Collector**: Used to pull data back out of Lake for replay — pointing Stream at the stored data to reprocess it.

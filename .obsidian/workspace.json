@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "f7fc6990911b7aaa",
+        "id": "25fa6e6b50b3212b",
         "type": "tabs",
         "children": [
           {
-            "id": "bb0d3d6a8c866942",
+            "id": "13e698575adeb7ff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cribl/Cribl Cloud.md",
+                "file": "Cribl/Cribl Stream/Replay.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cribl Cloud"
+              "title": "Replay"
+            }
+          },
+          {
+            "id": "138fd845c722792d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cribl/Cribl Stream/Stream.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Stream"
             }
           }
         ]
@@ -55,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "robin",
+                "query": "\"processing",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Scripting/Linux Commands - Files.md",
+                "file": "Cribl/Cribl Stream/Replay.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -106,7 +120,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Linux Commands - Files"
+              "title": "Backlinks"
             }
           },
           {
@@ -196,25 +210,33 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "bb0d3d6a8c866942",
+  "active": "13e698575adeb7ff",
   "lastOpenFiles": [
-    "Cribl/Cribl Stream/Stream.md",
-    "Cribl/Cribl Stream/Architecture.md",
-    "Cribl/Cribl Stream/Data Tools.md",
-    "Cribl/Cribl Stream/Events.md",
-    "Cribl/Cribl Stream/Replay.md",
     "Cribl/Cribl Stream/Pipelines, Functions, Packs.md",
-    "Cribl/Cribl Stream/Routes.md",
+    "Cribl/Cribl Stream/Stream.md",
+    "Cribl/Cribl Stream/Data Tools.md",
+    "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 2.png",
+    "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 1.png",
+    "Cribl/Cribl Stream/pics/Stream, 5.png",
+    "Cribl/Cribl Stream/Sources.md",
     "Cribl/Cribl Stream/Scaling & Sizing.md",
-    "Cribl/Cribl Stream/Sources, Destinations, Collectors.md",
+    "Cribl/Cribl Stream/Routes.md",
+    "Cribl/Cribl Stream/Replay.md",
+    "Cribl/Cribl Stream/Events.md",
+    "Cribl/Cribl Stream/Destinations.md",
+    "Cribl/Cribl Stream/Architecture.md",
+    "Cribl/Data Management.md",
+    "Cribl/Cribl Lake/Lake.md",
+    "Cribl/Cribl Cloud.md",
+    "Cribl/Cribl Stream/pics/Destinations, 2.png",
+    "Cribl/Cribl Stream/pics/Destinations, 1.png",
+    "Cribl/Cribl Stream/pics/Sources, win-1.png",
     "Cribl/Cribl Stream/Stream Setup.md",
     "Cribl/Cribl Stream/pics/Stream, 3.png",
     "Cribl/Cribl Stream/Stream CLI.md",
     "Cribl/Cribl Stream/pics/Architecture, 2.png",
     "Cribl/Cribl Stream/pics/Architecture, 1.png",
-    "Cribl/Cribl Cloud.md",
     "Cribl/Cribl Products.md",
-    "Cribl/Data Management.md",
     "Cribl/Supporting Tech.md",
     "Cribl/Cribl Stream/pics/Scaling & Sizing, 1.png",
     "Defensive Security/Security Operations/Threat Hunting.md",
@@ -222,12 +244,9 @@
     "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating FTP.md",
     "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
     "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
-    "Cribl/pics/Cribl Cloud.png",
     "Cribl/Cribl Edge/Sources & Destinations.md",
     "Cribl/Cribl Edge/Edge.md",
     "Defensive Security/Malware Analysis/Static Analysis.md",
-    "Windows/Windows OS/Portable Executable (PE).md",
-    "Defensive Security/Malware Analysis/Dynamic Analysis.md",
     "Windows/Windows OS/Code Linking.md.tmp.25872.1778444709357",
     "Cribl/Cribl Lake",
     "Cribl/Supporting Tech.md.tmp.7412.1777462247459",
@@ -238,11 +257,6 @@
     "Cribl/Data Management.md.tmp.7412.1777462188261",
     "Cribl/Data Management.md.tmp.7412.1777462177255",
     "Cribl/Data Management.md.tmp.7412.1777462173969",
-    "Cribl/Cribl Edge/pics/Edge.png",
-    "Cribl/Cribl Stream/pics/Routes.png",
-    "Cribl/pics/Cribl Products, pic1.png",
-    "Cribl/pics/Data Management.png",
-    "Pasted image 20260324145100.png",
     "Untitled.canvas"
   ]
 }
