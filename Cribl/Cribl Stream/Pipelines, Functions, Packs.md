@@ -54,9 +54,16 @@ Performs an action on the data it sees.
 - There is the Final Flag as well, similar to the one in the [[Routes]].
 - Comments can be added for documentation.
 
-There are default functions that come with Cribl, with the full list [here](https://docs.cribl.io/stream/functions/).
+> There are default functions that come with Cribl, with the full list [here](https://docs.cribl.io/stream/functions/).
 
-The `Parser` function can be used to `Extract` key-value pairs from the `_raw` field. 
+Functions that are regularly used are:
+- `Eval` - Evaluate Fields - Used to add fields, keep fields, or remove fields.
+- `Parser` - Can be used to Extract key-value pairs from the `_raw` field, or can be used to re-serialize events. Can use filter expressions to choose which fields to keep. 
+- `Lookup` - Used to enrich fields based on other information in other data sources. Exact matches are case sensitive. Results are added as fields by default.
+- `Aggregations` - Used to apply statistical calculations on the data. 
+- `Sampling` - Can be used to deduplicate data in a time window and choose the sampling ratio, which is the number of events that is deduplicated.
+- `Mask` - Can be used to mask and replace data.
+- `Regex Extract`
 
 ---
 ### Packs
