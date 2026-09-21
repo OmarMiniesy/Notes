@@ -5,6 +5,7 @@ See [[Git Commands]] for general Git concepts.
 
 Cribl [[Stream]] creates a local git repository to version-control all configurations.
 - **Commit** button: Saves configuration changes to the local git repo, creating a version history entry. This does *not* apply changes to the live environment.
+	- It also pushed local user passwords, `cribl.secret`, and passwords used by [[Sources]] and [[Destinations]]. Check out [[Securing Stream]] for the files.
 - **Deploy** button: Pushes the latest committed configuration to the worker nodes or agents in the environment.
 - Forgetting to commit and deploy means changes exist only in the UI and are not persisted or applied.
 - Because all changes are versioned in git, rolling back to any prior configuration state is possible by reverting to an earlier commit.

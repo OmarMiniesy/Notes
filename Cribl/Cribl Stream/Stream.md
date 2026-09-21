@@ -57,6 +57,12 @@ This is used to ensure fine grained role based access control and necessary secu
 - **Projects** define what data a scoped group can consume (via its Subscriptions), where that data can go (its Destinations), and who's allowed to touch it.
 - Each team gets secure access to its own data, and one team's transformations and config changes don't affect the other team's data or configs.
 
+All the permissions that can be assigned are:
+- **Admin**: Full access
+- **Editor**: Can modify resources within the worker group
+- **Read Only**: Has read only access to resources within the worker group
+- **User**: Has no access until something is shared with them.
+
 Gives administrators the ability to control access to data.
 - Creates isolated spaces for teams and users to access data.
 - Each project grants access to sources, destinations, pipelines, and more.
@@ -77,7 +83,7 @@ Gives administrators the ability to control access to data.
 - A Subscription must always specify a pre-processing pipeline.
 - For the team to be able to use that subscription, it needs to be assigned as a *user* in that worker group.
 
-**Projects**
+**Data Projects**
 - Connections between subscriptions and destinations.
 - Multiple subscriptions and multiple destinations can be combined in one project.
 - Projects ensure that teams get access to the data they need without affecting the other teams.

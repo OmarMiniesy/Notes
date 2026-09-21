@@ -4,25 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "25fa6e6b50b3212b",
+        "id": "79e9be7453e6657b",
         "type": "tabs",
         "children": [
           {
-            "id": "13e698575adeb7ff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cribl/Cribl Stream/Replay.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Replay"
-            }
-          },
-          {
-            "id": "2f1c15b5a7726133",
+            "id": "0de73a1f7bed99b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -210,34 +196,35 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "13e698575adeb7ff",
+  "active": "b5672cb1d8eab82b",
   "lastOpenFiles": [
-    "Cribl/Supporting Tech.md",
+    "Cribl/Data Management.md",
+    "Cribl/Cribl Products.md",
+    "Cribl/Cribl Cloud.md",
+    "Cribl/Cribl Stream/Stream Setup.md",
+    "Cribl/Cribl Stream/Stream.md",
+    "Cribl/Cribl Stream/Sources.md",
+    "Cribl/Cribl Stream/Securing Stream.md",
+    "Cribl/Cribl Stream/Scaling & Sizing.md",
+    "Cribl/Cribl Stream/Routes.md",
     "Cribl/Cribl Stream/Replay.md",
     "Cribl/Cribl Stream/Pipelines, Functions, Packs.md",
-    "Cribl/Cribl Stream/Stream.md",
+    "Cribl/Cribl Stream/Events.md",
+    "Cribl/Cribl Stream/Destinations.md",
     "Cribl/Cribl Stream/Data Tools.md",
+    "Cribl/Cribl Stream/Architecture.md",
+    "Cribl/Supporting Tech.md",
     "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 2.png",
     "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 1.png",
     "Cribl/Cribl Stream/pics/Stream, 5.png",
-    "Cribl/Cribl Stream/Sources.md",
-    "Cribl/Cribl Stream/Scaling & Sizing.md",
-    "Cribl/Cribl Stream/Routes.md",
-    "Cribl/Cribl Stream/Events.md",
-    "Cribl/Cribl Stream/Destinations.md",
-    "Cribl/Cribl Stream/Architecture.md",
-    "Cribl/Data Management.md",
     "Cribl/Cribl Lake/Lake.md",
-    "Cribl/Cribl Cloud.md",
     "Cribl/Cribl Stream/pics/Destinations, 2.png",
     "Cribl/Cribl Stream/pics/Destinations, 1.png",
     "Cribl/Cribl Stream/pics/Sources, win-1.png",
-    "Cribl/Cribl Stream/Stream Setup.md",
     "Cribl/Cribl Stream/pics/Stream, 3.png",
     "Cribl/Cribl Stream/Stream CLI.md",
     "Cribl/Cribl Stream/pics/Architecture, 2.png",
     "Cribl/Cribl Stream/pics/Architecture, 1.png",
-    "Cribl/Cribl Products.md",
     "Cribl/Cribl Stream/pics/Scaling & Sizing, 1.png",
     "Defensive Security/Security Operations/Threat Hunting.md",
     "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
