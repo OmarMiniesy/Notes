@@ -102,3 +102,38 @@ The diagnostic folder created through the CLI has these contents:
 ![[Stream, 3.png]]
 
 ---
+### Stream Logs
+
+Stream generates logs for both leader nodes and worker nodes.
+- These can be viewed from the *Monitoring* tab.
+- Logging levels can be adjusted to change the type of data that is shown.
+- Can also redact information from the logs if needed.
+
+> To enable internal logs, enable them from the Cribl internal [[Sources]] and check the enabled toggle.
+
+The leader node cannot collect and send out its own logs and forward them.
+- An agent needs to be deployed on the leader node to collect the logs.
+
+For the leader node, which takes place in the main process in `$CRIBL_HOME/log/directory`. The main API process is the one that generates these logs.
+- `cribl.log` - The principal log in Stream, including license validation logs.
+- `access.log` - Has all the API calls.
+- `audit.log` - Actions related to files, so creating updating committing deploying and deleting.
+- `notifications.log` - Messages that appear in the notification list
+- `ui-access.log` - This has the interactions with the different components in the UI written as URLs.
+
+For the worker nodes, the main API log also generates logs, as well as the worker processes present in `$CRIBL_HOME/log/worker/[WP#]/directory`.
+- `cribl.log` by the API process has messages about the workers communication with the leader node.
+- `cribl.log` by the worker process has the worker process data itself.
+
+---
+### Upgrading Stream
+
+To upgrade, the leader node is upgraded first, then follows the worker nodes.
+- After the upgrade, it should be validated, and then use git to commit and deploy the configuration changes from leader to worker nodes.
+- This is because some default files are modified due to the upgrade.
+
+During an upgrade:
+- Default files get overwritten, so any modifications need to be done again.
+- Any custom functions should be moved to `$CRIBL_HOME/local/cribl/functions/`
+
+---

@@ -8,6 +8,7 @@ This is a SaaS version of Cribl [[Stream]] and simplifies deployment.
 - pay for what you use.
 - There is git enabled to push/commit.
 - There is an owner account that can be used to give privileges to other users.
+- Automatic upgrades the version of the leader node. Can choose to also automatically upgrade the worker nodes as well.
 
 > Enables hybrid deployments to put worker nodes and edge groups on prem or in certain locations. The leader is on the cloud.
 
