@@ -4,67 +4,51 @@
     "type": "split",
     "children": [
       {
-        "id": "79e9be7453e6657b",
-        "type": "tabs",
+        "id": "d1194e03d9da3feb",
+        "type": "split",
         "children": [
           {
-            "id": "0de73a1f7bed99b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cribl/Cribl Stream/Pipelines, Functions, Packs.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Pipelines, Functions, Packs"
-            }
+            "id": "3962dbeb726037cb",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "981b43802cde9604",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Scripting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Scripting"
+                }
+              }
+            ]
           },
           {
-            "id": "20e064e7c985879f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cribl/Cribl Stream/Data Tools.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Tools"
-            }
-          },
-          {
-            "id": "d7f9d1ee2e8dddc0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cribl/Data Management.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Data Management"
-            }
-          },
-          {
-            "id": "81bec6a5a98f1d51",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cribl/Cribl Cloud.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Cribl Cloud"
-            }
+            "id": "7b1391abde82591e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "a59bbd17aa9c7d60",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Scripting/Linux Commands - Files.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Linux Commands - Files"
+                }
+              }
+            ]
           }
         ],
-        "currentTab": 3
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -123,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 290.28618240356445
+    "width": 306.5994071960449,
+    "collapsed": true
   },
   "right": {
     "id": "eafe5f208f14d357",
@@ -239,8 +224,20 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "81bec6a5a98f1d51",
+  "active": "a59bbd17aa9c7d60",
   "lastOpenFiles": [
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Scripting.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Defensive Security/Security Info & Events Mgmt/Logs.md",
+    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
+    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
+    "Scripting/Handling Log Files.md",
+    "Scripting/Bash Scripting.md",
+    "Scripting/Dealing With Files of Different Types.md",
+    "Scripting/Linux Commands - Networks.md",
+    "Scripting/Linux Commands - Files.md",
+    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
+    "Cribl/Cribl Cloud.md",
     "Cribl/Cribl Stream/Stream.md",
     "Cribl/Data Management.md",
     "Cribl/Cribl Stream/Data Tools.md",
@@ -248,7 +245,6 @@
     "Cribl/Cribl Stream/Sources.md",
     "Cribl/Supporting Tech.md",
     "Cribl/Cribl Products.md",
-    "Cribl/Cribl Cloud.md",
     "Cribl/Cribl Stream/Stream Setup.md",
     "Cribl/Cribl Stream/Securing Stream.md",
     "Cribl/Cribl Stream/Scaling & Sizing.md",
@@ -256,27 +252,16 @@
     "Cribl/Cribl Stream/Replay.md",
     "Cribl/Cribl Stream/Events.md",
     "Cribl/Cribl Stream/Destinations.md",
-    "Cribl/Cribl Stream/Architecture.md",
     "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 2.png",
     "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 1.png",
     "Cribl/Cribl Stream/pics/Stream, 5.png",
-    "Cribl/Cribl Lake/Lake.md",
     "Cribl/Cribl Stream/pics/Destinations, 2.png",
     "Cribl/Cribl Stream/pics/Destinations, 1.png",
     "Cribl/Cribl Stream/pics/Sources, win-1.png",
     "Cribl/Cribl Stream/pics/Stream, 3.png",
-    "Cribl/Cribl Stream/Stream CLI.md",
     "Cribl/Cribl Stream/pics/Architecture, 2.png",
     "Cribl/Cribl Stream/pics/Architecture, 1.png",
     "Cribl/Cribl Stream/pics/Scaling & Sizing, 1.png",
-    "Defensive Security/Security Operations/Threat Hunting.md",
-    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating FTP.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
-    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
-    "Cribl/Cribl Edge/Sources & Destinations.md",
-    "Cribl/Cribl Edge/Edge.md",
-    "Defensive Security/Malware Analysis/Static Analysis.md",
     "Windows/Windows OS/Code Linking.md.tmp.25872.1778444709357",
     "Cribl/Cribl Lake",
     "Cribl/Supporting Tech.md.tmp.7412.1777462247459",
