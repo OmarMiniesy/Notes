@@ -8,4 +8,7 @@ To get a count of the [[IP]] addresses in a log file separated by spaces and the
 ```
 cut -d ' ' -f 5 firewall.log | cut -d ':' -f 1 | sort | uniq -c | sort -rn
 ```
+- First `cut` is to get the `IP:PORT`
+- Second `cut` is to remove the `PORT`
+- `uniq -c` returns the count.
 

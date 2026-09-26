@@ -53,6 +53,8 @@ We can write a display filter to check for the initiation of a SYN connect scan.
 tcp.flags.syn==1 and tcp.flags.ack==0 and tcp.window_size <= 1024
 ```
 
+> TCP SYN scans can be identified using `zeek.conn.conn_state` column with the value `S0`.
+
 ###### TCP NULL Scans
 This is when packets are sent with no flags.
 - For open ports, server will not respond.

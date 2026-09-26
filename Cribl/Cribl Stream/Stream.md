@@ -44,6 +44,7 @@ The leader does a lot of work, so it should be maintained and have the necessary
 - Configuring the workers and handling the worker queue. It is the configuration source for all pipelines, routes, sources, .... 
 - Holds the state of pull sources, that is, which files have been collected and to maintain state to ensure no repetition.
 - Supports disaster recovery services and fault tolerance using git and others. Check out [[Architecture#Fault Tolerance & Reliability|Fault Tolerance]].
+- The leader's parent API process distributes incoming connections to worker processes in a round-robin fashion.
 
 ##### Stream Directory Structure
 
@@ -113,6 +114,7 @@ Stream generates logs for both leader nodes and worker nodes.
 
 The leader node cannot collect and send out its own logs and forward them.
 - An agent needs to be deployed on the leader node to collect the logs.
+- Or utilize the logging API available on the leader to collect logs from it.
 
 For the leader node, which takes place in the main process in `$CRIBL_HOME/log/directory`. The main API process is the one that generates these logs.
 - `cribl.log` - The principal log in Stream, including license validation logs.
@@ -127,6 +129,11 @@ For the worker nodes, the main API log also generates logs, as well as the worke
 
 ---
 ### Upgrading Stream
+
+**Upgrade Preparation:  
+1. Identify and note any modifications made to default Cribl Stream files, as these will be overwritten during the upgrade.
+2. Move custom functions to the designated `$cribl_home/local/cribl/functions` directory for preservation.
+3. Download the new Cribl Stream version if not using the CDN (Content Delivery Network).
 
 To upgrade, the leader node is upgraded first, then follows the worker nodes.
 - After the upgrade, it should be validated, and then use git to commit and deploy the configuration changes from leader to worker nodes.

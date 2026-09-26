@@ -5,7 +5,7 @@ Similar to [[John the Ripper]] but for services requiring Network authentication
 * [[Secure Shell Protocol (SSH)]]
 * Telnet
 * Remote Desktop (RDP)
-* SMB
+* [[Server Message Block (SMB)]]
 * Cisco Auth
 * [[File Transfer Protocol (FTP)]]
 * IMAP
