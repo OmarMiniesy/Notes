@@ -4,10 +4,12 @@ Traffic tunneling is an encapsulation process where traffic of one type of [[Pro
 - This is used to hide the data and to bypass restrictions.
 - Encapsulation takes place inside common, everyday protocols, like [[ICMP]] or [[Domain Name System (DNS)]].
 
+> This can be used for [[Data Exfiltration]].
+
 ##### ICMP Tunneling
 
 ICMP is mainly used for diagnosing network communication issues and testing.
-- However, it is also used by attackers to conduct [[Denial of Service (DOS)]] attacks, data exfiltration, and for Command and Control activities.
+- However, it is also used by attackers to conduct [[Denial of Service (DOS)]] attacks, [[Data Exfiltration]], and for Command and Control activities.
 - Since ICMP packets can carry a data payload, this can be used to carry data for various reasons and various protocols like [[HTTP]], TCP, or [[Secure Shell Protocol (SSH)]] data.
 
 Indicators of ICMP tunneling:

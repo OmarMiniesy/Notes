@@ -4,21 +4,69 @@
     "type": "split",
     "children": [
       {
-        "id": "d92716408066c9c7",
+        "id": "d1c31f42c546a9e5",
         "type": "tabs",
         "children": [
           {
-            "id": "b8710b45bb271e39",
+            "id": "2606eaca2ecbffa0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Defensive Security/Security Info & Events Mgmt/ELK/Strings and Field Types.md",
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Tunneling.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Strings and Field Types"
+              "title": "Detecting Tunneling"
+            }
+          },
+          {
+            "id": "4746befc9790730d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating FTP.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Investigating FTP"
+            }
+          },
+          {
+            "id": "6172321516a5cb18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Networking/File Transfer Protocol (FTP).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "File Transfer Protocol (FTP)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "2a819432c04ccf52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f13567e4a21d04a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Defensive Security/Network Security & Traffic Analysis/Data Exfiltration.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Data Exfiltration"
             }
           }
         ]
@@ -55,7 +103,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"Attack Surface",
+                "query": "C2",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -196,34 +244,34 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b8710b45bb271e39",
+  "active": "2606eaca2ecbffa0",
   "lastOpenFiles": [
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Exfiltration.md",
+    "Networking/File Transfer Protocol (FTP).md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Investigating FTP.md",
+    "Defensive Security/Network Security & Traffic Analysis/Data Exfiltration.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Tunneling.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting ARP Attacks.md",
+    "Defensive Security/Network Security & Traffic Analysis/Network Discovery.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
+    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Beaconing Malware.md",
+    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Attack Specific Queries.md",
+    "Offensive Security/Web Application Security/NoSQL Injection.md",
+    "Defensive Security/Cyber Defense Frameworks/MITRE/MITRE ATT&CK.md",
+    "Defensive Security/Security Operations/Incident Reporting.md",
+    "Windows/Windows OS/Event Tracing for Windows (ETW).md",
+    "Defensive Security/Endpoint Security/Endpoint Detection and Response (EDR).md",
+    "Defensive Security/Cyber Defense Frameworks/Cyber Kill Chains.md",
+    "Defensive Security/Network Security & Traffic Analysis/Suricata.md",
+    "Defensive Security/Network Security & Traffic Analysis/Detection/Scripting.md",
+    "Cribl/Cribl Edge/Sources & Destinations.md",
+    "Cribl/Cribl Edge/Edge.md",
+    "Cribl/Data Management.md",
+    "Defensive Security/Security Info & Events Mgmt/ELK/Strings and Field Types.md",
     "Defensive Security/Threat Intelligence/Cyber Threat Intelligence.md",
     "Defensive Security/Threat Intelligence/MISP.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting Nmap Scans.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Scripting.md",
-    "Defensive Security/Network Security & Traffic Analysis/Network Discovery.md",
     "Offensive Security/Tools/nmap.md",
-    "Offensive Security/Network Security/Footprinting and Scanning.md",
-    "Defensive Security/Network Security & Traffic Analysis/Network Analysis.md",
-    "Defensive Security/Cyber Defense Frameworks/Pyramid of Pain.md",
-    "Defensive Security/Cyber Defense Frameworks/MBC - Malware Behavior Catalogue.md",
-    "Defensive Security/Cyber Defense Frameworks/Diamond Model.md",
-    "Defensive Security/Cyber Defense Frameworks/Cyber Kill Chains.md",
-    "Defensive Security/Cyber Defense Frameworks/MITRE/MITRE ATT&CK.md",
-    "Offensive Security/Web Application Security/HTTP Verb Tampering.md",
-    "Offensive Security/Windows Security/Pass the Hash.md",
-    "Offensive Security/Windows Security/Delegation Attacks.md",
-    "Offensive Security/Tools/Hydra.md",
-    "Offensive Security/Tools/Gopherus.md",
-    "Defensive Security/Threat Intelligence/STIX.md",
-    "Defensive Security/Security Operations/Incident Reporting.md",
-    "Defensive Security/Security Operations/Incident Handling.md",
-    "Defensive Security/Security Info & Events Mgmt/Use Case.md",
-    "Defensive Security/Security Info & Events Mgmt/Log Analysis.md",
-    "Defensive Security/Security Info & Events Mgmt/Logs.md",
-    "Defensive Security/Security Info & Events Mgmt/SIEM.md",
-    "Defensive Security/Security Info & Events Mgmt/Splunk/Splunk Processing Language (SPL).md",
     "Cribl/Cribl Stream/pics/Common Problems, 6.png",
     "Cribl/Cribl Stream/pics/Common Problems, 5.png",
     "Cribl/Cribl Stream/pics/Common Problems, 4.png",

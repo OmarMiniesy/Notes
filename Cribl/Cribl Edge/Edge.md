@@ -1,21 +1,34 @@
 ### General Notes
 
-This is a data collection agent with centralized management, deployed directly on a node to collect data from it.
+This is a data collection **agent** with centralized management, deployed directly on a node to collect data from it.
 - Can collect [[Logs|logs]], metrics, application data, and more.
 - Edge automatically discovers and collects this data without manual configuration.
 - Can also perform data exploration close to the source to determine what needs to be collected — searching directly at the node reduces unnecessary data movement.
 - Edge is vendor-agnostic: any data can be collected from any source.
+- Offers centralized management to control multiple agents on multiple endpoints.
+
+Agents are used in the discovery phase of [[Data Management]], and they are used to:
+- Find the files to be ingested and discover unknown files.
+- Read and monitor files of different formats.
+- Collect data from a variety of file formats.
+- Send the collected data for processing/storing in a chosen destination.
+
+> Having multiple agents on one endpoint to collect different types of data is tedious. Therefore, a single agent that is vendor agnostic is a better solution.
 
 Edge nodes can be grouped into logical fleets and sub-fleets, allowing them to share configurations.
 - Edge nodes can be upgraded from the management platform without touching each node individually.
 
 ![[Edge.png]]
 
+---
+### Edge Deployment
+
 **Single Mode**: Run edge nodes on one machine without management by leader node.
 **Distributed Mode**: The leader node manages the edge nodes.
 
 **Fleets** are management groups used by Edge to organize nodes — analogous to Worker Groups in [[Stream]].
 - **Sub fleets** can also be created.
+- This is used to share configurations.
 - Fleets should be logically organized, and some examples include organizing them based on OS type, data type, location, or others.
 
 The Leader node manages all the configurations for the worker nodes and the edge nodes.

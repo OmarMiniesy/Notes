@@ -50,7 +50,7 @@ If it is to be injection in a `JSON` object, then it would become:
 
 Once the proper injection character/string is identified, it should be used to try and force conditional responses.
 - Boolean conditions should be used to influence the application to behave differently.
-- This can be used for data exfiltration.
+- This can be used for [[Data Exfiltration]].
 
 To confirm this, use both a *true* and a *false* condition and observe if the website behaves differently.
 

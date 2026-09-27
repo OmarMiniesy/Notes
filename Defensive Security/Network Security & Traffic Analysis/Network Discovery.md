@@ -20,6 +20,8 @@ Network Discovery can also be done in a benign manner:
 	- An *allow-list* of known scanners (external or internal)
 	- Utilize [[Cyber Threat Intelligence]] to flag scanning activities from known malicious sources.
 
+> Check out [[Detecting Nmap Scans]] on how to detect network discovery.
+
 ---
 ### Types of Network Discovery
 

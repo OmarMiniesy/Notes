@@ -24,6 +24,8 @@ Cribl HTTP and Cribl TCP are destinations that can be used to send data from Edg
 - Cribl TCP is easier to implement, TCP pinning can occur.
 - Cribl HTTP does not face this issue.
 
+> There are also streaming and non-streaming destinations.
+
 The two destinations are:
 - **Cribl HTTP:** Enables Edge nodes to send data to Cribl Stream worker nodes in distributed deployments with load balancers. Ideal for larger environments. Useful in hybrid cloud deployments for optimized billing
 - **Cribl TCP:** Recommended for medium-sized, on-premise deployments. It's faster and simpler to deploy than Cribl HTTP. Use this option when [[Firewall]]s or proxies allow raw TCP egress

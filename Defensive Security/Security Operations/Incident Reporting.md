@@ -39,7 +39,7 @@ This is the gateway of the report that is designed for a broader audience, inclu
 ##### Technical Analysis
 
 This section dissects the events that happened during the incident. It has almost al of the details of the entire report. It contains:
-- **Affected Systems & Data**: Highlight all the systems and data that was accessed or compromised during the incident. For the case of data exfiltration, the volume should be stated if it is confirmed.
+- **Affected Systems & Data**: Highlight all the systems and data that was accessed or compromised during the incident. For the case of [[Data Exfiltration]], the volume should be stated if it is confirmed.
 - **Evidence Sources & Analysis**: This contains all the evidence that was captured during analysis, the results, and the method of analysis used on the evidence. This is basically the technical walkthrough of analyzing the incident.
 - **Indicators of Compromise**: Include the IOCs that have been obtained from this incident. This includes any behavior exhibited, as well [[IP]] addresses, processes, tasks, file hashes, ...
 - **Root Cause Analysis**: Explain here the analysis of the root cause of the incident. This is the main cause of the security incident, such as the exploit of a certain vulnerability or of a failure point in the system.
