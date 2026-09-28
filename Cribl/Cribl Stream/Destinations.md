@@ -48,7 +48,7 @@ Cribl destinations use either [[HTTP]], TCP, or UDP. ([[Transport Layer]]).
 ![[Destinations, 1.png]]
 
 Can also configure notifications to be generated when a destination faces an issue based on conditions including:
-- [[Architecture#Backpressure|Backpressure]] is activated
+- [[Cribl/Cribl Stream/Architecture#Backpressure|Backpressure]] is activated
 - Persistent queue is used
 - Unhealthy destination
 

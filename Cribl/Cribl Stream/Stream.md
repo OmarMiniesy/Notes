@@ -5,7 +5,7 @@ Cribl Stream allows users to route data from any source to any destination.
 - Can perform processing on data in transit — see [[Pipelines, Functions, Packs]] and [[Routes]].
 - [[Cribl Products#Cribl Edge|Cribl Edge]] can help send the data to Cribl Stream, or straight to the destination.
 - [[Cribl Products#Cribl Search|Cribl Search]] allows searching on Cribl Edge or at the destination.
-##### Cribl Stream Deployments - Check [[Architecture]]
+##### Cribl Stream Deployments - Check [[Cribl/Cribl Stream/Architecture]]
 - **Single Mode**: Run the leader node and worker node on single machine. Test environment.
 - **Distributed Mode**: leader node and worker nodes are on diff machines. One leader node manages worker nodes present in worker groups.
 ##### Worker Groups
@@ -43,7 +43,7 @@ The leader does a lot of work, so it should be maintained and have the necessary
 - Managing authentication & enforcing RBAC permissions
 - Configuring the workers and handling the worker queue. It is the configuration source for all pipelines, routes, sources, .... 
 - Holds the state of pull sources, that is, which files have been collected and to maintain state to ensure no repetition.
-- Supports disaster recovery services and fault tolerance using git and others. Check out [[Architecture#Fault Tolerance & Reliability|Fault Tolerance]].
+- Supports disaster recovery services and fault tolerance using git and others. Check out [[Cribl/Cribl Stream/Architecture#Fault Tolerance & Reliability|Fault Tolerance]].
 - The leader's parent API process distributes incoming connections to worker processes in a round-robin fashion.
 
 ##### Stream Directory Structure

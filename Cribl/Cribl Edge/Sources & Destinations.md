@@ -2,7 +2,13 @@
 
 Edge can receive continuous data from many sources:
 - **Push Sources**: Allow collecting data from closer to where it resides on the edge, examples are [[HTTP]], TCP-JSON, and more.
-- **System & Internal**: Unique to Edge, allow collecting from the local machine and running commands on it using `exec`. `File Monitor` can also be used to collect [[Logs|log files]] and generates events based on the log entries there.
+- **System & Internal**: Unique to Edge, allow collecting from the local machine and running commands on it using `exec`. 
+
+*File Monitor* source can also be used to collect [[Logs|log files]] and generates events based on the log entries there.
+- Some [[Securing Edge#Log Collection|Log Collection Permissions]] should be configured first.
+- There is auto/manual/browse mode in the GUI to discover files on the node.
+- Manual is the default mode, and the max depth can be used to find deeper files.
+- The Key Value store keeps track of the files monitored by this source. It is present at `$CRIBL_HOME/cribl-edge/state/kvstore/<fleet>/<input>`. These have a state file that has the file hashes and organizes them there.
 
 *Linux Sources*:
 - **System Metrics**: Allows collecting metric data from the device.
@@ -29,3 +35,5 @@ Cribl HTTP and Cribl TCP are destinations that can be used to send data from Edg
 The two destinations are:
 - **Cribl HTTP:** Enables Edge nodes to send data to Cribl Stream worker nodes in distributed deployments with load balancers. Ideal for larger environments. Useful in hybrid cloud deployments for optimized billing
 - **Cribl TCP:** Recommended for medium-sized, on-premise deployments. It's faster and simpler to deploy than Cribl HTTP. Use this option when [[Firewall]]s or proxies allow raw TCP egress
+
+---
