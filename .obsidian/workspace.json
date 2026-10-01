@@ -8,13 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3b627017095088e8",
+            "id": "b8ab5f0dc212d712",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Cribl/Cribl Edge/Better Practices.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Better Practices"
             }
           }
         ]
@@ -192,10 +196,23 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b5672cb1d8eab82b",
+  "active": "b8ab5f0dc212d712",
   "lastOpenFiles": [
-    "Windows/Windows OS/Windows Events Log.md",
+    "Cribl/Cribl Edge/pics/Better Practices, 4.png",
+    "Cribl/Cribl Edge/Edge.md",
+    "Cribl/Cribl Edge/Better Practices.md",
+    "Cribl/Cribl Edge/pics/Edge, 2.png",
+    "Cribl/Cribl Edge/pics/Better Practices, 3.png",
+    "Cribl/Cribl Edge/pics/Better Practices, 2.png",
+    "Cribl/Cribl Edge/pics/Better Practices, 1.png",
+    "Cribl/Cribl Edge/Sources & Destinations.md",
+    "Cribl/Cribl Search/Search.md",
+    "Cribl/Cribl Edge/Collecting Data.md",
+    "Cribl/Cribl Edge/Sizing.md",
+    "Cribl/Cribl Edge/Securing Edge.md",
+    "Cribl/Cribl Edge/Outpost.md",
     "Windows/Windows OS/Windows Event ID Gotchas.md",
+    "Windows/Windows OS/Windows Events Log.md",
     "Windows/Windows OS/Code Linking.md",
     "Offensive Security/Windows Security/RDP BruteForce.md",
     "Defensive Security/DFIR/Windows Forensics.md",
@@ -205,31 +222,18 @@
     "Windows/Tools/Get-WinEvent.md",
     "Windows/Tools/Event Viewer.md",
     "Defensive Security/Security Info & Events Mgmt/Logging Operations.md",
-    "Cribl/Cribl Edge/Edge.md",
-    "Cribl/Cribl Edge/Securing Edge.md",
     "Cribl/Cribl Edge/Upgrading Edge.md",
     "Cribl/Cribl Edge/Deploying on Linux.md",
     "Cribl/Cribl Edge/pics/Deploying on Linux.png",
-    "Cribl/Cribl Edge/Sizing.md",
     "Defensive Security/DFIR/Tools/RegRipper.md",
     "Defensive Security/DFIR/Windows Registry Forensics.md",
     "Offensive Security/System Security/Reverse Shells.md",
     "Defensive Security/Network Security & Traffic Analysis/Snort/Snort in Action.md",
-    "Defensive Security/Network Security & Traffic Analysis/Firewall.md",
-    "Defensive Security/Network Security & Traffic Analysis/Snort/Snort.md",
-    "Defensive Security/Network Security & Traffic Analysis/IDS & IPS.md",
-    "Defensive Security/Network Security & Traffic Analysis/Detection/Detecting MITM Attacks.md",
-    "Networking/Domain Name System (DNS).md",
-    "Defensive Security/Network Security & Traffic Analysis/Wireshark.md",
     "Cribl/Cribl Stream/pics/Common Problems, 6.png",
     "Cribl/Cribl Stream/pics/Common Problems, 5.png",
     "Cribl/Cribl Stream/pics/Common Problems, 4.png",
     "Cribl/Cribl Stream/pics/Common Problems, 3.png",
     "Cribl/Cribl Stream/pics/Common Problems, 2.png",
-    "Cribl/Cribl Stream/pics/Common Problems, 1.png",
-    "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 2.png",
-    "Cribl/Cribl Stream/pics/Pipelines, Functions, Packs, 1.png",
-    "Cribl/Cribl Stream/pics/Stream, 5.png",
     "Windows/Windows OS/Code Linking.md.tmp.25872.1778444709357",
     "Cribl/Cribl Lake",
     "Cribl/Supporting Tech.md.tmp.7412.1777462247459",

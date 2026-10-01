@@ -34,7 +34,7 @@ The Leader node manages all the configurations for the worker nodes and the edge
 
 > The *leader node* manages both the Stream worker groups and the Edge Nodes
 
-Edge processing is limited as it is only one end node. (1 CPU core)
+Edge processing is limited as it uses only 1 CPU core for data processing and collecting.
 - Edge nodes can ingest a max of 200GB per day. 
 - Stream worker groups can do more processing, and we can have more workers in the group to do more processing. A `passthru` [[Pipelines, Functions, Packs#Pipeline|Pipeline]] to Cribl TCP to Stream workers to handle larger volume.
 
@@ -95,6 +95,9 @@ The leader should be upgraded before edge, as the nodes are upgraded to the vers
 - This can be changed if the nodes are upgraded manually.
 - [[Outpost]] should be upgraded first before the edge nodes.
 - Edge nodes deployed by [[Kubernetes]] cannot be upgraded by the leader.
+
+![[Edge, 2.png]]
+
 
 ---
 ### Notifications
