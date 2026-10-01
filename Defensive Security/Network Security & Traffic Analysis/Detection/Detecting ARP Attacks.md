@@ -6,7 +6,7 @@ The [[Address Resolution Protocol (ARP)]] protocol is used to allow devices to i
 ---
 ### Using [[Wireshark]]
 
-###### Detecting ARP Spoofing
+###### Detecting ARP Spoofing - More Details [[Detecting MITM Attacks#Detecting ARP Spoofing]].
 
 A suspicious situation occurs when two ARP responses (`opcode=2`) are for the same [[IP]] address and provide a different [[Data Link Layer#MAC Address|MAC Address]].
 - The challenge is to know which MAC address is legitimate and which one is suspicious.

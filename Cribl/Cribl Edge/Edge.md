@@ -45,6 +45,24 @@ Edge processing is limited as it is only one end node. (1 CPU core)
 
 > The connection listener process should increase by 1 every 10,000 nodes.
 
+##### The Heartbeat
+The leader node receives a heartbeat from the edge nodes every 60 seconds that contains:
+- hostname
+- [[IP]] address
+- GUID
+- Tags
+- Environment variables
+- Current software version
+- Configuration version
+
+This is used to change the configuration bundle if needed.
+- Last 5 bundles are kept
+- All files created in the last 10 minutes are kept
+- If edge node is reconfigured, a cleanup is issued.
+
+If more than 5 heartbeats are not sent to leader, or the node is disconnected for more than 30 seconds, the edge node is seen as disconnected.
+- The edge node will be removed from the fleet after 1 day.
+
 ---
 ### Fleet Administration
 
@@ -70,5 +88,19 @@ Recommendations:
 - Fleet names cannot have spaces, and they cannot be renamed.
 - Fleets cannot be deleted if there are sub-fleets for it.
 
+---
+### Upgrading Edge
+
+The leader should be upgraded before edge, as the nodes are upgraded to the version of the leader.
+- This can be changed if the nodes are upgraded manually.
+- [[Outpost]] should be upgraded first before the edge nodes.
+- Edge nodes deployed by [[Kubernetes]] cannot be upgraded by the leader.
+
+---
+### Notifications
+
+Can add notifications to be sent from edge nodes if:
+- High, low, or no data volume
+- Errors with backpressure.
 
 ---

@@ -1,4 +1,3 @@
-
 ### General Notes
 
 Software module running on a computer or network device.
@@ -9,8 +8,20 @@ Software module running on a computer or network device.
 There are different types of firewalls for the different layers of the network stack.
 - Stateful and Stateless firewalls for the [[Network Layer]].
 - [[Transport Layer]] firewalls.
-- Application Layer firewalls. These are proxy firewalls.
 - Next Generation firewalls.
+- Web Application firewalls.
+
+---
+### Web Application Firewalls - WAF
+
+These are tools that inspect [[HTTP]] traffic and block/log harmful requests based on security rules. There are several types of WAFs:
+- **Cloud-based (Reverse Proxy)**: Sits in front of the web server. These WAFs are easy to deploy and have great scalability.
+- **Host-based**: Software deployed directly on the web server and offers control for each application.
+- **Network-based**: A physical or virtual appliance situated on the network perimeter. More suited for enterprise environments.
+
+The way firewalls function is similar to that of [[IDS & IPS#Detection Strategies|IDS & IPS Detection Strategies]]. There is signature based, anomaly based, as well as:
+- **Heuristic Based Detection**: Analyzes the context and behavior of requests.
+- **Location & IP Reputation**: Uses geolocation and [[Cyber Threat Intelligence]] to handle requests.
 
 ---
 ### Stateless Firewall 
@@ -46,13 +57,5 @@ These firewalls maintain state, that is it keeps track of all open connections t
 
 If the packets are not part of an active connection, they are checked against the given access control rules.
 - If it passes these rules, it is forwarded, and a connection can be opened.
-
----
-### Application Layer Firewall
-
-Check all the OSI layers.
-- Check also the payload of the packet, not just the header.
-
-> This firewall acts as a proxy to do so.
 
 ---

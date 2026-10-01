@@ -27,7 +27,7 @@ Snort also has *detection* plugins which are used to check a single aspect of a 
 ---
 ### Snort Rules
 
-> The official Snort documentation for for writing rules: [Rule Writing Guide](https://docs.snort.org/).
+> The official Snort documentation for writing rules: [Rule Writing Guide](https://docs.snort.org/).
 
 To run Rules with snort:
 ```
