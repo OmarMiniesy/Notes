@@ -43,7 +43,7 @@ Edge processing is limited as it uses only 1 CPU core for data processing and co
 - Port 4200 for heartbeat metrics and configuration bundles. This is the port used for communication between Leader and Edge node. The API process is the entry point process on the leader node and it then forwards requests to the Connection Listener processes.
 - Port 9000 (when using the installation script) for communication with the Leader Node and the Cribl UI.
 
-> The connection listener process should increase by 1 every 10,000 nodes.
+> The connection listener process should increase by 1 every 10,000 nodes. This can be done in the `cribl.yml` file, not available in [[Cribl Cloud]].
 
 ##### The Heartbeat
 The leader node receives a heartbeat from the edge nodes every 60 seconds that contains:

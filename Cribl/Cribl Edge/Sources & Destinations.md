@@ -12,7 +12,7 @@ Edge can receive continuous data from many sources:
 - A discovery process runs to determine files, then there is a polling interval set to watch/monitor certain files present on an allow list. Current state is compared to saved state to determine updates and if the file will be updated after the interval.
 - Auto mode discovers files as they are being written to. Only on Linux.
 - Manual is the default mode, and the max depth can be used to find deeper files. Manual mode follows certain chosen directories. Used to collect files when the process that creates them rotates them.
-- The Key Value store keeps track of the files monitored by this source. It is present at `$CRIBL_HOME/cribl-edge/state/kvstore/<fleet>/<input>`. These have a state file that has the file hashes and organizes them there.
+- The Key Value store keeps track of the files monitored by this source. It is present at `$CRIBL_HOME/cribl-edge/state/kvstore/<fleet>/<input>`. These have a state file that has the file hashes and organizes them there. `/var/lib/cribl` directory at the edge node.
 - The Idle timeout is used to close off file handles after a certain period of time of no changes.
 - The Hash length is used to choose the length of the hash that uniquely identifies the file given the first set number of bytes. Changing the length of the hash might be needed for files of different types that need larger headers.
 

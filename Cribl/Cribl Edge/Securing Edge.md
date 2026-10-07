@@ -20,7 +20,7 @@ Disable the [[Edge]] node GUI.
 To be able to read logs from the edge node, access must be provided. This includes:
 - If using `SELinux`, then set it in permissive mode.
 - If using `AppArmor`, it should be configured to allow the logs to be accessed.
-- The file system volume should be configured to allow access.
+- The file system containing the logs should have the correct read permissions for the user.
 - The folders that contain the logs should have their security groups configured to allow access.
 
 To allow Files to be read using *File Monitor* source, the following permissions should be configured:
