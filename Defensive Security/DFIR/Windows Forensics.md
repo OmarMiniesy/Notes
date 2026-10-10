@@ -102,7 +102,7 @@ Can be used to monitor resource utilization and application usage patterns. It p
 ---
 ### PowerShell Investigation
 
-- `Unusual Commands`: Look for PowerShell commands that are not typical in your environment or are commonly associated with malicious activities. For example, commands to download files from the internet (`Invoke-WebRequest` or `wget`), commands that manipulate the registry, or those that involve creating scheduled tasks.
+- `Unusual Commands`: Look for PowerShell commands that are not typical in your environment or are commonly associated with malicious activities. For example, commands to download files from the internet (`Invoke-WebRequest` or `wget`), commands that manipulate the registry, or those that involve creating scheduled tasks. Check out [[Ingress Tool Transfer]].
 - `Script Execution`: Check for the execution of PowerShell scripts, especially if they are not signed or come from untrusted sources. Scripts can be used to automate malicious actions.
 - `Encoded Commands`: Malicious actors often use encoded or obfuscated PowerShell commands to evade detection. Look for signs of encoded commands in transcripts.
 - `Privilege Escalation`: Commands that attempt to escalate privileges, change user permissions, or perform actions typically restricted to administrators can be suspicious.
