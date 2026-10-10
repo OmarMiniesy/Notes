@@ -9,7 +9,7 @@ Traffic tunneling is an encapsulation process where traffic of one type of [[Pro
 ##### ICMP Tunneling
 
 ICMP is mainly used for diagnosing network communication issues and testing.
-- However, it is also used by attackers to conduct [[Denial of Service (DOS)]] attacks, [[Data Exfiltration]], and for Command and Control activities.
+- However, it is also used by attackers to conduct [[Denial of Service (DOS)]] attacks, [[Data Exfiltration]], and for [[Command and Control]] activities.
 - Since ICMP packets can carry a data payload, this can be used to carry data for various reasons and various protocols like [[HTTP]], TCP, or [[Secure Shell Protocol (SSH)]] data.
 
 Indicators of ICMP tunneling:

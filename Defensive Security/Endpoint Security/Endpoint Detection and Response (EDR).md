@@ -25,7 +25,7 @@ EDRs operate by using an architecture that contains a central console and multip
 
 EDR agents collect telemetry from the endpoints they are installed on:
 - *Process Information*: process execution, running and idle processes, parent-child relationships.
-- *Network Connections*: network connections are monitored, identifying connections to C2 servers, unusual [[Port]] usage, [[Data Exfiltration]], or lateral movement.
+- *Network Connections*: network connections are monitored, identifying connections to [[Command and Control|C2]] servers, unusual [[Port]] usage, [[Data Exfiltration]], or lateral movement.
 - *Command Line Activity*: all commands executed in the CMD or PowerShell or others.
 - *File & Folder Modification*.
 - *[[Windows Registry]] Modifications*.

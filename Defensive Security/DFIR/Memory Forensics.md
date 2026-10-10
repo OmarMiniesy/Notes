@@ -58,7 +58,7 @@ To assess these components, the following actions should be done:
 
 ##### Analyze Network Activity
 
-Malware operate in stages, and one stage is to connect to the *Command and Control C2* beacon to exfiltrate data or receive/send commands over the internet.
+Malware operate in stages, and one stage is to connect to the [[Command and Control|Command and Control (C2)]] beacon to exfiltrate data or receive/send commands over the internet.
 
 To uncover such activity, the following can be done:
 - Review active/passive network connections in the system memory.

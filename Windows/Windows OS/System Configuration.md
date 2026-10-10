@@ -21,6 +21,7 @@ Controls the UAC settings on the computer.
 
 This tool contains a collection of administrative tools to manage a windows computer.
 - Can be run by typing the command `compmgmt` in the windows search bar.
+- Or by launching `lusrmgr.mc`
 
 It has 3 primary sections: 
 1. **System Tools**.

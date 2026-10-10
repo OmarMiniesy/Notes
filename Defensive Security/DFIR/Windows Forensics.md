@@ -60,6 +60,7 @@ Some execution artifacts that should be analyzed:
 
 Persistence refers to the techniques and mechanisms used by attackers to maintain their unauthorized presence in a system after the initial intrusion.
 - They exploit *registry keys, startup processes, scheduled tasks, and services* to withstand system reboots and security measures.
+- Attackers can also create new users, give them privileges, and then use them to access the victim system.
 
 Some *Autorun* keys that are used for persistence:
 1. **`Run/RunOnce Keys`**
@@ -77,16 +78,61 @@ Some *Autorun* keys that are used for persistence:
 	- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders`
 	- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User`
 
+> The `Startup` folder can also be used. [[Malware]] can be added to that folder, and the program executes on startup. The parent process here is `explorer.exe`.
+
 Another technique for persistence is by using *scheduled tasks*, also called *Schtasks*.
 - These are tasks that reside in `C:\Windows\System32\Tasks`, and each task is saved as an [[XML]] file.
 - The [[XML]] file stores the creator, the task timing, the task trigger, and the path to the program to execute.
+- Scheduled task creation can be detected by using Event ID `4698` from [[Windows Events Log]] under Security.
+- Look for malicious processes that have a parent process of `services.exe`.
 
 Another technique for persistence is by using *Services* which are used to enable software components to operate in the background without any user intervention.
 - Malicious users can craft services to ensure persistence.
 - The registry can show these services at `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services`.
 - If the `start` key is set to `0x02`, then this service will start at boot.
+- Services can be detected by using Event ID `4697` from [[Windows Events Log]] under Security.
+- Look for malicious processes that have a parent process of `services.exe`.
 
 > Can be collected by [[Velociraptor]] using the `Windows.Sys.StartupItems` artifact.
+
+The following are the command lines used to create services & tasks respectively:
+```
+sc create "BadService" binpath= "C:\malware.exe" start= auto
+
+schtasks /create /tn "BadTask" /tr "C:\malware.exe" /sc onstart /ru System
+```
+
+Another technique is by creating RDP users to be used to login again by the attacker.
+- This can be done by the GUI by opening [[System Configuration#Computer Management]] and adding a user. 
+- Or by using the CLI:
+
+Through PowerShell:
+```powershell
+$password = password123
+New-LocalUser "mr.backd00r" -Password $password
+Add-LocalGroupMember "Administrators" -Member "mr.backd00r"
+```
+- The user is first created, then added to the high level group.
+
+Through CMD:
+```cmd
+net user "mr.backd00r" "p@ssw0rd!" /add
+net localgroup Administrators "mr.backd00r" /add
+```
+
+These can be detected by monitoring for the relevant Event IDs.
+- [[Windows Events Log]] (*Security* log):
+	- `4720`: a user account was created.
+	- `4722`: a user account was enabled.
+	- `4724`: an attempt was made to reset an account's password.
+	- `4738`: a user account was changed.
+	- `4732`: a member was added to a security-enabled **local** group (this is the one for *Administrators*).
+	- `4728`: a member was added to a security-enabled **global** group (used for domain groups instead of local ones).
+	- `4756`: a member was added to a security-enabled **universal** group.
+- [[Sysmon]]:
+	- `1` (*Process Creation*): captures the command line itself, such as `net.exe`/`net1.exe` with `user /add` and `localgroup Administrators /add`, or `powershell.exe` running `New-LocalUser` and `Add-LocalGroupMember`.
+
+> The account events (`4720`, `4732`, ...) only land in the *Security* log, not [[Sysmon]]. Sysmon's value here is the exact command line via Event ID `1`. Correlating the two, a `4720` right after a `net user /add` process, is the strong signal.
 
 ---
 ### [[System Resource Usage Monitor (SRUM)]]

@@ -8,7 +8,7 @@ Exfiltration can take place using several techniques & protocols:
 - [[HTTPS]] & [[HTTP]]
 - [[File Transfer Protocol (FTP)]] using legit servers, compromised creds, and non standard [[Port]]s.
 - [[ICMP]]
-- Encrypted C2 (command & control) channels
+- Encrypted [[Command and Control|C2]] channels
 - [[Domain Name System (DNS)]]
 - Cloud to cloud transfers
 - DNS Tunnelling, check [[Detecting Tunneling]]

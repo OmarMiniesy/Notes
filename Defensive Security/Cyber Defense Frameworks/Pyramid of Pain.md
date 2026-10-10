@@ -61,7 +61,7 @@ These include files or IOCs that are dropped by an attacker at the system being 
 ##### Network Artifacts - Annoying
 
 A network artifact, similar to a host artifact, takes time for the attacker to change.
-- An example of a network artifact would be a *user agent*, C2 information, or a unique URI pattern.
+- An example of a network artifact would be a *user agent*, [[Command and Control|C2]] information, or a unique URI pattern.
 
 Network artifacts can be obtained using tools like [[Wireshark]] and `Tshark`, or through the logs of an [[IDS & IPS]].
 

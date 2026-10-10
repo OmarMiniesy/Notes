@@ -20,7 +20,7 @@ There are several Kill Chains present, examples include:
 | **Delivery**              | How will the weaponized function be delivered to the target                       | Email, web, USB                                     |
 | **Exploitation**          | Exploit the target's system to execute code                                       | MS17-010, Zero-Logon, etc.                          |
 | **Installation**          | Install malware or other tooling                                                  | Mimikatz, Rubeus, etc.                              |
-| **Command & Control**     | Control the compromised asset from a remote central controller                    | Empire, Cobalt Strike, etc.                         |
+| **[[Command and Control|Command & Control]]**     | Control the compromised asset from a remote central controller                    | Empire, Cobalt Strike, etc.                         |
 | **Actions on Objectives** | Any end objectives: ransomware, [[Data Exfiltration]], etc.                       | Conti, LockBit2.0, etc.                             |
 
 ---
