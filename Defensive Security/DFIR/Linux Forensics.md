@@ -41,7 +41,13 @@ ps aux
 
 ### Persistence Mechanisms
 
-**Cron Jobs**: These are commands that run periodically as defined by a set period of time. These are located in `/etc/crontab`. It showcases the command to run, the username to run it, and where the command/script is located.
+**Cron Jobs**: These are commands that run periodically as defined by a set period of time. These can be set in several places:
+- `/etc/crontab`: This is a single system-wide file, and it showcases the command to run, the username to run it, and where the command/script is located.
+- `/var/spool/cron/<user>/` or `/var/spool/cron/crontabs/<user>/`: These are where per-user crontabs go. These are created using `crontab -e`.
+- `/etc/cron.d/`: This is a directory where crontab files can be dropped.
+
+**Systemd Persistence**: A Systemd service is located in either the `/lib/systemd/system/` or `/etc/systemd/system/` folders. A service is stored as a file in these directories.
+- We can look for changes in these folders for weird services or malicious changes.
 
 **Service Startups**: Services can be setup that will start and run in the background after every system boot. These services can be found in the `/etc/init.d` directory, by running `ls`.
 

