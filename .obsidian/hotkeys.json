@@ -39,5 +39,23 @@
       ],
       "key": "'"
     }
-  ]
+  ],
+  "select-current-line:select-current-line-on-keystroke": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "L"
+    }
+  ],
+  "file-explorer:reveal-active-file": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "F"
+    }
+  ],
+  "editor:toggle-checklist-status": []
 }

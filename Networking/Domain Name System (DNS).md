@@ -95,6 +95,8 @@ This operation can be reversed, to get the DNS from the IP.
 ---
 ### Tools
 
+These tools are also very useful for performing triage and are used for [[Cyber Threat Intelligence]] operations.
+
 ###### `nslookup`
 
 Used to get information about IP addresses or domain names.
@@ -129,5 +131,11 @@ To show the full path for DNS resolution:
 ```bash
 dig +trace tesla.com
 ```
+
+###### `whois`, `RDAP` from now on.
+
+This is another tool used for domain and [[IP]] enrichment.
+- It reveals information about the registrar, registration, expiry dates, domain age.
+- It also reveals the IP's owning organization, CIDR, ASN.
 
 ---
