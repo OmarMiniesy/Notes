@@ -41,6 +41,9 @@ ps aux
 
 ### Persistence Mechanisms
 
+**[[Secure Shell Protocol (SSH)]] Users**: Adding an SSH user and then adding them to a privilege group.
+- Can detect this by filtering on the `useradd` process.
+
 **Cron Jobs**: These are commands that run periodically as defined by a set period of time. These can be set in several places:
 - `/etc/crontab`: This is a single system-wide file, and it showcases the command to run, the username to run it, and where the command/script is located.
 - `/var/spool/cron/<user>/` or `/var/spool/cron/crontabs/<user>/`: These are where per-user crontabs go. These are created using `crontab -e`.

@@ -92,6 +92,7 @@ Another technique for persistence is by using *Services* which are used to enabl
 - If the `start` key is set to `0x02`, then this service will start at boot.
 - Services can be detected by using Event ID `4697` from [[Windows Events Log]] under Security.
 - Look for malicious processes that have a parent process of `services.exe`.
+- Look for command `schtasks`.
 
 > Can be collected by [[Velociraptor]] using the `Windows.Sys.StartupItems` artifact.
 
